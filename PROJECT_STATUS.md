@@ -8,7 +8,7 @@
 - 실제 맵은 S01~S03만 존재한다. S04~S36은 `planned`이며 지도에서 개발 중으로 잠겨 있다. 빈 맵이나 복사 맵을 완료로 세지 않는다.
 - 코드의 콘텐츠 등록 상태는 S01~S03 `implemented`, 플레이 검증은 아래 표와 docs/PLAYTEST_LOG.md에서 별도 관리한다.
 - 최종 아트 승인 없음. 자체 제작 SVG·Phaser 배경·합성 효과음은 모두 ART_DRAFT다.
-- 기존 문서만 있던 폴더에서 시작했다. Git 저장소가 아니므로 커밋은 만들지 않았다. 공개 배포·계정·DB·외부 AI API를 추가하지 않았다.
+- 기존 문서만 있던 폴더에서 시작했다. 이후 사용자의 GitHub/Vercel 배포 요청에 따라 Git 저장소를 초기화하고 아래 공개 배포를 수행했다. 게임 로그인·DB·외부 AI API는 없다.
 
 ## 진행표
 
@@ -56,6 +56,18 @@
 - 모바일 모사에서 터치 동작은 확인했으나 캔버스 내부 글씨가 작다. 최종 모바일 가독성·세로 화면·실기 접근성 검수는 M6에 필요하다.
 - 60fps/장시간 메모리/기기 성능과 어린이 대상 난이도·3~7분 분량·45~100초 보스 목표는 미검증이다. 자동화 완주 시간은 목표 플레이 시간 측정으로 대체하지 않는다.
 - Phaser 청크 약 1.48MB(압축 339.84kB), ESLint 고정 버전 지원 종료 설치 경고. 빌드/검사는 성공했지만 추후 도구 갱신·번들/아트 최적화가 필요하다.
+
+## GitHub 및 Vercel 배포 — 2026-09-06
+
+- 저장소: https://github.com/hjpapa/sindbad (`main`). 기존 원격이 비어 있음을 확인한 뒤 초기 구현 커밋 `6db826d`를 push했다.
+- 운영 URL: https://sindbad-orcin.vercel.app
+- Vercel 팀/프로젝트: `docsusil-hjpapa/sindbad`, GitHub 저장소 연결 완료.
+- 최초 배포 `dpl_5V9Z7mE7s8bFqGtmj2W6G2keWeA6`: production READY. Vercel에서 `npm ci`, 타입 검사, 콘텐츠 검사, Vite 빌드 성공.
+- 배포 준비 중 로컬 `npm run build` 재실행 통과(4.86초). 게임 코드 변경이 없어 기존 단위 37개/E2E 8개 결과를 유지하며 이번 배포 단계에서 전체 테스트를 재실행하지 않았다.
+- 공개 운영 URL에서 Edge headless 검증 통과: HTTP 200, 새 모험 S01, 캔버스 표시, 이동/점프/공격 키 입력, 체크포인트 저장→새로고침→이어하기. pageerror/HTTP 400+ 0개, 프로덕션 테스트 훅 없음. 공개 배포 S01~S03 전체 완주는 별도 미검증(로컬 E2E 완주 결과는 위 참조).
+- 증거: `scripts/verify-deployment.mjs`, `docs/screenshots/production-play.png`, `production-resume.png`. 스크린샷은 육안 확인했다.
+- `.vercel`, `.env*`, 의존성/빌드 산출물 및 원본 중복 ZIP은 Git에서 제외했다.
+- 설치 로그의 보안 경고를 확인했다. `npm audit --omit=dev`: 취약점 0개. 전체 audit: 개발 의존성 Vite high 1개, Vitest critical 1개, exit 1. 정적 배포에는 해당 개발 서버를 실행하지 않는다. 후속 도구 갱신에서 Vite 7.3.6/Vitest 3.2.7 이상과 회귀 검증 필요.
 
 ## 다음 한 작업
 

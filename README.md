@@ -9,7 +9,15 @@ npm ci
 npm run dev
 ```
 
-브라우저에서 http://127.0.0.1:5173 을 엽니다. 설치 후 게임 플레이에는 계정·API 키·외부 서버가 필요하지 않습니다. 공개 배포는 수행하지 않습니다.
+브라우저에서 http://127.0.0.1:5173 을 엽니다. 설치 후 게임 플레이에는 계정·API 키가 필요하지 않습니다.
+
+## 공개 플레이와 배포
+
+- 게임: https://sindbad-orcin.vercel.app
+- 소스: https://github.com/hjpapa/sindbad
+- 사용자 요청에 따라 Vercel `docsusil-hjpapa/sindbad`에 운영 배포했습니다. GitHub `main`을 연결했으며 후속 push는 Vercel에서 자동 빌드합니다.
+- 공개 주소 검증: `node scripts/verify-deployment.mjs https://sindbad-orcin.vercel.app`
+- 저장은 브라우저·사이트 주소별로 분리됩니다. 로컬에서 진행한 기록은 JSON 내보내기/가져오기로 공개 사이트에 옮길 수 있습니다.
 
 ## 조작
 
