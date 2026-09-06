@@ -1,0 +1,996 @@
+[
+  {
+    "id": "S01",
+    "title": "항구의 해골 습격",
+    "chapter": 1,
+    "childSceneRefs": [
+      "1"
+    ],
+    "status": "implemented",
+    "artStatus": "draft",
+    "nextStageId": "S02",
+    "entryItems": [],
+    "entryFlags": [],
+    "rewardId": "S01.firstClear",
+    "clearXp": 40,
+    "mandatoryItems": [
+      "W01"
+    ],
+    "optionalItems": [
+      "R01"
+    ],
+    "rewardFlags": [],
+    "flow": "낮의 항구에서 이동과 점프를 배운다 → 창고 사이의 해골 4마리와 싸운다 → 부두의 해골 대장을 이기고 출항 종을 울린다. 첫 적은 공격하기 전 1.2초 동안 검을 들어 예고한다.",
+    "clearDescription": "해골 대장 격파 + 선장과 대화 + 출항 종 상호작용.",
+    "rewardDescription": "W01 여행자의 곡도를 시작 장비로 지급. 빨간 하트 첫 획득 안내. 보상 XP는 공통 첫 완료 공식 적용.",
+    "optionalDescription": "상자 두 개 위로 올라가 R01 항해자의 메달을 찾는다. 획득물 끌어당김 반경이 48에서 96px로 늘어난다.",
+    "safety": "첫 연습 구간은 낙사 없음. 시작 부두와 대장 앞에 체크포인트. 첫 하트 직전의 피해는 최대 10으로 제한."
+  },
+  {
+    "id": "S02",
+    "title": "세이렌의 안개 암초",
+    "chapter": 1,
+    "childSceneRefs": [
+      "2"
+    ],
+    "status": "implemented",
+    "artStatus": "draft",
+    "nextStageId": "S03",
+    "entryItems": [
+      "W01"
+    ],
+    "entryFlags": [],
+    "rewardId": "S02.firstClear",
+    "clearXp": 44,
+    "mandatoryItems": [
+      "W02"
+    ],
+    "optionalItems": [],
+    "rewardFlags": [],
+    "flow": "낮은 바위 발판을 건넌다 → 조개 종 세 개를 쳐 음파 방벽을 끈다 → 세이렌과 싸워 안개를 걷는다.",
+    "clearDescription": "세이렌의 저주 게이지 0 + W02 획득 + 등대 불 켜기.",
+    "rewardDescription": "W02 바람 부메랑을 보스 뒤의 필수 보물함에서 획득. 곡도와 무기를 바꾸는 조작을 안내.",
+    "optionalDescription": "부메랑으로 원거리 조개 스위치를 맞추면 선택 금화방 개방. 모든 필수 종은 기본 검으로도 접근 가능.",
+    "safety": "음파는 화면 밖에서 시작하지 않음. 세 종을 켠 뒤와 보스 앞에서 저장. 청각 단서 없이도 클리어 가능."
+  },
+  {
+    "id": "S03",
+    "title": "번개 폭풍의 갑판",
+    "chapter": 1,
+    "childSceneRefs": [
+      "3"
+    ],
+    "status": "implemented",
+    "artStatus": "draft",
+    "nextStageId": "S04",
+    "entryItems": [
+      "W01"
+    ],
+    "entryFlags": [],
+    "rewardId": "S03.firstClear",
+    "clearXp": 48,
+    "mandatoryItems": [
+      "R02"
+    ],
+    "optionalItems": [],
+    "rewardFlags": [],
+    "flow": "배 갑판에서 피뢰 장치 두 개를 고친다 → 안전 구역과 번개 예고선을 읽으며 이동한다 → 큰 낙뢰가 돛대를 때리는 위기 연출 후 구명 밧줄로 탈출한다.",
+    "clearDescription": "피뢰 장치 2개 작동 + 구명 밧줄 도달.",
+    "rewardDescription": "R02 폭풍 수정: 이후 번개 속성 피해 25% 감소. 필수 경로에서 지급.",
+    "optionalDescription": "돛대 옆 보조 발판의 금화 꾸러미. 얻지 않아도 탈출 진행.",
+    "safety": "죽을 뻔한 이야기 연출과 실제 피해를 분리한다. 연출은 HP를 줄이더라도 1 미만으로 만들지 않으며, 연출 직후 하트와 3초 무적을 보장. 큰 흰색 섬광은 기본 사용하지 않는다."
+  },
+  {
+    "id": "S04",
+    "title": "잠든 고래섬",
+    "chapter": 1,
+    "childSceneRefs": [],
+    "status": "planned",
+    "artStatus": "missing",
+    "nextStageId": "S05",
+    "entryItems": [
+      "W01"
+    ],
+    "entryFlags": [],
+    "rewardId": "S04.firstClear",
+    "clearXp": 52,
+    "mandatoryItems": [],
+    "optionalItems": [
+      "G01"
+    ],
+    "rewardFlags": [],
+    "flow": "섬처럼 보이는 등을 탐험한다 → 선원 세 명이 놓친 구명 장비를 모은다 → 생물이 깨어나 기울어지는 발판을 지나 구조 보트로 간다. 고래는 공격 대상이 아니다.",
+    "clearDescription": "구명 장비 3개 전달 + 구조 보트 상호작용.",
+    "rewardDescription": "구조 임무 완료, 다음 섬의 위치를 획득.",
+    "optionalDescription": "G01 황금 하트: 고래 등 바위 아치의 짧은 선택 경로. 기본 점프로 접근 가능.",
+    "safety": "탈출 타이머는 연출용이며 시간 초과 즉사 없음. 놓친 선원은 체크포인트에서 다시 시도. 고래를 공격해도 피해·보상 없음."
+  },
+  {
+    "id": "S05",
+    "title": "산호 감옥과 첫 보물",
+    "chapter": 1,
+    "childSceneRefs": [
+      "4"
+    ],
+    "status": "planned",
+    "artStatus": "missing",
+    "nextStageId": "S06",
+    "entryItems": [
+      "W01"
+    ],
+    "entryFlags": [],
+    "rewardId": "S05.firstClear",
+    "clearXp": 56,
+    "mandatoryItems": [],
+    "optionalItems": [
+      "G02"
+    ],
+    "rewardFlags": [
+      "bubbleBlessing"
+    ],
+    "flow": "해변 동굴의 산호 열쇠를 찾는다 → 보물함에서 바다의 왕관 장식을 꺼낸다 → 장식을 산호문에 끼워 해저 공주 나이라를 구한다. 이 공주는 뒤의 아리아나와 다른 인물이다.",
+    "clearDescription": "왕관 장식 전달 + 나이라 구출 + bubbleBlessing 저장.",
+    "rewardDescription": "스토리 플래그 bubbleBlessing: 나이라의 공기방울 보호. S07 침수와 S16 궁전 입구에서 익사하지 않도록 작동. 아직 자유 수영 능력은 아님.",
+    "optionalDescription": "G02 황금 하트: 감옥 옆 선택 산호방. 나이라 구출 뒤 방이 열리며 되돌아갈 수 있음.",
+    "safety": "필수 보물함은 출구 앞에 배치하고 열지 않으면 친절한 안내. 구출 애니메이션 생략에도 플래그와 보상을 먼저 확정."
+  },
+  {
+    "id": "S06",
+    "title": "화신의 동굴",
+    "chapter": 2,
+    "childSceneRefs": [
+      "5"
+    ],
+    "status": "planned",
+    "artStatus": "missing",
+    "nextStageId": "S07",
+    "entryItems": [
+      "W01"
+    ],
+    "entryFlags": [],
+    "rewardId": "S06.firstClear",
+    "clearXp": 60,
+    "mandatoryItems": [
+      "W03",
+      "T01"
+    ],
+    "optionalItems": [],
+    "rewardFlags": [],
+    "flow": "식어 버린 화로 세 곳에 불씨를 옮긴다 → 폭주한 불꽃 정령을 진정시킨다 → 화신 라흐를 만나 첫 항해 보물을 얻는다.",
+    "clearDescription": "화로 3곳 활성화 + T01·W03 수령 + 화신 대화.",
+    "rewardDescription": "T01 영원의 불씨 + W03 불꽃 곡도. 불꽃 파동 액티브와 불꽃 문양 상호작용 해금.",
+    "optionalDescription": "불씨를 얻은 뒤 입구의 마른 덩굴을 열면 금화방. 보물 사용을 안전한 곳에서 연습.",
+    "safety": "불씨를 얻기 전 화로는 주변 횃불로 켠다. 새 능력을 얻기 위해 그 능력을 먼저 요구하는 순환 잠금 금지."
+  },
+  {
+    "id": "S07",
+    "title": "거대한 파도와 침몰하는 배",
+    "chapter": 2,
+    "childSceneRefs": [
+      "6"
+    ],
+    "status": "planned",
+    "artStatus": "missing",
+    "nextStageId": "S08",
+    "entryItems": [],
+    "entryFlags": [
+      "bubbleBlessing"
+    ],
+    "rewardId": "S07.firstClear",
+    "clearXp": 64,
+    "mandatoryItems": [],
+    "optionalItems": [],
+    "rewardFlags": [
+      "genieCave"
+    ],
+    "flow": "보수한 작은 배로 협곡을 지난다 → 예고되는 큰 파도를 피하며 밧줄을 붙잡는다 → 선체가 아래 동굴로 밀려 내려가고 공기방울의 보호로 수정 동굴 입구에 도착한다.",
+    "clearDescription": "세 파도 구간 통과 + 하강 동굴의 닻 표식 도달.",
+    "rewardDescription": "지니 동굴 입구 체크포인트 개방.",
+    "optionalDescription": "파도 사이 높은 갑판의 보조 금화함. 실패해도 필수 밧줄은 놓치지 않도록 동선 분리.",
+    "safety": "bubbleBlessing이 입장 조건. 물에 빠지면 가까운 갑판으로 복귀하며 기본 10 피해만 적용. 침몰 컷신은 사망 판정 없음."
+  },
+  {
+    "id": "S08",
+    "title": "지니의 수정 동굴",
+    "chapter": 2,
+    "childSceneRefs": [
+      "7"
+    ],
+    "status": "planned",
+    "artStatus": "missing",
+    "nextStageId": "S09",
+    "entryItems": [
+      "T01"
+    ],
+    "entryFlags": [],
+    "rewardId": "S08.firstClear",
+    "clearXp": 68,
+    "mandatoryItems": [
+      "T02"
+    ],
+    "optionalItems": [],
+    "rewardFlags": [],
+    "flow": "수정 거울 세 개를 E로 회전한다 → 별자리 빛을 문에 연결한다 → 지니에게 수정구슬을 받고 아리아나가 남긴 별 지도를 본다.",
+    "clearDescription": "빛 연결 완료 + T02 수령 + 아리아나의 지도 단서 확인.",
+    "rewardDescription": "T02 진실의 수정구슬. 가까운 비밀 입구의 반짝임과 환영 해제 상호작용 해금.",
+    "optionalDescription": "수정구슬로 벽의 숨은 항해 일지 1장을 발견. 필수 보물은 숨겨 두지 않는다.",
+    "safety": "수정구슬 없이 풀 수 있는 첫 퍼즐. 퍼즐 초기화 버튼 제공. 대화 다시 보기 지원."
+  },
+  {
+    "id": "S09",
+    "title": "로크새의 둥지",
+    "chapter": 2,
+    "childSceneRefs": [
+      "8"
+    ],
+    "status": "planned",
+    "artStatus": "missing",
+    "nextStageId": "S10",
+    "entryItems": [
+      "T02"
+    ],
+    "entryFlags": [],
+    "rewardId": "S09.firstClear",
+    "clearXp": 72,
+    "mandatoryItems": [
+      "T03"
+    ],
+    "optionalItems": [],
+    "rewardFlags": [],
+    "flow": "절벽 둥지에 도착한다 → 저주받은 로크새와 싸운다 → 수정구슬로 목걸이의 저주 핵을 드러내 세 번 깨뜨린다 → 로크새가 동료가 된다.",
+    "clearDescription": "저주 핵 3개 파괴 + 동료 대화 + T03 수령.",
+    "rewardDescription": "T03 로크의 깃털. 이단 점프·활공·지정 둥지의 탑승 해금.",
+    "optionalDescription": "전투 후 새 능력으로 둥지 위 작은 보석을 획득. 로크새 알을 깨는 행동은 넣지 않는다.",
+    "safety": "보스전 지형은 이단 점프 없이 회피 가능. 승리 뒤 안전한 발판에서 새 능력을 연습."
+  },
+  {
+    "id": "S10",
+    "title": "로크새를 타고 구름길",
+    "chapter": 2,
+    "childSceneRefs": [
+      "8"
+    ],
+    "status": "planned",
+    "artStatus": "missing",
+    "nextStageId": "S11",
+    "entryItems": [
+      "T03"
+    ],
+    "entryFlags": [],
+    "rewardId": "S10.firstClear",
+    "clearXp": 76,
+    "mandatoryItems": [],
+    "optionalItems": [],
+    "rewardFlags": [
+      "flightJournal"
+    ],
+    "flow": "로크새에 올라 탄다 → 구름 고리와 바람길을 통과한다 → 공중 해적 연을 피하거나 쳐서 떨어뜨린다 → 다이아몬드 절벽에 착륙한다.",
+    "clearDescription": "최종 착륙 구역 도달. 선택 고리 점수는 해금 조건이 아니다.",
+    "rewardDescription": "다이아몬드 골짜기 경로와 비행 일지.",
+    "optionalDescription": "높은 구름 고리를 3개 통과하면 선택 금화 꾸러미. 한 번 놓쳐도 스테이지 진행 가능.",
+    "safety": "자동 횡스크롤에는 뒤에서 따라오는 안전 구역을 둔다. 화면에 낀 즉사 없음. 비행 HP는 플레이어 HP 공유, 별도 탑승체 성장 없음."
+  },
+  {
+    "id": "S11",
+    "title": "다이아몬드 골짜기",
+    "chapter": 3,
+    "childSceneRefs": [],
+    "status": "planned",
+    "artStatus": "missing",
+    "nextStageId": "S12",
+    "entryItems": [
+      "T02",
+      "T03"
+    ],
+    "entryFlags": [],
+    "rewardId": "S11.firstClear",
+    "clearXp": 80,
+    "mandatoryItems": [
+      "W04"
+    ],
+    "optionalItems": [
+      "G03"
+    ],
+    "rewardFlags": [],
+    "flow": "빛나는 골짜기로 내려간다 → 뱀의 시야를 피하며 반사석 세 개를 찾는다 → 반사석으로 광선을 이어 상승 기류를 켜고 로크새가 기다리는 절벽으로 오른다.",
+    "clearDescription": "반사석 3개 장착 + 상승 기류 활성화 + W04 획득 + 절벽 출구.",
+    "rewardDescription": "W04 폭풍의 창. 낮은 천장의 적을 멀리서 찌르는 긴 사거리 무기.",
+    "optionalDescription": "G03 황금 하트: 수정구슬로 드러나는 옆방. 이단 점프로 도달하며 출구 전 되돌아갈 수 있음.",
+    "safety": "필수 상승 기류는 시간 제한 없음. T03 없이 입장되지 않는다. 전용 무기를 얻기 전에도 모든 필수 전투 가능."
+  },
+  {
+    "id": "S12",
+    "title": "포이즌 드래곤의 습지",
+    "chapter": 3,
+    "childSceneRefs": [
+      "9"
+    ],
+    "status": "planned",
+    "artStatus": "missing",
+    "nextStageId": "S13",
+    "entryItems": [
+      "T03",
+      "W04"
+    ],
+    "entryFlags": [],
+    "rewardId": "S12.firstClear",
+    "clearXp": 84,
+    "mandatoryItems": [
+      "R03"
+    ],
+    "optionalItems": [],
+    "rewardFlags": [],
+    "flow": "맑은 물이 있는 안전 섬들을 건넌다 → 독 분출구 두 곳을 닫는다 → 포이즌 드래곤과 싸워 늪의 저주를 없앤다.",
+    "clearDescription": "독 분출구 2곳 폐쇄 + 드래곤 격파·저주 해제 + 마른 길 출구.",
+    "rewardDescription": "R03 해독의 잎: 독 지속 시간이 4초에서 2초로 감소. 장착 칸 없이 자동 적용.",
+    "optionalDescription": "정화된 샛길에서 큰 보석 꾸러미. 독에 일부러 맞아야 얻는 비밀은 만들지 않는다.",
+    "safety": "기본 모드에서 독 지속 피해는 HP를 1 아래로 내리지 않는다. 보스 직접 공격은 정상 판정. 보스 앞 하트와 체크포인트."
+  },
+  {
+    "id": "S13",
+    "title": "두 친구의 집",
+    "chapter": 3,
+    "childSceneRefs": [
+      "10"
+    ],
+    "status": "planned",
+    "artStatus": "missing",
+    "nextStageId": "S14",
+    "entryItems": [
+      "W01"
+    ],
+    "entryFlags": [],
+    "rewardId": "S13.firstClear",
+    "clearXp": 88,
+    "mandatoryItems": [],
+    "optionalItems": [],
+    "rewardFlags": [
+      "upgradeShop"
+    ],
+    "flow": "마을 남자 하미드와 마진을 만난다 → 지붕 수리에 필요한 나무 세 조각을 가져온다 → 저녁을 먹고 쉬며 장비와 항해 일지를 정리한다.",
+    "clearDescription": "나무 3개 전달 + 두 사람과 대화 + 침대 상호작용.",
+    "rewardDescription": "HP·MP 완전 회복, 집 체크포인트, 선택 무기 강화 상점 해금. 강화는 금화만 사용하며 필수 구매 없음.",
+    "optionalDescription": "책장 뒤 항해 일지. 두 남자의 서로 다른 대화를 모두 보면 발견 힌트.",
+    "safety": "오래 머무르거나 물건을 사지 않아도 진행. 구매 취소·설명 보기 제공. 휴식한 다음 시작되는 다음 임무를 명확히 안내."
+  },
+  {
+    "id": "S14",
+    "title": "거짓 촌장의 비밀 창고",
+    "chapter": 3,
+    "childSceneRefs": [
+      "11"
+    ],
+    "status": "planned",
+    "artStatus": "missing",
+    "nextStageId": "S15",
+    "entryItems": [
+      "T02"
+    ],
+    "entryFlags": [],
+    "rewardId": "S14.firstClear",
+    "clearXp": 92,
+    "mandatoryItems": [],
+    "optionalItems": [],
+    "rewardFlags": [
+      "mayorArrested"
+    ],
+    "flow": "주민들의 이야기를 듣는다 → 창고의 빼돌린 물품 목록·검은 표식·감금 열쇠를 찾는다 → 갇힌 주민을 풀어 주고 경비대에 증거를 전달한다.",
+    "clearDescription": "증거 3개 확보 + 주민 구출 + 경비대장 전달 + 수감 사건 플래그.",
+    "rewardDescription": "촌장이 감옥에 수감되는 짧은 비잔혹 연출. 거인의 섬으로 향하는 항로 단서.",
+    "optionalDescription": "창고 천장 보너스 금화함. 사건 해결의 증거 3개는 필수 동선에 배치.",
+    "safety": "선택 대화 하나를 놓쳤다고 막히지 않는다. 퍼즐을 풀기 전 문을 잠가 플레이어를 가두지 않음."
+  },
+  {
+    "id": "S15",
+    "title": "거인의 부엌",
+    "chapter": 3,
+    "childSceneRefs": [],
+    "status": "planned",
+    "artStatus": "missing",
+    "nextStageId": "S16",
+    "entryItems": [
+      "T03"
+    ],
+    "entryFlags": [],
+    "rewardId": "S15.firstClear",
+    "clearXp": 96,
+    "mandatoryItems": [
+      "R04"
+    ],
+    "optionalItems": [
+      "G04"
+    ],
+    "rewardFlags": [],
+    "flow": "거대한 가구 사이로 들어간다 → 붙잡힌 선원 두 명의 문을 연다 → 거인이 내려치는 국자를 피하며 도르래를 움직여 탈출 뗏목을 내린다.",
+    "clearDescription": "선원 2명 구출 + 도르래 2개 작동 + 탈출 뗏목 탑승.",
+    "rewardDescription": "R04 거인의 장화: 밀 수 있는 상자를 미는 속도 50% 증가. 기본 캐릭터도 모든 필수 상자를 밀 수 있다.",
+    "optionalDescription": "G04 황금 하트: 식탁 아래 선택 방. 거인 탈출 전 뒤로 돌아갈 통로 유지.",
+    "safety": "국자 공격은 1.2초 예고. 필수 퍼즐에 R04를 먼저 요구하지 않는다. 추격은 구간별 리셋, 전체 스테이지 초기화 금지."
+  },
+  {
+    "id": "S16",
+    "title": "바닷속 궁전",
+    "chapter": 4,
+    "childSceneRefs": [
+      "12"
+    ],
+    "status": "planned",
+    "artStatus": "missing",
+    "nextStageId": "S17",
+    "entryItems": [
+      "T02"
+    ],
+    "entryFlags": [
+      "bubbleBlessing"
+    ],
+    "rewardId": "S16.firstClear",
+    "clearXp": 100,
+    "mandatoryItems": [
+      "W05",
+      "T04"
+    ],
+    "optionalItems": [],
+    "rewardFlags": [],
+    "flow": "나이라의 공기방울 길을 따라 바닷속 궁전에 들어간다 → 재회하고 머물며 세 조개 종의 순서를 맞춘다 → 심해의 진주를 얻어 자유 수영을 배운다.",
+    "clearDescription": "조개 종 퍼즐 + T04·W05 수령 + 짧은 수영 연습 완료.",
+    "rewardDescription": "T04 심해의 진주 + W05 파도의 활. 수중 자유 이동 해금, 체력·마력 완전 회복.",
+    "optionalDescription": "진주 획득 뒤 수중 옆방의 항해 일지. 미획득 일지가 있어도 출구 개방.",
+    "safety": "T04 획득 전 구간은 bubbleBlessing 기반 보호 통로이므로 수영 능력 없이 진입 가능. 산소 제한·익사 게이지 없음."
+  },
+  {
+    "id": "S17",
+    "title": "해적선 돌파",
+    "chapter": 4,
+    "childSceneRefs": [
+      "13"
+    ],
+    "status": "planned",
+    "artStatus": "missing",
+    "nextStageId": "S18",
+    "entryItems": [
+      "T04"
+    ],
+    "entryFlags": [],
+    "rewardId": "S17.firstClear",
+    "clearXp": 104,
+    "mandatoryItems": [],
+    "optionalItems": [],
+    "rewardFlags": [
+      "crewRescued",
+      "captainKey"
+    ],
+    "flow": "해적선 아래의 물길로 접근한다 → 갑판으로 올라 포로 선원의 쇠창살을 연다 → 포격 사이를 지나 선장실 문을 연다.",
+    "clearDescription": "포로 3명 구조 + 선장실 열쇠 사용.",
+    "rewardDescription": "선장실 열쇠와 구조 완료 플래그.",
+    "optionalDescription": "부메랑으로 돛대 옆 스위치를 켜 선택 보석함 개방. 활로도 작동 가능.",
+    "safety": "수영과 지상 전환 시 속도·중력·입력 상태를 초기화. 문을 열 때 뒤에 남은 선원이 경로를 막지 않음."
+  },
+  {
+    "id": "S18",
+    "title": "검은 돛의 선장",
+    "chapter": 4,
+    "childSceneRefs": [
+      "13"
+    ],
+    "status": "planned",
+    "artStatus": "missing",
+    "nextStageId": "S19",
+    "entryItems": [
+      "T04"
+    ],
+    "entryFlags": [],
+    "rewardId": "S18.firstClear",
+    "clearXp": 108,
+    "mandatoryItems": [
+      "R05"
+    ],
+    "optionalItems": [
+      "G05"
+    ],
+    "rewardFlags": [],
+    "flow": "선장 카딘과 대치한다 → 돌진과 폭탄 던지기를 피해 공격한다 → 항복한 선장에게 검은 탑의 지도를 받아 보물실을 연다.",
+    "clearDescription": "선장 항복 + 검은 탑 지도 수령 + 보물실 출구.",
+    "rewardDescription": "R05 해적의 보물 지도: 현재 스테이지의 아직 열지 않은 선택 보물함 방향을 HUD에 표시.",
+    "optionalDescription": "G05 황금 하트: 보물실의 창문 위 발판. 보스 격파 후 자유 탐색 가능.",
+    "safety": "선장에게 마지막 공격을 반드시 맞힐 필요 없이 체력 0에서 자동 항복. 대화 중 잔여 폭탄·탄환 제거."
+  },
+  {
+    "id": "S19",
+    "title": "쿠우라의 그림자 성",
+    "chapter": 4,
+    "childSceneRefs": [
+      "14"
+    ],
+    "status": "planned",
+    "artStatus": "missing",
+    "nextStageId": "S20",
+    "entryItems": [
+      "T02",
+      "T03"
+    ],
+    "entryFlags": [],
+    "rewardId": "S19.firstClear",
+    "clearXp": 112,
+    "mandatoryItems": [],
+    "optionalItems": [],
+    "rewardFlags": [
+      "shadowDefeated"
+    ],
+    "flow": "수정구슬로 가짜 계단을 가려낸다 → 쿠우라의 그림자 분신과 싸워 이긴다 → 정글에 남겨진 진짜 탑의 봉인 지도를 얻는다.",
+    "clearDescription": "쿠우라 분신 격파 + 봉인 지도 수령 + 정글 문 열기.",
+    "rewardDescription": "정글 관문 개방. 승리를 취소하는 연출 금지: 분신 격파 자체는 확실한 승리로 기록.",
+    "optionalDescription": "환영 벽 뒤 항해 일지. 최종 보물이나 필수 지도는 숨기지 않는다.",
+    "safety": "정답 계단은 문양과 형태로 구분. 오답 발판은 짧은 낙하 후 가까운 위치 복귀. 진짜 쿠우라와의 최종전은 S31이라고 일지에 명시."
+  },
+  {
+    "id": "S20",
+    "title": "정글의 문",
+    "chapter": 5,
+    "childSceneRefs": [
+      "15a"
+    ],
+    "status": "planned",
+    "artStatus": "missing",
+    "nextStageId": "S21",
+    "entryItems": [
+      "T01",
+      "T03"
+    ],
+    "entryFlags": [],
+    "rewardId": "S20.firstClear",
+    "clearXp": 116,
+    "mandatoryItems": [],
+    "optionalItems": [],
+    "rewardFlags": [],
+    "flow": "정글 입구의 덩굴 문을 연다 → 길을 밝히며 나무 발판 사이를 이동한다 → 숲의 발자국을 따라 야영지에 도착한다.",
+    "clearDescription": "덩굴 문 개방 + 길 표식 3개 확인 + 야영지 도착.",
+    "rewardDescription": "숲 야영지 체크포인트와 뱀 계곡 경로.",
+    "optionalDescription": "불씨로 선택 덩굴을 열면 보석 꾸러미. 필수 덩굴의 E 상호작용은 MP를 쓰지 않음.",
+    "safety": "배경 나뭇잎으로 발판을 가리지 않음. 덩굴 스윙 물리는 도입하지 않고 고정·이동 발판으로 구현."
+  },
+  {
+    "id": "S21",
+    "title": "거대한 뱀의 계곡",
+    "chapter": 5,
+    "childSceneRefs": [
+      "15b"
+    ],
+    "status": "planned",
+    "artStatus": "missing",
+    "nextStageId": "S22",
+    "entryItems": [
+      "T02",
+      "T03"
+    ],
+    "entryFlags": [],
+    "rewardId": "S21.firstClear",
+    "clearXp": 120,
+    "mandatoryItems": [],
+    "optionalItems": [],
+    "rewardFlags": [],
+    "flow": "큰 뱀의 흔적이 있는 계곡을 건넌다 → 세 돌기둥의 문양을 드러낸다 → 저주받은 뱀의 몸통을 피하며 드러난 머리의 저주석을 공격한다.",
+    "clearDescription": "기둥 3개 조사 + 저주석 파괴 + 열린 숲길 도달.",
+    "rewardDescription": "뱀의 저주 해제와 호랑이 숲 경로.",
+    "optionalDescription": "뱀이 떠난 동굴에서 선택 보석함. 뱀을 다시 때려야 보물이 나오게 하지 않는다.",
+    "safety": "뱀에게 둘러싸인 상황에도 기본 회피 경로 하나 보장. 보스 앞 체력 회복과 체크포인트."
+  },
+  {
+    "id": "S22",
+    "title": "저주받은 호랑이의 숲",
+    "chapter": 5,
+    "childSceneRefs": [
+      "16"
+    ],
+    "status": "planned",
+    "artStatus": "missing",
+    "nextStageId": "S23",
+    "entryItems": [
+      "T02"
+    ],
+    "entryFlags": [],
+    "rewardId": "S22.firstClear",
+    "clearXp": 124,
+    "mandatoryItems": [
+      "R06"
+    ],
+    "optionalItems": [
+      "G06"
+    ],
+    "rewardFlags": [],
+    "flow": "호랑이가 남긴 긁힌 자국을 따라간다 → 돌진하는 호랑이를 피하며 저주 문양을 약화시킨다 → 목의 저주 띠를 끊어 숲의 동료로 만든다.",
+    "clearDescription": "호랑이 저주 해제 + 새로 열린 길 통과.",
+    "rewardDescription": "R06 숲의 휘장: 정글의 덩굴·독성 식물 지형 피해 20% 감소. 호랑이가 안전한 지름길을 열어 준다.",
+    "optionalDescription": "G06 황금 하트: 호랑이가 연 선택 굴 안. 후반 재방문 가능.",
+    "safety": "호랑이는 승리 후 공격 불가. 체력 0은 동물 사망이 아니라 저주 해제로 명확히 표현."
+  },
+  {
+    "id": "S23",
+    "title": "바다 노인의 저주",
+    "chapter": 5,
+    "childSceneRefs": [],
+    "status": "planned",
+    "artStatus": "missing",
+    "nextStageId": "S24",
+    "entryItems": [
+      "T02"
+    ],
+    "entryFlags": [],
+    "rewardId": "S23.firstClear",
+    "clearXp": 128,
+    "mandatoryItems": [],
+    "optionalItems": [],
+    "rewardFlags": [],
+    "flow": "다리의 수상한 그림자에게 가까이 가자 저주가 어깨에 붙는다 → 느려진 상태로 세 맑은 종을 울린다 → 그림자를 떼어 내고 숲길을 회복한다.",
+    "clearDescription": "맑은 종 3개 활성화 + 어깨 저주 제거 + 출구.",
+    "rewardDescription": "저주 해제와 도깨비의 방울 소리를 가리키는 단서.",
+    "optionalDescription": "저주가 풀린 뒤 입구 높은 나뭇가지의 금화. 되돌아가야 하는 선택 경로임을 표시.",
+    "safety": "술·취하게 하기·살해 장면 없음. 연타 탈출이나 빠른 타이밍 시험 대신 탐험 퍼즐. 리셋 시 저주 상태와 위치를 함께 복원."
+  },
+  {
+    "id": "S24",
+    "title": "외눈 괴물의 성채",
+    "chapter": 5,
+    "childSceneRefs": [
+      "17"
+    ],
+    "status": "planned",
+    "artStatus": "missing",
+    "nextStageId": "S25",
+    "entryItems": [
+      "T03"
+    ],
+    "entryFlags": [],
+    "rewardId": "S24.firstClear",
+    "clearXp": 132,
+    "mandatoryItems": [],
+    "optionalItems": [],
+    "rewardFlags": [
+      "moonBridgeKey"
+    ],
+    "flow": "성채의 무너진 벽을 지난다 → 외눈 돌 괴물의 공격을 발판으로 피한다 → 바닥 장치 두 개로 보호막을 꺼서 중앙 수정핵을 공격한다.",
+    "clearDescription": "돌 괴물 비활성화 + 달빛 다리 열쇠 수령.",
+    "rewardDescription": "달빛 다리 열쇠. 눈을 다치게 하는 연출 대신 가슴의 마법핵이 꺼지는 모습.",
+    "optionalDescription": "성채 옆 선택 금화방. 보스 뒤 돌아갈 수 있는 계단 생성.",
+    "safety": "주먹 공격은 플레이어가 서 있던 위치에 예고 후 떨어지고 무한 추적하지 않음. 모든 공격은 공략 가능한 쉼 구간을 갖는다."
+  },
+  {
+    "id": "S25",
+    "title": "도깨비의 달빛 다리",
+    "chapter": 5,
+    "childSceneRefs": [
+      "18"
+    ],
+    "status": "planned",
+    "artStatus": "missing",
+    "nextStageId": "S26",
+    "entryItems": [
+      "T03"
+    ],
+    "entryFlags": [],
+    "rewardId": "S25.firstClear",
+    "clearXp": 136,
+    "mandatoryItems": [
+      "W06",
+      "T05"
+    ],
+    "optionalItems": [],
+    "rewardFlags": [],
+    "flow": "동쪽 바다에서 길을 잃은 도깨비 바루를 만난다 → 도깨비불 세 개를 제자리로 돌려준다 → 방울로 달빛 다리를 만들어 함께 건넌다.",
+    "clearDescription": "도깨비불 3개 복귀 + T05·W06 수령 + 연습 다리 통과.",
+    "rewardDescription": "T05 도깨비의 방울 + W06 달빛 방망이. 지정 표식에 마법 다리 생성 가능.",
+    "optionalDescription": "방망이로 금 간 선택 바위를 빠르게 깨면 보석함. 기본 무기로 여러 번 쳐도 열 수 있음.",
+    "safety": "첫 도깨비불 수집에는 방울을 요구하지 않음. 다리는 12초 뒤 사라지지만 위에 서 있는 동안 연장하며, 재생성 비용·횟수 제한 없음."
+  },
+  {
+    "id": "S26",
+    "title": "별빛 지하강",
+    "chapter": 6,
+    "childSceneRefs": [],
+    "status": "planned",
+    "artStatus": "missing",
+    "nextStageId": "S27",
+    "entryItems": [
+      "T04",
+      "T05"
+    ],
+    "entryFlags": [],
+    "rewardId": "S26.firstClear",
+    "clearXp": 140,
+    "mandatoryItems": [],
+    "optionalItems": [
+      "G07"
+    ],
+    "rewardFlags": [
+      "indiaArrival"
+    ],
+    "flow": "나무와 밧줄로 뗏목을 준비한다 → 빛나는 물길에서 낮은 바위와 갈림길을 지난다 → 별 지도에 맞는 출구를 골라 바깥 항구로 나온다.",
+    "clearDescription": "뗏목 준비 + 두 물길 장치 개방 + 별빛 출구 도달.",
+    "rewardDescription": "인도 항구의 위치와 도착 플래그.",
+    "optionalDescription": "G07 황금 하트: 안전한 수중 옆동굴. 선택 경로는 되돌아오는 물길과 함께 배치.",
+    "safety": "틀린 갈림길은 보너스 막다른 길로 처리하고 복귀 가능. 산소·음식·시간 소진으로 갇히는 상황 금지."
+  },
+  {
+    "id": "S27",
+    "title": "인도의 바닷길",
+    "chapter": 6,
+    "childSceneRefs": [
+      "19"
+    ],
+    "status": "planned",
+    "artStatus": "missing",
+    "nextStageId": "S28",
+    "entryItems": [
+      "T05"
+    ],
+    "entryFlags": [],
+    "rewardId": "S27.firstClear",
+    "clearXp": 144,
+    "mandatoryItems": [],
+    "optionalItems": [],
+    "rewardFlags": [
+      "templePermission"
+    ],
+    "flow": "상상 속 인도 항구에 도착한다 → 폭풍으로 흩어진 물품 세 상자를 주민과 함께 옮긴다 → 신전으로 가는 길을 안내받는다.",
+    "clearDescription": "물품 3상자 전달 + 미라 대화 + 신전 길 출구.",
+    "rewardDescription": "신전 방문 허가와 휴식 지점. 게임 지도를 실제 인도 항로 지도라고 설명하지 않는다.",
+    "optionalDescription": "시장 골목의 항해 일지. 발견 설명에는 ‘여러 지역의 설화를 엮은 판타지’임을 표시.",
+    "safety": "종교 의식 참여·시험 정답·실제 신앙 고백을 진행 조건으로 요구하지 않음. 주민 대화는 짧고 읽기 쉽게."
+  },
+  {
+    "id": "S28",
+    "title": "비슈누의 수호 신전",
+    "chapter": 6,
+    "childSceneRefs": [
+      "19"
+    ],
+    "status": "planned",
+    "artStatus": "missing",
+    "nextStageId": "S29",
+    "entryItems": [
+      "T02",
+      "T05"
+    ],
+    "entryFlags": [],
+    "rewardId": "S28.firstClear",
+    "clearXp": 148,
+    "mandatoryItems": [
+      "T06"
+    ],
+    "optionalItems": [],
+    "rewardFlags": [],
+    "flow": "신전의 연꽃·소라·원형 문양을 살펴본다 → 세 빛 장치의 균형을 맞춘다 → 비슈누의 평온한 환영에게 보호의 축복을 받는다.",
+    "clearDescription": "빛 장치 균형 완성 + T06 수령 + 축복 연습 표적 통과.",
+    "rewardDescription": "T06 균형의 연꽃. 일정 시간 공격을 막는 보호막 능력 해금.",
+    "optionalDescription": "신전 옆 뜰의 여행 일지. 실제 경전 구절을 만들어 인용하지 않는다.",
+    "safety": "퍼즐 실패 피해 없음. 색 외에 서로 다른 문양과 숫자로 상태를 표시. 필수 장치의 E 사용에는 MP 불필요."
+  },
+  {
+    "id": "S29",
+    "title": "코끼리의 비밀 정원",
+    "chapter": 6,
+    "childSceneRefs": [],
+    "status": "planned",
+    "artStatus": "missing",
+    "nextStageId": "S30",
+    "entryItems": [
+      "T03",
+      "T06"
+    ],
+    "entryFlags": [],
+    "rewardId": "S29.firstClear",
+    "clearXp": 152,
+    "mandatoryItems": [
+      "T07"
+    ],
+    "optionalItems": [
+      "G08"
+    ],
+    "rewardFlags": [],
+    "flow": "길에 걸린 코끼리 새끼를 풀어 준다 → 무리를 따라 숲의 쓰러진 나무를 치운다 → 코끼리들이 지키던 별빛 정원에서 마지막 항해 보물을 찾는다.",
+    "clearDescription": "새끼 구조 + 덫 4개 해제 + T07 수령.",
+    "rewardDescription": "T07 새벽의 나침반. 저주 갑옷을 약화시키는 새벽 파동과 최종 관문 상호작용 해금.",
+    "optionalDescription": "G08 황금 하트: 정원의 높은 뿌리 발판. 기본 이단 점프로 접근 가능.",
+    "safety": "전투 중 동물 보호 실패로 영구 실패하지 않음. 코끼리의 경로는 고정 지점 이동, 복잡한 추종 AI 불필요."
+  },
+  {
+    "id": "S30",
+    "title": "일곱 보물의 관문",
+    "chapter": 7,
+    "childSceneRefs": [],
+    "status": "planned",
+    "artStatus": "missing",
+    "nextStageId": "S31",
+    "entryItems": [
+      "T01",
+      "T02",
+      "T03",
+      "T04",
+      "T05",
+      "T06",
+      "T07"
+    ],
+    "entryFlags": [],
+    "rewardId": "S30.firstClear",
+    "clearXp": 156,
+    "mandatoryItems": [
+      "W07"
+    ],
+    "optionalItems": [],
+    "rewardFlags": [],
+    "flow": "수정구슬로 일곱 보물의 받침대를 찾는다 → 불씨·깃털·진주·방울·연꽃·나침반의 짧은 시험을 지난다 → 봉인을 열고 검은 탑으로 들어간다.",
+    "clearDescription": "T01~T07 보유 + 받침대 7개 활성화 + W07 수령.",
+    "rewardDescription": "W07 새벽의 검. 일곱 보물은 합성으로 사라지지 않으며 기존 능력을 모두 유지.",
+    "optionalDescription": "탑 입구 옆 선택 보석방. 숨은 보물을 하나도 못 찾았어도 모든 필수 받침대 통과 가능.",
+    "safety": "필수 능력 시험은 MP가 없어도 E 상호작용·자동 회복으로 통과. 누락된 보물이 있으면 해당 스테이지 안내와 재방문 제공, 저장 데이터 조작으로 몰래 지급하지 않음."
+  },
+  {
+    "id": "S31",
+    "title": "쿠우라와의 마지막 결투",
+    "chapter": 7,
+    "childSceneRefs": [
+      "14"
+    ],
+    "status": "planned",
+    "artStatus": "missing",
+    "nextStageId": "S32",
+    "entryItems": [
+      "T01",
+      "T02",
+      "T03",
+      "T04",
+      "T05",
+      "T06",
+      "T07",
+      "W07"
+    ],
+    "entryFlags": [],
+    "rewardId": "S31.firstClear",
+    "clearXp": 160,
+    "mandatoryItems": [],
+    "optionalItems": [],
+    "rewardFlags": [
+      "kuuraSealed"
+    ],
+    "flow": "탑의 봉인석 두 개를 끈다 → 쿠우라의 지상 마법과 싸운다 → 공중 보호막을 무너뜨리고 최종 저주 핵을 정화한다.",
+    "clearDescription": "최종 보스 HP 0 + 저주 핵 E 정화 + 쿠우라 봉인 확정.",
+    "rewardDescription": "쿠우라 봉인 플래그와 아리아나의 방 열쇠. 봉인은 수정 감옥이며 기존 작품의 호리병 연출을 복제하지 않음.",
+    "optionalDescription": "보스 방에는 놓칠 수 있는 희귀 보물 없음. 전투 뒤 자유롭게 출구 탐색.",
+    "safety": "체크포인트에서 HP·MP 완전 회복. 난이도 완화는 장비·보상 손실 없음. 사망 시 보스전만 재시작하며 관문 전체를 다시 풀지 않음."
+  },
+  {
+    "id": "S32",
+    "title": "아리아나 공주 구출",
+    "chapter": 7,
+    "childSceneRefs": [
+      "20"
+    ],
+    "status": "planned",
+    "artStatus": "missing",
+    "nextStageId": "S33",
+    "entryItems": [
+      "T02",
+      "T07"
+    ],
+    "entryFlags": [],
+    "rewardId": "S32.firstClear",
+    "clearXp": 164,
+    "mandatoryItems": [
+      "R07"
+    ],
+    "optionalItems": [],
+    "rewardFlags": [
+      "arianaRescued"
+    ],
+    "flow": "아리아나가 안쪽에서 알려 주는 별 순서를 듣는다 → 신밧드가 바깥의 수정 장치를 돌린다 → 두 사람이 동시에 봉인을 풀고 안전한 발코니로 나온다.",
+    "clearDescription": "별 장치 3개 일치 + 봉인 해제 + 아리아나와 발코니 도달.",
+    "rewardDescription": "R07 우정의 매듭: 이후 동행 구간에서 20초마다 잃은 체력 10 회복. 전투 필수 능력 아님.",
+    "optionalDescription": "아리아나가 조사한 별 지도의 일지 페이지. 구출 자체와 연애 선택을 강제로 동일시하지 않음.",
+    "safety": "NPC는 위험에 떨어지지 않는 위치 스냅 방식. 플레이어가 멀어지면 안전 발판으로 따라오며 별도 사망 HP 없음."
+  },
+  {
+    "id": "S33",
+    "title": "로크새와 귀환 비행",
+    "chapter": 7,
+    "childSceneRefs": [],
+    "status": "planned",
+    "artStatus": "missing",
+    "nextStageId": "S34",
+    "entryItems": [
+      "T03"
+    ],
+    "entryFlags": [],
+    "rewardId": "S33.firstClear",
+    "clearXp": 168,
+    "mandatoryItems": [],
+    "optionalItems": [],
+    "rewardFlags": [
+      "kingdomReturn"
+    ],
+    "flow": "로크새에 신밧드와 아리아나가 함께 탄다 → 무너지는 탑의 파편을 피해 난다 → 전반의 어두운 구름이 걷힌 하늘을 통과해 왕국 앞에 착륙한다.",
+    "clearDescription": "왕국 착륙 지점 도달.",
+    "rewardDescription": "왕국 귀환 플래그와 비행 기념 일지.",
+    "optionalDescription": "선택 구름 고리 5개: 메달 등급만 변경, 엔딩 잠금 없음.",
+    "safety": "NPC 동승은 시각 표현만 추가하고 충돌체는 하나. 파편과 화면 경계 사이에 안전 경로 보장."
+  },
+  {
+    "id": "S34",
+    "title": "궁전으로 돌아가는 길",
+    "chapter": 7,
+    "childSceneRefs": [
+      "21"
+    ],
+    "status": "planned",
+    "artStatus": "missing",
+    "nextStageId": "S35",
+    "entryItems": [
+      "T07"
+    ],
+    "entryFlags": [],
+    "rewardId": "S34.firstClear",
+    "clearXp": 172,
+    "mandatoryItems": [],
+    "optionalItems": [],
+    "rewardFlags": [
+      "festivalUnlocked"
+    ],
+    "flow": "왕국의 거리로 돌아온다 → 여행에서 만난 이들의 편지를 전달한다 → 궁전에서 왕과 재회하고 아리아나의 항해 지도를 펼친다.",
+    "clearDescription": "왕에게 항해 지도 전달 + 궁전 재회 장면 확인.",
+    "rewardDescription": "왕국 재회 일지와 축제 준비 해금. 놓친 이전 스테이지의 재방문은 월드맵에서 가능.",
+    "optionalDescription": "여행 중 만난 NPC 3명의 편지를 모두 읽으면 장식용 항해 배지. 엔딩 필수 아님.",
+    "safety": "모든 이전 선택 퀘스트 완료를 요구하지 않음. 대화 생략에도 다음 스테이지 해금."
+  },
+  {
+    "id": "S35",
+    "title": "왕의 축복과 결혼식",
+    "chapter": 7,
+    "childSceneRefs": [
+      "22"
+    ],
+    "status": "planned",
+    "artStatus": "missing",
+    "nextStageId": "S36",
+    "entryItems": [
+      "T07"
+    ],
+    "entryFlags": [],
+    "rewardId": "S35.firstClear",
+    "clearXp": 176,
+    "mandatoryItems": [],
+    "optionalItems": [],
+    "rewardFlags": [
+      "wedding"
+    ],
+    "flow": "시간이 흐른 뒤의 축제를 보여 준다 → 손님들에게 초대장을 건네고 장식을 준비한다 → 신밧드와 아리아나가 서로의 뜻을 말한 뒤 왕의 축복 속에 결혼한다.",
+    "clearDescription": "축제 준비 3개 완료 또는 접근성용 준비 건너뛰기 + 결혼식 연출.",
+    "rewardDescription": "결혼식 일지와 기념 의상. 캐릭터는 설정상 성인, 외형 역시 성인으로 표현.",
+    "optionalDescription": "선택 대화로 지니·도깨비·나이라의 축하 인사를 볼 수 있음. 도움 준 NPC를 누락하지 않는 회고.",
+    "safety": "공주를 보상 물건으로 표현하지 않는다. 전투 장비는 숨겨지고 안전한 상호작용만 남는다."
+  },
+  {
+    "id": "S36",
+    "title": "함께 여는 새로운 항해",
+    "chapter": 7,
+    "childSceneRefs": [
+      "23"
+    ],
+    "status": "planned",
+    "artStatus": "missing",
+    "nextStageId": null,
+    "entryItems": [
+      "T07"
+    ],
+    "entryFlags": [],
+    "rewardId": "S36.firstClear",
+    "clearXp": 180,
+    "mandatoryItems": [],
+    "optionalItems": [],
+    "rewardFlags": [
+      "ending"
+    ],
+    "flow": "행복하게 지내는 두 사람이 항해 도서관을 연다 → 지도·보물·친구들의 편지를 전시한다 → 항구를 걸으며 다음 여행을 이야기하고 엔딩 크레딧을 본다.",
+    "clearDescription": "도서관 전시 3곳 상호작용 + 항구의 출항 종을 울려 크레딧 진입. 이후 자유 탐험으로 복귀 가능.",
+    "rewardDescription": "엔딩 완료 저장, 자유 재방문·보물 도감·의상 선택. 새 게임은 기존 저장을 지우기 전에 확인.",
+    "optionalDescription": "미발견 보물 위치는 정확한 좌표 대신 스테이지·능력 힌트로 안내. 100% 수집 엔딩 강요 없음.",
+    "safety": "최종 저장은 되돌릴 수 있는 자유 플레이 상태. 전체 진행 초기화나 강제 새 게임 없음."
+  }
+]

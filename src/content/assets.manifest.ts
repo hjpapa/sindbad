@@ -1,0 +1,1 @@
+export const assets = ['player', 'playerRun', 'skeleton', 'siren', 'crab', 'spirit', 'chest', 'heart', 'shell', 'rod', 'bell'].map(key => ({ key, path: `assets/draft/${key}.svg`, width: 96, height: 128, kind: 'svg', status: 'draft' as const, source: '프로젝트 자체 제작 벡터 · scripts/make-draft-art.mjs', license: '이 프로젝트에서 사용·수정 가능. 외부 이미지 없음.' }));

@@ -1,0 +1,11 @@
+node_modules/
+dist/
+test-results/
+playwright-report/
+.browsers/
+.vercel/
+.env*
+SINBAD_CODEX_PACKAGE.zip
+
+.vercel
+.env*
