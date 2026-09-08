@@ -8,7 +8,7 @@ try {
   const page = await browser.newPage({ viewport: { width: 1280, height: 720 } });
   const errors = [];
   page.on('pageerror', error => errors.push(error.message));
-  page.on('console', message => { if(message.type() === 'error') errors.push(message.text()); });
+  page.on('console', message => { if(message.type() === 'error') errors.push(`${message.text()} ${message.location().url}`); });
   page.on('response', response => { if (response.status() >= 400) errors.push(`${response.status()} ${response.url()}`); });
   const response = await page.goto(url);
   expect(response.status()).toBe(200);
@@ -35,3 +35,4 @@ try {
   expect(errors).toEqual([]);
   console.log(JSON.stringify({ url, status: 200, start: 'PASS', keyboardInputs: 'sent', saveReloadContinue: 'PASS', productionDebugHook: 'absent', errors }, null, 2));
 } finally { await browser.close(); }
+

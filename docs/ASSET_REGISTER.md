@@ -33,3 +33,5 @@ SVG 생성 원본: `scripts/make-draft-art.mjs`. 실행 시 위 실제 파일만
 | src/game/portrait3d.ts | 동일 모델의 560×620 투명 렌더를 메모리 이미지로 생성 | 제목·NPC 초상, draft |
 
 별도 glTF나 완성 모델 파일이 존재하는 것처럼 기록하지 않는다. Three.js 및 addon은 MIT 라이선스 라이브러리이며 npm lockfile에 0.180.0으로 고정했다. 기존 SVG는 WebGL 초기화 실패 시 대체 표시와 일부 전투 효과에 사용한다.
+
+- public/favicon.svg: 자체 제작 돛단배 브라우저 아이콘(64×64), 프로젝트 내 사용·수정 가능, draft. index.html에서 실제 경로를 지정한다.
