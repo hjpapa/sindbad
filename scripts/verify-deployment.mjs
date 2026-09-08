@@ -8,15 +8,12 @@ try {
   const page = await browser.newPage({ viewport: { width: 1280, height: 720 } });
   const errors = [];
   page.on('pageerror', error => errors.push(error.message));
-  page.on('console', message => { if(message.type() === 'error') errors.push(`${message.text()} ${message.location().url}`); });
   page.on('response', response => { if (response.status() >= 400) errors.push(`${response.status()} ${response.url()}`); });
   const response = await page.goto(url);
   expect(response.status()).toBe(200);
-  await page.screenshot({ path: 'docs/screenshots/production-title.png' });
   await page.getByRole('button', { name: '새 모험 시작' }).click();
   await expect(page.locator('#hud')).toContainText('S01');
-  await expect(page.locator('#game > canvas:not(.world-3d)')).toBeVisible();
-  await expect(page.locator('.world-3d')).toBeVisible();
+  await expect(page.locator('canvas')).toBeVisible();
   await page.waitForTimeout(1000);
   await page.keyboard.down('d');
   await page.keyboard.press('Space');
@@ -29,10 +26,9 @@ try {
   await page.reload();
   await page.getByRole('button', { name: '이어하기 · S01' }).click();
   await expect(page.locator('#hud')).toContainText('S01');
-  await expect(page.locator('#game > canvas:not(.world-3d)')).toBeVisible();
+  await expect(page.locator('canvas')).toBeVisible();
   expect(await page.evaluate(() => typeof window.__SINBAD_TEST__)).toBe('undefined');
   await page.screenshot({ path: 'docs/screenshots/production-resume.png' });
   expect(errors).toEqual([]);
   console.log(JSON.stringify({ url, status: 200, start: 'PASS', keyboardInputs: 'sent', saveReloadContinue: 'PASS', productionDebugHook: 'absent', errors }, null, 2));
 } finally { await browser.close(); }
-

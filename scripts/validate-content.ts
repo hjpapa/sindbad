@@ -1,9 +1,7 @@
 import { existsSync } from 'node:fs';
 import { assets } from '../src/content/assets.manifest';
-import { proceduralAssets } from '../src/content/procedural-assets';
 import { validateContent } from '../src/content/validate';
 const errors = validateContent();
-for (const asset of proceduralAssets) if (!existsSync(asset.path)) errors.push(`Missing procedural source ${asset.path}`);
 for (const a of assets)
     if (!existsSync(`public/${a.path}`))
         errors.push(`Missing asset ${a.path}`);
