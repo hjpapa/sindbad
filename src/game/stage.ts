@@ -5,6 +5,7 @@ import { type WeaponId } from '../content/items';
 import { Combat } from '../core/combat';
 import { maxHp, maxMp, type Reward, type Save } from '../core/state';
 import type { Input } from './input';
+import { World3D } from './world3d';
 export interface Host {
     save: Save;
     hp: number;
@@ -43,6 +44,7 @@ interface Projectile {
     wave: boolean;
 }
 export class Stage extends Phaser.Scene {
+    private world3d: World3D | null = null;
     mapDef!: MapDef;
     player!: Phaser.Physics.Arcade.Sprite;
     private land!: Phaser.Physics.Arcade.StaticGroup;
@@ -123,12 +125,15 @@ export class Stage extends Phaser.Scene {
                 g.generateTexture(asset.key, 96, 128);
                 g.destroy();
             }
+        try { this.world3d = new World3D(this.mapDef, document.getElementById('game')!); }
+        catch { this.world3d = null; this.host.notice('이 기기에서는 기본 그래픽으로 모험을 이어가요.'); }
         this.background();
         this.land = this.physics.add.staticGroup();
         for (const p of this.mapDef.platforms) {
             const rect = this.add.rectangle(p.x + p.w / 2, p.y + p.h / 2, p.w, p.h, this.mapDef.theme === 'reef' ? 0x477976 : 0x795d46).setStrokeStyle(3, 0xd8c08c);
             this.land.add(rect);
-            this.add.rectangle(p.x + p.w / 2, p.y + 4, p.w, 8, this.mapDef.theme === 'reef' ? 0x9fc7a8 : 0xd2aa70);
+            const top = this.add.rectangle(p.x + p.w / 2, p.y + 4, p.w, 8, this.mapDef.theme === 'reef' ? 0x9fc7a8 : 0xd2aa70);
+            if (this.world3d) { rect.setVisible(false); top.setVisible(false); }
         }
         const cp = this.mapDef.checkpoints.find(c => c.id === this.host.save.checkpoint.checkpointId) ?? this.mapDef.checkpoints[0];
         this.safe = { x: cp.x, y: cp.y };
@@ -136,6 +141,7 @@ export class Stage extends Phaser.Scene {
         this.player.body?.setSize(42, 84);
         this.player.body?.setOffset(27, 42);
         this.player.setMaxVelocity(300, 1000).setDragX(2600);
+        if(this.world3d){this.world3d.add(this.player,'player');this.player.setVisible(false);}
         this.physics.add.collider(this.player, this.land);
         this.physics.world.setBounds(0, -200, this.mapDef.width, 1400);
         this.cameras.main.setBounds(0, 0, this.mapDef.width, 720);
@@ -149,27 +155,33 @@ export class Stage extends Phaser.Scene {
             if (def.kind === 'captain')
                 sprite.setTint(0xffd98e).setScale(1.15);
             const hp = Math.round(def.hp * (this.host.save.settings.difficulty === 'relaxed' ? 0.85 : 1));
-            const label = this.add.text(def.x, def.y - 87, '', { fontSize: '19px', fontFamily: 'sans-serif', color: '#fff5cf', backgroundColor: '#173746' }).setOrigin(0.5).setDepth(6);
+            const label = this.add.text(def.x, def.y - 87, '', { fontSize: '19px', fontFamily: 'sans-serif', color: '#536a70', backgroundColor: '#fffaeb' }).setOrigin(0.5).setDepth(6);
             this.enemies.push({ def, sprite, label, hp, maxHp: hp, state: 'idle', until: 0, target: def.x, pattern: 0 });
+            if(this.world3d){this.world3d.add(sprite,def.kind);sprite.setVisible(false);}
         }
         for (const def of this.mapDef.objects) {
             const texture = def.kind === 'chest' ? 'chest' : def.kind === 'npc' ? (this.mapDef.id === 'S02' ? 'siren' : 'player') : def.kind === 'shell' || def.kind === 'remote' ? 'shell' : def.kind === 'rod' || def.kind === 'crisis' ? 'rod' : 'bell';
             const sprite = this.add.image(def.x, def.y, texture).setScale(def.kind === 'checkpoint' ? 0.42 : 0.68).setDepth(4);
             if (def.kind === 'npc')
                 sprite.setTint(0xe1d498);
-            const label = this.add.text(def.x, def.y - 64, def.label, { fontSize: '20px', color: '#fff2cc', backgroundColor: '#173b46', padding: { x: 7, y: 4 } }).setOrigin(0.5).setDepth(7);
+            const label = this.add.text(def.x, def.y - 64, def.label, { fontSize: '20px', color: '#456e70', backgroundColor: '#ffffed', padding: { x: 9, y: 5 } }).setOrigin(0.5).setDepth(7);
             this.objects.push({ def, sprite, label });
+            if(this.world3d){this.world3d.add(sprite,def.kind==='npc' && this.mapDef.id==='S02'?'siren':def.kind);sprite.setVisible(false);}
         }
         for (const h of this.mapDef.hearts)
             this.hearts.push({ id: h.id, large: !!h.large, sprite: this.add.image(h.x, h.y, 'heart').setScale(h.large ? 0.5 : 0.36).setDepth(5) });
+        for(const h of this.hearts)if(this.world3d){this.world3d.add(h.sprite,'heart');h.sprite.setVisible(false);}
         this.slash = this.add.graphics().setDepth(12);
         this.warnings = this.add.graphics().setDepth(3);
         this.bossText = this.add.text(640, 142, '', { fontFamily: 'sans-serif', fontSize: '22px', color: '#fce8bc', backgroundColor: '#173643', padding: { x: 12, y: 7 } }).setOrigin(0.5).setScrollFactor(0).setDepth(20);
-        this.hint = this.add.text(640, 648, '', { fontFamily: 'sans-serif', fontSize: '22px', color: '#fff3d2', backgroundColor: '#153847', padding: { x: 14, y: 8 } }).setOrigin(0.5).setScrollFactor(0).setDepth(20);
-        this.events.once(Phaser.Scenes.Events.SHUTDOWN, () => { this.host.input.clear(); this.projectiles = []; this.attack = null; });
+        this.hint = this.add.text(640, 648, '', { fontFamily: 'sans-serif', fontSize: '22px', color: '#476f71', backgroundColor: '#fffbed', padding: { x: 16, y: 8 } }).setOrigin(0.5).setScrollFactor(0).setDepth(20);
+        const draw = () => this.world3d?.render(this.cameras.main.scrollX, this.sim, this.host.save.settings.reducedMotion, !!this.attack);
+        this.events.on(Phaser.Scenes.Events.RENDER, draw);
+        this.events.once(Phaser.Scenes.Events.SHUTDOWN, () => { this.events.off(Phaser.Scenes.Events.RENDER,draw);this.world3d?.dispose();this.world3d=null;this.host.input.clear(); this.projectiles = []; this.attack = null; });
         this.host.changed();
     }
     private background() {
+        if(this.world3d){this.cameras.main.setBackgroundColor('rgba(0,0,0,0)');return;}
         const theme = this.mapDef.theme;
         this.cameras.main.setBackgroundColor(theme === 'storm' ? '#233d53' : theme === 'reef' ? '#7bacb2' : '#bed8c8');
         const g = this.add.graphics().setScrollFactor(0).setDepth(-10);
@@ -206,7 +218,7 @@ export class Stage extends Phaser.Scene {
     }
     else
         this.physics.resume(); }
-    snapshot() { return { stage: this.mapDef?.id, player: this.player ? { x: this.player.x, y: this.player.y, vx: this.player.body?.velocity.x, vy: this.player.body?.velocity.y, hp: this.host.hp, maxHp: maxHp(this.host.save), bodyWidth: this.player.body?.width, bodyHeight: this.player.body?.height } : null, save: structuredClone(this.host.save), sim: this.sim, paused: this.stopped, enemies: this.enemies.map(e => ({ id: e.def.id, x: e.sprite.x, y: e.sprite.y, hp: e.hp, state: e.state })), projectiles: this.projectiles.length, boomerang: !!this.boom, attack: this.attack?.id ?? null, frameMs: this.lastFrame }; }
+    snapshot() { return { stage: this.mapDef?.id, player: this.player ? { x: this.player.x, y: this.player.y, vx: this.player.body?.velocity.x, vy: this.player.body?.velocity.y, hp: this.host.hp, maxHp: maxHp(this.host.save), bodyWidth: this.player.body?.width, bodyHeight: this.player.body?.height } : null, save: structuredClone(this.host.save), sim: this.sim, paused: this.stopped, enemies: this.enemies.map(e => ({ id: e.def.id, x: e.sprite.x, y: e.sprite.y, hp: e.hp, state: e.state })), projectiles: this.projectiles.length, boomerang: !!this.boom, attack: this.attack?.id ?? null, renderer: this.world3d?.stats ?? {mode: '2d'}, frameMs: this.lastFrame }; }
     update(_time: number, delta: number) {
         if (this.stopped || !this.player)
             return;
