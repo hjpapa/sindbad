@@ -4,7 +4,7 @@ export interface Platform {
     w: number;
     h: number;
     requiredGround?: boolean;
-    motion?: { rise: number; period: number };
+    motion?: { rise: number; period: number; travel?: number };
 }
 export interface Spawn {
     id: string;
@@ -17,17 +17,18 @@ export interface ObjectDef {
     id: string;
     x: number;
     y: number;
-    kind: 'npc' | 'bell' | 'shell' | 'chest' | 'exit' | 'rod' | 'crisis' | 'checkpoint' | 'remote' | 'gear' | 'key' | 'gate' | 'rescue' | 'golden';
+    kind: 'npc' | 'bell' | 'shell' | 'chest' | 'exit' | 'rod' | 'crisis' | 'checkpoint' | 'remote' | 'gear' | 'key' | 'gate' | 'rescue' | 'golden' | 'torch' | 'furnace' | 'vine' | 'flameGift' | 'rope' | 'descent';
     label: string;
     needs?: string[];
     reward?: string;
     rewardFlags?: string[];
     dialogue?: string;
+    requiresItems?: string[];
 }
 export interface MapDef {
     id: string;
     width: number;
-    theme: 'harbor' | 'reef' | 'storm' | 'whale' | 'coral';
+    theme: 'harbor' | 'reef' | 'storm' | 'whale' | 'coral' | 'flame' | 'waves';
     water?: { x:number; y:number; w:number; h:number }[];
     platforms: Platform[];
     spawns: Spawn[];
@@ -74,4 +75,27 @@ export const maps: Record<string, MapDef> = {
       spawns:[{id:'S05.enemy.guardian.1',kind:'guardian',x:430,y:558,hp:38},{id:'S05.enemy.guardian.2',kind:'guardian',x:1200,y:558,hp:38},{id:'S05.enemy.guardian.3',kind:'guardian',x:1790,y:558,hp:38},{id:'S05.enemy.guardian.4',kind:'guardian',x:2270,y:558,hp:38},{id:'S05.enemy.guardian.5',kind:'guardian',x:3580,y:558,hp:38}],
       objects:[{id:'S05.hint',kind:'npc',x:240,y:551,label:'나이라의 목소리 · E',dialogue:'nairaHint'},{id:'S05.key',kind:'key',x:960,y:414,label:'산호 열쇠 · E'},{id:'S05.crown',kind:'chest',x:1870,y:554,label:'왕관 장식 보물함 · E',needs:['S05.key']},{id:'S05.gate',kind:'gate',x:2460,y:543,label:'산호문 · 장식 끼우기 E',needs:['S05.crown']},{id:'S05.rescue',kind:'rescue',x:2650,y:554,label:'나이라 구출 · E',needs:['S05.gate'],dialogue:'naira',rewardFlags:['bubbleBlessing']},{id:'S05.cp.rescue',kind:'checkpoint',x:2760,y:562,label:'산호문 밖 쉼터',needs:['S05.rescue']},{id:'S05.golden',kind:'golden',x:3200,y:487,label:'선택 산호방 · 황금 하트 E',needs:['S05.rescue'],reward:'G02'},{id:'S05.exit',kind:'exit',x:3880,y:554,label:'열린 바닷길 · E',needs:['S05.crown','S05.gate','S05.rescue']}],
       hearts:[{id:'S05.heart.1',x:1600,y:480},{id:'S05.heart.2',x:2800,y:563,large:true}],checkpoints:[{id:'start',x:120,y:548},{id:'rescue',x:2760,y:548}]},
+    S06: {id:'S06',width:3900,theme:'flame',objective:'횃불의 불씨 → 화로 3개 → 정령 5명 진정 → 라흐의 불씨',
+      platforms:[ground(0,3900),{x:460,y:536,w:192,h:72},{x:1160,y:528,w:224,h:80},{x:2040,y:528,w:224,h:80},{x:2820,y:536,w:192,h:72}],
+      spawns:[500,1100,1760,2370,2990].map((x,i)=>({id:`S06.enemy.spirit.${i+1}`,kind:'spirit',x,y:552,hp:36})),
+      objects:[{id:'S06.hint',kind:'npc',x:210,y:552,label:'라흐의 목소리 · E',dialogue:'flameHint'},
+        {id:'S06.vine',kind:'vine',x:350,y:551,label:'입구 덩굴 · 불씨를 얻은 뒤 E',requiresItems:['T01']},{id:'S06.coins',kind:'chest',x:550,y:485,label:'덩굴 뒤 금화방 · E',needs:['S06.vine'],reward:'coins'},
+        ...[720,1580,2480].flatMap((x,i):ObjectDef[]=>[{id:`S06.torch.${i+1}`,kind:'torch',x:x-120,y:551,label:`횃불 ${i+1} · 불씨 받기 E`},{id:`S06.furnace.${i+1}`,kind:'furnace',x,y:551,label:`식은 화로 ${i+1} · E`,needs:[`S06.torch.${i+1}`]}]),
+        {id:'S06.cp.middle',kind:'checkpoint',x:1900,y:550,label:'따뜻한 쉼터'},
+        {id:'S06.reward.flameTreasure',kind:'flameGift',x:3300,y:551,label:'라흐 · 영원의 불씨 E',dialogue:'rah',needs:[1,2,3].map(n=>`S06.furnace.${n}`).concat([1,2,3,4,5].map(n=>`S06.enemy.spirit.${n}`))},
+        {id:'S06.practice',kind:'furnace',x:3540,y:551,label:'불꽃 문양 · 무료 점화 E',requiresItems:['T01']},
+        {id:'S06.exit',kind:'exit',x:3750,y:551,label:'보수한 배 · E',needs:['S06.reward.flameTreasure','S06.practice']}],
+      hearts:[{id:'S06.heart.1',x:1430,y:558},{id:'S06.heart.2',x:2700,y:558,large:true}],checkpoints:[{id:'start',x:120,y:548},{id:'middle',x:1900,y:548},{id:'gift',x:3330,y:548}]},
+    S07: {id:'S07',width:4100,theme:'waves',objective:'파도 예고 → 밧줄 E 또는 점프 · 세 파도 통과 → 하강 동굴의 닻',
+      platforms:[ground(0,500),{...ground(600,600),motion:{rise:24,period:6000,travel:24}},ground(1300,200),{...ground(1600,600),motion:{rise:24,period:6000,travel:24}},ground(2300,200),{...ground(2600,600),motion:{rise:24,period:6000,travel:24}},ground(3300,800),...[1070,2070,3070].map(x=>({x,y:552,w:128,h:56,motion:{rise:24,period:6000,travel:24}})),{x:1350,y:520,w:128,h:24}],
+      water:[{x:2600,y:450,w:1500,h:270}],
+      spawns:[{id:'S07.enemy.spirit.1',kind:'spirit',x:440,y:551,hp:36},{id:'S07.enemy.spirit.2',kind:'spirit',x:1480,y:551,hp:36},{id:'S07.enemy.spirit.3',kind:'spirit',x:2440,y:551,hp:36},{id:'S07.enemy.spirit.4',kind:'spirit',x:3720,y:551,hp:36}],
+      objects:[{id:'S07.hint',kind:'npc',x:210,y:551,label:'나이라의 공기방울 · E',dialogue:'waveHint'},
+        ...[900,1900,2900].map((x,i):ObjectDef=>({id:`S07.wave.${i+1}`,kind:'rope',x,y:550,label:`파도 ${i+1} · 밧줄 E`,needs:i?[`S07.wave.${i}`]:[]})),
+        {id:'S07.cp.first',kind:'checkpoint',x:1410,y:470,label:'첫 파도 뒤 쉼터',needs:['S07.wave.1']},
+        {id:'S07.coins',kind:'chest',x:1410,y:470,label:'높은 갑판 금화함 · E',reward:'coins'},
+        {id:'S07.cp.second',kind:'checkpoint',x:2400,y:550,label:'두 번째 파도 뒤 쉼터',needs:['S07.wave.2']},
+        {id:'S07.descent',kind:'descent',x:3500,y:551,label:'하강 동굴의 닻 · E',needs:['S07.wave.1','S07.wave.2','S07.wave.3'],dialogue:'descent',rewardFlags:['genieCave']},
+        {id:'S07.exit',kind:'exit',x:3980,y:551,label:'수정 동굴 입구 · E',needs:['S07.descent']}],
+      hearts:[{id:'S07.heart.1',x:2380,y:550,large:true}],checkpoints:[{id:'start',x:120,y:548},{id:'first',x:1410,y:460},{id:'second',x:2400,y:548},{id:'cave',x:3500,y:548}]},
 };

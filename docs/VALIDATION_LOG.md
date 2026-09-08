@@ -83,3 +83,19 @@ HTML 리포트: `playwright-report/index.html`. 스크린샷 보관: `docs/scree
 | npm run test:e2e | 설치된 Edge headless · 전체 10개 통과, 3.6분 |
 
 S04~S05 정상 진행 검사에서 pageerror/HTTP 400+는 0개였다. 스크린샷 S04-moving-whale.png, S05-bubble-golden.png, M2-part-one.png를 docs/screenshots에 보관하고 육안 확인했다. 수동 플레이·실제 모바일 기기·공개 배포 검사는 이번에 실행하지 않았다.
+
+## 2026-09-08 · S06~S07 최종 코드 검사
+
+- npm run typecheck: 통과.
+- npm run lint: 통과.
+- npm run test: 4개 파일, 49개 통과.
+- npm run validate:content: 36단계/24장면/7무기/7보물/8하트, 필수 아이템 실제 지급, 보상/조건/플랫폼/체크포인트/자산 통과. S01~S07 implemented, S08~S36 planned.
+- npm run build: 통과, Vite 5.94초. 앱 JS 103.22kB (gzip 35.13kB), Phaser 1481.77kB (gzip 339.84kB). 기존 청크 크기 경고 유지.
+- 새 E2E 개별 실행: S06~S07 스토리 및 스킬 2개 통과(2.2분), 실패한 파도/낙하 재도전 1개 통과(16.6초).
+- 중간 실패: 새 보물 ID 저장 허용 목록 누락(수정), 실행 도중 Vite 자동 재로딩(검사 중 런타임 편집 중단), 이미 파동 피해를 받은 적을 지속 피해 대상으로 선택(다른 적으로 검사).
+
+### S06~S07 최종 회귀 결과
+
+npm run test:e2e: 설치된 Edge headless 전체 13개 통과(5.9분). 기존 S01~S03 새 게임 완주/저장/터치, S04~S05 이어하기, S06~S07 연속 진행/첫 보물 저장 복원, MP·일시정지·지속 피해, 파도 실패/낙하, 기존 사망/보스/저장 차단 회귀가 모두 통과했다. 정상 S06~S07 시나리오의 pageerror/HTTP 400+는 0개였다. 마지막 테스트 보완 후 typecheck/lint도 다시 통과했다.
+
+스크린샷: docs/screenshots/S06-first-flame.png, S07-boat.png, S07-cave-resume.png, S07-wave-warning.png. S06 화면과 S07 갑판/물속 재개 화면을 육안 확인했다. S06~S07은 로컬 변경이며 아직 커밋/푸시하지 않았다. 다음 한 작업은 S08 지니 동굴의 수정 퍼즐과 T02 확정 획득이다.

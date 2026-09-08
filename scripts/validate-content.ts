@@ -10,4 +10,4 @@ if (errors.length) {
     process.exitCode = 1;
 }
 else
-    console.log('PASS: 36 stages, 24 child scenes, 7 weapons, 7 treasures, 8 golden hearts; acquisition graph, S16 protection, rewards, maps and assets. S01–S05 implemented; S06–S36 planned.');
+    console.log('PASS: 36 stages, 24 child scenes, 7 weapons, 7 treasures, 8 golden hearts; acquisition graph, S16 protection, rewards, maps and assets. S01–S07 implemented; S08–S36 planned.');

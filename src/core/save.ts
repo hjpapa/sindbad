@@ -1,3 +1,4 @@
+import {objectiveReward} from './adventure';
 import { maps } from '../content/maps';
 import campaign from '../content/stageIndex';
 import { goldenHearts, relics, treasures, weapons, type WeaponId } from '../content/items';
@@ -6,7 +7,7 @@ export const SAVE_KEY = 'sinbad.sevenTreasures.v1.slot1';
 export const SAVE_WARNING = '이 브라우저에서는 저장하지 못했어요. 파일로 보관해 주세요.';
 const checkpointIds: Record<string, string[]> = Object.fromEntries(campaign.map(s => [s.id, maps[s.id]?.checkpoints.map(c => c.id) ?? ['start']]));
 const knownObjectives = new Set(Object.values(maps).flatMap(m => [...m.objects.map(o => o.id), ...m.spawns.map(e => e.id)]));
-const knownRewards = new Set(['S01.reward.start', ...campaign.map(s => s.rewardId), ...campaign.flatMap(s => [...s.mandatoryItems, ...s.optionalItems].map(id => `${s.id}.reward.${id}`)), ...Object.values(maps).flatMap(m => [...m.spawns.map(e => e.id), ...m.hearts.map(h => h.id), ...m.objects.map(o => `${o.id}.reward`)]), ...campaign.flatMap(s => s.optionalItems.filter(x => x.startsWith('G')).map(x => `${s.id}.golden.${x}`))]);
+const knownRewards = new Set(['S01.reward.start', ...campaign.map(s => s.rewardId), ...campaign.flatMap(s => [...s.mandatoryItems, ...s.optionalItems].map(id => `${s.id}.reward.${id}`)), ...Object.values(maps).flatMap(m => [...m.spawns.map(e => e.id), ...m.hearts.map(h => h.id), ...m.objects.flatMap(o => [`${o.id}.reward`,objectiveReward(o).id])]), ...campaign.flatMap(s => s.optionalItems.filter(x => x.startsWith('G')).map(x => `${s.id}.golden.${x}`))]);
 const knownFlags = new Set(campaign.flatMap(s => s.rewardFlags));
 const record = (v: unknown): v is Record<string, unknown> => typeof v === 'object' && v !== null && !Array.isArray(v);
 const number = (v: unknown, max = 1e9) => typeof v === 'number' && Number.isFinite(v) && v >= 0 && v <= max;

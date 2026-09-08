@@ -54,7 +54,7 @@ const union = <T>(a: T[], b: T[] = []) => [...new Set([...a, ...b])];
 export function grantReward(s: Save, r: Reward): Save {
     if (s.claimedRewardIds.includes(r.id))
         return s;
-    return { ...s, checkpoint: r.checkpoint ?? s.checkpoint, totalXp: s.totalXp + (r.xp ?? 0), coins: s.coins + (r.coins ?? 0), claimedRewardIds: [...s.claimedRewardIds, r.id], weapons: union(s.weapons, r.weapons), treasures: union(s.treasures, r.treasures), relics: union(s.relics, r.relics), goldenHearts: union(s.goldenHearts, r.goldenHearts), flags: union(s.flags, r.flags), completedObjectiveIds: union(s.completedObjectiveIds, r.objectives) };
+    return { ...s, equippedSkill:s.equippedSkill??(r.treasures?.includes('T01')?'flamePulse':null), checkpoint: r.checkpoint ?? s.checkpoint, totalXp: s.totalXp + (r.xp ?? 0), coins: s.coins + (r.coins ?? 0), claimedRewardIds: [...s.claimedRewardIds, r.id], weapons: union(s.weapons, r.weapons), treasures: union(s.treasures, r.treasures), relics: union(s.relics, r.relics), goldenHearts: union(s.goldenHearts, r.goldenHearts), flags: union(s.flags, r.flags), completedObjectiveIds: union(s.completedObjectiveIds, r.objectives) };
 }
 export function collectHeart(s: Save, hp: number, id: string, large = false) { const next = grantReward(s, { id, xp: large ? 5 : 2 }); return { save: next, hp: progression(next.totalXp).level > progression(s.totalXp).level ? maxHp(next) : Math.min(maxHp(next), hp + (large ? 60 : 25)) }; }
 export function equip(s: Save, id: WeaponId): Save { return s.weapons.includes(id) ? { ...s, equippedWeapon: id } : s; }

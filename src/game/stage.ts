@@ -5,7 +5,8 @@ import { type WeaponId } from '../content/items';
 import { Combat } from '../core/combat';
 import { maxHp, maxMp, type Reward, type Save } from '../core/state';
 import type { Input } from './input';
-import { canBreatheUnderwater, movingPlatformY, objectiveReward, rescueEquipment, shieldBlocks } from '../core/adventure';
+import { canBreatheUnderwater, movingPlatformX, movingPlatformY, objectiveReward, rescueEquipment, shieldBlocks } from '../core/adventure';
+import {canCastFlame,flameCost,flameCooldown,flameDamage,ignite} from '../core/flame';
 import type { Platform } from '../content/maps';
 export interface Host {
     save: Save;
@@ -26,6 +27,7 @@ export interface Host {
     clearStage(): void;
 }
 interface Enemy {
+    burn?: {until:number;next:number};
     def: Spawn;
     sprite: Phaser.GameObjects.Image;
     label: Phaser.GameObjects.Text;
@@ -45,6 +47,14 @@ interface Projectile {
     wave: boolean;
 }
 export class Stage extends Phaser.Scene {
+    private flameReady=0;
+    private flameUsed=-Infinity;
+    private pulse:{x:number;y:number;direction:number;damage:number;until:number;hits:Set<string>}|null=null;
+    private flameArt!:Phaser.GameObjects.Graphics;
+    private wave:{def:ObjectDef;at:number}|null=null;
+    private grip:{id:string;until:number}|null=null;
+    private sinkAt:number|null=null;
+    private waveArt!:Phaser.GameObjects.Graphics;
     private moving: {def:Platform;rect:Phaser.GameObjects.Rectangle;top:Phaser.GameObjects.Rectangle;body:Phaser.Physics.Arcade.Body}[]=[];
     private doors: {id:string;rect:Phaser.GameObjects.Rectangle}[]=[];
     private wakeAt:number|null=null;
@@ -105,6 +115,7 @@ export class Stage extends Phaser.Scene {
     create() {
         this.mapDef = maps[this.host.save.checkpoint.stageId];
         this.moving=[];this.doors=[];this.wakeAt=null;this.air=10000;this.waterTick=0;
+        this.flameReady=0;this.flameUsed=-Infinity;this.pulse=null;this.wave=null;this.grip=null;this.sinkAt=null;
         this.sim = 0;
         this.direction = 1;
         this.enemies = [];
@@ -138,6 +149,7 @@ export class Stage extends Phaser.Scene {
         this.land = this.physics.add.staticGroup();
         for (const p of this.mapDef.platforms) {
             const rect = this.add.rectangle(p.x + p.w / 2, p.y + p.h / 2, p.w, p.h, this.mapDef.theme === 'reef' ? 0x477976 : 0x795d46).setStrokeStyle(3, 0xd8c08c);
+            if(this.mapDef.id==='S07'&&p.motion&&!p.requiredGround)this.add.text(p.x+p.w/2,p.y-35,'유목 · 점프',{fontSize:'18px',color:'#fbe2ad'}).setOrigin(.5);
             const top=this.add.rectangle(p.x + p.w / 2, p.y + 4, p.w, 8, this.mapDef.theme === 'reef' ? 0x9fc7a8 : 0xd2aa70);
             if(p.motion){this.physics.add.existing(rect);const body=rect.body as Phaser.Physics.Arcade.Body;body.setAllowGravity(false).setImmovable(true);this.moving.push({def:p,rect,top,body});}else this.land.add(rect);
         }
@@ -155,10 +167,11 @@ export class Stage extends Phaser.Scene {
         this.cameras.main.startFollow(this.player, true, this.host.save.settings.reducedMotion ? 1 : 0.12, this.host.save.settings.reducedMotion ? 1 : 0.12, 0, 0);
         for (const def of this.mapDef.spawns) {
             const boss = def.kind === 'captain' || def.kind === 'siren';
-            if (boss && this.done(def.id))
+            if ((boss || this.mapDef.id==='S06') && this.done(def.id))
                 continue;
             const texture = def.kind === 'captain' || def.kind === 'archer' ? 'skeleton' : def.kind;
             const sprite = this.add.image(def.x, def.y, texture).setDepth(5);
+            if(this.mapDef.id==='S06')sprite.setTint(0xffaa65);
             if (def.kind === 'captain')
                 sprite.setTint(0xffd98e).setScale(1.15);
             const hp = Math.round(def.hp * (this.host.save.settings.difficulty === 'relaxed' ? 0.85 : 1));
@@ -166,16 +179,18 @@ export class Stage extends Phaser.Scene {
             this.enemies.push({ def, sprite, label, hp, maxHp: hp, state: 'idle', until: 0, target: def.x, pattern: 0 });
         }
         for (const def of this.mapDef.objects) {
-            const texture = ['gear','key','gate','golden'].includes(def.kind)?def.kind:def.kind==='rescue'?'naira':def.kind === 'chest' ? 'chest' : def.kind === 'npc' ? (this.mapDef.id === 'S05'?'naira':this.mapDef.id === 'S02' ? 'siren' : 'player') : def.kind === 'shell' || def.kind === 'remote' ? 'shell' : def.kind === 'rod' || def.kind === 'crisis' ? 'rod' : 'bell';
+            const texture = def.kind==='flameGift'?'rah':['torch','furnace','vine','rope'].includes(def.kind)?def.kind:['gear','key','gate','golden'].includes(def.kind)?def.kind:def.kind==='rescue'?'naira':def.kind === 'chest' ? 'chest' : def.kind === 'npc' ? (this.mapDef.id==='S06'?'rah':this.mapDef.id === 'S05'||this.mapDef.id==='S07'?'naira':this.mapDef.id === 'S02' ? 'siren' : 'player') : def.kind === 'shell' || def.kind === 'remote' ? 'shell' : def.kind === 'rod' || def.kind === 'crisis' ? 'rod' : 'bell';
             const sprite = this.add.image(def.x, def.y, texture).setScale(def.kind === 'checkpoint' ? 0.42 : 0.68).setDepth(4);
             if (def.kind === 'npc')
                 sprite.setTint(0xe1d498);
-            const label = this.add.text(def.x, def.y - 64, def.label, { fontSize: '20px', color: '#fff2cc', backgroundColor: '#173b46', padding: { x: 7, y: 4 } }).setOrigin(0.5).setDepth(7);
+            const label = this.add.text(def.x, def.y - 64, def.label, { wordWrap:['S06','S07'].includes(this.mapDef.id)?{width:210,useAdvancedWrap:true}:undefined, fontSize: ['S06','S07'].includes(this.mapDef.id)?'18px':'20px', color: '#fff2cc', backgroundColor: '#173b46', padding: { x: 7, y: 4 } }).setOrigin(0.5).setDepth(7);
             this.objects.push({ def, sprite, label });
         }
         for (const h of this.mapDef.hearts)
             this.hearts.push({ id: h.id, large: !!h.large, sprite: this.add.image(h.x, h.y, 'heart').setScale(h.large ? 0.5 : 0.36).setDepth(5) });
         this.slash = this.add.graphics().setDepth(12);
+        this.flameArt=this.add.graphics().setDepth(12);
+        this.waveArt=this.add.graphics().setDepth(8);
         this.bubble=this.add.graphics().setDepth(11);
         this.journey=this.add.text(640,186,'',{fontSize:'18px',color:'#fff1c8',backgroundColor:'#24475b',padding:{x:10,y:6}}).setOrigin(.5).setScrollFactor(0).setDepth(19);
         this.warnings = this.add.graphics().setDepth(3);
@@ -186,6 +201,18 @@ export class Stage extends Phaser.Scene {
     }
     private background() {
         const theme = this.mapDef.theme;
+        if(theme==='flame'||theme==='waves'){
+            this.cameras.main.setBackgroundColor(theme==='flame'?'#332e43':'#294f67');
+            const g=this.add.graphics().setDepth(-10).setScrollFactor(.35);
+            if(theme==='flame'){
+                for(let x=0;x<this.mapDef.width;x+=280){g.fillStyle(0x534054).fillTriangle(x,0,x+80,250,x+210,0);g.fillStyle(0x77534e).fillEllipse(x+110,620,220,320);g.fillStyle(0xe79157,.2).fillCircle(x+130,410,100);g.lineStyle(4,0xf3ba79,.35).lineBetween(x+20,540,x+80,430);}
+            }else{
+                g.fillStyle(0x548fa3).fillRect(0,460,this.mapDef.width,260);
+                for(let x=0;x<this.mapDef.width;x+=400){g.fillStyle(0x183b50).fillTriangle(x,720,x+90,160,x+250,720);g.lineStyle(4,0xbde4d7,.45).lineBetween(x,490,x+150,490);g.lineStyle(10,0x71939a).lineBetween(x+240,330,x+240,600);g.fillStyle(0x9ebdb7).fillTriangle(x+250,340,x+350,460,x+250,460);}
+            }
+            for(const w of this.mapDef.water??[])this.add.rectangle(w.x+w.w/2,w.y+w.h/2,w.w,w.h,0x8ce3df,.22).setDepth(9);
+            return;
+        }
         if(theme==='whale'||theme==='coral'){
             this.cameras.main.setBackgroundColor(theme==='whale'?'#a4c9bf':'#5a8793');
             const g=this.add.graphics().setDepth(-10).setScrollFactor(theme==='whale'?.9:.25);
@@ -239,7 +266,7 @@ export class Stage extends Phaser.Scene {
     }
     else
         this.physics.resume(); }
-    snapshot() { return { stage: this.mapDef?.id, player: this.player ? { x: this.player.x, y: this.player.y, grounded: (this.player.body as Phaser.Physics.Arcade.Body)?.blocked.down, vx: this.player.body?.velocity.x, vy: this.player.body?.velocity.y, hp: this.host.hp, maxHp: maxHp(this.host.save), bodyWidth: this.player.body?.width, bodyHeight: this.player.body?.height } : null, save: structuredClone(this.host.save), sim: this.sim, paused: this.stopped, enemies: this.enemies.map(e => ({ id: e.def.id, x: e.sprite.x, y: e.sprite.y, hp: e.hp, state: e.state })), projectiles: this.projectiles.length, boomerang: !!this.boom, attack: this.attack?.id ?? null, air: this.air, submerged:this.submerged, bubbleProtected: canBreatheUnderwater(this.host.save), movingPlatforms: this.moving.map(p=>({x:p.rect.x,y:p.rect.y-p.def.h/2,w:p.def.w})), frameMs: this.lastFrame }; }
+    snapshot() { return { stage: this.mapDef?.id, player: this.player ? { x: this.player.x, y: this.player.y, grounded: ((this.player.body as Phaser.Physics.Arcade.Body)?.blocked.down||(this.player.body as Phaser.Physics.Arcade.Body)?.touching.down), vx: this.player.body?.velocity.x, vy: this.player.body?.velocity.y, hp: this.host.hp, maxHp: maxHp(this.host.save), bodyWidth: this.player.body?.width, bodyHeight: this.player.body?.height } : null, save: structuredClone(this.host.save), sim: this.sim, paused: this.stopped, enemies: this.enemies.map(e => ({ id: e.def.id, x: e.sprite.x, y: e.sprite.y, hp: e.hp, state: e.state, burn:e.burn })), projectiles: this.projectiles.length, boomerang: !!this.boom, attack: this.attack?.id ?? null, air: this.air, submerged:this.submerged, bubbleProtected: canBreatheUnderwater(this.host.save), movingPlatforms: this.moving.map(p=>({x:p.rect.x,y:p.rect.y-p.def.h/2,w:p.def.w})), mp:this.host.mp, flameReady:this.flameReady, pulse:!!this.pulse, wave:this.wave?{id:this.wave.def.id,at:this.wave.at}:null, grip:this.grip?.id??null, frameMs: this.lastFrame }; }
     update(_time: number, delta: number) {
         if (this.stopped || !this.player)
             return;
@@ -257,7 +284,7 @@ export class Stage extends Phaser.Scene {
         this.lastFrame = delta;
         const body = this.player.body as Phaser.Physics.Arcade.Body;
         this.updateAdventure(dt);
-        if (body.blocked.down) {
+        if ((body.blocked.down||body.touching.down)) {
             this.groundedAt = this.sim;
             const nearDanger = this.lightning && Math.abs(this.lightning.x - this.player.x) < 140;
             const solid = this.mapDef.platforms.find(p => !p.motion && this.player.x > p.x + 35 && this.player.x < p.x + p.w - 35 && Math.abs(body.bottom - p.y) < 8);
@@ -312,6 +339,7 @@ export class Stage extends Phaser.Scene {
             }
         }
         this.updateAttack();
+        this.updateFlame(dt);
         this.updateEnemies(dt);
         this.updateProjectiles(dt);
         this.updateLightning();
@@ -349,7 +377,10 @@ export class Stage extends Phaser.Scene {
         if (this.player.y > 820) {
             this.hurt(10);
             if (this.host.hp > 0) {
-                body.reset(this.safe.x, this.safe.y);
+                if(this.mapDef.id==='S07'){
+                    const deck=this.moving.filter(p=>p.def.requiredGround).sort((a,b)=>Math.abs(a.rect.x-this.player.x)-Math.abs(b.rect.x-this.player.x))[0];
+                    body.reset(deck.rect.x,deck.rect.y-deck.def.h/2-60);
+                }else body.reset(this.safe.x, this.safe.y);
                 this.player.setVelocity(0, 0);
                 this.groundedAt = -Infinity;
                 this.jumpAt = -Infinity;
@@ -359,6 +390,12 @@ export class Stage extends Phaser.Scene {
         this.player.x = Phaser.Math.Clamp(this.player.x, 30, this.mapDef.width - 30);
     }
     private updateAdventure(dt:number) {
+        if(this.mapDef.id==='S07'){
+            if(this.done('S07.wave.3')&&this.sinkAt===null)this.sinkAt=this.sim;
+            for(const p of this.moving){p.body.setVelocity((movingPlatformX(p.def,this.sim)+p.def.w/2-p.rect.x)/Math.max(dt,1)*1000,(movingPlatformY(p.def,this.sim)+(p.def.x>=2600&&p.def.x<3300&&this.sinkAt!==null?Math.min(32,(this.sim-this.sinkAt)/3000*32):0)+p.def.h/2-p.rect.y)/Math.max(dt,1)*1000);p.top.setPosition(p.rect.x,p.rect.y-p.def.h/2+4);}
+            this.updateWaves();
+        }
+        if(this.mapDef.id==='S06')this.journey.setText(this.host.save.treasures.includes('T01')?'영원의 불씨 · R 파동 / E 무료 점화 · 입구 덩굴을 다시 살펴보세요':`화로 ${[1,2,3].filter(n=>this.done('S06.furnace.'+n)).length}/3 · 진정한 정령 ${[1,2,3,4,5].filter(n=>this.done('S06.enemy.spirit.'+n)).length}/5`);
         if(this.mapDef.id==='S04'){
             const count=rescueEquipment.filter(id=>this.done(id)).length;
             if(count===3 && this.wakeAt===null){this.wakeAt=this.sim+2400;this.host.notice('⚠ 고래가 깨어나요! 잠시 뒤 발판이 천천히 오르내려요. 시간 제한은 없어요.');}
@@ -383,6 +420,40 @@ export class Stage extends Phaser.Scene {
         this.host.notice('잠깐 쉬고 다시 출발! 보물과 경험치는 그대로예요.');
         this.scene.restart();
     } }
+    private updateWaves(){
+        const ropes=this.mapDef.objects.filter(o=>o.kind==='rope');
+        this.waveArt.clear();
+        if(!this.wave){const def=ropes.find(o=>!this.done(o.id)&&!(o.needs??[]).some(id=>!this.done(id))&&Math.abs(this.player.x-o.x)<170);if(def){this.wave={def,at:this.sim+2200};this.host.sound('warning');this.host.notice('⚠ 큰 파도! 밧줄 가까이에서 E로 붙잡거나 파도가 닿을 때 점프하세요.');}}
+        if(this.wave){const w=this.wave;const left=Math.max(0,w.at-this.sim);this.waveArt.lineStyle(7,0xa4eee7,.9).strokeEllipse(w.def.x,640,480,150);this.waveArt.fillStyle(0x81e3e3,.18).fillRect(w.def.x-260,470,520,140);this.journey.setText(`⚠ 파도 ${Math.ceil(left/1000)}초 · ${this.grip?.id===w.def.id?'밧줄을 잡았어요 · 가만히 기다리세요':'밧줄 E / 점프'}`);
+            if(this.sim>=w.at){const close=Math.abs(this.player.x-w.def.x)<210;const held=this.grip?.id===w.def.id&&this.grip.until>=this.sim&&Math.abs(this.player.x-w.def.x)<90;const jumped=close&&this.player.y<445;if(held||jumped){this.activate(w.def);}else{this.hurt(10);if(this.host.hp>0)(this.player.body as Phaser.Physics.Arcade.Body).reset(this.safe.x,this.safe.y);this.host.notice('파도에 밀렸어요. 보물은 그대로! 다음 예고에 밧줄 E를 눌러 보세요.');}this.wave=null;this.grip=null;}
+        }else this.journey.setText(`파도 ${ropes.filter(o=>this.done(o.id)).length}/3 · ${canBreatheUnderwater(this.host.save)?'공기방울 보호':'나이라의 보호가 필요해요'} · 오른쪽 닻으로`);
+    }
+    private updateFlame(dt:number){
+        if(this.host.input.consume('skill')){
+            if(canCastFlame(this.host.save,this.host.mp,this.sim,this.flameReady)){
+                this.host.mp-=flameCost;this.flameReady=this.sim+flameCooldown;this.flameUsed=this.sim;
+                this.pulse={x:this.player.x,y:this.player.y,direction:this.direction,damage:flameDamage(this.host.save),until:this.sim+750,hits:new Set()};this.host.sound('attack');this.host.changed();
+            }else this.host.notice(!this.host.save.treasures.includes('T01')?'S06에서 영원의 불씨를 얻으면 사용할 수 있어요.':this.host.mp<15?'마력이 회복될 때까지 기다려 주세요.':'불꽃 파동이 준비 중이에요.');
+        }
+        if(this.sim-this.flameUsed>2000&&this.host.mp<maxMp(this.host.save)){this.host.mp=Math.min(maxMp(this.host.save),this.host.mp+dt*.005);this.host.changed();}
+        this.flameArt.clear();
+        const p=this.pulse;
+        if(p){p.x+=p.direction*520*dt/1000;this.flameArt.fillStyle(0xf49b53,.7).fillEllipse(p.x,p.y,100,100);this.flameArt.lineStyle(4,0xffe2a3).strokeCircle(p.x,p.y,35);
+            for(const e of this.enemies)if(e.state!=='defeated'&&!p.hits.has(e.def.id)&&Math.abs(e.sprite.x-p.x)<70&&Math.abs(e.sprite.y-p.y)<85){p.hits.add(e.def.id);this.damageEnemy(e,p.damage);}
+            if(this.sim>=p.until)this.pulse=null;
+        }
+        for(const e of this.enemies)if(e.state!=='defeated'&&e.burn){while(e.burn.next<=this.sim&&e.burn.next<=e.burn.until&&e.hp>0){e.burn.next+=1000;this.damageEnemy(e,2);}if(this.sim>=e.burn.until)e.burn=undefined;}
+    }
+    private damageEnemy(e:Enemy,damage:number){
+        if(e.state==='defeated')return;
+        e.hp=Math.max(0,e.hp-damage);e.sprite.setTint(0xffefb0);
+        if(e.hp===0){e.state='defeated';e.label.setText(['siren','crab'].includes(e.def.kind)?'저주가 풀렸어!':'빛으로 돌아갔어요');e.sprite.setAlpha(.25);
+            const boss=['captain','siren'].includes(e.def.kind);
+            this.host.reward({id:e.def.id,xp:e.def.kind==='captain'?30:e.def.kind==='siren'?50:6,coins:3,objectives:boss||this.mapDef.id==='S06'?[e.def.id]:[],checkpoint:boss?{stageId:this.mapDef.id,checkpointId:'boss'}:undefined});
+            if(e.def.kind==='siren'){this.projectiles.forEach(p=>{p.sprite.destroy();p.glyph.destroy();});this.projectiles=[];this.host.dialogue('freed',()=>{});}
+        }
+        this.host.changed();
+    }
     private updateAttack() {
         this.slash.clear();
         if (!this.attack)
@@ -408,7 +479,7 @@ export class Stage extends Phaser.Scene {
             this.slash.beginPath();
             this.slash.arc(this.player.x, this.player.y, 100, a.direction > 0 ? -0.9 : Math.PI - 0.9, a.direction > 0 ? 0.9 : Math.PI + 0.9);
             this.slash.strokePath();
-            this.hitAt(x, this.player.y, 80, 90, a, 'melee');
+            this.hitAt(x, this.player.y, a.weapon==='W03'?85:80, 90, a, 'melee');
         }
         if (age > 280)
             this.attack = null;
@@ -422,24 +493,9 @@ export class Stage extends Phaser.Scene {
             if(e.def.kind==='guardian' && shieldBlocks(e.state,this.player.x,e.sprite.x,e.target)){e.label.setText('방패! 뒤나 빈틈을 노리세요');continue;}
             if (!this.combat.hit(a.id, e.def.id, phase))
                 continue;
-            e.hp = Math.max(0, e.hp - a.damage);
-            e.sprite.setTint(0xffefb0);
-            if (e.hp === 0) {
-                e.state = 'defeated';
-                e.label.setText(['siren','crab'].includes(e.def.kind) ? '저주가 풀렸어!' : '빛으로 돌아갔어요');
-                e.sprite.setAlpha(0.25);
-                this.host.reward({ id: e.def.id, xp: e.def.kind === 'captain' ? 30 : e.def.kind === 'siren' ? 50 : 6, coins: 3, objectives: ['captain', 'siren'].includes(e.def.kind) ? [e.def.id] : [], checkpoint: ['captain', 'siren'].includes(e.def.kind) ? { stageId: this.mapDef.id, checkpointId: 'boss' } : undefined });
-                if (e.def.kind === 'captain' || e.def.kind === 'siren') {
-                    if (e.def.kind === 'siren') {
-                        this.projectiles.forEach(p => { p.sprite.destroy(); p.glyph.destroy(); });
-                        this.projectiles = [];
-                        this.host.dialogue('freed', () => { });
-                    }
-                }
-            }
-            else if (e.def.kind !== 'siren' && e.def.kind !== 'captain')
-                e.sprite.x += a.direction * 14;
-            this.host.changed();
+            this.damageEnemy(e,a.damage);
+            if(a.weapon==='W03'&&e.hp>0)e.burn=ignite(this.sim,e.burn);
+            if(e.hp>0&&!['siren','captain'].includes(e.def.kind))e.sprite.x+=a.direction*14;
         }
         for (const o of this.objects) {
             if (!['shell', 'remote'].includes(o.def.kind) || this.done(o.def.id) || Math.abs(o.def.x - x) > width || Math.abs(o.def.y - y) > height)
@@ -467,6 +523,7 @@ export class Stage extends Phaser.Scene {
             if (e.state === 'idle') {
                 if(e.def.kind==='guardian')e.target=this.player.x;
                 e.sprite.clearTint();
+                if(this.mapDef.id==='S06')e.sprite.setTint(0xffaa65);
                 if (distance < (e.def.kind === 'archer' || e.def.kind === 'siren' ? 580 : 170)) {
                     e.state = 'telegraph';
                     e.until = this.sim + (e.def.kind === 'captain' ? 1500 : 1200) * (this.host.save.settings.difficulty === 'relaxed' ? 1.3 : 1);
@@ -563,6 +620,7 @@ export class Stage extends Phaser.Scene {
         if(def.reward?.startsWith('G') && this.host.save.goldenHearts.includes(def.reward)){this.host.objective(def.id);return;}
         this.host.reward(objectiveReward(def));
         if(def.reward?.startsWith('G')){this.host.hp=maxHp(this.host.save);this.host.changed();}
+        if(def.kind==='flameGift'){this.host.hp=maxHp(this.host.save);this.host.mp=maxMp(this.host.save);this.host.changed();}
         this.host.sound('reward');
         this.host.notice(def.reward==='W02'?'바람 부메랑 획득! Q로 바꿔 J로 던져 보세요.':def.reward?.startsWith('G')?'황금 하트! 최대 체력 +10, 완전 회복':def.kind==='rescue'?'공기방울 보호를 저장했어요. 아직 자유 수영은 아니에요.':`${def.label} · 완료`);
     }    private interact(def: ObjectDef) {
@@ -570,6 +628,9 @@ export class Stage extends Phaser.Scene {
             this.host.notice('아직 할 일이 있어요. ' + this.mapDef.objective);
             return;
         }
+        if(def.requiresItems?.some(id=>!this.host.save.treasures.includes(id))){this.host.notice('영원의 불씨 T01을 얻은 뒤 다시 와 주세요.');return;}
+        if(def.kind==='rope'){if(this.done(def.id))return;this.grip={id:def.id,until:this.sim+3500};this.host.notice('밧줄을 잡았어요. 파도가 지나갈 때까지 가까이 머무르세요.');return;}
+        if(def.kind==='flameGift'||def.kind==='descent'){this.activate(def);this.host.dialogue(def.dialogue!,()=>{this.invulnerableUntil=this.sim+2000;});return;}
         if(def.kind==='rescue'){this.activate(def);this.host.dialogue(def.dialogue??'naira',()=>{this.invulnerableUntil=this.sim+2000;});return;}
         if (def.kind === 'npc') {
             this.host.dialogue(def.dialogue ?? 'captain', () => this.host.objective(def.id));

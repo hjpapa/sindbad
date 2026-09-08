@@ -41,11 +41,11 @@ export function validateContent() {
         check(m.checkpoints[0].id === 'start', `${s.id}: start checkpoint`);
         for (const p of m.platforms) {
             check(p.x >= 0 && p.x + p.w <= m.width && p.w >= 128 && p.y >= 0 && p.h > 0, `${s.id}: invalid platform`);
-            if(p.motion)check(p.motion.rise>=0 && p.motion.rise<=48 && p.motion.period>=3000,`${s.id}: unsafe moving platform`);
+            if(p.motion)check(p.motion.rise>=0 && p.motion.rise<=48 && p.motion.period>=3000 && (p.motion.travel??0)>=0 && (p.motion.travel??0)<=24,`${s.id}: unsafe moving platform`);
         }
         const ground = m.platforms.filter(p => p.requiredGround).sort((a, b) => a.x - b.x);
         for (let j = 1; j < ground.length; j++) {
-            check(ground[j].x - ground[j - 1].x - ground[j - 1].w <= 170, `${s.id}: unsafe required gap`);
+            check(ground[j].x - ground[j - 1].x - ground[j - 1].w + (ground[j].motion?.travel??0) + (ground[j-1].motion?.travel??0) <= 170, `${s.id}: unsafe required gap`);
             check(Math.abs(ground[j].y - ground[j - 1].y) <= 96, `${s.id}: unsafe required rise`);
             check(Math.abs(ground[j].y-(ground[j-1].y-(ground[j-1].motion?.rise??0)))<=96 && Math.abs(ground[j-1].y-(ground[j].y-(ground[j].motion?.rise??0)))<=96,`${s.id}: unsafe moving route extrema`);
         }
@@ -56,6 +56,7 @@ export function validateContent() {
             check(o.x >= 0 && o.x <= m.width, `${o.id}: out of bounds`);
             for (const need of o.needs ?? [])
                 check(objectives.has(need), `${o.id}: unknown prerequisite ${need}`);
+            for(const item of o.requiresItems??[])check(itemIds.has(item),`${o.id}: unknown required item`);
             if (o.dialogue)
                 check(!!dialogues[o.dialogue], `${o.id}: missing dialogue`);
             if (o.reward && o.reward !== 'coins')
@@ -64,6 +65,7 @@ export function validateContent() {
             rewards.push(objectiveReward(o).id);
         }
         for(const flag of s.rewardFlags)check(m.objects.some(o=>o.rewardFlags?.includes(flag)),`${s.id}: missing implemented flag reward ${flag}`);
+        for(const item of s.mandatoryItems)if(item!=='W01')check(m.objects.some(o=>o.reward===item||[...(objectiveReward(o).weapons??[]),...(objectiveReward(o).treasures??[])].includes(item)),`${s.id}: missing implemented item reward ${item}`);
         const visit=(id:string,path:Set<string>)=>{if(path.has(id)){check(false,`${s.id}: prerequisite cycle at ${id}`);return;}const o=m.objects.find(o=>o.id===id);for(const need of o?.needs??[])visit(need,new Set([...path,id]));};
         for(const o of m.objects)visit(o.id,new Set());
         for(const w of m.water??[])check(w.w>0&&w.h>0&&w.x>=0&&w.x+w.w<=m.width,`${s.id}: invalid water region`);

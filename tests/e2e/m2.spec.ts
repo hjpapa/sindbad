@@ -21,7 +21,7 @@ test('existing M1 save → whale rescue, moving deck, G01 → coral rescue, G02 
  await use(page,2650);await page.getByRole('button',{name:'전체 생략'}).click();expect((await read(page)).save.flags.filter((x:string)=>x==='bubbleBlessing')).toHaveLength(1);
  await use(page,3200);expect((await read(page)).save.goldenHearts).toEqual(['G01','G02']);await walk(page,3360);await expect.poll(async()=>(await read(page)).submerged).toBe(true);await page.waitForTimeout(11000);expect((await read(page)).air).toBe(10000);expect((await read(page)).bubbleProtected).toBe(true);
  await page.screenshot({path:info.outputPath('S05-bubble-golden.png')});const xp=(await read(page)).save.totalXp;await page.keyboard.press('e');expect((await read(page)).save.totalXp).toBe(xp);
- await use(page,3880);await page.getByRole('button',{name:'이번 항해 기록 보기'}).click();await expect(page.locator('[data-stage="S06"]')).toBeDisabled();expect((await read(page)).save.clearedStageIds).toContain('S05');expect(errors).toEqual([]);await page.screenshot({path:info.outputPath('M2-part-one.png')});
+ await use(page,3880);await page.getByRole('button',{name:'항해 지도'}).click();await expect(page.locator('[data-stage="S06"]')).toBeEnabled();expect((await read(page)).save.clearedStageIds).toContain('S05');expect(errors).toEqual([]);await page.screenshot({path:info.outputPath('M2-part-one.png')});
 });
 
 test('coral gate rejects missing crown; guardian blocks frontal attacks and exposes recovery',async({page})=>{

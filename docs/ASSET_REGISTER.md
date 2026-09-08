@@ -25,3 +25,7 @@ SVG 생성 원본: `scripts/make-draft-art.mjs`. 실행 시 위 실제 파일만
 ## M2 첫 구간 자산 — 2026-09-08
 
 `public/assets/draft/guardian.svg`, `naira.svg`, `gear.svg`, `key.svg`, `gate.svg`, `golden.svg`를 추가했다. 모두 96×128 SVG이며 원본 생성기는 `scripts/make-m2-art.mjs`이다. 자체 작성 간이 벡터로 프로젝트에서 사용·수정 가능하고 외부 이미지/모델/음악을 복제하지 않았다. 상태는 모두 draft다. 고래 등·바다·산호 동굴은 `src/game/stage.ts`의 Phaser 도형 배경이며 최종 웹툰 아트 승인은 아직 없다.
+
+## S06~S07 자산 — 2026-09-08
+
+public/assets/draft/rah.svg, torch.svg, furnace.svg, vine.svg, rope.svg: 각 96×128, scripts/make-flame-art.mjs에서 생성한 자체 벡터. 프로젝트에서 사용·수정 가능하며 외부 자산 없음. 총 SVG 22개 모두 ART_DRAFT. 불꽃 동굴, 파도·동굴 배경, 파동은 src/game/stage.ts의 자체 Phaser Graphics다. 최종 웹툰 아트/애니메이션은 미완료다.

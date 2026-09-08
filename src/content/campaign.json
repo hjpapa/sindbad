@@ -141,8 +141,8 @@
     "childSceneRefs": [
       "5"
     ],
-    "status": "planned",
-    "artStatus": "missing",
+    "status": "implemented",
+    "artStatus": "draft",
     "nextStageId": "S07",
     "entryItems": [
       "W01"
@@ -169,8 +169,8 @@
     "childSceneRefs": [
       "6"
     ],
-    "status": "planned",
-    "artStatus": "missing",
+    "status": "implemented",
+    "artStatus": "draft",
     "nextStageId": "S08",
     "entryItems": [],
     "entryFlags": [
