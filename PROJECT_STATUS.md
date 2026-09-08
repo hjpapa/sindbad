@@ -81,4 +81,5 @@ M2의 첫 구간 S04~S05를 구현한다. 움직이는 고래 등에서 선원 �
 - 최초 npm ci는 실행 중 개발 서버의 esbuild 파일 잠금으로 실패했다. 해당 서버 종료 후 npm ci --offline 재실행 성공. 이후 검사는 별도로 다시 실행했다.
 - 다음 작업은 기존 2D 아트 방향을 유지한 M2 S04~S05이다. S04~S36은 계속 planned로 남는다.
 - 복구 후 실제 재검사: typecheck / lint / 단위 37개 / 콘텐츠 / build 모두 통과. 전체 Edge E2E 8개 통과(2.6분). 빌드 JS/CSS 해시는 3D 변경 전과 동일하다. Phaser 큰 청크 경고는 기존과 같다.
-- 공개 반영 상태: 자동 승인 심사가 GitHub main push(연결된 Vercel 운영 교체)를 거부했다. 사유는 현재 요청에 공개 배포 재승인이 명시되지 않았다는 것이다. 로컬 복구는 완료했으나 GitHub와 공개 사이트는 아직 3D 버전이다. 공개 배포 복구 승인 후 push 및 운영 확인이 다음 작업이다.
+- 공개 복구 완료: 사용자 추가 승인 후 복구 커밋 1d134b1을 GitHub main에 push했다. Vercel production dpl_GcxK8bxG8ygT6GfUp4TSmW9PNdDu가 READY이며 https://sindbad-orcin.vercel.app 에 이전 2D 버전이 연결됐다. 이전 자동 승인 거부는 추가 승인 후 해소됐다.
+- 공개 사이트 재검증 통과: HTTP 200, 이전 2D 화면 육안 확인, 새 게임·이동/점프/공격 입력·저장·새로고침·이어하기. pageerror/관측 HTTP 400+ 0개, 개발 훅 없음. 실행 명령은 node scripts/verify-deployment.mjs https://sindbad-orcin.vercel.app. 이번 공개 반영 단계에서는 앞선 복구 검사의 단위 37개/E2E 8개를 재실행하지 않았다.
