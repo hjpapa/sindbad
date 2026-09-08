@@ -1,0 +1,11 @@
+import {writeFileSync} from 'node:fs';
+const svg=body=>`<svg xmlns="http://www.w3.org/2000/svg" width="96" height="128" viewBox="0 0 96 128">${body}</svg>`;
+const art={
+ guardian:'<path d="M27 47L16 94l22 6 10-32 10 32 22-6-11-47" fill="#cc9db6" stroke="#244657" stroke-width="4"/><path d="M29 44Q18 12 48 9q30 3 19 35L48 54Z" fill="#8ac9bd" stroke="#244657" stroke-width="4"/><path d="M30 27h36l-8 10H38Z" fill="#28495c"/><path d="M24 89l-3 31h20V92m15 0v28h20l-5-31" fill="#7eabb2" stroke="#244657" stroke-width="4"/><path d="M11 57Q27 48 43 57v34L27 107 11 91Z" fill="#b9ded0" stroke="#244657" stroke-width="4"/><path d="M25 61v30m-7-13h18" stroke="#ecbb92" stroke-width="5"/>',
+ naira:'<path d="M20 68Q6 28 24 12 69-12 79 38l-5 53" fill="#347c8a" stroke="#254a5c" stroke-width="4"/><ellipse cx="48" cy="33" rx="20" ry="24" fill="#efbe99" stroke="#254a5c" stroke-width="3"/><path d="M22 23q8-33 52 0L50 14Z" fill="#347c8a"/><path d="M29 58h38l17 60H12Z" fill="#87c8bf" stroke="#254a5c" stroke-width="4"/><path d="M30 61l-15 28m50-28 16 24" stroke="#efbe99" stroke-width="10"/><circle cx="40" cy="31" r="3"/><circle cx="57" cy="31" r="3"/><path d="M41 43q7 5 14 0" fill="none" stroke="#925c52" stroke-width="3"/><path d="M34 12L29 0l18 8 18-8-4 15Z" fill="#edcc7b"/>',
+ gear:'<circle cx="48" cy="68" r="32" fill="#f0b981" stroke="#254a5c" stroke-width="5"/><circle cx="48" cy="68" r="16" fill="#76adae" stroke="#254a5c" stroke-width="4"/><path d="M23 46l13 10m25 24 12 12M73 46L61 57M23 92l13-12" stroke="#fff1d1" stroke-width="9"/>',
+ key:'<circle cx="32" cy="40" r="18" fill="none" stroke="#f2ce81" stroke-width="10"/><path d="M44 53l32 37m-6-8-12 10m5-20-12 10" stroke="#f2ce81" stroke-width="10"/>',
+ gate:'<path d="M10 124V43Q10 4 48 4t38 39v81" fill="#a983a7" stroke="#d7bea6" stroke-width="7"/><path d="M26 120V43q0-23 22-23t22 23v77" fill="#284e66"/><path d="M37 27v93m22-93v93" stroke="#cb8eaa" stroke-width="7"/><path d="M34 64l14-12 14 12-14 15Z" fill="#eaca86"/>',
+ golden:'<path d="M48 95L12 60C-8 24 34 12 48 38c14-26 56-14 36 22Z" fill="#f5d06e" stroke="#865f38" stroke-width="5"/><path d="M25 38q7-10 17 0" fill="none" stroke="#fff8c4" stroke-width="7"/><path d="M48 3v13M7 13l9 9m73-9-9 9" stroke="#fff0ad" stroke-width="4"/>'
+};
+for(const [key,body] of Object.entries(art))writeFileSync(`public/assets/draft/${key}.svg`,svg(body));

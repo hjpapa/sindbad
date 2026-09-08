@@ -68,3 +68,18 @@ HTML 리포트: `playwright-report/index.html`. 스크린샷 보관: `docs/scree
 남은 경고: Phaser 단일 청크 1.48MB(압축 339.84kB)로 Vite의 500kB 청크 경고가 발생합니다. 빌드는 성공했습니다. 장시간 FPS/메모리 측정은 하지 않았습니다.
 
 환경 조회 중 npm registry 메타데이터와 선택적 formatter 설치는 EACCES로 실패했습니다. 게임의 고정 의존성 설치·lockfile 작성과 모든 필수 검사는 성공했습니다. 별도 formatter는 추가하지 않았습니다.
+
+## 2026-09-08 M2 첫 구간 S04~S05
+
+### 최종 실제 검사 결과
+
+| 명령 | 2026-09-08 결과 |
+|---|---|
+| npm run typecheck | 통과 |
+| npm run lint | 통과 |
+| npm run test | 43개 통과 |
+| npm run validate:content | 통과 · S01~S05 implemented, S06~S36 planned |
+| npm run build | 통과 · 5.98초, 기존 Phaser 큰 청크 경고 유지 |
+| npm run test:e2e | 설치된 Edge headless · 전체 10개 통과, 3.6분 |
+
+S04~S05 정상 진행 검사에서 pageerror/HTTP 400+는 0개였다. 스크린샷 S04-moving-whale.png, S05-bubble-golden.png, M2-part-one.png를 docs/screenshots에 보관하고 육안 확인했다. 수동 플레이·실제 모바일 기기·공개 배포 검사는 이번에 실행하지 않았다.

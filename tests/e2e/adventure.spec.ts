@@ -141,13 +141,15 @@ test('new game → S01 → S02 → S03 with real keyboard inputs and checkpoint 
     await move(page, 3800);
     await page.screenshot({ path: info.outputPath('S03-storm-crystal.png') });
     await use(page, 4620);
-    await page.getByRole('button', { name: '첫 항해 기록 보기' }).click();
+    await page.getByRole('button', { name: '항해 지도' }).click();
     await expect(page.getByRole('heading', { name: 'M1 · 첫 항해를 마쳤어요' })).toBeVisible();
-    await expect(page.locator('[data-stage="S04"]')).toBeDisabled();
+    await expect(page.locator('[data-stage="S04"]')).toBeEnabled();
     expect((await state(page)).save.clearedStageIds).toEqual(['S01', 'S02', 'S03']);
     expect((await state(page)).save.totalXp).toBeGreaterThanOrEqual(140);
     expect(errors).toEqual([]);
     await page.screenshot({ path: info.outputPath('M1-complete.png') });
+    await page.locator('[data-stage="S04"]').click();
+    await expect.poll(async()=>(await state(page)).stage).toBe('S04');
 });
 test('pause freezes world; export/import and real touch pointer combination', async ({ page }, info) => {
     await page.goto('/');

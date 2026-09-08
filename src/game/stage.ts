@@ -5,6 +5,8 @@ import { type WeaponId } from '../content/items';
 import { Combat } from '../core/combat';
 import { maxHp, maxMp, type Reward, type Save } from '../core/state';
 import type { Input } from './input';
+import { canBreatheUnderwater, movingPlatformY, objectiveReward, rescueEquipment, shieldBlocks } from '../core/adventure';
+import type { Platform } from '../content/maps';
 export interface Host {
     save: Save;
     hp: number;
@@ -43,6 +45,14 @@ interface Projectile {
     wave: boolean;
 }
 export class Stage extends Phaser.Scene {
+    private moving: {def:Platform;rect:Phaser.GameObjects.Rectangle;top:Phaser.GameObjects.Rectangle;body:Phaser.Physics.Arcade.Body}[]=[];
+    private doors: {id:string;rect:Phaser.GameObjects.Rectangle}[]=[];
+    private wakeAt:number|null=null;
+    private air=10000;
+    private waterTick=0;
+    private submerged=false;
+    private bubble!:Phaser.GameObjects.Graphics;
+    private journey!:Phaser.GameObjects.Text;
     mapDef!: MapDef;
     player!: Phaser.Physics.Arcade.Sprite;
     private land!: Phaser.Physics.Arcade.StaticGroup;
@@ -94,6 +104,7 @@ export class Stage extends Phaser.Scene {
         this.load.svg(asset.key, asset.path); }
     create() {
         this.mapDef = maps[this.host.save.checkpoint.stageId];
+        this.moving=[];this.doors=[];this.wakeAt=null;this.air=10000;this.waterTick=0;
         this.sim = 0;
         this.direction = 1;
         this.enemies = [];
@@ -127,8 +138,8 @@ export class Stage extends Phaser.Scene {
         this.land = this.physics.add.staticGroup();
         for (const p of this.mapDef.platforms) {
             const rect = this.add.rectangle(p.x + p.w / 2, p.y + p.h / 2, p.w, p.h, this.mapDef.theme === 'reef' ? 0x477976 : 0x795d46).setStrokeStyle(3, 0xd8c08c);
-            this.land.add(rect);
-            this.add.rectangle(p.x + p.w / 2, p.y + 4, p.w, 8, this.mapDef.theme === 'reef' ? 0x9fc7a8 : 0xd2aa70);
+            const top=this.add.rectangle(p.x + p.w / 2, p.y + 4, p.w, 8, this.mapDef.theme === 'reef' ? 0x9fc7a8 : 0xd2aa70);
+            if(p.motion){this.physics.add.existing(rect);const body=rect.body as Phaser.Physics.Arcade.Body;body.setAllowGravity(false).setImmovable(true);this.moving.push({def:p,rect,top,body});}else this.land.add(rect);
         }
         const cp = this.mapDef.checkpoints.find(c => c.id === this.host.save.checkpoint.checkpointId) ?? this.mapDef.checkpoints[0];
         this.safe = { x: cp.x, y: cp.y };
@@ -137,6 +148,8 @@ export class Stage extends Phaser.Scene {
         this.player.body?.setOffset(27, 42);
         this.player.setMaxVelocity(300, 1000).setDragX(2600);
         this.physics.add.collider(this.player, this.land);
+        for(const platform of this.moving)this.physics.add.collider(this.player,platform.rect);
+        for(const o of this.mapDef.objects.filter(o=>o.kind==='gate')){const rect=this.add.rectangle(o.x+48,440,28,336,0xc892aa,.65);this.land.add(rect);this.doors.push({id:o.id,rect});if(this.done(o.id)){(rect.body as Phaser.Physics.Arcade.StaticBody).enable=false;rect.setVisible(false);}}
         this.physics.world.setBounds(0, -200, this.mapDef.width, 1400);
         this.cameras.main.setBounds(0, 0, this.mapDef.width, 720);
         this.cameras.main.startFollow(this.player, true, this.host.save.settings.reducedMotion ? 1 : 0.12, this.host.save.settings.reducedMotion ? 1 : 0.12, 0, 0);
@@ -153,7 +166,7 @@ export class Stage extends Phaser.Scene {
             this.enemies.push({ def, sprite, label, hp, maxHp: hp, state: 'idle', until: 0, target: def.x, pattern: 0 });
         }
         for (const def of this.mapDef.objects) {
-            const texture = def.kind === 'chest' ? 'chest' : def.kind === 'npc' ? (this.mapDef.id === 'S02' ? 'siren' : 'player') : def.kind === 'shell' || def.kind === 'remote' ? 'shell' : def.kind === 'rod' || def.kind === 'crisis' ? 'rod' : 'bell';
+            const texture = ['gear','key','gate','golden'].includes(def.kind)?def.kind:def.kind==='rescue'?'naira':def.kind === 'chest' ? 'chest' : def.kind === 'npc' ? (this.mapDef.id === 'S05'?'naira':this.mapDef.id === 'S02' ? 'siren' : 'player') : def.kind === 'shell' || def.kind === 'remote' ? 'shell' : def.kind === 'rod' || def.kind === 'crisis' ? 'rod' : 'bell';
             const sprite = this.add.image(def.x, def.y, texture).setScale(def.kind === 'checkpoint' ? 0.42 : 0.68).setDepth(4);
             if (def.kind === 'npc')
                 sprite.setTint(0xe1d498);
@@ -163,6 +176,8 @@ export class Stage extends Phaser.Scene {
         for (const h of this.mapDef.hearts)
             this.hearts.push({ id: h.id, large: !!h.large, sprite: this.add.image(h.x, h.y, 'heart').setScale(h.large ? 0.5 : 0.36).setDepth(5) });
         this.slash = this.add.graphics().setDepth(12);
+        this.bubble=this.add.graphics().setDepth(11);
+        this.journey=this.add.text(640,186,'',{fontSize:'18px',color:'#fff1c8',backgroundColor:'#24475b',padding:{x:10,y:6}}).setOrigin(.5).setScrollFactor(0).setDepth(19);
         this.warnings = this.add.graphics().setDepth(3);
         this.bossText = this.add.text(640, 142, '', { fontFamily: 'sans-serif', fontSize: '22px', color: '#fce8bc', backgroundColor: '#173643', padding: { x: 12, y: 7 } }).setOrigin(0.5).setScrollFactor(0).setDepth(20);
         this.hint = this.add.text(640, 648, '', { fontFamily: 'sans-serif', fontSize: '22px', color: '#fff3d2', backgroundColor: '#153847', padding: { x: 14, y: 8 } }).setOrigin(0.5).setScrollFactor(0).setDepth(20);
@@ -171,6 +186,24 @@ export class Stage extends Phaser.Scene {
     }
     private background() {
         const theme = this.mapDef.theme;
+        if(theme==='whale'||theme==='coral'){
+            this.cameras.main.setBackgroundColor(theme==='whale'?'#a4c9bf':'#5a8793');
+            const g=this.add.graphics().setDepth(-10).setScrollFactor(theme==='whale'?.9:.25);
+            if(theme==='whale'){
+                g.fillStyle(0x4e8698).fillRect(0,410,this.mapDef.width,500);
+                g.fillStyle(0x587b83).fillEllipse(1800,740,3700,780);
+                g.fillStyle(0x708c85).fillEllipse(1700,640,3000,530);
+                g.fillStyle(0x183c53).fillCircle(3220,530,25);g.fillStyle(0xd1e1c4).fillCircle(3215,522,7);
+                g.fillStyle(0x547e86).fillTriangle(20,600,100,250,340,620);
+                g.lineStyle(9,0xd2eee3,.8).lineBetween(3060,310,3060,235).lineBetween(3060,235,3030,210).lineBetween(3060,235,3090,210);
+                g.fillStyle(0xbac7a1).fillEllipse(880,448,260,125);
+            }else{
+                g.fillStyle(0x254b66).fillRect(0,0,this.mapDef.width,200);
+                for(let x=0;x<this.mapDef.width;x+=230){g.fillStyle(0x456f7d).fillTriangle(x,160,x+90,325,x+190,160);g.lineStyle(12,0xb990a6,.65).lineBetween(x,620,x+30,400).lineBetween(x+22,480,x+82,430);g.fillStyle(0x97c0ad).fillCircle(x+130,590,44);}
+            }
+            for(const w of this.mapDef.water??[]){const water=this.add.graphics().setDepth(9);water.fillStyle(0x86d6d7,.18).fillRect(w.x,w.y,w.w,w.h);water.lineStyle(3,0xbcebe1,.8).lineBetween(w.x,w.y,w.x+w.w,w.y);this.add.text(w.x+12,w.y-32,'공기방울로 숨 쉬는 길',{fontSize:'18px',color:'#e2fff0'});}
+            return;
+        }
         this.cameras.main.setBackgroundColor(theme === 'storm' ? '#233d53' : theme === 'reef' ? '#7bacb2' : '#bed8c8');
         const g = this.add.graphics().setScrollFactor(0).setDepth(-10);
         g.fillStyle(theme === 'storm' ? 0x2d5369 : 0x70aeb0).fillRect(0, 410, 1280, 310);
@@ -206,7 +239,7 @@ export class Stage extends Phaser.Scene {
     }
     else
         this.physics.resume(); }
-    snapshot() { return { stage: this.mapDef?.id, player: this.player ? { x: this.player.x, y: this.player.y, vx: this.player.body?.velocity.x, vy: this.player.body?.velocity.y, hp: this.host.hp, maxHp: maxHp(this.host.save), bodyWidth: this.player.body?.width, bodyHeight: this.player.body?.height } : null, save: structuredClone(this.host.save), sim: this.sim, paused: this.stopped, enemies: this.enemies.map(e => ({ id: e.def.id, x: e.sprite.x, y: e.sprite.y, hp: e.hp, state: e.state })), projectiles: this.projectiles.length, boomerang: !!this.boom, attack: this.attack?.id ?? null, frameMs: this.lastFrame }; }
+    snapshot() { return { stage: this.mapDef?.id, player: this.player ? { x: this.player.x, y: this.player.y, grounded: (this.player.body as Phaser.Physics.Arcade.Body)?.blocked.down, vx: this.player.body?.velocity.x, vy: this.player.body?.velocity.y, hp: this.host.hp, maxHp: maxHp(this.host.save), bodyWidth: this.player.body?.width, bodyHeight: this.player.body?.height } : null, save: structuredClone(this.host.save), sim: this.sim, paused: this.stopped, enemies: this.enemies.map(e => ({ id: e.def.id, x: e.sprite.x, y: e.sprite.y, hp: e.hp, state: e.state })), projectiles: this.projectiles.length, boomerang: !!this.boom, attack: this.attack?.id ?? null, air: this.air, submerged:this.submerged, bubbleProtected: canBreatheUnderwater(this.host.save), movingPlatforms: this.moving.map(p=>({x:p.rect.x,y:p.rect.y-p.def.h/2,w:p.def.w})), frameMs: this.lastFrame }; }
     update(_time: number, delta: number) {
         if (this.stopped || !this.player)
             return;
@@ -223,10 +256,11 @@ export class Stage extends Phaser.Scene {
         this.sim += dt;
         this.lastFrame = delta;
         const body = this.player.body as Phaser.Physics.Arcade.Body;
+        this.updateAdventure(dt);
         if (body.blocked.down) {
             this.groundedAt = this.sim;
             const nearDanger = this.lightning && Math.abs(this.lightning.x - this.player.x) < 140;
-            const solid = this.mapDef.platforms.find(p => this.player.x > p.x + 35 && this.player.x < p.x + p.w - 35 && Math.abs(body.bottom - p.y) < 8);
+            const solid = this.mapDef.platforms.find(p => !p.motion && this.player.x > p.x + 35 && this.player.x < p.x + p.w - 35 && Math.abs(body.bottom - p.y) < 8);
             if (solid && !nearDanger)
                 this.safe = { x: this.player.x, y: this.player.y - 2 };
         }
@@ -296,7 +330,7 @@ export class Stage extends Phaser.Scene {
             const done = this.done(obj.def.id);
             obj.sprite.setAlpha(done ? 0.45 : 1);
             obj.label.setText(`${done ? '✓ ' : ''}${obj.def.label}`);
-            if (obj.def.kind === 'checkpoint' && Math.abs(obj.def.x - this.player.x) < 65 && body.blocked.down) {
+            if (obj.def.kind === 'checkpoint' && !(obj.def.needs??[]).some(id=>!this.done(id)) && Math.abs(obj.def.x - this.player.x) < 65 && body.blocked.down) {
                 const cp = this.mapDef.checkpoints.find(c => obj.def.id.endsWith(c.id));
                 if (cp && this.host.save.checkpoint.checkpointId !== cp.id) {
                     this.checkpoint(cp.id);
@@ -323,6 +357,23 @@ export class Stage extends Phaser.Scene {
             }
         }
         this.player.x = Phaser.Math.Clamp(this.player.x, 30, this.mapDef.width - 30);
+    }
+    private updateAdventure(dt:number) {
+        if(this.mapDef.id==='S04'){
+            const count=rescueEquipment.filter(id=>this.done(id)).length;
+            if(count===3 && this.wakeAt===null){this.wakeAt=this.sim+2400;this.host.notice('⚠ 고래가 깨어나요! 잠시 뒤 발판이 천천히 오르내려요. 시간 제한은 없어요.');}
+            this.journey.setText(`구명 장비 ${count} / 3${this.wakeAt===null?' · 고래를 공격하지 마세요':this.sim<this.wakeAt?' · ⚠ 발판이 곧 움직여요':' · 움직이는 등을 지나 구조 보트로'}`);
+            for(const p of this.moving){const desired=movingPlatformY(p.def,this.wakeAt===null?0:this.sim-this.wakeAt);p.body.setVelocityY((desired+p.def.h/2-p.rect.y)/Math.max(dt,1)*1000);p.top.setPosition(p.rect.x,p.rect.y-p.def.h/2+4);}
+        }
+        for(const d of this.doors)if(this.done(d.id)){(d.rect.body as Phaser.Physics.Arcade.StaticBody).enable=false;d.rect.setVisible(false);}
+        this.bubble.clear();
+        const wet=(this.mapDef.water??[]).some(w=>this.player.x>w.x&&this.player.x<w.x+w.w&&this.player.y>w.y+18&&this.player.y<w.y+w.h);
+        this.submerged=wet;
+        if(wet){
+            if(canBreatheUnderwater(this.host.save)){this.air=10000;this.bubble.lineStyle(3,0xbceff0,.8).strokeEllipse(this.player.x,this.player.y,104,142);}
+            else{this.air=Math.max(0,this.air-dt);if(this.air===0&&this.sim>=this.waterTick){this.waterTick=this.sim+1600;this.hurt(12);}}
+        }else this.air=10000;
+        if(this.mapDef.id==='S05')this.journey.setText(wet?(canBreatheUnderwater(this.host.save)?'○ 공기방울 보호 · 숨 쉬기 가능 / 자유 수영 아님':`숨 ${Math.ceil(this.air/1000)}초 · 물 밖으로 나가세요`):this.done('S05.rescue')?'나이라 구출 완료 · 선택 산호방과 바닷길이 열렸어요':'열쇠 → 왕관 장식 → 산호문 → 나이라');
     }
     private checkpoint(id: string) { this.host.save.checkpoint = { stageId: this.mapDef.id, checkpointId: id }; this.host.persist(); this.host.changed(); }
     private hurt(base: number, element: 'normal' | 'lightning' = 'normal') { if (this.sim < this.invulnerableUntil)
@@ -368,13 +419,14 @@ export class Stage extends Phaser.Scene {
                 continue;
             if (e.def.kind === 'siren' && ![1, 2, 3].every(n => this.done(`S02.shell.${n}`)))
                 continue;
+            if(e.def.kind==='guardian' && shieldBlocks(e.state,this.player.x,e.sprite.x,e.target)){e.label.setText('방패! 뒤나 빈틈을 노리세요');continue;}
             if (!this.combat.hit(a.id, e.def.id, phase))
                 continue;
             e.hp = Math.max(0, e.hp - a.damage);
             e.sprite.setTint(0xffefb0);
             if (e.hp === 0) {
                 e.state = 'defeated';
-                e.label.setText(e.def.kind === 'siren' ? '저주가 풀렸어!' : '빛으로 돌아갔어요');
+                e.label.setText(['siren','crab'].includes(e.def.kind) ? '저주가 풀렸어!' : '빛으로 돌아갔어요');
                 e.sprite.setAlpha(0.25);
                 this.host.reward({ id: e.def.id, xp: e.def.kind === 'captain' ? 30 : e.def.kind === 'siren' ? 50 : 6, coins: 3, objectives: ['captain', 'siren'].includes(e.def.kind) ? [e.def.id] : [], checkpoint: ['captain', 'siren'].includes(e.def.kind) ? { stageId: this.mapDef.id, checkpointId: 'boss' } : undefined });
                 if (e.def.kind === 'captain' || e.def.kind === 'siren') {
@@ -413,6 +465,7 @@ export class Stage extends Phaser.Scene {
                 continue;
             }
             if (e.state === 'idle') {
+                if(e.def.kind==='guardian')e.target=this.player.x;
                 e.sprite.clearTint();
                 if (distance < (e.def.kind === 'archer' || e.def.kind === 'siren' ? 580 : 170)) {
                     e.state = 'telegraph';
@@ -457,7 +510,7 @@ export class Stage extends Phaser.Scene {
             if (e.state === 'idle')
                 e.label.setText(`${e.hp} / ${e.maxHp}`);
             e.label.setPosition(e.sprite.x, e.sprite.y - 88);
-            e.sprite.setFlipX(this.player.x < e.sprite.x);
+            e.sprite.setFlipX((e.def.kind==='guardian'?e.target:this.player.x) < e.sprite.x);
         }
         this.bossText.setText(boss).setVisible(!!boss);
     }
@@ -505,13 +558,19 @@ export class Stage extends Phaser.Scene {
             }
         }
     }
-    private activate(def: ObjectDef) { if (this.done(def.id))
-        return; this.host.reward({ id: `${def.id}.reward`, coins: def.reward === 'coins' ? 25 : 0, weapons: def.reward === 'W02' ? ['W02'] : [], relics: def.reward?.startsWith('R') ? [def.reward] : [], objectives: [def.id] }); this.host.sound('reward'); this.host.notice(def.reward === 'W02' ? '바람 부메랑 획득! Q로 바꿔 J로 던져 보세요.' : def.reward === 'R01' ? '항해자의 메달! 하트를 96px 거리에서 주워요.' : def.reward === 'R02' ? '폭풍 수정! 번개 피해가 25% 줄어요.' : `${def.label} · 완료`); }
-    private interact(def: ObjectDef) {
+    private activate(def: ObjectDef) {
+        if(this.done(def.id))return;
+        if(def.reward?.startsWith('G') && this.host.save.goldenHearts.includes(def.reward)){this.host.objective(def.id);return;}
+        this.host.reward(objectiveReward(def));
+        if(def.reward?.startsWith('G')){this.host.hp=maxHp(this.host.save);this.host.changed();}
+        this.host.sound('reward');
+        this.host.notice(def.reward==='W02'?'바람 부메랑 획득! Q로 바꿔 J로 던져 보세요.':def.reward?.startsWith('G')?'황금 하트! 최대 체력 +10, 완전 회복':def.kind==='rescue'?'공기방울 보호를 저장했어요. 아직 자유 수영은 아니에요.':`${def.label} · 완료`);
+    }    private interact(def: ObjectDef) {
         if (def.needs?.some(id => !this.done(id))) {
             this.host.notice('아직 할 일이 있어요. ' + this.mapDef.objective);
             return;
         }
+        if(def.kind==='rescue'){this.activate(def);this.host.dialogue(def.dialogue??'naira',()=>{this.invulnerableUntil=this.sim+2000;});return;}
         if (def.kind === 'npc') {
             this.host.dialogue(def.dialogue ?? 'captain', () => this.host.objective(def.id));
             return;
