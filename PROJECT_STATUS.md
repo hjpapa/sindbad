@@ -98,3 +98,11 @@ M2의 첫 구간 S04~S05를 구현한다. 움직이는 고래 등에서 선원 �
 번들: 앱 96.72kB / gzip 34.61kB, Three 479.14kB / gzip 120.19kB, Phaser 1,481.77kB / gzip 339.84kB. Phaser 큰 청크 경고는 남는다. S01 시작점 한 스냅샷은 102 draw calls / 57,062 triangles / 프레임 약 16.63ms였다. 장시간 60fps·저사양/실제 모바일 성능 검증을 대신하지 않는다.
 
 남은 한계: 실제 모바일/Safari/Firefox·장시간 GPU 메모리는 미검증. 모바일 모사에서 조작·화면 정렬은 확인했으나 맵 내부 라벨과 하단 힌트는 작거나 터치 영역에 가까워 추가 가독성 검수가 필요하다. 무기별 전용 모델/포즈, 피격·회피·승리 연출, 장식 다양성과 아트 최종 승인은 후속 작업이다. 다음 게임플레이 작업은 기존 M2 S04~S05이며 이번 3D 방향을 이어 적용한다.
+
+### 3D 버전 운영 배포 및 실제 공개 주소 검사
+
+- 3D 구현 커밋 `d949d3c`, 아이콘 수정 커밋 `5ad3c93`. GitHub hjpapa/sindbad main으로 반영했다.
+- Vercel production `dpl_EC3h7LkL5p1YL5cL6rJhemQjqBCG` READY, https://sindbad-orcin.vercel.app 에 연결됨.
+- `node scripts/verify-deployment.mjs https://sindbad-orcin.vercel.app` 최종 통과: HTTP 200, 3D 캔버스 표시, 새 게임·이동/점프/공격 입력·체크포인트 저장·새로고침·이어하기, 개발 테스트 훅 없음. console error/pageerror/HTTP 400+ 모두 0개.
+- 첫 공개 검사에서 favicon.ico 404를 실제 확인해 자체 SVG 아이콘을 추가했다. 수정 후 빌드(5.42초) 및 공개 브라우저 재검사 통과. 공개 화면 증거는 production-title.png / production-play.png / production-resume.png.
+- 공개 주소의 전체 S01~S03 재완주는 이번에도 별도 미검증이며, 같은 게임 코드의 로컬 전체 E2E 13개 통과와 구별한다.
