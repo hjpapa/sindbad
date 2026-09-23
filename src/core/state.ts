@@ -44,7 +44,7 @@ export interface Reward {
     objectives?: string[];
     checkpoint?: Save['checkpoint'];
 }
-export function freshSave(): Save { return { schemaVersion: 1, buildVersion: '0.1.0', writtenAt: new Date().toISOString(), checkpoint: { stageId: 'S01', checkpointId: 'start' }, totalXp: 0, coins: 0, weapons: ['W01'], equippedWeapon: 'W01', upgrades: {}, treasures: [], relics: [], goldenHearts: [], equippedSkill: null, clearedStageIds: [], claimedRewardIds: ['S01.reward.start'], completedObjectiveIds: [], flags: [], journalPageIds: [], settings: { difficulty: 'relaxed', musicVolume: 0, sfxVolume: 0.25, reducedMotion: false, largeText: false, aimAssist: true } }; }
+export function freshSave(): Save { return { schemaVersion: 1, buildVersion: '0.1.0', writtenAt: new Date().toISOString(), checkpoint: { stageId: 'S01', checkpointId: 'start' }, totalXp: 0, coins: 0, weapons: ['W01'], equippedWeapon: 'W01', upgrades: {}, treasures: [], relics: [], goldenHearts: [], equippedSkill: null, clearedStageIds: [], claimedRewardIds: ['S01.reward.start'], completedObjectiveIds: [], flags: [], journalPageIds: [], settings: { difficulty: 'relaxed', musicVolume: 0.18, sfxVolume: 0.3, reducedMotion: false, largeText: false, aimAssist: true } }; }
 export function progression(totalXp: number) { let level = 1, remaining = totalXp; while (level < 20 && remaining >= 60 + 20 * (level - 1)) {
     remaining -= 60 + 20 * (level - 1);
     level++;

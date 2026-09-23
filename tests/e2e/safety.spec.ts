@@ -5,7 +5,7 @@ interface ReadState {stage:string;player:{x:number;y:number;hp:number;maxHp:numb
 const read=(page:Page)=>page.evaluate(()=>Reflect.get(window,'__SINBAD_TEST__')) as Promise<ReadState>;
 test('actual damage and heart recovery',async({page})=>{
  await page.goto('/');await page.getByRole('button',{name:'새 모험 시작'}).click();await expect.poll(async()=>(await read(page)).stage).toBe('S01');
- await page.keyboard.down('d');for(let i=0;i<3;i++){await page.keyboard.press('Space');await page.waitForTimeout(800);}await page.keyboard.up('d');await page.waitForTimeout(500);
+ await page.keyboard.down('d');for(let i=0;i<3;i++){await page.keyboard.press('ArrowUp');await page.waitForTimeout(800);}await page.keyboard.up('d');await page.waitForTimeout(500);
  // Remain in the first skeleton's warning/attack range, then walk to its recovery heart.
  let s=await read(page);while(s.player.x<960){await page.keyboard.down('d');await page.waitForTimeout(100);s=await read(page);}await page.keyboard.up('d');
  await expect.poll(async()=>(await read(page)).player.hp,{timeout:10000}).toBeLessThan(100);const damaged=(await read(page)).player.hp;

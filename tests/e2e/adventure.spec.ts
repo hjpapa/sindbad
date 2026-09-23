@@ -37,7 +37,7 @@ async function move(page: Page, x: number) { let snap = await state(page); let j
     const edge = supporting && (direction === 'd' ? supporting.x + supporting.w - snap.player.x < 65 : snap.player.x - supporting.x < 65);
     const step = terrain.some(p => p.y < feet - 10 && p.y >= feet - 150 && (direction === 'd' ? p.x - snap.player.x > 0 && p.x - snap.player.x < 95 : snap.player.x - p.x - p.w > 0 && snap.player.x - p.x - p.w < 95));
     if (supporting && (edge || step) && Date.now() - jumpAt > 250) {
-        await page.keyboard.press('Space');
+        await page.keyboard.press('ArrowUp');
         jumpAt = Date.now();
     }
     await page.waitForTimeout(80);
@@ -81,7 +81,7 @@ test('new game → S01 → S02 → S03 with real keyboard inputs and checkpoint 
     const first = await state(page);
     await page.keyboard.down('d');
     await page.waitForTimeout(250);
-    await page.keyboard.press('Space');
+    await page.keyboard.press('ArrowUp');
     await page.waitForTimeout(180);
     const jumped = await state(page);
     expect(jumped.player.x).toBeGreaterThan(first.player.x);

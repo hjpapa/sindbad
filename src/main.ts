@@ -1,5 +1,6 @@
 import Phaser from 'phaser';
 import './styles.css';
+import './mobile.css';
 import campaign from './content/stageIndex';
 import { maps } from './content/maps';
 import { dialogues } from './content/dialogues.ko';
@@ -9,6 +10,7 @@ import { parseSave, SAVE_KEY, SaveStore } from './core/save';
 import { Input, type Action } from './game/input';
 import { Stage, type Host } from './game/stage';
 import { Audio } from './game/audio';
+import {activeSkills,ownedActiveSkills,selectActiveSkill,type ActiveSkillId} from './core/skills';
 const el = <T extends HTMLElement>(id: string) => document.getElementById(id) as T;
 const root = el('app'), overlay = el('overlay'), hud = el('hud'), touch = el('touch'), canvas = el('game');
 const audio = new Audio();
@@ -20,7 +22,7 @@ const notice = (text: string) => { el('notice').textContent = text; window.clear
 const store = new SaveStore(() => localStorage, notice);
 const host: Host = {
     save: freshSave(), hp: 100, mp: 60, input: new Input(root),
-    reward(r: Reward) { const before = progression(this.save.totalXp).level; this.save = grantReward(this.save, r); if (progression(this.save.totalXp).level > before) {
+    reward(r: Reward) { const before = progression(this.save.totalXp).level, beforeSkill=this.save.equippedSkill; this.save = grantReward(this.save, r); if(beforeSkill!==this.save.equippedSkill)hudCache=''; if (progression(this.save.totalXp).level > before) {
         this.hp = maxHp(this.save);
         this.mp = maxMp(this.save);
         stage?.protect(1500);
@@ -54,13 +56,18 @@ const host: Host = {
 };
 function panel(html: string) {
     html=html.replace('S01~S08 플레이 가능 · S09~S36 개발 중','S01~S36 전체 항해 가능').replace('M0 + M1 · M2 진행 중 · S01–S08<br>ART_DRAFT · 자체 제작 간이 아트 / 최종 웹툰 아트 제작 예정','M0–M6 · S01–S36 플레이 가능<br>ORIGINAL VECTOR ART · 자체 제작 / 외부 이미지 없음');
+    if(html.includes('<div class="equipment">')){
+        html=html.replace('<button id="flame-skill" class="selected">','<button id="flame-skill" data-skill="flamePulse" class="'+(host.save.equippedSkill==='flamePulse'?'selected':'')+'">');
+        const late=ownedActiveSkills(host.save).filter(([id])=>id!=='flamePulse').map(([id,skill])=>`<button data-skill="${id}" ${host.save.equippedSkill===id?'class="selected"':''}>${skill.name}<small>${skill.detail}</small></button>`).join('');
+        html=html.replace('<p>항해 일지',`${late?'<h3>핵심 보물 능력</h3>'+late:''}<p>항해 일지`);
+    }
     overlay.hidden = false;
     overlay.innerHTML = `<section class="panel" role="dialog" aria-modal="true" aria-label="게임 메뉴">${html}</section>`;
     host.input.clear();
     overlay.querySelector<HTMLButtonElement>('button')?.focus();
 }
 function resume() { overlay.hidden = true; stage.freeze(false); canvas.focus(); host.changed(); }
-function boot(s: Save) { host.save = s; host.hp = maxHp(s); host.mp = maxMp(s); audio.unlock(); overlay.hidden = true; hud.hidden = false; touch.hidden = false; hudCache = ''; if (game) {
+function boot(s: Save) { host.save = s; host.hp = maxHp(s); host.mp = maxMp(s); audio.unlock(); audio.setMusic(s.settings.musicVolume); overlay.hidden = true; hud.hidden = false; touch.hidden = false; hudCache = ''; if (game) {
     stage.scene.restart();
     canvas.focus();
     return;
@@ -70,7 +77,7 @@ function startStage(id: string) { if (!maps[id] || !canEnter(host.save, id)) {
     return;
 } host.save.checkpoint = { stageId: id, checkpointId: 'start' }; host.persist(); boot(host.save); }
 function renderHud() { const skillButton=touch.querySelector<HTMLButtonElement>('[data-action=skill]'); if(skillButton)skillButton.hidden=!host.save.treasures.includes('T01'); const s = host.save, p = progression(s.totalXp), def = campaign.find(x => x.id === s.checkpoint.stageId)!; const html = `<div class="stats"><span class="stage-number">${def.id}</span><div><b>♥ ${Math.ceil(host.hp)} <span>/ ${maxHp(s)}</span></b><meter aria-label="체력" min="0" max="${maxHp(s)}" value="${host.hp}"></meter></div><div><b>Lv.${p.level}</b><small>XP ${p.xpIntoLevel} / ${p.nextXp || 'MAX'} · MP ${Math.floor(host.mp)} / ${maxMp(s)}</small></div></div><div class="mission"><small>현재 항로</small><strong>${def.title}</strong><span>${maps[def.id]?.objective ?? '개발 중'}</span></div><div class="hud-actions">${def.id==='S08'?'<button id="reset-mirrors">거울 초기화</button>':''}<span>◈ ${s.coins}</span><button id="bag" aria-label="가방과 지도">가방 M</button><button id="pause" aria-label="일시정지">Ⅱ</button></div><div class="weapon-chip">${weapons[s.equippedWeapon].name} <span>${s.weapons.length > 1 ? 'Q 교체' : 'J 공격'}</span>${s.treasures.includes('T01')?' · 불꽃 R':''}${s.relics.map(r => ` · ${r === 'R01' ? '메달' : r === 'R02' ? '폭풍 수정' : ''}`).join('')}</div>`; if (html === hudCache)
-    return; hudCache = html; hud.innerHTML = html; if(def.id==='S08')el('reset-mirrors').onclick=()=>{stage.resetMirrors();canvas.focus();}; el('bag').onclick = mapMenu; el('pause').onclick = pauseMenu; root.classList.toggle('large-text', s.settings.largeText); }
+    return; hudCache = html; hud.innerHTML = html; const skill=s.equippedSkill?activeSkills[s.equippedSkill]:null; const chip=hud.querySelector<HTMLElement>('.weapon-chip'); if(chip&&skill)chip.innerHTML=chip.innerHTML.replace(' · 불꽃 R','')+` · ${skill.short} R`; if(skillButton){skillButton.hidden=!skill;skillButton.textContent=skill?.short??'능력';skillButton.setAttribute('aria-label',`터치 ${skill?.name??'보물 능력'}`);} if(def.id==='S08')el('reset-mirrors').onclick=()=>{stage.resetMirrors();canvas.focus();}; el('bag').onclick = mapMenu; el('pause').onclick = pauseMenu; root.classList.toggle('large-text', s.settings.largeText); }
 function exportSave(s: Save = host.save) { const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([JSON.stringify(s, null, 2)], { type: 'application/json' })); a.download = 'sinbad-save.json'; a.click(); window.setTimeout(() => URL.revokeObjectURL(a.href), 1000); }
 function confirmReplace(text: string, accept: () => void, back: () => void) { panel(`<h2>저장 변경 확인</h2><p>${text}</p><p>현재 기록을 먼저 파일로 보관할 수 있어요.</p><div class="buttons"><button id="backup-export">현재 기록 내보내기</button><button id="confirm" class="secondary">기존 기록을 바꾸고 진행</button><button id="cancel" class="secondary">취소</button></div>`); el('backup-export').onclick = () => exportSave(); el('confirm').onclick = accept; el('cancel').onclick = back; }
 async function importFile(file: File) { try {
@@ -88,7 +95,7 @@ function saveControls() { el('export').onclick = () => exportSave(); el<HTMLInpu
     void importFile(file); }; }
 function pauseMenu() { if (!game)
     return; stage.freeze(true); panel(`<p class="eyebrow">잠시 닻을 내리고</p><h1>쉬어 가도 괜찮아</h1><p>이 브라우저의 안전 체크포인트에 저장합니다.<br>다른 기기로 자동 동기화되지는 않아요.</p><div class="buttons"><button id="resume">모험 계속</button><button id="save">체크포인트 저장</button><button id="retry" class="secondary">체크포인트에서 재시작</button><button id="settings" class="secondary">설정·조작법</button><button id="export" class="secondary">저장 내보내기</button><label class="file-button">저장 가져오기<input id="import" type="file" accept=".json,application/json"></label><button id="home" class="secondary">제목으로</button></div>`); el('resume').onclick = resume; el('save').onclick = () => { host.persist(); notice(store.blocked ? '저장이 보호되어 있어요. 파일로 내보내 주세요.' : '체크포인트 기록을 저장했어요.'); }; el('retry').onclick = () => boot(host.save); el('settings').onclick = () => settings(pauseMenu); el('home').onclick = title; saveControls(); }
-function settings(back: () => void) { const s = host.save.settings; panel(`<p class="eyebrow">나에게 맞는 모험</p><h2>설정과 조작법</h2><p>A D / ← → 이동 · Space / K 점프 · J 공격<br>L / Shift 회피 · E 조사 · Q / 1~7 무기 · M 가방 · Esc 멈춤</p><p>적의 ⚠ 예고를 보고 피하세요. 하트는 체력 회복, 레벨업은 완전 회복! S06에서 영원의 불씨를 얻으면 R / 터치 불꽃으로 파동을 쓸 수 있어요. 15MP, 재사용 4초.</p><label>난이도 <select id="difficulty"><option value="relaxed">편안한 모험</option><option value="normal">일반 모험</option></select></label><label>효과음 <input id="volume" type="range" min="0" max="1" step="0.05" value="${s.sfxVolume}"></label><label><input id="motion" type="checkbox" ${s.reducedMotion ? 'checked' : ''}> 연출 줄이기</label><label><input id="large" type="checkbox" ${s.largeText ? 'checked' : ''}> 글자 크게</label><p class="muted">배경 음악·최종 웹툰 아트는 제작 예정입니다.</p><button id="back">설정 저장 · 돌아가기</button>`); el<HTMLSelectElement>('difficulty').value = s.difficulty; el('back').onclick = () => { s.difficulty = el<HTMLSelectElement>('difficulty').value as 'relaxed' | 'normal'; s.sfxVolume = Number(el<HTMLInputElement>('volume').value); s.reducedMotion = el<HTMLInputElement>('motion').checked; s.largeText = el<HTMLInputElement>('large').checked; if (game)
+function settings(back: () => void) { const s = host.save.settings; panel(`<p class="eyebrow">나에게 맞는 모험</p><h2>간단 조작</h2><div class="control-guide"><b>← →</b><span>이동</span><b>↑ / W</b><span>점프</span><b>Space</b><span>공격·대화·도구</span></div><p>휴대폰도 이동·점프와 <b>행동</b>만 사용해요. 행동 버튼이 가까운 친구와 대화하거나 적을 공격합니다.</p><label>난이도 <select id="difficulty"><option value="relaxed">편안한 모험</option><option value="normal">일반 모험</option></select></label><label>배경 음악 <input id="music" type="range" min="0" max="1" step="0.05" value="${s.musicVolume}"></label><label>효과음 <input id="volume" type="range" min="0" max="1" step="0.05" value="${s.sfxVolume}"></label><label><input id="motion" type="checkbox" ${s.reducedMotion ? 'checked' : ''}> 연출 줄이기</label><label><input id="large" type="checkbox" ${s.largeText ? 'checked' : ''}> 글자 크게</label><button id="back">설정 저장 · 돌아가기</button>`); el<HTMLSelectElement>('difficulty').value = s.difficulty; el('back').onclick = () => { s.difficulty = el<HTMLSelectElement>('difficulty').value as 'relaxed' | 'normal'; s.musicVolume = Number(el<HTMLInputElement>('music').value); s.sfxVolume = Number(el<HTMLInputElement>('volume').value); s.reducedMotion = el<HTMLInputElement>('motion').checked; s.largeText = el<HTMLInputElement>('large').checked; audio.setMusic(s.musicVolume); if (game)
     host.persist(); host.changed(); back(); }; }
 function mapMenu() { if (!game)
     return; stage.freeze(true); const s = host.save; panel(`<p class="eyebrow">일곱 보물과 바다의 약속</p><h2>${s.clearedStageIds.includes('S08') ? 'M2 · 별 지도의 단서를 찾았어요' : s.clearedStageIds.includes('S07') ? 'M2 · 수정 동굴 입구에 도착했어요' : s.clearedStageIds.includes('S05') ? 'M2 · 산호 감옥까지 항해했어요' : s.clearedStageIds.includes('S03') ? 'M1 · 첫 항해를 마쳤어요' : '항해 지도와 가방'}</h2><p>S01~S08 플레이 가능 · S09~S36 개발 중<br>수집한 무기와 유물은 잃지 않아요.</p><div class="equipment">${s.weapons.map(w => `<button data-weapon="${w}" ${w === s.equippedWeapon ? 'class="selected"' : ''}>${weapons[w].name}<small>${weapons[w].description}</small></button>`).join('')}${s.relics.map(r => `<p>✧ ${relics[r as keyof typeof relics]}</p>`).join('')}<p>황금 하트 ${s.goldenHearts.length} / 8 · ${s.flags.includes('bubbleBlessing') ? '공기방울 보호 획득 (자유 수영 아님)' : '공기방울 보호 미획득'}</p>${s.treasures.includes('T01')?'<button id="flame-skill" class="selected">선택 스킬 · 영원의 불씨<small>R · 15MP · 4초 / E 점화는 무료</small></button>':''}<p>항해 일지 ${s.journalPageIds.length}장</p>${s.journalPageIds.includes('S08.journal')?'<button id="read-journal">수정 동굴 일지 읽기</button>':''}<p>핵심 보물 ${s.treasures.length} / 7 · ${Object.values(treasures).map(t => `${t.name}(${t.stage})`).join(' · ')}</p></div><div class="stage-grid">${campaign.map(d => `<button data-stage="${d.id}" ${d.status === 'planned' || !canEnter(s, d.id) ? 'disabled' : ''}><b>${d.id}</b> ${d.title}<small>${d.status === 'planned' ? '개발 중' : s.clearedStageIds.includes(d.id) ? '완료 · 재방문' : canEnter(s, d.id) ? '항해 가능' : '잠김'} · ${d.chapter}장</small></button>`).join('')}</div><div class="buttons"><button id="back">현재 모험으로</button><button id="replay" class="secondary">대화 다시 보기</button></div>`); overlay.querySelectorAll<HTMLButtonElement>('[data-stage]').forEach(b => b.onclick = () => startStage(b.dataset.stage!)); overlay.querySelectorAll<HTMLButtonElement>('[data-weapon]').forEach(b => b.onclick = () => { host.save = equip(s, b.dataset.weapon as WeaponId); host.persist(); host.changed(); mapMenu(); }); if(s.treasures.includes('T01'))el('flame-skill').onclick=()=>{host.save.equippedSkill='flamePulse';host.persist();host.changed();}; if(s.journalPageIds.includes('S08.journal'))el('read-journal').onclick=()=>host.dialogue('crystalJournal',()=>{}); el('back').onclick = resume; el('replay').onclick = () => host.dialogue(s.checkpoint.stageId === 'S08' ? (s.completedObjectiveIds.includes('S08.starMap')?'starMap':s.treasures.includes('T02')?'hazil':'crystalHint') : s.checkpoint.stageId === 'S06' ? 'rah' : s.checkpoint.stageId === 'S07' ? 'waveHint' : s.checkpoint.stageId === 'S01' ? 'captain' : s.checkpoint.stageId === 'S02' ? 'siren' : s.checkpoint.stageId === 'S04' ? 'whale' : s.checkpoint.stageId === 'S05' ? 'nairaHint' : 'storm', () => { }); }
@@ -108,7 +115,7 @@ else
 const actions: [
     Action,
     string
-][] = [['left', '←'], ['right', '→'], ['jump', '점프'], ['attack', '공격'], ['dodge', '회피'], ['interact', '조사'], ['cycle', '교체'], ['skill', '불꽃']];
+][] = [['left', '←'], ['right', '→'], ['jump', '↑'], ['primary', '행동']];
 for (const [action, label] of actions) {
     const b = document.createElement('button');
     b.textContent = label;
@@ -129,6 +136,7 @@ window.addEventListener('storage', e => { if (e.key === SAVE_KEY) {
         pauseMenu();
     notice('다른 창에서 진행이 바뀌었어요. 자동 저장을 멈췄어요. 파일로 보관 후 새로고침해 주세요.');
 } });
+overlay.addEventListener('click',e=>{const button=(e.target as HTMLElement).closest<HTMLButtonElement>('[data-skill]');if(!button)return;host.save=selectActiveSkill(host.save,button.dataset.skill as ActiveSkillId);hudCache='';host.persist();host.changed();mapMenu();});
 overlay.addEventListener('keydown', e => { if (e.key !== 'Tab')
     return; const nodes = [...overlay.querySelectorAll<HTMLElement>('button:not(:disabled),input,select')]; const first = nodes[0], last = nodes.at(-1); if (e.shiftKey && document.activeElement === first) {
     e.preventDefault();

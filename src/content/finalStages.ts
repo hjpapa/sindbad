@@ -49,7 +49,10 @@ const makeMap=(b:Blueprint,index:number):MapDef=>{
  const objects:ObjectDef[]=[{id:`${b.id}.intro`,x:230,y:550,kind:'npc',label:`${b.npc} · E`,dialogue:`${b.id}.intro`},...stepObjects];
  if(b.optional)objects.push({id:`${b.id}.golden`,x:Math.round(width*.62),y:470,kind:'golden',label:`숨은 황금 하트 ${b.optional} · E`,reward:b.optional,needs:[stepObjects[Math.min(1,stepObjects.length-1)].id]});
  objects.push(gift,{id:`${b.id}.exit`,x:width-160,y:550,kind:b.id==='S36'?'ending':'exit',label:b.id==='S36'?'새 항해의 종 · E':'다음 항해 · E',needs:[gift.id]});
- const platforms:Platform[]=[ground(0,width),...Array.from({length:3},(_,i)=>({x:620+i*((width-1200)/3),y:390-(i+index)%2*45,w:190+(index+i)%3*24,h:24}))];
+ // Later story stages use an uninterrupted route so young players cannot be
+ // trapped by the side of a decorative ledge. Visual depth lives in the
+ // parallax background; handcrafted jump routes remain in S01-S08.
+ const platforms:Platform[]=[ground(0,width)];
  return {id:b.id,width,theme:'adventure',visual:b.visual,mode:b.mode??'ground',peaceful:b.mode==='peace',objective:`${b.steps.join(' → ')}${b.boss?` → ${b.boss}`:''}`,platforms,spawns,objects,hearts:b.mode==='peace'?[]:[{id:`${b.id}.heart.1`,x:Math.round(width*.45),y:550},{id:`${b.id}.heart.2`,x:Math.round(width*.76),y:550,large:true}],checkpoints:[{id:'start',x:120,y:548},{id:'middle',x:Math.round(width*.52),y:548}]};
 };
 

@@ -9,6 +9,7 @@ import { canBreatheUnderwater, movingPlatformX, movingPlatformY, objectiveReward
 import {canCastFlame,flameCost,flameCooldown,flameDamage,ignite} from '../core/flame';
 import {connectedMirrors,crystalSafeStart,mirrorSolution,mirrorSymbols,rotateMirror} from '../core/crystal';
 import type { Platform } from '../content/maps';
+import campaign from '../content/stageIndex';
 export interface Host {
     save: Save;
     hp: number;
@@ -153,10 +154,14 @@ export class Stage extends Phaser.Scene {
             }
         this.background();
         this.land = this.physics.add.staticGroup();
+        const adventurePalette:Record<string,[number,number,number]>={sky:[0x496f7d,0x8db6ad,0xdde0af],volcano:[0x563b45,0xa8614b,0xf0a562],village:[0x5f786c,0x9eb489,0xead49a],warehouse:[0x574c43,0x8c7155,0xe3b875],ocean:[0x285e75,0x438a91,0x9ce0ca],pirate:[0x3a4354,0x715449,0xd7ad69],shadow:[0x3b3d59,0x67648a,0xc4b4dd],jungle:[0x355b4d,0x62845d,0xc5cf82],temple:[0x514963,0x827562,0xe1ca8f],garden:[0x557765,0x83ad86,0xf0c7cf],tower:[0x343b59,0x616a89,0xded3a3],kingdom:[0x547a80,0x87aaa3,0xf0d294]};
+        const [side,topColor,edge]=this.mapDef.theme==='adventure'?adventurePalette[this.mapDef.visual??'sky']:this.mapDef.theme==='reef'?[0x477976,0x78a392,0xd4d5a2]:[0x6b5548,0x9a7857,0xe5c487];
         for (const p of this.mapDef.platforms) {
-            const rect = this.add.rectangle(p.x + p.w / 2, p.y + p.h / 2, p.w, p.h, this.mapDef.theme === 'reef' ? 0x477976 : 0x795d46).setStrokeStyle(3, 0xd8c08c);
+            this.add.rectangle(p.x+p.w/2+8,p.y+p.h/2+10,p.w,p.h,0x102c3b,.32).setDepth(-1);
+            const rect = this.add.rectangle(p.x + p.w / 2, p.y + p.h / 2, p.w, p.h, side).setStrokeStyle(2, edge);
             if(this.mapDef.id==='S07'&&p.motion&&!p.requiredGround)this.add.text(p.x+p.w/2,p.y-35,'유목 · 점프',{fontSize:'18px',color:'#fbe2ad'}).setOrigin(.5);
-            const top=this.add.rectangle(p.x + p.w / 2, p.y + 4, p.w, 8, this.mapDef.theme === 'reef' ? 0x9fc7a8 : 0xd2aa70);
+            const top=this.add.rectangle(p.x + p.w / 2, p.y + 8, p.w, 16, topColor).setStrokeStyle(2,edge);
+            for(let x=p.x+38;x<p.x+p.w-20;x+=Math.max(120,Math.min(220,p.w/5)))this.add.circle(x,p.y+29,4,edge,.35);
             if(p.motion){this.physics.add.existing(rect);const body=rect.body as Phaser.Physics.Arcade.Body;body.setAllowGravity(false).setImmovable(true);this.moving.push({def:p,rect,top,body});}else this.land.add(rect);
         }
         const cp = this.mapDef.checkpoints.find(c => c.id === this.host.save.checkpoint.checkpointId) ?? this.mapDef.checkpoints[0];
@@ -200,20 +205,24 @@ export class Stage extends Phaser.Scene {
         this.flameArt=this.add.graphics().setDepth(12);
         this.waveArt=this.add.graphics().setDepth(8);
         this.bubble=this.add.graphics().setDepth(11);
-        this.journey=this.add.text(640,186,'',{fontSize:'18px',color:'#fff1c8',backgroundColor:'#24475b',padding:{x:10,y:6}}).setOrigin(.5).setScrollFactor(0).setDepth(19);
+        this.journey=this.add.text(640,186,'',{fontSize:'18px',color:'#fff1c8',backgroundColor:'#24475b',padding:{x:10,y:6}}).setOrigin(.5).setScrollFactor(0).setDepth(19).setVisible(['S04','S05','S06','S07','S08'].includes(this.mapDef.id));
         this.warnings = this.add.graphics().setDepth(3);
-        this.bossText = this.add.text(640, 142, '', { fontFamily: 'sans-serif', fontSize: '22px', color: '#fce8bc', backgroundColor: '#173643', padding: { x: 12, y: 7 } }).setOrigin(0.5).setScrollFactor(0).setDepth(20);
+        this.bossText = this.add.text(640, 142, '', { fontFamily: 'sans-serif', fontSize: '22px', color: '#fce8bc', backgroundColor: '#173643', padding: { x: 12, y: 7 } }).setOrigin(0.5).setScrollFactor(0).setDepth(20).setVisible(false);
         this.hint = this.add.text(640, 648, '', { fontFamily: 'sans-serif', fontSize: '22px', color: '#fff3d2', backgroundColor: '#153847', padding: { x: 14, y: 8 } }).setOrigin(0.5).setScrollFactor(0).setDepth(20);
         this.events.once(Phaser.Scenes.Events.SHUTDOWN, () => { this.host.input.clear(); this.projectiles = []; this.attack = null; });
         this.host.changed();
+        const stageInfo=campaign.find(info=>info.id===this.mapDef.id);
+        if(stageInfo){const card=this.add.container(640,285).setScrollFactor(0).setDepth(30);const plate=this.add.rectangle(0,0,500,104,0x102f40,.9).setStrokeStyle(2,0xe8c77f);const title=this.add.text(0,-16,`${stageInfo.id} · ${stageInfo.title}`,{fontSize:'29px',fontStyle:'bold',color:'#fff1cf'}).setOrigin(.5);const chapter=this.add.text(0,24,`${stageInfo.chapter}장 · ${this.mapDef.peaceful?'평화로운 이야기':'새로운 항해'}`,{fontSize:'15px',color:'#bed8d5'}).setOrigin(.5);card.add([plate,title,chapter]);if(!this.host.save.settings.reducedMotion)this.tweens.add({targets:card,alpha:0,y:270,delay:1800,duration:600,onComplete:()=>card.destroy()});else this.time.delayedCall(1200,()=>card.destroy());}
     }
     private background() {
         const theme = this.mapDef.theme;
         if(theme==='adventure'){
             const palettes:Record<string,[number,number,number]>={sky:[0x86b8cb,0xeedca4,0x416c82],volcano:[0x422f43,0xe28b55,0x6d4343],village:[0xb9d5bd,0xf2ce91,0x6d8d82],warehouse:[0x5f574f,0xd0a56f,0x3a4a4e],ocean:[0x39768b,0x8cd8cf,0x244e68],pirate:[0x273e55,0xd5a966,0x734f45],shadow:[0x292d46,0xb5a9d6,0x51516f],jungle:[0x315c50,0xc6c77a,0x658152],temple:[0x564b72,0xd8c38e,0x82735d],garden:[0x5a8b76,0xf1c8d2,0x8e7181],tower:[0x242f4c,0xe1d5a5,0x566080],kingdom:[0x78a6ad,0xf3d18f,0x7f6e76]};
             const [sky,glow,land]=palettes[this.mapDef.visual??'sky'];this.cameras.main.setBackgroundColor(sky);
-            const g=this.add.graphics().setDepth(-10).setScrollFactor(.25);g.fillStyle(glow,.42).fillCircle(1010,160,85);
-            for(let x=0;x<this.mapDef.width;x+=330){g.fillStyle(land,.82).fillTriangle(x,570,x+150,220+(x%4)*36,x+320,570);g.lineStyle(3,glow,.35).lineBetween(x+30,460,x+260,460);g.fillStyle(glow,.25).fillCircle(x+95,145+(x%5)*38,24);}
+            const far=this.add.graphics().setDepth(-12).setScrollFactor(.08);far.fillStyle(glow,.26).fillCircle(1010,155,92);
+            for(let x=-100;x<this.mapDef.width;x+=430){far.fillStyle(land,.28).fillTriangle(x,585,x+220,270+(x%5)*18,x+470,585);far.fillStyle(0xffffff,.12).fillEllipse(x+120,180+(x%4)*28,150,34);far.fillEllipse(x+205,180+(x%4)*28,110,27);}
+            const g=this.add.graphics().setDepth(-10).setScrollFactor(.25);g.fillStyle(glow,.18).fillRect(0,480,this.mapDef.width,160);
+            for(let x=0;x<this.mapDef.width;x+=330){g.fillStyle(land,.82).fillTriangle(x,570,x+150,220+(x%4)*36,x+320,570);g.lineStyle(3,glow,.35).lineBetween(x+30,460,x+260,460);g.fillStyle(glow,.25).fillCircle(x+95,145+(x%5)*38,24);g.fillStyle(glow,.18).fillEllipse(x+165,535,270,32);}
             if(this.mapDef.mode==='flight')for(let x=300;x<this.mapDef.width;x+=520)g.lineStyle(10,glow,.7).strokeCircle(x,350+(x%3)*75,65);
             if(this.mapDef.mode==='swim')g.fillStyle(0x75d6d0,.25).fillRect(0,100,this.mapDef.width,520);
             this.add.text(42,205,`${this.mapDef.id} · ${this.mapDef.objective}`,{fontSize:'21px',color:'#fff1ce',backgroundColor:'#263d51',padding:{x:10,y:7},wordWrap:{width:720}}).setScrollFactor(.3).setDepth(-5);
@@ -291,7 +300,7 @@ export class Stage extends Phaser.Scene {
     }
     else
         this.physics.resume(); }
-    snapshot() { return { stage: this.mapDef?.id, player: this.player ? { x: this.player.x, y: this.player.y, grounded: ((this.player.body as Phaser.Physics.Arcade.Body)?.blocked.down||(this.player.body as Phaser.Physics.Arcade.Body)?.touching.down), vx: this.player.body?.velocity.x, vy: this.player.body?.velocity.y, hp: this.host.hp, maxHp: maxHp(this.host.save), bodyWidth: this.player.body?.width, bodyHeight: this.player.body?.height } : null, save: structuredClone(this.host.save), sim: this.sim, paused: this.stopped, enemies: this.enemies.map(e => ({ id: e.def.id, x: e.sprite.x, y: e.sprite.y, hp: e.hp, state: e.state, burn:e.burn })), projectiles: this.projectiles.length, boomerang: !!this.boom, attack: this.attack?.id ?? null, air: this.air, submerged:this.submerged, bubbleProtected: canBreatheUnderwater(this.host.save), movingPlatforms: this.moving.map(p=>({x:p.rect.x,y:p.rect.y-p.def.h/2,w:p.def.w})), mp:this.host.mp, flameReady:this.flameReady, pulse:!!this.pulse, wave:this.wave?{id:this.wave.def.id,at:this.wave.at}:null, grip:this.grip?.id??null, mirrors:[...this.mirrorDirections], connectedMirrors:connectedMirrors(this.mirrorDirections), puzzleSafe:this.mapDef?.id==='S08'&&!!this.player&&this.player.x>=crystalSafeStart, frameMs: this.lastFrame }; }
+    snapshot() { return { stage: this.mapDef?.id, player: this.player ? { x: this.player.x, y: this.player.y, grounded: ((this.player.body as Phaser.Physics.Arcade.Body)?.blocked.down||(this.player.body as Phaser.Physics.Arcade.Body)?.touching.down), vx: this.player.body?.velocity.x, vy: this.player.body?.velocity.y, hp: this.host.hp, maxHp: maxHp(this.host.save), bodyWidth: this.player.body?.width, bodyHeight: this.player.body?.height } : null, save: structuredClone(this.host.save), sim: this.sim, paused: this.stopped, enemies: this.enemies.map(e => ({ id: e.def.id, x: e.sprite.x, y: e.sprite.y, hp: e.hp, state: e.state, visible:e.sprite.visible, alpha:e.sprite.alpha, burn:e.burn })), projectiles: this.projectiles.length, boomerang: !!this.boom, attack: this.attack?.id ?? null, air: this.air, submerged:this.submerged, bubbleProtected: canBreatheUnderwater(this.host.save), movingPlatforms: this.moving.map(p=>({x:p.rect.x,y:p.rect.y-p.def.h/2,w:p.def.w})), mp:this.host.mp, flameReady:this.flameReady, pulse:!!this.pulse, wave:this.wave?{id:this.wave.def.id,at:this.wave.at}:null, grip:this.grip?.id??null, mirrors:[...this.mirrorDirections], connectedMirrors:connectedMirrors(this.mirrorDirections), puzzleSafe:this.mapDef?.id==='S08'&&!!this.player&&this.player.x>=crystalSafeStart, frameMs: this.lastFrame }; }
     update(_time: number, delta: number) {
         if (this.stopped || !this.player)
             return;
@@ -364,7 +373,10 @@ export class Stage extends Phaser.Scene {
             }
             input.digits = null;
         }
-        if (input.consume('attack') && !this.boom && !this.attack) {
+        const smartNearby=this.objects.filter(o=>o.def.kind!=='checkpoint'&&Math.abs(o.def.x-this.player.x)<90&&Math.abs(o.def.y-this.player.y)<95).sort((a,b)=>Math.abs(a.def.x-this.player.x)-Math.abs(b.def.x-this.player.x))[0];
+        const primary=input.consume('primary');
+        const primaryAttacks=primary&&(!smartNearby||smartNearby.def.kind==='shell'||smartNearby.def.kind==='remote');
+        if ((input.consume('attack')||primaryAttacks) && !this.boom && !this.attack) {
             const a = this.combat.start(this.host.save, this.sim);
             if (a) {
                 this.attack = { ...a, start: this.sim, x: this.player.x, direction: this.direction };
@@ -403,12 +415,12 @@ export class Stage extends Phaser.Scene {
         }
         this.updateCrystal();
         const nearby = this.objects.filter(o => o.def.kind !== 'checkpoint' && Math.abs(o.def.x - this.player.x) < 90 && Math.abs(o.def.y - this.player.y) < 95).sort((a, b) => Math.abs(a.def.x - this.player.x) - Math.abs(b.def.x - this.player.x))[0];
-        const hint = nearby ? `${nearby.def.kind === 'shell' || nearby.def.kind === 'remote' ? 'J 공격' : 'E 조사'} · ${nearby.def.label}` : 'A D 이동  ·  Space 점프  ·  J 공격  ·  L 회피';
+        const hint = nearby ? `Space 행동 · ${nearby.def.label}` : '← → 이동  ·  ↑ 점프  ·  Space 행동';
         if (hint !== this.latestHint) {
             this.hint.setText(hint);
             this.latestHint = hint;
         }
-        if (input.consume('interact') && nearby)
+        if ((input.consume('interact')||(primary&&!primaryAttacks)) && nearby)
             this.interact(nearby.def);
         if (this.player.y > 820) {
             this.hurt(10);
@@ -515,12 +527,20 @@ export class Stage extends Phaser.Scene {
     private damageEnemy(e:Enemy,damage:number){
         if(e.state==='defeated')return;
         e.hp=Math.max(0,e.hp-damage);e.sprite.setTint(0xffefb0);
-        if(e.hp===0){e.state='defeated';e.label.setText(e.def.kind==='bandit'?'항복했어요':(['siren','crab','bat','beast','boss'].includes(e.def.kind)?'저주가 풀렸어!':'빛으로 돌아갔어요'));e.sprite.setAlpha(.25);
+        if(e.hp===0){e.state='defeated';const human=['bandit','captain','archer'].includes(e.def.kind);e.label.setText(human?'항복했어요':(['siren','crab','bat','beast','boss'].includes(e.def.kind)?'저주가 풀렸어!':'빛으로 돌아갔어요'));this.defeatEffect(e,human);
             const boss=['captain','siren','boss'].includes(e.def.kind);
-            this.host.reward({id:e.def.id,xp:e.def.kind==='captain'?30:e.def.kind==='siren'?50:6,coins:3,objectives:boss||this.mapDef.id==='S06'?[e.def.id]:[],checkpoint:boss?{stageId:this.mapDef.id,checkpointId:'boss'}:undefined});
+            const bossCheckpoint=this.mapDef.checkpoints.some(checkpoint=>checkpoint.id==='boss')?'boss':this.mapDef.checkpoints.at(-1)!.id;
+            this.host.reward({id:e.def.id,xp:e.def.kind==='captain'?30:e.def.kind==='siren'?50:6,coins:3,objectives:boss||this.mapDef.id==='S06'?[e.def.id]:[],checkpoint:boss?{stageId:this.mapDef.id,checkpointId:bossCheckpoint}:undefined});
             if(e.def.kind==='siren'){this.projectiles.forEach(p=>{p.sprite.destroy();p.glyph.destroy();});this.projectiles=[];this.host.dialogue('freed',()=>{});}
         }
         this.host.changed();
+    }
+    private defeatEffect(e:Enemy,human:boolean){
+        if(human){this.tweens.add({targets:e.sprite,alpha:.4,y:e.sprite.y+14,scaleY:.82,duration:this.host.save.settings.reducedMotion?0:260});return;}
+        const color=e.def.kind==='boss'?0xffe5a4:0x9eeadd;
+        if(!this.host.save.settings.reducedMotion)for(let i=0;i<9;i++){const mote=this.add.circle(e.sprite.x,e.sprite.y,3+(i%3),color,.9).setDepth(8);this.tweens.add({targets:mote,x:e.sprite.x+Math.cos(i*.7)*55,y:e.sprite.y-30-Math.sin(i*.8)*50,alpha:0,scale:1.8,duration:500+i*45,onComplete:()=>mote.destroy()});}
+        this.tweens.add({targets:e.sprite,alpha:0,scale:1.25,y:e.sprite.y-25,duration:this.host.save.settings.reducedMotion?0:520,onComplete:()=>e.sprite.setVisible(false)});
+        this.tweens.add({targets:e.label,alpha:0,delay:650,duration:350,onComplete:()=>e.label.setVisible(false)});
     }
     private updateAttack() {
         this.slash.clear();

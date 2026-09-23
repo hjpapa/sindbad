@@ -5,6 +5,7 @@ import { dialogues } from './dialogues.ko';
 import { goldenHearts, treasures, weapons } from './items';
 import { itemIds } from '../core/state';
 import { objectiveReward } from '../core/adventure';
+import { mapReachabilityIssues } from './reachability';
 export function validateContent() {
     const errors: string[] = [];
     const check = (ok: unknown, message: string) => { if (!ok)
@@ -70,6 +71,7 @@ export function validateContent() {
         const visit=(id:string,path:Set<string>)=>{if(path.has(id)){check(false,`${s.id}: prerequisite cycle at ${id}`);return;}const o=m.objects.find(o=>o.id===id);for(const need of o?.needs??[])visit(need,new Set([...path,id]));};
         for(const o of m.objects)visit(o.id,new Set());
         for(const w of m.water??[])check(w.w>0&&w.h>0&&w.x>=0&&w.x+w.w<=m.width,`${s.id}: invalid water region`);
+        errors.push(...mapReachabilityIssues(m));
         rewards.push(...m.spawns.map(e => e.id), ...m.hearts.map(h => h.id));
     }
     unique(rewards, 'reward');

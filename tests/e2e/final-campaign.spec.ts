@@ -35,6 +35,7 @@ test('S28 peaceful balance grants lotus shield and persists',async({page})=>{
  for(const [i,x] of [983,1445,1908].entries())await objective(page,x,`S28.quest.${i+1}`);
  await objective(page,2480,'S28.reward');await expect(page.getByTestId('dialogue-text')).toContainText('연꽃 방패');expect((await read(page)).save.treasures).toContain('T06');expect((await read(page)).save.equippedSkill).toBe('lotusShield');await page.getByRole('button',{name:'전체 생략'}).click();
  const hp=(await read(page)).player.hp;await page.keyboard.press('r');await page.waitForTimeout(100);expect((await read(page)).player.hp).toBe(hp);await page.reload();await page.getByRole('button',{name:'이어하기 · S28'}).click();expect((await read(page)).save.treasures).toContain('T06');
+ await page.getByRole('button',{name:'가방과 지도'}).click();await expect(page.getByRole('button',{name:/영원의 불씨/})).toBeVisible();await expect(page.getByRole('button',{name:/균형의 연꽃/})).toBeVisible();await page.getByRole('button',{name:/영원의 불씨/}).click();expect((await read(page)).save.equippedSkill).toBe('flamePulse');await page.getByRole('button',{name:/균형의 연꽃/}).click();expect((await read(page)).save.equippedSkill).toBe('lotusShield');await page.getByRole('button',{name:'현재 모험으로'}).click();await expect(page.getByRole('button',{name:'터치 행동'})).toBeVisible();const mp=(await read(page)).mp;await page.keyboard.press('r');await expect.poll(async()=>(await read(page)).mp).toBe(mp-15);
 });
 
 test('S36 museum route reaches ending and remains revisit-able',async({page},info)=>{

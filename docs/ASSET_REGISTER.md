@@ -37,3 +37,7 @@ public/assets/draft/genie.svg, mirror.svg, bat.svg, starMap.svg, journal.svg를 
 ## S09~S36 캠페인 벡터 세트 — 2026-09-23
 
 `bandit.svg`, `beast.svg`, `boss.svg`, `quest.svg`, `gift.svg`, `bridge.svg`, `ending.svg`를 추가했다. 각 96×128 자체 작성 SVG이며 프로젝트 안에서 사용·수정 가능하다. 12개 지역 팔레트의 하늘·화산·마을·창고·바다·해적선·그림자·밀림·신전·정원·탑·왕국 배경은 `src/game/stage.ts`의 Phaser Graphics로 그린다. 전체 34개 SVG와 모든 런타임 배경은 외부 URL이나 타 작품 자산을 사용하지 않는다. 전 구간 기능 표시에는 사용 가능하지만, 다중 프레임 웹툰 캐릭터 애니메이션과 최종 아트 승인은 미완료이므로 상태는 ART_DRAFT다.
+
+## 2026-09-23 · 핵심 아트 품질 개선
+
+`scripts/make-polished-art.mjs`가 `player`, `playerRun`, `bandit`, `beast`, `boss`, `quest`, `gift`, `bridge`, `ending` 9개 SVG를 재생성한다. 그라데이션, 굵은 외곽선, 얼굴·의상 세부, 바닥 그림자를 추가한 프로젝트 자체 벡터이며 외부 자산은 없다. Phaser 배경에는 원경/중경 시차, 안개층과 발판의 측면·상단·그림자를 추가했다. 기능 자산 품질은 높였지만 표정·공격·피격의 다중 프레임 최종 승인은 남아 있어 전체 상태는 `ART_DRAFT`다. 배경음은 외부 파일이 아닌 Web Audio 오실레이터 3개의 낮은 음량 합성 패드이며 설정에서 끌 수 있다.

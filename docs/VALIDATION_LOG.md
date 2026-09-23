@@ -126,3 +126,13 @@ npm run test:e2e: 설치된 Edge headless 전체 13개 통과(5.9분). 기존 S0
 - S08 정상 진행의 pageerror/관측 HTTP 400+는 0개. docs/screenshots/S08-mirrors.png, S08-hidden-journal.png를 보관했으며 화면을 육안 확인했다.
 - git diff --check 통과. 최신 playwright-report/index.html은 마지막 S08 단독 재검사 결과이며, 전체 14개 실행 결과는 이 로그에 기록했다.
 - 현재 S01~S08 구현, S09~S36 planned. 최종 아트와 실기기 검수는 미완료. 이번 S08 작업은 커밋/푸시하지 않은 로컬 변경이다. 다음은 S09 로크새의 둥지다.
+
+## 2026-09-23 · 점프 동선·간편 조작·아트 개선
+
+- `npm run typecheck`: 통과.
+- `npm run lint`: 통과.
+- `npm run test`: 8개 파일, 63개 통과.
+- `npm run validate:content`: 36개 구현 맵의 보상·능력 순서·자산과 새 발판/상호작용 도달성 검사 통과.
+- `npm run build`: 통과. 앱 JS 133.61kB(gzip 44.83kB), CSS 8.44kB(gzip 2.78kB), Phaser 청크 경고 유지.
+- `npm run test:e2e`: 설치된 Edge에서 19개 전체 통과, 8.5분, exit 0. `↑` 점프, `Space` 문맥 행동, 몬스터 소멸, 844×390 UI 경계, S01~S12 진행, S28 저장, S36 엔딩과 36개 장면 렌더 포함.
+- 앱 내 브라우저로 844×390 화면을 육안 확인했다. 스크린샷은 `docs/screenshots/mobile-polished.png`다. 실제 휴대폰·태블릿 기기와 Safari/Firefox는 미검증이다.

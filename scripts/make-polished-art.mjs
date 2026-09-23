@@ -1,0 +1,30 @@
+import { writeFileSync } from 'node:fs';
+
+const svg = (defs, body) => `<svg xmlns="http://www.w3.org/2000/svg" width="96" height="128" viewBox="0 0 96 128"><defs>${defs}<filter id="shadow" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="4" stdDeviation="3" flood-color="#102c3b" flood-opacity=".35"/></filter></defs><g stroke="#17384a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" filter="url(#shadow)">${body}</g></svg>`;
+const skin = '<linearGradient id="skin" x2="0" y2="1"><stop stop-color="#f5c89f"/><stop offset="1" stop-color="#c98262"/></linearGradient>';
+const sea = '<linearGradient id="sea" x2="0" y2="1"><stop stop-color="#53c9c1"/><stop offset="1" stop-color="#225b78"/></linearGradient>';
+const gold = '<linearGradient id="gold" x2="0" y2="1"><stop stop-color="#fff1a6"/><stop offset=".5" stop-color="#eab95f"/><stop offset="1" stop-color="#a8653e"/></linearGradient>';
+const violet = '<linearGradient id="violet" x2="0" y2="1"><stop stop-color="#d6b9ff"/><stop offset="1" stop-color="#624e9d"/></linearGradient>';
+
+const sailor = step => svg(skin + sea + gold, `
+ <ellipse cx="49" cy="121" rx="31" ry="5" fill="#102c3b" opacity=".28" stroke="none"/>
+ <path d="M31 79L${27-step} 116h17l5-27 7 27h18L65 79Z" fill="#e9dcc1"/><path d="M${27-step} 109h18v13H19l8-7m29-6h17l6 13H54Z" fill="#263d55"/>
+ <path d="M31 45 20 78l12 5 10-28m23-10 16 28-10 8-18-27" fill="url(#skin)"/>
+ <path d="M30 42h36l5 44-23 7-23-8Z" fill="#f8efd3"/><path d="M30 42h13l-3 40-15 4Zm26 0h11l4 44-16-5Z" fill="url(#sea)"/>
+ <path d="M26 78h45v11H26Z" fill="#c84f55"/><circle cx="49" cy="29" r="19" fill="url(#skin)"/>
+ <path d="M29 31Q20 8 39 9 53-1 64 12q16-2 5 22l-8-12-10 4-12-5Z" fill="#1c3445"/>
+ <path d="M38 27q5-4 9 0m7 0q5-4 9 0M42 37q7 6 14 0" fill="none"/><circle cx="43" cy="29" r="1.5" fill="#17384a" stroke="none"/><circle cx="58" cy="29" r="1.5" fill="#17384a" stroke="none"/>
+ <path d="m46 47 6-5 6 5-6 8Z" fill="#6de6d3"/><path d="M74 77Q94 63 91 45 84 65 72 68Z" fill="#f5fbdf"/><path d="m68 75 14 8" stroke="url(#gold)" stroke-width="5"/>
+ <path d="M34 52h28" stroke="#fff" opacity=".65"/>`);
+
+const bandit = svg(skin + gold, `<ellipse cx="48" cy="121" rx="32" ry="5" fill="#102c3b" opacity=".3" stroke="none"/><path d="m25 120 4-53 19-14 20 14 5 53Z" fill="#28566b"/><path d="m18 118 12-51 13 9-8 44Zm60 0L67 67l-13 9 8 44Z" fill="#6e4059"/><circle cx="48" cy="37" r="23" fill="url(#skin)"/><path d="M23 36Q47 4 75 34L65 48 48 39 31 48Z" fill="#8c3f56"/><path d="M25 34h47" stroke="url(#gold)" stroke-width="5"/><path d="m35 38 10 3m16-3-10 3M39 52q9 6 18 0" fill="none"/><path d="M16 80 33 65l9 13-22 15Zm64 0L63 65 54 78l22 15Z" fill="url(#gold)"/><path d="M43 85h11" stroke="#f5d58b" stroke-width="6"/>`);
+const beast = svg(sea + gold, `<ellipse cx="48" cy="119" rx="38" ry="6" fill="#102c3b" opacity=".28" stroke="none"/><path d="M18 99Q4 68 23 43L16 16l25 17q13-4 26 2l17-19-6 31q17 23 0 52-28 27-60 0Z" fill="url(#sea)"/><path d="M26 49 18 20l25 20m27 9 13-28-30 21" fill="#79dfca"/><path d="M29 65q8-9 16 0m7 0q8-9 16 0" fill="none"/><circle cx="38" cy="68" r="3" fill="#fff2bd"/><circle cx="59" cy="68" r="3" fill="#fff2bd"/><path d="M37 82q11 10 22 0" fill="none"/><path d="m22 94-12 22 25-9m38-13 13 22-26-9" fill="url(#gold)"/><path d="M39 42q9-9 18 0" stroke="#d8fff0" fill="none"/>`);
+const boss = svg(violet + gold, `<ellipse cx="48" cy="121" rx="40" ry="6" fill="#10233b" opacity=".35" stroke="none"/><path d="M12 116q6-44 23-54l13 9 13-9q18 11 24 54Z" fill="#243a5b"/><path d="M20 114q2-38 19-48l9 26 10-26q17 10 19 48Z" fill="url(#violet)"/><circle cx="48" cy="43" r="30" fill="#8d72bc"/><circle cx="48" cy="43" r="23" fill="#c9b0dc"/><path d="M20 42 9 29m67 13 11-13M29 19 24 5m43 14 5-14" stroke="url(#gold)" stroke-width="5"/><path d="m34 39 9 4m19-4-9 4M38 56q10 8 20 0" fill="none"/><circle cx="48" cy="43" r="10" fill="#fff4bf" stroke="url(#gold)" stroke-width="4"/><circle cx="48" cy="43" r="3" fill="#7459a4" stroke="none"/><path d="M28 96h40" stroke="#ead69d" stroke-width="5"/>`);
+const quest = svg(sea + gold, `<ellipse cx="48" cy="119" rx="35" ry="5" fill="#102c3b" opacity=".25" stroke="none"/><path d="M20 112V48l28-29 28 29v64Z" fill="url(#sea)"/><path d="m13 48 35-37 35 37-9 10-26-27-26 27Z" fill="url(#gold)"/><circle cx="48" cy="75" r="22" fill="#baf1df" stroke="url(#gold)" stroke-width="5"/><path d="M48 59v32M32 75h32" stroke="#2a6075" stroke-width="6"/><circle cx="48" cy="75" r="6" fill="#fff3ad" stroke="none"/>`);
+const gift = svg(sea + gold, `<ellipse cx="48" cy="117" rx="38" ry="6" fill="#102c3b" opacity=".28" stroke="none"/><rect x="12" y="48" width="72" height="64" rx="8" fill="url(#sea)"/><path d="M8 48h80v19H8Z" fill="url(#gold)"/><path d="M42 48h12v64H42Z" fill="#f8dd8c"/><path d="M47 45Q20 36 26 19q5-13 22 18 16-31 23-18 8 18-24 26Z" fill="#ee8a84"/><path d="M20 78h18m20 0h18" stroke="#b7f3df"/>`);
+const bridge = svg(sea + gold, `<ellipse cx="48" cy="117" rx="40" ry="6" fill="#102c3b" opacity=".25" stroke="none"/><path d="M8 91q40-44 80 0v25H8Z" fill="#376f82"/><path d="M10 91q38-47 76 0" fill="none" stroke="url(#gold)" stroke-width="10"/><path d="M17 91v24m18-40v40m26-40v40m18-24v24" stroke="#d9ecda" stroke-width="5"/><circle cx="48" cy="48" r="17" fill="#fff1ad"/><path d="M48 18v10M22 28l8 8m44-8-8 8" stroke="#fff1ad" stroke-width="5"/>`);
+const ending = svg(violet + gold, `<ellipse cx="48" cy="119" rx="38" ry="6" fill="#102c3b" opacity=".25" stroke="none"/><path d="M43 34h10v78H43Z" fill="url(#gold)"/><path d="M25 46q0-28 23-28t23 28l10 31H15Z" fill="url(#gold)"/><path d="M11 78h74" stroke="#fff0b0" stroke-width="8"/><circle cx="48" cy="89" r="12" fill="#d67f73"/><path d="M48 4v9M18 16l8 8m52-8-8 8" stroke="#fff2b2" stroke-width="5"/><path d="M27 45q21-14 42 0" fill="none" stroke="#fff7cf"/>`);
+
+const files = { player: sailor(0), playerRun: sailor(6), bandit, beast, boss, quest, gift, bridge, ending };
+for (const [name, contents] of Object.entries(files))
+    writeFileSync(`public/assets/draft/${name}.svg`, contents);
