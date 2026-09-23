@@ -1,10 +1,13 @@
 import type {ObjectDef, Platform} from '../content/maps';
 import {type Reward,type Save} from './state';
 export function objectiveReward(def:ObjectDef):Reward {
+  if(def.kind==='truthGift')return {id:def.id,objectives:[def.id],treasures:['T02'],checkpoint:{stageId:'S08',checkpointId:'gift'}};
+  if(def.kind==='journal')return {id:def.id+'.reward',objectives:[def.id],journalPageIds:[def.id]};
   if(def.kind==='flameGift')return {id:def.id,objectives:[def.id],treasures:['T01'],weapons:['W03'],checkpoint:{stageId:'S06',checkpointId:'gift'}};
   if(def.kind==='descent')return {id:def.id+'.reward',objectives:[def.id],flags:def.rewardFlags??[],checkpoint:{stageId:'S07',checkpointId:'cave'}};
-  const golden=def.reward?.startsWith('G')?def.reward:undefined;
-  return {id:golden?`${def.id.split('.')[0]}.golden.${golden}`:`${def.id}.reward`,objectives:[def.id],goldenHearts:golden?[golden]:[],xp:golden?15:0,coins:def.reward==='coins'?25:0,weapons:def.reward==='W02'?['W02']:[],relics:def.reward?.startsWith('R')?[def.reward]:[],flags:def.rewardFlags??[],checkpoint:def.kind==='rescue'?{stageId:'S05',checkpointId:'rescue'}:undefined};
+  const rewardIds=[...(def.rewards??[]),...(def.reward?[def.reward]:[])];
+  const golden=rewardIds.find(id=>id.startsWith('G'));
+  return {id:golden?`${def.id.split('.')[0]}.golden.${golden}`:`${def.id}.reward`,objectives:[def.id],goldenHearts:golden?[golden]:[],xp:golden?15:0,coins:def.reward==='coins'?25:0,weapons:rewardIds.filter(id=>id.startsWith('W')) as Reward['weapons'],treasures:rewardIds.filter(id=>id.startsWith('T')),relics:rewardIds.filter(id=>id.startsWith('R')),flags:def.rewardFlags??[],checkpoint:def.kind==='rescue'?{stageId:'S05',checkpointId:'rescue'}:undefined};
 }
 export const canBreatheUnderwater=(s:Save)=>s.flags.includes('bubbleBlessing')||s.treasures.includes('T04');
 export const canSwimFreely=(s:Save)=>s.treasures.includes('T04');

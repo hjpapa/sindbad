@@ -36,7 +36,7 @@ export function validateContent() {
         if (s.status === 'planned')
             continue;
         const m = maps[s.id];
-        check(m.spawns.length > 0 && m.platforms.length > 0 && m.objects.some(o => o.kind === 'exit'), `${s.id}: empty playable map`);
+        check((m.peaceful || m.spawns.length > 0) && m.platforms.length > 0 && m.objects.some(o => o.kind === 'exit' || o.kind === 'ending'), `${s.id}: empty playable map`);
         unique([...m.spawns.map(x => x.id), ...m.objects.map(x => x.id), ...m.hearts.map(x => x.id)], `${s.id} entity`);
         check(m.checkpoints[0].id === 'start', `${s.id}: start checkpoint`);
         for (const p of m.platforms) {
@@ -61,11 +61,12 @@ export function validateContent() {
                 check(!!dialogues[o.dialogue], `${o.id}: missing dialogue`);
             if (o.reward && o.reward !== 'coins')
                 check(itemIds.has(o.reward), `${o.id}: unknown reward`);
+            for(const reward of o.rewards??[])check(itemIds.has(reward),`${o.id}: unknown reward ${reward}`);
             check((o.rewardFlags??[]).every(f=>s.rewardFlags.includes(f)),`${o.id}: unregistered flag reward`);
             rewards.push(objectiveReward(o).id);
         }
         for(const flag of s.rewardFlags)check(m.objects.some(o=>o.rewardFlags?.includes(flag)),`${s.id}: missing implemented flag reward ${flag}`);
-        for(const item of s.mandatoryItems)if(item!=='W01')check(m.objects.some(o=>o.reward===item||[...(objectiveReward(o).weapons??[]),...(objectiveReward(o).treasures??[])].includes(item)),`${s.id}: missing implemented item reward ${item}`);
+        for(const item of s.mandatoryItems)if(item!=='W01')check(m.objects.some(o=>o.reward===item||o.rewards?.includes(item)||[...(objectiveReward(o).weapons??[]),...(objectiveReward(o).treasures??[]),...(objectiveReward(o).relics??[])].includes(item)),`${s.id}: missing implemented item reward ${item}`);
         const visit=(id:string,path:Set<string>)=>{if(path.has(id)){check(false,`${s.id}: prerequisite cycle at ${id}`);return;}const o=m.objects.find(o=>o.id===id);for(const need of o?.needs??[])visit(need,new Set([...path,id]));};
         for(const o of m.objects)visit(o.id,new Set());
         for(const w of m.water??[])check(w.w>0&&w.h>0&&w.x>=0&&w.x+w.w<=m.width,`${s.id}: invalid water region`);

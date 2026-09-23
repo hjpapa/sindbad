@@ -1,0 +1,9 @@
+import {writeFileSync} from 'node:fs';
+const art={
+genie:'<path d="M24 71Q7 105 40 116l32-9q-24 4-10-34" fill="#859bc6" stroke="#333b58" stroke-width="4"/><ellipse cx="48" cy="40" rx="23" ry="26" fill="#e4b898" stroke="#333b58" stroke-width="4"/><path d="M22 32Q13 4 46 7q36-10 28 27L47 21Z" fill="#abbfd4" stroke="#333b58" stroke-width="4"/><path d="M24 67h48l7 34-31 9-29-12Z" fill="#827aac" stroke="#333b58" stroke-width="4"/><path d="M47 26l-7-10 8-10 9 10Z" fill="#f5d18e"/><circle cx="40" cy="40" r="3"/><circle cx="57" cy="40" r="3"/><path d="M39 51q9 7 19 0" fill="none" stroke="#85565b" stroke-width="3"/>',
+mirror:'<path d="M48 8L82 39v49l-34 31L14 88V39Z" fill="#8fb7ca" stroke="#e0d4f1" stroke-width="6"/><path d="M48 91V35M30 53l18-18 18 18" fill="none" stroke="#fff1bd" stroke-width="8"/><path d="M24 31l7-9m35 77-6 7" stroke="#fff" stroke-width="3"/>',
+bat:'<path d="M35 51L6 25l4 42 18 6 6 20 14-12 14 12 6-20 18-6 4-42-29 26" fill="#a391c9" stroke="#3b3d60" stroke-width="4"/><path d="M33 32l4-18 12 13 12-13 3 18v38L48 88 33 70Z" fill="#c5b8e4" stroke="#3b3d60" stroke-width="4"/><circle cx="41" cy="46" r="3"/><circle cx="56" cy="46" r="3"/><path d="M41 59q7 6 14 0" fill="none" stroke="#716385" stroke-width="3"/>',
+starMap:'<path d="M14 20l23-7 24 7 22-7v94l-22 8-24-8-23 7Z" fill="#c4bfde" stroke="#414662" stroke-width="4"/><path d="M27 86l20-48 24 40-44 8" fill="none" stroke="#6c759e" stroke-width="3"/><path d="M47 27l5 12 13 1-10 8 3 13-11-7-11 7 3-13-10-8 13-1Z" fill="#fff0bc"/>',
+journal:'<path d="M16 16h61v101H16q-12-6 0-14Z" fill="#d8c3a8" stroke="#444763" stroke-width="5"/><path d="M23 17v85m9-67h33M32 49h33M32 63h24M18 107h59" stroke="#8b809a" stroke-width="4"/>'
+};
+for(const [key,body] of Object.entries(art))writeFileSync(`public/assets/draft/${key}.svg`,`<svg xmlns="http://www.w3.org/2000/svg" width="96" height="128" viewBox="0 0 96 128">${body}</svg>`);

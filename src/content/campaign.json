@@ -196,8 +196,8 @@
     "childSceneRefs": [
       "7"
     ],
-    "status": "planned",
-    "artStatus": "missing",
+    "status": "implemented",
+    "artStatus": "draft",
     "nextStageId": "S09",
     "entryItems": [
       "T01"
@@ -223,8 +223,8 @@
     "childSceneRefs": [
       "8"
     ],
-    "status": "planned",
-    "artStatus": "missing",
+    "status": "implemented",
+    "artStatus": "draft",
     "nextStageId": "S10",
     "entryItems": [
       "T02"
@@ -250,8 +250,8 @@
     "childSceneRefs": [
       "8"
     ],
-    "status": "planned",
-    "artStatus": "missing",
+    "status": "implemented",
+    "artStatus": "draft",
     "nextStageId": "S11",
     "entryItems": [
       "T03"
@@ -275,8 +275,8 @@
     "title": "다이아몬드 골짜기",
     "chapter": 3,
     "childSceneRefs": [],
-    "status": "planned",
-    "artStatus": "missing",
+    "status": "implemented",
+    "artStatus": "draft",
     "nextStageId": "S12",
     "entryItems": [
       "T02",
@@ -305,8 +305,8 @@
     "childSceneRefs": [
       "9"
     ],
-    "status": "planned",
-    "artStatus": "missing",
+    "status": "implemented",
+    "artStatus": "draft",
     "nextStageId": "S13",
     "entryItems": [
       "T03",
@@ -333,8 +333,8 @@
     "childSceneRefs": [
       "10"
     ],
-    "status": "planned",
-    "artStatus": "missing",
+    "status": "implemented",
+    "artStatus": "draft",
     "nextStageId": "S14",
     "entryItems": [
       "W01"
@@ -360,8 +360,8 @@
     "childSceneRefs": [
       "11"
     ],
-    "status": "planned",
-    "artStatus": "missing",
+    "status": "implemented",
+    "artStatus": "draft",
     "nextStageId": "S15",
     "entryItems": [
       "T02"
@@ -385,8 +385,8 @@
     "title": "거인의 부엌",
     "chapter": 3,
     "childSceneRefs": [],
-    "status": "planned",
-    "artStatus": "missing",
+    "status": "implemented",
+    "artStatus": "draft",
     "nextStageId": "S16",
     "entryItems": [
       "T03"
@@ -414,8 +414,8 @@
     "childSceneRefs": [
       "12"
     ],
-    "status": "planned",
-    "artStatus": "missing",
+    "status": "implemented",
+    "artStatus": "draft",
     "nextStageId": "S17",
     "entryItems": [
       "T02"
@@ -444,8 +444,8 @@
     "childSceneRefs": [
       "13"
     ],
-    "status": "planned",
-    "artStatus": "missing",
+    "status": "implemented",
+    "artStatus": "draft",
     "nextStageId": "S18",
     "entryItems": [
       "T04"
@@ -472,8 +472,8 @@
     "childSceneRefs": [
       "13"
     ],
-    "status": "planned",
-    "artStatus": "missing",
+    "status": "implemented",
+    "artStatus": "draft",
     "nextStageId": "S19",
     "entryItems": [
       "T04"
@@ -501,8 +501,8 @@
     "childSceneRefs": [
       "14"
     ],
-    "status": "planned",
-    "artStatus": "missing",
+    "status": "implemented",
+    "artStatus": "draft",
     "nextStageId": "S20",
     "entryItems": [
       "T02",
@@ -529,8 +529,8 @@
     "childSceneRefs": [
       "15a"
     ],
-    "status": "planned",
-    "artStatus": "missing",
+    "status": "implemented",
+    "artStatus": "draft",
     "nextStageId": "S21",
     "entryItems": [
       "T01",
@@ -555,8 +555,8 @@
     "childSceneRefs": [
       "15b"
     ],
-    "status": "planned",
-    "artStatus": "missing",
+    "status": "implemented",
+    "artStatus": "draft",
     "nextStageId": "S22",
     "entryItems": [
       "T02",
@@ -581,8 +581,8 @@
     "childSceneRefs": [
       "16"
     ],
-    "status": "planned",
-    "artStatus": "missing",
+    "status": "implemented",
+    "artStatus": "draft",
     "nextStageId": "S23",
     "entryItems": [
       "T02"
@@ -608,8 +608,8 @@
     "title": "바다 노인의 저주",
     "chapter": 5,
     "childSceneRefs": [],
-    "status": "planned",
-    "artStatus": "missing",
+    "status": "implemented",
+    "artStatus": "draft",
     "nextStageId": "S24",
     "entryItems": [
       "T02"
@@ -633,8 +633,8 @@
     "childSceneRefs": [
       "17"
     ],
-    "status": "planned",
-    "artStatus": "missing",
+    "status": "implemented",
+    "artStatus": "draft",
     "nextStageId": "S25",
     "entryItems": [
       "T03"
@@ -660,8 +660,8 @@
     "childSceneRefs": [
       "18"
     ],
-    "status": "planned",
-    "artStatus": "missing",
+    "status": "implemented",
+    "artStatus": "draft",
     "nextStageId": "S26",
     "entryItems": [
       "T03"
@@ -686,8 +686,8 @@
     "title": "별빛 지하강",
     "chapter": 6,
     "childSceneRefs": [],
-    "status": "planned",
-    "artStatus": "missing",
+    "status": "implemented",
+    "artStatus": "draft",
     "nextStageId": "S27",
     "entryItems": [
       "T04",
@@ -716,8 +716,8 @@
     "childSceneRefs": [
       "19"
     ],
-    "status": "planned",
-    "artStatus": "missing",
+    "status": "implemented",
+    "artStatus": "draft",
     "nextStageId": "S28",
     "entryItems": [
       "T05"
@@ -743,8 +743,8 @@
     "childSceneRefs": [
       "19"
     ],
-    "status": "planned",
-    "artStatus": "missing",
+    "status": "implemented",
+    "artStatus": "draft",
     "nextStageId": "S29",
     "entryItems": [
       "T02",
@@ -769,8 +769,8 @@
     "title": "코끼리의 비밀 정원",
     "chapter": 6,
     "childSceneRefs": [],
-    "status": "planned",
-    "artStatus": "missing",
+    "status": "implemented",
+    "artStatus": "draft",
     "nextStageId": "S30",
     "entryItems": [
       "T03",
@@ -797,8 +797,8 @@
     "title": "일곱 보물의 관문",
     "chapter": 7,
     "childSceneRefs": [],
-    "status": "planned",
-    "artStatus": "missing",
+    "status": "implemented",
+    "artStatus": "draft",
     "nextStageId": "S31",
     "entryItems": [
       "T01",
@@ -830,8 +830,8 @@
     "childSceneRefs": [
       "14"
     ],
-    "status": "planned",
-    "artStatus": "missing",
+    "status": "implemented",
+    "artStatus": "draft",
     "nextStageId": "S32",
     "entryItems": [
       "T01",
@@ -864,8 +864,8 @@
     "childSceneRefs": [
       "20"
     ],
-    "status": "planned",
-    "artStatus": "missing",
+    "status": "implemented",
+    "artStatus": "draft",
     "nextStageId": "S33",
     "entryItems": [
       "T02",
@@ -892,8 +892,8 @@
     "title": "로크새와 귀환 비행",
     "chapter": 7,
     "childSceneRefs": [],
-    "status": "planned",
-    "artStatus": "missing",
+    "status": "implemented",
+    "artStatus": "draft",
     "nextStageId": "S34",
     "entryItems": [
       "T03"
@@ -919,8 +919,8 @@
     "childSceneRefs": [
       "21"
     ],
-    "status": "planned",
-    "artStatus": "missing",
+    "status": "implemented",
+    "artStatus": "draft",
     "nextStageId": "S35",
     "entryItems": [
       "T07"
@@ -946,8 +946,8 @@
     "childSceneRefs": [
       "22"
     ],
-    "status": "planned",
-    "artStatus": "missing",
+    "status": "implemented",
+    "artStatus": "draft",
     "nextStageId": "S36",
     "entryItems": [
       "T07"
@@ -973,8 +973,8 @@
     "childSceneRefs": [
       "23"
     ],
-    "status": "planned",
-    "artStatus": "missing",
+    "status": "implemented",
+    "artStatus": "draft",
     "nextStageId": null,
     "entryItems": [
       "T07"

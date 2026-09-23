@@ -1,5 +1,5 @@
-export type Action = 'left' | 'right' | 'jump' | 'attack' | 'dodge' | 'interact' | 'cycle' | 'pause' | 'map' | 'skill';
-const keymap: Record<string, Action> = { KeyR: 'skill', ArrowLeft: 'left', KeyA: 'left', ArrowRight: 'right', KeyD: 'right', Space: 'jump', KeyK: 'jump', KeyW: 'jump', ArrowUp: 'jump', KeyJ: 'attack', KeyL: 'dodge', ShiftLeft: 'dodge', ShiftRight: 'dodge', KeyE: 'interact', KeyQ: 'cycle', Escape: 'pause', KeyM: 'map' };
+export type Action = 'left' | 'right' | 'down' | 'jump' | 'attack' | 'dodge' | 'interact' | 'cycle' | 'pause' | 'map' | 'skill';
+const keymap: Record<string, Action> = { KeyR: 'skill', ArrowLeft: 'left', KeyA: 'left', ArrowRight: 'right', KeyD: 'right', ArrowDown:'down', KeyS:'down', Space: 'jump', KeyK: 'jump', KeyW: 'jump', ArrowUp: 'jump', KeyJ: 'attack', KeyL: 'dodge', ShiftLeft: 'dodge', ShiftRight: 'dodge', KeyE: 'interact', KeyQ: 'cycle', Escape: 'pause', KeyM: 'map' };
 export class Input {
     private sources = new Map<string, Action>();
     private edges = new Set<Action>();

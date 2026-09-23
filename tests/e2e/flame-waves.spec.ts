@@ -22,7 +22,7 @@ test('S06 furnaces and first treasure → S07 waves, blessing and cave save',asy
    if(i===0){await page.screenshot({path:info.outputPath('S07-boat.png')});await use(page,1410);}
  }
  await use(page,3500);await expect(page.getByTestId('dialogue-text')).toBeVisible();s=await read(page);expect(s.save.flags).toContain('genieCave');await page.reload();await page.getByRole('button',{name:'이어하기 · S07'}).click();await expect.poll(async()=>(await read(page)).submerged).toBe(true);await page.waitForTimeout(11000);expect((await read(page)).air).toBe(10000);await page.screenshot({path:info.outputPath('S07-cave-resume.png')});
- await use(page,3980);await page.getByRole('button',{name:'이번 항해 기록 보기'}).click();await expect(page.locator('[data-stage="S08"]')).toBeDisabled();expect((await read(page)).save.clearedStageIds).toContain('S07');expect(errors).toEqual([]);
+ await use(page,3980);await page.getByRole('button',{name:'항해 지도'}).click();await expect(page.locator('[data-stage="S08"]')).toBeEnabled();expect((await read(page)).save.clearedStageIds).toContain('S07');expect(errors).toEqual([]);
 });
 test('flame MP/cooldown pause, free ignition and W03 lingering damage',async({page})=>{
  await seed(page,'S06',true);await use(page,350);const before=(await read(page)).mp;await page.keyboard.press('r');await page.waitForTimeout(180);expect((await read(page)).mp).toBe(before-15);await page.keyboard.press('r');expect((await read(page)).mp).toBe(before-15);

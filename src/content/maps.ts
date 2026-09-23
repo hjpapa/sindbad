@@ -1,3 +1,5 @@
+import {finalMaps} from './finalStages';
+
 export interface Platform {
     x: number;
     y: number;
@@ -10,17 +12,18 @@ export interface Spawn {
     id: string;
     x: number;
     y: number;
-    kind: 'skeleton' | 'archer' | 'captain' | 'crab' | 'siren' | 'spirit' | 'guardian';
+    kind: 'skeleton' | 'archer' | 'captain' | 'crab' | 'siren' | 'spirit' | 'guardian' | 'bat' | 'bandit' | 'beast' | 'boss';
     hp: number;
 }
 export interface ObjectDef {
     id: string;
     x: number;
     y: number;
-    kind: 'npc' | 'bell' | 'shell' | 'chest' | 'exit' | 'rod' | 'crisis' | 'checkpoint' | 'remote' | 'gear' | 'key' | 'gate' | 'rescue' | 'golden' | 'torch' | 'furnace' | 'vine' | 'flameGift' | 'rope' | 'descent';
+    kind: 'npc' | 'bell' | 'shell' | 'chest' | 'exit' | 'rod' | 'crisis' | 'checkpoint' | 'remote' | 'gear' | 'key' | 'gate' | 'rescue' | 'golden' | 'torch' | 'furnace' | 'vine' | 'flameGift' | 'rope' | 'descent' | 'mirror' | 'lightGate' | 'truthGift' | 'vision' | 'journal' | 'quest' | 'gift' | 'bridge' | 'ending';
     label: string;
     needs?: string[];
     reward?: string;
+    rewards?: string[];
     rewardFlags?: string[];
     dialogue?: string;
     requiresItems?: string[];
@@ -28,7 +31,10 @@ export interface ObjectDef {
 export interface MapDef {
     id: string;
     width: number;
-    theme: 'harbor' | 'reef' | 'storm' | 'whale' | 'coral' | 'flame' | 'waves';
+    theme: 'harbor' | 'reef' | 'storm' | 'whale' | 'coral' | 'flame' | 'waves' | 'crystal' | 'adventure';
+    visual?: 'sky' | 'volcano' | 'village' | 'warehouse' | 'ocean' | 'pirate' | 'shadow' | 'jungle' | 'temple' | 'garden' | 'tower' | 'kingdom';
+    mode?: 'ground' | 'flight' | 'swim' | 'peace';
+    peaceful?: boolean;
     water?: { x:number; y:number; w:number; h:number }[];
     platforms: Platform[];
     spawns: Spawn[];
@@ -98,4 +104,17 @@ export const maps: Record<string, MapDef> = {
         {id:'S07.descent',kind:'descent',x:3500,y:551,label:'하강 동굴의 닻 · E',needs:['S07.wave.1','S07.wave.2','S07.wave.3'],dialogue:'descent',rewardFlags:['genieCave']},
         {id:'S07.exit',kind:'exit',x:3980,y:551,label:'수정 동굴 입구 · E',needs:['S07.descent']}],
       hearts:[{id:'S07.heart.1',x:2380,y:550,large:true}],checkpoints:[{id:'start',x:120,y:548},{id:'first',x:1410,y:460},{id:'second',x:2400,y:548},{id:'cave',x:3500,y:548}]},
+    S08: {id:'S08',width:3700,theme:'crystal',objective:'수정 거울 3개 E 회전 → 별빛 문 → 지니의 구슬 → 아리아나의 별 지도',
+      platforms:[ground(0,3700),{x:560,y:536,w:160,h:72},{x:930,y:528,w:160,h:80}],
+      spawns:[450,790,1100,1250].map((x,i)=>({id:`S08.enemy.bat.${i+1}`,kind:'bat',x,y:550,hp:36})),
+      objects:[{id:'S08.hint',kind:'npc',x:220,y:550,label:'지니 하질의 목소리 · E',dialogue:'crystalHint'},
+        {id:'S08.cp.puzzle',kind:'checkpoint',x:1435,y:550,label:'전투 없는 수정 쉼터'},
+        {id:'S08.journal',kind:'journal',x:1530,y:550,label:'숨은 항해 일지 · E',requiresItems:['T02'],dialogue:'crystalJournal'},
+        ...[1650,1940,2230].map((x,i):ObjectDef=>({id:`S08.mirror.${i+1}`,kind:'mirror',x,y:550,label:`수정 거울 ${i+1} · E 회전`})),
+        {id:'S08.light',kind:'lightGate',x:2460,y:550,label:'별빛 문 · 거울을 연결하세요'},
+        {id:'S08.reward.truthOrb',kind:'truthGift',x:2690,y:550,label:'지니 하질 · 진실의 수정구슬 E',needs:['S08.light'],dialogue:'hazil'},
+        {id:'S08.starMap',kind:'vision',x:3000,y:550,label:'아리아나의 환영 · E',needs:['S08.reward.truthOrb'],requiresItems:['T02'],dialogue:'starMap'},
+        {id:'S08.exit',kind:'exit',x:3500,y:550,label:'로크새의 둥지로 · E',needs:['S08.light','S08.reward.truthOrb','S08.starMap']}],
+      hearts:[{id:'S08.heart.1',x:850,y:550},{id:'S08.heart.2',x:1370,y:550,large:true}],checkpoints:[{id:'start',x:120,y:548},{id:'puzzle',x:1435,y:548},{id:'gift',x:2700,y:548}]},
+    ...finalMaps,
 };

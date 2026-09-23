@@ -1,5 +1,14 @@
 # 실제 검사 로그 · 2026-09-06 · 0.1.0
 
+## 2026-09-23 · S01~S36 기능 구현
+
+- `npm run typecheck`: 통과.
+- `npm run lint`: 통과.
+- `npm run test`: 6개 파일, 57개 테스트 통과. 36맵 등록, 고유 목표열, 평화/비행/수영/엔딩 모드, 후기 필수 보상 멱등성, 능력 선택을 포함한다.
+- `npm run validate:content`: 통과. 출력은 `36 implemented stages, 24 child scenes, 7 weapons, 7 treasures, 8 golden hearts`이며 획득 그래프·S16 보호·보상·맵·자산을 확인했다.
+- `npm run build`: 통과. 앱 JS 128.30kB(gzip 43.07kB), Phaser 1,481.77kB(gzip 339.84kB). 기존 500kB 청크 경고 유지.
+- `npm run test:e2e`: Edge headless 17개 시나리오가 모두 `ok`로 완료됐다. 기존 S01~S08 회귀, S28 균형 장치→T06/방패 저장, S36 전시→엔딩, S09~S36 전 장면 렌더 및 pageerror/HTTP 400+ 검사를 포함한다. 전체 결과 출력 후 Windows에서 Playwright 프로세스가 종료되지 않아 강제 종료했으므로 exit 0은 미확인이다. 기능 시나리오는 통과, 러너 정상 종료는 미검증으로 구분한다.
+
 최종 실행 환경: Windows 10.0.26200, Node 24.16.0, npm 11.13.0.
 
 ```text
@@ -99,3 +108,21 @@ S04~S05 정상 진행 검사에서 pageerror/HTTP 400+는 0개였다. 스크린�
 npm run test:e2e: 설치된 Edge headless 전체 13개 통과(5.9분). 기존 S01~S03 새 게임 완주/저장/터치, S04~S05 이어하기, S06~S07 연속 진행/첫 보물 저장 복원, MP·일시정지·지속 피해, 파도 실패/낙하, 기존 사망/보스/저장 차단 회귀가 모두 통과했다. 정상 S06~S07 시나리오의 pageerror/HTTP 400+는 0개였다. 마지막 테스트 보완 후 typecheck/lint도 다시 통과했다.
 
 스크린샷: docs/screenshots/S06-first-flame.png, S07-boat.png, S07-cave-resume.png, S07-wave-warning.png. S06 화면과 S07 갑판/물속 재개 화면을 육안 확인했다. S06~S07은 로컬 변경이며 아직 커밋/푸시하지 않았다. 다음 한 작업은 S08 지니 동굴의 수정 퍼즐과 T02 확정 획득이다.
+
+## 2026-09-23 · S08 코드 검사
+
+- npm run typecheck: 통과.
+- npm run lint: 통과.
+- npm run test: 5개 파일, 54개 테스트 통과.
+- npm run validate:content: 36스테이지/24장면/7무기/7보물/8황금 하트 및 실제 보상·참조·발판·체크포인트·파일 검사 통과. S01~S08 implemented, S09~S36 planned.
+- npm run build: 통과(5.01초). 앱 JS 111.22kB, gzip 37.62kB. Phaser 청크 크기 경고는 기존과 동일.
+- S08 단독 Edge E2E: 1개 통과(51.9초). 초기 스냅샷 로딩 오류를 수정한 재실행 결과다.
+- 전체 브라우저 회귀 및 화면 표시 정리 후 결과는 아래에 별도 기록한다.
+
+### S08 최종 실제 결과
+
+- 전체 npm run test:e2e: 설치된 Edge headless 14개 통과(6.8분). 기존 S01~S07 회귀와 S08 정상 키 입력 완주/저장 복원을 포함한다.
+- 스크린샷 확인 후 S08 쉼터·일지·거울 안내문 겹침과 빈 보스 표시를 정리했다. 해당 표시 변경 후 typecheck/lint/build 재통과, S08 E2E 재통과(1개, 52.1초). 최신 빌드 5.16초, 앱 JS 111.32kB(gzip 37.66kB). 단위 54개 통과 결과는 앞선 전체 코드 검사 기록이며 표시 변경 후 단위 테스트는 반복하지 않았다.
+- S08 정상 진행의 pageerror/관측 HTTP 400+는 0개. docs/screenshots/S08-mirrors.png, S08-hidden-journal.png를 보관했으며 화면을 육안 확인했다.
+- git diff --check 통과. 최신 playwright-report/index.html은 마지막 S08 단독 재검사 결과이며, 전체 14개 실행 결과는 이 로그에 기록했다.
+- 현재 S01~S08 구현, S09~S36 planned. 최종 아트와 실기기 검수는 미완료. 이번 S08 작업은 커밋/푸시하지 않은 로컬 변경이다. 다음은 S09 로크새의 둥지다.

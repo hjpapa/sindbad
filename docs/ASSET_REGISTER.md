@@ -29,3 +29,11 @@ SVG 생성 원본: `scripts/make-draft-art.mjs`. 실행 시 위 실제 파일만
 ## S06~S07 자산 — 2026-09-08
 
 public/assets/draft/rah.svg, torch.svg, furnace.svg, vine.svg, rope.svg: 각 96×128, scripts/make-flame-art.mjs에서 생성한 자체 벡터. 프로젝트에서 사용·수정 가능하며 외부 자산 없음. 총 SVG 22개 모두 ART_DRAFT. 불꽃 동굴, 파도·동굴 배경, 파동은 src/game/stage.ts의 자체 Phaser Graphics다. 최종 웹툰 아트/애니메이션은 미완료다.
+
+## S08 간이 자산 — 2026-09-23
+
+public/assets/draft/genie.svg, mirror.svg, bat.svg, starMap.svg, journal.svg를 추가했다. 각 96×128 SVG이며 scripts/make-crystal-art.mjs에서 재생성 가능하다. 자체 작성 벡터로 프로젝트에서 사용·수정 가능하며 외부 이미지/음원 복제 없음. 수정 동굴 배경/빛 연결/비밀 반짝임은 src/game/stage.ts의 자체 Phaser Graphics다. 총 SVG 27개 모두 ART_DRAFT이며 최종 웹툰 아트 승인과 애니메이션은 미완료다.
+
+## S09~S36 캠페인 벡터 세트 — 2026-09-23
+
+`bandit.svg`, `beast.svg`, `boss.svg`, `quest.svg`, `gift.svg`, `bridge.svg`, `ending.svg`를 추가했다. 각 96×128 자체 작성 SVG이며 프로젝트 안에서 사용·수정 가능하다. 12개 지역 팔레트의 하늘·화산·마을·창고·바다·해적선·그림자·밀림·신전·정원·탑·왕국 배경은 `src/game/stage.ts`의 Phaser Graphics로 그린다. 전체 34개 SVG와 모든 런타임 배경은 외부 URL이나 타 작품 자산을 사용하지 않는다. 전 구간 기능 표시에는 사용 가능하지만, 다중 프레임 웹툰 캐릭터 애니메이션과 최종 아트 승인은 미완료이므로 상태는 ART_DRAFT다.
