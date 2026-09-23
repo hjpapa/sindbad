@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="96" height="128" viewBox="0 0 96 128">
+  <defs><linearGradient id="cloak" x2="0" y2="1"><stop stop-color="#a985cf"/><stop offset="1" stop-color="#554d86"/></linearGradient><filter id="shadow"><feDropShadow dx="0" dy="3" stdDeviation="2" flood-color="#17384a" flood-opacity=".4"/></filter></defs>
+  <g filter="url(#shadow)" stroke="#203d53" stroke-width="3" stroke-linejoin="round">
+    <path d="M28 47q-7-31 20-34 28 2 21 36l-8 7H35Z" fill="#3f365d"/><circle cx="48" cy="40" r="19" fill="#e9b889"/>
+    <path d="M28 41q2-27 21-28 20 2 21 28-12-7-19-16-7 12-23 16Z" fill="#48395e"/>
+    <path d="M31 61q17-11 34 0l12 54H19Z" fill="url(#cloak)"/><path d="M38 61v38h20V61" fill="#f0d9a9"/>
+    <path d="m29 69-15 27 9 5 17-22m27-10 15 27-9 5-17-22" fill="#e9b889"/>
+  </g>
+  <circle cx="41" cy="41" r="2" fill="#26394c"/><circle cx="56" cy="41" r="2" fill="#26394c"/><path d="M42 50q6 5 12 0" fill="none" stroke="#9c5361" stroke-width="2" stroke-linecap="round"/><path d="M39 73h18M39 82h18" stroke="#c28acc" stroke-width="3"/>
+</svg>

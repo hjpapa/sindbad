@@ -1,11 +1,15 @@
 #app{min-height:320px}
 #overlay{padding:max(12px,env(safe-area-inset-top)) max(12px,env(safe-area-inset-right)) max(12px,env(safe-area-inset-bottom)) max(12px,env(safe-area-inset-left))}
 #hud{padding:max(12px,env(safe-area-inset-top)) max(14px,env(safe-area-inset-right)) 22px max(14px,env(safe-area-inset-left))}
-#touch{bottom:max(8px,env(safe-area-inset-bottom));left:max(12px,env(safe-area-inset-left));right:max(12px,env(safe-area-inset-right));display:grid;grid-template-columns:64px 64px 64px 92px;gap:10px}
+#touch{bottom:max(8px,env(safe-area-inset-bottom));left:max(12px,env(safe-area-inset-left));right:max(12px,env(safe-area-inset-right));display:flex;gap:10px}
 #touch button{min-height:58px;border-radius:18px;background:linear-gradient(155deg,#315c6cee,#173849ee);opacity:.94;box-shadow:0 5px 15px #071d2980}
 #touch button:nth-child(3){margin-left:0}
-#touch button:last-child{grid-column:4;background:linear-gradient(155deg,#f0c978,#c98557);color:#173747;border-color:#ffe8a8}
+#touch button[data-action=skill]{margin-left:auto}
+#touch button:last-child{margin-left:auto;background:linear-gradient(155deg,#f0c978,#c98557);color:#173747;border-color:#ffe8a8}
+#touch button[data-action=skill]:not([hidden])+button{margin-left:0}
+#touch button[hidden]{display:none}
 .control-guide{display:grid;grid-template-columns:auto 1fr auto 1fr;gap:10px 14px;align-items:center;background:#0d293788;border:1px solid #496c76;border-radius:12px;padding:15px}
 .control-guide b{color:#ffe09a;font-size:20px}.control-guide span{color:#d7e7e4}
+@media(max-width:480px){#touch{gap:4px}#touch button{min-width:44px;padding:5px 7px}.hud-actions #bag{display:block}.stats{gap:4px}.stats b{font-size:15px}.stats small{display:none}.mission{min-width:0}.mission strong{font-size:13px}.hud-actions{gap:4px}.hud-actions button{padding:5px;min-width:40px}.weapon-chip{display:none}}
 @media(max-width:900px){#touch{bottom:max(5px,env(safe-area-inset-bottom));left:max(7px,env(safe-area-inset-left));right:max(7px,env(safe-area-inset-right));grid-template-columns:54px 54px 54px 84px;gap:6px}#touch button{font-size:15px;min-height:50px;padding:5px 8px}}
 @media(max-height:520px){#hud{padding-top:max(5px,env(safe-area-inset-top))}.mission span,.stats small,.weapon-chip{display:none}.mission strong{font-size:16px}.stats b{font-size:17px}meter{width:82px}.hud-actions button{min-height:38px;padding:5px 9px}.panel{max-height:calc(100dvh - 16px);padding:18px 22px}.panel h1{font-size:38px}.panel h2{margin:6px 0 10px}.panel p{line-height:1.45}.dialogue{min-height:100px}.buttons{margin-top:8px}#notice{bottom:68px}}

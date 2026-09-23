@@ -19,6 +19,11 @@ describe('complete campaign implementation',()=>{
 
   it('implements the flight, swimming, peaceful and final sequences',()=>{
     expect(maps.S10.mode).toBe('flight');
+    expect(maps.S10.spawns.filter(enemy=>enemy.kind==='kite')).toHaveLength(6);
+    expect(maps.S10.flightHazards).toHaveLength(3);
+    expect(maps.S10.objects.find(object=>object.kind==='gift')?.needs).toEqual([]);
+    expect(maps.S33.spawns.filter(enemy=>enemy.kind==='kite')).toHaveLength(5);
+    expect(maps.S33.flightHazards).toHaveLength(5);
     expect(maps.S16.mode).toBe('swim');
     expect(maps.S28.peaceful).toBe(true);
     expect(maps.S28.spawns).toHaveLength(0);

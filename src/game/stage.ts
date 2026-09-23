@@ -1,5 +1,5 @@
 import Phaser from 'phaser';
-import { maps, type MapDef, type ObjectDef, type Spawn } from '../content/maps';
+import { maps, type FlightHazard, type MapDef, type ObjectDef, type Spawn } from '../content/maps';
 import { assets } from '../content/assets.manifest';
 import { type WeaponId } from '../content/items';
 import { Combat } from '../core/combat';
@@ -38,6 +38,7 @@ interface Enemy {
     state: 'idle' | 'telegraph' | 'attack' | 'recover' | 'defeated';
     until: number;
     target: number;
+    targetY: number;
     pattern: number;
 }
 interface Projectile {
@@ -49,6 +50,12 @@ interface Projectile {
     wave: boolean;
 }
 export class Stage extends Phaser.Scene {
+    private flightMount?: Phaser.GameObjects.Image;
+    private flightPassenger?: Phaser.GameObjects.Image;
+    private flightHazards: {def:FlightHazard;sprite:Phaser.GameObjects.Image;label:Phaser.GameObjects.Text}[]=[];
+    private hazardNoticeAt=0;
+    private flightAttackId=100000;
+    private flightAttackReady=0;
     private extraJump=false;
     private bridgeUntil=0;
     private mirrorDirections:number[]=[0,0,0];
@@ -126,6 +133,7 @@ export class Stage extends Phaser.Scene {
         this.sim = 0; this.extraJump=false; this.bridgeUntil=0;
         this.direction = 1;
         this.enemies = [];
+        this.flightHazards=[];this.hazardNoticeAt=0;this.flightAttackId=100000;this.flightAttackReady=0;
         this.objects = [];
         this.hearts = [];
         this.projectiles = [];
@@ -167,6 +175,8 @@ export class Stage extends Phaser.Scene {
         const cp = this.mapDef.checkpoints.find(c => c.id === this.host.save.checkpoint.checkpointId) ?? this.mapDef.checkpoints[0];
         this.safe = { x: cp.x, y: cp.y };
         this.player = this.physics.add.sprite(cp.x, cp.y, 'player').setDepth(10);
+        this.flightMount=this.mapDef.mode==='flight'?this.add.image(cp.x,cp.y+15,'roc').setDisplaySize(240,160).setDepth(9):undefined;
+        this.flightPassenger=this.mapDef.id==='S33'?this.add.image(cp.x-34,cp.y-27,'ariana').setDisplaySize(60,80).setDepth(10):undefined;
         this.player.body?.setSize(42, 84);
         this.player.body?.setOffset(27, 42);
         this.player.setMaxVelocity(300, 1000).setDragX(2600);
@@ -188,11 +198,16 @@ export class Stage extends Phaser.Scene {
                 sprite.setTint(0xffd98e).setScale(1.15);
             const hp = Math.round(def.hp * (this.host.save.settings.difficulty === 'relaxed' ? 0.85 : 1));
             const label = this.add.text(def.x, def.y - 87, '', { fontSize: '19px', fontFamily: 'sans-serif', color: '#fff5cf', backgroundColor: '#173746' }).setOrigin(0.5).setDepth(6);
-            this.enemies.push({ def, sprite, label, hp, maxHp: hp, state: 'idle', until: 0, target: def.x, pattern: 0 });
+            this.enemies.push({ def, sprite, label, hp, maxHp: hp, state: 'idle', until: 0, target: def.x, targetY:def.y, pattern: 0 });
+        }
+        for(const def of this.mapDef.flightHazards??[]){
+            const sprite=this.add.image(def.x,def.y,def.kind==='gust'?'stormCloud':'debris').setDepth(7).setScale(def.kind==='gust'?.95:.7);
+            const label=this.add.text(def.x,def.y-def.radius-35,def.kind==='gust'?'돌풍 · 위아래로 피하기':'낙하 파편 · 피하기',{fontSize:'17px',color:'#fff2cb',backgroundColor:'#28485a',padding:{x:7,y:4}}).setOrigin(.5).setDepth(8);
+            this.flightHazards.push({def,sprite,label});
         }
         for (const def of this.mapDef.objects) {
-            const texture = def.kind==='truthGift'?'genie':def.kind==='mirror'?'mirror':def.kind==='vision'?'starMap':def.kind==='journal'?'journal':def.kind==='flameGift'?'rah':['torch','furnace','vine','rope','quest','gift','bridge','ending'].includes(def.kind)?def.kind:['gear','key','gate','golden'].includes(def.kind)?def.kind:def.kind==='rescue'?'naira':def.kind === 'chest' ? 'chest' : def.kind === 'npc' ? (this.mapDef.id==='S08'?'genie':this.mapDef.id==='S06'?'rah':this.mapDef.id === 'S05'||this.mapDef.id==='S07'?'naira':this.mapDef.id === 'S02' ? 'siren' : 'player') : def.kind === 'shell' || def.kind === 'remote' ? 'shell' : def.kind === 'rod' || def.kind === 'crisis' ? 'rod' : 'bell';
-            const sprite = this.add.image(def.x, def.y, texture).setScale(def.kind === 'checkpoint' ? 0.42 : 0.68).setDepth(4);
+            const texture = def.flightRing?'flightRing':def.kind==='truthGift'?'genie':def.kind==='mirror'?'mirror':def.kind==='vision'?'starMap':def.kind==='journal'?'journal':def.kind==='flameGift'?'rah':['torch','furnace','vine','rope','quest','gift','bridge','ending'].includes(def.kind)?def.kind:['gear','key','gate','golden'].includes(def.kind)?def.kind:def.kind==='rescue'?'naira':def.kind === 'chest' ? 'chest' : def.kind === 'npc' ? (this.mapDef.id==='S08'?'genie':this.mapDef.id==='S06'?'rah':this.mapDef.id === 'S05'||this.mapDef.id==='S07'?'naira':this.mapDef.id === 'S02' ? 'siren' : 'player') : def.kind === 'shell' || def.kind === 'remote' ? 'shell' : def.kind === 'rod' || def.kind === 'crisis' ? 'rod' : 'bell';
+            const sprite = this.add.image(def.x, def.y, texture).setScale(def.flightRing ? 1.35 : def.kind === 'checkpoint' ? 0.42 : 0.68).setDepth(4);
             if (def.kind === 'npc')
                 sprite.setTint(0xe1d498);
             const label = this.add.text(def.x, def.y - 64, def.label, { wordWrap:['S06','S07','S08'].includes(this.mapDef.id)?{width:210,useAdvancedWrap:true}:undefined, fontSize: ['S06','S07','S08'].includes(this.mapDef.id)?'18px':'20px', color: '#fff2cc', backgroundColor: '#173b46', padding: { x: 7, y: 4 } }).setOrigin(0.5).setDepth(7);
@@ -205,7 +220,7 @@ export class Stage extends Phaser.Scene {
         this.flameArt=this.add.graphics().setDepth(12);
         this.waveArt=this.add.graphics().setDepth(8);
         this.bubble=this.add.graphics().setDepth(11);
-        this.journey=this.add.text(640,186,'',{fontSize:'18px',color:'#fff1c8',backgroundColor:'#24475b',padding:{x:10,y:6}}).setOrigin(.5).setScrollFactor(0).setDepth(19).setVisible(['S04','S05','S06','S07','S08'].includes(this.mapDef.id));
+        this.journey=this.add.text(640,186,'',{fontSize:'18px',color:'#fff1c8',backgroundColor:'#24475b',padding:{x:10,y:6}}).setOrigin(.5).setScrollFactor(0).setDepth(19).setVisible(['S04','S05','S06','S07','S08'].includes(this.mapDef.id)||this.mapDef.mode==='flight');
         this.warnings = this.add.graphics().setDepth(3);
         this.bossText = this.add.text(640, 142, '', { fontFamily: 'sans-serif', fontSize: '22px', color: '#fce8bc', backgroundColor: '#173643', padding: { x: 12, y: 7 } }).setOrigin(0.5).setScrollFactor(0).setDepth(20).setVisible(false);
         this.hint = this.add.text(640, 648, '', { fontFamily: 'sans-serif', fontSize: '22px', color: '#fff3d2', backgroundColor: '#153847', padding: { x: 14, y: 8 } }).setOrigin(0.5).setScrollFactor(0).setDepth(20);
@@ -223,7 +238,42 @@ export class Stage extends Phaser.Scene {
             for(let x=-100;x<this.mapDef.width;x+=430){far.fillStyle(land,.28).fillTriangle(x,585,x+220,270+(x%5)*18,x+470,585);far.fillStyle(0xffffff,.12).fillEllipse(x+120,180+(x%4)*28,150,34);far.fillEllipse(x+205,180+(x%4)*28,110,27);}
             const g=this.add.graphics().setDepth(-10).setScrollFactor(.25);g.fillStyle(glow,.18).fillRect(0,480,this.mapDef.width,160);
             for(let x=0;x<this.mapDef.width;x+=330){g.fillStyle(land,.82).fillTriangle(x,570,x+150,220+(x%4)*36,x+320,570);g.lineStyle(3,glow,.35).lineBetween(x+30,460,x+260,460);g.fillStyle(glow,.25).fillCircle(x+95,145+(x%5)*38,24);g.fillStyle(glow,.18).fillEllipse(x+165,535,270,32);}
-            if(this.mapDef.mode==='flight')for(let x=300;x<this.mapDef.width;x+=520)g.lineStyle(10,glow,.7).strokeCircle(x,350+(x%3)*75,65);
+            const motif=this.add.graphics().setDepth(-9).setScrollFactor(.18);
+            switch(this.mapDef.visual){
+                case 'volcano':
+                    for(let x=180;x<this.mapDef.width;x+=520){motif.fillStyle(0x321e31,.72).fillTriangle(x,560,x+155,210,x+320,560);motif.lineStyle(10,0xf08b58,.55).lineBetween(x+155,420,x+190,560);motif.fillStyle(0xffc56f,.35).fillCircle(x+155,210,16);}
+                    break;
+                case 'village':
+                    for(let x=130;x<this.mapDef.width;x+=390){motif.fillStyle(0x8f6257,.8).fillRect(x,380,180,120);motif.fillStyle(0xe08b70,.9).fillTriangle(x-18,380,x+90,285,x+198,380);motif.fillStyle(0xf4df9b,.75).fillRect(x+35,420,30,35).fillRect(x+115,420,30,35);motif.lineStyle(5,0xf8d78f,.5).lineBetween(x+90,315,x+90,260);motif.fillTriangle(x+90,265,x+125,280,x+90,296);}
+                    break;
+                case 'warehouse':
+                    for(let x=90;x<this.mapDef.width;x+=460){motif.fillStyle(0x433c40,.75).fillRect(x,330,280,180);motif.fillStyle(0xb98255,.6).fillRect(x+28,360,70,52).fillRect(x+108,420,70,52).fillRect(x+188,360,70,52);motif.lineStyle(6,0xe2bb75,.45).lineBetween(x,330,x+280,510);}
+                    break;
+                case 'ocean':
+                    for(let x=20;x<this.mapDef.width;x+=260){motif.lineStyle(6,0xb8f0df,.3).strokeEllipse(x+100,430,230,55);motif.lineStyle(3,0xe2fff1,.4).strokeEllipse(x+170,305,100,28);motif.fillStyle(0xd2fff0,.45).fillCircle(x+215,220+(x%140),5).fillCircle(x+240,185+(x%100),3);}
+                    break;
+                case 'pirate':
+                    for(let x=210;x<this.mapDef.width;x+=560){motif.lineStyle(9,0x3d3041,.85).lineBetween(x,520,x,240);motif.lineStyle(5,0xd6b16a,.65).lineBetween(x,245,x+180,415);motif.fillStyle(0x9b5b58,.65).fillTriangle(x+8,255,x+150,300,x+8,345);motif.fillStyle(0xd5b063,.55).fillTriangle(x+8,350,x+125,380,x+8,410);}
+                    break;
+                case 'shadow':
+                    for(let x=100;x<this.mapDef.width;x+=330){motif.fillStyle(0xe2d9ff,.18).fillCircle(x+100,300,58);motif.fillStyle(0x1e2340,.6).fillTriangle(x+40,500,x+100,360,x+160,500);motif.lineStyle(3,0xf0e6ff,.3).strokeCircle(x+100,300,78);}
+                    break;
+                case 'jungle':
+                    for(let x=45;x<this.mapDef.width;x+=300){motif.lineStyle(14,0x173f3c,.8).beginPath();motif.moveTo(x,0);motif.lineTo(x+45,240);motif.lineTo(x-15,460);motif.strokePath();motif.lineStyle(5,0xa9c579,.7).lineBetween(x+42,190,x+140,275);motif.lineBetween(x+15,340,x-70,420);motif.fillStyle(0x8ab075,.7).fillEllipse(x+120,275,90,30).fillEllipse(x-55,420,110,32);}
+                    break;
+                case 'temple':
+                    motif.fillStyle(0xf4dca9,.45).fillCircle(1020,170,70);for(let x=120;x<this.mapDef.width;x+=430){motif.fillStyle(0x3b3c59,.8).fillRect(x,300,90,250).fillTriangle(x-18,300,x+45,235,x+108,300);motif.lineStyle(6,0xe4c98d,.35).lineBetween(x-15,305,x+105,305);}
+                    break;
+                case 'garden':
+                    for(let x=100;x<this.mapDef.width;x+=280){motif.lineStyle(6,0x355d4e,.8).lineBetween(x,560,x+45,375);motif.fillStyle(0xf6c4d5,.8).fillCircle(x+35,365,18).fillStyle(0xffe5a0,.9).fillCircle(x+35,365,6);motif.fillStyle(0x86c08e,.65).fillEllipse(x+115,450,160,45);}
+                    break;
+                case 'tower':
+                    for(let x=80;x<this.mapDef.width;x+=245){motif.fillStyle(0xffefbb,.8).fillCircle(x+40,160+(x%140),3).fillCircle(x+150,210+(x%100),4).fillCircle(x+210,120+(x%180),2);motif.lineStyle(3,0xd5d4ff,.25).lineBetween(x+40,160+(x%140),x+150,210+(x%100));}
+                    break;
+                case 'kingdom':
+                    for(let x=140;x<this.mapDef.width;x+=500){motif.fillStyle(0x52717a,.9).fillRect(x,350,230,190);motif.fillStyle(0xd59b73,.8).fillTriangle(x-20,350,x+115,240,x+250,350);motif.lineStyle(5,0xf4d28b,.65).lineBetween(x+115,250,x+115,190);motif.fillTriangle(x+115,195,x+180,215,x+115,235);}
+                    break;
+            }
             if(this.mapDef.mode==='swim')g.fillStyle(0x75d6d0,.25).fillRect(0,100,this.mapDef.width,520);
             this.add.text(42,205,`${this.mapDef.id} · ${this.mapDef.objective}`,{fontSize:'21px',color:'#fff1ce',backgroundColor:'#263d51',padding:{x:10,y:7},wordWrap:{width:720}}).setScrollFactor(.3).setDepth(-5);
             return;
@@ -300,7 +350,7 @@ export class Stage extends Phaser.Scene {
     }
     else
         this.physics.resume(); }
-    snapshot() { return { stage: this.mapDef?.id, player: this.player ? { x: this.player.x, y: this.player.y, grounded: ((this.player.body as Phaser.Physics.Arcade.Body)?.blocked.down||(this.player.body as Phaser.Physics.Arcade.Body)?.touching.down), vx: this.player.body?.velocity.x, vy: this.player.body?.velocity.y, hp: this.host.hp, maxHp: maxHp(this.host.save), bodyWidth: this.player.body?.width, bodyHeight: this.player.body?.height } : null, save: structuredClone(this.host.save), sim: this.sim, paused: this.stopped, enemies: this.enemies.map(e => ({ id: e.def.id, x: e.sprite.x, y: e.sprite.y, hp: e.hp, state: e.state, visible:e.sprite.visible, alpha:e.sprite.alpha, burn:e.burn })), projectiles: this.projectiles.length, boomerang: !!this.boom, attack: this.attack?.id ?? null, air: this.air, submerged:this.submerged, bubbleProtected: canBreatheUnderwater(this.host.save), movingPlatforms: this.moving.map(p=>({x:p.rect.x,y:p.rect.y-p.def.h/2,w:p.def.w})), mp:this.host.mp, flameReady:this.flameReady, pulse:!!this.pulse, wave:this.wave?{id:this.wave.def.id,at:this.wave.at}:null, grip:this.grip?.id??null, mirrors:[...this.mirrorDirections], connectedMirrors:connectedMirrors(this.mirrorDirections), puzzleSafe:this.mapDef?.id==='S08'&&!!this.player&&this.player.x>=crystalSafeStart, frameMs: this.lastFrame }; }
+    snapshot() { return { stage: this.mapDef?.id, player: this.player ? { x: this.player.x, y: this.player.y, grounded: ((this.player.body as Phaser.Physics.Arcade.Body)?.blocked.down||(this.player.body as Phaser.Physics.Arcade.Body)?.touching.down), vx: this.player.body?.velocity.x, vy: this.player.body?.velocity.y, hp: this.host.hp, maxHp: maxHp(this.host.save), bodyWidth: this.player.body?.width, bodyHeight: this.player.body?.height } : null, save: structuredClone(this.host.save), sim: this.sim, paused: this.stopped, enemies: this.enemies.map(e => ({ id: e.def.id, x: e.sprite.x, y: e.sprite.y, hp: e.hp, state: e.state, visible:e.sprite.visible, alpha:e.sprite.alpha, burn:e.burn })), flightHazards:this.flightHazards.map(h=>({id:h.def.id,x:h.sprite.x,y:h.sprite.y,kind:h.def.kind})), projectiles: this.projectiles.length, boomerang: !!this.boom, attack: this.attack?.id ?? null, air: this.air, submerged:this.submerged, bubbleProtected: canBreatheUnderwater(this.host.save), movingPlatforms: this.moving.map(p=>({x:p.rect.x,y:p.rect.y-p.def.h/2,w:p.def.w})), mp:this.host.mp, flameReady:this.flameReady, pulse:!!this.pulse, wave:this.wave?{id:this.wave.def.id,at:this.wave.at}:null, grip:this.grip?.id??null, mirrors:[...this.mirrorDirections], connectedMirrors:connectedMirrors(this.mirrorDirections), puzzleSafe:this.mapDef?.id==='S08'&&!!this.player&&this.player.x>=crystalSafeStart, frameMs: this.lastFrame }; }
     update(_time: number, delta: number) {
         if (this.stopped || !this.player)
             return;
@@ -327,7 +377,8 @@ export class Stage extends Phaser.Scene {
                 this.safe = { x: this.player.x, y: this.player.y - 2 };
         }
         const freeMove=this.mapDef.mode==='flight'||this.mapDef.mode==='swim';
-        if(input.held('jump')&&freeMove)this.player.setVelocityY(-245);
+        if(freeMove&&this.player.y<120){this.player.setY(120);this.player.setVelocityY(Math.max(0,body.velocity.y));}
+        if(input.held('jump')&&freeMove&&this.player.y>120)this.player.setVelocityY(-245);
         else if(input.held('down')&&freeMove)this.player.setVelocityY(245);
         if (input.consume('jump')) {
             this.jumpAt = this.sim;
@@ -356,9 +407,11 @@ export class Stage extends Phaser.Scene {
         else
             this.player.setMaxVelocity(300, 1000).setAccelerationX(move * 2200);
         this.player.setFlipX(this.direction < 0);
+        this.flightMount?.setPosition(this.player.x,this.player.y+15).setFlipX(this.direction<0).setDisplaySize(240,160+Math.sin(this.sim/160)*12);
+        this.flightPassenger?.setPosition(this.player.x-this.direction*34,this.player.y-27).setFlipX(this.direction<0);
         this.player.setTexture(move && body.blocked.down && Math.floor(this.sim / 130) % 2 === 1 ? 'playerRun' : 'player');
         this.player.setAlpha(this.sim < this.invulnerableUntil ? 0.65 : 1);
-        if (input.consume('cycle')) {
+        if (input.consume('cycle')&&this.mapDef.mode!=='flight') {
             const list = this.host.save.weapons;
             this.host.save.equippedWeapon = list[(list.indexOf(this.host.save.equippedWeapon) + 1) % list.length];
             this.host.persist();
@@ -366,19 +419,22 @@ export class Stage extends Phaser.Scene {
         }
         if (input.digits !== null) {
             const id = `W0${input.digits}` as WeaponId;
-            if (this.host.save.weapons.includes(id)) {
+            if (this.mapDef.mode!=='flight'&&this.host.save.weapons.includes(id)) {
                 this.host.save.equippedWeapon = id;
                 this.host.persist();
                 this.host.changed();
             }
             input.digits = null;
         }
-        const smartNearby=this.objects.filter(o=>o.def.kind!=='checkpoint'&&Math.abs(o.def.x-this.player.x)<90&&Math.abs(o.def.y-this.player.y)<95).sort((a,b)=>Math.abs(a.def.x-this.player.x)-Math.abs(b.def.x-this.player.x))[0];
+        const smartNearby=this.objects.filter(o=>!o.def.flightRing && o.def.kind !== 'checkpoint' &&Math.abs(o.def.x-this.player.x)<90&&Math.abs(o.def.y-this.player.y)<95).sort((a,b)=>Math.abs(a.def.x-this.player.x)-Math.abs(b.def.x-this.player.x))[0];
         const primary=input.consume('primary');
         const primaryAttacks=primary&&(!smartNearby||smartNearby.def.kind==='shell'||smartNearby.def.kind==='remote');
         if ((input.consume('attack')||primaryAttacks) && !this.boom && !this.attack) {
-            const a = this.combat.start(this.host.save, this.sim);
+            const a = this.mapDef.mode==='flight'
+                ? this.sim>=this.flightAttackReady?{id:++this.flightAttackId,weapon:'W01' as const,damage:22,combo:1}:null
+                : this.combat.start(this.host.save, this.sim);
             if (a) {
+                if(this.mapDef.mode==='flight')this.flightAttackReady=this.sim+420;
                 this.attack = { ...a, start: this.sim, x: this.player.x, direction: this.direction };
                 this.host.sound('attack');
                 if (['W02','W04','W05'].includes(a.weapon))
@@ -402,7 +458,9 @@ export class Stage extends Phaser.Scene {
             }
         }
         for (const obj of this.objects) {
+            if(obj.def.flightRing&&!this.done(obj.def.id)&&Math.hypot((obj.def.x-this.player.x)/65,(obj.def.y-this.player.y)/80)<1)this.activate(obj.def);
             const done = this.done(obj.def.id);
+            if(obj.def.flightRing){obj.sprite.setVisible(!done);obj.label.setVisible(!done);}
             obj.sprite.setAlpha(done ? 0.45 : 1);
             obj.label.setText(`${done ? '✓ ' : ''}${obj.def.label}`);
             if (obj.def.kind === 'checkpoint' && !(obj.def.needs??[]).some(id=>!this.done(id)) && Math.abs(obj.def.x - this.player.x) < 65 && body.blocked.down) {
@@ -414,15 +472,18 @@ export class Stage extends Phaser.Scene {
             }
         }
         this.updateCrystal();
-        const nearby = this.objects.filter(o => o.def.kind !== 'checkpoint' && Math.abs(o.def.x - this.player.x) < 90 && Math.abs(o.def.y - this.player.y) < 95).sort((a, b) => Math.abs(a.def.x - this.player.x) - Math.abs(b.def.x - this.player.x))[0];
-        const hint = nearby ? `Space 행동 · ${nearby.def.label}` : '← → 이동  ·  ↑ 점프  ·  Space 행동';
+        const nearby = this.objects.filter(o => !o.def.flightRing && o.def.kind !== 'checkpoint' && Math.abs(o.def.x - this.player.x) < 90 && Math.abs(o.def.y - this.player.y) < 95).sort((a, b) => Math.abs(a.def.x - this.player.x) - Math.abs(b.def.x - this.player.x))[0];
+        const hint = nearby ? `Space 행동 · ${nearby.def.label}` : freeMove ? '← → 이동  ·  ↑ 상승  ↓ 하강  ·  Space 행동' : '← → 이동  ·  ↑ 점프  ·  Space 행동';
         if (hint !== this.latestHint) {
             this.hint.setText(hint);
             this.latestHint = hint;
         }
         if ((input.consume('interact')||(primary&&!primaryAttacks)) && nearby)
             this.interact(nearby.def);
-        if (this.player.y > 820) {
+        // Give a falling child a generous visible recovery window before
+        // returning to the last safe deck. This also avoids a one-frame
+        // instant reset when the camera or browser is under load.
+        if (this.player.y > 1020) {
             this.hurt(10);
             if (this.host.hp > 0) {
                 if(this.mapDef.id==='S07'){
@@ -466,6 +527,7 @@ export class Stage extends Phaser.Scene {
         }
     }
     private updateAdventure(dt:number) {
+        if(this.mapDef.mode==='flight')this.updateFlight();
         if(this.mapDef.id==='S07'){
             if(this.done('S07.wave.3')&&this.sinkAt===null)this.sinkAt=this.sim;
             for(const p of this.moving){p.body.setVelocity((movingPlatformX(p.def,this.sim)+p.def.w/2-p.rect.x)/Math.max(dt,1)*1000,(movingPlatformY(p.def,this.sim)+(p.def.x>=2600&&p.def.x<3300&&this.sinkAt!==null?Math.min(32,(this.sim-this.sinkAt)/3000*32):0)+p.def.h/2-p.rect.y)/Math.max(dt,1)*1000);p.top.setPosition(p.rect.x,p.rect.y-p.def.h/2+4);}
@@ -488,6 +550,30 @@ export class Stage extends Phaser.Scene {
         }else this.air=10000;
         if(this.mapDef.id==='S05')this.journey.setText(wet?(canBreatheUnderwater(this.host.save)?'○ 공기방울 보호 · 숨 쉬기 가능 / 자유 수영 아님':`숨 ${Math.ceil(this.air/1000)}초 · 물 밖으로 나가세요`):this.done('S05.rescue')?'나이라 구출 완료 · 선택 산호방과 바닷길이 열렸어요':'열쇠 → 왕관 장식 → 산호문 → 나이라');
     }
+    private updateFlight(){
+        const middle=this.mapDef.checkpoints.find(checkpoint=>checkpoint.id==='middle');
+        if(middle&&this.player.x>=middle.x&&this.host.save.checkpoint.checkpointId==='start'){
+            this.checkpoint('middle');
+            this.host.notice('하늘 쉼터에 저장했어요. 여기서 안전하게 이어갈 수 있어요.');
+        }
+        for(const hazard of this.flightHazards){
+            const {def,sprite,label}=hazard;
+            if(def.kind==='debris')sprite.y=120+((this.sim*.085+def.y*1.7)%410);
+            else sprite.y=def.y+Math.sin(this.sim/420+def.x)*14;
+            const pulse=1+Math.sin(this.sim/180+def.x)*.04;
+            sprite.setScale((def.kind==='gust'?.95:.7)*pulse).setRotation(def.kind==='debris'?Math.sin(this.sim/500+def.x)*.16:0);
+            label.setPosition(sprite.x,Phaser.Math.Clamp(sprite.y+def.radius+16,170,570)).setAlpha(.78+.2*Math.sin(this.sim/260+def.x)).setVisible(Math.abs(this.player.x-sprite.x)<440);
+            if(this.sim>=this.invulnerableUntil&&Math.abs(this.player.x-sprite.x)<def.radius+28&&Math.abs(this.player.y-sprite.y)<def.radius){
+                this.hurt(8);
+                this.player.setVelocityX(-190).setVelocityY(this.player.y<sprite.y?-170:170);
+                if(this.sim>=this.hazardNoticeAt){this.hazardNoticeAt=this.sim+1800;this.host.notice(def.kind==='gust'?'돌풍에 밀렸어요. 위나 아래의 넓은 길로 가세요.':'파편에 스쳤어요. 빛나는 예고선을 보고 피하세요.');}
+            }
+        }
+        const rings=this.mapDef.objects.filter(object=>object.flightRing);
+        const collected=rings.filter(ring=>this.done(ring.id)).length;
+        const calmed=this.enemies.filter(enemy=>enemy.def.kind==='kite'&&enemy.state==='defeated').length;
+        this.journey.setText(`선택 고리 ${collected}/${rings.length} · 연 ${calmed}/${this.enemies.filter(enemy=>enemy.def.kind==='kite').length} · Space 날개 공격 · 오른쪽 착륙장`);
+    }
     private checkpoint(id: string) { this.host.save.checkpoint = { stageId: this.mapDef.id, checkpointId: id }; this.host.persist(); this.host.changed(); }
     private hurt(base: number, element: 'normal' | 'lightning' = 'normal') { if ((this.mapDef.id==='S08'&&this.player.x>=crystalSafeStart)||this.sim < this.invulnerableUntil)
         return; const died = this.host.damage(base, element); this.invulnerableUntil = this.sim + (this.host.save.settings.difficulty === 'relaxed' ? 1500 : 1000); this.host.sound('hurt'); if (died) {
@@ -506,6 +592,7 @@ export class Stage extends Phaser.Scene {
     }
     private updateFlame(dt:number){
         if(this.host.input.consume('skill')){
+            if(this.mapDef.mode==='flight'){this.host.notice('비행 중에는 로크새의 날개 공격을 사용해요.');return;}
             const skill=this.host.save.equippedSkill;
             if(skill==='moonBridge'&&this.host.save.treasures.includes('T05')&&this.host.mp>=12&&this.sim>=this.flameReady){this.host.mp-=12;this.flameReady=this.sim+3000;this.bridgeUntil=this.sim+12000;this.flameUsed=this.sim;this.host.notice('달빛 다리가 12초 동안 이어져요.');this.host.changed();}
             else if(skill==='lotusShield'&&this.host.save.treasures.includes('T06')&&this.host.mp>=15&&this.sim>=this.flameReady){this.host.mp-=15;this.flameReady=this.sim+5000;this.invulnerableUntil=Math.max(this.invulnerableUntil,this.sim+2200);this.flameUsed=this.sim;this.host.notice('연꽃 방패가 2.2초 동안 피해를 막아요.');this.host.changed();}
@@ -564,7 +651,7 @@ export class Stage extends Phaser.Scene {
         }
         if (age >= 80 && age < 200) {
             const x = this.player.x + a.direction * 65;
-            this.slash.lineStyle(8, 0xffe4a0, 0.85);
+            this.slash.lineStyle(this.mapDef.mode==='flight'?13:8, this.mapDef.mode==='flight'?0xa8f2ed:0xffe4a0, 0.85);
             this.slash.beginPath();
             this.slash.arc(this.player.x, this.player.y, 100, a.direction > 0 ? -0.9 : Math.PI - 0.9, a.direction > 0 ? 0.9 : Math.PI + 0.9);
             this.slash.strokePath();
@@ -600,8 +687,9 @@ export class Stage extends Phaser.Scene {
         for (const e of this.enemies) {
             if (e.state === 'defeated')
                 continue;
-            e.label.setVisible(true);
-            const distance = Math.abs(this.player.x - e.sprite.x);
+            if(e.def.kind==='kite'&&e.state==='idle')e.sprite.y=e.def.y+Math.sin(this.sim/360+e.def.x)*18;
+            const distance = e.def.kind==='kite'?Phaser.Math.Distance.Between(this.player.x,this.player.y,e.sprite.x,e.sprite.y):Math.abs(this.player.x - e.sprite.x);
+            e.label.setVisible(distance<620);
             if (distance > 850)
                 continue;
             const isBoss = e.def.kind === 'captain' || e.def.kind === 'siren' || e.def.kind === 'boss';
@@ -615,18 +703,19 @@ export class Stage extends Phaser.Scene {
                 if(e.def.kind==='guardian')e.target=this.player.x;
                 e.sprite.clearTint();
                 if(this.mapDef.id==='S06')e.sprite.setTint(0xffaa65);
-                if (distance < (e.def.kind === 'archer' || e.def.kind === 'siren' ? 580 : 170)) {
+                if (distance < (e.def.kind === 'archer' || e.def.kind === 'siren' || e.def.kind==='kite' ? 580 : 170)) {
                     e.state = 'telegraph';
                     e.until = this.sim + (e.def.kind === 'captain' ? 1500 : 1200) * (this.host.save.settings.difficulty === 'relaxed' ? 1.3 : 1);
                     e.target = this.player.x;
+                    e.targetY = this.player.y;
                 }
-                else if (distance < 500 && e.def.kind !== 'siren' && e.def.kind !== 'archer') {
+                else if (distance < 500 && e.def.kind !== 'siren' && e.def.kind !== 'archer' && e.def.kind!=='kite') {
                     e.sprite.x += Math.sign(this.player.x - e.sprite.x) * Math.min(dt * 0.045, Math.abs(e.def.x - e.sprite.x) < 90 ? dt * 0.045 : 0);
                 }
             }
             else if (e.state === 'telegraph') {
                 e.sprite.setTint(0xffc773);
-                e.label.setText('⚠ 준비… 피하세요!');
+                e.label.setText(e.def.kind==='kite'?'⚠ 바람탄 예고… 피하세요!':'⚠ 준비… 피하세요!');
                 if (this.sim >= e.until) {
                     e.state = 'attack';
                     e.until = this.sim + 250;
@@ -637,13 +726,17 @@ export class Stage extends Phaser.Scene {
                             for (const vy of [-140, -55, 35])
                                 this.projectile(e.sprite.x, e.sprite.y, Math.sign(e.target - e.sprite.x) * 190, vy, false);
                     }
+                    else if (e.def.kind === 'kite'){
+                        const angle=Phaser.Math.Angle.Between(e.sprite.x,e.sprite.y,e.target,e.targetY);
+                        this.projectile(e.sprite.x,e.sprite.y,Math.cos(angle)*220,Math.sin(angle)*220,true);
+                    }
                     else if (e.def.kind === 'archer')
                         this.projectile(e.sprite.x, e.sprite.y, Math.sign(e.target - e.sprite.x) * 250, 0, false);
                 }
             }
             else if (e.state === 'attack') {
                 e.label.setText('✦');
-                if (!['archer', 'siren'].includes(e.def.kind) && Math.abs(this.player.x - e.sprite.x) < 112 && Math.abs(this.player.y - e.sprite.y) < 95)
+                if (!['archer', 'siren','kite'].includes(e.def.kind) && Math.abs(this.player.x - e.sprite.x) < 112 && Math.abs(this.player.y - e.sprite.y) < 95)
                     this.hurt(this.mapDef.id === 'S01' && !this.host.save.claimedRewardIds.includes('S01.heart.01') ? 10 : 14);
                 if (this.sim >= e.until) {
                     e.state = 'recover';
@@ -651,7 +744,7 @@ export class Stage extends Phaser.Scene {
                 }
             }
             else if (e.state === 'recover') {
-                e.label.setText('빈틈 · J 공격');
+                e.label.setText(`빈틈 · ${this.mapDef.mode==='flight'?'Space':'J'} 공격`);
                 if (this.sim >= e.until)
                     e.state = 'idle';
             }
@@ -683,7 +776,7 @@ export class Stage extends Phaser.Scene {
     private updateLightning() {
         this.warnings.clear();
         for (const enemy of this.enemies) {
-            if (enemy.state === 'telegraph' && !['siren', 'archer'].includes(enemy.def.kind)) {
+            if (enemy.state === 'telegraph' && !['siren', 'archer','kite'].includes(enemy.def.kind)) {
                 this.warnings.lineStyle(3, 0xffd28d).strokeRect(enemy.sprite.x - 112, enemy.sprite.y - 60, 224, 110);
             }
         }
@@ -720,7 +813,14 @@ export class Stage extends Phaser.Scene {
             return;
         }
         if(def.requiresItems?.some(id=>!this.host.save.treasures.includes(id))){this.host.notice(`${def.requiresItems.join(' · ')} 보물을 얻은 뒤 다시 와 주세요.`);return;}
-        if(def.kind==='bridge'&&(!this.host.save.treasures.includes('T05')||this.sim>=this.bridgeUntil)){this.host.notice('가방에서 도깨비의 방울을 선택하고 R로 달빛 다리를 만드세요.');return;}
+        if(def.kind==='bridge'&&!this.done(def.id)){
+            if(!this.host.save.treasures.includes('T05')){this.host.notice('도깨비의 방울을 얻으면 이 길을 열 수 있어요.');return;}
+            if(this.sim>=this.bridgeUntil){
+                if(this.host.mp<12){this.host.notice('보물의 힘이 회복되고 있어요. 잠시 뒤 행동을 눌러 주세요.');return;}
+                this.host.mp-=12;this.bridgeUntil=this.sim+12000;this.flameUsed=this.sim;
+                this.host.sound('reward');this.host.changed();
+            }
+        }
         if(def.kind==='mirror'){if(this.done('S08.light')){this.host.notice('별빛 문은 이미 열려 있어요. 연결은 유지됩니다.');return;}const index=Number(def.id.at(-1))-1;this.mirrorDirections=rotateMirror(this.mirrorDirections,index);this.host.sound('reward');if(connectedMirrors(this.mirrorDirections)===3)this.activate(this.mapDef.objects.find(o=>o.id==='S08.light')!);return;}
         if(def.kind==='lightGate'){this.host.notice(this.done(def.id)?'별빛이 문을 열었어요.':'벽화의 별자리를 보고 거울 세 개를 E로 회전하세요.');return;}
         if(['truthGift','vision','journal','gift'].includes(def.kind)){this.activate(def);this.host.dialogue(def.dialogue!,()=>{this.invulnerableUntil=this.sim+2000;});return;}

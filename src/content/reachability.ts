@@ -49,7 +49,9 @@ export function mapReachabilityIssues(map: MapDef) {
         if (!reachable.has(index))
             issues.push(`${map.id}: unreachable platform ${index + 1} at (${platform.x},${platform.y})`);
     });
-    const supported = (x: number, y: number) => [...reachable].some(index => {
+    const supported = (x: number, y: number) => (map.mode === 'flight' || map.mode === 'swim')
+        ? x >= 24 && x <= map.width - 24 && y >= 120 && y <= 560
+        : [...reachable].some(index => {
         const platform = map.platforms[index];
         const travel = platform.motion?.travel ?? 0;
         const withinX = x >= platform.x - 70 - travel && x <= platform.x + platform.w + 70 + travel;
@@ -62,5 +64,14 @@ export function mapReachabilityIssues(map: MapDef) {
     for (const heart of map.hearts)
         if (!supported(heart.x, heart.y))
             issues.push(`${heart.id}: no reachable pickup position`);
+    for(const hazard of map.flightHazards??[]){
+        if(map.mode!=='flight')issues.push(`${hazard.id}: flight hazard outside flight map`);
+        if(hazard.x-hazard.radius<30||hazard.x+hazard.radius>map.width-30||hazard.y<120||hazard.y>550)
+            issues.push(`${hazard.id}: hazard outside controllable flight area`);
+        const clearanceAbove=hazard.y-hazard.radius-120;
+        const clearanceBelow=550-(hazard.y+hazard.radius);
+        if(Math.max(clearanceAbove,clearanceBelow)<72)
+            issues.push(`${hazard.id}: no child-safe route around hazard`);
+    }
     return issues;
 }

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="96" height="128" viewBox="0 0 96 128">
+  <defs><linearGradient id="silk" x2="0" y2="1"><stop stop-color="#f39b68"/><stop offset="1" stop-color="#9f4052"/></linearGradient><filter id="shade"><feDropShadow dx="0" dy="3" stdDeviation="2" flood-color="#17384a" flood-opacity=".45"/></filter></defs>
+  <g filter="url(#shade)" stroke="#273f55" stroke-width="3" stroke-linejoin="round">
+    <path d="M48 10 84 53 48 87 12 53Z" fill="url(#silk)"/><path d="M48 10v77M12 53h72" fill="none" stroke="#ffd895" stroke-width="2"/>
+    <path d="M23 41q25 18 50 0M23 65q25-18 50 0" fill="none" stroke="#ffe9b1" stroke-width="4" opacity=".8"/>
+    <path d="M48 87q-18 12 2 20t-3 17" fill="none" stroke="#e9c27b"/><path d="m42 100-11 5 10 8m15-5 11 5-12 7" fill="#65b6a5"/>
+  </g>
+  <circle cx="37" cy="51" r="3" fill="#253a4d"/><circle cx="59" cy="51" r="3" fill="#253a4d"/><path d="M40 65q8 5 16 0" fill="none" stroke="#253a4d" stroke-width="3" stroke-linecap="round"/>
+</svg>

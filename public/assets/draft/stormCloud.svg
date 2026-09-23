@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="96" height="128" viewBox="0 0 96 128">
+  <defs><linearGradient id="cloud" x2="0" y2="1"><stop stop-color="#8ccbd1"/><stop offset="1" stop-color="#3d7184"/></linearGradient><filter id="glow"><feGaussianBlur stdDeviation="3"/></filter></defs>
+  <ellipse cx="49" cy="65" rx="42" ry="30" fill="#b4f3ea" opacity=".3" filter="url(#glow)"/>
+  <path d="M14 72q-2-18 17-21 5-22 26-17 12 2 15 17 18 0 17 18-1 13-17 15H30Q15 83 14 72Z" fill="url(#cloud)" stroke="#214a60" stroke-width="3"/>
+  <path d="M20 91q13 7 25 0M49 101q14 7 27-1M26 111q17 8 34 0" fill="none" stroke="#bdf7e9" stroke-width="4" stroke-linecap="round"/>
+  <path d="m49 55-8 15h9l-5 14 17-20h-9l7-9Z" fill="#ffe595" stroke="#805f45" stroke-width="2"/>
+</svg>

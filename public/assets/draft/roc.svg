@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="96" height="128" viewBox="0 0 96 128">
+<defs><linearGradient id="feather" x2=".2" y2="1"><stop stop-color="#fff9df"/><stop offset=".6" stop-color="#c9e8e5"/><stop offset="1" stop-color="#5899ae"/></linearGradient><linearGradient id="gold" x2="0" y2="1"><stop stop-color="#ffe8a6"/><stop offset="1" stop-color="#dc973f"/></linearGradient></defs>
+<g stroke="#244e62" stroke-width="2" stroke-linejoin="round">
+<path d="M43 72Q22 37 4 31L8 56 1 51 10 76 5 76Q18 94 38 93L47 106 57 91Q75 91 93 74L85 74 95 49 86 55 90 32Q67 43 55 70" fill="url(#feather)"/>
+<path d="M15 49l19 31M16 66l18 18M82 50L62 80M82 67L64 84" fill="none" stroke="#77acb9" stroke-width="1.5"/>
+<path d="M38 80Q38 65 51 66L62 59Q76 56 77 68L88 73 76 79Q74 96 55 99L43 96Q35 92 38 80" fill="url(#feather)"/>
+<path d="M77 68l12 5-13 5" fill="url(#gold)"/>
+<path d="M39 82q12 7 23-2l-2 12q-11 5-20-1z" fill="#5b537b"/>
+<path d="M43 86l13 1" stroke="#ecc77c"/>
+<path d="M44 99l-4 8m17-8 1 8" stroke="#e3b466"/>
+</g><circle cx="71" cy="68" r="2.4" fill="#183849"/><circle cx="71.5" cy="67.5" r=".8" fill="white"/>
+</svg>

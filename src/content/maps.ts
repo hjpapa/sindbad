@@ -12,8 +12,15 @@ export interface Spawn {
     id: string;
     x: number;
     y: number;
-    kind: 'skeleton' | 'archer' | 'captain' | 'crab' | 'siren' | 'spirit' | 'guardian' | 'bat' | 'bandit' | 'beast' | 'boss';
+    kind: 'skeleton' | 'archer' | 'captain' | 'crab' | 'siren' | 'spirit' | 'guardian' | 'bat' | 'bandit' | 'beast' | 'boss' | 'kite';
     hp: number;
+}
+export interface FlightHazard {
+    id: string;
+    x: number;
+    y: number;
+    radius: number;
+    kind: 'gust' | 'debris';
 }
 export interface ObjectDef {
     id: string;
@@ -21,6 +28,7 @@ export interface ObjectDef {
     y: number;
     kind: 'npc' | 'bell' | 'shell' | 'chest' | 'exit' | 'rod' | 'crisis' | 'checkpoint' | 'remote' | 'gear' | 'key' | 'gate' | 'rescue' | 'golden' | 'torch' | 'furnace' | 'vine' | 'flameGift' | 'rope' | 'descent' | 'mirror' | 'lightGate' | 'truthGift' | 'vision' | 'journal' | 'quest' | 'gift' | 'bridge' | 'ending';
     label: string;
+    flightRing?: boolean;
     needs?: string[];
     reward?: string;
     rewards?: string[];
@@ -36,6 +44,7 @@ export interface MapDef {
     mode?: 'ground' | 'flight' | 'swim' | 'peace';
     peaceful?: boolean;
     water?: { x:number; y:number; w:number; h:number }[];
+    flightHazards?: FlightHazard[];
     platforms: Platform[];
     spawns: Spawn[];
     objects: ObjectDef[];

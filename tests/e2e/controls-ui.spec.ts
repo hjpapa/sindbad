@@ -30,7 +30,7 @@ test('simple controls jump, smart action attacks, monster fades, and phone UI fi
     await expect.poll(async()=>(await state(page)).enemies.find(enemy=>enemy.id==='S01.enemy.skeleton.01')?.state).toBe('defeated');
     await expect.poll(async()=>(await state(page)).enemies.find(enemy=>enemy.id==='S01.enemy.skeleton.01')?.visible).toBe(false);
     await page.setViewportSize({width:844,height:390});
-    const controls=page.locator('#touch button');
+    const controls=page.locator('#touch button:visible');
     await expect(controls).toHaveCount(4);
     for(const button of await controls.all()){
         const box=await button.boundingBox();

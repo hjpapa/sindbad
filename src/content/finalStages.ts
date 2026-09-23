@@ -7,8 +7,8 @@ interface Blueprint {
 }
 
 export const finalBlueprints:Blueprint[]=[
- {id:'S09',visual:'sky',title:'로크새 둥지',steps:['둥지 봉인 ①','둥지 봉인 ②','둥지 봉인 ③'],rewards:['T03'],boss:'저주받은 로크새',npc:'어린 로크',intro:['몸이 아니라 검은 저주의 핵을 깨뜨려 주세요.','세 봉인을 풀면 로크새의 마음이 돌아올 거예요.'],outro:['하늘 깃털 T03이 바람을 기억했어요.','공중에서 Space를 한 번 더 누르면 이단 점프를 할 수 있어요.']},
- {id:'S10',visual:'sky',mode:'flight',title:'구름 고리',steps:['구름 고리 ①','구름 고리 ②','구름 고리 ③'],flags:['flightJournal'],npc:'바람 안내자',intro:['하늘 깃털이 지정 비행 구간을 열었어요.','방향키로 구름 고리를 지나가세요.'],outro:['첫 비행 기록을 항해 일지에 남겼어요.']},
+ {id:'S09',visual:'sky',title:'로크새 둥지',steps:['둥지 봉인 ①','둥지 봉인 ②','둥지 봉인 ③'],rewards:['T03'],boss:'저주받은 로크새',npc:'어린 로크',intro:['몸이 아니라 검은 저주의 핵을 깨뜨려 주세요.','세 봉인을 풀면 로크새의 마음이 돌아올 거예요.'],outro:['하늘 깃털 T03이 바람을 기억했어요.','공중에서 ↑ 점프를 한 번 더 누르면 이단 점프를 할 수 있어요.']},
+ {id:'S10',visual:'sky',mode:'flight',title:'구름 고리',steps:['구름 고리 ①','구름 고리 ②','구름 고리 ③'],flags:['flightJournal'],npc:'바람 안내자',intro:['신밧드: 좋아, 이번에는 네가 선장이야!','↑로 상승, ↓로 하강해요. 선택 고리를 통과하면 금화를 얻고, 오른쪽 착륙장으로 가면 돼요.','공중 연은 피하거나 Space 날개 공격으로 저주를 풀 수 있어요.'],outro:['첫 비행 기록을 항해 일지에 남겼어요.','구름 위에서 찾은 길은 다음 귀환 항로가 되었어요.']},
  {id:'S11',visual:'volcano',title:'화산 능선',steps:['반사석 ①','반사석 ②','반사석 ③','상승 기류'],rewards:['W04'],optional:'G03',boss:'용암 수호자',npc:'불꽃 광부',intro:['반사석 세 개로 용암빛을 돌려 주세요.','상승 기류를 타면 수호자의 저주 핵에 닿을 수 있어요.'],outro:['태양 활 W04가 깨어났어요. 멀리 있는 표적을 안전하게 맞힐 수 있어요.']},
  {id:'S12',visual:'volcano',title:'독 안개의 용',steps:['독 분출구 ①','독 분출구 ②','바람 정화 장치'],rewards:['R03'],boss:'독 안개의 용',npc:'산길 약초사',intro:['분출구를 닫아 독 안개부터 걷어 주세요.','용도 저주에 사로잡혔어요. 빛으로 돌려보내요.'],outro:['독을 줄이는 바람 부적 R03을 얻었어요.']},
  {id:'S13',visual:'village',mode:'peace',title:'집으로',steps:['목재 꾸러미 ①','목재 꾸러미 ②','목재 꾸러미 ③','하미드와 인사','마진과 인사'],flags:['upgradeShop'],npc:'어머니',intro:['긴 항해 뒤에는 집을 돌보는 시간도 필요하단다.','목재를 모아 침상을 고치고 친구들과 인사하렴.'],outro:['집의 침상과 무기 강화 상점이 열렸어요. 체력과 마력이 모두 회복됐어요.']},
@@ -31,7 +31,7 @@ export const finalBlueprints:Blueprint[]=[
  {id:'S30',visual:'tower',title:'일곱 보물의 방',steps:['보물 받침 ①','보물 받침 ②','보물 받침 ③','보물 받침 ④','보물 받침 ⑤','보물 받침 ⑥','보물 받침 ⑦'],rewards:['W07'],npc:'별의 기록자',intro:['일곱 보물을 받침에 비춰 길을 여세요.','보물은 바치는 것이 아니니 모두 그대로 간직해요.'],outro:['일곱 빛이 합쳐져 별빛 쌍검 W07을 만들었어요.']},
  {id:'S31',visual:'tower',title:'쿠우라의 봉인',steps:['탑의 봉인 ①','탑의 봉인 ②','아리아나의 결계'],flags:['kuuraSealed'],boss:'마법사 쿠우라',npc:'아리아나의 목소리',intro:['두 봉인을 풀면 쿠우라의 저주 핵이 드러나요.','일곱 보물의 빛으로 검은 마법을 봉인해요.'],outro:['쿠우라의 마법이 봉인되고 탑에 아침빛이 들어왔어요.']},
  {id:'S32',visual:'tower',title:'별의 감옥',steps:['별자리 ①','별자리 ②','별자리 ③','아리아나 구출'],rewards:['R07'],flags:['arianaRescued'],npc:'아리아나',intro:['별자리 세 개를 함께 맞춰 주세요.','마지막 문은 두 사람의 빛이 만나야 열려요.'],outro:['아리아나를 구하고 별의 약속 R07을 얻었어요.']},
- {id:'S33',visual:'sky',mode:'flight',title:'왕국으로',steps:['귀환 고리 ①','귀환 고리 ②','귀환 고리 ③'],flags:['kingdomReturn'],npc:'로크새',intro:['로크새와 함께 왕국으로 돌아가요.','폭풍 구름 사이의 세 고리를 통과하세요.'],outro:['왕국의 등대가 보이기 시작했어요.']},
+ {id:'S33',visual:'sky',mode:'flight',title:'왕국으로',steps:['귀환 고리 ①','귀환 고리 ②','귀환 고리 ③'],flags:['kingdomReturn'],npc:'아리아나와 로크새',intro:['아리아나: 내가 그린 지도에 없던 길이네요.','신밧드: 그럼 함께 새로 그리면 되겠네요.','↑로 상승, ↓로 하강해요. 낙하 파편의 빈 길을 찾고, 고리는 놓쳐도 괜찮아요.'],outro:['아리아나가 새 귀환 항로를 지도에 그렸어요.','왕국의 등대가 보이기 시작했어요.']},
  {id:'S34',visual:'kingdom',mode:'peace',title:'왕에게 보내는 편지',steps:['항해 지도 정리','일곱 보물 기록','왕에게 편지 전달'],flags:['festivalUnlocked'],npc:'왕',intro:['모험의 지도와 보물 기록을 정리해 주세요.','완성한 편지를 왕에게 전달하면 축제가 열려요.'],outro:['왕국의 귀환 축제가 열렸어요.']},
  {id:'S35',visual:'kingdom',mode:'peace',title:'약속의 축제',steps:['등불 준비','음악 준비','항해 깃발 준비'],flags:['wedding'],npc:'아리아나',intro:['세 가지 축제 준비를 친구들과 마쳐요.','모두가 기다린 약속의 날이에요.'],outro:['신밧드와 아리아나가 바다 앞에서 약속을 나눴어요.']},
  {id:'S36',visual:'kingdom',mode:'peace',title:'새 항해의 아침',steps:['도서관 전시 ①','도서관 전시 ②','항구 전시 ③','새 항해의 종'],flags:['ending'],npc:'이야기꾼',intro:['완성한 항해 기록을 도서관과 항구에서 돌아봐요.','마지막 종을 울려도 모든 스테이지를 다시 방문할 수 있어요.'],outro:['일곱 보물과 바다의 약속. 새로운 항해가 시작됩니다.']},
@@ -42,8 +42,21 @@ const makeMap=(b:Blueprint,index:number):MapDef=>{
  const width=Math.max(3000,1900+b.steps.length*270);
  const stepGap=(width-1150)/(b.steps.length+1);
  const stepObjects:ObjectDef[]=b.steps.map((label,i)=>({id:`${b.id}.quest.${i+1}`,x:520+stepGap*(i+1),y:550,kind:b.id==='S26'&&i===0?'bridge':'quest',label:`${label} · E`,needs:i?[`${b.id}.quest.${i}`]:undefined}));
- const needs=[stepObjects.at(-1)!.id];
- const spawns:Spawn[]=b.mode==='peace'?[]:[0,1,2].map(i=>({id:`${b.id}.enemy.${i+1}`,x:800+i*(width-1500)/2,y:550,kind:i===2&&b.boss?'boss':b.visual==='jungle'?'beast':'bandit',hp:i===2&&b.boss?150:40+index}));
+ if(b.mode==='flight'){
+   if(b.id==='S33')for(let i=4;i<=5;i++)stepObjects.push({id:`${b.id}.quest.${i}`,x:0,y:0,kind:'quest',label:`귀환 고리 ${i}`});
+   stepObjects.forEach((ring,i)=>{
+     ring.x=700+i*(1500/(stepObjects.length-1));
+     ring.y=[360,210,390,240,360][i];
+     ring.flightRing=true;ring.needs=undefined;
+     ring.label=`선택 고리 ${i+1}/${stepObjects.length}`;
+     if(b.id==='S10')ring.reward='coins';
+   });
+ }
+ const needs=b.mode==='flight'?[]:[stepObjects.at(-1)!.id];
+ const flightEnemyCount=b.id==='S10'?6:b.id==='S33'?5:0;
+ const spawns:Spawn[]=flightEnemyCount
+  ? Array.from({length:flightEnemyCount},(_,i)=>({id:`${b.id}.enemy.${i+1}`,x:900+i*((width-1450)/(flightEnemyCount-1)),y:[300,440,220,370,250,420][i],kind:'kite' as const,hp:26+Math.floor(index/5)}))
+  : b.mode==='peace'?[]:[0,1,2].map(i=>({id:`${b.id}.enemy.${i+1}`,x:800+i*(width-1500)/2,y:550,kind:i===2&&b.boss?'boss':b.visual==='jungle'?'beast':'bandit',hp:i===2&&b.boss?150:40+index}));
  if(b.boss)needs.push(spawns.at(-1)!.id);
  const gift:ObjectDef={id:`${b.id}.reward`,x:width-520,y:550,kind:'gift',label:`${b.rewards?.join(' · ')||'항해 기록'} · E`,needs,rewards:b.rewards,rewardFlags:b.flags,dialogue:`${b.id}.outro`};
  const objects:ObjectDef[]=[{id:`${b.id}.intro`,x:230,y:550,kind:'npc',label:`${b.npc} · E`,dialogue:`${b.id}.intro`},...stepObjects];
@@ -53,7 +66,10 @@ const makeMap=(b:Blueprint,index:number):MapDef=>{
  // trapped by the side of a decorative ledge. Visual depth lives in the
  // parallax background; handcrafted jump routes remain in S01-S08.
  const platforms:Platform[]=[ground(0,width)];
- return {id:b.id,width,theme:'adventure',visual:b.visual,mode:b.mode??'ground',peaceful:b.mode==='peace',objective:`${b.steps.join(' → ')}${b.boss?` → ${b.boss}`:''}`,platforms,spawns,objects,hearts:b.mode==='peace'?[]:[{id:`${b.id}.heart.1`,x:Math.round(width*.45),y:550},{id:`${b.id}.heart.2`,x:Math.round(width*.76),y:550,large:true}],checkpoints:[{id:'start',x:120,y:548},{id:'middle',x:Math.round(width*.52),y:548}]};
+ const flightHazards=b.id==='S10'?
+  [{id:'S10.gust.1',x:1150,y:455,radius:62,kind:'gust' as const},{id:'S10.gust.2',x:1680,y:300,radius:70,kind:'gust' as const},{id:'S10.gust.3',x:2210,y:170,radius:62,kind:'gust' as const}]:
+  b.id==='S33'?[{id:'S33.debris.1',x:850,y:190,radius:48,kind:'debris' as const},{id:'S33.debris.2',x:1250,y:390,radius:48,kind:'debris' as const},{id:'S33.debris.3',x:1650,y:230,radius:48,kind:'debris' as const},{id:'S33.debris.4',x:2050,y:430,radius:48,kind:'debris' as const},{id:'S33.debris.5',x:2450,y:280,radius:48,kind:'debris' as const}]:undefined;
+ return {id:b.id,width,theme:'adventure',visual:b.visual,mode:b.mode??'ground',peaceful:b.mode==='peace',objective:b.mode==='flight'?'↑ 상승 · ↓ 하강 → 오른쪽 착륙장 (고리·공중 적은 선택)':`${b.steps.join(' → ')}${b.boss?` → ${b.boss}`:''}`,platforms,spawns,objects,hearts:b.mode==='peace'?[]:[{id:`${b.id}.heart.1`,x:Math.round(width*.45),y:550},{id:`${b.id}.heart.2`,x:Math.round(width*.76),y:550,large:true}],checkpoints:[{id:'start',x:120,y:548},{id:'middle',x:Math.round(width*.52),y:548}],flightHazards};
 };
 
 export const finalMaps=Object.fromEntries(finalBlueprints.map((b,i)=>[b.id,makeMap(b,i)])) as Record<string,MapDef>;

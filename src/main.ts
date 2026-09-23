@@ -55,7 +55,8 @@ const host: Host = {
         startStage(s.nextStageId!); }; el('world').onclick = mapMenu; },
 };
 function panel(html: string) {
-    html=html.replace('S01~S08 플레이 가능 · S09~S36 개발 중','S01~S36 전체 항해 가능').replace('M0 + M1 · M2 진행 중 · S01–S08<br>ART_DRAFT · 자체 제작 간이 아트 / 최종 웹툰 아트 제작 예정','M0–M6 · S01–S36 플레이 가능<br>ORIGINAL VECTOR ART · 자체 제작 / 외부 이미지 없음');
+    audio.setPaused(true);
+    html=html.replace('S01~S08 플레이 가능 · S09~S36 개발 중','S01~S36 전체 항해 가능').replace('M0 + M1 · M2 진행 중 · S01–S08<br>ART_DRAFT · 자체 제작 간이 아트 / 최종 웹툰 아트 제작 예정','M0–M6 · S01–S36 플레이 가능<br>ART_DRAFT · 자체 제작 벡터 / 최종 애니메이션 작업 중');
     if(html.includes('<div class="equipment">')){
         html=html.replace('<button id="flame-skill" class="selected">','<button id="flame-skill" data-skill="flamePulse" class="'+(host.save.equippedSkill==='flamePulse'?'selected':'')+'">');
         const late=ownedActiveSkills(host.save).filter(([id])=>id!=='flamePulse').map(([id,skill])=>`<button data-skill="${id}" ${host.save.equippedSkill===id?'class="selected"':''}>${skill.name}<small>${skill.detail}</small></button>`).join('');
@@ -66,8 +67,8 @@ function panel(html: string) {
     host.input.clear();
     overlay.querySelector<HTMLButtonElement>('button')?.focus();
 }
-function resume() { overlay.hidden = true; stage.freeze(false); canvas.focus(); host.changed(); }
-function boot(s: Save) { host.save = s; host.hp = maxHp(s); host.mp = maxMp(s); audio.unlock(); audio.setMusic(s.settings.musicVolume); overlay.hidden = true; hud.hidden = false; touch.hidden = false; hudCache = ''; if (game) {
+function resume() { overlay.hidden = true; stage.freeze(false); audio.setPaused(false); canvas.focus(); host.changed(); }
+function boot(s: Save) { host.save = s; host.hp = maxHp(s); host.mp = maxMp(s); audio.unlock(); audio.setMusic(s.settings.musicVolume); audio.setPaused(false); overlay.hidden = true; hud.hidden = false; touch.hidden = false; hudCache = ''; if (game) {
     stage.scene.restart();
     canvas.focus();
     return;
@@ -76,8 +77,8 @@ function startStage(id: string) { if (!maps[id] || !canEnter(host.save, id)) {
     notice('아직 개발 중이거나 앞선 항로를 먼저 완료해야 해요.');
     return;
 } host.save.checkpoint = { stageId: id, checkpointId: 'start' }; host.persist(); boot(host.save); }
-function renderHud() { const skillButton=touch.querySelector<HTMLButtonElement>('[data-action=skill]'); if(skillButton)skillButton.hidden=!host.save.treasures.includes('T01'); const s = host.save, p = progression(s.totalXp), def = campaign.find(x => x.id === s.checkpoint.stageId)!; const html = `<div class="stats"><span class="stage-number">${def.id}</span><div><b>♥ ${Math.ceil(host.hp)} <span>/ ${maxHp(s)}</span></b><meter aria-label="체력" min="0" max="${maxHp(s)}" value="${host.hp}"></meter></div><div><b>Lv.${p.level}</b><small>XP ${p.xpIntoLevel} / ${p.nextXp || 'MAX'} · MP ${Math.floor(host.mp)} / ${maxMp(s)}</small></div></div><div class="mission"><small>현재 항로</small><strong>${def.title}</strong><span>${maps[def.id]?.objective ?? '개발 중'}</span></div><div class="hud-actions">${def.id==='S08'?'<button id="reset-mirrors">거울 초기화</button>':''}<span>◈ ${s.coins}</span><button id="bag" aria-label="가방과 지도">가방 M</button><button id="pause" aria-label="일시정지">Ⅱ</button></div><div class="weapon-chip">${weapons[s.equippedWeapon].name} <span>${s.weapons.length > 1 ? 'Q 교체' : 'J 공격'}</span>${s.treasures.includes('T01')?' · 불꽃 R':''}${s.relics.map(r => ` · ${r === 'R01' ? '메달' : r === 'R02' ? '폭풍 수정' : ''}`).join('')}</div>`; if (html === hudCache)
-    return; hudCache = html; hud.innerHTML = html; const skill=s.equippedSkill?activeSkills[s.equippedSkill]:null; const chip=hud.querySelector<HTMLElement>('.weapon-chip'); if(chip&&skill)chip.innerHTML=chip.innerHTML.replace(' · 불꽃 R','')+` · ${skill.short} R`; if(skillButton){skillButton.hidden=!skill;skillButton.textContent=skill?.short??'능력';skillButton.setAttribute('aria-label',`터치 ${skill?.name??'보물 능력'}`);} if(def.id==='S08')el('reset-mirrors').onclick=()=>{stage.resetMirrors();canvas.focus();}; el('bag').onclick = mapMenu; el('pause').onclick = pauseMenu; root.classList.toggle('large-text', s.settings.largeText); }
+function renderHud() { const skillButton=touch.querySelector<HTMLButtonElement>('[data-action=skill]'); const downButton=touch.querySelector<HTMLButtonElement>('[data-action=down]'); const mode=maps[host.save.checkpoint.stageId]?.mode; if(downButton)downButton.hidden=mode!=='flight'&&mode!=='swim'; const s = host.save, p = progression(s.totalXp), def = campaign.find(x => x.id === s.checkpoint.stageId)!; const html = `<div class="stats"><span class="stage-number">${def.id}</span><div><b>♥ ${Math.ceil(host.hp)} <span>/ ${maxHp(s)}</span></b><meter aria-label="체력" min="0" max="${maxHp(s)}" value="${host.hp}"></meter></div><div><b>Lv.${p.level}</b><small>XP ${p.xpIntoLevel} / ${p.nextXp || 'MAX'} · MP ${Math.floor(host.mp)} / ${maxMp(s)}</small></div></div><div class="mission"><small>현재 항로</small><strong>${def.title}</strong><span>${maps[def.id]?.objective ?? '개발 중'}</span></div><div class="hud-actions">${def.id==='S08'?'<button id="reset-mirrors">거울 초기화</button>':''}<span>◈ ${s.coins}</span><button id="bag" aria-label="가방과 지도">가방 M</button><button id="pause" aria-label="일시정지">Ⅱ</button></div><div class="weapon-chip">${mode==='flight'?'로크의 날개':weapons[s.equippedWeapon].name} <span>${mode==='flight'?'Space 공격':s.weapons.length > 1 ? 'Q 교체' : 'J 공격'}</span>${mode==='flight'?'':s.treasures.includes('T01')?' · 불꽃 R':''}${s.relics.map(r => ` · ${r === 'R01' ? '메달' : r === 'R02' ? '폭풍 수정' : ''}`).join('')}</div>`; if (html === hudCache)
+    return; hudCache = html; hud.innerHTML = html; const skill=s.equippedSkill?activeSkills[s.equippedSkill]:null; const chip=hud.querySelector<HTMLElement>('.weapon-chip'); if(chip&&skill&&mode!=='flight')chip.innerHTML=chip.innerHTML.replace(' · 불꽃 R','')+` · ${skill.short} R`; if(skillButton){skillButton.hidden=!skill||mode==='flight';skillButton.textContent=skill?.short??'능력';skillButton.setAttribute('aria-label',`터치 ${skill?.name??'보물 능력'}`);} if(def.id==='S08')el('reset-mirrors').onclick=()=>{stage.resetMirrors();canvas.focus();}; el('bag').onclick = mapMenu; el('pause').onclick = pauseMenu; root.classList.toggle('large-text', s.settings.largeText); }
 function exportSave(s: Save = host.save) { const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([JSON.stringify(s, null, 2)], { type: 'application/json' })); a.download = 'sinbad-save.json'; a.click(); window.setTimeout(() => URL.revokeObjectURL(a.href), 1000); }
 function confirmReplace(text: string, accept: () => void, back: () => void) { panel(`<h2>저장 변경 확인</h2><p>${text}</p><p>현재 기록을 먼저 파일로 보관할 수 있어요.</p><div class="buttons"><button id="backup-export">현재 기록 내보내기</button><button id="confirm" class="secondary">기존 기록을 바꾸고 진행</button><button id="cancel" class="secondary">취소</button></div>`); el('backup-export').onclick = () => exportSave(); el('confirm').onclick = accept; el('cancel').onclick = back; }
 async function importFile(file: File) { try {
@@ -115,7 +116,7 @@ else
 const actions: [
     Action,
     string
-][] = [['left', '←'], ['right', '→'], ['jump', '↑'], ['primary', '행동']];
+][] = [['left', '←'], ['right', '→'], ['jump', '↑'], ['down', '↓'], ['skill', '능력'], ['primary', '행동']];
 for (const [action, label] of actions) {
     const b = document.createElement('button');
     b.textContent = label;
