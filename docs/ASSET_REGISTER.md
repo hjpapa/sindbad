@@ -1,5 +1,36 @@
 # 자산 등록 · ART_DRAFT
 
+## 장별 웹툰 아트 적용 · 2026-10-02
+
+실제 배포 파일은 `src/content/assets.manifest.ts`가 관리한다. 이번 원화 25종은 OpenAI 내장 imagegen으로 본 프로젝트를 위해 생성했다. 제작 지시는 `docs/ART_PROMPTS.md`에 기록했으며 특정 작품·작가·기존 게임 이미지는 사용하지 않았다. 원본은 Codex의 generated_images에 보관했고 저장소에는 보이는 RGBA 동일성을 검사한 무손실 WebP를 넣었다. 실행 중 외부 AI 서비스는 호출하지 않는다. 프로젝트에서 사용·수정하는 원본이며 최종 아트 승인 전이다.
+
+| 실제 파일 (`public/assets/webtoon/`) | 크기 | 적용 |
+|---|---|---|
+| chapter-1.webp | 1536×1024 | S01~S05 항구·바다 |
+| chapter-2.webp | 1536×1024 | S06~S10 불꽃·수정·로크 둥지 |
+| chapter-3.webp | 1536×1024 | S11~S15 보석 골짜기·마을·부엌 |
+| chapter-4.webp | 1536×1024 | S16~S19 해저 궁전·해적선·검은 탑 |
+| chapter-5.webp | 1536×1024 | S20~S25 정글·달의 신전 |
+| chapter-6.webp | 1536×1024 | S26~S29 인도 항구·연꽃 정원 |
+| chapter-7.webp | 1536×1024 | S30~S36 최종 탑·왕궁·축제·귀환 |
+| hero-webtoon.webp, ariana-webtoon.webp, kuura-webtoon.webp | 각각 1024×1536 | 주인공·동행/엔딩·분신/최종 보스 |
+| naira-webtoon.webp, mira-webtoon.webp, baru-webtoon.webp | 각각 1024×1536 | 나이라·미라·바루 NPC |
+| king-webtoon.webp, villager-webtoon.webp, genie-webtoon.webp | 각각 1024×1536 | 왕·하미드/주민·지니 하질 NPC |
+| siren-webtoon.webp, rah-webtoon.webp | 각각 1024×1536 | S02 세이렌·S06 불꽃 수호자 NPC/대화 |
+| crab-webtoon.webp | 1280×1280 | 초기 암초·고래 섬·산호 구간의 저주 게 |
+| chef-webtoon.webp | 1024×1536 | S15 거인 요리사·국자 예고 |
+| roc-webtoon.webp | 1536×1024 | S09 로크새·S10/S33 탑승 |
+| whale-webtoon.webp | 1536×1024 | S04 고래 섬 |
+| elephant-webtoon.webp | 1024×1024 | S29 아기 코끼리 구조 |
+| hero-run.webp | 1536×1024, 512×512 6셀 | 신밧드 달리기·셀별 발 접지 정렬 |
+| enemy-atlas.webp | 1536×1024, 512×512 6셀 | 뱀·호랑이·돌 거인·용·해적·해골 |
+
+`public/assets/story/`의 `cargo.svg`, `starDevice.svg`, `lantern.svg`, `treasureAltar.svg`, `elephant.svg`, `snake.svg`, `tiger.svg`, `dragon.svg`, `stoneGiant.svg`, `villager.svg`, `mira.svg`, `king.svg`, `baru.svg`, `pirateCaptain.svg`, `lotusShrine.svg`, `arrow.svg`, `boomerang.svg`, `moonRock.svg`는 모두 96×128 직접 작성 SVG다. `scripts/make-story-art.mjs`로 재생성할 수 있고 외부 자산 이용 조건이 없다.
+
+정화 고리·운반 배달 위치·일곱 보물 효과·달빛 충돌 다리·방패·무기별 공격 호·보스 빛 입자는 Phaser Graphics/트윈으로 직접 작성했다. 음악·효과음은 자체 Web Audio 합성이다. 현재 장의 배경과 필요한 인물/시트만 로드하며 이전 장의 불필요한 이미지 텍스처를 제거한다. S01 최초 요청 파일과 JS/CSS 합계는 `docs/validation/art-budget.json`에 기록한다. 이는 실제 네트워크·기기 FPS 측정이 아니다.
+
+아트 상태는 전부 **ART_DRAFT**다. 다중 프레임 공격·피격·NPC 표정·로크 날갯짓의 전체 제작, 적 시트 경계와 모바일 스케일의 최종 검수는 남아 있다. 반려한 24프레임 주인공 시트는 셀 경계 문제가 있어 게임 파일에 포함하지 않았다.
+
 ## 비행 자산 개선 · 2026-09-23
 
 `public/assets/draft/flightRing.svg`, `public/assets/draft/roc.svg`는 직접 작성한 96×128 SVG 원본이다. 금빛 테두리·빛 번짐·방향 표식의 고리와 깃털·안장·부리를 갖춘 로크새를 추가했다. 프로젝트에서 사용·수정 가능하며 외부 이미지나 기존 작품을 복제하지 않았다. 로크새 날갯짓은 런타임 크기 변형이고 다중 프레임 애니메이션은 아니므로 ART_DRAFT를 유지한다.

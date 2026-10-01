@@ -27,7 +27,7 @@ describe('complete campaign implementation',()=>{
     expect(maps.S16.mode).toBe('swim');
     expect(maps.S28.peaceful).toBe(true);
     expect(maps.S28.spawns).toHaveLength(0);
-    expect(maps.S36.objects.at(-1)?.kind).toBe('ending');
+    expect(maps.S36.objects.filter(object=>object.kind==='ending')).toHaveLength(1);
   });
 
   it('grants every late-game mandatory reward exactly once and selects its ability',()=>{

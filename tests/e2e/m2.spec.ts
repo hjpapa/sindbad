@@ -13,7 +13,7 @@ test('existing M1 save → whale rescue, moving deck, G01 → coral rescue, G02 
  await use(page,1500);expect((await read(page)).save.completedObjectiveIds).toEqual(expect.arrayContaining(['S04.gear.1','S04.gear.2','S04.gear.3']));
  await walk(page,1840);await page.waitForTimeout(800);const p1=(await read(page)).movingPlatforms[0].y;await page.waitForTimeout(900);expect(Math.abs((await read(page)).movingPlatforms[0].y-p1)).toBeGreaterThan(2);
  await page.screenshot({path:info.outputPath('S04-moving-whale.png')});await walk(page,2300);await page.reload();await page.getByRole('button',{name:'이어하기 · S04'}).click();expect((await read(page)).save.goldenHearts).toContain('G01');
- await use(page,3690);await page.getByRole('button',{name:'다음 스테이지'}).click();await expect.poll(async()=>(await read(page)).stage).toBe('S05');
+ await walk(page,3100);await page.screenshot({path:info.outputPath('S04-whale-face.png')});await use(page,3690);await page.getByRole('button',{name:'다음 스테이지'}).click();await expect.poll(async()=>(await read(page)).stage).toBe('S05');
  await walk(page,680);await use(page,960);expect((await read(page)).save.completedObjectiveIds).toContain('S05.key');await use(page,1870);await use(page,2460);await use(page,2650);
  await expect(page.getByTestId('dialogue-text')).toBeVisible();const rescue=await read(page);expect(rescue.save.flags).toContain('bubbleBlessing');expect(rescue.save.treasures).not.toContain('T04');
  // Reload during the rescue dialogue proves rewards precede animation/skip.

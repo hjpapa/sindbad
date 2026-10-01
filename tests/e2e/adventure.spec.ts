@@ -142,7 +142,7 @@ test('new game → S01 → S02 → S03 with real keyboard inputs and checkpoint 
     await page.screenshot({ path: info.outputPath('S03-storm-crystal.png') });
     await use(page, 4620);
     await page.getByRole('button', { name: '항해 지도' }).click();
-    await expect(page.getByRole('heading', { name: 'M1 · 첫 항해를 마쳤어요' })).toBeVisible();
+    await expect(page.getByRole('heading', { name: '항해 지도 · 완료 3 / 36' })).toBeVisible();
     await expect(page.locator('[data-stage="S04"]')).toBeEnabled();
     expect((await state(page)).save.clearedStageIds).toEqual(['S01', 'S02', 'S03']);
     expect((await state(page)).save.totalXp).toBeGreaterThanOrEqual(140);

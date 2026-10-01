@@ -1,4 +1,5 @@
 import type {MapDef, ObjectDef, Platform, Spawn} from './maps';
+import {storyDevices,storyLedges} from './storyDesign';
 
 interface Blueprint {
   id:string; visual:NonNullable<MapDef['visual']>; mode?:MapDef['mode']; title:string;
@@ -37,6 +38,28 @@ export const finalBlueprints:Blueprint[]=[
  {id:'S36',visual:'kingdom',mode:'peace',title:'새 항해의 아침',steps:['도서관 전시 ①','도서관 전시 ②','항구 전시 ③','새 항해의 종'],flags:['ending'],npc:'이야기꾼',intro:['완성한 항해 기록을 도서관과 항구에서 돌아봐요.','마지막 종을 울려도 모든 스테이지를 다시 방문할 수 있어요.'],outro:['일곱 보물과 바다의 약속. 새로운 항해가 시작됩니다.']},
 ];
 
+// Keep stable quest/reward IDs while restoring the original story identities.
+const storyCorrections:Record<string,Partial<Blueprint>>={
+ S11:{visual:'shadow',title:'다이아몬드 골짜기',npc:'골짜기의 탐험가',boss:'수정 수호령',intro:['다이아몬드 골짜기의 세 반사석을 표시된 방향으로 돌려 주세요.','상승 기류를 안정시키고 수정 수호령의 저주 핵을 빛으로 돌려보내요.'],steps:['반사석 ①','반사석 ②','반사석 ③','안전 상승 기류'],outro:['폭풍의 창 W04를 찾았어요. 긴 사거리로 저주를 밀어낼 수 있어요.']},
+ S12:{visual:'jungle',title:'포이즌 드래곤의 습지',boss:'포이즌 드래곤',outro:['해독의 잎 R03을 얻었어요. 독으로부터 모험가를 지켜 줘요.']},
+ S13:{title:'두 친구의 집',npc:'하미드와 마진',intro:['하미드: 오늘은 여기서 쉬어 가게. 나무를 지붕 아래로 옮겨 줄 수 있겠나?','마진: 따뜻한 식사를 준비할게. 행동으로 나무를 들고 빛나는 위치에 내려놓아 줘.']},
+ S14:{title:'거짓 촌장의 비밀 창고',npc:'경비대장',boss:undefined,steps:['빼돌린 물품 장부','검은 표식','감금 열쇠와 주민 구출','경비대에 증거 전달'],outro:['경비대가 증거를 확인하고 거짓 촌장을 정식으로 체포했어요.','구한 주민이 거인의 섬 항로를 알려 주었어요.']},
+ S15:{intro:['거인 요리사의 국자 증기는 1.2초 동안 위치를 예고해요. 옆으로 피하거나 점프하세요.','선원 두 명을 구하고 도르래 두 개를 움직여 탈출 뗏목을 내려요.'],title:'거인의 부엌',outro:['선원들이 뗏목으로 탈출했어요. 거인의 장화 R04를 얻었어요.']},
+ S16:{boss:undefined,npc:'나이라',outro:['나이라: 이번에는 제가 당신의 모험을 도울 차례예요.','심해의 진주 T04와 파도의 활 W05를 얻었어요. 이제 위아래로 자유 수영을 연습하세요.']},
+ S18:{boss:'해적 선장 카딘',outro:['카딘: 보물보다 부하들이 먼저다. 그만 싸우겠어.','해적의 보물 지도 R05를 받았어요. 검은 탑의 항로가 표시되어 있어요.']},
+ S19:{intro:['수정구슬로 진짜 계단 표식을 찾으세요.','쿠우라의 분신이 길을 막고 있어요. 예고된 마법을 피해 빛으로 봉인해요.'],boss:'쿠우라의 그림자 분신',outro:['쿠우라의 분신: 그림자 하나를 이겼을 뿐이다!','신밧드: 그렇다면 이제 진짜 길을 찾겠어. 분신 승리는 저장되었고, 최종 쿠우라는 S31에 있어요.']},
+ S22:{outro:['호랑이의 검은 저주 띠가 빛으로 풀렸어요. 숲의 휘장 R06을 얻었어요.']},
+ S23:{title:'바다 노인의 저주',npc:'수정구슬의 목소리',intro:['신밧드: 무거워졌지만 길은 남아 있어. 저 종소리를 이어 보자.','맑은 종 세 개를 울리면 어깨에 붙은 마법 그림자와 느려짐이 풀려요.']},
+ S24:{boss:'외눈 돌 괴물'},
+ S25:{npc:'도깨비 바루',outro:['바루: 길이 없으면 만들면 되지! 대신 약속은 꼭 지켜.','도깨비의 방울 T05와 달빛 방망이 W06을 얻었어요. 마지막 다리를 밝혀 보세요.']},
+ S28:{npc:'비슈누의 평온한 환영',intro:['미라: 이곳에서는 비슈누를 세상의 질서를 지키는 신으로 믿어요.','연꽃·소라·원형 문양의 표시된 방향을 맞추세요. 이곳에는 전투가 없어요.'],outro:['환영: 힘을 모으되, 지킬 대상을 잊지 말아라.','이 대사는 게임의 창작 이야기예요. 균형의 연꽃 T06의 보호막을 얻었어요.']},
+ S30:{npc:'지니 하질',outro:['보물은 빛나는 물건이 아니라, 네가 배운 방법들이기도 하지.','새벽의 검 W07을 얻었어요. 일곱 보물은 소모되지 않고 그대로 남아 있어요.']},
+ S32:{intro:['아리아나: 안쪽의 문양은 내가 맞출게요. 바깥의 별을 →, ←, ↓ 순서로 연결해 줘요!','신밧드: 좋아요. 이번 길은 함께 여는 거예요.'],outro:['두 사람의 빛으로 마지막 봉인을 열었어요. 아리아나가 함께 발코니로 나왔어요.','우정의 매듭 R07은 동행 구간에서 20초마다 체력을 10 회복해요.']},
+ S35:{intro:['귀환 뒤 시간이 흐르고, 두 성인은 스스로 함께할 미래를 선택했어요.','친구들과 초대장·음악·등불을 준비해요.'],outro:['신밧드: 다음 모험도 당신과 함께하고 싶어요.','아리아나: 나도 같은 마음이에요.','왕: 두 사람의 약속을 축복하노라.','두 사람은 왕의 축복 속에 결혼하고 항해 도서관을 함께 열었어요.']},
+ S36:{outro:['아리아나: 이번 지도에는 우리가 도운 친구들도 표시해요.','신밧드: 가장 값진 보물은 함께 돌아온 이야기였군요.','일곱 보물과 바다의 약속. 새로운 항해가 시작됩니다.']},
+};
+for(const blueprint of finalBlueprints)Object.assign(blueprint,storyCorrections[blueprint.id]);
+
 const ground=(x:number,w:number,y=608):Platform=>({x,y,w,h:112,requiredGround:true});
 const makeMap=(b:Blueprint,index:number):MapDef=>{
  const width=Math.max(3000,1900+b.steps.length*270);
@@ -52,25 +75,50 @@ const makeMap=(b:Blueprint,index:number):MapDef=>{
      if(b.id==='S10')ring.reward='coins';
    });
  }
+ stepObjects.forEach((object,i)=>{object.mechanic=storyDevices[b.id]?.[i];if(object.mechanic?.type==='treasure')object.requiresItems=[object.mechanic.item];});
+ if(b.id==='S26')stepObjects[0].mechanic=undefined;
+ if(b.id==='S30')stepObjects.forEach((object,i)=>{object.requiresItems=[`T0${i+1}`];});
+ if(b.id==='S25')stepObjects[3].requiresItems=['T05'];
+ if(b.id==='S16')stepObjects[3].requiresItems=['T04'];
  const needs=b.mode==='flight'?[]:[stepObjects.at(-1)!.id];
+ if(b.id==='S16')needs.splice(0,needs.length,stepObjects[2].id);
+ if(b.id==='S25')needs.splice(0,needs.length,stepObjects[2].id);
  const flightEnemyCount=b.id==='S10'?6:b.id==='S33'?5:0;
  const spawns:Spawn[]=flightEnemyCount
   ? Array.from({length:flightEnemyCount},(_,i)=>({id:`${b.id}.enemy.${i+1}`,x:900+i*((width-1450)/(flightEnemyCount-1)),y:[300,440,220,370,250,420][i],kind:'kite' as const,hp:26+Math.floor(index/5)}))
   : b.mode==='peace'?[]:[0,1,2].map(i=>({id:`${b.id}.enemy.${i+1}`,x:800+i*(width-1500)/2,y:550,kind:i===2&&b.boss?'boss':b.visual==='jungle'?'beast':'bandit',hp:i===2&&b.boss?150:40+index}));
- if(b.boss)needs.push(spawns.at(-1)!.id);
+ if(b.id==='S16')spawns.splice(0); // Protected palace, no boss before swimming.
+ if(b.boss&&spawns.length)needs.push(spawns.at(-1)!.id);
+ const bossTextures:Record<string,string>={S09:'roc',S12:'dragon',S18:'pirateCaptain',S19:'kuura-webtoon',S21:'snake',S22:'tiger',S24:'stoneGiant',S31:'kuura-webtoon'};
+ for(const spawn of spawns)if(spawn.kind==='boss'){spawn.name=b.boss;spawn.texture=bossTextures[b.id];}
+ if(b.id==='S32')spawns.forEach(spawn=>{spawn.kind='spirit';spawn.texture='spirit';});
+ const bossFrames:Record<string,number>={S12:3,S18:4,S21:0,S22:1,S24:2};
+ for(const spawn of spawns)if(spawn.kind==='boss'&&b.id in bossFrames){spawn.texture='enemy-atlas';spawn.frame=bossFrames[b.id];}
+ if(b.id==='S31')spawns.at(-1)!.hp=900;
  const gift:ObjectDef={id:`${b.id}.reward`,x:width-520,y:550,kind:'gift',label:`${b.rewards?.join(' · ')||'항해 기록'} · E`,needs,rewards:b.rewards,rewardFlags:b.flags,dialogue:`${b.id}.outro`};
+ if(b.id==='S16'||b.id==='S25'){gift.x=stepObjects[2].x+140;stepObjects[3].needs=[gift.id];}
  const objects:ObjectDef[]=[{id:`${b.id}.intro`,x:230,y:550,kind:'npc',label:`${b.npc} · E`,dialogue:`${b.id}.intro`},...stepObjects];
  if(b.optional)objects.push({id:`${b.id}.golden`,x:Math.round(width*.62),y:470,kind:'golden',label:`숨은 황금 하트 ${b.optional} · E`,reward:b.optional,needs:[stepObjects[Math.min(1,stepObjects.length-1)].id]});
- objects.push(gift,{id:`${b.id}.exit`,x:width-160,y:550,kind:b.id==='S36'?'ending':'exit',label:b.id==='S36'?'새 항해의 종 · E':'다음 항해 · E',needs:[gift.id]});
+ const npcTextures:Record<string,string>={S09:'roc',S11:'villager-webtoon',S12:'villager-webtoon',S13:'villager-webtoon',S14:'villager-webtoon',S15:'villager-webtoon',S16:'naira-webtoon',S17:'villager-webtoon',S18:'pirateCaptain',S19:'starMap',S20:'villager-webtoon',S21:'snake',S22:'tiger',S23:'starMap',S24:'stoneGiant',S25:'baru-webtoon',S26:'naira-webtoon',S27:'mira-webtoon',S28:'lotusShrine',S29:'elephant',S30:'genie-webtoon',S31:'starMap',S32:'ariana-webtoon',S34:'king-webtoon',S35:'ariana-webtoon',S36:'ariana-webtoon'};
+ objects[0].texture=npcTextures[b.id];
+ for(const object of stepObjects)object.texture=object.mechanic?.type==='carry'?'cargo':object.mechanic?.type==='rotate'?'starDevice':object.mechanic?.type==='memory'?'journal':object.mechanic?.type==='treasure'?'treasureAltar':'lantern';
+ if(b.id==='S29'){stepObjects.at(-1)!.texture='elephant-webtoon';objects[0].texture='elephant-webtoon';}
+ objects.push(gift,{id:`${b.id}.exit`,x:width-160,y:550,kind:b.id==='S36'?'ending':'exit',label:b.id==='S36'?'새 항해의 종 · E':'다음 항해 · E',needs:[gift.id,...(b.id==='S16'||b.id==='S25'?[stepObjects[3].id]:[])]});
+ if(b.id==='S35')gift.texture='king-webtoon';
+ if(b.id==='S25')objects.push({id:'S25.moonRock',x:width-270,y:550,kind:'chest',texture:'moonRock',breakWeapon:'W06',label:'금 간 달빛 바위 · 방망이 공격',reward:'coins'});
+ if(b.mode!=='flight')objects.push({id:`${b.id}.cp.middle`,kind:'checkpoint',x:Math.round(width*.52),y:550,label:'안전 쉼터'});
  // Later story stages use an uninterrupted route so young players cannot be
  // trapped by the side of a decorative ledge. Visual depth lives in the
  // parallax background; handcrafted jump routes remain in S01-S08.
- const platforms:Platform[]=[ground(0,width)];
+ const platforms:Platform[]=[ground(0,width),...(storyLedges[b.id]??[]).map(([x,y,w])=>({x,y,w,h:24,oneWay:true}))];
  const flightHazards=b.id==='S10'?
   [{id:'S10.gust.1',x:1150,y:455,radius:62,kind:'gust' as const},{id:'S10.gust.2',x:1680,y:300,radius:70,kind:'gust' as const},{id:'S10.gust.3',x:2210,y:170,radius:62,kind:'gust' as const}]:
   b.id==='S33'?[{id:'S33.debris.1',x:850,y:190,radius:48,kind:'debris' as const},{id:'S33.debris.2',x:1250,y:390,radius:48,kind:'debris' as const},{id:'S33.debris.3',x:1650,y:230,radius:48,kind:'debris' as const},{id:'S33.debris.4',x:2050,y:430,radius:48,kind:'debris' as const},{id:'S33.debris.5',x:2450,y:280,radius:48,kind:'debris' as const}]:undefined;
- return {id:b.id,width,theme:'adventure',visual:b.visual,mode:b.mode??'ground',peaceful:b.mode==='peace',objective:b.mode==='flight'?'↑ 상승 · ↓ 하강 → 오른쪽 착륙장 (고리·공중 적은 선택)':`${b.steps.join(' → ')}${b.boss?` → ${b.boss}`:''}`,platforms,spawns,objects,hearts:b.mode==='peace'?[]:[{id:`${b.id}.heart.1`,x:Math.round(width*.45),y:550},{id:`${b.id}.heart.2`,x:Math.round(width*.76),y:550,large:true}],checkpoints:[{id:'start',x:120,y:548},{id:'middle',x:Math.round(width*.52),y:548}],flightHazards};
+ if(b.id==='S16')stepObjects[3].y=350;
+ return {id:b.id,width,theme:'adventure',visual:b.visual,mode:b.mode??'ground',peaceful:b.mode==='peace'||b.id==='S16',objective:b.mode==='flight'?'↑ 상승 · ↓ 하강 → 오른쪽 착륙장 (고리·공중 적은 선택)':`${b.steps.join(' → ')}${b.boss?` → ${b.boss}`:''}`,platforms,spawns,objects,hearts:b.mode==='peace'?[]:[{id:`${b.id}.heart.1`,x:Math.round(width*.45),y:550},{id:`${b.id}.heart.2`,x:Math.round(width*.76),y:550,large:true}],checkpoints:[{id:'start',x:120,y:548},{id:'middle',x:Math.round(width*.52),y:548}],flightHazards};
 };
 
 export const finalMaps=Object.fromEntries(finalBlueprints.map((b,i)=>[b.id,makeMap(b,i)])) as Record<string,MapDef>;
 export const finalDialogues=Object.fromEntries(finalBlueprints.flatMap(b=>[[`${b.id}.intro`,{name:b.npc,lines:b.intro}],[`${b.id}.outro`,{name:b.id==='S36'?'신밧드와 친구들':b.npc,lines:b.outro}]]));
+finalMaps.S12.plantHazards=finalMaps.S12.objects.filter(object=>['S12.quest.1','S12.quest.2'].includes(object.id)).map(object=>({x:object.x-80,w:160,kind:'poison',clearedBy:object.id}));
+for(const id of ['S20','S21','S22','S29'])finalMaps[id].plantHazards=[{x:1350,w:160,kind:'vine'}];

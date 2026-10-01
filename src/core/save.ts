@@ -30,7 +30,7 @@ export function parseSave(raw: string): Save {
         throw Error('잘못된 진행 기록입니다.');
     if (!record(v.upgrades) || !Object.entries(v.upgrades).every(([k, n]) => k in weapons && (n === 0 || n === 1 || n === 2)))
         throw Error('잘못된 강화입니다.');
-    if (v.equippedSkill !== null && !['flamePulse', 'lotusShield', 'dawnWave'].includes(String(v.equippedSkill)))
+    if (v.equippedSkill !== null && !['flamePulse', 'moonBridge', 'lotusShield', 'dawnWave'].includes(String(v.equippedSkill)))
         throw Error('잘못된 스킬입니다.');
     if (!record(v.settings) || !['relaxed', 'normal'].includes(String(v.settings.difficulty)) || !number(v.settings.musicVolume, 1) || !number(v.settings.sfxVolume, 1) || !['reducedMotion', 'largeText', 'aimAssist'].every(x => typeof (v.settings as Record<string, unknown>)[x] === 'boolean'))
         throw Error('잘못된 설정입니다.');

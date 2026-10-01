@@ -1,5 +1,30 @@
 # 실제 검사 로그 · 2026-09-06 · 0.1.0
 
+## 2026-10-02 · 후기 기믹과 장별 웹툰 아트
+
+Windows 10.0.26200, Node 24.16.0, npm 11.13.0, Phaser 3.90.0, Playwright 1.55.1, Microsoft Edge headless. 공개 배포 검사는 개발 서버 검사와 구분한다.
+
+| 실행 명령 | 실제 결과 |
+|---|---|
+| `npm run typecheck` | PASS, exit 0 |
+| `npm run lint` | PASS, exit 0 |
+| `npm run test` | PASS, 11파일/76개, exit 0 |
+| `npm run validate:content` | PASS, 36 구현 맵·아이 장면 24개·7무기·7보물·황금 하트 8개·선행 조건·보상·실제 자산 경로, exit 0 |
+| `npm run build` | PASS, exit 0; 앱 173.87kB/gzip57.45kB, Phaser 1,481.77kB/gzip339.84kB, CSS9.17kB |
+| `npm run test:e2e` | PASS, 30개/26.0분, exit0 정상 종료; 최종 새 게임 36구간 완주 포함 |
+| `npx tsx scripts/check-art-budget.ts` | PASS, 최초 요청 원화+원본 JS/CSS 7,597,522바이트/8,000,000바이트, exit 0 |
+| `python scripts/audit-webtoon.py` | PASS, 실제 WebP 25개 디코딩·크기·SHA256, 합계35,424,936바이트, exit 0 |
+
+최종 전체 30개는 모두 통과했다. 새 게임 완주는 저장 주입 없이 정상 키 입력으로 13.6분에 S36·엔딩·S01 재방문까지 통과했고, pageerror/HTTP400+ 오류가 없었다. 마지막 검사와 저장 증거는 docs/validation/checks.json, docs/validation/complete-journey.json이다.
+
+초기 27개 전체 E2E는 25 PASS/2 FAIL, exit 1이었다. 실패는 바뀐 지도 제목에 대한 구 기대값과 S16 시작 전 Edge의 브라우저 컨텍스트 종료다. 지도 기대값을 실제 완료 수로 갱신했고, 13분 이상 걸리는 새 게임 완주 검사는 별도 브라우저 설정으로 격리해 이후 회귀 검사와 브라우저 자원을 나누었다. 실행하지 않은 정상 종료를 통과로 계산하지 않는다. 중간 전체 29개는 28통과/1실패였고, S16 시작 전 Edge 종료가 저장 내보내기 직후 재발했다. 다운로드 완료를 기다리도록 고치고 후기 기믹 검사도 별도 Edge 브라우저로 분리한 뒤 최종 30개를 다시 실행해 모두 통과했다. 이전 외부 개발 서버 종료로 S32 새로고침이 실패했던 완주 시도 역시 성공에 포함하지 않는다.
+
+Playwright 테스트 서버는 `tests/e2e/server.setup.ts`에서 Vite API로 5174 포트에 직접 시작/종료한다. 실제 개발 서버 5173의 수명에 의존하지 않으며 Windows의 CLI 자식 프로세스 종료 대기를 없앴다. 별도 최종 검사에서는 S25 실제 충돌 다리 통과/12.5초 서 있기/획득 보물·체크포인트 재개와 S15 거인 주방 구조·장화 획득·S16 진입 2개가 1분에 exit 0으로 통과했다.
+
+중간 단위 검사에서 쉼터 객체 추가 후 S36 배열 마지막 원소를 엔딩으로 가정한 기대값 한 건이 실패했다. 실제 종료 객체가 정확히 하나인지 검사하도록 수정한 뒤 76개 전부 통과했다. Phaser 청크 500kB 초과 경고는 남아 있으며 빌드 실패가 아니다. 파일 크기 예산은 실제 네트워크 전송·모바일 FPS 측정이 아니다.
+
+미검증: 실제 휴대폰/태블릿, Safari/Firefox, 어린이 손 플레이 난이도, 장시간 FPS/메모리, 실제 스피커 청취, 전체 프레임 아트 최종 승인. 앱 내 browser-use 브리지는 환경의 trusted native pipe 부재로 연결되지 않아 Edge 자동 조작과 스크린샷 육안 검수로 대체했다.
+
 ## 2026-09-23 · S01~S36 기능 구현
 
 - `npm run typecheck`: 통과.

@@ -53,8 +53,18 @@ export function validateContent() {
         for (const cp of m.checkpoints)
             check(m.platforms.some(p => !p.motion && cp.x > p.x + 30 && cp.x < p.x + p.w - 30 && Math.abs(cp.y + 60 - p.y) < 10), `${s.id}: unsafe checkpoint ${cp.id}`);
         const objectives = new Set([...m.objects.map(x => x.id), ...m.spawns.map(x => x.id)]);
+        for(const spawn of m.spawns){
+            if(spawn.texture)check(assets.some(asset=>asset.key===spawn.texture),`${spawn.id}: missing spawn texture`);
+            if(spawn.frame!==undefined)check(Number.isInteger(spawn.frame)&&spawn.frame>=0&&spawn.frame<6,`${spawn.id}: invalid sprite frame`);
+        }
         for (const o of m.objects) {
             check(o.x >= 0 && o.x <= m.width, `${o.id}: out of bounds`);
+            if(o.texture)check(assets.some(asset=>asset.key===o.texture),`${o.id}: missing object texture`);
+            const mechanic=o.mechanic;
+            if(mechanic?.type==='rotate')check(Number.isInteger(mechanic.target)&&mechanic.target>=0&&mechanic.target<4,`${o.id}: invalid device direction`);
+            if(mechanic?.type==='carry')check(mechanic.distance>0&&o.x+mechanic.distance<m.width-30,`${o.id}: unsafe delivery destination`);
+            if(mechanic?.type==='channel')check(mechanic.duration>=500&&mechanic.duration<=5000,`${o.id}: invalid channel duration`);
+            if(mechanic?.type==='treasure')check(mechanic.item in treasures&&o.requiresItems?.includes(mechanic.item),`${o.id}: unguarded treasure trial`);
             for (const need of o.needs ?? [])
                 check(objectives.has(need), `${o.id}: unknown prerequisite ${need}`);
             for(const item of o.requiresItems??[])check(itemIds.has(item),`${o.id}: unknown required item`);
@@ -71,6 +81,7 @@ export function validateContent() {
         const visit=(id:string,path:Set<string>)=>{if(path.has(id)){check(false,`${s.id}: prerequisite cycle at ${id}`);return;}const o=m.objects.find(o=>o.id===id);for(const need of o?.needs??[])visit(need,new Set([...path,id]));};
         for(const o of m.objects)visit(o.id,new Set());
         for(const w of m.water??[])check(w.w>0&&w.h>0&&w.x>=0&&w.x+w.w<=m.width,`${s.id}: invalid water region`);
+        for(const hazard of m.plantHazards??[])check(hazard.x>=0&&hazard.w>0&&hazard.x+hazard.w<m.width&&(!hazard.clearedBy||objectives.has(hazard.clearedBy)),`${s.id}: invalid plant hazard`);
         errors.push(...mapReachabilityIssues(m));
         rewards.push(...m.spawns.map(e => e.id), ...m.hearts.map(h => h.id));
     }

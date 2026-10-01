@@ -1,4 +1,5 @@
 import {finalMaps} from './finalStages';
+import type {StoryMechanic} from '../core/storyMechanics';
 
 export interface Platform {
     x: number;
@@ -6,6 +7,7 @@ export interface Platform {
     w: number;
     h: number;
     requiredGround?: boolean;
+    oneWay?: boolean;
     motion?: { rise: number; period: number; travel?: number };
 }
 export interface Spawn {
@@ -14,6 +16,9 @@ export interface Spawn {
     y: number;
     kind: 'skeleton' | 'archer' | 'captain' | 'crab' | 'siren' | 'spirit' | 'guardian' | 'bat' | 'bandit' | 'beast' | 'boss' | 'kite';
     hp: number;
+    texture?: string;
+    frame?:number;
+    name?: string;
 }
 export interface FlightHazard {
     id: string;
@@ -35,6 +40,9 @@ export interface ObjectDef {
     rewardFlags?: string[];
     dialogue?: string;
     requiresItems?: string[];
+    mechanic?: StoryMechanic;
+    texture?: string;
+    breakWeapon?: 'W06';
 }
 export interface MapDef {
     id: string;
@@ -45,6 +53,7 @@ export interface MapDef {
     peaceful?: boolean;
     water?: { x:number; y:number; w:number; h:number }[];
     flightHazards?: FlightHazard[];
+    plantHazards?: {x:number;w:number;kind:'poison'|'vine';clearedBy?:string}[];
     platforms: Platform[];
     spawns: Spawn[];
     objects: ObjectDef[];

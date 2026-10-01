@@ -7,7 +7,7 @@ async function move(page:Page,x:number){
  const end=Date.now()+22000;
  for(;;){const state=await read(page);if(state.player&&Math.abs(state.player.x-x)<18)break;if(Date.now()>end)throw Error(`cannot reach ${x}: ${JSON.stringify(state)}`);if(!state.player){await page.waitForTimeout(50);continue;}const key=state.player.x<x?'d':'a';await page.keyboard.up(key==='d'?'a':'d');await page.keyboard.down(key);await page.waitForTimeout(55);}await page.keyboard.up('a');await page.keyboard.up('d');
 }
-async function objective(page:Page,x:number,id:string){await move(page,x);for(let attempt=0;attempt<4;attempt++){await page.keyboard.press('e');await page.waitForTimeout(160);if((await read(page)).save.completedObjectiveIds.includes(id))return;}throw Error(`objective ${id} did not activate`);}
+async function objective(page:Page,x:number,id:string){await move(page,x);for(let attempt=0;attempt<16;attempt++){await page.keyboard.press('e');await page.waitForTimeout(250);if((await read(page)).save.completedObjectiveIds.includes(id))return;}throw Error(`objective ${id} did not activate`);}
 async function fight(page:Page,id:string){
  for(let hit=0;hit<45;hit++){
   const state=await read(page);if(state.save.completedObjectiveIds.includes(id))return;

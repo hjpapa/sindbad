@@ -13,3 +13,7 @@
 @media(max-width:480px){#touch{gap:4px}#touch button{min-width:44px;padding:5px 7px}.hud-actions #bag{display:block}.stats{gap:4px}.stats b{font-size:15px}.stats small{display:none}.mission{min-width:0}.mission strong{font-size:13px}.hud-actions{gap:4px}.hud-actions button{padding:5px;min-width:40px}.weapon-chip{display:none}}
 @media(max-width:900px){#touch{bottom:max(5px,env(safe-area-inset-bottom));left:max(7px,env(safe-area-inset-left));right:max(7px,env(safe-area-inset-right));grid-template-columns:54px 54px 54px 84px;gap:6px}#touch button{font-size:15px;min-height:50px;padding:5px 8px}}
 @media(max-height:520px){#hud{padding-top:max(5px,env(safe-area-inset-top))}.mission span,.stats small,.weapon-chip{display:none}.mission strong{font-size:16px}.stats b{font-size:17px}meter{width:82px}.hud-actions button{min-height:38px;padding:5px 9px}.panel{max-height:calc(100dvh - 16px);padding:18px 22px}.panel h1{font-size:38px}.panel h2{margin:6px 0 10px}.panel p{line-height:1.45}.dialogue{min-height:100px}.buttons{margin-top:8px}#notice{bottom:68px}}
+.ending-portraits{display:flex;justify-content:center;gap:1rem;height:180px;margin:12px 0;background:linear-gradient(90deg,#dbe9dd,#f6e5ba);border-radius:18px;overflow:hidden}
+.ending-portraits img{height:100%;object-fit:contain;width:120px}
+.dialogue img{object-fit:contain}
+.title-art img{object-fit:contain}

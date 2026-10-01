@@ -1,5 +1,5 @@
 import { chromium, expect } from '@playwright/test';
-import { mkdirSync } from 'node:fs';
+import { mkdirSync,writeFileSync } from 'node:fs';
 const url = process.argv[2];
 if (!url?.startsWith('https://')) throw Error('Pass the production HTTPS URL');
 mkdirSync('docs/screenshots', { recursive: true });
@@ -30,5 +30,10 @@ try {
   expect(await page.evaluate(() => typeof window.__SINBAD_TEST__)).toBe('undefined');
   await page.screenshot({ path: 'docs/screenshots/production-resume.png' });
   expect(errors).toEqual([]);
-  console.log(JSON.stringify({ url, status: 200, start: 'PASS', keyboardInputs: 'sent', saveReloadContinue: 'PASS', productionDebugHook: 'absent', errors }, null, 2));
+  const artwork=await page.evaluate(()=>performance.getEntriesByType('resource').filter(entry=>entry.name.includes('/assets/webtoon/')).map(entry=>({url:entry.name,bytes:entry.transferSize,durationMs:Math.round(entry.duration)})));
+  expect(artwork.some(entry=>entry.url.endsWith('chapter-1.webp'))).toBe(true);
+  expect(artwork.some(entry=>entry.url.endsWith('hero-webtoon.webp'))).toBe(true);
+  const result={date:new Date().toISOString(),url,status:200,start:'PASS',keyboardInputs:'sent',saveReloadContinue:'PASS',productionDebugHook:'absent',artwork,errors};
+  mkdirSync('docs/validation',{recursive:true});writeFileSync('docs/validation/production-smoke.json',JSON.stringify(result,null,2));
+  console.log(JSON.stringify(result,null,2));
 } finally { await browser.close(); }
