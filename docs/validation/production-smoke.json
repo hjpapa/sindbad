@@ -1,0 +1,37 @@
+{
+  "date": "2026-10-01T17:09:36.075Z",
+  "url": "https://sindbad-orcin.vercel.app",
+  "status": 200,
+  "start": "PASS",
+  "keyboardInputs": "sent",
+  "saveReloadContinue": "PASS",
+  "productionDebugHook": "absent",
+  "artwork": [
+    {
+      "url": "https://sindbad-orcin.vercel.app/assets/webtoon/hero-webtoon.webp",
+      "bytes": 300,
+      "durationMs": 54
+    },
+    {
+      "url": "https://sindbad-orcin.vercel.app/assets/webtoon/chapter-1.webp",
+      "bytes": 300,
+      "durationMs": 65
+    },
+    {
+      "url": "https://sindbad-orcin.vercel.app/assets/webtoon/hero-webtoon.webp",
+      "bytes": 300,
+      "durationMs": 63
+    },
+    {
+      "url": "https://sindbad-orcin.vercel.app/assets/webtoon/hero-run.webp",
+      "bytes": 300,
+      "durationMs": 63
+    },
+    {
+      "url": "https://sindbad-orcin.vercel.app/assets/webtoon/enemy-atlas.webp",
+      "bytes": 300,
+      "durationMs": 62
+    }
+  ],
+  "errors": []
+}

@@ -2,6 +2,8 @@
 
 ## 최신 실제 상태 · 2026-10-02 · 후기 기믹과 웹툰 아트
 
+- Git·공개 배포: 게임 변경은 `d66e08594de1626cccb1862680c28b8c26877174`로 커밋해 `hjpapa/sindbad`의 `origin/main`에 푸시했다. Vercel 생산 배포 `dpl_76oR4MFgL4JvQc3TJGcP4wTzjoUQ`는 같은 SHA로 READY다. https://sindbad-orcin.vercel.app 에서 Edge의 실제 입력으로 새 모험·저장·새로고침·이어하기·새 원화 로드·개발 훅 부재를 확인했고 콘솔/HTTP 오류는 0개, 검사 명령 exit0이었다. 증거는 docs/validation/production-smoke.json과 docs/screenshots/production-play.png, production-resume.png다. 공개 주소의 36구간 재완주는 하지 않았으며 전체 완주 결과는 동일 코드의 로컬 E2E다.
+- Git·공개 배포: 게임 변경은 `d66e08594de1626cccb1862680c28b8c26877174`로 커밋해 `hjpapa/sindbad`의 `origin/main`에 푸시했다. Vercel 생산 배포 `dpl_76oR4MFgL4JvQc3TJGcP4wTzjoUQ`는 같은 SHA로 READY다. https://sindbad-orcin.vercel.app 에서 Edge의 실제 입력으로 새 모험·저장·새로고침·이어하기·새 원화 로드·개발 훅 부재를 확인했고 콘솔/HTTP 오류는 0개, 검사 명령 exit0이었다. 증거는 docs/validation/production-smoke.json과 docs/screenshots/production-play.png, production-resume.png다. 공개 주소의 36구간 재완주는 하지 않았으며 전체 완주 결과는 동일 코드의 로컬 E2E다.
 - 기존 저장·보상 ID를 유지하면서 S09~S36의 방향 장치, 운반/배달, 가까이 머무르는 정화, 일곱 보물 시련, 편지·전시·축제를 실제 상호작용으로 추가했다. 선택 상단 발판은 위쪽만 충돌하며 주 경로는 막히지 않는다.
 - S16은 보호된 비전투 입구에서 장치 세 개를 완료한 뒤 T04/W05를 받고 자유 수영을 연습한다. S25는 도깨비불 세 개를 안내한 뒤 T05/W06을 받고 실제 달빛 충돌 다리를 만든다. S30은 T01~T07을 각각 검사하고 소모하지 않는다.
 - S19는 쿠우라의 분신, S31은 기본 HP900(편안 모드 765)의 본체와 세 단계 마법 패턴이다. 본체 보호막은 두 봉인석 정화로 열린다. 인간 카딘은 항복하고, 저주 동물은 저주 해제, 마법 적은 빛으로 돌아간다. S32 협력 별자리·아리아나 동행, S35 성인 두 사람의 자발적 결혼·왕의 축복, S36 전시·크레딧·자유 탐험을 연결했다.

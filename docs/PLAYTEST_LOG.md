@@ -1,5 +1,9 @@
 # 플레이 검증 기록
 
+## 공개 배포 스모크 · 2026-10-02
+
+게임 커밋 `d66e085`의 Vercel production READY를 확인한 뒤 https://sindbad-orcin.vercel.app 에서 Edge headless로 새 모험을 시작하고 이동·점프·공격 키를 보냈다. 체크포인트 저장 후 새로고침과 이어하기가 통과했고 새 WebP 이미지 로드·캔버스 표시·개발 훅 부재를 확인했다. pageerror와 HTTP400+는 0개이며 명령 exit0이었다. production-play.png, production-resume.png의 실제 렌더를 확인하고 production-smoke.json을 남겼다. 공개 배포의 전체 36구간 완주는 재실행하지 않았다.
+
 ## S01~S36 새 게임 완주 · 2026-10-02
 
 `tests/e2e/complete-journey.spec.ts`는 초기 저장을 주입하지 않고 새 모험 버튼으로 시작한다. 정상 이동·점프·공격·E 조사·보물 입력과 DOM 대화 버튼만 사용하며 개발 스냅샷은 읽기 전용이다. 위치 변경·즉시 처치·보상 주입·시간 가속은 하지 않는다.

@@ -2,6 +2,8 @@
 
 ## 2026-10-02 · 후기 기믹과 장별 웹툰 아트
 
+생산 배포: 게임 커밋 `d66e08594de1626cccb1862680c28b8c26877174`를 origin/main에 푸시했고, Vercel 배포 `dpl_76oR4MFgL4JvQc3TJGcP4wTzjoUQ`의 SHA 일치·production·READY를 API로 확인했다. `node scripts/verify-deployment.mjs https://sindbad-orcin.vercel.app`는 exit0으로 통과했다(2026-10-02 02:09 KST). HTTP200, 새 게임, 실제 키 입력, 저장/재접속 이어하기, 웹툰 배경·주인공·달리기·적 시트 요청, 생산 개발 훅 부재, pageerror/HTTP400+ 0개를 확인했다. docs/validation/production-smoke.json 및 production-play/resume PNG를 보관했다. 공개 사이트에서 36구간 전체를 다시 완주한 검사는 아니다. Performance API의 bytes 값은 캐시·교차 출처 정책의 영향을 받으므로 실제 다운로드 크기 측정으로 해석하지 않는다.
+
 Windows 10.0.26200, Node 24.16.0, npm 11.13.0, Phaser 3.90.0, Playwright 1.55.1, Microsoft Edge headless. 공개 배포 검사는 개발 서버 검사와 구분한다.
 
 | 실행 명령 | 실제 결과 |
