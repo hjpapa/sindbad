@@ -1,0 +1,37 @@
+[
+  {
+    "source": "test-results/complete-journey-new-game--139b0-ntrols-and-no-injected-save/S05-route.png",
+    "preserved": "docs/screenshots/art-a4/campaign-S05-route.png",
+    "sha256": "b041b16dc6070993659fcf230e99d18722b018cfd919ab1752c2877d9961d798"
+  },
+  {
+    "source": "test-results/complete-journey-new-game--139b0-ntrols-and-no-injected-save/S10-route.png",
+    "preserved": "docs/screenshots/art-a4/campaign-S10-route.png",
+    "sha256": "f615e1ddf63614c545670937f7847a5d1620037c31c5970c4deed4410409f0da"
+  },
+  {
+    "source": "test-results/complete-journey-new-game--139b0-ntrols-and-no-injected-save/S15-route.png",
+    "preserved": "docs/screenshots/art-a4/campaign-S15-route.png",
+    "sha256": "caed90ae72f9942c40ff20ea2c4933bdcb697d012c1affa256bbfe223f2d81d0"
+  },
+  {
+    "source": "test-results/complete-journey-new-game--139b0-ntrols-and-no-injected-save/S19-route.png",
+    "preserved": "docs/screenshots/art-a4/campaign-S19-route.png",
+    "sha256": "85df72e9460188841f68a7755dfcf0cfa71b3f395c1bf59941d3c057d58ee418"
+  },
+  {
+    "source": "test-results/complete-journey-new-game--139b0-ntrols-and-no-injected-save/S25-route.png",
+    "preserved": "docs/screenshots/art-a4/campaign-S25-route.png",
+    "sha256": "d571e765caf0bf3745127331df2e7d22b8a346d78f0b730ee8d2fc9a2846758c"
+  },
+  {
+    "source": "test-results/complete-journey-new-game--139b0-ntrols-and-no-injected-save/S29-route.png",
+    "preserved": "docs/screenshots/art-a4/campaign-S29-route.png",
+    "sha256": "859d9824e3bd01efe6a5b5338a047b95770e38fb0abd87c4166087e97ddc1ffa"
+  },
+  {
+    "source": "test-results/complete-journey-new-game--139b0-ntrols-and-no-injected-save/S36-route.png",
+    "preserved": "docs/screenshots/art-a4/campaign-S36-route.png",
+    "sha256": "92f69b6b2f478aa58ce2d9057b7f38d81383f60bb5deb93e5efe50a3230264e3"
+  }
+]

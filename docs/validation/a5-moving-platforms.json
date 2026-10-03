@@ -1,0 +1,2897 @@
+{
+  "date": "2026-10-03T12:32:19.799Z",
+  "pass": true,
+  "method": "explicit S07 prior-stage/items/enemy-reward save fixture; real continue button and keyboard; read-only six 400ms-spaced observations per phone/tablet viewport; 3px tolerance for Arcade update order, not a campaign playthrough",
+  "checks": [
+    {
+      "device": "phone",
+      "stage": "S07",
+      "samples": [
+        {
+          "style": "deck",
+          "cachedKeys": [
+            "terrain-deck-fill",
+            "terrain-deck-top"
+          ],
+          "textures": [
+            {
+              "key": "terrain-deck-fill",
+              "width": 128,
+              "height": 128,
+              "source": "blob:http://127.0.0.1:5175/f3663a50-3a9b-44c1-a6a6-8b57efd56e43"
+            },
+            {
+              "key": "terrain-deck-top",
+              "width": 128,
+              "height": 34,
+              "source": "blob:http://127.0.0.1:5175/8bb9a9ea-8e33-401a-b927-c62525063ce2"
+            }
+          ],
+          "platforms": [
+            {
+              "x": 250,
+              "y": 664,
+              "width": 500,
+              "height": 112,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 250,
+              "skinY": 664,
+              "skinWidth": 500,
+              "skinHeight": 112
+            },
+            {
+              "x": 920.7194686016873,
+              "y": 658.2966913476401,
+              "width": 600,
+              "height": 112,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 920.7404883108112,
+              "skinY": 658.4738919214353,
+              "skinWidth": 600,
+              "skinHeight": 112
+            },
+            {
+              "x": 1400,
+              "y": 664,
+              "width": 200,
+              "height": 112,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 1400,
+              "skinY": 664,
+              "skinWidth": 200,
+              "skinHeight": 112
+            },
+            {
+              "x": 1920.719468601688,
+              "y": 658.2966913476401,
+              "width": 600,
+              "height": 112,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 1920.740488310812,
+              "skinY": 658.4738919214353,
+              "skinWidth": 600,
+              "skinHeight": 112
+            },
+            {
+              "x": 2400,
+              "y": 664,
+              "width": 200,
+              "height": 112,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 2400,
+              "skinY": 664,
+              "skinWidth": 200,
+              "skinHeight": 112
+            },
+            {
+              "x": 2920.719468601687,
+              "y": 658.2966913476401,
+              "width": 600,
+              "height": 112,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 2920.7404883108097,
+              "skinY": 658.4738919214353,
+              "skinWidth": 600,
+              "skinHeight": 112
+            },
+            {
+              "x": 3700,
+              "y": 664,
+              "width": 800,
+              "height": 112,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 3700,
+              "skinY": 664,
+              "skinWidth": 800,
+              "skinHeight": 112
+            },
+            {
+              "x": 1154.719468601688,
+              "y": 574.2966913476401,
+              "width": 128,
+              "height": 56,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 1154.740488310812,
+              "skinY": 574.4738919214353,
+              "skinWidth": 128,
+              "skinHeight": 56
+            },
+            {
+              "x": 2154.719468601687,
+              "y": 574.2966913476401,
+              "width": 128,
+              "height": 56,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 2154.7404883108097,
+              "skinY": 574.4738919214353,
+              "skinWidth": 128,
+              "skinHeight": 56
+            },
+            {
+              "x": 3154.719468601687,
+              "y": 574.2966913476401,
+              "width": 128,
+              "height": 56,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 3154.7404883108097,
+              "skinY": 574.4738919214353,
+              "skinWidth": 128,
+              "skinHeight": 56
+            },
+            {
+              "x": 1414,
+              "y": 532,
+              "width": 128,
+              "height": 24,
+              "texture": "terrain-deck-fill",
+              "visible": false,
+              "skinX": 1414,
+              "skinY": 532,
+              "skinWidth": 128,
+              "skinHeight": 24
+            }
+          ],
+          "tops": [
+            {
+              "x": 250,
+              "y": 621,
+              "width": 500,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 920.7404883108112,
+              "y": 615.4738919214353,
+              "width": 600,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 1400,
+              "y": 621,
+              "width": 200,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 1920.740488310812,
+              "y": 615.4738919214353,
+              "width": 600,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 2400,
+              "y": 621,
+              "width": 200,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 2920.7404883108097,
+              "y": 615.4738919214353,
+              "width": 600,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 3700,
+              "y": 621,
+              "width": 800,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 1154.740488310812,
+              "y": 559.4738919214353,
+              "width": 128,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 2154.7404883108097,
+              "y": 559.4738919214353,
+              "width": 128,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 3154.7404883108097,
+              "y": 559.4738919214353,
+              "width": 128,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 1414,
+              "y": 533,
+              "width": 128,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            }
+          ]
+        },
+        {
+          "style": "deck",
+          "cachedKeys": [
+            "terrain-deck-fill",
+            "terrain-deck-top"
+          ],
+          "textures": [
+            {
+              "key": "terrain-deck-fill",
+              "width": 128,
+              "height": 128,
+              "source": "blob:http://127.0.0.1:5175/f3663a50-3a9b-44c1-a6a6-8b57efd56e43"
+            },
+            {
+              "key": "terrain-deck-top",
+              "width": 128,
+              "height": 34,
+              "source": "blob:http://127.0.0.1:5175/8bb9a9ea-8e33-401a-b927-c62525063ce2"
+            }
+          ],
+          "platforms": [
+            {
+              "x": 250,
+              "y": 664,
+              "width": 500,
+              "height": 112,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 250,
+              "skinY": 664,
+              "skinWidth": 500,
+              "skinHeight": 112
+            },
+            {
+              "x": 923.3423477922968,
+              "y": 653.1951160212463,
+              "width": 600,
+              "height": 112,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 923.5789715509267,
+              "skinY": 653.4027943237406,
+              "skinWidth": 600,
+              "skinHeight": 112
+            },
+            {
+              "x": 1400,
+              "y": 664,
+              "width": 200,
+              "height": 112,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 1400,
+              "skinY": 664,
+              "skinWidth": 200,
+              "skinHeight": 112
+            },
+            {
+              "x": 1923.3423477922966,
+              "y": 653.1951160212463,
+              "width": 600,
+              "height": 112,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 1923.5789715509272,
+              "skinY": 653.4027943237406,
+              "skinWidth": 600,
+              "skinHeight": 112
+            },
+            {
+              "x": 2400,
+              "y": 664,
+              "width": 200,
+              "height": 112,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 2400,
+              "skinY": 664,
+              "skinWidth": 200,
+              "skinHeight": 112
+            },
+            {
+              "x": 2923.342347792299,
+              "y": 653.1951160212463,
+              "width": 600,
+              "height": 112,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 2923.5789715509286,
+              "skinY": 653.4027943237406,
+              "skinWidth": 600,
+              "skinHeight": 112
+            },
+            {
+              "x": 3700,
+              "y": 664,
+              "width": 800,
+              "height": 112,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 3700,
+              "skinY": 664,
+              "skinWidth": 800,
+              "skinHeight": 112
+            },
+            {
+              "x": 1157.3423477922966,
+              "y": 569.1951160212463,
+              "width": 128,
+              "height": 56,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 1157.5789715509272,
+              "skinY": 569.4027943237406,
+              "skinWidth": 128,
+              "skinHeight": 56
+            },
+            {
+              "x": 2157.342347792299,
+              "y": 569.1951160212463,
+              "width": 128,
+              "height": 56,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 2157.5789715509286,
+              "skinY": 569.4027943237406,
+              "skinWidth": 128,
+              "skinHeight": 56
+            },
+            {
+              "x": 3157.342347792299,
+              "y": 569.1951160212463,
+              "width": 128,
+              "height": 56,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 3157.5789715509286,
+              "skinY": 569.4027943237406,
+              "skinWidth": 128,
+              "skinHeight": 56
+            },
+            {
+              "x": 1414,
+              "y": 532,
+              "width": 128,
+              "height": 24,
+              "texture": "terrain-deck-fill",
+              "visible": false,
+              "skinX": 1414,
+              "skinY": 532,
+              "skinWidth": 128,
+              "skinHeight": 24
+            }
+          ],
+          "tops": [
+            {
+              "x": 250,
+              "y": 621,
+              "width": 500,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 923.5789715509267,
+              "y": 610.4027943237406,
+              "width": 600,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 1400,
+              "y": 621,
+              "width": 200,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 1923.5789715509272,
+              "y": 610.4027943237406,
+              "width": 600,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 2400,
+              "y": 621,
+              "width": 200,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 2923.5789715509286,
+              "y": 610.4027943237406,
+              "width": 600,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 3700,
+              "y": 621,
+              "width": 800,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 1157.5789715509272,
+              "y": 554.4027943237406,
+              "width": 128,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 2157.5789715509286,
+              "y": 554.4027943237406,
+              "width": 128,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 3157.5789715509286,
+              "y": 554.4027943237406,
+              "width": 128,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 1414,
+              "y": 533,
+              "width": 128,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            }
+          ]
+        },
+        {
+          "style": "deck",
+          "cachedKeys": [
+            "terrain-deck-fill",
+            "terrain-deck-top"
+          ],
+          "textures": [
+            {
+              "key": "terrain-deck-fill",
+              "width": 128,
+              "height": 128,
+              "source": "blob:http://127.0.0.1:5175/f3663a50-3a9b-44c1-a6a6-8b57efd56e43"
+            },
+            {
+              "key": "terrain-deck-top",
+              "width": 128,
+              "height": 34,
+              "source": "blob:http://127.0.0.1:5175/8bb9a9ea-8e33-401a-b927-c62525063ce2"
+            }
+          ],
+          "platforms": [
+            {
+              "x": 250,
+              "y": 664,
+              "width": 500,
+              "height": 112,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 250,
+              "skinY": 664,
+              "skinWidth": 500,
+              "skinHeight": 112
+            },
+            {
+              "x": 922.2406830277912,
+              "y": 648.246676304773,
+              "width": 600,
+              "height": 112,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 922.6500299977536,
+              "skinY": 648.4457394555321,
+              "skinWidth": 600,
+              "skinHeight": 112
+            },
+            {
+              "x": 1400,
+              "y": 664,
+              "width": 200,
+              "height": 112,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 1400,
+              "skinY": 664,
+              "skinWidth": 200,
+              "skinHeight": 112
+            },
+            {
+              "x": 1922.2406830277919,
+              "y": 648.246676304773,
+              "width": 600,
+              "height": 112,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 1922.6500299977545,
+              "skinY": 648.4457394555321,
+              "skinWidth": 600,
+              "skinHeight": 112
+            },
+            {
+              "x": 2400,
+              "y": 664,
+              "width": 200,
+              "height": 112,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 2400,
+              "skinY": 664,
+              "skinWidth": 200,
+              "skinHeight": 112
+            },
+            {
+              "x": 2922.2406830277932,
+              "y": 648.246676304773,
+              "width": 600,
+              "height": 112,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 2922.6500299977556,
+              "skinY": 648.4457394555321,
+              "skinWidth": 600,
+              "skinHeight": 112
+            },
+            {
+              "x": 3700,
+              "y": 664,
+              "width": 800,
+              "height": 112,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 3700,
+              "skinY": 664,
+              "skinWidth": 800,
+              "skinHeight": 112
+            },
+            {
+              "x": 1156.2406830277919,
+              "y": 564.246676304773,
+              "width": 128,
+              "height": 56,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 1156.6500299977545,
+              "skinY": 564.4457394555321,
+              "skinWidth": 128,
+              "skinHeight": 56
+            },
+            {
+              "x": 2156.2406830277932,
+              "y": 564.246676304773,
+              "width": 128,
+              "height": 56,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 2156.6500299977556,
+              "skinY": 564.4457394555321,
+              "skinWidth": 128,
+              "skinHeight": 56
+            },
+            {
+              "x": 3156.2406830277932,
+              "y": 564.246676304773,
+              "width": 128,
+              "height": 56,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 3156.6500299977556,
+              "skinY": 564.4457394555321,
+              "skinWidth": 128,
+              "skinHeight": 56
+            },
+            {
+              "x": 1414,
+              "y": 532,
+              "width": 128,
+              "height": 24,
+              "texture": "terrain-deck-fill",
+              "visible": false,
+              "skinX": 1414,
+              "skinY": 532,
+              "skinWidth": 128,
+              "skinHeight": 24
+            }
+          ],
+          "tops": [
+            {
+              "x": 250,
+              "y": 621,
+              "width": 500,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 922.6500299977536,
+              "y": 605.4457394555321,
+              "width": 600,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 1400,
+              "y": 621,
+              "width": 200,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 1922.6500299977545,
+              "y": 605.4457394555321,
+              "width": 600,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 2400,
+              "y": 621,
+              "width": 200,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 2922.6500299977556,
+              "y": 605.4457394555321,
+              "width": 600,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 3700,
+              "y": 621,
+              "width": 800,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 1156.6500299977545,
+              "y": 549.4457394555321,
+              "width": 128,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 2156.6500299977556,
+              "y": 549.4457394555321,
+              "width": 128,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 3156.6500299977556,
+              "y": 549.4457394555321,
+              "width": 128,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 1414,
+              "y": 533,
+              "width": 128,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            }
+          ]
+        },
+        {
+          "style": "deck",
+          "cachedKeys": [
+            "terrain-deck-fill",
+            "terrain-deck-top"
+          ],
+          "textures": [
+            {
+              "key": "terrain-deck-fill",
+              "width": 128,
+              "height": 128,
+              "source": "blob:http://127.0.0.1:5175/f3663a50-3a9b-44c1-a6a6-8b57efd56e43"
+            },
+            {
+              "key": "terrain-deck-top",
+              "width": 128,
+              "height": 34,
+              "source": "blob:http://127.0.0.1:5175/8bb9a9ea-8e33-401a-b927-c62525063ce2"
+            }
+          ],
+          "platforms": [
+            {
+              "x": 250,
+              "y": 664,
+              "width": 500,
+              "height": 112,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 250,
+              "skinY": 664,
+              "skinWidth": 500,
+              "skinHeight": 112
+            },
+            {
+              "x": 917.219159685678,
+              "y": 643.7833660838108,
+              "width": 600,
+              "height": 112,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 917.2164236375625,
+              "skinY": 643.9367536529263,
+              "skinWidth": 600,
+              "skinHeight": 112
+            },
+            {
+              "x": 1400,
+              "y": 664,
+              "width": 200,
+              "height": 112,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 1400,
+              "skinY": 664,
+              "skinWidth": 200,
+              "skinHeight": 112
+            },
+            {
+              "x": 1917.2191596856783,
+              "y": 643.7833660838108,
+              "width": 600,
+              "height": 112,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 1917.2164236375631,
+              "skinY": 643.9367536529263,
+              "skinWidth": 600,
+              "skinHeight": 112
+            },
+            {
+              "x": 2400,
+              "y": 664,
+              "width": 200,
+              "height": 112,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 2400,
+              "skinY": 664,
+              "skinWidth": 200,
+              "skinHeight": 112
+            },
+            {
+              "x": 2917.219159685677,
+              "y": 643.7833660838108,
+              "width": 600,
+              "height": 112,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 2917.216423637563,
+              "skinY": 643.9367536529263,
+              "skinWidth": 600,
+              "skinHeight": 112
+            },
+            {
+              "x": 3700,
+              "y": 664,
+              "width": 800,
+              "height": 112,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 3700,
+              "skinY": 664,
+              "skinWidth": 800,
+              "skinHeight": 112
+            },
+            {
+              "x": 1151.2191596856783,
+              "y": 559.7833660838108,
+              "width": 128,
+              "height": 56,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 1151.2164236375631,
+              "skinY": 559.9367536529263,
+              "skinWidth": 128,
+              "skinHeight": 56
+            },
+            {
+              "x": 2151.219159685677,
+              "y": 559.7833660838108,
+              "width": 128,
+              "height": 56,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 2151.216423637563,
+              "skinY": 559.9367536529263,
+              "skinWidth": 128,
+              "skinHeight": 56
+            },
+            {
+              "x": 3151.219159685677,
+              "y": 559.7833660838108,
+              "width": 128,
+              "height": 56,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 3151.216423637563,
+              "skinY": 559.9367536529263,
+              "skinWidth": 128,
+              "skinHeight": 56
+            },
+            {
+              "x": 1414,
+              "y": 532,
+              "width": 128,
+              "height": 24,
+              "texture": "terrain-deck-fill",
+              "visible": false,
+              "skinX": 1414,
+              "skinY": 532,
+              "skinWidth": 128,
+              "skinHeight": 24
+            }
+          ],
+          "tops": [
+            {
+              "x": 250,
+              "y": 621,
+              "width": 500,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 917.2164236375625,
+              "y": 600.9367536529263,
+              "width": 600,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 1400,
+              "y": 621,
+              "width": 200,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 1917.2164236375631,
+              "y": 600.9367536529263,
+              "width": 600,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 2400,
+              "y": 621,
+              "width": 200,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 2917.216423637563,
+              "y": 600.9367536529263,
+              "width": 600,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 3700,
+              "y": 621,
+              "width": 800,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 1151.2164236375631,
+              "y": 544.9367536529263,
+              "width": 128,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 2151.216423637563,
+              "y": 544.9367536529263,
+              "width": 128,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 3151.216423637563,
+              "y": 544.9367536529263,
+              "width": 128,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 1414,
+              "y": 533,
+              "width": 128,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            }
+          ]
+        },
+        {
+          "style": "deck",
+          "cachedKeys": [
+            "terrain-deck-fill",
+            "terrain-deck-top"
+          ],
+          "textures": [
+            {
+              "key": "terrain-deck-fill",
+              "width": 128,
+              "height": 128,
+              "source": "blob:http://127.0.0.1:5175/f3663a50-3a9b-44c1-a6a6-8b57efd56e43"
+            },
+            {
+              "key": "terrain-deck-top",
+              "width": 128,
+              "height": 34,
+              "source": "blob:http://127.0.0.1:5175/8bb9a9ea-8e33-401a-b927-c62525063ce2"
+            }
+          ],
+          "platforms": [
+            {
+              "x": 250,
+              "y": 664,
+              "width": 500,
+              "height": 112,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 250,
+              "skinY": 664,
+              "skinWidth": 500,
+              "skinHeight": 112
+            },
+            {
+              "x": 909.2079961170806,
+              "y": 640.8564630124334,
+              "width": 600,
+              "height": 112,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 909.0223130755533,
+              "skinY": 640.9332548462337,
+              "skinWidth": 600,
+              "skinHeight": 112
+            },
+            {
+              "x": 1400,
+              "y": 664,
+              "width": 200,
+              "height": 112,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 1400,
+              "skinY": 664,
+              "skinWidth": 200,
+              "skinHeight": 112
+            },
+            {
+              "x": 1909.2079961170798,
+              "y": 640.8564630124334,
+              "width": 600,
+              "height": 112,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 1909.022313075553,
+              "skinY": 640.9332548462337,
+              "skinWidth": 600,
+              "skinHeight": 112
+            },
+            {
+              "x": 2400,
+              "y": 664,
+              "width": 200,
+              "height": 112,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 2400,
+              "skinY": 664,
+              "skinWidth": 200,
+              "skinHeight": 112
+            },
+            {
+              "x": 2909.20799611708,
+              "y": 640.8564630124334,
+              "width": 600,
+              "height": 112,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 2909.022313075553,
+              "skinY": 640.9332548462337,
+              "skinWidth": 600,
+              "skinHeight": 112
+            },
+            {
+              "x": 3700,
+              "y": 664,
+              "width": 800,
+              "height": 112,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 3700,
+              "skinY": 664,
+              "skinWidth": 800,
+              "skinHeight": 112
+            },
+            {
+              "x": 1143.2079961170798,
+              "y": 556.8564630124334,
+              "width": 128,
+              "height": 56,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 1143.022313075553,
+              "skinY": 556.9332548462337,
+              "skinWidth": 128,
+              "skinHeight": 56
+            },
+            {
+              "x": 2143.20799611708,
+              "y": 556.8564630124334,
+              "width": 128,
+              "height": 56,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 2143.022313075553,
+              "skinY": 556.9332548462337,
+              "skinWidth": 128,
+              "skinHeight": 56
+            },
+            {
+              "x": 3143.20799611708,
+              "y": 556.8564630124334,
+              "width": 128,
+              "height": 56,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 3143.022313075553,
+              "skinY": 556.9332548462337,
+              "skinWidth": 128,
+              "skinHeight": 56
+            },
+            {
+              "x": 1414,
+              "y": 532,
+              "width": 128,
+              "height": 24,
+              "texture": "terrain-deck-fill",
+              "visible": false,
+              "skinX": 1414,
+              "skinY": 532,
+              "skinWidth": 128,
+              "skinHeight": 24
+            }
+          ],
+          "tops": [
+            {
+              "x": 250,
+              "y": 621,
+              "width": 500,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 909.0223130755533,
+              "y": 597.9332548462337,
+              "width": 600,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 1400,
+              "y": 621,
+              "width": 200,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 1909.022313075553,
+              "y": 597.9332548462337,
+              "width": 600,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 2400,
+              "y": 621,
+              "width": 200,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 2909.022313075553,
+              "y": 597.9332548462337,
+              "width": 600,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 3700,
+              "y": 621,
+              "width": 800,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 1143.022313075553,
+              "y": 541.9332548462337,
+              "width": 128,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 2143.022313075553,
+              "y": 541.9332548462337,
+              "width": 128,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 3143.022313075553,
+              "y": 541.9332548462337,
+              "width": 128,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 1414,
+              "y": 533,
+              "width": 128,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            }
+          ]
+        },
+        {
+          "style": "deck",
+          "cachedKeys": [
+            "terrain-deck-fill",
+            "terrain-deck-top"
+          ],
+          "textures": [
+            {
+              "key": "terrain-deck-fill",
+              "width": 128,
+              "height": 128,
+              "source": "blob:http://127.0.0.1:5175/f3663a50-3a9b-44c1-a6a6-8b57efd56e43"
+            },
+            {
+              "key": "terrain-deck-top",
+              "width": 128,
+              "height": 34,
+              "source": "blob:http://127.0.0.1:5175/8bb9a9ea-8e33-401a-b927-c62525063ce2"
+            }
+          ],
+          "platforms": [
+            {
+              "x": 250,
+              "y": 664,
+              "width": 500,
+              "height": 112,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 250,
+              "skinY": 664,
+              "skinWidth": 500,
+              "skinHeight": 112
+            },
+            {
+              "x": 898.5013279000142,
+              "y": 640.0300791043836,
+              "width": 600,
+              "height": 112,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 899.2064349153324,
+              "skinY": 640.0177085274773,
+              "skinWidth": 600,
+              "skinHeight": 112
+            },
+            {
+              "x": 1400,
+              "y": 664,
+              "width": 200,
+              "height": 112,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 1400,
+              "skinY": 664,
+              "skinWidth": 200,
+              "skinHeight": 112
+            },
+            {
+              "x": 1898.5013279000145,
+              "y": 640.0300791043836,
+              "width": 600,
+              "height": 112,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 1899.206434915332,
+              "skinY": 640.0177085274773,
+              "skinWidth": 600,
+              "skinHeight": 112
+            },
+            {
+              "x": 2400,
+              "y": 664,
+              "width": 200,
+              "height": 112,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 2400,
+              "skinY": 664,
+              "skinWidth": 200,
+              "skinHeight": 112
+            },
+            {
+              "x": 2898.5013279000136,
+              "y": 640.0300791043836,
+              "width": 600,
+              "height": 112,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 2899.206434915331,
+              "skinY": 640.0177085274773,
+              "skinWidth": 600,
+              "skinHeight": 112
+            },
+            {
+              "x": 3700,
+              "y": 664,
+              "width": 800,
+              "height": 112,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 3700,
+              "skinY": 664,
+              "skinWidth": 800,
+              "skinHeight": 112
+            },
+            {
+              "x": 1132.5013279000145,
+              "y": 556.0300791043836,
+              "width": 128,
+              "height": 56,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 1133.206434915332,
+              "skinY": 556.0177085274773,
+              "skinWidth": 128,
+              "skinHeight": 56
+            },
+            {
+              "x": 2132.5013279000136,
+              "y": 556.0300791043836,
+              "width": 128,
+              "height": 56,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 2133.206434915331,
+              "skinY": 556.0177085274773,
+              "skinWidth": 128,
+              "skinHeight": 56
+            },
+            {
+              "x": 3132.5013279000136,
+              "y": 556.0300791043836,
+              "width": 128,
+              "height": 56,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 3133.206434915331,
+              "skinY": 556.0177085274773,
+              "skinWidth": 128,
+              "skinHeight": 56
+            },
+            {
+              "x": 1414,
+              "y": 532,
+              "width": 128,
+              "height": 24,
+              "texture": "terrain-deck-fill",
+              "visible": false,
+              "skinX": 1414,
+              "skinY": 532,
+              "skinWidth": 128,
+              "skinHeight": 24
+            }
+          ],
+          "tops": [
+            {
+              "x": 250,
+              "y": 621,
+              "width": 500,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 899.2064349153324,
+              "y": 597.0177085274773,
+              "width": 600,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 1400,
+              "y": 621,
+              "width": 200,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 1899.206434915332,
+              "y": 597.0177085274773,
+              "width": 600,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 2400,
+              "y": 621,
+              "width": 200,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 2899.206434915331,
+              "y": 597.0177085274773,
+              "width": 600,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 3700,
+              "y": 621,
+              "width": 800,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 1133.206434915332,
+              "y": 541.0177085274773,
+              "width": 128,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 2133.206434915331,
+              "y": 541.0177085274773,
+              "width": 128,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 3133.206434915331,
+              "y": 541.0177085274773,
+              "width": 128,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 1414,
+              "y": 533,
+              "width": 128,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            }
+          ]
+        }
+      ],
+      "movement": [
+        {
+          "index": 1,
+          "xRange": 24.84101989228259,
+          "yRange": 18.26661224325653
+        },
+        {
+          "index": 3,
+          "xRange": 24.84101989228202,
+          "yRange": 18.26661224325653
+        },
+        {
+          "index": 5,
+          "xRange": 24.841019892285203,
+          "yRange": 18.26661224325653
+        },
+        {
+          "index": 7,
+          "xRange": 24.84101989228202,
+          "yRange": 18.26661224325653
+        },
+        {
+          "index": 8,
+          "xRange": 24.841019892285203,
+          "yRange": 18.26661224325653
+        },
+        {
+          "index": 9,
+          "xRange": 24.841019892285203,
+          "yRange": 18.26661224325653
+        }
+      ],
+      "maxAlignmentDifference": 0.7051070153181627,
+      "path": "docs/screenshots/art-a5/phone-S07-moving-deck.png",
+      "errors": []
+    },
+    {
+      "device": "tablet",
+      "stage": "S07",
+      "samples": [
+        {
+          "style": "deck",
+          "cachedKeys": [
+            "terrain-deck-fill",
+            "terrain-deck-top"
+          ],
+          "textures": [
+            {
+              "key": "terrain-deck-fill",
+              "width": 128,
+              "height": 128,
+              "source": "blob:http://127.0.0.1:5175/c32c2883-c06c-4855-ac6f-1f473e8f712d"
+            },
+            {
+              "key": "terrain-deck-top",
+              "width": 128,
+              "height": 34,
+              "source": "blob:http://127.0.0.1:5175/2e32e1e0-1142-4c08-9c9d-fb67f7529ef4"
+            }
+          ],
+          "platforms": [
+            {
+              "x": 250,
+              "y": 664,
+              "width": 500,
+              "height": 112,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 250,
+              "skinY": 664,
+              "skinWidth": 500,
+              "skinHeight": 112
+            },
+            {
+              "x": 922.9729831188392,
+              "y": 654.4306156025921,
+              "width": 600,
+              "height": 112,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 923.1658664949381,
+              "skinY": 654.6353258044339,
+              "skinWidth": 600,
+              "skinHeight": 112
+            },
+            {
+              "x": 1400,
+              "y": 664,
+              "width": 200,
+              "height": 112,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 1400,
+              "skinY": 664,
+              "skinWidth": 200,
+              "skinHeight": 112
+            },
+            {
+              "x": 1922.9729831188401,
+              "y": 654.4306156025921,
+              "width": 600,
+              "height": 112,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 1923.1658664949384,
+              "skinY": 654.6353258044339,
+              "skinWidth": 600,
+              "skinHeight": 112
+            },
+            {
+              "x": 2400,
+              "y": 664,
+              "width": 200,
+              "height": 112,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 2400,
+              "skinY": 664,
+              "skinWidth": 200,
+              "skinHeight": 112
+            },
+            {
+              "x": 2922.97298311884,
+              "y": 654.4306156025921,
+              "width": 600,
+              "height": 112,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 2923.165866494938,
+              "skinY": 654.6353258044339,
+              "skinWidth": 600,
+              "skinHeight": 112
+            },
+            {
+              "x": 3700,
+              "y": 664,
+              "width": 800,
+              "height": 112,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 3700,
+              "skinY": 664,
+              "skinWidth": 800,
+              "skinHeight": 112
+            },
+            {
+              "x": 1156.9729831188401,
+              "y": 570.4306156025921,
+              "width": 128,
+              "height": 56,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 1157.1658664949384,
+              "skinY": 570.6353258044339,
+              "skinWidth": 128,
+              "skinHeight": 56
+            },
+            {
+              "x": 2156.97298311884,
+              "y": 570.4306156025921,
+              "width": 128,
+              "height": 56,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 2157.165866494938,
+              "skinY": 570.6353258044339,
+              "skinWidth": 128,
+              "skinHeight": 56
+            },
+            {
+              "x": 3156.97298311884,
+              "y": 570.4306156025921,
+              "width": 128,
+              "height": 56,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 3157.165866494938,
+              "skinY": 570.6353258044339,
+              "skinWidth": 128,
+              "skinHeight": 56
+            },
+            {
+              "x": 1414,
+              "y": 532,
+              "width": 128,
+              "height": 24,
+              "texture": "terrain-deck-fill",
+              "visible": false,
+              "skinX": 1414,
+              "skinY": 532,
+              "skinWidth": 128,
+              "skinHeight": 24
+            }
+          ],
+          "tops": [
+            {
+              "x": 250,
+              "y": 621,
+              "width": 500,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 923.1658664949381,
+              "y": 611.6353258044339,
+              "width": 600,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 1400,
+              "y": 621,
+              "width": 200,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 1923.1658664949384,
+              "y": 611.6353258044339,
+              "width": 600,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 2400,
+              "y": 621,
+              "width": 200,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 2923.165866494938,
+              "y": 611.6353258044339,
+              "width": 600,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 3700,
+              "y": 621,
+              "width": 800,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 1157.1658664949384,
+              "y": 555.6353258044339,
+              "width": 128,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 2157.165866494938,
+              "y": 555.6353258044339,
+              "width": 128,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 3157.165866494938,
+              "y": 555.6353258044339,
+              "width": 128,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 1414,
+              "y": 533,
+              "width": 128,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            }
+          ]
+        },
+        {
+          "style": "deck",
+          "cachedKeys": [
+            "terrain-deck-fill",
+            "terrain-deck-top"
+          ],
+          "textures": [
+            {
+              "key": "terrain-deck-fill",
+              "width": 128,
+              "height": 128,
+              "source": "blob:http://127.0.0.1:5175/c32c2883-c06c-4855-ac6f-1f473e8f712d"
+            },
+            {
+              "key": "terrain-deck-top",
+              "width": 128,
+              "height": 34,
+              "source": "blob:http://127.0.0.1:5175/2e32e1e0-1142-4c08-9c9d-fb67f7529ef4"
+            }
+          ],
+          "platforms": [
+            {
+              "x": 250,
+              "y": 664,
+              "width": 500,
+              "height": 112,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 250,
+              "skinY": 664,
+              "skinWidth": 500,
+              "skinHeight": 112
+            },
+            {
+              "x": 922.905212288367,
+              "y": 649.4523895931176,
+              "width": 600,
+              "height": 112,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 923.271830827842,
+              "skinY": 649.6574023562417,
+              "skinWidth": 600,
+              "skinHeight": 112
+            },
+            {
+              "x": 1400,
+              "y": 664,
+              "width": 200,
+              "height": 112,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 1400,
+              "skinY": 664,
+              "skinWidth": 200,
+              "skinHeight": 112
+            },
+            {
+              "x": 1922.905212288368,
+              "y": 649.4523895931176,
+              "width": 600,
+              "height": 112,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 1923.2718308278415,
+              "skinY": 649.6574023562417,
+              "skinWidth": 600,
+              "skinHeight": 112
+            },
+            {
+              "x": 2400,
+              "y": 664,
+              "width": 200,
+              "height": 112,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 2400,
+              "skinY": 664,
+              "skinWidth": 200,
+              "skinHeight": 112
+            },
+            {
+              "x": 2922.9052122883686,
+              "y": 649.4523895931176,
+              "width": 600,
+              "height": 112,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 2923.271830827843,
+              "skinY": 649.6574023562417,
+              "skinWidth": 600,
+              "skinHeight": 112
+            },
+            {
+              "x": 3700,
+              "y": 664,
+              "width": 800,
+              "height": 112,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 3700,
+              "skinY": 664,
+              "skinWidth": 800,
+              "skinHeight": 112
+            },
+            {
+              "x": 1156.905212288368,
+              "y": 565.4523895931176,
+              "width": 128,
+              "height": 56,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 1157.2718308278415,
+              "skinY": 565.6574023562417,
+              "skinWidth": 128,
+              "skinHeight": 56
+            },
+            {
+              "x": 2156.9052122883686,
+              "y": 565.4523895931176,
+              "width": 128,
+              "height": 56,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 2157.271830827843,
+              "skinY": 565.6574023562417,
+              "skinWidth": 128,
+              "skinHeight": 56
+            },
+            {
+              "x": 3156.9052122883686,
+              "y": 565.4523895931176,
+              "width": 128,
+              "height": 56,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 3157.271830827843,
+              "skinY": 565.6574023562417,
+              "skinWidth": 128,
+              "skinHeight": 56
+            },
+            {
+              "x": 1414,
+              "y": 532,
+              "width": 128,
+              "height": 24,
+              "texture": "terrain-deck-fill",
+              "visible": false,
+              "skinX": 1414,
+              "skinY": 532,
+              "skinWidth": 128,
+              "skinHeight": 24
+            }
+          ],
+          "tops": [
+            {
+              "x": 250,
+              "y": 621,
+              "width": 500,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 923.271830827842,
+              "y": 606.6574023562417,
+              "width": 600,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 1400,
+              "y": 621,
+              "width": 200,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 1923.2718308278415,
+              "y": 606.6574023562417,
+              "width": 600,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 2400,
+              "y": 621,
+              "width": 200,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 2923.271830827843,
+              "y": 606.6574023562417,
+              "width": 600,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 3700,
+              "y": 621,
+              "width": 800,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 1157.2718308278415,
+              "y": 550.6574023562417,
+              "width": 128,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 2157.271830827843,
+              "y": 550.6574023562417,
+              "width": 128,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 3157.271830827843,
+              "y": 550.6574023562417,
+              "width": 128,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 1414,
+              "y": 533,
+              "width": 128,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            }
+          ]
+        },
+        {
+          "style": "deck",
+          "cachedKeys": [
+            "terrain-deck-fill",
+            "terrain-deck-top"
+          ],
+          "textures": [
+            {
+              "key": "terrain-deck-fill",
+              "width": 128,
+              "height": 128,
+              "source": "blob:http://127.0.0.1:5175/c32c2883-c06c-4855-ac6f-1f473e8f712d"
+            },
+            {
+              "key": "terrain-deck-top",
+              "width": 128,
+              "height": 34,
+              "source": "blob:http://127.0.0.1:5175/2e32e1e0-1142-4c08-9c9d-fb67f7529ef4"
+            }
+          ],
+          "platforms": [
+            {
+              "x": 250,
+              "y": 664,
+              "width": 500,
+              "height": 112,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 250,
+              "skinY": 664,
+              "skinWidth": 500,
+              "skinHeight": 112
+            },
+            {
+              "x": 918.8047069604567,
+              "y": 644.9061564668165,
+              "width": 600,
+              "height": 112,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 919.3304286620557,
+              "skinY": 645.0769336058846,
+              "skinWidth": 600,
+              "skinHeight": 112
+            },
+            {
+              "x": 1400,
+              "y": 664,
+              "width": 200,
+              "height": 112,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 1400,
+              "skinY": 664,
+              "skinWidth": 200,
+              "skinHeight": 112
+            },
+            {
+              "x": 1918.8047069604581,
+              "y": 644.9061564668165,
+              "width": 600,
+              "height": 112,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 1919.330428662056,
+              "skinY": 645.0769336058846,
+              "skinWidth": 600,
+              "skinHeight": 112
+            },
+            {
+              "x": 2400,
+              "y": 664,
+              "width": 200,
+              "height": 112,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 2400,
+              "skinY": 664,
+              "skinWidth": 200,
+              "skinHeight": 112
+            },
+            {
+              "x": 2918.8047069604595,
+              "y": 644.9061564668165,
+              "width": 600,
+              "height": 112,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 2919.3304286620573,
+              "skinY": 645.0769336058846,
+              "skinWidth": 600,
+              "skinHeight": 112
+            },
+            {
+              "x": 3700,
+              "y": 664,
+              "width": 800,
+              "height": 112,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 3700,
+              "skinY": 664,
+              "skinWidth": 800,
+              "skinHeight": 112
+            },
+            {
+              "x": 1152.8047069604581,
+              "y": 560.9061564668165,
+              "width": 128,
+              "height": 56,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 1153.330428662056,
+              "skinY": 561.0769336058846,
+              "skinWidth": 128,
+              "skinHeight": 56
+            },
+            {
+              "x": 2152.8047069604595,
+              "y": 560.9061564668165,
+              "width": 128,
+              "height": 56,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 2153.3304286620573,
+              "skinY": 561.0769336058846,
+              "skinWidth": 128,
+              "skinHeight": 56
+            },
+            {
+              "x": 3152.8047069604595,
+              "y": 560.9061564668165,
+              "width": 128,
+              "height": 56,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 3153.3304286620573,
+              "skinY": 561.0769336058846,
+              "skinWidth": 128,
+              "skinHeight": 56
+            },
+            {
+              "x": 1414,
+              "y": 532,
+              "width": 128,
+              "height": 24,
+              "texture": "terrain-deck-fill",
+              "visible": false,
+              "skinX": 1414,
+              "skinY": 532,
+              "skinWidth": 128,
+              "skinHeight": 24
+            }
+          ],
+          "tops": [
+            {
+              "x": 250,
+              "y": 621,
+              "width": 500,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 919.3304286620557,
+              "y": 602.0769336058846,
+              "width": 600,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 1400,
+              "y": 621,
+              "width": 200,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 1919.330428662056,
+              "y": 602.0769336058846,
+              "width": 600,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 2400,
+              "y": 621,
+              "width": 200,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 2919.3304286620573,
+              "y": 602.0769336058846,
+              "width": 600,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 3700,
+              "y": 621,
+              "width": 800,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 1153.330428662056,
+              "y": 546.0769336058846,
+              "width": 128,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 2153.3304286620573,
+              "y": 546.0769336058846,
+              "width": 128,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 3153.3304286620573,
+              "y": 546.0769336058846,
+              "width": 128,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 1414,
+              "y": 533,
+              "width": 128,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            }
+          ]
+        },
+        {
+          "style": "deck",
+          "cachedKeys": [
+            "terrain-deck-fill",
+            "terrain-deck-top"
+          ],
+          "textures": [
+            {
+              "key": "terrain-deck-fill",
+              "width": 128,
+              "height": 128,
+              "source": "blob:http://127.0.0.1:5175/c32c2883-c06c-4855-ac6f-1f473e8f712d"
+            },
+            {
+              "key": "terrain-deck-top",
+              "width": 128,
+              "height": 34,
+              "source": "blob:http://127.0.0.1:5175/2e32e1e0-1142-4c08-9c9d-fb67f7529ef4"
+            }
+          ],
+          "platforms": [
+            {
+              "x": 250,
+              "y": 664,
+              "width": 500,
+              "height": 112,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 250,
+              "skinY": 664,
+              "skinWidth": 500,
+              "skinHeight": 112
+            },
+            {
+              "x": 911.2747456726581,
+              "y": 641.4776414236361,
+              "width": 600,
+              "height": 112,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 911.3609653896885,
+              "skinY": 641.5808180425656,
+              "skinWidth": 600,
+              "skinHeight": 112
+            },
+            {
+              "x": 1400,
+              "y": 664,
+              "width": 200,
+              "height": 112,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 1400,
+              "skinY": 664,
+              "skinWidth": 200,
+              "skinHeight": 112
+            },
+            {
+              "x": 1911.2747456726593,
+              "y": 641.4776414236361,
+              "width": 600,
+              "height": 112,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 1911.3609653896895,
+              "skinY": 641.5808180425656,
+              "skinWidth": 600,
+              "skinHeight": 112
+            },
+            {
+              "x": 2400,
+              "y": 664,
+              "width": 200,
+              "height": 112,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 2400,
+              "skinY": 664,
+              "skinWidth": 200,
+              "skinHeight": 112
+            },
+            {
+              "x": 2911.274745672658,
+              "y": 641.4776414236361,
+              "width": 600,
+              "height": 112,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 2911.360965389691,
+              "skinY": 641.5808180425656,
+              "skinWidth": 600,
+              "skinHeight": 112
+            },
+            {
+              "x": 3700,
+              "y": 664,
+              "width": 800,
+              "height": 112,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 3700,
+              "skinY": 664,
+              "skinWidth": 800,
+              "skinHeight": 112
+            },
+            {
+              "x": 1145.2747456726593,
+              "y": 557.4776414236361,
+              "width": 128,
+              "height": 56,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 1145.3609653896895,
+              "skinY": 557.5808180425656,
+              "skinWidth": 128,
+              "skinHeight": 56
+            },
+            {
+              "x": 2145.274745672658,
+              "y": 557.4776414236361,
+              "width": 128,
+              "height": 56,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 2145.360965389691,
+              "skinY": 557.5808180425656,
+              "skinWidth": 128,
+              "skinHeight": 56
+            },
+            {
+              "x": 3145.274745672658,
+              "y": 557.4776414236361,
+              "width": 128,
+              "height": 56,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 3145.360965389691,
+              "skinY": 557.5808180425656,
+              "skinWidth": 128,
+              "skinHeight": 56
+            },
+            {
+              "x": 1414,
+              "y": 532,
+              "width": 128,
+              "height": 24,
+              "texture": "terrain-deck-fill",
+              "visible": false,
+              "skinX": 1414,
+              "skinY": 532,
+              "skinWidth": 128,
+              "skinHeight": 24
+            }
+          ],
+          "tops": [
+            {
+              "x": 250,
+              "y": 621,
+              "width": 500,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 911.3609653896885,
+              "y": 598.5808180425656,
+              "width": 600,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 1400,
+              "y": 621,
+              "width": 200,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 1911.3609653896895,
+              "y": 598.5808180425656,
+              "width": 600,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 2400,
+              "y": 621,
+              "width": 200,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 2911.360965389691,
+              "y": 598.5808180425656,
+              "width": 600,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 3700,
+              "y": 621,
+              "width": 800,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 1145.3609653896895,
+              "y": 542.5808180425656,
+              "width": 128,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 2145.360965389691,
+              "y": 542.5808180425656,
+              "width": 128,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 3145.360965389691,
+              "y": 542.5808180425656,
+              "width": 128,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 1414,
+              "y": 533,
+              "width": 128,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            }
+          ]
+        },
+        {
+          "style": "deck",
+          "cachedKeys": [
+            "terrain-deck-fill",
+            "terrain-deck-top"
+          ],
+          "textures": [
+            {
+              "key": "terrain-deck-fill",
+              "width": 128,
+              "height": 128,
+              "source": "blob:http://127.0.0.1:5175/c32c2883-c06c-4855-ac6f-1f473e8f712d"
+            },
+            {
+              "key": "terrain-deck-top",
+              "width": 128,
+              "height": 34,
+              "source": "blob:http://127.0.0.1:5175/2e32e1e0-1142-4c08-9c9d-fb67f7529ef4"
+            }
+          ],
+          "platforms": [
+            {
+              "x": 250,
+              "y": 664,
+              "width": 500,
+              "height": 112,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 250,
+              "skinY": 664,
+              "skinWidth": 500,
+              "skinHeight": 112
+            },
+            {
+              "x": 901.8581997035752,
+              "y": 640.0216048581689,
+              "width": 600,
+              "height": 112,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 901.7190472086379,
+              "skinY": 640.0378346190637,
+              "skinWidth": 600,
+              "skinHeight": 112
+            },
+            {
+              "x": 1400,
+              "y": 664,
+              "width": 200,
+              "height": 112,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 1400,
+              "skinY": 664,
+              "skinWidth": 200,
+              "skinHeight": 112
+            },
+            {
+              "x": 1901.8581997035753,
+              "y": 640.0216048581689,
+              "width": 600,
+              "height": 112,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 1901.7190472086386,
+              "skinY": 640.0378346190637,
+              "skinWidth": 600,
+              "skinHeight": 112
+            },
+            {
+              "x": 2400,
+              "y": 664,
+              "width": 200,
+              "height": 112,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 2400,
+              "skinY": 664,
+              "skinWidth": 200,
+              "skinHeight": 112
+            },
+            {
+              "x": 2901.858199703572,
+              "y": 640.0216048581689,
+              "width": 600,
+              "height": 112,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 2901.719047208638,
+              "skinY": 640.0378346190637,
+              "skinWidth": 600,
+              "skinHeight": 112
+            },
+            {
+              "x": 3700,
+              "y": 664,
+              "width": 800,
+              "height": 112,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 3700,
+              "skinY": 664,
+              "skinWidth": 800,
+              "skinHeight": 112
+            },
+            {
+              "x": 1135.8581997035753,
+              "y": 556.0216048581689,
+              "width": 128,
+              "height": 56,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 1135.7190472086386,
+              "skinY": 556.0378346190637,
+              "skinWidth": 128,
+              "skinHeight": 56
+            },
+            {
+              "x": 2135.858199703572,
+              "y": 556.0216048581689,
+              "width": 128,
+              "height": 56,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 2135.719047208638,
+              "skinY": 556.0378346190637,
+              "skinWidth": 128,
+              "skinHeight": 56
+            },
+            {
+              "x": 3135.858199703572,
+              "y": 556.0216048581689,
+              "width": 128,
+              "height": 56,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 3135.719047208638,
+              "skinY": 556.0378346190637,
+              "skinWidth": 128,
+              "skinHeight": 56
+            },
+            {
+              "x": 1414,
+              "y": 532,
+              "width": 128,
+              "height": 24,
+              "texture": "terrain-deck-fill",
+              "visible": false,
+              "skinX": 1414,
+              "skinY": 532,
+              "skinWidth": 128,
+              "skinHeight": 24
+            }
+          ],
+          "tops": [
+            {
+              "x": 250,
+              "y": 621,
+              "width": 500,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 901.7190472086379,
+              "y": 597.0378346190637,
+              "width": 600,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 1400,
+              "y": 621,
+              "width": 200,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 1901.7190472086386,
+              "y": 597.0378346190637,
+              "width": 600,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 2400,
+              "y": 621,
+              "width": 200,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 2901.719047208638,
+              "y": 597.0378346190637,
+              "width": 600,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 3700,
+              "y": 621,
+              "width": 800,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 1135.7190472086386,
+              "y": 541.0378346190637,
+              "width": 128,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 2135.719047208638,
+              "y": 541.0378346190637,
+              "width": 128,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 3135.719047208638,
+              "y": 541.0378346190637,
+              "width": 128,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 1414,
+              "y": 533,
+              "width": 128,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            }
+          ]
+        },
+        {
+          "style": "deck",
+          "cachedKeys": [
+            "terrain-deck-fill",
+            "terrain-deck-top"
+          ],
+          "textures": [
+            {
+              "key": "terrain-deck-fill",
+              "width": 128,
+              "height": 128,
+              "source": "blob:http://127.0.0.1:5175/c32c2883-c06c-4855-ac6f-1f473e8f712d"
+            },
+            {
+              "key": "terrain-deck-top",
+              "width": 128,
+              "height": 34,
+              "source": "blob:http://127.0.0.1:5175/2e32e1e0-1142-4c08-9c9d-fb67f7529ef4"
+            }
+          ],
+          "platforms": [
+            {
+              "x": 250,
+              "y": 664,
+              "width": 500,
+              "height": 112,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 250,
+              "skinY": 664,
+              "skinWidth": 500,
+              "skinHeight": 112
+            },
+            {
+              "x": 891.9761454542428,
+              "y": 640.7362227780595,
+              "width": 600,
+              "height": 112,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 891.8133686557949,
+              "skinY": 640.666047131031,
+              "skinWidth": 600,
+              "skinHeight": 112
+            },
+            {
+              "x": 1400,
+              "y": 664,
+              "width": 200,
+              "height": 112,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 1400,
+              "skinY": 664,
+              "skinWidth": 200,
+              "skinHeight": 112
+            },
+            {
+              "x": 1891.9761454542427,
+              "y": 640.7362227780595,
+              "width": 600,
+              "height": 112,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 1891.813368655795,
+              "skinY": 640.666047131031,
+              "skinWidth": 600,
+              "skinHeight": 112
+            },
+            {
+              "x": 2400,
+              "y": 664,
+              "width": 200,
+              "height": 112,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 2400,
+              "skinY": 664,
+              "skinWidth": 200,
+              "skinHeight": 112
+            },
+            {
+              "x": 2891.976145454239,
+              "y": 640.7362227780595,
+              "width": 600,
+              "height": 112,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 2891.8133686557944,
+              "skinY": 640.666047131031,
+              "skinWidth": 600,
+              "skinHeight": 112
+            },
+            {
+              "x": 3700,
+              "y": 664,
+              "width": 800,
+              "height": 112,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 3700,
+              "skinY": 664,
+              "skinWidth": 800,
+              "skinHeight": 112
+            },
+            {
+              "x": 1125.9761454542427,
+              "y": 556.7362227780595,
+              "width": 128,
+              "height": 56,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 1125.813368655795,
+              "skinY": 556.666047131031,
+              "skinWidth": 128,
+              "skinHeight": 56
+            },
+            {
+              "x": 2125.976145454239,
+              "y": 556.7362227780595,
+              "width": 128,
+              "height": 56,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 2125.8133686557944,
+              "skinY": 556.666047131031,
+              "skinWidth": 128,
+              "skinHeight": 56
+            },
+            {
+              "x": 3125.976145454239,
+              "y": 556.7362227780595,
+              "width": 128,
+              "height": 56,
+              "texture": "terrain-deck-fill",
+              "visible": true,
+              "skinX": 3125.8133686557944,
+              "skinY": 556.666047131031,
+              "skinWidth": 128,
+              "skinHeight": 56
+            },
+            {
+              "x": 1414,
+              "y": 532,
+              "width": 128,
+              "height": 24,
+              "texture": "terrain-deck-fill",
+              "visible": false,
+              "skinX": 1414,
+              "skinY": 532,
+              "skinWidth": 128,
+              "skinHeight": 24
+            }
+          ],
+          "tops": [
+            {
+              "x": 250,
+              "y": 621,
+              "width": 500,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 891.8133686557949,
+              "y": 597.666047131031,
+              "width": 600,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 1400,
+              "y": 621,
+              "width": 200,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 1891.813368655795,
+              "y": 597.666047131031,
+              "width": 600,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 2400,
+              "y": 621,
+              "width": 200,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 2891.8133686557944,
+              "y": 597.666047131031,
+              "width": 600,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 3700,
+              "y": 621,
+              "width": 800,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 1125.813368655795,
+              "y": 541.666047131031,
+              "width": 128,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 2125.8133686557944,
+              "y": 541.666047131031,
+              "width": 128,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 3125.8133686557944,
+              "y": 541.666047131031,
+              "width": 128,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            },
+            {
+              "x": 1414,
+              "y": 533,
+              "width": 128,
+              "height": 34,
+              "texture": "terrain-deck-top"
+            }
+          ]
+        }
+      ],
+      "movement": [
+        {
+          "index": 1,
+          "xRange": 30.996837664596455,
+          "yRange": 14.409010744423199
+        },
+        {
+          "index": 3,
+          "xRange": 30.99683766459748,
+          "yRange": 14.409010744423199
+        },
+        {
+          "index": 5,
+          "xRange": 30.996837664601117,
+          "yRange": 14.409010744423199
+        },
+        {
+          "index": 7,
+          "xRange": 30.99683766459748,
+          "yRange": 14.409010744423199
+        },
+        {
+          "index": 8,
+          "xRange": 30.996837664601117,
+          "yRange": 14.409010744423199
+        },
+        {
+          "index": 9,
+          "xRange": 30.996837664601117,
+          "yRange": 14.409010744423199
+        }
+      ],
+      "maxAlignmentDifference": 0.5257217015990818,
+      "path": "docs/screenshots/art-a5/tablet-S07-moving-deck.png",
+      "errors": []
+    }
+  ]
+}

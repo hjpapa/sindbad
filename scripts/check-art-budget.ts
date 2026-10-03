@@ -1,8 +1,8 @@
 import {statSync,readdirSync,mkdirSync,writeFileSync} from 'node:fs';
 import {assets} from '../src/content/assets.manifest';
 
-const initialKeys=new Set(['chapter-1','hero-webtoon','hero-run','enemy-atlas']);
-const initial=assets.filter(asset=>asset.kind==='svg'||initialKeys.has(asset.key));
+const initialKeys=new Set(['chapter-1','hero-webtoon','hero-run','hero-action','captain-webtoon','captain-faces','enemy-actions','terrain-dock-fill','terrain-dock-top']);
+const initial=assets.filter(asset=>asset.kind==='svg'||asset.key.startsWith('weapon-')||initialKeys.has(asset.key));
 const files=initial.map(asset=>({path:`public/${asset.path}`,bytes:statSync(`public/${asset.path}`).size}));
 const bundleFiles=readdirSync('dist/assets').filter(file=>/\.(js|css)$/.test(file)).map(file=>({path:`dist/assets/${file}`,bytes:statSync(`dist/assets/${file}`).size}));
 const total=files.concat(bundleFiles).reduce((sum,file)=>sum+file.bytes,0);

@@ -1,0 +1,40 @@
+{
+  "method": "screens captured by final fresh-game keyboard/no-save-injection campaign; preserved byte-identically after full suite passed",
+  "screens": [
+    {
+      "source": "test-results/complete-journey-new-game--139b0-ntrols-and-no-injected-save/S05-route.png",
+      "path": "docs/screenshots/art-a5/campaign-S05-route.png",
+      "sha256": "122694f57333565a48ffe6ce3f6412e4159b7b4af21abb910117ed1eb73b2d94"
+    },
+    {
+      "source": "test-results/complete-journey-new-game--139b0-ntrols-and-no-injected-save/S10-route.png",
+      "path": "docs/screenshots/art-a5/campaign-S10-route.png",
+      "sha256": "5e75a148c1c3d74f18d5b50fca2fe53b16bd2ef817ec77909d6e6b901c9135e7"
+    },
+    {
+      "source": "test-results/complete-journey-new-game--139b0-ntrols-and-no-injected-save/S15-route.png",
+      "path": "docs/screenshots/art-a5/campaign-S15-route.png",
+      "sha256": "0aadf92c1b9d63376922a965762b4301c7cb100dc8be63945181c2954218b2c7"
+    },
+    {
+      "source": "test-results/complete-journey-new-game--139b0-ntrols-and-no-injected-save/S19-route.png",
+      "path": "docs/screenshots/art-a5/campaign-S19-route.png",
+      "sha256": "6e1f0d0681bda531856deb4832b2716cf714318a12147250ecdc72206fd5dc35"
+    },
+    {
+      "source": "test-results/complete-journey-new-game--139b0-ntrols-and-no-injected-save/S25-route.png",
+      "path": "docs/screenshots/art-a5/campaign-S25-route.png",
+      "sha256": "901a768cfc5561411c35e8506ef48e89e953fa5b0a32b36d734dea5d83cd79da"
+    },
+    {
+      "source": "test-results/complete-journey-new-game--139b0-ntrols-and-no-injected-save/S29-route.png",
+      "path": "docs/screenshots/art-a5/campaign-S29-route.png",
+      "sha256": "c2cd2e5287516587c53bcb2408b283fcf27ae23172acf2d0611c41aa688ad7a0"
+    },
+    {
+      "source": "test-results/complete-journey-new-game--139b0-ntrols-and-no-injected-save/S36-route.png",
+      "path": "docs/screenshots/art-a5/campaign-S36-route.png",
+      "sha256": "8319b005d73ca9aa88c0fcdb523f6ffdf8f09d703f5a6732c8edf092f8124bae"
+    }
+  ]
+}

@@ -1,0 +1,172 @@
+{
+  "date": "2026-10-03",
+  "status": "ART_DRAFT",
+  "method": "OpenAI built-in imagegen; own hero style and preserved project SVG composition; native PNG preserved verbatim; grip points measured visually on native pixels",
+  "candidates": [
+    {
+      "id": "W01",
+      "prompt": "Use case: illustration-story. Create a SINGLE game weapon sprite, W01 Traveler's curved sword, for an original child-friendly Korean adventure webtoon game. Image 1 is our OWN hero reference: borrow its precise dark ink outline, 2–3-tone painted cel shading, warm gold and leather material treatment only; do not include a person. Image 2 is our OWN SVG composition reference: preserve horizontal silhouette, gold oval guard and short dark leather handle at left, silver/ice-blue curved blade pointing RIGHT with slightly raised tip. Render a polished hand-drawn raster weapon with legible bold shapes at small size, restrained highlights, no photorealism/3D. Canvas aspect exactly 640:256 (2.5:1), real transparent RGBA background. Grip rotation center must be at 13% of canvas width and 50% of height (83.2,128 on 640x256); a thick solid leather grip crosses that point. Whole weapon inside canvas with clear transparent margins; blade spans the remaining right portion, no detached ornaments. NO letters, labels, logo, numbers, grid, person, hand, injury, blood, scenery, border or ground shadow. One weapon only.",
+      "outputHint": "Generated images are saved to C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a as C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-560d4860-45a3-46c4-96c7-84972594d9d2.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "nativePath": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-560d4860-45a3-46c4-96c7-84972594d9d2.png",
+      "path": "art-source/weapons/generated/W01-01.png",
+      "selected": true,
+      "references": [
+        "art-source/webtoon/hero-webtoon.webp",
+        "art-source/weapons/references/W01.png"
+      ],
+      "measuredGrip": [
+        270,
+        464
+      ],
+      "nativeSize": [
+        1983,
+        793
+      ],
+      "sha256": "7c880c0999741e4119f1b2498ffcbead650577cc4968c8a2a2610b1e712467cb"
+    },
+    {
+      "id": "W02",
+      "prompt": "Use case: illustration-story. SINGLE W02 Wind boomerang game weapon, original child-friendly Korean adventure webtoon art. Image1 our own hero is STYLE ONLY: dark ink, restrained 2–3-tone cel shading, gold hardware. Image2 our own SVG is shape/color reference: symmetrical broad swept V with cyan mint metal wings, warm gold central rivet. Horizontal 2.5:1 real transparent RGBA canvas, target640x256. Preserve wide V silhouette but bring its solid CENTRAL thick gold-and-leather grip to exactly canvas center (50% width,50% height:320,128), so the center is solid opaque material instead of an empty gap. Two curved wings extend left and right symmetrically, V peak above the grip, tips at lower sides. Compact natural wind etching, no floating swirls. Whole weapon clear of all canvas edges, equal margins. Polished hand-drawn raster to match hero, clean bold shape at runtime160x64, no gradients-as-vector/3D/photo. NO characters, hands, text, numbers, watermark, grid, border, scene, blood or ground shadow. One boomerang only.",
+      "outputHint": "Generated images are saved to C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a as C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-18202ec4-904c-4430-993c-31be9b49bade.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "nativePath": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-18202ec4-904c-4430-993c-31be9b49bade.png",
+      "path": "art-source/weapons/generated/W02-01.png",
+      "selected": false,
+      "references": [
+        "art-source/webtoon/hero-webtoon.webp",
+        "art-source/weapons/references/W02.png"
+      ],
+      "rejectedReason": "V shape too tall: fitting complete generated alpha below centered grip makes runtime wings too small",
+      "nativeSize": [
+        1983,
+        793
+      ],
+      "sha256": "3c998e3543c263163b5e1f3c4f0d8f2c8af1cf1bd038f88a301666b35c9b2c82"
+    },
+    {
+      "id": "W03",
+      "prompt": "Use case: illustration-story. Single W03 Flame curved sword sprite for our own child-friendly Korean adventure webtoon game. Reference1 our own hero: use dark crisp ink outline, 2–3-tone cel painting, brown leather and engraved warm gold. Reference2 our own SVG: preserve horizontal scimitar silhouette, short reddish leather grip on LEFT, gold oval guard, bright gold/orange blade curving up to a rightward point, three small connected stylized flame tongues rising from blade's back. No detached particles/glow clouds. Highly legible hand-drawn raster at runtime160x64. Canvas2.5:1 target640x256, real transparent RGBA, full weapon and flames inside clear transparent margins. Rotation point at13% width,50% height must pass through thick grip (83.2,128 target), blade faces RIGHT. No person, hands, text, letters, labels, logos, numbers, grid, scene, ground shadow, injury, blood, photo or3D. One weapon only.",
+      "outputHint": "Generated images are saved to C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a as C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-7d01942a-96e1-47f8-8470-821f6aab5d22.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "nativePath": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-7d01942a-96e1-47f8-8470-821f6aab5d22.png",
+      "path": "art-source/weapons/generated/W03-01.png",
+      "selected": true,
+      "references": [
+        "art-source/webtoon/hero-webtoon.webp",
+        "art-source/weapons/references/W03.png"
+      ],
+      "measuredGrip": [
+        280,
+        517
+      ],
+      "nativeSize": [
+        1983,
+        793
+      ],
+      "sha256": "66f850e9c4743af589c02a5f2365d067c782727dbae8fc6288f950c1a62fa2c1"
+    },
+    {
+      "id": "W04",
+      "prompt": "Use case: illustration-story. Single W04 Storm spear game sprite. Input1 own hero for hand-drawn Korean adventure webtoon dark ink and 2–3-tone painted cel shading, gold/leather materials only, no person. Input2 own SVG for exact wide horizontal composition: long brown wooden shaft from LEFT to icy pale blue diamond spearhead pointing RIGHT, golden collar and one short blue ribbon attached near head, subtle lightning engraving. Canvas2.5:1 target640x256, actual transparent RGBA. Grip point25% width50% height (160,128 target) lies on thick leather wrapped shaft; keep shaft centered vertically across canvas. Long weapon fits wholly with clear transparent margins; no loose particles. Bold outlined legible hand-drawn shape suitable runtime160x64 and168x67 game display. No text, letters, labels, runes resembling writing, logo, person, hand, scenery, border, grid, blood, injury, photo,3D or ground shadow. Only one spear.",
+      "outputHint": "Generated images are saved to C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a as C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-f4a9a717-a845-47b3-8aae-78efb77cc052.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "nativePath": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-f4a9a717-a845-47b3-8aae-78efb77cc052.png",
+      "path": "art-source/weapons/generated/W04-01.png",
+      "selected": true,
+      "references": [
+        "art-source/webtoon/hero-webtoon.webp",
+        "art-source/weapons/references/W04.png"
+      ],
+      "measuredGrip": [
+        495,
+        381
+      ],
+      "nativeSize": [
+        1983,
+        793
+      ],
+      "sha256": "162f6ce3865963eccd0f0f833ef2fede0416a2b4efc92bb3578fe82016b8277f"
+    },
+    {
+      "id": "W05",
+      "prompt": "Use case: illustration-story. Single W05 Wave bow game sprite. Image1 our own hero for Korean adventure webtoon ink/cel paint style only. Image2 our own SVG for teal/gold vertical bow silhouette: taut light string to LEFT, curved sea teal limbs bulging RIGHT, dark brown leather grip, golden tips and small wave etching. Preserve portrait aspect1:2 target320x640, real transparent RGBA. IMPORTANT solid leather bow-hand grip must sit at45% canvas width,50% height (144,320 target), NOT near right edge: construct bow limbs around this grip and string further LEFT. Upper and lower limbs curl left toward string; bow aims right. Whole bow fits with clear transparent margins on ALL sides, no arrow, hands, person, extra objects or loose wave swirls. Bold dark ink, clean2–3 cel tones, restrained silver water and warm gold highlights, handcrafted raster readable at80x160 runtime. No text, letters, runes, logos, numbers, border, grid, scene, ground shadow, blood, photo or3D. One bow only.",
+      "outputHint": "Generated images are saved to C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a as C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-99973add-6b19-4ed2-8331-d17554e45bae.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "nativePath": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-99973add-6b19-4ed2-8331-d17554e45bae.png",
+      "path": "art-source/weapons/generated/W05-01.png",
+      "selected": true,
+      "references": [
+        "art-source/webtoon/hero-webtoon.webp",
+        "art-source/weapons/references/W05.png"
+      ],
+      "measuredGrip": [
+        550,
+        887
+      ],
+      "nativeSize": [
+        887,
+        1774
+      ],
+      "sha256": "2904ed89b4d1a4f5ed66513800bd50c5f73e02cafb251b6cecc7d80f28ba020f"
+    },
+    {
+      "id": "W06",
+      "prompt": "Use case: illustration-story. SINGLE W06 Moonlight club game weapon, child-friendly original adventure Korean webtoon. Image1 OWN hero is ink/cel-painted style and warm gold, brown leather reference only. Image2 own SVG is silhouette reference: long thin brown handle on LEFT with small leather grip near butt, big smooth rounded lavender/violet moonlit club head occupying RIGHT half, gold collar, engraved simple crescent moon; no sharp spikes. Wide2.5:1 transparent RGBA canvas target640x256. Grip rotation center at8% width50% height (51.2,128 target), thick solid leather grip there. Long shaft straight along middle; full club and rounded head inside clear transparent margins. Bold dark outline2–3 cel tones, restrained highlights, painted wood texture and pale moon accent; readable runtime160x64. NO loose glow particles, person, hands, letters, text, label, logo, grid, border, scene, blood, injury, photo/3D or ground shadow. One club only.",
+      "outputHint": "Generated images are saved to C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a as C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-05ecb076-0039-4d36-a642-05ee2e0ddf80.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "nativePath": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-05ecb076-0039-4d36-a642-05ee2e0ddf80.png",
+      "path": "art-source/weapons/generated/W06-01.png",
+      "selected": true,
+      "references": [
+        "art-source/webtoon/hero-webtoon.webp",
+        "art-source/weapons/references/W06.png"
+      ],
+      "measuredGrip": [
+        174,
+        396
+      ],
+      "nativeSize": [
+        1983,
+        793
+      ],
+      "sha256": "b885d6431a23b9024936a4464f36ffe7ee5e7307a2eb94739ffdf08064fb1966"
+    },
+    {
+      "id": "W07",
+      "prompt": "Use case: illustration-story. SINGLE W07 Dawn sword game sprite for an original child-friendly Korean adventure webtoon. Image1 OWN hero is style reference only: precise dark ink, restrained2–3-tone painted cel shading, ornate warm gold, dark indigo leather. Image2 OWN SVG is composition reference: short grip on LEFT, round sun-shaped GOLD guard with attached short rays, long straight pearl ivory/silver blade with soft dawn-gold edge and point facing RIGHT. Canvas2.5:1 target640x256 real transparent RGBA. Solid grip center at15% width50% height (96,128 target), guard immediately to right of grip; entire sword and attached sun rays inside clear transparent margins. No detached aura/particles. Bold outlined handcrafted raster legible at160x64 runtime. NO person, hands, text, letters, inscriptions/runes, logo, labels, grid, border, scenery, ground shadow, blood, injury, photo or3D. One sword only.",
+      "outputHint": "Generated images are saved to C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a as C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-4e3a56ed-a8ff-4312-a2d4-e48ce2df56c2.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "nativePath": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-4e3a56ed-a8ff-4312-a2d4-e48ce2df56c2.png",
+      "path": "art-source/weapons/generated/W07-01.png",
+      "selected": true,
+      "references": [
+        "art-source/webtoon/hero-webtoon.webp",
+        "art-source/weapons/references/W07.png"
+      ],
+      "measuredGrip": [
+        260,
+        382
+      ],
+      "nativeSize": [
+        1983,
+        793
+      ],
+      "sha256": "6e3552e1a855c4226a92424aabca86df8557acc85a29f9479724c7b5e3ab06bd"
+    },
+    {
+      "id": "W02",
+      "prompt": "Use case: illustration-story. SINGLE W02 Wind boomerang game weapon, original child-friendly Korean adventure webtoon art. Image1 our own hero is STYLE ONLY: dark ink, restrained 2–3-tone cel shading, gold hardware. Image2 our own SVG is shape/color reference: symmetrical broad swept V with cyan mint metal wings, warm gold central rivet. Horizontal 2.5:1 real transparent RGBA canvas, target640x256. Preserve wide V silhouette but bring its solid CENTRAL thick gold-and-leather grip to exactly canvas center (50% width,50% height:320,128), so the center is solid opaque material instead of an empty gap. Two curved wings extend left and right symmetrically, V peak above the grip, tips at lower sides. Compact natural wind etching, no floating swirls. Whole weapon clear of all canvas edges, equal margins. Polished hand-drawn raster to match hero, clean bold shape at runtime160x64, no gradients-as-vector/3D/photo. NO characters, hands, text, numbers, watermark, grid, border, scene, blood or ground shadow. One boomerang only. TARGETED CORRECTION: make the V VERY SHALLOW: gold central grip at (50%,50%) canvas; V crest at height35%, left and right tips at height68%. Wings stretch horizontally to x8% and92%. Do NOT put the grip near the top or make a tall steep chevron. Entire visible body remains between y30% and75%. This low shallow V needs to stay broad when rotating around the center.",
+      "outputHint": "Generated images are saved to C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a as C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-854458c1-b440-4845-8cd7-9b87b17a1393.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "nativePath": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-854458c1-b440-4845-8cd7-9b87b17a1393.png",
+      "path": "art-source/weapons/generated/W02-02.png",
+      "selected": true,
+      "references": [
+        "art-source/webtoon/hero-webtoon.webp",
+        "art-source/weapons/references/W02.png"
+      ],
+      "measuredGrip": [
+        991,
+        350
+      ],
+      "nativeSize": [
+        1983,
+        793
+      ],
+      "sha256": "dbc3bdbf44c444d655384c7c344a472e9483982414c75c0f7c8af68c5fe71314"
+    }
+  ]
+}

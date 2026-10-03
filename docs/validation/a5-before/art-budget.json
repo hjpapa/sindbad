@@ -1,0 +1,311 @@
+{
+  "date": "2026-10-03T09:52:26.178Z",
+  "method": "raw production JS/CSS plus currently requested S01 artwork; excludes HTTP overhead, not a device/network benchmark",
+  "budgetBytes": 8000000,
+  "totalBytes": 2773116,
+  "pass": true,
+  "files": [
+    {
+      "path": "public/assets/draft/ariana.svg",
+      "bytes": 1079
+    },
+    {
+      "path": "public/assets/draft/kite.svg",
+      "bytes": 1007
+    },
+    {
+      "path": "public/assets/draft/stormCloud.svg",
+      "bytes": 765
+    },
+    {
+      "path": "public/assets/draft/debris.svg",
+      "bytes": 595
+    },
+    {
+      "path": "public/assets/draft/roc.svg",
+      "bytes": 1129
+    },
+    {
+      "path": "public/assets/draft/flightRing.svg",
+      "bytes": 861
+    },
+    {
+      "path": "public/assets/draft/player.svg",
+      "bytes": 1790
+    },
+    {
+      "path": "public/assets/draft/playerRun.svg",
+      "bytes": 1790
+    },
+    {
+      "path": "public/assets/draft/skeleton.svg",
+      "bytes": 576
+    },
+    {
+      "path": "public/assets/draft/siren.svg",
+      "bytes": 639
+    },
+    {
+      "path": "public/assets/draft/crab.svg",
+      "bytes": 620
+    },
+    {
+      "path": "public/assets/draft/spirit.svg",
+      "bytes": 356
+    },
+    {
+      "path": "public/assets/draft/chest.svg",
+      "bytes": 381
+    },
+    {
+      "path": "public/assets/draft/heart.svg",
+      "bytes": 316
+    },
+    {
+      "path": "public/assets/draft/shell.svg",
+      "bytes": 355
+    },
+    {
+      "path": "public/assets/draft/rod.svg",
+      "bytes": 295
+    },
+    {
+      "path": "public/assets/draft/bell.svg",
+      "bytes": 362
+    },
+    {
+      "path": "public/assets/draft/guardian.svg",
+      "bytes": 590
+    },
+    {
+      "path": "public/assets/draft/naira.svg",
+      "bytes": 669
+    },
+    {
+      "path": "public/assets/draft/gear.svg",
+      "bytes": 347
+    },
+    {
+      "path": "public/assets/draft/key.svg",
+      "bytes": 251
+    },
+    {
+      "path": "public/assets/draft/gate.svg",
+      "bytes": 354
+    },
+    {
+      "path": "public/assets/draft/golden.svg",
+      "bytes": 347
+    },
+    {
+      "path": "public/assets/draft/rah.svg",
+      "bytes": 527
+    },
+    {
+      "path": "public/assets/draft/torch.svg",
+      "bytes": 329
+    },
+    {
+      "path": "public/assets/draft/furnace.svg",
+      "bytes": 323
+    },
+    {
+      "path": "public/assets/draft/vine.svg",
+      "bytes": 295
+    },
+    {
+      "path": "public/assets/draft/rope.svg",
+      "bytes": 265
+    },
+    {
+      "path": "public/assets/draft/genie.svg",
+      "bytes": 647
+    },
+    {
+      "path": "public/assets/draft/mirror.svg",
+      "bytes": 331
+    },
+    {
+      "path": "public/assets/draft/bat.svg",
+      "bytes": 451
+    },
+    {
+      "path": "public/assets/draft/starMap.svg",
+      "bytes": 353
+    },
+    {
+      "path": "public/assets/draft/journal.svg",
+      "bytes": 271
+    },
+    {
+      "path": "public/assets/draft/bandit.svg",
+      "bytes": 1243
+    },
+    {
+      "path": "public/assets/draft/beast.svg",
+      "bytes": 1217
+    },
+    {
+      "path": "public/assets/draft/boss.svg",
+      "bytes": 1339
+    },
+    {
+      "path": "public/assets/draft/quest.svg",
+      "bytes": 1077
+    },
+    {
+      "path": "public/assets/draft/gift.svg",
+      "bytes": 1029
+    },
+    {
+      "path": "public/assets/draft/bridge.svg",
+      "bytes": 1079
+    },
+    {
+      "path": "public/assets/draft/ending.svg",
+      "bytes": 1092
+    },
+    {
+      "path": "public/assets/story/cargo.svg",
+      "bytes": 847
+    },
+    {
+      "path": "public/assets/story/starDevice.svg",
+      "bytes": 953
+    },
+    {
+      "path": "public/assets/story/lantern.svg",
+      "bytes": 906
+    },
+    {
+      "path": "public/assets/story/treasureAltar.svg",
+      "bytes": 867
+    },
+    {
+      "path": "public/assets/story/elephant.svg",
+      "bytes": 949
+    },
+    {
+      "path": "public/assets/story/snake.svg",
+      "bytes": 966
+    },
+    {
+      "path": "public/assets/story/tiger.svg",
+      "bytes": 1040
+    },
+    {
+      "path": "public/assets/story/dragon.svg",
+      "bytes": 906
+    },
+    {
+      "path": "public/assets/story/stoneGiant.svg",
+      "bytes": 951
+    },
+    {
+      "path": "public/assets/story/villager.svg",
+      "bytes": 1005
+    },
+    {
+      "path": "public/assets/story/mira.svg",
+      "bytes": 1014
+    },
+    {
+      "path": "public/assets/story/king.svg",
+      "bytes": 1032
+    },
+    {
+      "path": "public/assets/story/baru.svg",
+      "bytes": 1071
+    },
+    {
+      "path": "public/assets/story/pirateCaptain.svg",
+      "bytes": 1059
+    },
+    {
+      "path": "public/assets/story/lotusShrine.svg",
+      "bytes": 866
+    },
+    {
+      "path": "public/assets/story/arrow.svg",
+      "bytes": 698
+    },
+    {
+      "path": "public/assets/story/boomerang.svg",
+      "bytes": 719
+    },
+    {
+      "path": "public/assets/story/moonRock.svg",
+      "bytes": 867
+    },
+    {
+      "path": "public/assets/weapons/W01.svg",
+      "bytes": 1705
+    },
+    {
+      "path": "public/assets/weapons/W02.svg",
+      "bytes": 1612
+    },
+    {
+      "path": "public/assets/weapons/W03.svg",
+      "bytes": 1807
+    },
+    {
+      "path": "public/assets/weapons/W04.svg",
+      "bytes": 1725
+    },
+    {
+      "path": "public/assets/weapons/W05.svg",
+      "bytes": 1776
+    },
+    {
+      "path": "public/assets/weapons/W06.svg",
+      "bytes": 1770
+    },
+    {
+      "path": "public/assets/weapons/W07.svg",
+      "bytes": 1804
+    },
+    {
+      "path": "public/assets/webtoon/chapter-1.webp",
+      "bytes": 194742
+    },
+    {
+      "path": "public/assets/webtoon/hero-webtoon.webp",
+      "bytes": 49532
+    },
+    {
+      "path": "public/assets/webtoon/hero-action.webp",
+      "bytes": 119426
+    },
+    {
+      "path": "public/assets/webtoon/captain-webtoon.webp",
+      "bytes": 66296
+    },
+    {
+      "path": "public/assets/webtoon/hero-run.webp",
+      "bytes": 96484
+    },
+    {
+      "path": "public/assets/webtoon/enemy-actions.webp",
+      "bytes": 428836
+    },
+    {
+      "path": "public/assets/webtoon/captain-faces.webp",
+      "bytes": 57866
+    }
+  ],
+  "bundleFiles": [
+    {
+      "path": "dist/assets/index-CYQogpCH.js",
+      "bytes": 205219
+    },
+    {
+      "path": "dist/assets/index-Dtc3v8_n.css",
+      "bytes": 16686
+    },
+    {
+      "path": "dist/assets/phaser-Czz4FBZH.js",
+      "bytes": 1481772
+    }
+  ]
+}

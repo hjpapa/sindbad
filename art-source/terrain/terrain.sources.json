@@ -1,0 +1,680 @@
+{
+  "date": "2026-10-03",
+  "tool": "OpenAI built-in imagegen",
+  "styleReference": "art-source/webtoon/hero-webtoon.webp",
+  "basePrompt": "Use case: stylized-concept. Asset type: original 2D side-scrolling adventure terrain tile. Input image 1 is ONLY a linework/cel-shading/style reference, do NOT draw its person, weapon, costume or background. Match the project's clear ink outlines, 2-3 gentle cel shades and upper-left material lighting. Clean original webtoon game art for children. Low-to-moderate contrast in the fill so characters read clearly; crisp flat walkable tops. Orthographic straight-on material texture, no perspective, no scenes, no characters, no props, no text, lettering, logos, border frame, vignette, global gradient or watermark. ",
+  "materials": {
+    "dock": "Warm golden-brown harbor timber. Broad horizontal planks, quiet dark grain strokes and small inset iron nail marks. Honey upper lip, dark umber underside. Base #8a5a3a / highlights #b98455 / shadow #5a3622.",
+    "deck": "Weathered dark ship-deck timber with broad horizontal planks, subtle charcoal grain, sparse inset bronze nail marks. Warm medium-brown walkable lip and deep umber underside. Base #6e4a36 / highlights #9a6b4b / shadow #45291d.",
+    "reef": "Soft teal sea-worn limestone reef, large rounded mineral patches and tiny muted rose coral inclusions, no water scene. Pale seafoam walkable surface. Base #5d7f80 / highlights #8fb3a6 / shadow #3c5a5f.",
+    "coral": "Lavender-blue reef rock with embedded small pink and turquoise coral flecks, no fragile protrusions or branches outside the rectangle. Pale coral-pink walkable surface. Base #6a6f8e / highlights #9aa2c3 / shadow #464b6b.",
+    "whale": "Gentle blue-gray sea-smoothed island stone, broad rounded polished patches and subtle slate marks, no animal body or face. Pale blue seafoam walkable lip. Base #5d7c87 / highlights #8eaab0 / shadow #3f5a66.",
+    "basalt": "Dark plum-gray volcanic basalt, large broad polygonal stones and sparse warm amber mineral veins, no dripping lava or fire. Warm orange walkable lip. Base #4b3a44 / highlights #6e5560 / shadow #2e2229.",
+    "crystal": "Deep indigo-violet crystalline rock, broad understated angular mineral facets, occasional small pale lavender inlays, no tall freestanding crystals. Pale lavender walkable lip. Base #45486e / highlights #6c70a3 / shadow #2c2e4c.",
+    "cloud": "Pale blue-white solid cloud platform material, broad soft overlapping puffs defined by clean gentle blue-gray ink contours. Ivory white walkable lip, powder-blue underside. Base #d9e6ea / highlights #ffffff / shadow #a9bfc8.",
+    "village": "Warm ochre-brown village stone masonry, broad slightly rounded staggered stone blocks, thin dark mortar, a quiet moss-green walkable cap. Base #9c7a5c / highlights #c9a47d / shadow #6d533e.",
+    "warehouse": "Aged warm brown warehouse timber, broad horizontal boards, quiet irregular grain and sparse inset dark iron nail marks. Golden brown flat walkable lip. Base #7a5a40 / highlights #a77e58 / shadow #4c3626.",
+    "sand": "Compact golden sandy coast rock, broad softly rounded sandstone patches with a few muted turquoise mineral grains, no ocean or scenery. Pale cream-gold walkable lip. Base #b59b74 / highlights #dcc59a / shadow #8a7354.",
+    "shadow": "Quiet dark violet castle masonry, large staggered stone blocks and restrained pale lavender edges, no horror faces or symbols. Muted lavender walkable lip. Base #3c3a56 / highlights #5c5a80 / shadow #25233a.",
+    "jungle": "Rich brown packed jungle earth, broad low-contrast soil clumps, sparse small stone flecks and short root lines. Moss-green horizontal walkable turf cap, foliage remains within the rectangular strip. Base #6a4b33 / highlights #8e6a4a / shadow #45301f.",
+    "temple": "Warm ochre carved temple masonry, broad clean stone blocks with a few simple non-religious geometric incisions, no inscriptions or deity imagery. Pale golden limestone walkable lip. Base #b08c64 / highlights #d8b98b / shadow #7e6346.",
+    "garden": "Warm brown soft garden soil, broad quiet clumps with sparse pale pebbles, no large roots or scenery. Fresh gentle green flat turf cap, a few tiny pink petal accents within the strip. Base #7a5b40 / highlights #9e7a58 / shadow #51392a.",
+    "tower": "Cool deep slate-indigo tower masonry, broad sturdy stone blocks, quiet gold-gray mineral inlays with no symbols. Pale blue-gray walkable lip. Base #3f4566 / highlights #5d6690 / shadow #282d47.",
+    "kingdom": "Warm pale ivory palace stone masonry, broad clean limestone blocks and very restrained gold and dusty teal inlays, no ornamental crests or text. Gentle golden ivory walkable lip. Base #d6cbb6 / highlights #f3ead8 / shadow #a89c86."
+  },
+  "candidates": [
+    {
+      "key": "dock",
+      "kind": "fill",
+      "version": 1,
+      "id": "a5-dock-fill",
+      "prompt": "Use case: stylized-concept. Asset type: original 2D side-scrolling adventure terrain tile. Input image 1 is ONLY a linework/cel-shading/style reference, do NOT draw its person, weapon, costume or background. Match the project's clear ink outlines, 2-3 gentle cel shades and upper-left material lighting. Clean original webtoon game art for children. Low-to-moderate contrast in the fill so characters read clearly; crisp flat walkable tops. Orthographic straight-on material texture, no perspective, no scenes, no characters, no props, no text, lettering, logos, border frame, vignette, global gradient or watermark. Material: Warm golden-brown harbor timber. Broad horizontal planks, quiet dark grain strokes and small inset iron nail marks. Honey upper lip, dark umber underside. Base #8a5a3a / highlights #b98455 / shadow #5a3622. Deliver ONLY one square 512x512 fully opaque fill texture, edge-to-edge material, with no transparent padding. It must tile seamlessly both horizontally and vertically: opposite edges continue the same grain/stone features and colors exactly, no lighter/darker border; use balanced uniform lighting across the entire tile. Large sparse features, avoid tiny noise.",
+      "source": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-ef3710ee-1a2a-4a1a-85c0-4bb20c3a4be5.png",
+      "file": "generated/dock-fill-v1.png",
+      "status": "selected",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "sha256": "1a8889bed6578ee738ebd256831a2a7cb873d115bdb3168e893df37ad85c45b3"
+    },
+    {
+      "key": "dock",
+      "kind": "top",
+      "version": 1,
+      "id": "a5-dock-top",
+      "prompt": "Use case: stylized-concept. Asset type: original 2D side-scrolling adventure terrain tile. Input image 1 is ONLY a linework/cel-shading/style reference, do NOT draw its person, weapon, costume or background. Match the project's clear ink outlines, 2-3 gentle cel shades and upper-left material lighting. Clean original webtoon game art for children. Low-to-moderate contrast in the fill so characters read clearly; crisp flat walkable tops. Orthographic straight-on material texture, no perspective, no scenes, no characters, no props, no text, lettering, logos, border frame, vignette, global gradient or watermark. Material: Warm golden-brown harbor timber. Broad horizontal planks, quiet dark grain strokes and small inset iron nail marks. Honey upper lip, dark umber underside. Base #8a5a3a / highlights #b98455 / shadow #5a3622. Deliver ONLY one horizontal rectangular walkable platform lip, aspect 512:136, full width, centered vertically on a transparent square canvas. Entire strip is a straight fully opaque rectangular band; outside it is fully transparent, with no loose or protruding details. Designed to repeat seamlessly left-to-right: both edges continue with identical colors and grain, no end caps or vertical end outline. The top 112/136 of the strip is its brighter cap, the bottom 24/136 is a continuous dark underside shadow band (becomes bottom 6px at game size 128x34). Upper edge stays perfectly flat and crisp, no perspective, bevel end or corner. No decorations outside the band.",
+      "source": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-89390b19-2647-4d34-83f1-3ca51b97563a.png",
+      "file": "generated/dock-top-v1.png",
+      "status": "rejected: exterior glow/padding",
+      "nativeSize": [
+        2048,
+        768
+      ],
+      "sha256": "47ca9a6d8e61f57b734564f108b9216aefaa4f429419d9246956cf9a8842114f"
+    },
+    {
+      "key": "dock",
+      "kind": "top",
+      "version": 2,
+      "id": "a5-dock-top-v2",
+      "prompt": "Use case: stylized-concept. Asset type: original 2D side-scrolling adventure terrain tile. Input image 1 is ONLY a linework/cel-shading/style reference, do NOT draw its person, weapon, costume or background. Match the project's clear ink outlines, 2-3 gentle cel shades and upper-left material lighting. Clean original webtoon game art for children. Low-to-moderate contrast in the fill so characters read clearly; crisp flat walkable tops. Orthographic straight-on material texture, no perspective, no scenes, no characters, no props, no text, lettering, logos, border frame, vignette, global gradient or watermark. Material: Warm golden-brown harbor timber. Broad horizontal planks, quiet dark grain strokes and small inset iron nail marks. Honey upper lip, dark umber underside. Base #8a5a3a / highlights #b98455 / shadow #5a3622. Deliver ONLY a wide 512x136 FULLY OPAQUE texture tile filling the ENTIRE output canvas, no transparency or padding. This is a horizontal side-view walkable platform edge material texture, NOT a picture of an isolated plank. Upper 112/136 of the whole canvas is a gently highlighted flat cap, BOTTOM 24/136 of the whole canvas is a continuous dark underside SHADOW BAND (becomes precisely bottom 6px at runtime128x34). TOPMOST pixel row is the flat walkable edge. Everything is flush edge-to-edge. Repeat seamlessly left-to-right: same colors and continuous grain at left and right, no vertical end outlines or end caps. Flat orthographic texture, no perspective, glow, gradient background, surrounding shadow, lettering or border. Broad sparse features readable at128px.",
+      "source": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-ea7c1a0f-03cc-4e29-b284-bc8774200853.png",
+      "file": "generated/dock-top-v2.png",
+      "status": "selected",
+      "nativeSize": [
+        1935,
+        812
+      ],
+      "sha256": "8e18cc03d929d1d91c369c4e32c65ee0351c5e3a7a51bd847e0a245974b49691"
+    },
+    {
+      "key": "deck",
+      "kind": "fill",
+      "version": 1,
+      "id": "a5-deck-fill-v1",
+      "prompt": "Use case: stylized-concept. Asset type: original 2D side-scrolling adventure terrain tile. Input image 1 is ONLY a linework/cel-shading/style reference, do NOT draw its person, weapon, costume or background. Match the project's clear ink outlines, 2-3 gentle cel shades and upper-left material lighting. Clean original webtoon game art for children. Low-to-moderate contrast in the fill so characters read clearly; crisp flat walkable tops. Orthographic straight-on material texture, no perspective, no scenes, no characters, no props, no text, lettering, logos, border frame, vignette, global gradient or watermark. Material: Weathered dark ship-deck timber with broad horizontal planks, subtle charcoal grain, sparse inset bronze nail marks. Warm medium-brown walkable lip and deep umber underside. Base #6e4a36 / highlights #9a6b4b / shadow #45291d. Deliver ONLY one square 512x512 fully opaque fill texture, edge-to-edge material, with no transparent padding. It must tile seamlessly both horizontally and vertically: opposite edges continue the same grain/stone features and colors exactly, no lighter/darker border; use balanced uniform lighting across the entire tile. Large sparse features, avoid tiny noise.",
+      "source": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-050f20e5-7f64-424d-b2dc-e2c02d554f8f.png",
+      "file": "generated/deck-fill-v1.png",
+      "status": "selected",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "sha256": "493ac209e1100ff44932eb55c13301bf17e7d9aef4e072dbef3baeeded4b256e"
+    },
+    {
+      "key": "deck",
+      "kind": "top",
+      "version": 1,
+      "id": "a5-deck-top-v1",
+      "prompt": "Use case: stylized-concept. Asset type: original 2D side-scrolling adventure terrain tile. Input image 1 is ONLY a linework/cel-shading/style reference, do NOT draw its person, weapon, costume or background. Match the project's clear ink outlines, 2-3 gentle cel shades and upper-left material lighting. Clean original webtoon game art for children. Low-to-moderate contrast in the fill so characters read clearly; crisp flat walkable tops. Orthographic straight-on material texture, no perspective, no scenes, no characters, no props, no text, lettering, logos, border frame, vignette, global gradient or watermark. Material: Weathered dark ship-deck timber with broad horizontal planks, subtle charcoal grain, sparse inset bronze nail marks. Warm medium-brown walkable lip and deep umber underside. Base #6e4a36 / highlights #9a6b4b / shadow #45291d. Deliver ONLY a wide 512x136 FULLY OPAQUE texture tile filling the ENTIRE output canvas, no transparency or padding. This is a horizontal side-view walkable platform edge material texture, NOT a picture of an isolated plank. Upper 112/136 of the whole canvas is a gently highlighted flat cap, BOTTOM 24/136 of the whole canvas is a continuous dark underside SHADOW BAND (becomes precisely bottom 6px at runtime128x34). TOPMOST pixel row is the flat walkable edge. Everything is flush edge-to-edge. Repeat seamlessly left-to-right: same colors and continuous grain at left and right, no vertical end outlines or end caps. Flat orthographic texture, no perspective, glow, gradient background, surrounding shadow, lettering or border. Broad sparse features readable at128px.",
+      "source": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-2797e7c8-7593-4858-852b-71e8e5e4f515.png",
+      "file": "generated/deck-top-v1.png",
+      "status": "selected",
+      "nativeSize": [
+        2020,
+        779
+      ],
+      "sha256": "43e47dcccd74f3a87b7296f348cbb277274047e19a65c0ee26a4f5da070f7da8"
+    },
+    {
+      "key": "reef",
+      "kind": "fill",
+      "version": 1,
+      "id": "a5-reef-fill-v1",
+      "prompt": "Use case: stylized-concept. Asset type: original 2D side-scrolling adventure terrain tile. Input image 1 is ONLY a linework/cel-shading/style reference, do NOT draw its person, weapon, costume or background. Match the project's clear ink outlines, 2-3 gentle cel shades and upper-left material lighting. Clean original webtoon game art for children. Low-to-moderate contrast in the fill so characters read clearly; crisp flat walkable tops. Orthographic straight-on material texture, no perspective, no scenes, no characters, no props, no text, lettering, logos, border frame, vignette, global gradient or watermark. Material: Soft teal sea-worn limestone reef, large rounded mineral patches and tiny muted rose coral inclusions, no water scene. Pale seafoam walkable surface. Base #5d7f80 / highlights #8fb3a6 / shadow #3c5a5f. Deliver ONLY one square 512x512 fully opaque fill texture, edge-to-edge material, with no transparent padding. It must tile seamlessly both horizontally and vertically: opposite edges continue the same grain/stone features and colors exactly, no lighter/darker border; use balanced uniform lighting across the entire tile. Large sparse features, avoid tiny noise.",
+      "source": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-d63236a8-3727-43b1-8573-b2deb3dd53cd.png",
+      "file": "generated/reef-fill-v1.png",
+      "status": "selected",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "sha256": "af33c40308df4411c232d6dd2970eac2fa42e957d08108e099141b4b1b210e40"
+    },
+    {
+      "key": "reef",
+      "kind": "top",
+      "version": 1,
+      "id": "a5-reef-top-v1",
+      "prompt": "Use case: stylized-concept. Asset type: original 2D side-scrolling adventure terrain tile. Input image 1 is ONLY a linework/cel-shading/style reference, do NOT draw its person, weapon, costume or background. Match the project's clear ink outlines, 2-3 gentle cel shades and upper-left material lighting. Clean original webtoon game art for children. Low-to-moderate contrast in the fill so characters read clearly; crisp flat walkable tops. Orthographic straight-on material texture, no perspective, no scenes, no characters, no props, no text, lettering, logos, border frame, vignette, global gradient or watermark. Material: Soft teal sea-worn limestone reef, large rounded mineral patches and tiny muted rose coral inclusions, no water scene. Pale seafoam walkable surface. Base #5d7f80 / highlights #8fb3a6 / shadow #3c5a5f. Deliver ONLY a wide 512x136 FULLY OPAQUE texture tile filling the ENTIRE output canvas, no transparency or padding. This is a horizontal side-view walkable platform edge material texture, NOT a picture of an isolated plank. Upper 112/136 of the whole canvas is a gently highlighted flat cap, BOTTOM 24/136 of the whole canvas is a continuous dark underside SHADOW BAND (becomes precisely bottom 6px at runtime128x34). TOPMOST pixel row is the flat walkable edge. Everything is flush edge-to-edge. Repeat seamlessly left-to-right: same colors and continuous grain at left and right, no vertical end outlines or end caps. Flat orthographic texture, no perspective, glow, gradient background, surrounding shadow, lettering or border. Broad sparse features readable at128px.",
+      "source": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-ef79f38d-a52a-49b3-889b-05957c654855.png",
+      "file": "generated/reef-top-v1.png",
+      "status": "selected",
+      "nativeSize": [
+        2046,
+        768
+      ],
+      "sha256": "c2369debb551c7c0601d45020975f324719d12805782d815f4c8b2e7ccfff556"
+    },
+    {
+      "key": "coral",
+      "kind": "fill",
+      "version": 1,
+      "id": "a5-coral-fill-v1",
+      "prompt": "Use case: stylized-concept. Asset type: original 2D side-scrolling adventure terrain tile. Input image 1 is ONLY a linework/cel-shading/style reference, do NOT draw its person, weapon, costume or background. Match the project's clear ink outlines, 2-3 gentle cel shades and upper-left material lighting. Clean original webtoon game art for children. Low-to-moderate contrast in the fill so characters read clearly; crisp flat walkable tops. Orthographic straight-on material texture, no perspective, no scenes, no characters, no props, no text, lettering, logos, border frame, vignette, global gradient or watermark. Material: Lavender-blue reef rock with embedded small pink and turquoise coral flecks, no fragile protrusions or branches outside the rectangle. Pale coral-pink walkable surface. Base #6a6f8e / highlights #9aa2c3 / shadow #464b6b. Deliver ONLY one square 512x512 fully opaque fill texture, edge-to-edge material, with no transparent padding. It must tile seamlessly both horizontally and vertically: opposite edges continue the same grain/stone features and colors exactly, no lighter/darker border; use balanced uniform lighting across the entire tile. Large sparse features, avoid tiny noise.",
+      "source": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-7da5433e-57d6-4737-8d63-f6b80899e9ba.png",
+      "file": "generated/coral-fill-v1.png",
+      "status": "selected",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "sha256": "829f5e3d8db6679bfb553b56d35c596528bd4a46ea25d28cb0830a1f1e4458b9"
+    },
+    {
+      "key": "coral",
+      "kind": "top",
+      "version": 1,
+      "id": "a5-coral-top-v1",
+      "prompt": "Use case: stylized-concept. Asset type: original 2D side-scrolling adventure terrain tile. Input image 1 is ONLY a linework/cel-shading/style reference, do NOT draw its person, weapon, costume or background. Match the project's clear ink outlines, 2-3 gentle cel shades and upper-left material lighting. Clean original webtoon game art for children. Low-to-moderate contrast in the fill so characters read clearly; crisp flat walkable tops. Orthographic straight-on material texture, no perspective, no scenes, no characters, no props, no text, lettering, logos, border frame, vignette, global gradient or watermark. Material: Lavender-blue reef rock with embedded small pink and turquoise coral flecks, no fragile protrusions or branches outside the rectangle. Pale coral-pink walkable surface. Base #6a6f8e / highlights #9aa2c3 / shadow #464b6b. Deliver ONLY a wide 512x136 FULLY OPAQUE texture tile filling the ENTIRE output canvas, no transparency or padding. This is a horizontal side-view walkable platform edge material texture, NOT a picture of an isolated plank. Upper 112/136 of the whole canvas is a gently highlighted flat cap, BOTTOM 24/136 of the whole canvas is a continuous dark underside SHADOW BAND (becomes precisely bottom 6px at runtime128x34). TOPMOST pixel row is the flat walkable edge. Everything is flush edge-to-edge. Repeat seamlessly left-to-right: same colors and continuous grain at left and right, no vertical end outlines or end caps. Flat orthographic texture, no perspective, glow, gradient background, surrounding shadow, lettering or border. Broad sparse features readable at128px.",
+      "source": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-27584570-c2d3-4824-a4be-2c67218989a9.png",
+      "file": "generated/coral-top-v1.png",
+      "status": "selected",
+      "nativeSize": [
+        2048,
+        768
+      ],
+      "sha256": "158ccf6c85fe1ea6a9eda9ac0d793ed2e331b27caa6cc5013dfd880593a58526"
+    },
+    {
+      "key": "whale",
+      "kind": "fill",
+      "version": 1,
+      "id": "a5-whale-fill-v1",
+      "prompt": "Use case: stylized-concept. Asset type: original 2D side-scrolling adventure terrain tile. Input image 1 is ONLY a linework/cel-shading/style reference, do NOT draw its person, weapon, costume or background. Match the project's clear ink outlines, 2-3 gentle cel shades and upper-left material lighting. Clean original webtoon game art for children. Low-to-moderate contrast in the fill so characters read clearly; crisp flat walkable tops. Orthographic straight-on material texture, no perspective, no scenes, no characters, no props, no text, lettering, logos, border frame, vignette, global gradient or watermark. Material: Gentle blue-gray sea-smoothed island stone, broad rounded polished patches and subtle slate marks, no animal body or face. Pale blue seafoam walkable lip. Base #5d7c87 / highlights #8eaab0 / shadow #3f5a66. Deliver ONLY one square 512x512 fully opaque fill texture, edge-to-edge material, with no transparent padding. It must tile seamlessly both horizontally and vertically: opposite edges continue the same grain/stone features and colors exactly, no lighter/darker border; use balanced uniform lighting across the entire tile. Large sparse features, avoid tiny noise.",
+      "source": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-3ebf48ab-f006-4c84-a94b-5a23830965e0.png",
+      "file": "generated/whale-fill-v1.png",
+      "status": "selected",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "sha256": "a81db5441a922575bb7ef85a04fb25dd361b3867e5ae67613db47d9f832dc97a"
+    },
+    {
+      "key": "whale",
+      "kind": "top",
+      "version": 1,
+      "id": "a5-whale-top-v1",
+      "prompt": "Use case: stylized-concept. Asset type: original 2D side-scrolling adventure terrain tile. Input image 1 is ONLY a linework/cel-shading/style reference, do NOT draw its person, weapon, costume or background. Match the project's clear ink outlines, 2-3 gentle cel shades and upper-left material lighting. Clean original webtoon game art for children. Low-to-moderate contrast in the fill so characters read clearly; crisp flat walkable tops. Orthographic straight-on material texture, no perspective, no scenes, no characters, no props, no text, lettering, logos, border frame, vignette, global gradient or watermark. Material: Gentle blue-gray sea-smoothed island stone, broad rounded polished patches and subtle slate marks, no animal body or face. Pale blue seafoam walkable lip. Base #5d7c87 / highlights #8eaab0 / shadow #3f5a66. Deliver ONLY a wide 512x136 FULLY OPAQUE texture tile filling the ENTIRE output canvas, no transparency or padding. This is a horizontal side-view walkable platform edge material texture, NOT a picture of an isolated plank. Upper 112/136 of the whole canvas is a gently highlighted flat cap, BOTTOM 24/136 of the whole canvas is a continuous dark underside SHADOW BAND (becomes precisely bottom 6px at runtime128x34). TOPMOST pixel row is the flat walkable edge. Everything is flush edge-to-edge. Repeat seamlessly left-to-right: same colors and continuous grain at left and right, no vertical end outlines or end caps. Flat orthographic texture, no perspective, glow, gradient background, surrounding shadow, lettering or border. Broad sparse features readable at128px.",
+      "source": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-ce3c4202-b402-4cf2-b9c0-9dec0706c4ce.png",
+      "file": "generated/whale-top-v1.png",
+      "status": "selected",
+      "nativeSize": [
+        2048,
+        768
+      ],
+      "sha256": "8562fdc6b1525734e249b1d4a1ee438febda5ee764a44d85607342b698c8e181"
+    },
+    {
+      "key": "basalt",
+      "kind": "fill",
+      "version": 1,
+      "id": "a5-basalt-fill-v1",
+      "prompt": "Use case: stylized-concept. Asset type: original 2D side-scrolling adventure terrain tile. Input image 1 is ONLY a linework/cel-shading/style reference, do NOT draw its person, weapon, costume or background. Match the project's clear ink outlines, 2-3 gentle cel shades and upper-left material lighting. Clean original webtoon game art for children. Low-to-moderate contrast in the fill so characters read clearly; crisp flat walkable tops. Orthographic straight-on material texture, no perspective, no scenes, no characters, no props, no text, lettering, logos, border frame, vignette, global gradient or watermark. Material: Dark plum-gray volcanic basalt, large broad polygonal stones and sparse warm amber mineral veins, no dripping lava or fire. Warm orange walkable lip. Base #4b3a44 / highlights #6e5560 / shadow #2e2229. Deliver ONLY one square 512x512 fully opaque fill texture, edge-to-edge material, with no transparent padding. It must tile seamlessly both horizontally and vertically: opposite edges continue the same grain/stone features and colors exactly, no lighter/darker border; use balanced uniform lighting across the entire tile. Large sparse features, avoid tiny noise.",
+      "source": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-6c1ed899-00b7-414d-a4e2-baeee19324fc.png",
+      "file": "generated/basalt-fill-v1.png",
+      "status": "rejected: platform lip/turf/rim/trim in repeating fill",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "sha256": "d2d175c46b34c691883c8cf3daae19a7df8746210d42bed83dbbfa170fd13962"
+    },
+    {
+      "key": "basalt",
+      "kind": "top",
+      "version": 1,
+      "id": "a5-basalt-top-v1",
+      "prompt": "Use case: stylized-concept. Asset type: original 2D side-scrolling adventure terrain tile. Input image 1 is ONLY a linework/cel-shading/style reference, do NOT draw its person, weapon, costume or background. Match the project's clear ink outlines, 2-3 gentle cel shades and upper-left material lighting. Clean original webtoon game art for children. Low-to-moderate contrast in the fill so characters read clearly; crisp flat walkable tops. Orthographic straight-on material texture, no perspective, no scenes, no characters, no props, no text, lettering, logos, border frame, vignette, global gradient or watermark. Material: Dark plum-gray volcanic basalt, large broad polygonal stones and sparse warm amber mineral veins, no dripping lava or fire. Warm orange walkable lip. Base #4b3a44 / highlights #6e5560 / shadow #2e2229. Deliver ONLY a wide 512x136 FULLY OPAQUE texture tile filling the ENTIRE output canvas, no transparency or padding. This is a horizontal side-view walkable platform edge material texture, NOT a picture of an isolated plank. Upper 112/136 of the whole canvas is a gently highlighted flat cap, BOTTOM 24/136 of the whole canvas is a continuous dark underside SHADOW BAND (becomes precisely bottom 6px at runtime128x34). TOPMOST pixel row is the flat walkable edge. Everything is flush edge-to-edge. Repeat seamlessly left-to-right: same colors and continuous grain at left and right, no vertical end outlines or end caps. Flat orthographic texture, no perspective, glow, gradient background, surrounding shadow, lettering or border. Broad sparse features readable at128px.",
+      "source": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-b332ab61-b8de-46d7-ad87-6ad8b3dc1797.png",
+      "file": "generated/basalt-top-v1.png",
+      "status": "selected",
+      "nativeSize": [
+        2048,
+        768
+      ],
+      "sha256": "9c39c5fd052e34e34972b58a101e935d9120837272b47463adff0df14c257a80"
+    },
+    {
+      "key": "crystal",
+      "kind": "fill",
+      "version": 1,
+      "id": "a5-crystal-fill-v1",
+      "prompt": "Use case: stylized-concept. Asset type: original 2D side-scrolling adventure terrain tile. Input image 1 is ONLY a linework/cel-shading/style reference, do NOT draw its person, weapon, costume or background. Match the project's clear ink outlines, 2-3 gentle cel shades and upper-left material lighting. Clean original webtoon game art for children. Low-to-moderate contrast in the fill so characters read clearly; crisp flat walkable tops. Orthographic straight-on material texture, no perspective, no scenes, no characters, no props, no text, lettering, logos, border frame, vignette, global gradient or watermark. Material: Deep indigo-violet crystalline rock, broad understated angular mineral facets, occasional small pale lavender inlays, no tall freestanding crystals. Pale lavender walkable lip. Base #45486e / highlights #6c70a3 / shadow #2c2e4c. Deliver ONLY one square 512x512 fully opaque fill texture, edge-to-edge material, with no transparent padding. It must tile seamlessly both horizontally and vertically: opposite edges continue the same grain/stone features and colors exactly, no lighter/darker border; use balanced uniform lighting across the entire tile. Large sparse features, avoid tiny noise.",
+      "source": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-05a17f97-bd88-4da5-8edb-9f3c96944ac7.png",
+      "file": "generated/crystal-fill-v1.png",
+      "status": "rejected: platform lip/turf/rim/trim in repeating fill",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "sha256": "cd9db90e6060d7aa4a1ced1c9ef29dd247b1e2ac08445a69602e9d86707ff30f"
+    },
+    {
+      "key": "crystal",
+      "kind": "top",
+      "version": 1,
+      "id": "a5-crystal-top-v1",
+      "prompt": "Use case: stylized-concept. Asset type: original 2D side-scrolling adventure terrain tile. Input image 1 is ONLY a linework/cel-shading/style reference, do NOT draw its person, weapon, costume or background. Match the project's clear ink outlines, 2-3 gentle cel shades and upper-left material lighting. Clean original webtoon game art for children. Low-to-moderate contrast in the fill so characters read clearly; crisp flat walkable tops. Orthographic straight-on material texture, no perspective, no scenes, no characters, no props, no text, lettering, logos, border frame, vignette, global gradient or watermark. Material: Deep indigo-violet crystalline rock, broad understated angular mineral facets, occasional small pale lavender inlays, no tall freestanding crystals. Pale lavender walkable lip. Base #45486e / highlights #6c70a3 / shadow #2c2e4c. Deliver ONLY a wide 512x136 FULLY OPAQUE texture tile filling the ENTIRE output canvas, no transparency or padding. This is a horizontal side-view walkable platform edge material texture, NOT a picture of an isolated plank. Upper 112/136 of the whole canvas is a gently highlighted flat cap, BOTTOM 24/136 of the whole canvas is a continuous dark underside SHADOW BAND (becomes precisely bottom 6px at runtime128x34). TOPMOST pixel row is the flat walkable edge. Everything is flush edge-to-edge. Repeat seamlessly left-to-right: same colors and continuous grain at left and right, no vertical end outlines or end caps. Flat orthographic texture, no perspective, glow, gradient background, surrounding shadow, lettering or border. Broad sparse features readable at128px.",
+      "source": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-7900841e-a53d-47ae-81da-6ca08884fd36.png",
+      "file": "generated/crystal-top-v1.png",
+      "status": "selected",
+      "nativeSize": [
+        2033,
+        774
+      ],
+      "sha256": "0bacdcbebbfd006b2a358fa50aab324846bb9e289fc48815ae64e8c8a9a575f2"
+    },
+    {
+      "key": "cloud",
+      "kind": "fill",
+      "version": 1,
+      "id": "a5-cloud-fill-v1",
+      "prompt": "Use case: stylized-concept. Asset type: original 2D side-scrolling adventure terrain tile. Input image 1 is ONLY a linework/cel-shading/style reference, do NOT draw its person, weapon, costume or background. Match the project's clear ink outlines, 2-3 gentle cel shades and upper-left material lighting. Clean original webtoon game art for children. Low-to-moderate contrast in the fill so characters read clearly; crisp flat walkable tops. Orthographic straight-on material texture, no perspective, no scenes, no characters, no props, no text, lettering, logos, border frame, vignette, global gradient or watermark. Material: Pale blue-white solid cloud platform material, broad soft overlapping puffs defined by clean gentle blue-gray ink contours. Ivory white walkable lip, powder-blue underside. Base #d9e6ea / highlights #ffffff / shadow #a9bfc8. Deliver ONLY one square 512x512 fully opaque fill texture, edge-to-edge material, with no transparent padding. It must tile seamlessly both horizontally and vertically: opposite edges continue the same grain/stone features and colors exactly, no lighter/darker border; use balanced uniform lighting across the entire tile. Large sparse features, avoid tiny noise.",
+      "source": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-a310e97e-7cf7-45b0-a084-bbf81a57db95.png",
+      "file": "generated/cloud-fill-v1.png",
+      "status": "selected",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "sha256": "13b51e976658f37b837c4dc22f5efdfd3e0e45563639d3bf6dc69cef40d9d563"
+    },
+    {
+      "key": "cloud",
+      "kind": "top",
+      "version": 1,
+      "id": "a5-cloud-top-v1",
+      "prompt": "Use case: stylized-concept. Asset type: original 2D side-scrolling adventure terrain tile. Input image 1 is ONLY a linework/cel-shading/style reference, do NOT draw its person, weapon, costume or background. Match the project's clear ink outlines, 2-3 gentle cel shades and upper-left material lighting. Clean original webtoon game art for children. Low-to-moderate contrast in the fill so characters read clearly; crisp flat walkable tops. Orthographic straight-on material texture, no perspective, no scenes, no characters, no props, no text, lettering, logos, border frame, vignette, global gradient or watermark. Material: Pale blue-white solid cloud platform material, broad soft overlapping puffs defined by clean gentle blue-gray ink contours. Ivory white walkable lip, powder-blue underside. Base #d9e6ea / highlights #ffffff / shadow #a9bfc8. Deliver ONLY a wide 512x136 FULLY OPAQUE texture tile filling the ENTIRE output canvas, no transparency or padding. This is a horizontal side-view walkable platform edge material texture, NOT a picture of an isolated plank. Upper 112/136 of the whole canvas is a gently highlighted flat cap, BOTTOM 24/136 of the whole canvas is a continuous dark underside SHADOW BAND (becomes precisely bottom 6px at runtime128x34). TOPMOST pixel row is the flat walkable edge. Everything is flush edge-to-edge. Repeat seamlessly left-to-right: same colors and continuous grain at left and right, no vertical end outlines or end caps. Flat orthographic texture, no perspective, glow, gradient background, surrounding shadow, lettering or border. Broad sparse features readable at128px.",
+      "source": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-97c0d33c-3481-45ed-892c-396118800807.png",
+      "file": "generated/cloud-top-v1.png",
+      "status": "selected",
+      "nativeSize": [
+        2048,
+        768
+      ],
+      "sha256": "a93ee37b096b910a18334a0569ab3bad8b265fddb18498bd3a326ffa5f484250"
+    },
+    {
+      "key": "village",
+      "kind": "fill",
+      "version": 1,
+      "id": "a5-village-fill-v1",
+      "prompt": "Use case: stylized-concept. Asset type: original 2D side-scrolling adventure terrain tile. Input image 1 is ONLY a linework/cel-shading/style reference, do NOT draw its person, weapon, costume or background. Match the project's clear ink outlines, 2-3 gentle cel shades and upper-left material lighting. Clean original webtoon game art for children. Low-to-moderate contrast in the fill so characters read clearly; crisp flat walkable tops. Orthographic straight-on material texture, no perspective, no scenes, no characters, no props, no text, lettering, logos, border frame, vignette, global gradient or watermark. Material: Warm ochre-brown village stone masonry, broad slightly rounded staggered stone blocks, thin dark mortar, a quiet moss-green walkable cap. Base #9c7a5c / highlights #c9a47d / shadow #6d533e. Deliver ONLY one square 512x512 fully opaque fill texture, edge-to-edge material, with no transparent padding. It must tile seamlessly both horizontally and vertically: opposite edges continue the same grain/stone features and colors exactly, no lighter/darker border; use balanced uniform lighting across the entire tile. Large sparse features, avoid tiny noise.",
+      "source": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-d6ad2b65-ae84-4677-aad1-db84ba10e2cc.png",
+      "file": "generated/village-fill-v1.png",
+      "status": "rejected: platform lip/turf/rim/trim in repeating fill",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "sha256": "7ae0f86b35706669a3bc2d12ab0b6159356e67f0c900173ed0aa5881a7b6969f"
+    },
+    {
+      "key": "village",
+      "kind": "top",
+      "version": 1,
+      "id": "a5-village-top-v1",
+      "prompt": "Use case: stylized-concept. Asset type: original 2D side-scrolling adventure terrain tile. Input image 1 is ONLY a linework/cel-shading/style reference, do NOT draw its person, weapon, costume or background. Match the project's clear ink outlines, 2-3 gentle cel shades and upper-left material lighting. Clean original webtoon game art for children. Low-to-moderate contrast in the fill so characters read clearly; crisp flat walkable tops. Orthographic straight-on material texture, no perspective, no scenes, no characters, no props, no text, lettering, logos, border frame, vignette, global gradient or watermark. Material: Warm ochre-brown village stone masonry, broad slightly rounded staggered stone blocks, thin dark mortar, a quiet moss-green walkable cap. Base #9c7a5c / highlights #c9a47d / shadow #6d533e. Deliver ONLY a wide 512x136 FULLY OPAQUE texture tile filling the ENTIRE output canvas, no transparency or padding. This is a horizontal side-view walkable platform edge material texture, NOT a picture of an isolated plank. Upper 112/136 of the whole canvas is a gently highlighted flat cap, BOTTOM 24/136 of the whole canvas is a continuous dark underside SHADOW BAND (becomes precisely bottom 6px at runtime128x34). TOPMOST pixel row is the flat walkable edge. Everything is flush edge-to-edge. Repeat seamlessly left-to-right: same colors and continuous grain at left and right, no vertical end outlines or end caps. Flat orthographic texture, no perspective, glow, gradient background, surrounding shadow, lettering or border. Broad sparse features readable at128px.",
+      "source": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-aad10a0b-6de6-4b90-8155-a7063fb67723.png",
+      "file": "generated/village-top-v1.png",
+      "status": "selected",
+      "nativeSize": [
+        2032,
+        774
+      ],
+      "sha256": "49abde528fe45fc82f5e8aea8ab13168cdd3a88fd8af1342e784668092d75407"
+    },
+    {
+      "key": "warehouse",
+      "kind": "fill",
+      "version": 1,
+      "id": "a5-warehouse-fill-v1",
+      "prompt": "Use case: stylized-concept. Asset type: original 2D side-scrolling adventure terrain tile. Input image 1 is ONLY a linework/cel-shading/style reference, do NOT draw its person, weapon, costume or background. Match the project's clear ink outlines, 2-3 gentle cel shades and upper-left material lighting. Clean original webtoon game art for children. Low-to-moderate contrast in the fill so characters read clearly; crisp flat walkable tops. Orthographic straight-on material texture, no perspective, no scenes, no characters, no props, no text, lettering, logos, border frame, vignette, global gradient or watermark. Material: Aged warm brown warehouse timber, broad horizontal boards, quiet irregular grain and sparse inset dark iron nail marks. Golden brown flat walkable lip. Base #7a5a40 / highlights #a77e58 / shadow #4c3626. Deliver ONLY one square 512x512 fully opaque fill texture, edge-to-edge material, with no transparent padding. It must tile seamlessly both horizontally and vertically: opposite edges continue the same grain/stone features and colors exactly, no lighter/darker border; use balanced uniform lighting across the entire tile. Large sparse features, avoid tiny noise.",
+      "source": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-512a4aac-1555-4aec-9755-abdf27357922.png",
+      "file": "generated/warehouse-fill-v1.png",
+      "status": "selected",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "sha256": "2263a8f8922609110092b39e3751666bd8e64fd0bbbb458cd63722bbb2d6a8da"
+    },
+    {
+      "key": "warehouse",
+      "kind": "top",
+      "version": 1,
+      "id": "a5-warehouse-top-v1",
+      "prompt": "Use case: stylized-concept. Asset type: original 2D side-scrolling adventure terrain tile. Input image 1 is ONLY a linework/cel-shading/style reference, do NOT draw its person, weapon, costume or background. Match the project's clear ink outlines, 2-3 gentle cel shades and upper-left material lighting. Clean original webtoon game art for children. Low-to-moderate contrast in the fill so characters read clearly; crisp flat walkable tops. Orthographic straight-on material texture, no perspective, no scenes, no characters, no props, no text, lettering, logos, border frame, vignette, global gradient or watermark. Material: Aged warm brown warehouse timber, broad horizontal boards, quiet irregular grain and sparse inset dark iron nail marks. Golden brown flat walkable lip. Base #7a5a40 / highlights #a77e58 / shadow #4c3626. Deliver ONLY a wide 512x136 FULLY OPAQUE texture tile filling the ENTIRE output canvas, no transparency or padding. This is a horizontal side-view walkable platform edge material texture, NOT a picture of an isolated plank. Upper 112/136 of the whole canvas is a gently highlighted flat cap, BOTTOM 24/136 of the whole canvas is a continuous dark underside SHADOW BAND (becomes precisely bottom 6px at runtime128x34). TOPMOST pixel row is the flat walkable edge. Everything is flush edge-to-edge. Repeat seamlessly left-to-right: same colors and continuous grain at left and right, no vertical end outlines or end caps. Flat orthographic texture, no perspective, glow, gradient background, surrounding shadow, lettering or border. Broad sparse features readable at128px.",
+      "source": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-c6afd72b-541c-4eb1-a95b-44427ef05a97.png",
+      "file": "generated/warehouse-top-v1.png",
+      "status": "selected",
+      "nativeSize": [
+        2048,
+        768
+      ],
+      "sha256": "cf297487c8903cf8eaeb05eb600a4ce99ca40f8293d9c9c3012bcb7975d9ad49"
+    },
+    {
+      "key": "sand",
+      "kind": "fill",
+      "version": 1,
+      "id": "a5-sand-fill-v1",
+      "prompt": "Use case: stylized-concept. Asset type: original 2D side-scrolling adventure terrain tile. Input image 1 is ONLY a linework/cel-shading/style reference, do NOT draw its person, weapon, costume or background. Match the project's clear ink outlines, 2-3 gentle cel shades and upper-left material lighting. Clean original webtoon game art for children. Low-to-moderate contrast in the fill so characters read clearly; crisp flat walkable tops. Orthographic straight-on material texture, no perspective, no scenes, no characters, no props, no text, lettering, logos, border frame, vignette, global gradient or watermark. Material: Compact golden sandy coast rock, broad softly rounded sandstone patches with a few muted turquoise mineral grains, no ocean or scenery. Pale cream-gold walkable lip. Base #b59b74 / highlights #dcc59a / shadow #8a7354. Deliver ONLY one square 512x512 fully opaque fill texture, edge-to-edge material, with no transparent padding. It must tile seamlessly both horizontally and vertically: opposite edges continue the same grain/stone features and colors exactly, no lighter/darker border; use balanced uniform lighting across the entire tile. Large sparse features, avoid tiny noise.",
+      "source": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-d9e5078c-1edf-4060-9722-30b947056e73.png",
+      "file": "generated/sand-fill-v1.png",
+      "status": "selected",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "sha256": "2e36fc3b2dc428a9072d3be390f650fd7b9407c5186c14ec13792b377f2f47f6"
+    },
+    {
+      "key": "sand",
+      "kind": "top",
+      "version": 1,
+      "id": "a5-sand-top-v1",
+      "prompt": "Use case: stylized-concept. Asset type: original 2D side-scrolling adventure terrain tile. Input image 1 is ONLY a linework/cel-shading/style reference, do NOT draw its person, weapon, costume or background. Match the project's clear ink outlines, 2-3 gentle cel shades and upper-left material lighting. Clean original webtoon game art for children. Low-to-moderate contrast in the fill so characters read clearly; crisp flat walkable tops. Orthographic straight-on material texture, no perspective, no scenes, no characters, no props, no text, lettering, logos, border frame, vignette, global gradient or watermark. Material: Compact golden sandy coast rock, broad softly rounded sandstone patches with a few muted turquoise mineral grains, no ocean or scenery. Pale cream-gold walkable lip. Base #b59b74 / highlights #dcc59a / shadow #8a7354. Deliver ONLY a wide 512x136 FULLY OPAQUE texture tile filling the ENTIRE output canvas, no transparency or padding. This is a horizontal side-view walkable platform edge material texture, NOT a picture of an isolated plank. Upper 112/136 of the whole canvas is a gently highlighted flat cap, BOTTOM 24/136 of the whole canvas is a continuous dark underside SHADOW BAND (becomes precisely bottom 6px at runtime128x34). TOPMOST pixel row is the flat walkable edge. Everything is flush edge-to-edge. Repeat seamlessly left-to-right: same colors and continuous grain at left and right, no vertical end outlines or end caps. Flat orthographic texture, no perspective, glow, gradient background, surrounding shadow, lettering or border. Broad sparse features readable at128px.",
+      "source": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-e84574de-4343-45ea-8cbd-4b0965cc5f40.png",
+      "file": "generated/sand-top-v1.png",
+      "status": "selected",
+      "nativeSize": [
+        2048,
+        768
+      ],
+      "sha256": "9bc6ddbf8e8965cc89d320e7b6f648689e5b979fb0042a853148a05f6a190070"
+    },
+    {
+      "key": "shadow",
+      "kind": "fill",
+      "version": 1,
+      "id": "a5-shadow-fill-v1",
+      "prompt": "Use case: stylized-concept. Asset type: original 2D side-scrolling adventure terrain tile. Input image 1 is ONLY a linework/cel-shading/style reference, do NOT draw its person, weapon, costume or background. Match the project's clear ink outlines, 2-3 gentle cel shades and upper-left material lighting. Clean original webtoon game art for children. Low-to-moderate contrast in the fill so characters read clearly; crisp flat walkable tops. Orthographic straight-on material texture, no perspective, no scenes, no characters, no props, no text, lettering, logos, border frame, vignette, global gradient or watermark. Material: Quiet dark violet castle masonry, large staggered stone blocks and restrained pale lavender edges, no horror faces or symbols. Muted lavender walkable lip. Base #3c3a56 / highlights #5c5a80 / shadow #25233a. Deliver ONLY one square 512x512 fully opaque fill texture, edge-to-edge material, with no transparent padding. It must tile seamlessly both horizontally and vertically: opposite edges continue the same grain/stone features and colors exactly, no lighter/darker border; use balanced uniform lighting across the entire tile. Large sparse features, avoid tiny noise.",
+      "source": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-a31bb007-444a-4280-84f4-2e85a56187db.png",
+      "file": "generated/shadow-fill-v1.png",
+      "status": "selected",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "sha256": "2a59c54c73fd70f6368c2438d42e6833d3d2ef451375e4a5483b04af72442756"
+    },
+    {
+      "key": "shadow",
+      "kind": "top",
+      "version": 1,
+      "id": "a5-shadow-top-v1",
+      "prompt": "Use case: stylized-concept. Asset type: original 2D side-scrolling adventure terrain tile. Input image 1 is ONLY a linework/cel-shading/style reference, do NOT draw its person, weapon, costume or background. Match the project's clear ink outlines, 2-3 gentle cel shades and upper-left material lighting. Clean original webtoon game art for children. Low-to-moderate contrast in the fill so characters read clearly; crisp flat walkable tops. Orthographic straight-on material texture, no perspective, no scenes, no characters, no props, no text, lettering, logos, border frame, vignette, global gradient or watermark. Material: Quiet dark violet castle masonry, large staggered stone blocks and restrained pale lavender edges, no horror faces or symbols. Muted lavender walkable lip. Base #3c3a56 / highlights #5c5a80 / shadow #25233a. Deliver ONLY a wide 512x136 FULLY OPAQUE texture tile filling the ENTIRE output canvas, no transparency or padding. This is a horizontal side-view walkable platform edge material texture, NOT a picture of an isolated plank. Upper 112/136 of the whole canvas is a gently highlighted flat cap, BOTTOM 24/136 of the whole canvas is a continuous dark underside SHADOW BAND (becomes precisely bottom 6px at runtime128x34). TOPMOST pixel row is the flat walkable edge. Everything is flush edge-to-edge. Repeat seamlessly left-to-right: same colors and continuous grain at left and right, no vertical end outlines or end caps. Flat orthographic texture, no perspective, glow, gradient background, surrounding shadow, lettering or border. Broad sparse features readable at128px.",
+      "source": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-0ab70bba-59d9-4d07-8fac-0d444514eef2.png",
+      "file": "generated/shadow-top-v1.png",
+      "status": "selected",
+      "nativeSize": [
+        2048,
+        768
+      ],
+      "sha256": "cd9932d3465ca3a970f13649eeb00ce6784ece170be5b04e7a3e0ff8df0289c5"
+    },
+    {
+      "key": "jungle",
+      "kind": "fill",
+      "version": 1,
+      "id": "a5-jungle-fill-v1",
+      "prompt": "Use case: stylized-concept. Asset type: original 2D side-scrolling adventure terrain tile. Input image 1 is ONLY a linework/cel-shading/style reference, do NOT draw its person, weapon, costume or background. Match the project's clear ink outlines, 2-3 gentle cel shades and upper-left material lighting. Clean original webtoon game art for children. Low-to-moderate contrast in the fill so characters read clearly; crisp flat walkable tops. Orthographic straight-on material texture, no perspective, no scenes, no characters, no props, no text, lettering, logos, border frame, vignette, global gradient or watermark. Material: Rich brown packed jungle earth, broad low-contrast soil clumps, sparse small stone flecks and short root lines. Moss-green horizontal walkable turf cap, foliage remains within the rectangular strip. Base #6a4b33 / highlights #8e6a4a / shadow #45301f. Deliver ONLY one square 512x512 fully opaque fill texture, edge-to-edge material, with no transparent padding. It must tile seamlessly both horizontally and vertically: opposite edges continue the same grain/stone features and colors exactly, no lighter/darker border; use balanced uniform lighting across the entire tile. Large sparse features, avoid tiny noise.",
+      "source": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-1d260d09-3ed6-4aac-a7e9-b46a2197c11e.png",
+      "file": "generated/jungle-fill-v1.png",
+      "status": "rejected: platform lip/turf/rim/trim in repeating fill",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "sha256": "afac88a4fdcc6b2039dba17989525510756afd52af3ed777f939fb2905d9f9bc"
+    },
+    {
+      "key": "jungle",
+      "kind": "top",
+      "version": 1,
+      "id": "a5-jungle-top-v1",
+      "prompt": "Use case: stylized-concept. Asset type: original 2D side-scrolling adventure terrain tile. Input image 1 is ONLY a linework/cel-shading/style reference, do NOT draw its person, weapon, costume or background. Match the project's clear ink outlines, 2-3 gentle cel shades and upper-left material lighting. Clean original webtoon game art for children. Low-to-moderate contrast in the fill so characters read clearly; crisp flat walkable tops. Orthographic straight-on material texture, no perspective, no scenes, no characters, no props, no text, lettering, logos, border frame, vignette, global gradient or watermark. Material: Rich brown packed jungle earth, broad low-contrast soil clumps, sparse small stone flecks and short root lines. Moss-green horizontal walkable turf cap, foliage remains within the rectangular strip. Base #6a4b33 / highlights #8e6a4a / shadow #45301f. Deliver ONLY a wide 512x136 FULLY OPAQUE texture tile filling the ENTIRE output canvas, no transparency or padding. This is a horizontal side-view walkable platform edge material texture, NOT a picture of an isolated plank. Upper 112/136 of the whole canvas is a gently highlighted flat cap, BOTTOM 24/136 of the whole canvas is a continuous dark underside SHADOW BAND (becomes precisely bottom 6px at runtime128x34). TOPMOST pixel row is the flat walkable edge. Everything is flush edge-to-edge. Repeat seamlessly left-to-right: same colors and continuous grain at left and right, no vertical end outlines or end caps. Flat orthographic texture, no perspective, glow, gradient background, surrounding shadow, lettering or border. Broad sparse features readable at128px.",
+      "source": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-d3306628-f35e-4b36-8cbe-cc9c3027596f.png",
+      "file": "generated/jungle-top-v1.png",
+      "status": "selected",
+      "nativeSize": [
+        2022,
+        778
+      ],
+      "sha256": "c6895a6ec09bab3f73296e1739af7b9f0cb299762a28edf285f887ce8746a6e4"
+    },
+    {
+      "key": "temple",
+      "kind": "fill",
+      "version": 1,
+      "id": "a5-temple-fill-v1",
+      "prompt": "Use case: stylized-concept. Asset type: original 2D side-scrolling adventure terrain tile. Input image 1 is ONLY a linework/cel-shading/style reference, do NOT draw its person, weapon, costume or background. Match the project's clear ink outlines, 2-3 gentle cel shades and upper-left material lighting. Clean original webtoon game art for children. Low-to-moderate contrast in the fill so characters read clearly; crisp flat walkable tops. Orthographic straight-on material texture, no perspective, no scenes, no characters, no props, no text, lettering, logos, border frame, vignette, global gradient or watermark. Material: Warm ochre carved temple masonry, broad clean stone blocks with a few simple non-religious geometric incisions, no inscriptions or deity imagery. Pale golden limestone walkable lip. Base #b08c64 / highlights #d8b98b / shadow #7e6346. Deliver ONLY one square 512x512 fully opaque fill texture, edge-to-edge material, with no transparent padding. It must tile seamlessly both horizontally and vertically: opposite edges continue the same grain/stone features and colors exactly, no lighter/darker border; use balanced uniform lighting across the entire tile. Large sparse features, avoid tiny noise.",
+      "source": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-4cfb45ac-a64b-4658-b643-fc764ad87e09.png",
+      "file": "generated/temple-fill-v1.png",
+      "status": "selected",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "sha256": "8dc727e43dd2e3ebfd331536707b1c978622ff6edc483f1067823c829ee63328"
+    },
+    {
+      "key": "temple",
+      "kind": "top",
+      "version": 1,
+      "id": "a5-temple-top-v1",
+      "prompt": "Use case: stylized-concept. Asset type: original 2D side-scrolling adventure terrain tile. Input image 1 is ONLY a linework/cel-shading/style reference, do NOT draw its person, weapon, costume or background. Match the project's clear ink outlines, 2-3 gentle cel shades and upper-left material lighting. Clean original webtoon game art for children. Low-to-moderate contrast in the fill so characters read clearly; crisp flat walkable tops. Orthographic straight-on material texture, no perspective, no scenes, no characters, no props, no text, lettering, logos, border frame, vignette, global gradient or watermark. Material: Warm ochre carved temple masonry, broad clean stone blocks with a few simple non-religious geometric incisions, no inscriptions or deity imagery. Pale golden limestone walkable lip. Base #b08c64 / highlights #d8b98b / shadow #7e6346. Deliver ONLY a wide 512x136 FULLY OPAQUE texture tile filling the ENTIRE output canvas, no transparency or padding. This is a horizontal side-view walkable platform edge material texture, NOT a picture of an isolated plank. Upper 112/136 of the whole canvas is a gently highlighted flat cap, BOTTOM 24/136 of the whole canvas is a continuous dark underside SHADOW BAND (becomes precisely bottom 6px at runtime128x34). TOPMOST pixel row is the flat walkable edge. Everything is flush edge-to-edge. Repeat seamlessly left-to-right: same colors and continuous grain at left and right, no vertical end outlines or end caps. Flat orthographic texture, no perspective, glow, gradient background, surrounding shadow, lettering or border. Broad sparse features readable at128px.",
+      "source": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-ee9bebf1-1ee2-4048-a315-1b74d43ad762.png",
+      "file": "generated/temple-top-v1.png",
+      "status": "selected",
+      "nativeSize": [
+        2048,
+        768
+      ],
+      "sha256": "5846238666d30c2323f2ba54eebf61358e669ba02f3a576248efaf3a6fc9f2e3"
+    },
+    {
+      "key": "garden",
+      "kind": "fill",
+      "version": 1,
+      "id": "a5-garden-fill-v1",
+      "prompt": "Use case: stylized-concept. Asset type: original 2D side-scrolling adventure terrain tile. Input image 1 is ONLY a linework/cel-shading/style reference, do NOT draw its person, weapon, costume or background. Match the project's clear ink outlines, 2-3 gentle cel shades and upper-left material lighting. Clean original webtoon game art for children. Low-to-moderate contrast in the fill so characters read clearly; crisp flat walkable tops. Orthographic straight-on material texture, no perspective, no scenes, no characters, no props, no text, lettering, logos, border frame, vignette, global gradient or watermark. Material: Warm brown soft garden soil, broad quiet clumps with sparse pale pebbles, no large roots or scenery. Fresh gentle green flat turf cap, a few tiny pink petal accents within the strip. Base #7a5b40 / highlights #9e7a58 / shadow #51392a. Deliver ONLY one square 512x512 fully opaque fill texture, edge-to-edge material, with no transparent padding. It must tile seamlessly both horizontally and vertically: opposite edges continue the same grain/stone features and colors exactly, no lighter/darker border; use balanced uniform lighting across the entire tile. Large sparse features, avoid tiny noise.",
+      "source": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-db638415-b4b0-4b7e-b0e7-482ed0a9f54a.png",
+      "file": "generated/garden-fill-v1.png",
+      "status": "rejected: platform lip/turf/rim/trim in repeating fill",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "sha256": "51d2bc22b2efc170f75cfb018400a6dd250d177f453ddfd39268700fe1fd298a"
+    },
+    {
+      "key": "garden",
+      "kind": "top",
+      "version": 1,
+      "id": "a5-garden-top-v1",
+      "prompt": "Use case: stylized-concept. Asset type: original 2D side-scrolling adventure terrain tile. Input image 1 is ONLY a linework/cel-shading/style reference, do NOT draw its person, weapon, costume or background. Match the project's clear ink outlines, 2-3 gentle cel shades and upper-left material lighting. Clean original webtoon game art for children. Low-to-moderate contrast in the fill so characters read clearly; crisp flat walkable tops. Orthographic straight-on material texture, no perspective, no scenes, no characters, no props, no text, lettering, logos, border frame, vignette, global gradient or watermark. Material: Warm brown soft garden soil, broad quiet clumps with sparse pale pebbles, no large roots or scenery. Fresh gentle green flat turf cap, a few tiny pink petal accents within the strip. Base #7a5b40 / highlights #9e7a58 / shadow #51392a. Deliver ONLY a wide 512x136 FULLY OPAQUE texture tile filling the ENTIRE output canvas, no transparency or padding. This is a horizontal side-view walkable platform edge material texture, NOT a picture of an isolated plank. Upper 112/136 of the whole canvas is a gently highlighted flat cap, BOTTOM 24/136 of the whole canvas is a continuous dark underside SHADOW BAND (becomes precisely bottom 6px at runtime128x34). TOPMOST pixel row is the flat walkable edge. Everything is flush edge-to-edge. Repeat seamlessly left-to-right: same colors and continuous grain at left and right, no vertical end outlines or end caps. Flat orthographic texture, no perspective, glow, gradient background, surrounding shadow, lettering or border. Broad sparse features readable at128px.",
+      "source": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-094cf2ec-6061-4933-9ddc-7ef634a30d9e.png",
+      "file": "generated/garden-top-v1.png",
+      "status": "selected",
+      "nativeSize": [
+        2017,
+        780
+      ],
+      "sha256": "87d515844b904a7078f8b84cc5ce8c1c82a673c2039054ad410d217e2940d15d"
+    },
+    {
+      "key": "tower",
+      "kind": "fill",
+      "version": 1,
+      "id": "a5-tower-fill-v1",
+      "prompt": "Use case: stylized-concept. Asset type: original 2D side-scrolling adventure terrain tile. Input image 1 is ONLY a linework/cel-shading/style reference, do NOT draw its person, weapon, costume or background. Match the project's clear ink outlines, 2-3 gentle cel shades and upper-left material lighting. Clean original webtoon game art for children. Low-to-moderate contrast in the fill so characters read clearly; crisp flat walkable tops. Orthographic straight-on material texture, no perspective, no scenes, no characters, no props, no text, lettering, logos, border frame, vignette, global gradient or watermark. Material: Cool deep slate-indigo tower masonry, broad sturdy stone blocks, quiet gold-gray mineral inlays with no symbols. Pale blue-gray walkable lip. Base #3f4566 / highlights #5d6690 / shadow #282d47. Deliver ONLY one square 512x512 fully opaque fill texture, edge-to-edge material, with no transparent padding. It must tile seamlessly both horizontally and vertically: opposite edges continue the same grain/stone features and colors exactly, no lighter/darker border; use balanced uniform lighting across the entire tile. Large sparse features, avoid tiny noise.",
+      "source": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-2c662c00-abbb-4dc2-bee6-eb9c386fe369.png",
+      "file": "generated/tower-fill-v1.png",
+      "status": "selected",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "sha256": "6b454bb0a03c3f70758fbbcbc4b0551e04bcb0e14947e45e2b147448e6f03fbe"
+    },
+    {
+      "key": "tower",
+      "kind": "top",
+      "version": 1,
+      "id": "a5-tower-top-v1",
+      "prompt": "Use case: stylized-concept. Asset type: original 2D side-scrolling adventure terrain tile. Input image 1 is ONLY a linework/cel-shading/style reference, do NOT draw its person, weapon, costume or background. Match the project's clear ink outlines, 2-3 gentle cel shades and upper-left material lighting. Clean original webtoon game art for children. Low-to-moderate contrast in the fill so characters read clearly; crisp flat walkable tops. Orthographic straight-on material texture, no perspective, no scenes, no characters, no props, no text, lettering, logos, border frame, vignette, global gradient or watermark. Material: Cool deep slate-indigo tower masonry, broad sturdy stone blocks, quiet gold-gray mineral inlays with no symbols. Pale blue-gray walkable lip. Base #3f4566 / highlights #5d6690 / shadow #282d47. Deliver ONLY a wide 512x136 FULLY OPAQUE texture tile filling the ENTIRE output canvas, no transparency or padding. This is a horizontal side-view walkable platform edge material texture, NOT a picture of an isolated plank. Upper 112/136 of the whole canvas is a gently highlighted flat cap, BOTTOM 24/136 of the whole canvas is a continuous dark underside SHADOW BAND (becomes precisely bottom 6px at runtime128x34). TOPMOST pixel row is the flat walkable edge. Everything is flush edge-to-edge. Repeat seamlessly left-to-right: same colors and continuous grain at left and right, no vertical end outlines or end caps. Flat orthographic texture, no perspective, glow, gradient background, surrounding shadow, lettering or border. Broad sparse features readable at128px.",
+      "source": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-5712ca6d-da06-4b5e-80c8-ef283ecde195.png",
+      "file": "generated/tower-top-v1.png",
+      "status": "selected",
+      "nativeSize": [
+        2048,
+        768
+      ],
+      "sha256": "d4ecb7101527d0518c5a8b7f5f6dea9665db0e304c2d6a8478d49bb05c01311e"
+    },
+    {
+      "key": "kingdom",
+      "kind": "fill",
+      "version": 1,
+      "id": "a5-kingdom-fill-v1",
+      "prompt": "Use case: stylized-concept. Asset type: original 2D side-scrolling adventure terrain tile. Input image 1 is ONLY a linework/cel-shading/style reference, do NOT draw its person, weapon, costume or background. Match the project's clear ink outlines, 2-3 gentle cel shades and upper-left material lighting. Clean original webtoon game art for children. Low-to-moderate contrast in the fill so characters read clearly; crisp flat walkable tops. Orthographic straight-on material texture, no perspective, no scenes, no characters, no props, no text, lettering, logos, border frame, vignette, global gradient or watermark. Material: Warm pale ivory palace stone masonry, broad clean limestone blocks and very restrained gold and dusty teal inlays, no ornamental crests or text. Gentle golden ivory walkable lip. Base #d6cbb6 / highlights #f3ead8 / shadow #a89c86. Deliver ONLY one square 512x512 fully opaque fill texture, edge-to-edge material, with no transparent padding. It must tile seamlessly both horizontally and vertically: opposite edges continue the same grain/stone features and colors exactly, no lighter/darker border; use balanced uniform lighting across the entire tile. Large sparse features, avoid tiny noise.",
+      "source": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-bc09581e-3db9-400a-af26-0e26c877315f.png",
+      "file": "generated/kingdom-fill-v1.png",
+      "status": "rejected: platform lip/turf/rim/trim in repeating fill",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "sha256": "566f1269849ed7479ca651c39b8ef88755963d2ed9bcfda17bce2570640d099c"
+    },
+    {
+      "key": "kingdom",
+      "kind": "top",
+      "version": 1,
+      "id": "a5-kingdom-top-v1",
+      "prompt": "Use case: stylized-concept. Asset type: original 2D side-scrolling adventure terrain tile. Input image 1 is ONLY a linework/cel-shading/style reference, do NOT draw its person, weapon, costume or background. Match the project's clear ink outlines, 2-3 gentle cel shades and upper-left material lighting. Clean original webtoon game art for children. Low-to-moderate contrast in the fill so characters read clearly; crisp flat walkable tops. Orthographic straight-on material texture, no perspective, no scenes, no characters, no props, no text, lettering, logos, border frame, vignette, global gradient or watermark. Material: Warm pale ivory palace stone masonry, broad clean limestone blocks and very restrained gold and dusty teal inlays, no ornamental crests or text. Gentle golden ivory walkable lip. Base #d6cbb6 / highlights #f3ead8 / shadow #a89c86. Deliver ONLY a wide 512x136 FULLY OPAQUE texture tile filling the ENTIRE output canvas, no transparency or padding. This is a horizontal side-view walkable platform edge material texture, NOT a picture of an isolated plank. Upper 112/136 of the whole canvas is a gently highlighted flat cap, BOTTOM 24/136 of the whole canvas is a continuous dark underside SHADOW BAND (becomes precisely bottom 6px at runtime128x34). TOPMOST pixel row is the flat walkable edge. Everything is flush edge-to-edge. Repeat seamlessly left-to-right: same colors and continuous grain at left and right, no vertical end outlines or end caps. Flat orthographic texture, no perspective, glow, gradient background, surrounding shadow, lettering or border. Broad sparse features readable at128px.",
+      "source": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-32aafde7-93bb-4e2c-bb05-f094bc9a7f94.png",
+      "file": "generated/kingdom-top-v1.png",
+      "status": "selected",
+      "nativeSize": [
+        2022,
+        778
+      ],
+      "sha256": "0b8fa9eae0edf25a09dbcbb716b0757a5ee58e47c99cde33d128fbd10751f874"
+    },
+    {
+      "key": "crystal",
+      "kind": "fill",
+      "version": 2,
+      "id": "a5-crystal-fill-v2",
+      "prompt": "Use case: stylized-concept. Asset type: original 2D side-scrolling adventure terrain tile. Input image 1 is ONLY a linework/cel-shading/style reference, do NOT draw its person, weapon, costume or background. Match the project's clear ink outlines, 2-3 gentle cel shades and upper-left material lighting. Clean original webtoon game art for children. Low-to-moderate contrast in the fill so characters read clearly; crisp flat walkable tops. Orthographic straight-on material texture, no perspective, no scenes, no characters, no props, no text, lettering, logos, border frame, vignette, global gradient or watermark. Material interior ONLY: Deep indigo-violet crystalline rock, broad understated angular mineral facets, occasional small pale lavender inlays, no tall freestanding crystals.  Deliver ONLY one square 512x512 fully opaque fill texture, edge-to-edge material, with no transparent padding. It must tile seamlessly both horizontally and vertically: opposite edges continue the same grain/stone features and colors exactly, no lighter/darker border; use balanced uniform lighting across the entire tile. Large sparse features, avoid tiny noise. Critical: this is ONLY the infinitely repeating INTERIOR FILL MATERIAL, not the top of a platform. NO grass, turf, greenery, walkable lip, top cap, light top border, ledge, cliff skyline, foundation border, horizontal trim band, outside outline, decorative border or end. Material must continue uniformly to ALL four edges. Every edge is a cut through the same endless material, with no indication of an outer silhouette. Tile top/bottom AND left/right without revealing square boundaries. Do not depict a complete object. Avoid any feature that reads like a horizontal shelf or an outer edge.",
+      "source": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-ca2e0afa-f1d3-4016-a59e-f86f0aa627af.png",
+      "file": "generated/crystal-fill-v2.png",
+      "status": "selected",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "sha256": "0421565401549416f57c027b86c61c5d86585ca75c7554f0475cc37c9dd8574b"
+    },
+    {
+      "key": "basalt",
+      "kind": "fill",
+      "version": 2,
+      "id": "a5-basalt-fill-v2",
+      "prompt": "Use case: stylized-concept. Asset type: original 2D side-scrolling adventure terrain tile. Input image 1 is ONLY a linework/cel-shading/style reference, do NOT draw its person, weapon, costume or background. Match the project's clear ink outlines, 2-3 gentle cel shades and upper-left material lighting. Clean original webtoon game art for children. Low-to-moderate contrast in the fill so characters read clearly; crisp flat walkable tops. Orthographic straight-on material texture, no perspective, no scenes, no characters, no props, no text, lettering, logos, border frame, vignette, global gradient or watermark. Material interior ONLY: Dark plum-gray volcanic basalt, large broad polygonal stones and sparse warm amber mineral veins, no dripping lava or fire.  Deliver ONLY one square 512x512 fully opaque fill texture, edge-to-edge material, with no transparent padding. It must tile seamlessly both horizontally and vertically: opposite edges continue the same grain/stone features and colors exactly, no lighter/darker border; use balanced uniform lighting across the entire tile. Large sparse features, avoid tiny noise. Critical: this is ONLY the infinitely repeating INTERIOR FILL MATERIAL, not the top of a platform. NO grass, turf, greenery, walkable lip, top cap, light top border, ledge, cliff skyline, foundation border, horizontal trim band, outside outline, decorative border or end. Material must continue uniformly to ALL four edges. Every edge is a cut through the same endless material, with no indication of an outer silhouette. Tile top/bottom AND left/right without revealing square boundaries. Do not depict a complete object. Avoid any feature that reads like a horizontal shelf or an outer edge.",
+      "source": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-6d029e95-633e-44c8-b1e3-c8c576a85637.png",
+      "file": "generated/basalt-fill-v2.png",
+      "status": "selected",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "sha256": "c5f5c62d6eaa2863b95acc81a68acdfcd99bf6e6dfece763bc86b201ffb9671c"
+    },
+    {
+      "key": "village",
+      "kind": "fill",
+      "version": 2,
+      "id": "a5-village-fill-v2",
+      "prompt": "Use case: stylized-concept. Asset type: original 2D side-scrolling adventure terrain tile. Input image 1 is ONLY a linework/cel-shading/style reference, do NOT draw its person, weapon, costume or background. Match the project's clear ink outlines, 2-3 gentle cel shades and upper-left material lighting. Clean original webtoon game art for children. Low-to-moderate contrast in the fill so characters read clearly; crisp flat walkable tops. Orthographic straight-on material texture, no perspective, no scenes, no characters, no props, no text, lettering, logos, border frame, vignette, global gradient or watermark. Material interior ONLY: Warm ochre-brown village stone masonry, broad slightly rounded staggered stone blocks, thin dark mortar, a  Deliver ONLY one square 512x512 fully opaque fill texture, edge-to-edge material, with no transparent padding. It must tile seamlessly both horizontally and vertically: opposite edges continue the same grain/stone features and colors exactly, no lighter/darker border; use balanced uniform lighting across the entire tile. Large sparse features, avoid tiny noise. Critical: this is ONLY the infinitely repeating INTERIOR FILL MATERIAL, not the top of a platform. NO grass, turf, greenery, walkable lip, top cap, light top border, ledge, cliff skyline, foundation border, horizontal trim band, outside outline, decorative border or end. Material must continue uniformly to ALL four edges. Every edge is a cut through the same endless material, with no indication of an outer silhouette. Tile top/bottom AND left/right without revealing square boundaries. Do not depict a complete object. Avoid any feature that reads like a horizontal shelf or an outer edge.",
+      "source": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-e391be20-467e-4c52-8f6c-c23c5c3b7cb0.png",
+      "file": "generated/village-fill-v2.png",
+      "status": "selected",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "sha256": "874fe36343d7e5776cc7fcf8f55d769ec603f7ec3718da7e81ef78f979103d01"
+    },
+    {
+      "key": "jungle",
+      "kind": "fill",
+      "version": 2,
+      "id": "a5-jungle-fill-v2",
+      "prompt": "Use case: stylized-concept. Asset type: original 2D side-scrolling adventure terrain tile. Input image 1 is ONLY a linework/cel-shading/style reference, do NOT draw its person, weapon, costume or background. Match the project's clear ink outlines, 2-3 gentle cel shades and upper-left material lighting. Clean original webtoon game art for children. Low-to-moderate contrast in the fill so characters read clearly; crisp flat walkable tops. Orthographic straight-on material texture, no perspective, no scenes, no characters, no props, no text, lettering, logos, border frame, vignette, global gradient or watermark. Material interior ONLY: Rich brown packed jungle earth, broad low-contrast soil clumps, sparse small stone flecks and short root lines.  Deliver ONLY one square 512x512 fully opaque fill texture, edge-to-edge material, with no transparent padding. It must tile seamlessly both horizontally and vertically: opposite edges continue the same grain/stone features and colors exactly, no lighter/darker border; use balanced uniform lighting across the entire tile. Large sparse features, avoid tiny noise. Critical: this is ONLY the infinitely repeating INTERIOR FILL MATERIAL, not the top of a platform. NO grass, turf, greenery, walkable lip, top cap, light top border, ledge, cliff skyline, foundation border, horizontal trim band, outside outline, decorative border or end. Material must continue uniformly to ALL four edges. Every edge is a cut through the same endless material, with no indication of an outer silhouette. Tile top/bottom AND left/right without revealing square boundaries. Do not depict a complete object. Avoid any feature that reads like a horizontal shelf or an outer edge.",
+      "source": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-655b5791-9294-4992-a106-ada7fdda1d36.png",
+      "file": "generated/jungle-fill-v2.png",
+      "status": "selected",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "sha256": "1884ededf545095d8b1dabaa4dbd62de34f07f7589f735c8b1f144501aa0a33c"
+    },
+    {
+      "key": "garden",
+      "kind": "fill",
+      "version": 2,
+      "id": "a5-garden-fill-v2",
+      "prompt": "Use case: stylized-concept. Asset type: original 2D side-scrolling adventure terrain tile. Input image 1 is ONLY a linework/cel-shading/style reference, do NOT draw its person, weapon, costume or background. Match the project's clear ink outlines, 2-3 gentle cel shades and upper-left material lighting. Clean original webtoon game art for children. Low-to-moderate contrast in the fill so characters read clearly; crisp flat walkable tops. Orthographic straight-on material texture, no perspective, no scenes, no characters, no props, no text, lettering, logos, border frame, vignette, global gradient or watermark. Material interior ONLY: Warm brown garden soil interior with broad softly shaded clumps and sparse tiny pale pebbles, #7a5b40, #9e7a58, #51392a. Deliver ONLY one square 512x512 fully opaque fill texture, edge-to-edge material, with no transparent padding. It must tile seamlessly both horizontally and vertically: opposite edges continue the same grain/stone features and colors exactly, no lighter/darker border; use balanced uniform lighting across the entire tile. Large sparse features, avoid tiny noise. Critical: ONLY infinitely repeating INTERIOR MATERIAL, not a platform top or whole object. No greenery, grass, turf, lip, cap, top/bottom border, outline, horizontal trim or ornament band, architectural cornice or shelf. Uniform masonry/soil everywhere. All four edges cut through the same endless material. Opposite edges match seamlessly both horizontally and vertically.",
+      "source": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-52bf2aca-1c24-43b8-a949-5f2596981c26.png",
+      "file": "generated/garden-fill-v2.png",
+      "status": "selected",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "sha256": "cce56bd0b4184b5ed7393b0a9279ebb47c017897e3ce4f501f55c92bcece8c54"
+    },
+    {
+      "key": "kingdom",
+      "kind": "fill",
+      "version": 2,
+      "id": "a5-kingdom-fill-v2",
+      "prompt": "Use case: stylized-concept. Asset type: original 2D side-scrolling adventure terrain tile. Input image 1 is ONLY a linework/cel-shading/style reference, do NOT draw its person, weapon, costume or background. Match the project's clear ink outlines, 2-3 gentle cel shades and upper-left material lighting. Clean original webtoon game art for children. Low-to-moderate contrast in the fill so characters read clearly; crisp flat walkable tops. Orthographic straight-on material texture, no perspective, no scenes, no characters, no props, no text, lettering, logos, border frame, vignette, global gradient or watermark. Material interior ONLY: Warm pale ivory palace limestone interior with broad clean staggered blocks, tiny restrained dusty-teal and gold mineral flecks, #d6cbb6, #f3ead8, #a89c86. Deliver ONLY one square 512x512 fully opaque fill texture, edge-to-edge material, with no transparent padding. It must tile seamlessly both horizontally and vertically: opposite edges continue the same grain/stone features and colors exactly, no lighter/darker border; use balanced uniform lighting across the entire tile. Large sparse features, avoid tiny noise. Critical: ONLY infinitely repeating INTERIOR MATERIAL, not a platform top or whole object. No greenery, grass, turf, lip, cap, top/bottom border, outline, horizontal trim or ornament band, architectural cornice or shelf. Uniform masonry/soil everywhere. All four edges cut through the same endless material. Opposite edges match seamlessly both horizontally and vertically.",
+      "source": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-f9269128-12d7-44db-a9c9-3f9ac064efff.png",
+      "file": "generated/kingdom-fill-v2.png",
+      "status": "selected",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "sha256": "ba14444516745aba092781236acd9369c1c489512f914d7be97485b3143fbd79"
+    }
+  ],
+  "selected": {
+    "terrain-dock-fill": "generated/dock-fill-v1.png",
+    "terrain-dock-top": "generated/dock-top-v2.png",
+    "terrain-deck-fill": "generated/deck-fill-v1.png",
+    "terrain-deck-top": "generated/deck-top-v1.png",
+    "terrain-reef-fill": "generated/reef-fill-v1.png",
+    "terrain-reef-top": "generated/reef-top-v1.png",
+    "terrain-coral-fill": "generated/coral-fill-v1.png",
+    "terrain-coral-top": "generated/coral-top-v1.png",
+    "terrain-whale-fill": "generated/whale-fill-v1.png",
+    "terrain-whale-top": "generated/whale-top-v1.png",
+    "terrain-basalt-fill": "generated/basalt-fill-v2.png",
+    "terrain-basalt-top": "generated/basalt-top-v1.png",
+    "terrain-crystal-fill": "generated/crystal-fill-v2.png",
+    "terrain-crystal-top": "generated/crystal-top-v1.png",
+    "terrain-cloud-fill": "generated/cloud-fill-v1.png",
+    "terrain-cloud-top": "generated/cloud-top-v1.png",
+    "terrain-village-fill": "generated/village-fill-v2.png",
+    "terrain-village-top": "generated/village-top-v1.png",
+    "terrain-warehouse-fill": "generated/warehouse-fill-v1.png",
+    "terrain-warehouse-top": "generated/warehouse-top-v1.png",
+    "terrain-sand-fill": "generated/sand-fill-v1.png",
+    "terrain-sand-top": "generated/sand-top-v1.png",
+    "terrain-shadow-fill": "generated/shadow-fill-v1.png",
+    "terrain-shadow-top": "generated/shadow-top-v1.png",
+    "terrain-jungle-fill": "generated/jungle-fill-v2.png",
+    "terrain-jungle-top": "generated/jungle-top-v1.png",
+    "terrain-temple-fill": "generated/temple-fill-v1.png",
+    "terrain-temple-top": "generated/temple-top-v1.png",
+    "terrain-garden-fill": "generated/garden-fill-v2.png",
+    "terrain-garden-top": "generated/garden-top-v1.png",
+    "terrain-tower-fill": "generated/tower-fill-v1.png",
+    "terrain-tower-top": "generated/tower-top-v1.png",
+    "terrain-kingdom-fill": "generated/kingdom-fill-v2.png",
+    "terrain-kingdom-top": "generated/kingdom-top-v1.png"
+  },
+  "artStatus": "ART_DRAFT",
+  "canonicalNormalization": "Complete opaque native material canvases resized to fill512x512 / top512x136; native PNGs retained unchanged; no painting or seam blending."
+}

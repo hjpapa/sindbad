@@ -21,7 +21,7 @@ test('phone can descend, cast its selected treasure, and open S26 bridge using a
     await page.setViewportSize({width:360,height:740});await page.goto('/');
     await page.getByRole('button',{name:'이어하기 · S26'}).click();
     await expect.poll(async()=>!!(await read(page)).player).toBe(true);
-    const visible=page.locator('#touch button:visible');await expect(visible).toHaveCount(6);
+    const visible=page.locator('#touch button:visible');await expect(visible).toHaveCount(8); // 4-way pad, jump, skill, weapon, action
     for(const button of await visible.all()){
         const box=(await button.boundingBox())!;
         expect(box.x).toBeGreaterThanOrEqual(0);expect(box.x+box.width).toBeLessThanOrEqual(360);

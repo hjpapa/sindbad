@@ -1,0 +1,24 @@
+{
+  "selected": {
+    "skeleton": "generated/enemy-actions/exec-9c590a89-9af8-461a-8a39-5c0f97430974.png",
+    "bandit": "generated/enemy-actions/exec-31297ea0-28e1-4b06-a1d7-0c68efbfc71a.png",
+    "guard": "generated/enemy-actions/exec-cd230e77-c68e-4744-8191-3c222c09060d.png",
+    "pirate": "generated/enemy-actions/exec-6d864c04-4b7d-4b29-adc8-ee4fb4750f27.png",
+    "snake": "generated/enemy-actions/exec-622c3fed-198f-48ca-862c-9b5ba4fa8934.png",
+    "tiger": "generated/enemy-actions/exec-8fd5dc4a-1f65-4c9c-8f59-95348b7f3959.png",
+    "dragon": "generated/enemy-actions/exec-d252cf59-fbd5-4741-8150-e088508b7d0b.png",
+    "crab": "generated/enemy-actions/exec-1dc64880-d76a-4d3c-acac-a6e929db428d.png",
+    "stone": "generated/enemy-actions/exec-b53ca29d-a113-40a5-b692-b2db7a56a303.png",
+    "kuura": "generated/enemy-actions/exec-10d09753-f067-4564-8bcd-17185fcf7a14.png"
+  },
+  "rejected": [
+    "generated/enemy-actions/exec-b9b16efd-b883-4af7-80ce-5553fdf27437.png",
+    "generated/enemy-actions/exec-432954dd-54fc-4ebe-b27b-ab83f6c019d0.png",
+    "generated/enemy-actions/exec-01d3634b-ec38-43e3-b6ce-f1a1bc734dc6.png",
+    "generated/enemy-actions/exec-01dd72d1-8e14-41d2-bf29-0ec68dc9d1ca.png",
+    "generated/enemy-actions/exec-ed754d1f-3c90-4550-a5b5-1ab1eb37d5af.png",
+    "generated/enemy-actions/exec-81fba8e9-12e1-43d0-b03f-7792269b4a0a.png",
+    "generated/enemy-actions/exec-59ff90c8-36d6-4adb-882c-ea330454286e.png",
+    "generated/enemy-actions/exec-1c2b1971-8406-4bca-9855-be1862240d4b.png"
+  ]
+}

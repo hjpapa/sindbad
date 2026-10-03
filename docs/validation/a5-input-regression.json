@@ -1,0 +1,56 @@
+{
+  "metadata": {
+    "actualWorkers": 1
+  },
+  "startTime": 1791028480761,
+  "duration": 88639.34599999999,
+  "files": [
+    {
+      "fileId": "0e432c2735e1cb75ffbd",
+      "fileName": "adventure.spec.ts",
+      "tests": [
+        {
+          "testId": "0e432c2735e1cb75ffbd-30790cd4a30e9dda58c9",
+          "title": "new game → S01 → S02 → S03 with real keyboard inputs and checkpoint reload",
+          "projectName": "",
+          "location": {
+            "file": "adventure.spec.ts",
+            "line": 83,
+            "column": 1
+          },
+          "duration": 85409,
+          "annotations": [],
+          "tags": [],
+          "outcome": "expected",
+          "path": [],
+          "ok": true,
+          "results": [
+            {
+              "attachments": []
+            }
+          ]
+        }
+      ],
+      "stats": {
+        "total": 1,
+        "expected": 1,
+        "unexpected": 0,
+        "flaky": 0,
+        "skipped": 0,
+        "ok": true
+      }
+    }
+  ],
+  "projectNames": [
+    ""
+  ],
+  "stats": {
+    "total": 1,
+    "expected": 1,
+    "unexpected": 0,
+    "flaky": 0,
+    "skipped": 0,
+    "ok": true
+  },
+  "errors": []
+}

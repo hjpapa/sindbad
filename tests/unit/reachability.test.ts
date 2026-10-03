@@ -28,6 +28,14 @@ describe('authored map jump routes', () => {
         expect(mapReachabilityIssues(map)).toContain('blocked.sky: no child-safe route around hazard');
     });
 
+    it('rejects a crate that lets a child walk past but never climb back', () => {
+        const map = structuredClone(maps.S01);
+        // The original S01 crate: 144px tall with only a step on its left side.
+        map.platforms[2] = { x: 680, y: 464, w: 192, h: 144 };
+        expect(mapReachabilityIssues(map)).toContain('S01: wall at (680,464) rises 144px with no step on its right side');
+        expect(mapReachabilityIssues(maps.S01)).toEqual([]);
+    });
+
     it('rejects a platform above the safe single-jump rise', () => {
         const map = structuredClone(maps.S01);
         const y = 464 - SAFE_JUMP_RISE - 1;

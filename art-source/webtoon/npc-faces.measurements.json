@@ -1,0 +1,263 @@
+[
+  {
+    "key": "naira",
+    "source": "generated/faces/naira-v2.png",
+    "sourceSize": [
+      1774,
+      887
+    ],
+    "sourceSha256": "dba27ab5529bdd40d7d7354c5cb92730e6d6ccad210e5fe7f61e3556cb9d69a7",
+    "bounds": [
+      [
+        62,
+        94,
+        474,
+        680
+      ],
+      [
+        62,
+        94,
+        474,
+        680
+      ],
+      [
+        61,
+        94,
+        474,
+        680
+      ]
+    ]
+  },
+  {
+    "key": "siren",
+    "source": "generated/faces/siren-v2.png",
+    "sourceSize": [
+      1774,
+      887
+    ],
+    "sourceSha256": "80bcd137533ee85fc42dbf941485efd38a535832ae7befe5f9692ce070f2fc38",
+    "bounds": [
+      [
+        28,
+        126,
+        487,
+        667
+      ],
+      [
+        32,
+        126,
+        490,
+        668
+      ],
+      [
+        35,
+        125,
+        489,
+        668
+      ]
+    ]
+  },
+  {
+    "key": "rah",
+    "source": "generated/faces/rah.png",
+    "sourceSize": [
+      1774,
+      887
+    ],
+    "sourceSha256": "c9d2f81f539769828efd9e0c403db142e2be7cedc978ec4eb0e6c86f23f46436",
+    "bounds": [
+      [
+        31,
+        57,
+        493,
+        716
+      ],
+      [
+        24,
+        57,
+        488,
+        716
+      ],
+      [
+        26,
+        57,
+        487,
+        719
+      ]
+    ]
+  },
+  {
+    "key": "genie",
+    "source": "generated/faces/genie.png",
+    "sourceSize": [
+      1774,
+      887
+    ],
+    "sourceSha256": "122be6e5b70eaf9d0987dd07d564903d356f995dd3f466fe4a349632e819b702",
+    "bounds": [
+      [
+        33,
+        106,
+        487,
+        689
+      ],
+      [
+        29,
+        107,
+        483,
+        689
+      ],
+      [
+        33,
+        107,
+        486,
+        689
+      ]
+    ]
+  },
+  {
+    "key": "ariana",
+    "source": "generated/faces/ariana-v2.png",
+    "sourceSize": [
+      1774,
+      887
+    ],
+    "sourceSha256": "d9360f9be074e21972638f8769a226366fa895742bfa3e48c070b9f267f0dc43",
+    "bounds": [
+      [
+        66,
+        112,
+        477,
+        681
+      ],
+      [
+        58,
+        112,
+        470,
+        681
+      ],
+      [
+        50,
+        114,
+        460,
+        683
+      ]
+    ]
+  },
+  {
+    "key": "king",
+    "source": "generated/faces/king.png",
+    "sourceSize": [
+      1774,
+      887
+    ],
+    "sourceSha256": "65b4d609c257ca0050b96b387147ca4b95e6ff2e276682346f32810525940897",
+    "bounds": [
+      [
+        46,
+        97,
+        467,
+        681
+      ],
+      [
+        47,
+        96,
+        467,
+        681
+      ],
+      [
+        51,
+        96,
+        469,
+        681
+      ]
+    ]
+  },
+  {
+    "key": "mira",
+    "source": "generated/faces/mira.png",
+    "sourceSize": [
+      1774,
+      887
+    ],
+    "sourceSha256": "9c54b340c0c23ef9c76a8cf7fd5d83e7e5d9ac5e46bdef9add8a10e88be4ab6a",
+    "bounds": [
+      [
+        42,
+        122,
+        481,
+        653
+      ],
+      [
+        39,
+        121,
+        478,
+        653
+      ],
+      [
+        39,
+        122,
+        475,
+        656
+      ]
+    ]
+  },
+  {
+    "key": "baru",
+    "source": "generated/faces/baru.png",
+    "sourceSize": [
+      1774,
+      887
+    ],
+    "sourceSha256": "d10c127c22a6656e964e86ca854c8b4e07f2df7b6948ef68bbb92a79dc0646ca",
+    "bounds": [
+      [
+        39,
+        101,
+        475,
+        681
+      ],
+      [
+        37,
+        101,
+        474,
+        683
+      ],
+      [
+        38,
+        101,
+        465,
+        682
+      ]
+    ]
+  },
+  {
+    "key": "captain",
+    "source": "generated/faces/captain.png",
+    "sourceSize": [
+      1774,
+      887
+    ],
+    "sourceSha256": "b09b3d490037af70f6ce5733c925f8ed2ae6d72dd6d818841c977a60ad3258ac",
+    "bounds": [
+      [
+        28,
+        136,
+        484,
+        660
+      ],
+      [
+        25,
+        136,
+        484,
+        660
+      ],
+      [
+        31,
+        137,
+        489,
+        661
+      ]
+    ]
+  }
+]

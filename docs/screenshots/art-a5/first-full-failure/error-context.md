@@ -1,0 +1,44 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - generic:
+    - generic:
+      - generic: S02
+      - generic:
+        - generic:
+          - generic: ♥
+          - text: "97"
+          - generic: / 105
+        - meter "체력"
+      - generic:
+        - generic: Lv.2
+        - generic: XP 51 / 80 · MP 62 / 62
+    - generic [ref=e5] [cursor=pointer]:
+      - generic [ref=e6] [cursor=pointer]: 현재 항로
+      - strong [ref=e7] [cursor=pointer]: 세이렌의 안개 암초
+      - generic [ref=e8] [cursor=pointer]: 조개 종 3개 공격 → 세이렌 저주 해제 → 보물함 → 등대
+    - generic:
+      - generic: ◈ 18
+      - button "가방과 지도" [ref=e9] [cursor=pointer]:
+        - generic [ref=e10] [cursor=pointer]: 🎒
+        - generic [ref=e11] [cursor=pointer]: 가방 M
+      - button "일시정지" [ref=e12] [cursor=pointer]: Ⅱ
+    - generic:
+      - text: 여행자의 곡도
+      - generic: J 공격
+      - text: · 메달
+  - status: 하트 회복! HP 105 / 105
+  - generic "터치 조작":
+    - generic [ref=e13]:
+      - button "터치 ←" [ref=e14] [cursor=pointer]:
+        - generic: ◀
+      - button "터치 →" [ref=e15] [cursor=pointer]:
+        - generic: ▶
+    - generic:
+      - button "터치 ↑" [ref=e16] [cursor=pointer]:
+        - generic: ▲
+        - text: 점프
+      - button "터치 행동" [ref=e17] [cursor=pointer]:
+        - generic: 공격
+```

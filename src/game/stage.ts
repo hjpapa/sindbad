@@ -12,11 +12,25 @@ import type { Platform } from '../content/maps';
 import campaign from '../content/stageIndex';
 import {channelProgress,deviceDirections,rotateDevice,treasureTrialAllowed} from '../core/storyMechanics';
 import {poisonDuration,cargoSpeed,plantDamage} from '../core/passives';
+import {controlText,type ControlMode} from './controlText';
+import {swingPose,weaponLooks,availableWeaponTexture} from './weapons';
+import {ensureTerrainTextures,terrainStyleFor} from './terrain';
+import {terrainAssetKeys} from '../content/terrainStyles';
+import {actionFrame,actionHand,heroActionCells,heroDisplaySize} from './heroArt';
+import {actionDefeatKind,enemyActionLayout,type EnemyActionKey} from '../content/enemyActions';
+const FONT='"Malgun Gothic","Apple SD Gothic Neo","Noto Sans KR",sans-serif';
+// What the touch action button would do right now, so its icon can match.
+export type ActionContext={kind:'attack'|'talk'|'use'|'exit';label:string};
 export interface Host {
     save: Save;
     hp: number;
     mp: number;
     input: Input;
+    controlMode: ControlMode;
+    textScale(): number;
+    context(action: ActionContext): void;
+    loading(progress: number): void;
+    ready(): void;
     reward(r: Reward): void;
     objective(id: string): void;
     persist(): void;
@@ -31,6 +45,10 @@ export interface Host {
     clearStage(): void;
 }
 interface Enemy {
+    art?: EnemyActionKey;
+    bodyHeight?: number;
+    bodyWidth?: number;
+    footOffset?: number;
     burn?: {until:number;next:number};
     def: Spawn;
     sprite: Phaser.GameObjects.Image;
@@ -53,6 +71,15 @@ interface Projectile {
 }
 export class Stage extends Phaser.Scene {
     private heroArt?:Phaser.GameObjects.Image;
+    private weaponArt?:Phaser.GameObjects.Image;
+    private heroShadow?:Phaser.GameObjects.Ellipse;
+    private backdrop?:Phaser.GameObjects.Image;
+    private hpBars!:Phaser.GameObjects.Graphics;
+    private hurtAt=-Infinity;
+    private joyfulUntil=0;
+    private lastGroundY=612;
+    private actionKey='';
+    private skins=new Map<Phaser.GameObjects.Rectangle,Phaser.GameObjects.TileSprite>();
     private chef?:{sprite:Phaser.GameObjects.Image;label:Phaser.GameObjects.Text;next:number;mark?:{x:number;at:number}};
     private poisonUntil=0;
     private poisonTick=0;
@@ -80,8 +107,8 @@ export class Stage extends Phaser.Scene {
     private grip:{id:string;until:number}|null=null;
     private sinkAt:number|null=null;
     private waveArt!:Phaser.GameObjects.Graphics;
-    private moving: {def:Platform;rect:Phaser.GameObjects.Rectangle;top:Phaser.GameObjects.Rectangle;body:Phaser.Physics.Arcade.Body}[]=[];
-    private doors: {id:string;rect:Phaser.GameObjects.Rectangle}[]=[];
+    private moving: {def:Platform;rect:Phaser.GameObjects.Rectangle;top:Phaser.GameObjects.TileSprite;body:Phaser.Physics.Arcade.Body}[]=[];
+    private doors: {id:string;rect:Phaser.GameObjects.Rectangle;glow:Phaser.GameObjects.TileSprite}[]=[];
     private wakeAt:number|null=null;
     private air=10000;
     private waterTick=0;
@@ -135,26 +162,43 @@ export class Stage extends Phaser.Scene {
     private latestHint = '';
     private lastFrame = 0;
     constructor(private host: Host) { super('stage'); }
+    // Every in-game caption: one Korean font, touch-friendly wording, and
+    // larger letters on small screens where the 1280x720 canvas is shrunk.
+    private txt(x:number,y:number,text:string|string[],style:Phaser.Types.GameObjects.Text.TextStyle={}){
+        const scale=this.host.textScale();
+        const size=parseFloat(String(style.fontSize??'18px'))*scale;
+        const wrap=style.wordWrap?.width?{...style.wordWrap,width:style.wordWrap.width*scale}:style.wordWrap;
+        const ctl=(value:string|string[])=>controlText(Array.isArray(value)?value.join('\n'):value,this.host.controlMode);
+        const label=this.add.text(x,y,ctl(text),{...style,fontFamily:FONT,fontSize:`${Math.round(size)}px`,wordWrap:wrap});
+        const setText=label.setText.bind(label);
+        label.setText=(value:string|string[])=>setText(ctl(value));
+        return label;
+    }
     private sceneAssets(){
         const id=this.host.save.checkpoint.stageId;
         const chapter=campaign.find(stage=>stage.id===id)?.chapter??1;
-        const characters=['hero-webtoon',...(maps[id].mode!=='flight'?['hero-run']:[]),...(maps[id].spawns.some(spawn=>spawn.texture==='enemy-atlas'||['skeleton','archer','captain','bandit','beast'].includes(spawn.kind))?['enemy-atlas']:[]),...maps[id].objects.map(object=>object.texture),...(['S09','S10','S33'].includes(id)?['roc-webtoon']:[]),...(['S05','S07','S16'].includes(id)?['naira-webtoon']:[]),...(id==='S08'?['genie-webtoon']:[]),...(['S32','S33','S34','S35','S36'].includes(id)?['ariana-webtoon']:[]),...(['S19','S31'].includes(id)?['kuura-webtoon']:[])];
+        const characters=['hero-webtoon',...(maps[id].mode!=='flight'?['hero-run','hero-action']:[]),...(maps[id].spawns.some(spawn=>spawn.actionArt)?['enemy-actions']:[]),...(maps[id].spawns.some(spawn=>!spawn.actionArt&&(spawn.texture==='enemy-atlas'||['skeleton','archer','captain','bandit','beast'].includes(spawn.kind)))?['enemy-atlas']:[]),...maps[id].objects.map(object=>object.texture),...(['S09','S10','S33'].includes(id)?['roc-webtoon']:[]),...(['S05','S07','S16'].includes(id)?['naira-webtoon']:[]),...(id==='S08'?['genie-webtoon']:[]),...(['S32','S33','S34','S35','S36'].includes(id)?['ariana-webtoon']:[]),...(['S19','S31'].includes(id)?['kuura-webtoon']:[])];
         if(id==='S04')characters.push('whale-webtoon');
         if(id==='S15')characters.push('chef-webtoon');
         if(id==='S02')characters.push('siren-webtoon');
         if(id==='S06')characters.push('rah-webtoon');
-        if(maps[id].spawns.some(spawn=>spawn.kind==='crab'))characters.push('crab-webtoon');
-        return assets.filter(asset=>asset.kind==='svg'||asset.key===`chapter-${chapter}`||characters.includes(asset.key));
+        if(maps[id].spawns.some(spawn=>spawn.kind==='crab'&&!spawn.actionArt))characters.push('crab-webtoon');
+        characters.push(...terrainAssetKeys(terrainStyleFor(maps[id])));
+        return assets.filter(asset=>asset.kind==='svg'||asset.key.startsWith('weapon-')||asset.key===`chapter-${chapter}`||characters.includes(asset.key));
     }
     preload() {
+        this.load.off('progress');
+        this.load.on('progress',(value:number)=>this.host.loading(value));
         const required=this.sceneAssets();const keys=new Set(required.map(asset=>asset.key));
         for(const asset of assets)if(asset.kind!=='svg'&&!keys.has(asset.key)&&this.textures.exists(asset.key))this.textures.remove(asset.key);
         for (const asset of required) {
         if(this.textures.exists(asset.key))continue;
         if(asset.kind==='svg')this.load.svg(asset.key, asset.path);
-        else if(asset.kind==='sheet')this.load.spritesheet(asset.key,asset.path,{frameWidth:512,frameHeight:512});
+        else if(asset.kind==='sheet')this.load.spritesheet(asset.key,asset.path,{frameWidth:asset.frame??512,frameHeight:asset.frame??512});
         else this.load.image(asset.key,asset.path);
-    } }
+    }
+        if(this.load.list.size>0)this.host.loading(0);
+    }
     create() {
         this.mapDef = maps[this.host.save.checkpoint.stageId];
         this.deviceStates.clear();this.friendshipAt=20000;this.bridgeBody=undefined;this.poisonUntil=0;this.poisonTick=0;this.plantReady=0;
@@ -162,6 +206,7 @@ export class Stage extends Phaser.Scene {
         this.moving=[];this.doors=[];this.wakeAt=null;this.air=10000;this.waterTick=0;
         this.flameReady=0;this.flameUsed=-Infinity;this.pulse=null;this.wave=null;this.grip=null;this.sinkAt=null;
         this.sim = 0; this.extraJump=false; this.bridgeUntil=0;
+        this.hurtAt=-Infinity;this.joyfulUntil=0;
         this.direction = 1;
         this.enemies = [];
         this.flightHazards=[];this.hazardNoticeAt=0;this.flightAttackId=100000;this.flightAttackReady=0;
@@ -183,7 +228,7 @@ export class Stage extends Phaser.Scene {
         this.host.input.clear();
         // Missing files fall back to a real, generated sailor-shaped texture, never an absent URL.
         for (const asset of this.sceneAssets())
-            if (!this.textures.exists(asset.key)&&!asset.key.startsWith('chapter-')&&asset.kind!=='sheet') {
+            if (!this.textures.exists(asset.key)&&!asset.key.startsWith('chapter-')&&!asset.key.startsWith('terrain-')&&!asset.key.startsWith('weapon-')&&asset.kind!=='sheet') {
                 const g = this.make.graphics({ x: 0, y: 0 });
                 g.fillStyle(0xeac28b).fillCircle(48, 24, 18);
                 g.fillStyle(0x285069).fillRect(27, 43, 42, 43);
@@ -191,29 +236,39 @@ export class Stage extends Phaser.Scene {
                 g.generateTexture(asset.key, 96, 128);
                 g.destroy();
             }
+        this.backdrop=undefined;
         this.background();
         this.chef=undefined;
         if(this.mapDef.id==='S04')this.add.image(this.mapDef.width/2,620,'whale-webtoon').setDisplaySize(this.mapDef.width-140,720).setDepth(-4);
         if(this.mapDef.id==='S15'){
             const x=this.mapDef.width-570;
-            this.chef={sprite:this.add.image(x,608,'chef-webtoon').setOrigin(.5,1).setDisplaySize(220,330).setDepth(2),label:this.add.text(x,240,'거인 요리사 · 국자 증기를 피하세요',{fontSize:'18px',color:'#fff2cc',backgroundColor:'#173b46',padding:{x:7,y:4}}).setOrigin(.5).setDepth(7),next:5000};
+            this.chef={sprite:this.add.image(x,608,'chef-webtoon').setOrigin(.5,1).setDisplaySize(220,330).setDepth(2),label:this.txt(x,240,'거인 요리사 · 국자 증기를 피하세요',{fontSize:'18px',color:'#fff2cc',backgroundColor:'#173b46',padding:{x:7,y:4}}).setOrigin(.5).setDepth(7),next:5000};
         }
         this.land = this.physics.add.staticGroup();
         const adventurePalette:Record<string,[number,number,number]>={sky:[0x496f7d,0x8db6ad,0xdde0af],volcano:[0x563b45,0xa8614b,0xf0a562],village:[0x5f786c,0x9eb489,0xead49a],warehouse:[0x574c43,0x8c7155,0xe3b875],ocean:[0x285e75,0x438a91,0x9ce0ca],pirate:[0x3a4354,0x715449,0xd7ad69],shadow:[0x3b3d59,0x67648a,0xc4b4dd],jungle:[0x355b4d,0x62845d,0xc5cf82],temple:[0x514963,0x827562,0xe1ca8f],garden:[0x557765,0x83ad86,0xf0c7cf],tower:[0x343b59,0x616a89,0xded3a3],kingdom:[0x547a80,0x87aaa3,0xf0d294]};
         const [side,topColor,edge]=this.mapDef.theme==='adventure'?adventurePalette[this.mapDef.visual??'sky']:this.mapDef.theme==='reef'?[0x477976,0x78a392,0xd4d5a2]:[0x6b5548,0x9a7857,0xe5c487];
+        void side;void topColor;void edge;
+        const terrain=ensureTerrainTextures(this,terrainStyleFor(this.mapDef));
+        this.skins.clear();
         for (const p of this.mapDef.platforms) {
-            this.add.rectangle(p.x+p.w/2+8,p.y+p.h/2+10,p.w,p.h,0x102c3b,.32).setDepth(-1);
-            const rect = this.add.rectangle(p.x + p.w / 2, p.y + p.h / 2, p.w, p.h, side).setStrokeStyle(2, edge);
-            if(this.mapDef.id==='S04')rect.setAlpha(.18);
-            if(this.mapDef.id==='S07'&&p.motion&&!p.requiredGround)this.add.text(p.x+p.w/2,p.y-35,'유목 · 점프',{fontSize:'18px',color:'#fbe2ad'}).setOrigin(.5);
-            const top=this.add.rectangle(p.x + p.w / 2, p.y + 8, p.w, 16, topColor).setStrokeStyle(2,edge);
-            for(let x=p.x+38;x<p.x+p.w-20;x+=Math.max(120,Math.min(220,p.w/5)))this.add.circle(x,p.y+29,4,edge,.35);
+            this.add.rectangle(p.x+p.w/2+6,p.y+p.h/2+8,p.w,p.h,0x0b1f2b,.28).setDepth(-1);
+            // The physics box stays invisible; the textured skin is what players see.
+            const rect = this.add.rectangle(p.x + p.w / 2, p.y + p.h / 2, p.w, p.h, 0x000000, 0);
+            const skin=this.add.tileSprite(p.x+p.w/2,p.y+p.h/2,p.w,p.h,terrain.fillKey).setDepth(0);
+            if(p.h<=30)skin.setVisible(false);
+            if(this.mapDef.id==='S04')skin.setAlpha(.22);
+            this.skins.set(rect,skin);
+            if(this.mapDef.id==='S07'&&p.motion&&!p.requiredGround)this.txt(p.x+p.w/2,p.y-35,'유목 · 점프',{fontSize:'18px',color:'#fbe2ad'}).setOrigin(.5);
+            const top=this.add.tileSprite(p.x + p.w / 2, p.y + 13, p.w, 34, terrain.topKey).setDepth(1);
+            if(this.mapDef.id==='S04')top.setAlpha(.55);
             if(p.motion){this.physics.add.existing(rect);const body=rect.body as Phaser.Physics.Arcade.Body;body.setAllowGravity(false).setImmovable(true);this.moving.push({def:p,rect,top,body});}else {this.land.add(rect);if(p.oneWay){const platformBody=rect.body as Phaser.Physics.Arcade.StaticBody;platformBody.checkCollision.left=false;platformBody.checkCollision.right=false;platformBody.checkCollision.down=false;}}
         }
         const cp = this.mapDef.checkpoints.find(c => c.id === this.host.save.checkpoint.checkpointId) ?? this.mapDef.checkpoints[0];
         this.safe = { x: cp.x, y: cp.y };
         this.player = this.physics.add.sprite(cp.x, cp.y, 'player').setDepth(10);
+        this.heroShadow=this.add.ellipse(cp.x,cp.y+62,62,14,0x08202c,.35).setDepth(2);
         this.heroArt=this.add.image(cp.x,cp.y+64,'hero-webtoon').setOrigin(.5,1).setDisplaySize(96,132).setDepth(10);
+        this.weaponArt=this.add.image(cp.x,cp.y,availableWeaponTexture('W01',key=>this.textures.exists(key))??'__MISSING').setDepth(11).setVisible(false);
         this.companion=['S32','S34','S35','S36'].includes(this.mapDef.id)?this.add.image(cp.x-65,cp.y+64,'ariana-webtoon').setOrigin(.5,1).setDisplaySize(86,128).setDepth(9):undefined;
         this.flightMount=this.mapDef.mode==='flight'?this.add.image(cp.x,cp.y+15,'roc-webtoon').setDisplaySize(240,160).setDepth(9):undefined;
         this.flightPassenger=this.mapDef.id==='S33'?this.add.image(cp.x,cp.y+10,'ariana-webtoon').setOrigin(.5,1).setDisplaySize(64,100).setDepth(10):undefined;
@@ -223,7 +278,7 @@ export class Stage extends Phaser.Scene {
         if(this.freeMovement()){(this.player.body as Phaser.Physics.Arcade.Body).setAllowGravity(false);this.player.setDragY(1800).setMaxVelocity(330,330);}
         this.physics.add.collider(this.player, this.land);
         for(const platform of this.moving)this.physics.add.collider(this.player,platform.rect);
-        for(const o of this.mapDef.objects.filter(o=>['gate','lightGate','vision'].includes(o.kind))){const rect=this.add.rectangle(o.x+48,440,28,336,0xc892aa,.65);this.land.add(rect);this.doors.push({id:o.id,rect});if(this.done(o.id)){(rect.body as Phaser.Physics.Arcade.StaticBody).enable=false;rect.setVisible(false);}}
+        for(const o of this.mapDef.objects.filter(o=>['gate','lightGate','vision'].includes(o.kind))){const rect=this.add.rectangle(o.x+48,440,28,336,0xc892aa,0);this.land.add(rect);const glow=this.add.tileSprite(o.x+48,440,44,336,this.barrierTexture(o.kind)).setDepth(3).setAlpha(.85);this.doors.push({id:o.id,rect,glow});if(this.done(o.id)){(rect.body as Phaser.Physics.Arcade.StaticBody).enable=false;rect.setVisible(false);glow.setVisible(false);}}
         this.physics.world.setBounds(0, -200, this.mapDef.width, 1400);
         this.cameras.main.setBounds(0, 0, this.mapDef.width, 720);
         this.cameras.main.startFollow(this.player, true, this.host.save.settings.reducedMotion ? 1 : 0.12, this.host.save.settings.reducedMotion ? 1 : 0.12, 0, 0);
@@ -235,19 +290,29 @@ export class Stage extends Phaser.Scene {
             let texture=def.texture==='roc'?'roc-webtoon':def.texture??fallbackTexture;let frame=def.frame;
             if(!def.texture&&['siren','crab'].includes(def.kind))texture=`${def.kind}-webtoon`;
             if(!def.texture&&['skeleton','archer','captain','bandit','beast'].includes(def.kind)&&this.textures.exists('enemy-atlas')){texture='enemy-atlas';frame=def.kind==='bandit'?4:def.kind==='beast'?0:5;}
+            const art = def.actionArt && this.textures.exists('enemy-actions') ? def.actionArt : undefined;
+            if(art){texture='enemy-actions';frame=enemyActionLayout(art,'idle',130,65).frame;}
             if(!this.textures.exists(texture)){texture=fallbackTexture;frame=undefined;}
             const sprite = this.add.image(def.x, def.y, texture,frame).setDisplaySize(texture==='roc-webtoon'?220:texture==='enemy-atlas'?(def.kind==='boss'?172:130):def.kind==='boss'?124:96,texture==='roc-webtoon'?145:texture==='enemy-atlas'?(def.kind==='boss'?172:130):def.kind==='boss'?156:128).setOrigin(.5,def.kind==='boss'?.65:.5).setDepth(5);
+            if(texture.endsWith('-webtoon')&&texture!=='roc-webtoon'&&def.kind!=='crab'){const source=this.textures.get(texture).getSourceImage();sprite.setDisplaySize(sprite.displayHeight*source.width/source.height,sprite.displayHeight);}
             if(def.kind==='crab')sprite.setDisplaySize(128,128).setOrigin(.5,.35);
             if(this.mapDef.id==='S06')sprite.setTint(0xffaa65);
             if (def.kind === 'captain')
                 sprite.setTint(0xffd98e).setDisplaySize(texture==='enemy-atlas'?150:110,texture==='enemy-atlas'?150:147);
             const hp = Math.round(def.hp * (this.host.save.settings.difficulty === 'relaxed' ? 0.85 : 1));
-            const label = this.add.text(def.x, def.y - (def.kind==='boss'?125:87), '', { fontSize: '19px', fontFamily: 'sans-serif', color: '#fff5cf', backgroundColor: '#173746' }).setOrigin(0.5).setDepth(6);
-            this.enemies.push({ def, sprite, label, hp, maxHp: hp, state: 'idle', until: 0, target: def.x, targetY:def.y, pattern: 0 });
+            const label = this.txt(def.x, def.y - (def.kind==='boss'?125:87), '', { fontSize: '19px', color: '#fff5cf', backgroundColor: '#173746', padding:{x:6,y:3} }).setOrigin(0.5).setDepth(6);
+            const enemy:Enemy = { def, sprite, label, hp, maxHp: hp, state: 'idle', until: 0, target: def.x, targetY:def.y, pattern: 0, art };
+            if(art){
+                enemy.bodyHeight=def.kind==='boss'?172:def.kind==='captain'?150:def.kind==='crab'?128:130;
+                const support=this.mapDef.platforms.filter(p=>!p.oneWay&&!p.motion&&def.x>=p.x&&def.x<=p.x+p.w&&p.y>=def.y).sort((a,b)=>a.y-b.y)[0];
+                enemy.footOffset=support?support.y-def.y+2:def.kind==='boss'?172*.35:enemy.bodyHeight*.5;
+                this.setEnemyPose(enemy);
+            }
+            this.enemies.push(enemy);
         }
         for(const def of this.mapDef.flightHazards??[]){
             const sprite=this.add.image(def.x,def.y,def.kind==='gust'?'stormCloud':'debris').setDepth(7).setScale(def.kind==='gust'?.95:.7);
-            const label=this.add.text(def.x,def.y-def.radius-35,def.kind==='gust'?'돌풍 · 위아래로 피하기':'낙하 파편 · 피하기',{fontSize:'17px',color:'#fff2cb',backgroundColor:'#28485a',padding:{x:7,y:4}}).setOrigin(.5).setDepth(8);
+            const label=this.txt(def.x,def.y-def.radius-35,def.kind==='gust'?'돌풍 · 위아래로 피하기':'낙하 파편 · 피하기',{fontSize:'17px',color:'#fff2cb',backgroundColor:'#28485a',padding:{x:7,y:4}}).setOrigin(.5).setDepth(8);
             this.flightHazards.push({def,sprite,label});
         }
         for (const original of this.mapDef.objects) {
@@ -256,11 +321,15 @@ export class Stage extends Phaser.Scene {
             const scale=def.flightRing ? 1.35 : ['npc','rescue','truthGift'].includes(def.kind)?1:def.kind === 'checkpoint' ? 0.42 : 0.68;
             const portraitTexture=texture==='roc'?'roc-webtoon':texture==='naira'?'naira-webtoon':texture==='genie'?'genie-webtoon':texture==='player'?'hero-webtoon':texture;
             const displayTexture=texture==='siren'?'siren-webtoon':texture==='rah'?'rah-webtoon':portraitTexture;
-            const sprite = this.add.image(def.x, def.y, this.textures.exists(displayTexture)?displayTexture:texture).setDisplaySize(96*scale,128*scale).setDepth(4);
+            const shownTexture=this.textures.exists(displayTexture)?displayTexture:texture;
+            const sprite = this.add.image(def.x, def.y, shownTexture).setDisplaySize(96*scale,128*scale).setDepth(4);
+            // Painted characters keep their own proportions instead of being squeezed into 3:4.
+            if(shownTexture.endsWith('-webtoon')){const source=this.textures.get(shownTexture).getSourceImage();sprite.setDisplaySize(128*scale*source.width/source.height,128*scale);}
             if(def.breakWeapon&&this.done(def.id))sprite.setVisible(false);
             if (def.kind === 'npc'&&!displayTexture.endsWith('-webtoon'))
                 sprite.setTint(0xe1d498);
-            const label = this.add.text(def.x, def.y - 64, def.label, { wordWrap:['S06','S07','S08'].includes(this.mapDef.id)?{width:210,useAdvancedWrap:true}:undefined, fontSize: ['S06','S07','S08'].includes(this.mapDef.id)?'18px':'20px', color: '#fff2cc', backgroundColor: '#173b46', padding: { x: 7, y: 4 } }).setOrigin(0.5).setDepth(7);
+            const label = this.txt(def.x, def.y - 64, def.label, { wordWrap:['S06','S07','S08'].includes(this.mapDef.id)?{width:210,useAdvancedWrap:true}:undefined, fontSize: ['S06','S07','S08'].includes(this.mapDef.id)?'18px':'20px', color: '#fff2cc', backgroundColor: '#173b46', padding: { x: 7, y: 4 } }).setOrigin(0.5).setDepth(7);
+            if(['captain-webtoon','sailor-webtoon'].includes(shownTexture))label.setY(sprite.y-sprite.displayHeight/2-label.height/2-8);
             this.objects.push({ def, sprite, label });
         }
         for (const h of this.mapDef.hearts)
@@ -271,21 +340,31 @@ export class Stage extends Phaser.Scene {
         this.flameArt=this.add.graphics().setDepth(12);
         this.waveArt=this.add.graphics().setDepth(8);
         this.bubble=this.add.graphics().setDepth(11);
-        this.journey=this.add.text(640,186,'',{fontSize:'18px',color:'#fff1c8',backgroundColor:'#24475b',padding:{x:10,y:6}}).setOrigin(.5).setScrollFactor(0).setDepth(19).setVisible(['S04','S05','S06','S07','S08'].includes(this.mapDef.id)||this.mapDef.mode==='flight');
+        this.journey=this.txt(640,186,'',{fontSize:this.host.controlMode==='touch'?'15px':'18px',color:'#fff1c8',backgroundColor:'#24475bdd',padding:{x:10,y:6},wordWrap:{width:760,useAdvancedWrap:true},align:'center'}).setOrigin(.5).setScrollFactor(0).setDepth(19).setVisible(['S04','S05','S06','S07','S08'].includes(this.mapDef.id)||this.mapDef.mode==='flight');
         this.warnings = this.add.graphics().setDepth(3);
-        this.bossText = this.add.text(640, 142, '', { fontFamily: 'sans-serif', fontSize: '22px', color: '#fce8bc', backgroundColor: '#173643', padding: { x: 12, y: 7 } }).setOrigin(0.5).setScrollFactor(0).setDepth(20).setVisible(false);
-        this.hint = this.add.text(640, 648, '', { fontFamily: 'sans-serif', fontSize: '22px', color: '#fff3d2', backgroundColor: '#153847', padding: { x: 14, y: 8 } }).setOrigin(0.5).setScrollFactor(0).setDepth(20);
+        this.bossText = this.txt(640, 142, '', { fontFamily: 'sans-serif', fontSize: '22px', color: '#fce8bc', backgroundColor: '#173643', padding: { x: 12, y: 7 } }).setOrigin(0.5).setScrollFactor(0).setDepth(20).setVisible(false);
+        this.hint = this.txt(640, 648, '', { fontFamily: 'sans-serif', fontSize: '22px', color: '#fff3d2', backgroundColor: '#153847', padding: { x: 14, y: 8 } }).setOrigin(0.5).setScrollFactor(0).setDepth(20);
+        // On touch screens the action button itself shows what will happen, and
+        // the bottom of the canvas sits under the thumbs, so the key hint is hidden.
+        this.hint.setVisible(this.host.controlMode==='keyboard');
+        this.hpBars=this.add.graphics().setDepth(6);
+        this.actionKey='';
         this.events.once(Phaser.Scenes.Events.SHUTDOWN, () => { this.host.input.clear(); this.projectiles = []; this.attack = null; });
         this.host.changed();
+        this.host.ready();
         const stageInfo=campaign.find(info=>info.id===this.mapDef.id);
-        if(stageInfo){const card=this.add.container(640,285).setScrollFactor(0).setDepth(30);const plate=this.add.rectangle(0,0,500,104,0x102f40,.9).setStrokeStyle(2,0xe8c77f);const title=this.add.text(0,-16,`${stageInfo.id} · ${stageInfo.title}`,{fontSize:'29px',fontStyle:'bold',color:'#fff1cf'}).setOrigin(.5);const chapter=this.add.text(0,24,`${stageInfo.chapter}장 · ${this.mapDef.peaceful?'평화로운 이야기':'새로운 항해'}`,{fontSize:'15px',color:'#bed8d5'}).setOrigin(.5);card.add([plate,title,chapter]);if(!this.host.save.settings.reducedMotion)this.tweens.add({targets:card,alpha:0,y:270,delay:1800,duration:600,onComplete:()=>card.destroy()});else this.time.delayedCall(1200,()=>card.destroy());}
+        if(stageInfo){const card=this.add.container(640,285).setScrollFactor(0).setDepth(30);const plate=this.add.rectangle(0,0,Math.min(900,500*this.host.textScale()),104*this.host.textScale(),0x102f40,.9).setStrokeStyle(2,0xe8c77f);const title=this.txt(0,-16*this.host.textScale(),`${stageInfo.id} · ${stageInfo.title}`,{fontSize:'29px',fontStyle:'bold',color:'#fff1cf'}).setOrigin(.5);const chapter=this.txt(0,24*this.host.textScale(),`${stageInfo.chapter}장 · ${this.mapDef.peaceful?'평화로운 이야기':'새로운 항해'}`,{fontSize:'15px',color:'#bed8d5'}).setOrigin(.5);card.add([plate,title,chapter]);if(!this.host.save.settings.reducedMotion)this.tweens.add({targets:card,alpha:0,y:270,delay:1800,duration:600,onComplete:()=>card.destroy()});else this.time.delayedCall(1200,()=>card.destroy());}
     }
     private background() {
         const chapter=campaign.find(stage=>stage.id===this.mapDef.id)!.chapter;
         const backgroundKey=`chapter-${chapter}`;
         if(this.textures.exists(backgroundKey)){
             this.cameras.main.setBackgroundColor('#203b51');
-            this.add.image(640,360,backgroundKey).setDisplaySize(1280,720).setScrollFactor(0).setDepth(-20);
+            // The 3:2 painting keeps its proportions (it used to be squeezed to
+            // 16:9) and is a little wider than the screen so it can drift with
+            // the camera instead of standing still while the ground slides by.
+            this.backdrop=this.add.image(640,360,backgroundKey).setDisplaySize(1440,960).setOrigin(.5,.5).setScrollFactor(0).setDepth(-20);
+            this.backdrop.setY(360+60);
             // A subdued floor band preserves visible collision boundaries.
             this.add.rectangle(640,638,1280,164,0x122b3c,.18).setScrollFactor(0).setDepth(-19);
             this.add.graphics().setDepth(-18).setScrollFactor(.12).lineStyle(2,0xffecc1,.12).lineBetween(0,530,this.mapDef.width,530);
@@ -336,14 +415,14 @@ export class Stage extends Phaser.Scene {
                     break;
             }
             if(this.mapDef.mode==='swim')g.fillStyle(0x75d6d0,.25).fillRect(0,100,this.mapDef.width,520);
-            this.add.text(42,205,`${this.mapDef.id} · ${this.mapDef.objective}`,{fontSize:'21px',color:'#fff1ce',backgroundColor:'#263d51',padding:{x:10,y:7},wordWrap:{width:720}}).setScrollFactor(.3).setDepth(-5);
+            this.txt(42,205,`${this.mapDef.id} · ${this.mapDef.objective}`,{fontSize:'21px',color:'#fff1ce',backgroundColor:'#263d51',padding:{x:10,y:7},wordWrap:{width:720}}).setScrollFactor(.3).setDepth(-5);
             return;
         }
         if(theme==='crystal'){
             this.cameras.main.setBackgroundColor('#303550');
             const g=this.add.graphics().setDepth(-10).setScrollFactor(.4);
             for(let x=0;x<this.mapDef.width;x+=230){g.fillStyle(0x56597e).fillTriangle(x,0,x+110,260,x+205,0);g.fillStyle(0x63849c,.65).fillTriangle(x,608,x+90,345,x+170,608);g.lineStyle(3,0xb9bfe1,.5).lineBetween(x+90,345,x+105,600);g.fillStyle(0xddd3ff,.75).fillCircle(x+140,240+(x%130),3);}
-            this.add.text(crystalSafeStart,330,'✧ 안전한 퍼즐 구역\n벽화의 별자리: ① →   ② ←   ③ ↓\nE 회전 · 위쪽 거울 초기화 버튼\n미완성 배치는 재접속 시 초기화됩니다',{fontSize:'19px',color:'#e2dcff',backgroundColor:'#353952',padding:{x:12,y:9}});
+            this.txt(crystalSafeStart,330,'✧ 안전한 퍼즐 구역\n벽화의 별자리: ① →   ② ←   ③ ↓\nE 회전 · 위쪽 거울 초기화 버튼\n미완성 배치는 재접속 시 초기화됩니다',{fontSize:'19px',color:'#e2dcff',backgroundColor:'#353952',padding:{x:12,y:9}});
             return;
         }
         if(theme==='flame'||theme==='waves'){
@@ -373,7 +452,7 @@ export class Stage extends Phaser.Scene {
                 g.fillStyle(0x254b66).fillRect(0,0,this.mapDef.width,200);
                 for(let x=0;x<this.mapDef.width;x+=230){g.fillStyle(0x456f7d).fillTriangle(x,160,x+90,325,x+190,160);g.lineStyle(12,0xb990a6,.65).lineBetween(x,620,x+30,400).lineBetween(x+22,480,x+82,430);g.fillStyle(0x97c0ad).fillCircle(x+130,590,44);}
             }
-            for(const w of this.mapDef.water??[]){const water=this.add.graphics().setDepth(9);water.fillStyle(0x86d6d7,.18).fillRect(w.x,w.y,w.w,w.h);water.lineStyle(3,0xbcebe1,.8).lineBetween(w.x,w.y,w.x+w.w,w.y);this.add.text(w.x+12,w.y-32,'공기방울로 숨 쉬는 길',{fontSize:'18px',color:'#e2fff0'});}
+            for(const w of this.mapDef.water??[]){const water=this.add.graphics().setDepth(9);water.fillStyle(0x86d6d7,.18).fillRect(w.x,w.y,w.w,w.h);water.lineStyle(3,0xbcebe1,.8).lineBetween(w.x,w.y,w.x+w.w,w.y);this.txt(w.x+12,w.y-32,'공기방울로 숨 쉬는 길',{fontSize:'18px',color:'#e2fff0'});}
             return;
         }
         this.cameras.main.setBackgroundColor(theme === 'storm' ? '#233d53' : theme === 'reef' ? '#7bacb2' : '#bed8c8');
@@ -401,7 +480,7 @@ export class Stage extends Phaser.Scene {
                 far.fillStyle(0x405d70).fillTriangle(x + 108, 250, x + 250, 435, x + 108, 435);
             }
         }
-        this.add.text(42, 187, `${this.mapDef.id} / ${theme === 'harbor' ? '첫 출항' : theme === 'reef' ? '안개 너머' : '폭풍의 밤'}`, { fontSize: '23px', fontFamily: 'sans-serif', color: theme === 'storm' ? '#b8cdd3' : '#385e63' }).setScrollFactor(0.3).setDepth(-5);
+        this.txt(42, 187, `${this.mapDef.id} / ${theme === 'harbor' ? '첫 출항' : theme === 'reef' ? '안개 너머' : '폭풍의 밤'}`, { fontSize: '23px', fontFamily: 'sans-serif', color: theme === 'storm' ? '#b8cdd3' : '#385e63' }).setScrollFactor(0.3).setDepth(-5);
     }
     private done(id: string) { return this.host.save.completedObjectiveIds.includes(id); }
     private freeMovement(){return this.mapDef?.mode==='flight'||(this.mapDef?.mode==='swim'&&this.host.save.treasures.includes('T04'));}
@@ -412,7 +491,19 @@ export class Stage extends Phaser.Scene {
     }
     else
         this.physics.resume(); }
-    snapshot() { return { storyDevices:this.objects.filter(o=>o.def.mechanic).map(o=>({id:o.def.id,x:o.def.x,y:o.def.y,mechanic:o.def.mechanic,done:this.done(o.def.id),state:this.deviceStates.get(o.def.id)})), freeMovement:this.freeMovement(), stage: this.mapDef?.id, player: this.player ? { x: this.player.x, y: this.player.y, grounded: ((this.player.body as Phaser.Physics.Arcade.Body)?.blocked.down||(this.player.body as Phaser.Physics.Arcade.Body)?.touching.down), vx: this.player.body?.velocity.x, vy: this.player.body?.velocity.y, hp: this.host.hp, maxHp: maxHp(this.host.save), bodyWidth: this.player.body?.width, bodyHeight: this.player.body?.height } : null, save: structuredClone(this.host.save), sim: this.sim, paused: this.stopped, enemies: this.enemies.map(e => ({ id: e.def.id, x: e.sprite.x, y: e.sprite.y, hp: e.hp, state: e.state, visible:e.sprite.visible, alpha:e.sprite.alpha, burn:e.burn })), flightHazards:this.flightHazards.map(h=>({id:h.def.id,x:h.sprite.x,y:h.sprite.y,kind:h.def.kind})), projectiles: this.projectiles.length, boomerang: !!this.boom, attack: this.attack?.id ?? null, air: this.air, submerged:this.submerged, bubbleProtected: canBreatheUnderwater(this.host.save), movingPlatforms: this.moving.map(p=>({x:p.rect.x,y:p.rect.y-p.def.h/2,w:p.def.w})), mp:this.host.mp, flameReady:this.flameReady, pulse:!!this.pulse, wave:this.wave?{id:this.wave.def.id,at:this.wave.at}:null, grip:this.grip?.id??null, mirrors:[...this.mirrorDirections], connectedMirrors:connectedMirrors(this.mirrorDirections), puzzleSafe:this.mapDef?.id==='S08'&&!!this.player&&this.player.x>=crystalSafeStart, frameMs: this.lastFrame }; }
+    snapshot() {
+        // Scene restart disposes old frames before preload/create rebuild them.
+        // Keep the read-only observer from dereferencing disposed textures.
+        if (!this.sys.isActive() || !this.player?.active || !this.player.body)
+            return {stage:null,player:null,save:structuredClone(this.host.save),paused:true,loading:true,sim:this.sim,enemies:[],storyDevices:[],freeMovement:false};
+        const style = terrainStyleFor(this.mapDef);
+        const terrain = {style, cachedKeys:this.textures.getTextureKeys().filter(key=>key.startsWith('terrain-')),
+            textures:terrainAssetKeys(style).map(key=>{const image=this.textures.get(key).getSourceImage() as HTMLImageElement|HTMLCanvasElement;return {key,width:image.width,height:image.height,source:image instanceof HTMLImageElement?image.currentSrc:'generated'};}),
+            // TileSprite.texture is its private render canvas; displayTexture is
+            // the original fill pattern in the pinned Phaser 3.90 runtime.
+            platforms:[...this.skins].map(([rect,skin])=>({x:rect.x,y:rect.y,width:rect.width,height:rect.height,texture:(Reflect.get(skin,'displayTexture') as Phaser.Textures.Texture).key,visible:skin.visible,skinX:skin.x,skinY:skin.y,skinWidth:skin.width,skinHeight:skin.height})),
+            tops:this.children.list.filter(child=>child instanceof Phaser.GameObjects.TileSprite&&(Reflect.get(child,'displayTexture') as Phaser.Textures.Texture).key===`terrain-${style}-top`).map(child=>{const top=child as Phaser.GameObjects.TileSprite;return {x:top.x,y:top.y,width:top.width,height:top.height,texture:(Reflect.get(top,'displayTexture') as Phaser.Textures.Texture).key};})};
+        return { terrain, heroArt:this.heroArt?{texture:this.heroArt.texture.key,frame:Number(this.heroArt.frame.name),x:this.heroArt.x,y:this.heroArt.y,flipX:this.heroArt.flipX,originY:this.heroArt.originY}:null, weaponArt:this.weaponArt?{visible:this.weaponArt.visible,x:this.weaponArt.x,y:this.weaponArt.y,texture:this.weaponArt.texture.key,angle:this.weaponArt.angle}:null, storyDevices:this.objects.filter(o=>o.def.mechanic).map(o=>({id:o.def.id,x:o.def.x,y:o.def.y,mechanic:o.def.mechanic,done:this.done(o.def.id),state:this.deviceStates.get(o.def.id)})), freeMovement:this.freeMovement(), stage: this.mapDef?.id, player: this.player ? { x: this.player.x, y: this.player.y, grounded: ((this.player.body as Phaser.Physics.Arcade.Body)?.blocked.down||(this.player.body as Phaser.Physics.Arcade.Body)?.touching.down), vx: this.player.body?.velocity.x, vy: this.player.body?.velocity.y, hp: this.host.hp, maxHp: maxHp(this.host.save), bodyWidth: this.player.body?.width, bodyHeight: this.player.body?.height } : null, save: structuredClone(this.host.save), sim: this.sim, paused: this.stopped, enemies: this.enemies.map(e => ({ id: e.def.id, x: e.sprite.x, y: e.sprite.y, hp: e.hp, state: e.state, visible:e.sprite.visible, alpha:e.sprite.alpha, burn:e.burn, art:e.def.actionArt, texture:e.sprite.texture.key, frame:Number(e.sprite.frame.name), flipX:e.sprite.flipX, originY:e.sprite.originY, displayHeight:e.sprite.displayHeight, footOffset:e.footOffset, label:e.label.text })), flightHazards:this.flightHazards.map(h=>({id:h.def.id,x:h.sprite.x,y:h.sprite.y,kind:h.def.kind})), projectiles: this.projectiles.length, boomerang: !!this.boom, attack: this.attack?.id ?? null, air: this.air, submerged:this.submerged, bubbleProtected: canBreatheUnderwater(this.host.save), movingPlatforms: this.moving.map(p=>({x:p.rect.x,y:p.rect.y-p.def.h/2,w:p.def.w})), mp:this.host.mp, flameReady:this.flameReady, pulse:!!this.pulse, wave:this.wave?{id:this.wave.def.id,at:this.wave.at}:null, grip:this.grip?.id??null, mirrors:[...this.mirrorDirections], connectedMirrors:connectedMirrors(this.mirrorDirections), puzzleSafe:this.mapDef?.id==='S08'&&!!this.player&&this.player.x>=crystalSafeStart, frameMs: this.lastFrame }; }
     update(_time: number, delta: number) {
         if (this.stopped || !this.player)
             return;
@@ -474,19 +565,11 @@ export class Stage extends Phaser.Scene {
         this.player.setFlipX(this.direction < 0);
         this.flightMount?.setPosition(this.player.x,this.player.y+15).setFlipX(this.direction<0).setDisplaySize(240,160+Math.sin(this.sim/160)*12);
         this.flightPassenger?.setPosition(this.player.x+this.direction*3,this.player.y+10).setFlipX(this.direction<0);
-        this.player.setTexture(move && body.blocked.down && Math.floor(this.sim / 130) % 2 === 1 ? 'playerRun' : 'player');
         this.player.setAlpha(0);
-        const visibleAlpha=this.sim<this.invulnerableUntil?.65:1;
-        const grounded=body.blocked.down||body.touching.down;
-        const bounce=this.host.save.settings.reducedMotion?0:move&&grounded?Math.abs(Math.sin(this.sim/95))*5:Math.sin(this.sim/400)*1.5;
-        const runFrame=Math.floor(this.sim/95)%6;
-        const running=!!move&&grounded&&!this.attack&&!this.host.save.settings.reducedMotion&&this.textures.exists('hero-run');
-        this.heroArt?.setTexture(running?'hero-run':'hero-webtoon',running?runFrame:undefined).setDisplaySize(running?144:96,running?144:132).setOrigin(.5,running?[498,498,498,474,469,470][runFrame]/512:1).setPosition(this.player.x,this.player.y+64-bounce).setFlipX(this.direction<0).setAlpha(visibleAlpha).setAngle(this.host.save.settings.reducedMotion?0:this.attack?this.direction*-8:grounded?0:Phaser.Math.Clamp(body.velocity.y/100,-6,6));
-        if(this.flightMount)this.heroArt?.setDisplaySize(86,110).setPosition(this.player.x+this.direction*36,this.player.y+10).setAngle(0);
-        if(this.companion){const rescued=this.mapDef.id!=='S32'||this.done('S32.quest.4');this.companion.setVisible(rescued).setPosition(this.player.x-this.direction*70,this.player.y+64-bounce*.7).setFlipX(this.direction<0);}
         if (input.consume('cycle')&&this.mapDef.mode!=='flight') {
             const list = this.host.save.weapons;
             this.host.save.equippedWeapon = list[(list.indexOf(this.host.save.equippedWeapon) + 1) % list.length];
+            this.showWeaponChange();
             this.host.persist();
             this.host.changed();
         }
@@ -494,15 +577,17 @@ export class Stage extends Phaser.Scene {
             const id = `W0${input.digits}` as WeaponId;
             if (this.mapDef.mode!=='flight'&&this.host.save.weapons.includes(id)) {
                 this.host.save.equippedWeapon = id;
+                this.showWeaponChange();
                 this.host.persist();
                 this.host.changed();
             }
             input.digits = null;
         }
-        const smartNearby=this.objects.filter(o=>!o.def.flightRing && o.def.kind !== 'checkpoint' &&Math.abs(o.def.x-this.player.x)<90&&Math.abs(o.def.y-this.player.y)<95).sort((a,b)=>Math.abs(a.def.x-this.player.x)-Math.abs(b.def.x-this.player.x))[0];
         const primary=input.consume('primary');
-        const primaryAttacks=primary&&(!smartNearby||smartNearby.def.kind==='shell'||smartNearby.def.kind==='remote'||!!smartNearby.def.breakWeapon);
+        let nearby=this.nearbyObject();
+        const primaryAttacks=primary&&this.actionAttacks(nearby);
         if ((input.consume('attack')||primaryAttacks) && !this.boom && !this.attack) {
+            if(this.host.save.settings.aimAssist&&!move&&this.mapDef.mode!=='flight'){const target=this.closeThreat(true);if(target)this.direction=Math.sign(target.sprite.x-this.player.x)||this.direction;}
             const a = this.mapDef.mode==='flight'
                 ? this.sim>=this.flightAttackReady?{id:++this.flightAttackId,weapon:'W01' as const,damage:22,combo:1}:null
                 : this.combat.start(this.host.save, this.sim);
@@ -514,6 +599,9 @@ export class Stage extends Phaser.Scene {
                     this.boom = this.add.image(this.player.x, this.player.y, a.weapon==='W05'?'arrow':'boomerang').setDisplaySize(a.weapon==='W05'?90:55,a.weapon==='W05'?40:55).setDepth(12);
             }
         }
+        // Select the pose after starting/aiming the attack, so the first weapon
+        // frame uses the same fist and facing as the character in this tick.
+        this.updateHeroArt();
         this.updateAttack();
         this.updateFlame(dt);
         this.updateEnemies(dt);
@@ -533,7 +621,10 @@ export class Stage extends Phaser.Scene {
         for (const obj of this.objects) {
             if(obj.def.flightRing&&!this.done(obj.def.id)&&Math.hypot((obj.def.x-this.player.x)/65,(obj.def.y-this.player.y)/80)<1)this.activate(obj.def);
             const done = this.done(obj.def.id);
-            if(obj.def.flightRing){obj.sprite.setVisible(!done);obj.label.setVisible(!done);}
+            // Far-away captions are hidden so the screen is not a wall of labels on a phone.
+            const close=Math.abs(obj.def.x-this.player.x)<(this.host.controlMode==='touch'?520:700);
+            if(obj.def.flightRing){obj.sprite.setVisible(!done);obj.label.setVisible(!done&&close);}
+            else obj.label.setVisible(close);
             obj.sprite.setAlpha(done ? 0.45 : 1);
             obj.label.setText(`${done ? '✓ ' : ''}${obj.def.label}`);
             if (obj.def.kind === 'checkpoint' && !(obj.def.needs??[]).some(id=>!this.done(id)) && Math.abs(obj.def.x - this.player.x) < 65 && body.blocked.down) {
@@ -546,12 +637,14 @@ export class Stage extends Phaser.Scene {
         }
         this.updateCrystal();
         this.updateStory(dt);
-        const nearby = this.objects.filter(o => !o.def.flightRing && o.def.kind !== 'checkpoint' && Math.abs(o.def.x - this.player.x) < 90 && Math.abs(o.def.y - this.player.y) < 95).sort((a, b) => Math.abs(a.def.x - this.player.x) - Math.abs(b.def.x - this.player.x))[0];
+        nearby=this.nearbyObject();
         const hint = nearby ? `Space 행동 · ${nearby.def.label}` : freeMove ? '← → 이동  ·  ↑ 상승  ↓ 하강  ·  Space 행동' : '← → 이동  ·  ↑ 점프  ·  Space 행동';
         if (hint !== this.latestHint) {
             this.hint.setText(hint);
             this.latestHint = hint;
         }
+        this.declutterLabels();
+        this.reportAction(nearby);
         if ((input.consume('interact')||(primary&&!primaryAttacks)) && nearby)
             this.interact(nearby.def);
         // Give a falling child a generous visible recovery window before
@@ -571,6 +664,109 @@ export class Stage extends Phaser.Scene {
             }
         }
         this.player.x = Phaser.Math.Clamp(this.player.x, 30, this.mapDef.width - 30);
+        if(this.backdrop){const span=Math.max(1,this.mapDef.width-1280);const t=Phaser.Math.Clamp(this.cameras.main.scrollX/span,0,1);this.backdrop.setX(720-160*t);}
+        if(this.sim-this.hurtAt<220)this.heroArt?.setTint(0xff9d8f);
+    }
+    celebrate() { this.joyfulUntil=this.sim+1000; if(this.heroArt?.active)this.updateHeroArt(); }
+    private updateHeroArt(){
+        const body=this.player.body as Phaser.Physics.Arcade.Body;
+        const reduced=this.host.save.settings.reducedMotion;
+        const grounded=body.blocked.down||body.touching.down;
+        const freeMove=this.freeMovement();
+        const move=Number(this.host.input.held('right'))-Number(this.host.input.held('left'));
+        const facing=this.attack?.direction??this.direction;
+        if(grounded)this.lastGroundY=body.bottom;
+        const attackAge=this.attack?this.sim-this.attack.start:Infinity;
+        const hurtAge=this.sim-this.hurtAt;
+        const joyful=this.sim<this.joyfulUntil;
+        const running=!!move&&grounded&&!this.attack&&hurtAge>=280&&!joyful&&this.textures.exists('hero-run')&&!reduced;
+        const hasAction=this.textures.exists('hero-action')&&!this.flightMount;
+        const frame=running?Math.floor(this.sim/95)%6:hasAction?actionFrame(attackAge,hurtAge,joyful,!grounded&&!freeMove,body.velocity.y,this.sim,reduced):-1;
+        const texture=running?'hero-run':hasAction?'hero-action':'hero-webtoon';
+        const baseline=running?[498,498,498,474,469,470][frame]:hasAction?heroActionCells[frame].baseline:512;
+        const bounce=reduced||!grounded||this.attack||hurtAge<280?0:running?Math.abs(Math.sin(this.sim/95))*5:Math.sin(this.sim/400)*1.5;
+        const lunge=reduced||this.flightMount?0:attackAge<240?Math.sin(attackAge/240*Math.PI)*14*facing:0;
+        const recoil=reduced?0:hurtAge<280?-facing*Math.sin(hurtAge/280*Math.PI)*12:0;
+        this.heroArt?.setTexture(texture,frame>=0?frame:undefined).setDisplaySize(frame>=0?heroDisplaySize:96,frame>=0?heroDisplaySize:132).setOrigin(.5,baseline/512).setPosition(this.player.x+lunge+recoil,this.player.y+64-bounce).setFlipX(facing<0).setAlpha(this.sim<this.invulnerableUntil?.65:1).setAngle(0);
+        if(this.flightMount)this.heroArt?.setDisplaySize(86,110).setPosition(this.player.x+this.direction*36,this.player.y+10);
+        const lift=Math.max(0,this.lastGroundY-body.bottom);
+        this.heroShadow?.setVisible(!freeMove&&!this.flightMount).setPosition(this.player.x,this.lastGroundY-2).setScale(Phaser.Math.Clamp(1-lift/360,.35,1));
+        if(this.companion){const rescued=this.mapDef.id!=='S32'||this.done('S32.quest.4');this.companion.setVisible(rescued).setPosition(this.player.x-this.direction*70,this.player.y+64-bounce*.7).setFlipX(this.direction<0);}
+    }
+    // Captions are drawn large on phones, so neighbours would pile on top of
+    // each other. Enemy warnings win, then the captions closest to the hero;
+    // anything that would overlap an already shown caption waits its turn.
+    private declutterLabels(){
+        const shown:Phaser.Geom.Rectangle[]=[];
+        // Screen-fixed banners claim their space first (converted to world space).
+        const camera=this.cameras.main;
+        for(const banner of [this.journey,this.bossText])if(banner.visible&&banner.text){const box=banner.getBounds();box.x+=camera.scrollX;box.y+=camera.scrollY;shown.push(box);}
+        const keep=(label:Phaser.GameObjects.Text)=>{
+            if(!label.visible||!label.text)return;
+            const box=label.getBounds();
+            Phaser.Geom.Rectangle.Inflate(box,4,2);
+            if(shown.some(other=>Phaser.Geom.Rectangle.Overlaps(other,box)))label.setVisible(false);
+            else shown.push(box);
+        };
+        for(const e of this.enemies)if(e.state==='telegraph'||e.state==='attack')keep(e.label);
+        const byDistance=[...this.objects].sort((a,b)=>Math.abs(a.def.x-this.player.x)-Math.abs(b.def.x-this.player.x));
+        for(const o of byDistance)keep(o.label);
+        for(const e of this.enemies)if(e.state!=='telegraph'&&e.state!=='attack')keep(e.label);
+    }
+    // Locked gates are a column of drifting light instead of a flat bar:
+    // coral pink for keys, starlight for the crystal gates.
+    private barrierTexture(kind:string){
+        const key=`barrier-${kind}`;
+        if(this.textures.exists(key))return key;
+        const [base,light]=kind==='gate'?[0xd77f98,0xffd6e0]:[0x8f86d8,0xf3ecff];
+        const g=this.make.graphics({x:0,y:0},false);
+        g.fillStyle(base,.35).fillRect(0,0,44,64);
+        g.fillStyle(base,.55).fillRect(14,0,16,64);
+        g.fillStyle(light,.8).fillRect(20,0,4,64);
+        for(const [x,y,r] of [[10,12,3],[33,30,2],[16,50,2.5],[28,6,1.5]])g.fillStyle(light,.9).fillCircle(x,y,r);
+        g.generateTexture(key,44,64);g.destroy();
+        return key;
+    }
+    private nearbyObject(){
+        return this.objects.filter(o=>!o.def.flightRing&&o.def.kind!=='checkpoint'&&Math.abs(o.def.x-this.player.x)<90&&Math.abs(o.def.y-this.player.y)<95).sort((a,b)=>Math.abs(a.def.x-this.player.x)-Math.abs(b.def.x-this.player.x))[0];
+    }
+    // An enemy close enough that the action button should swing at it: one
+    // that is winding up or striking. `any` also accepts calm enemies, for
+    // turning toward the nearest target.
+    private closeThreat(any=false){
+        const shellsDone=[1,2,3].every(n=>this.done(`S02.shell.${n}`));
+        return this.enemies.filter(e=>e.state!=='defeated'&&e.sprite.visible&&(any||e.state==='telegraph'||e.state==='attack')&&!(e.def.kind==='siren'&&!shellsDone)&&Math.abs(e.sprite.x-this.player.x)<(any?220:180)&&Math.abs(e.sprite.y-this.player.y)<130).sort((a,b)=>Math.abs(a.sprite.x-this.player.x)-Math.abs(b.sprite.x-this.player.x))[0];
+    }
+    // The single touch action button talks or uses what is in reach. It swings
+    // instead when the thing in reach is a target, when an enemy beside the
+    // hero is winding up, or when the friend in reach was already talked to
+    // and an enemy is near (otherwise the same hint would reopen forever).
+    // Story steps, gifts and exits always win; flight keeps its own rules.
+    private actionAttacks(nearby:Stage['objects'][number]|undefined){
+        if(!nearby)return true;
+        const def=nearby.def;
+        if(def.kind==='shell'||def.kind==='remote'||def.breakWeapon)return true;
+        if(this.mapDef.mode==='flight')return false;
+        const mustInteract=!!def.mechanic||['exit','ending','rescue','crisis','rope','gift'].includes(def.kind);
+        if(mustInteract&&!this.done(def.id))return false;
+        if(this.closeThreat())return true;
+        return this.done(def.id)&&['npc','truthGift','flameGift','journal','vision'].includes(def.kind)&&!!this.closeThreat(true);
+    }
+    private reportAction(nearby:Stage['objects'][number]|undefined){
+        const kind=this.actionAttacks(nearby)?'attack':['exit','ending'].includes(nearby!.def.kind)?'exit':['npc','rescue','truthGift','flameGift','gift','descent','crisis'].includes(nearby!.def.kind)?'talk':'use';
+        const label=kind==='attack'?'':(nearby?.def.label??'').replace(/ · E$/,'');
+        const key=`${kind}|${label}`;
+        if(key===this.actionKey)return;
+        this.actionKey=key;
+        this.host.context({kind,label});
+    }
+    private showWeaponChange(){
+        const id=this.host.save.equippedWeapon;
+        const texture=availableWeaponTexture(id,key=>this.textures.exists(key));
+        if(!texture)return;
+        const look=weaponLooks[id];
+        const icon=this.add.image(this.player.x,this.player.y-96,texture).setDisplaySize(look.style==='draw'?36:look.width*.7,look.style==='draw'?72:look.height*.7).setDepth(14).setAngle(look.style==='draw'?0:-35);
+        this.tweens.add({targets:icon,y:icon.y-26,alpha:0,duration:this.host.save.settings.reducedMotion?0:700,delay:250,onComplete:()=>icon.destroy()});
     }
     resetMirrors(){
         if(this.mapDef.id!=='S08'||this.stopped)return;
@@ -710,7 +906,7 @@ export class Stage extends Phaser.Scene {
         if(this.mapDef.mode==='flight')this.updateFlight();
         if(this.mapDef.id==='S07'){
             if(this.done('S07.wave.3')&&this.sinkAt===null)this.sinkAt=this.sim;
-            for(const p of this.moving){p.body.setVelocity((movingPlatformX(p.def,this.sim)+p.def.w/2-p.rect.x)/Math.max(dt,1)*1000,(movingPlatformY(p.def,this.sim)+(p.def.x>=2600&&p.def.x<3300&&this.sinkAt!==null?Math.min(32,(this.sim-this.sinkAt)/3000*32):0)+p.def.h/2-p.rect.y)/Math.max(dt,1)*1000);p.top.setPosition(p.rect.x,p.rect.y-p.def.h/2+4);}
+            for(const p of this.moving){p.body.setVelocity((movingPlatformX(p.def,this.sim)+p.def.w/2-p.rect.x)/Math.max(dt,1)*1000,(movingPlatformY(p.def,this.sim)+(p.def.x>=2600&&p.def.x<3300&&this.sinkAt!==null?Math.min(32,(this.sim-this.sinkAt)/3000*32):0)+p.def.h/2-p.rect.y)/Math.max(dt,1)*1000);p.top.setPosition(p.rect.x,p.rect.y-p.def.h/2+13);this.skins.get(p.rect)?.setPosition(p.rect.x,p.rect.y);}
             this.updateWaves();
         }
         if(this.mapDef.id==='S06')this.journey.setText(this.host.save.treasures.includes('T01')?'영원의 불씨 · R 파동 / E 무료 점화 · 입구 덩굴을 다시 살펴보세요':`화로 ${[1,2,3].filter(n=>this.done('S06.furnace.'+n)).length}/3 · 진정한 정령 ${[1,2,3,4,5].filter(n=>this.done('S06.enemy.spirit.'+n)).length}/5`);
@@ -718,9 +914,14 @@ export class Stage extends Phaser.Scene {
             const count=rescueEquipment.filter(id=>this.done(id)).length;
             if(count===3 && this.wakeAt===null){this.wakeAt=this.sim+2400;this.host.notice('⚠ 고래가 깨어나요! 잠시 뒤 발판이 천천히 오르내려요. 시간 제한은 없어요.');}
             this.journey.setText(`구명 장비 ${count} / 3${this.wakeAt===null?' · 고래를 공격하지 마세요':this.sim<this.wakeAt?' · ⚠ 발판이 곧 움직여요':' · 움직이는 등을 지나 구조 보트로'}`);
-            for(const p of this.moving){const desired=movingPlatformY(p.def,this.wakeAt===null?0:this.sim-this.wakeAt);p.body.setVelocityY((desired+p.def.h/2-p.rect.y)/Math.max(dt,1)*1000);p.top.setPosition(p.rect.x,p.rect.y-p.def.h/2+4);}
+            for(const p of this.moving){const desired=movingPlatformY(p.def,this.wakeAt===null?0:this.sim-this.wakeAt);p.body.setVelocityY((desired+p.def.h/2-p.rect.y)/Math.max(dt,1)*1000);p.top.setPosition(p.rect.x,p.rect.y-p.def.h/2+13);this.skins.get(p.rect)?.setPosition(p.rect.x,p.rect.y);}
         }
-        for(const d of this.doors)if(this.done(d.id)){(d.rect.body as Phaser.Physics.Arcade.StaticBody).enable=false;d.rect.setVisible(false);}
+        for(const d of this.doors){
+            if(!this.done(d.id)){if(!this.host.save.settings.reducedMotion)d.glow.tilePositionY-=dt*.06;continue;}
+            (d.rect.body as Phaser.Physics.Arcade.StaticBody).enable=false;d.rect.setVisible(false);
+            // An opened gate fades out once instead of vanishing.
+            if(d.glow.visible&&!d.glow.getData('opening')){d.glow.setData('opening',true);this.tweens.add({targets:d.glow,alpha:0,duration:this.host.save.settings.reducedMotion?0:400,onComplete:()=>d.glow.setVisible(false)});}
+        }
         this.bubble.clear();
         const wet=(this.mapDef.water??[]).some(w=>this.player.x>w.x&&this.player.x<w.x+w.w&&this.player.y>w.y+18&&this.player.y<w.y+w.h);
         this.submerged=wet;
@@ -756,7 +957,7 @@ export class Stage extends Phaser.Scene {
     }
     private checkpoint(id: string) { this.host.save.checkpoint = { stageId: this.mapDef.id, checkpointId: id }; this.host.persist(); this.host.changed(); }
     private hurt(base: number, element: 'normal' | 'lightning' = 'normal') { if ((this.mapDef.id==='S08'&&this.player.x>=crystalSafeStart)||this.sim < this.invulnerableUntil)
-        return; const died = this.host.damage(base, element); this.invulnerableUntil = this.sim + (this.host.save.settings.difficulty === 'relaxed' ? 1500 : 1000); this.host.sound('hurt'); if (died) {
+        return; this.hurtAt=this.sim; if(!this.host.save.settings.reducedMotion)this.cameras.main.shake(110,.004); const died = this.host.damage(base, element); this.invulnerableUntil = this.sim + (this.host.save.settings.difficulty === 'relaxed' ? 1500 : 1000); this.host.sound('hurt'); if (died) {
         this.host.hp = maxHp(this.host.save);
         this.host.mp = maxMp(this.host.save);
         this.host.notice('잠깐 쉬고 다시 출발! 보물과 경험치는 그대로예요.');
@@ -794,8 +995,8 @@ export class Stage extends Phaser.Scene {
     private damageEnemy(e:Enemy,damage:number){
         if(e.state==='defeated')return;
         if(e.def.id==='S31.enemy.3'&&(!this.done('S31.quest.1')||!this.done('S31.quest.2'))){e.label.setText('봉인석 두 개를 먼저 정화하세요');return;}
-        e.hp=Math.max(0,e.hp-damage);e.sprite.setTint(0xffefb0);
-        if(e.hp===0){e.state='defeated';const human=['bandit','captain','archer'].includes(e.def.kind)||(this.mapDef.id==='S18'&&e.def.kind==='boss');const animal=['siren','crab','bat','beast'].includes(e.def.kind)||['S09','S12','S21','S22'].includes(this.mapDef.id);e.label.setText(human?'항복했어요':animal?'저주가 풀렸어!':'빛으로 돌아갔어요');this.defeatEffect(e,human);
+        e.hp=Math.max(0,e.hp-damage);e.sprite.setTintFill(0xfff4d6);this.time.delayedCall(70,()=>{if(e.state!=='defeated'&&e.sprite.active)e.sprite.setTint(0xffefb0);});this.hitPop(e,damage);
+        if(e.hp===0){e.state='defeated';const defeat=e.def.actionArt?actionDefeatKind(e.def.actionArt):undefined;const human=defeat?defeat==='human':['bandit','captain','archer'].includes(e.def.kind)||(this.mapDef.id==='S18'&&e.def.kind==='boss');const animal=defeat?defeat==='animal':['siren','crab','bat','beast'].includes(e.def.kind)||['S09','S12','S21','S22'].includes(this.mapDef.id);e.label.setText(human?'항복했어요':animal?'저주가 풀렸어!':'빛으로 돌아갔어요');this.defeatEffect(e,human,animal);
             const boss=['captain','siren','boss'].includes(e.def.kind);
             if(boss){this.projectiles.forEach(p=>{p.sprite.destroy();p.glyph.destroy();});this.projectiles=[];}
             const bossCheckpoint=this.mapDef.checkpoints.some(checkpoint=>checkpoint.id==='boss')?'boss':this.mapDef.checkpoints.at(-1)!.id;
@@ -804,25 +1005,49 @@ export class Stage extends Phaser.Scene {
         }
         this.host.changed();
     }
-    private defeatEffect(e:Enemy,human:boolean){
-        if(human){this.tweens.add({targets:e.sprite,alpha:.4,y:e.sprite.y+14,scaleY:e.sprite.scaleY*.82,duration:this.host.save.settings.reducedMotion?0:260});return;}
+    // Damage number and a small star burst where the blow landed.
+    private hitPop(e:Enemy,damage:number){
+        const top=e.sprite.y-(e.bodyHeight??e.sprite.displayHeight)*.42;
+        const number=this.txt(e.sprite.x,top,`${damage}`,{fontSize:'26px',fontStyle:'bold',color:'#ffe27a',stroke:'#3a2318',strokeThickness:5}).setOrigin(.5).setDepth(15);
+        this.tweens.add({targets:number,y:top-46,alpha:0,duration:650,ease:'Quad.easeOut',onComplete:()=>number.destroy()});
+        if(this.host.save.settings.reducedMotion)return;
+        const spark=this.add.star(e.sprite.x-Math.sign(e.sprite.x-this.player.x)*24,e.sprite.y-10,6,8,26,0xfff1b8).setDepth(14).setAlpha(.95);
+        this.tweens.add({targets:spark,scale:1.6,alpha:0,angle:45,duration:180,onComplete:()=>spark.destroy()});
+        this.cameras.main.shake(60,.0018);
+    }
+    private setEnemyPose(e:Enemy){
+        if(!e.art)return;
+        const layout=enemyActionLayout(e.art,e.state,e.bodyHeight!,e.footOffset!);
+        e.sprite.setFrame(layout.frame).setDisplaySize(layout.displaySize,layout.displaySize).setOrigin(.5,layout.originY);
+        e.bodyWidth=layout.bodyWidth;
+    }
+    private defeatEffect(e:Enemy,human:boolean,animal:boolean){
+        this.tweens.killTweensOf(e.sprite);
+        this.setEnemyPose(e);
+        e.sprite.clearTint();
+        if(human){this.tweens.add({targets:e.sprite,alpha:.8,duration:this.host.save.settings.reducedMotion?0:260});return;}
         const color=e.def.kind==='boss'?0xffe5a4:0x9eeadd;
         if(!this.host.save.settings.reducedMotion)for(let i=0;i<9;i++){const mote=this.add.circle(e.sprite.x,e.sprite.y,3+(i%3),color,.9).setDepth(8);this.tweens.add({targets:mote,x:e.sprite.x+Math.cos(i*.7)*55,y:e.sprite.y-30-Math.sin(i*.8)*50,alpha:0,scale:1.8,duration:500+i*45,onComplete:()=>mote.destroy()});}
-        this.tweens.add({targets:e.sprite,alpha:0,scaleX:e.sprite.scaleX*1.25,scaleY:e.sprite.scaleY*1.25,y:e.sprite.y-25,duration:this.host.save.settings.reducedMotion?0:520,onComplete:()=>e.sprite.setVisible(false)});
-        this.tweens.add({targets:e.label,alpha:0,delay:650,duration:350,onComplete:()=>e.label.setVisible(false)});
+        const hold=e.art?(animal?900:300):0;
+        this.tweens.add({targets:e.sprite,alpha:0,scaleX:e.sprite.scaleX*1.25,scaleY:e.sprite.scaleY*1.25,y:e.sprite.y-25,delay:hold,duration:this.host.save.settings.reducedMotion?0:520,onComplete:()=>e.sprite.setVisible(false)});
+        this.tweens.add({targets:e.label,alpha:0,delay:hold+650,duration:350,onComplete:()=>e.label.setVisible(false)});
     }
     private updateAttack() {
         this.slash.clear();
-        if (!this.attack)
+        if (!this.attack){
+            this.weaponArt?.setVisible(false);
             return;
+        }
         const a = this.attack;
         const age = this.sim - a.start;
+        this.drawWeapon(a.weapon,age,a.direction);
         if (['W02','W05'].includes(a.weapon) && this.boom) {
             const phase = age < 600 ? 'out' : 'return';
             const duration=a.weapon==='W02'?1200:700;const distance=a.weapon==='W05'?650:a.weapon==='W04'?520:380;
             const t = Math.min(age / duration, 1);
             const x = a.weapon==='W02'?(t < 0.5 ? a.x + a.direction * distance * t * 2 : Phaser.Math.Linear(a.x + a.direction * distance, this.player.x, (t - 0.5) * 2)):a.x+a.direction*distance*t;
             this.boom.setPosition(x, this.player.y - 4).setRotation(a.weapon==='W02'?age/85:a.direction>0?0:Math.PI);
+            if(!this.host.save.settings.reducedMotion)this.slash.fillStyle(weaponLooks[a.weapon].trail,.35).fillEllipse(x-a.direction*26,this.player.y-4,44,10);
             this.hitAt(x, this.player.y, 38, 70, a, phase);
             if (age >= duration) {
                 this.boom.destroy();
@@ -833,16 +1058,49 @@ export class Stage extends Phaser.Scene {
         }
         if (age >= 80 && age < 200) {
             const x = this.player.x + a.direction * 65;
-            this.slash.lineStyle(this.mapDef.mode==='flight'?13:a.weapon==='W06'?14:8, this.mapDef.mode==='flight'?0xa8f2ed:a.weapon==='W03'?0xffb36c:a.weapon==='W06'?0xc7b3fc:a.weapon==='W07'?0xfff3ce:0xffe4a0, 0.85);
-            this.slash.beginPath();
-            this.slash.arc(this.player.x, this.player.y, 100, a.direction > 0 ? -0.9 : Math.PI - 0.9, a.direction > 0 ? 0.9 : Math.PI + 0.9);
-            this.slash.strokePath();
-            if(a.weapon==='W04')this.slash.lineStyle(5,0xa9e6df).lineBetween(this.player.x,this.player.y,x+a.direction*100,this.player.y).fillStyle(0xffdf92).fillTriangle(x+a.direction*100,this.player.y-12,x+a.direction*125,this.player.y,x+a.direction*100,this.player.y+12);
-            if(a.weapon==='W06')this.slash.lineStyle(4,0xdbccff,.7).strokeCircle(x,this.player.y,35+age/8);
+            if(this.mapDef.mode==='flight'){
+                // The roc's wing gust keeps its own wide teal sweep.
+                this.slash.lineStyle(13,0xa8f2ed,.85).beginPath().arc(this.player.x,this.player.y,100,a.direction>0?-0.9:Math.PI-0.9,a.direction>0?0.9:Math.PI+0.9).strokePath();
+            }
+            if(a.weapon==='W06')this.slash.lineStyle(4,0xdbccff,.7).strokeCircle(x,this.player.y+40,35+age/8);
             this.hitAt(x, this.player.y, a.weapon==='W04'?130:a.weapon==='W06'?105:a.weapon==='W03'?85:90, 90, a, 'melee');
         }
         if (age > 280)
             this.attack = null;
+    }
+    // Shows the equipped weapon in the hero's hand for the length of the swing
+    // and paints a crescent trail behind the blade. Purely visual: damage still
+    // comes from the hit window above.
+    private drawWeapon(id:WeaponId,age:number,direction:number){
+        const art=this.weaponArt;
+        if(!art)return;
+        const look=weaponLooks[id];
+        const flight=this.mapDef.mode==='flight';
+        const visibleFor=look.style==='draw'?300:look.style==='throw'?110:260;
+        const texture=availableWeaponTexture(id,key=>this.textures.exists(key));
+        if(flight||age>visibleFor||!texture){art.setVisible(false);return;}
+        const reduced=this.host.save.settings.reducedMotion;
+        const pose=swingPose(look,reduced?1:age/200);
+        if(this.heroArt?.texture.key!=='hero-action'){art.setVisible(false);return;}
+        const hand=actionHand(Number(this.heroArt.frame.name),this.heroArt.x,this.heroArt.y,direction);
+        const handX=hand.x;
+        const handY=hand.y;
+        art.setTexture(texture).setVisible(true).setDisplaySize(look.width,look.height).setOrigin(look.originX,.5).setPosition(handX,handY).setAlpha(age>visibleFor-60?Math.max(0,(visibleFor-age)/60):1);
+        art.scaleX=Math.abs(art.scaleX)*direction;
+        art.setAngle(direction>0?pose.angle:-pose.angle);
+        if(reduced||look.style==='draw'||look.style==='throw')return;
+        if(look.style==='thrust'){
+            if(age>40&&age<220)this.slash.fillStyle(look.trail,.4).fillTriangle(handX+direction*look.width*.55,handY-12,handX+direction*(look.width*.95),handY,handX+direction*look.width*.55,handY+12);
+            return;
+        }
+        // Crescent along the path the blade tip has travelled so far.
+        const from=Phaser.Math.DegToRad(look.from),to=Phaser.Math.DegToRad(pose.angle);
+        if(age<40||age>230||to<=from)return;
+        const outer=look.width*.92,inner=outer-26,steps=10,points:Phaser.Types.Math.Vector2Like[]=[];
+        const sweepStart=Math.max(from,to-1.9);
+        for(let i=0;i<=steps;i++){const t=sweepStart+(to-sweepStart)*i/steps;points.push({x:handX+Math.cos(t)*outer*direction,y:handY+Math.sin(t)*outer});}
+        for(let i=steps;i>=0;i--){const t=sweepStart+(to-sweepStart)*i/steps;const r=inner+(outer-inner)*(1-i/steps);points.push({x:handX+Math.cos(t)*r*direction,y:handY+Math.sin(t)*r});}
+        this.slash.fillStyle(look.trail,.5*(1-Math.max(0,age-160)/70)).fillPoints(points,true);
     }
     private hitAt(x: number, y: number, width: number, height: number, a: NonNullable<Stage['attack']>, phase: string) {
         for (const e of this.enemies) {
@@ -855,7 +1113,7 @@ export class Stage extends Phaser.Scene {
                 continue;
             this.damageEnemy(e,a.damage);
             if(a.weapon==='W03'&&e.hp>0)e.burn=ignite(this.sim,e.burn);
-            if(e.hp>0&&!['siren','captain'].includes(e.def.kind))e.sprite.x+=a.direction*(a.weapon==='W06'?68:14);
+            if(e.hp>0&&!['siren','captain'].includes(e.def.kind)&&e.def.kind!=='boss'){const push=a.direction*(a.weapon==='W06'?68:14);this.tweens.add({targets:e.sprite,x:Phaser.Math.Clamp(e.sprite.x+push,40,this.mapDef.width-40),duration:this.host.save.settings.reducedMotion?0:140,ease:'Quad.easeOut'});}
         }
         for (const o of this.objects) {
             if ((!['shell', 'remote'].includes(o.def.kind)&&!o.def.breakWeapon) || this.done(o.def.id) || Math.abs(o.def.x - x) > width || Math.abs(o.def.y - y) > height)
@@ -869,6 +1127,7 @@ export class Stage extends Phaser.Scene {
     }
     private updateEnemies(dt: number) {
         let boss = '';
+        this.hpBars.clear();
         if(this.mapDef.id==='S08'&&this.player.x>=crystalSafeStart){for(const e of this.enemies)if(e.state!=='defeated'){e.state='idle';e.label.setVisible(false);}this.bossText.setVisible(false);return;}
         for (const e of this.enemies) {
             if (e.state === 'defeated')
@@ -905,6 +1164,7 @@ export class Stage extends Phaser.Scene {
                 if (this.sim >= e.until) {
                     e.state = 'attack';
                     e.until = this.sim + 250;
+                    if(!['archer','siren','kite'].includes(e.def.kind)&&!this.host.save.settings.reducedMotion)this.tweens.add({targets:e.sprite,x:e.sprite.x+Math.sign(this.player.x-e.sprite.x)*20,duration:110,yoyo:true,ease:'Quad.easeOut'});
                     if (e.def.kind === 'siren') {
                         if (e.pattern++ % 2 === 0)
                             this.projectile(e.sprite.x, e.sprite.y + 35, Math.sign(e.target - e.sprite.x) * 230, 0, true);
@@ -939,16 +1199,20 @@ export class Stage extends Phaser.Scene {
                 if (this.sim >= e.until)
                     e.state = 'idle';
             }
+            // Calm enemies show a small health bar instead of a "24 / 24" caption.
             if (e.state === 'idle')
-                e.label.setText(`${e.hp} / ${e.maxHp}`);
-            e.label.setPosition(e.sprite.x, e.sprite.y - 88);
+                e.label.setVisible(false);
+            this.setEnemyPose(e);
+            const barY=e.sprite.y-(e.bodyHeight??e.sprite.displayHeight)*(e.def.kind==='boss'?.62:.5)-10;
+            if(distance<620&&e.sprite.visible){const w=e.def.kind==='boss'?110:64,ratio=e.hp/e.maxHp;this.hpBars.fillStyle(0x10212c,.75).fillRoundedRect(e.sprite.x-w/2-2,barY-2,w+4,11,4).fillStyle(ratio>.5?0x8be38f:ratio>.25?0xffd36e:0xff8f7a).fillRoundedRect(e.sprite.x-w/2,barY,Math.max(3,w*ratio),7,3);}
+            e.label.setPosition(e.sprite.x, barY-24);
             e.sprite.setFlipX((e.def.kind==='guardian'?e.target:this.player.x) < e.sprite.x);
         }
         this.bossText.setText(boss).setVisible(!!boss);
     }
     private projectile(x: number, y: number, vx: number, vy: number, wave: boolean) {
         const sprite = this.add.circle(x, y, wave ? 18 : 11, wave ? 0x85ece0 : 0xe7b9f3).setStrokeStyle(3, 0x244f64).setDepth(8);
-        const glyph = this.add.text(x, y, wave ? '≋' : '♪', {fontSize:'23px',color:'#183948',fontFamily:'sans-serif'}).setOrigin(0.5).setDepth(9);
+        const glyph = this.txt(x, y, wave ? '≋' : '♪', {fontSize:'23px',color:'#183948',fontFamily:'sans-serif'}).setOrigin(0.5).setDepth(9);
         this.projectiles.push({ sprite, glyph, vx, vy, until: this.sim + 4000, wave });
     }
     private updateProjectiles(dt: number) { for (const p of this.projectiles) {
@@ -967,8 +1231,15 @@ export class Stage extends Phaser.Scene {
     private updateLightning() {
         this.warnings.clear();
         for (const enemy of this.enemies) {
+            if(enemy.state==='defeated'||!enemy.sprite.visible)continue;
+            const feet=enemy.sprite.y+(enemy.footOffset??enemy.sprite.displayHeight*(1-enemy.sprite.originY))-4;
+            const flying=enemy.def.kind==='kite'||this.mapDef.mode==='flight'||this.mapDef.mode==='swim';
+            if(!flying)this.warnings.fillStyle(0x08202c,.3).fillEllipse(enemy.sprite.x,feet,(enemy.bodyWidth??enemy.sprite.displayWidth)*.55,14);
+            // Wind-up warning painted on the ground where the strike will land.
             if (enemy.state === 'telegraph' && !['siren', 'archer','kite'].includes(enemy.def.kind)) {
-                this.warnings.lineStyle(3, 0xffd28d).strokeRect(enemy.sprite.x - 112, enemy.sprite.y - 60, 224, 110);
+                const pulse=.55+.35*Math.sin(this.sim/90);
+                this.warnings.fillStyle(0xffb35c,.16+.12*pulse).fillEllipse(enemy.sprite.x,feet,224,34);
+                this.warnings.lineStyle(3,0xffd28d,.5+.4*pulse).strokeEllipse(enemy.sprite.x,feet,224,34);
             }
         }
         if (this.mapDef.theme !== 'storm')

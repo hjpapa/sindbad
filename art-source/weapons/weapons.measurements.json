@@ -1,0 +1,219 @@
+{
+  "W01": {
+    "native": "art-source/weapons/generated/W01-01.png",
+    "size": [
+      640,
+      256
+    ],
+    "grip": [
+      83.2,
+      128.0
+    ],
+    "originX": 0.13,
+    "originY": 0.5,
+    "scale": 0.3172995780590717,
+    "offset": [
+      -2.470886075949366,
+      -19.22700421940928
+    ],
+    "allAlphaBounds": [
+      9,
+      27,
+      616,
+      199
+    ],
+    "visibleBounds": [
+      11,
+      28,
+      613,
+      176
+    ],
+    "svgSha256": "478f3ee72e73d327bd1aaa5299cdb56c6d667453c6c80684df2df5dd857f37c6"
+  },
+  "W03": {
+    "native": "art-source/weapons/generated/W03-01.png",
+    "size": [
+      640,
+      256
+    ],
+    "grip": [
+      83.2,
+      128.0
+    ],
+    "originX": 0.13,
+    "originY": 0.5,
+    "scale": 0.255863539445629,
+    "offset": [
+      11.558208955223876,
+      -4.281449893390203
+    ],
+    "allAlphaBounds": [
+      27,
+      29,
+      504,
+      186
+    ],
+    "visibleBounds": [
+      28,
+      30,
+      503,
+      168
+    ],
+    "svgSha256": "b15c1ee91ad2d8129f623ae18950c3efbb3b9487149c45a8a5fbddbf3adda236"
+  },
+  "W04": {
+    "native": "art-source/weapons/generated/W04-01.png",
+    "size": [
+      640,
+      256
+    ],
+    "grip": [
+      160.0,
+      128.0
+    ],
+    "originX": 0.25,
+    "originY": 0.5,
+    "scale": 0.3173277661795407,
+    "offset": [
+      2.9227557411273324,
+      7.098121085594983
+    ],
+    "allAlphaBounds": [
+      8,
+      90,
+      627,
+      187
+    ],
+    "visibleBounds": [
+      9,
+      91,
+      626,
+      186
+    ],
+    "svgSha256": "4e971d16aed25dce50f4c1fe283dbf6391e88a36219218b504dc6ca6b63ed665"
+  },
+  "W05": {
+    "native": "art-source/weapons/generated/W05-01.png",
+    "size": [
+      320,
+      640
+    ],
+    "grip": [
+      144.0,
+      320.0
+    ],
+    "originX": 0.45,
+    "originY": 0.5,
+    "scale": 0.3623693379790941,
+    "offset": [
+      -55.30313588850174,
+      -1.421602787456436
+    ],
+    "allAlphaBounds": [
+      28,
+      8,
+      194,
+      622
+    ],
+    "visibleBounds": [
+      30,
+      9,
+      183,
+      621
+    ],
+    "svgSha256": "fef329cebb9f2c07ba5d0818de45613460f63effec11380835bec0efb8fa8b5c"
+  },
+  "W06": {
+    "native": "art-source/weapons/generated/W06-01.png",
+    "size": [
+      640,
+      256
+    ],
+    "grip": [
+      51.2,
+      128.0
+    ],
+    "originX": 0.08,
+    "originY": 0.5,
+    "scale": 0.28800000000000003,
+    "offset": [
+      1.0879999999999939,
+      13.951999999999984
+    ],
+    "allAlphaBounds": [
+      8,
+      55,
+      565,
+      202
+    ],
+    "visibleBounds": [
+      9,
+      56,
+      565,
+      201
+    ],
+    "svgSha256": "412a4c36d099cee192e53d4aef8671cbc59090e856b04aafae931126ea6c75e6"
+  },
+  "W07": {
+    "native": "art-source/weapons/generated/W07-01.png",
+    "size": [
+      640,
+      256
+    ],
+    "grip": [
+      96.0,
+      128.0
+    ],
+    "originX": 0.15,
+    "originY": 0.5,
+    "scale": 0.3188578227245687,
+    "offset": [
+      13.096966091612146,
+      6.196311719214762
+    ],
+    "allAlphaBounds": [
+      26,
+      35,
+      632,
+      215
+    ],
+    "visibleBounds": [
+      27,
+      43,
+      631,
+      214
+    ],
+    "svgSha256": "0de5eb8703ce2db44179b948344ea935ab3de2b1b2b7d4ff8393bc7c556a3495"
+  },
+  "W02": {
+    "native": "art-source/weapons/generated/W02-02.png",
+    "size": [
+      640,
+      256
+    ],
+    "grip": [
+      320.0,
+      128.0
+    ],
+    "originX": 0.5,
+    "originY": 0.5,
+    "scale": 0.31088082901554404,
+    "offset": [
+      11.917098445595855,
+      19.191709844559583
+    ],
+    "allAlphaBounds": [
+      50,
+      45,
+      605,
+      234
+    ],
+    "visibleBounds": [
+      51,
+      104,
+      589,
+      197
+    ],
+    "svgSha256": "e40652c02e2fb9ddfe639434104f8553050ac13062bdd29cf7cb5821013c758f"
+  }
+}

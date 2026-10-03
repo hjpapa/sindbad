@@ -1,0 +1,995 @@
+{
+  "metadata": {
+    "actualWorkers": 1
+  },
+  "startTime": 1791021227657,
+  "duration": 1902291.0489999999,
+  "files": [
+    {
+      "fileId": "0e432c2735e1cb75ffbd",
+      "fileName": "adventure.spec.ts",
+      "tests": [
+        {
+          "testId": "0e432c2735e1cb75ffbd-30790cd4a30e9dda58c9",
+          "title": "new game → S01 → S02 → S03 with real keyboard inputs and checkpoint reload",
+          "projectName": "",
+          "location": {
+            "file": "adventure.spec.ts",
+            "line": 83,
+            "column": 1
+          },
+          "duration": 85642,
+          "annotations": [],
+          "tags": [],
+          "outcome": "expected",
+          "path": [],
+          "ok": true,
+          "results": [
+            {
+              "attachments": []
+            }
+          ]
+        },
+        {
+          "testId": "0e432c2735e1cb75ffbd-047524d450f7834b27b9",
+          "title": "pause freezes world; export/import and real touch pointer combination",
+          "projectName": "",
+          "location": {
+            "file": "adventure.spec.ts",
+            "line": 196,
+            "column": 1
+          },
+          "duration": 8623,
+          "annotations": [],
+          "tags": [],
+          "outcome": "expected",
+          "path": [],
+          "ok": true,
+          "results": [
+            {
+              "attachments": []
+            }
+          ]
+        },
+        {
+          "testId": "0e432c2735e1cb75ffbd-02a70e1a2016e9480fc1",
+          "title": "missing sprite fallback loads; corrupt and future saves stay untouched",
+          "projectName": "",
+          "location": {
+            "file": "adventure.spec.ts",
+            "line": 266,
+            "column": 1
+          },
+          "duration": 1732,
+          "annotations": [],
+          "tags": [],
+          "outcome": "expected",
+          "path": [],
+          "ok": true,
+          "results": [
+            {
+              "attachments": []
+            }
+          ]
+        }
+      ],
+      "stats": {
+        "total": 3,
+        "expected": 3,
+        "unexpected": 0,
+        "flaky": 0,
+        "skipped": 0,
+        "ok": true
+      }
+    },
+    {
+      "fileId": "87be2dcdb54c25970a35",
+      "fileName": "audio.spec.ts",
+      "tests": [
+        {
+          "testId": "87be2dcdb54c25970a35-fd38b3839854aae9de97",
+          "title": "browser music starts with play, stops in menus, resumes, and respects mute",
+          "projectName": "",
+          "location": {
+            "file": "audio.spec.ts",
+            "line": 2,
+            "column": 1
+          },
+          "duration": 3187,
+          "annotations": [],
+          "tags": [],
+          "outcome": "expected",
+          "path": [],
+          "ok": true,
+          "results": [
+            {
+              "attachments": []
+            }
+          ]
+        }
+      ],
+      "stats": {
+        "total": 1,
+        "expected": 1,
+        "unexpected": 0,
+        "flaky": 0,
+        "skipped": 0,
+        "ok": true
+      }
+    },
+    {
+      "fileId": "9f5dc3fa1c7e47e906d0",
+      "fileName": "complete-journey.spec.ts",
+      "tests": [
+        {
+          "testId": "9f5dc3fa1c7e47e906d0-d329268f44050fec9815",
+          "title": "new game completes all 36 stages using real controls and no injected save",
+          "projectName": "",
+          "location": {
+            "file": "complete-journey.spec.ts",
+            "line": 12,
+            "column": 1
+          },
+          "duration": 802118,
+          "annotations": [],
+          "tags": [],
+          "outcome": "expected",
+          "path": [],
+          "ok": true,
+          "results": [
+            {
+              "attachments": [
+                {
+                  "name": "stdout",
+                  "contentType": "text/plain"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "stats": {
+        "total": 1,
+        "expected": 1,
+        "unexpected": 0,
+        "flaky": 0,
+        "skipped": 0,
+        "ok": true
+      }
+    },
+    {
+      "fileId": "eae6f4a989ac581067bf",
+      "fileName": "controls-ui.spec.ts",
+      "tests": [
+        {
+          "testId": "eae6f4a989ac581067bf-dd46a1e7dba071f17c11",
+          "title": "simple controls jump, smart action attacks, monster fades, and phone UI fits",
+          "projectName": "",
+          "location": {
+            "file": "controls-ui.spec.ts",
+            "line": 3,
+            "column": 1
+          },
+          "duration": 7105,
+          "annotations": [],
+          "tags": [],
+          "outcome": "expected",
+          "path": [],
+          "ok": true,
+          "results": [
+            {
+              "attachments": []
+            }
+          ]
+        }
+      ],
+      "stats": {
+        "total": 1,
+        "expected": 1,
+        "unexpected": 0,
+        "flaky": 0,
+        "skipped": 0,
+        "ok": true
+      }
+    },
+    {
+      "fileId": "beb5428c18893246ae58",
+      "fileName": "crystal.spec.ts",
+      "tests": [
+        {
+          "testId": "beb5428c18893246ae58-48aee1924af12ac5b48b",
+          "title": "S07 save → mirror reset and safe puzzle → T02 reload, illusion and optional journal",
+          "projectName": "",
+          "location": {
+            "file": "crystal.spec.ts",
+            "line": 37,
+            "column": 1
+          },
+          "duration": 50619,
+          "annotations": [],
+          "tags": [],
+          "outcome": "expected",
+          "path": [],
+          "ok": true,
+          "results": [
+            {
+              "attachments": []
+            }
+          ]
+        }
+      ],
+      "stats": {
+        "total": 1,
+        "expected": 1,
+        "unexpected": 0,
+        "flaky": 0,
+        "skipped": 0,
+        "ok": true
+      }
+    },
+    {
+      "fileId": "4050b6d89f0074ea899f",
+      "fileName": "enemy-actions.spec.ts",
+      "tests": [
+        {
+          "testId": "4050b6d89f0074ea899f-d76ee6d2b566c6f1f991",
+          "title": "40 enemy poses, mirrored direction, safe defeat and save reload on phone/tablet",
+          "projectName": "",
+          "location": {
+            "file": "enemy-actions.spec.ts",
+            "line": 43,
+            "column": 1
+          },
+          "duration": 217815,
+          "annotations": [],
+          "tags": [],
+          "outcome": "expected",
+          "path": [],
+          "ok": true,
+          "results": [
+            {
+              "attachments": [
+                {
+                  "name": "stdout",
+                  "contentType": "text/plain"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "testId": "4050b6d89f0074ea899f-933cb68d8165ee7920e2",
+          "title": "missing action atlas retains a playable fallback and magical skeleton defeat",
+          "projectName": "",
+          "location": {
+            "file": "enemy-actions.spec.ts",
+            "line": 170,
+            "column": 1
+          },
+          "duration": 6145,
+          "annotations": [],
+          "tags": [],
+          "outcome": "expected",
+          "path": [],
+          "ok": true,
+          "results": [
+            {
+              "attachments": []
+            }
+          ]
+        }
+      ],
+      "stats": {
+        "total": 2,
+        "expected": 2,
+        "unexpected": 0,
+        "flaky": 0,
+        "skipped": 0,
+        "ok": true
+      }
+    },
+    {
+      "fileId": "7f2bf54a6199b4c9ca57",
+      "fileName": "fall.spec.ts",
+      "tests": [
+        {
+          "testId": "7f2bf54a6199b4c9ca57-c0e8ac8f237356f1b3a8",
+          "title": "fall recovery resets physics onto a safe platform instead of inside the floor",
+          "projectName": "",
+          "location": {
+            "file": "fall.spec.ts",
+            "line": 4,
+            "column": 1
+          },
+          "duration": 4985,
+          "annotations": [],
+          "tags": [],
+          "outcome": "expected",
+          "path": [],
+          "ok": true,
+          "results": [
+            {
+              "attachments": []
+            }
+          ]
+        }
+      ],
+      "stats": {
+        "total": 1,
+        "expected": 1,
+        "unexpected": 0,
+        "flaky": 0,
+        "skipped": 0,
+        "ok": true
+      }
+    },
+    {
+      "fileId": "6ba644845acf138b3fa2",
+      "fileName": "final-campaign.spec.ts",
+      "tests": [
+        {
+          "testId": "6ba644845acf138b3fa2-5c4ddb48212e6d3a2c82",
+          "title": "S28 peaceful balance grants lotus shield and persists",
+          "projectName": "",
+          "location": {
+            "file": "final-campaign.spec.ts",
+            "line": 66,
+            "column": 1
+          },
+          "duration": 12668,
+          "annotations": [],
+          "tags": [],
+          "outcome": "expected",
+          "path": [],
+          "ok": true,
+          "results": [
+            {
+              "attachments": []
+            }
+          ]
+        },
+        {
+          "testId": "6ba644845acf138b3fa2-ab6a1fddb1b1e97f0c16",
+          "title": "S36 museum route reaches ending and remains revisit-able",
+          "projectName": "",
+          "location": {
+            "file": "final-campaign.spec.ts",
+            "line": 120,
+            "column": 1
+          },
+          "duration": 12293,
+          "annotations": [],
+          "tags": [],
+          "outcome": "expected",
+          "path": [],
+          "ok": true,
+          "results": [
+            {
+              "attachments": []
+            }
+          ]
+        },
+        {
+          "testId": "6ba644845acf138b3fa2-d0358559355a261f76eb",
+          "title": "S09-S36 all boot as browser-playable scenes without console errors",
+          "projectName": "",
+          "location": {
+            "file": "final-campaign.spec.ts",
+            "line": 144,
+            "column": 1
+          },
+          "duration": 28172,
+          "annotations": [],
+          "tags": [],
+          "outcome": "expected",
+          "path": [],
+          "ok": true,
+          "results": [
+            {
+              "attachments": []
+            }
+          ]
+        }
+      ],
+      "stats": {
+        "total": 3,
+        "expected": 3,
+        "unexpected": 0,
+        "flaky": 0,
+        "skipped": 0,
+        "ok": true
+      }
+    },
+    {
+      "fileId": "55e929e2bfa773e6f830",
+      "fileName": "flame-waves.spec.ts",
+      "tests": [
+        {
+          "testId": "55e929e2bfa773e6f830-742526089d192d735607",
+          "title": "S06 furnaces and first treasure → S07 waves, blessing and cave save",
+          "projectName": "",
+          "location": {
+            "file": "flame-waves.spec.ts",
+            "line": 82,
+            "column": 1
+          },
+          "duration": 113691,
+          "annotations": [],
+          "tags": [],
+          "outcome": "expected",
+          "path": [],
+          "ok": true,
+          "results": [
+            {
+              "attachments": []
+            }
+          ]
+        },
+        {
+          "testId": "55e929e2bfa773e6f830-8270e7946ab494b0b046",
+          "title": "flame MP/cooldown pause, free ignition and W03 lingering damage",
+          "projectName": "",
+          "location": {
+            "file": "flame-waves.spec.ts",
+            "line": 159,
+            "column": 1
+          },
+          "duration": 14230,
+          "annotations": [],
+          "tags": [],
+          "outcome": "expected",
+          "path": [],
+          "ok": true,
+          "results": [
+            {
+              "attachments": []
+            }
+          ]
+        },
+        {
+          "testId": "55e929e2bfa773e6f830-913492d7240e5b2a603c",
+          "title": "missed wave deals limited damage, preserves treasure and allows another attempt",
+          "projectName": "",
+          "location": {
+            "file": "flame-waves.spec.ts",
+            "line": 200,
+            "column": 1
+          },
+          "duration": 14992,
+          "annotations": [],
+          "tags": [],
+          "outcome": "expected",
+          "path": [],
+          "ok": true,
+          "results": [
+            {
+              "attachments": []
+            }
+          ]
+        }
+      ],
+      "stats": {
+        "total": 3,
+        "expected": 3,
+        "unexpected": 0,
+        "flaky": 0,
+        "skipped": 0,
+        "ok": true
+      }
+    },
+    {
+      "fileId": "a905626241707dd069b7",
+      "fileName": "flight-rings.spec.ts",
+      "tests": [
+        {
+          "testId": "a905626241707dd069b7-8ae447fbfeb56cc21fd7",
+          "title": "flight rings collect through movement once, persist, and never gate landing",
+          "projectName": "",
+          "location": {
+            "file": "flight-rings.spec.ts",
+            "line": 17,
+            "column": 1
+          },
+          "duration": 21515,
+          "annotations": [],
+          "tags": [],
+          "outcome": "expected",
+          "path": [],
+          "ok": true,
+          "results": [
+            {
+              "attachments": []
+            }
+          ]
+        },
+        {
+          "testId": "a905626241707dd069b7-7655a01e206347e28a4d",
+          "title": "S33 return flight has five moving debris routes and does not require combat",
+          "projectName": "",
+          "location": {
+            "file": "flight-rings.spec.ts",
+            "line": 91,
+            "column": 1
+          },
+          "duration": 9426,
+          "annotations": [],
+          "tags": [],
+          "outcome": "expected",
+          "path": [],
+          "ok": true,
+          "results": [
+            {
+              "attachments": []
+            }
+          ]
+        }
+      ],
+      "stats": {
+        "total": 2,
+        "expected": 2,
+        "unexpected": 0,
+        "flaky": 0,
+        "skipped": 0,
+        "ok": true
+      }
+    },
+    {
+      "fileId": "01f49e799d3ea91d35fe",
+      "fileName": "m2.spec.ts",
+      "tests": [
+        {
+          "testId": "01f49e799d3ea91d35fe-8bcd68816aa09d866619",
+          "title": "existing M1 save → whale rescue, moving deck, G01 → coral rescue, G02 and blessing",
+          "projectName": "",
+          "location": {
+            "file": "m2.spec.ts",
+            "line": 71,
+            "column": 1
+          },
+          "duration": 58440,
+          "annotations": [],
+          "tags": [],
+          "outcome": "expected",
+          "path": [],
+          "ok": true,
+          "results": [
+            {
+              "attachments": []
+            }
+          ]
+        },
+        {
+          "testId": "01f49e799d3ea91d35fe-c21469181bbcfba43273",
+          "title": "coral gate rejects missing crown; guardian blocks frontal attacks and exposes recovery",
+          "projectName": "",
+          "location": {
+            "file": "m2.spec.ts",
+            "line": 160,
+            "column": 1
+          },
+          "duration": 14880,
+          "annotations": [],
+          "tags": [],
+          "outcome": "expected",
+          "path": [],
+          "ok": true,
+          "results": [
+            {
+              "attachments": []
+            }
+          ]
+        }
+      ],
+      "stats": {
+        "total": 2,
+        "expected": 2,
+        "unexpected": 0,
+        "flaky": 0,
+        "skipped": 0,
+        "ok": true
+      }
+    },
+    {
+      "fileId": "15dcf8d7e1fc08c587ec",
+      "fileName": "m3-opening.spec.ts",
+      "tests": [
+        {
+          "testId": "15dcf8d7e1fc08c587ec-a3fcce383178bc4237f1",
+          "title": "S09-S12 continuous route grants flight, W04 and R03 with save-safe bosses",
+          "projectName": "",
+          "location": {
+            "file": "m3-opening.spec.ts",
+            "line": 61,
+            "column": 1
+          },
+          "duration": 65554,
+          "annotations": [],
+          "tags": [],
+          "outcome": "expected",
+          "path": [],
+          "ok": true,
+          "results": [
+            {
+              "attachments": []
+            }
+          ]
+        }
+      ],
+      "stats": {
+        "total": 1,
+        "expected": 1,
+        "unexpected": 0,
+        "flaky": 0,
+        "skipped": 0,
+        "ok": true
+      }
+    },
+    {
+      "fileId": "b4297d717614c5dd9451",
+      "fileName": "mobile-abilities.spec.ts",
+      "tests": [
+        {
+          "testId": "b4297d717614c5dd9451-7ebf96441d1d77e7c641",
+          "title": "phone can descend, cast its selected treasure, and open S26 bridge using action",
+          "projectName": "",
+          "location": {
+            "file": "mobile-abilities.spec.ts",
+            "line": 16,
+            "column": 1
+          },
+          "duration": 7088,
+          "annotations": [],
+          "tags": [],
+          "outcome": "expected",
+          "path": [],
+          "ok": true,
+          "results": [
+            {
+              "attachments": []
+            }
+          ]
+        }
+      ],
+      "stats": {
+        "total": 1,
+        "expected": 1,
+        "unexpected": 0,
+        "flaky": 0,
+        "skipped": 0,
+        "ok": true
+      }
+    },
+    {
+      "fileId": "f0729cdae41803cf974f",
+      "fileName": "npc-faces.spec.ts",
+      "tests": [
+        {
+          "testId": "f0729cdae41803cf974f-536f055d2e923c7721de",
+          "title": "nine NPCs, three real dialogue expressions, mixed speakers and reward reload on phone/tablet",
+          "projectName": "",
+          "location": {
+            "file": "npc-faces.spec.ts",
+            "line": 46,
+            "column": 1
+          },
+          "duration": 107428,
+          "annotations": [],
+          "tags": [],
+          "outcome": "expected",
+          "path": [],
+          "ok": true,
+          "results": [
+            {
+              "attachments": [
+                {
+                  "name": "stdout",
+                  "contentType": "text/plain"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "testId": "f0729cdae41803cf974f-cc3ba6810194276f1587",
+          "title": "missing expression sheet keeps the captain portrait, dialogue and save playable",
+          "projectName": "",
+          "location": {
+            "file": "npc-faces.spec.ts",
+            "line": 211,
+            "column": 1
+          },
+          "duration": 2432,
+          "annotations": [],
+          "tags": [],
+          "outcome": "expected",
+          "path": [],
+          "ok": true,
+          "results": [
+            {
+              "attachments": []
+            }
+          ]
+        },
+        {
+          "testId": "f0729cdae41803cf974f-cfeec547283250d0ae83",
+          "title": "read-only observations stay safe while real scene transitions dispose textures",
+          "projectName": "",
+          "location": {
+            "file": "npc-faces.spec.ts",
+            "line": 243,
+            "column": 1
+          },
+          "duration": 9863,
+          "annotations": [],
+          "tags": [],
+          "outcome": "expected",
+          "path": [],
+          "ok": true,
+          "results": [
+            {
+              "attachments": []
+            }
+          ]
+        }
+      ],
+      "stats": {
+        "total": 3,
+        "expected": 3,
+        "unexpected": 0,
+        "flaky": 0,
+        "skipped": 0,
+        "ok": true
+      }
+    },
+    {
+      "fileId": "373fb75b781aed161569",
+      "fileName": "safety.spec.ts",
+      "tests": [
+        {
+          "testId": "373fb75b781aed161569-a48ca27621aa61ca346f",
+          "title": "actual damage and heart recovery",
+          "projectName": "",
+          "location": {
+            "file": "safety.spec.ts",
+            "line": 5,
+            "column": 1
+          },
+          "duration": 6687,
+          "annotations": [],
+          "tags": [],
+          "outcome": "expected",
+          "path": [],
+          "ok": true,
+          "results": [
+            {
+              "attachments": []
+            }
+          ]
+        },
+        {
+          "testId": "373fb75b781aed161569-4a6094cc2098ccef0e92",
+          "title": "natural lightning death restores checkpoint and retains rewards; immunity on restart",
+          "projectName": "",
+          "location": {
+            "file": "safety.spec.ts",
+            "line": 37,
+            "column": 1
+          },
+          "duration": 29471,
+          "annotations": [],
+          "tags": [],
+          "outcome": "expected",
+          "path": [],
+          "ok": true,
+          "results": [
+            {
+              "attachments": []
+            }
+          ]
+        },
+        {
+          "testId": "373fb75b781aed161569-50c67e1f9766936b12ee",
+          "title": "boss victory reload keeps exit open without duplicating XP",
+          "projectName": "",
+          "location": {
+            "file": "safety.spec.ts",
+            "line": 82,
+            "column": 1
+          },
+          "duration": 4175,
+          "annotations": [],
+          "tags": [],
+          "outcome": "expected",
+          "path": [],
+          "ok": true,
+          "results": [
+            {
+              "attachments": []
+            }
+          ]
+        },
+        {
+          "testId": "373fb75b781aed161569-ea476845deb8c2f14627",
+          "title": "storage denied warns but movement and export work",
+          "projectName": "",
+          "location": {
+            "file": "safety.spec.ts",
+            "line": 115,
+            "column": 1
+          },
+          "duration": 6796,
+          "annotations": [],
+          "tags": [],
+          "outcome": "expected",
+          "path": [],
+          "ok": true,
+          "results": [
+            {
+              "attachments": []
+            }
+          ]
+        }
+      ],
+      "stats": {
+        "total": 4,
+        "expected": 4,
+        "unexpected": 0,
+        "flaky": 0,
+        "skipped": 0,
+        "ok": true
+      }
+    },
+    {
+      "fileId": "76ccd901a4c460738e0a",
+      "fileName": "story-devices.spec.ts",
+      "tests": [
+        {
+          "testId": "76ccd901a4c460738e0a-1cefc9df790d1532835a",
+          "title": "S16 protected entrance earns pearl before actual swim practice and survives reload",
+          "projectName": "",
+          "location": {
+            "file": "story-devices.spec.ts",
+            "line": 43,
+            "column": 1
+          },
+          "duration": 24130,
+          "annotations": [],
+          "tags": [],
+          "outcome": "expected",
+          "path": [],
+          "ok": true,
+          "results": [
+            {
+              "attachments": []
+            }
+          ]
+        },
+        {
+          "testId": "76ccd901a4c460738e0a-f2291265e45c5d9c2eaa",
+          "title": "carried wood resets safely on reload and only delivery grants progress",
+          "projectName": "",
+          "location": {
+            "file": "story-devices.spec.ts",
+            "line": 68,
+            "column": 1
+          },
+          "duration": 11873,
+          "annotations": [],
+          "tags": [],
+          "outcome": "expected",
+          "path": [],
+          "ok": true,
+          "results": [
+            {
+              "attachments": []
+            }
+          ]
+        },
+        {
+          "testId": "76ccd901a4c460738e0a-87cf8a6c7b9af6a55944",
+          "title": "S25 bridge requires real crossing and standing extends its lifetime",
+          "projectName": "",
+          "location": {
+            "file": "story-devices.spec.ts",
+            "line": 92,
+            "column": 1
+          },
+          "duration": 37850,
+          "annotations": [],
+          "tags": [],
+          "outcome": "expected",
+          "path": [],
+          "ok": true,
+          "results": [
+            {
+              "attachments": []
+            }
+          ]
+        },
+        {
+          "testId": "76ccd901a4c460738e0a-c3f62449d51ad76c307e",
+          "title": "S15 kitchen rescues sailors and saves the earned boots checkpoint",
+          "projectName": "",
+          "location": {
+            "file": "story-devices.spec.ts",
+            "line": 119,
+            "column": 1
+          },
+          "duration": 20561,
+          "annotations": [],
+          "tags": [],
+          "outcome": "expected",
+          "path": [],
+          "ok": true,
+          "results": [
+            {
+              "attachments": []
+            }
+          ]
+        },
+        {
+          "testId": "76ccd901a4c460738e0a-bcd41668ad4a82c82b88",
+          "title": "W06 breaks optional moon rock with one real attack and never duplicates its reward",
+          "projectName": "",
+          "location": {
+            "file": "story-devices.spec.ts",
+            "line": 138,
+            "column": 1
+          },
+          "duration": 29615,
+          "annotations": [],
+          "tags": [],
+          "outcome": "expected",
+          "path": [],
+          "ok": true,
+          "results": [
+            {
+              "attachments": []
+            }
+          ]
+        },
+        {
+          "testId": "76ccd901a4c460738e0a-1b1cc31dcc2dfe4f4717",
+          "title": "Kuura shield requires two seals, final combat opens the saved reward",
+          "projectName": "",
+          "location": {
+            "file": "story-devices.spec.ts",
+            "line": 172,
+            "column": 1
+          },
+          "duration": 42200,
+          "annotations": [],
+          "tags": [],
+          "outcome": "expected",
+          "path": [],
+          "ok": true,
+          "results": [
+            {
+              "attachments": []
+            }
+          ]
+        }
+      ],
+      "stats": {
+        "total": 6,
+        "expected": 6,
+        "unexpected": 0,
+        "flaky": 0,
+        "skipped": 0,
+        "ok": true
+      }
+    }
+  ],
+  "projectNames": [
+    ""
+  ],
+  "stats": {
+    "total": 35,
+    "expected": 35,
+    "unexpected": 0,
+    "flaky": 0,
+    "skipped": 0,
+    "ok": true
+  },
+  "errors": []
+}

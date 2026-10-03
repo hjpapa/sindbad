@@ -1,0 +1,227 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - generic:
+    - generic:
+      - generic:
+        - generic:
+          - generic: ♥
+          - text: "195"
+          - generic: / 195
+        - meter "체력"
+      - generic:
+        - generic: Lv.20
+    - generic [ref=e5] [cursor=pointer]:
+      - generic [ref=e6] [cursor=pointer]: 현재 항로
+      - strong [ref=e7] [cursor=pointer]: 거인의 부엌
+    - generic:
+      - button "가방과 지도" [ref=e8] [cursor=pointer]:
+        - generic [ref=e9] [cursor=pointer]: 🎒
+        - generic [ref=e10] [cursor=pointer]: 가방 M
+      - button "일시정지" [ref=e11] [cursor=pointer]: Ⅱ
+  - dialog "게임 메뉴" [ref=e13]:
+    - paragraph [ref=e14]: 일곱 보물과 바다의 약속
+    - heading "항해 지도 · 완료 36 / 36" [level=2] [ref=e15]
+    - paragraph [ref=e16]: 수집한 무기와 유물은 잃지 않아요. 무기를 눌러 바꿀 수 있어요.
+    - generic [ref=e17]:
+      - button "여행자의 곡도 빠른 3타 연속 공격" [active] [ref=e18] [cursor=pointer]:
+        - text: 여행자의 곡도
+        - generic [ref=e19] [cursor=pointer]: 빠른 3타 연속 공격
+      - button "바람 부메랑 나갈 때와 돌아올 때 각각 한 번 타격" [ref=e20] [cursor=pointer]:
+        - text: 바람 부메랑
+        - generic [ref=e21] [cursor=pointer]: 나갈 때와 돌아올 때 각각 한 번 타격
+      - button "불꽃 곡도 불꽃 지속 피해" [ref=e22] [cursor=pointer]:
+        - text: 불꽃 곡도
+        - generic [ref=e23] [cursor=pointer]: 불꽃 지속 피해
+      - button "폭풍의 창 긴 사거리와 관통" [ref=e24] [cursor=pointer]:
+        - text: 폭풍의 창
+        - generic [ref=e25] [cursor=pointer]: 긴 사거리와 관통
+      - button "파도의 활 수중에서도 쓰는 무한 화살" [ref=e26] [cursor=pointer]:
+        - text: 파도의 활
+        - generic [ref=e27] [cursor=pointer]: 수중에서도 쓰는 무한 화살
+      - button "달빛 방망이 강한 넉백과 바위 파괴" [ref=e28] [cursor=pointer]:
+        - text: 달빛 방망이
+        - generic [ref=e29] [cursor=pointer]: 강한 넉백과 바위 파괴
+      - button "새벽의 검 저주 보호막에 강한 검" [ref=e30] [cursor=pointer]:
+        - text: 새벽의 검
+        - generic [ref=e31] [cursor=pointer]: 저주 보호막에 강한 검
+      - paragraph [ref=e32]: 황금 하트 0 / 8 · 공기방울 보호 미획득 · 진주로 자유 수영
+      - button "선택 스킬 · 영원의 불씨 R · 15MP · 4초 / E 점화는 무료" [ref=e33] [cursor=pointer]:
+        - text: 선택 스킬 · 영원의 불씨
+        - generic [ref=e34] [cursor=pointer]: R · 15MP · 4초 / E 점화는 무료
+      - heading "핵심 보물 능력" [level=3] [ref=e35]
+      - button "도깨비의 방울 R · 12MP · 12초 달빛 다리" [ref=e36] [cursor=pointer]:
+        - text: 도깨비의 방울
+        - generic [ref=e37] [cursor=pointer]: R · 12MP · 12초 달빛 다리
+      - button "균형의 연꽃 R · 15MP · 2.2초 피해 차단" [ref=e38] [cursor=pointer]:
+        - text: 균형의 연꽃
+        - generic [ref=e39] [cursor=pointer]: R · 15MP · 2.2초 피해 차단
+      - button "새벽의 나침반 R · 20MP · 강한 정화 파동" [ref=e40] [cursor=pointer]:
+        - text: 새벽의 나침반
+        - generic [ref=e41] [cursor=pointer]: R · 20MP · 강한 정화 파동
+      - paragraph [ref=e42]: 항해 일지 0장
+      - paragraph [ref=e43]: 핵심 보물 7 / 7 · 영원의 불씨(S06) · 진실의 수정구슬(S08) · 로크의 깃털(S09) · 심해의 진주(S16) · 도깨비의 방울(S25) · 균형의 연꽃(S28) · 새벽의 나침반(S29)
+    - generic [ref=e44]:
+      - button "S01 항구의 해골 습격 완료 · 재방문 · 1장" [ref=e45] [cursor=pointer]:
+        - generic [ref=e46] [cursor=pointer]: S01
+        - text: 항구의 해골 습격
+        - generic [ref=e47] [cursor=pointer]: 완료 · 재방문 · 1장
+      - button "S02 세이렌의 안개 암초 완료 · 재방문 · 1장" [ref=e48] [cursor=pointer]:
+        - generic [ref=e49] [cursor=pointer]: S02
+        - text: 세이렌의 안개 암초
+        - generic [ref=e50] [cursor=pointer]: 완료 · 재방문 · 1장
+      - button "S03 번개 폭풍의 갑판 완료 · 재방문 · 1장" [ref=e51] [cursor=pointer]:
+        - generic [ref=e52] [cursor=pointer]: S03
+        - text: 번개 폭풍의 갑판
+        - generic [ref=e53] [cursor=pointer]: 완료 · 재방문 · 1장
+      - button "S04 잠든 고래섬 완료 · 재방문 · 1장" [ref=e54] [cursor=pointer]:
+        - generic [ref=e55] [cursor=pointer]: S04
+        - text: 잠든 고래섬
+        - generic [ref=e56] [cursor=pointer]: 완료 · 재방문 · 1장
+      - button "S05 산호 감옥과 첫 보물 완료 · 재방문 · 1장" [ref=e57] [cursor=pointer]:
+        - generic [ref=e58] [cursor=pointer]: S05
+        - text: 산호 감옥과 첫 보물
+        - generic [ref=e59] [cursor=pointer]: 완료 · 재방문 · 1장
+      - button "S06 화신의 동굴 완료 · 재방문 · 2장" [ref=e60] [cursor=pointer]:
+        - generic [ref=e61] [cursor=pointer]: S06
+        - text: 화신의 동굴
+        - generic [ref=e62] [cursor=pointer]: 완료 · 재방문 · 2장
+      - button "S07 거대한 파도와 침몰하는 배 완료 · 재방문 · 2장" [disabled] [ref=e63]:
+        - generic [ref=e64]: S07
+        - text: 거대한 파도와 침몰하는 배
+        - generic [ref=e65]: 완료 · 재방문 · 2장
+      - button "S08 지니의 수정 동굴 완료 · 재방문 · 2장" [ref=e66] [cursor=pointer]:
+        - generic [ref=e67] [cursor=pointer]: S08
+        - text: 지니의 수정 동굴
+        - generic [ref=e68] [cursor=pointer]: 완료 · 재방문 · 2장
+      - button "S09 로크새의 둥지 완료 · 재방문 · 2장" [ref=e69] [cursor=pointer]:
+        - generic [ref=e70] [cursor=pointer]: S09
+        - text: 로크새의 둥지
+        - generic [ref=e71] [cursor=pointer]: 완료 · 재방문 · 2장
+      - button "S10 로크새를 타고 구름길 완료 · 재방문 · 2장" [ref=e72] [cursor=pointer]:
+        - generic [ref=e73] [cursor=pointer]: S10
+        - text: 로크새를 타고 구름길
+        - generic [ref=e74] [cursor=pointer]: 완료 · 재방문 · 2장
+      - button "S11 다이아몬드 골짜기 완료 · 재방문 · 3장" [ref=e75] [cursor=pointer]:
+        - generic [ref=e76] [cursor=pointer]: S11
+        - text: 다이아몬드 골짜기
+        - generic [ref=e77] [cursor=pointer]: 완료 · 재방문 · 3장
+      - button "S12 포이즌 드래곤의 습지 완료 · 재방문 · 3장" [ref=e78] [cursor=pointer]:
+        - generic [ref=e79] [cursor=pointer]: S12
+        - text: 포이즌 드래곤의 습지
+        - generic [ref=e80] [cursor=pointer]: 완료 · 재방문 · 3장
+      - button "S13 두 친구의 집 완료 · 재방문 · 3장" [ref=e81] [cursor=pointer]:
+        - generic [ref=e82] [cursor=pointer]: S13
+        - text: 두 친구의 집
+        - generic [ref=e83] [cursor=pointer]: 완료 · 재방문 · 3장
+      - button "S14 거짓 촌장의 비밀 창고 완료 · 재방문 · 3장" [ref=e84] [cursor=pointer]:
+        - generic [ref=e85] [cursor=pointer]: S14
+        - text: 거짓 촌장의 비밀 창고
+        - generic [ref=e86] [cursor=pointer]: 완료 · 재방문 · 3장
+      - button "S15 거인의 부엌 완료 · 재방문 · 3장" [ref=e87] [cursor=pointer]:
+        - generic [ref=e88] [cursor=pointer]: S15
+        - text: 거인의 부엌
+        - generic [ref=e89] [cursor=pointer]: 완료 · 재방문 · 3장
+      - button "S16 바닷속 궁전 완료 · 재방문 · 4장" [disabled] [ref=e90]:
+        - generic [ref=e91]: S16
+        - text: 바닷속 궁전
+        - generic [ref=e92]: 완료 · 재방문 · 4장
+      - button "S17 해적선 돌파 완료 · 재방문 · 4장" [ref=e93] [cursor=pointer]:
+        - generic [ref=e94] [cursor=pointer]: S17
+        - text: 해적선 돌파
+        - generic [ref=e95] [cursor=pointer]: 완료 · 재방문 · 4장
+      - button "S18 검은 돛의 선장 완료 · 재방문 · 4장" [ref=e96] [cursor=pointer]:
+        - generic [ref=e97] [cursor=pointer]: S18
+        - text: 검은 돛의 선장
+        - generic [ref=e98] [cursor=pointer]: 완료 · 재방문 · 4장
+      - button "S19 쿠우라의 그림자 성 완료 · 재방문 · 4장" [ref=e99] [cursor=pointer]:
+        - generic [ref=e100] [cursor=pointer]: S19
+        - text: 쿠우라의 그림자 성
+        - generic [ref=e101] [cursor=pointer]: 완료 · 재방문 · 4장
+      - button "S20 정글의 문 완료 · 재방문 · 5장" [ref=e102] [cursor=pointer]:
+        - generic [ref=e103] [cursor=pointer]: S20
+        - text: 정글의 문
+        - generic [ref=e104] [cursor=pointer]: 완료 · 재방문 · 5장
+      - button "S21 거대한 뱀의 계곡 완료 · 재방문 · 5장" [ref=e105] [cursor=pointer]:
+        - generic [ref=e106] [cursor=pointer]: S21
+        - text: 거대한 뱀의 계곡
+        - generic [ref=e107] [cursor=pointer]: 완료 · 재방문 · 5장
+      - button "S22 저주받은 호랑이의 숲 완료 · 재방문 · 5장" [ref=e108] [cursor=pointer]:
+        - generic [ref=e109] [cursor=pointer]: S22
+        - text: 저주받은 호랑이의 숲
+        - generic [ref=e110] [cursor=pointer]: 완료 · 재방문 · 5장
+      - button "S23 바다 노인의 저주 완료 · 재방문 · 5장" [ref=e111] [cursor=pointer]:
+        - generic [ref=e112] [cursor=pointer]: S23
+        - text: 바다 노인의 저주
+        - generic [ref=e113] [cursor=pointer]: 완료 · 재방문 · 5장
+      - button "S24 외눈 괴물의 성채 완료 · 재방문 · 5장" [ref=e114] [cursor=pointer]:
+        - generic [ref=e115] [cursor=pointer]: S24
+        - text: 외눈 괴물의 성채
+        - generic [ref=e116] [cursor=pointer]: 완료 · 재방문 · 5장
+      - button "S25 도깨비의 달빛 다리 완료 · 재방문 · 5장" [ref=e117] [cursor=pointer]:
+        - generic [ref=e118] [cursor=pointer]: S25
+        - text: 도깨비의 달빛 다리
+        - generic [ref=e119] [cursor=pointer]: 완료 · 재방문 · 5장
+      - button "S26 별빛 지하강 완료 · 재방문 · 6장" [ref=e120] [cursor=pointer]:
+        - generic [ref=e121] [cursor=pointer]: S26
+        - text: 별빛 지하강
+        - generic [ref=e122] [cursor=pointer]: 완료 · 재방문 · 6장
+      - button "S27 인도의 바닷길 완료 · 재방문 · 6장" [ref=e123] [cursor=pointer]:
+        - generic [ref=e124] [cursor=pointer]: S27
+        - text: 인도의 바닷길
+        - generic [ref=e125] [cursor=pointer]: 완료 · 재방문 · 6장
+      - button "S28 비슈누의 수호 신전 완료 · 재방문 · 6장" [ref=e126] [cursor=pointer]:
+        - generic [ref=e127] [cursor=pointer]: S28
+        - text: 비슈누의 수호 신전
+        - generic [ref=e128] [cursor=pointer]: 완료 · 재방문 · 6장
+      - button "S29 코끼리의 비밀 정원 완료 · 재방문 · 6장" [ref=e129] [cursor=pointer]:
+        - generic [ref=e130] [cursor=pointer]: S29
+        - text: 코끼리의 비밀 정원
+        - generic [ref=e131] [cursor=pointer]: 완료 · 재방문 · 6장
+      - button "S30 일곱 보물의 관문 완료 · 재방문 · 7장" [ref=e132] [cursor=pointer]:
+        - generic [ref=e133] [cursor=pointer]: S30
+        - text: 일곱 보물의 관문
+        - generic [ref=e134] [cursor=pointer]: 완료 · 재방문 · 7장
+      - button "S31 쿠우라와의 마지막 결투 완료 · 재방문 · 7장" [ref=e135] [cursor=pointer]:
+        - generic [ref=e136] [cursor=pointer]: S31
+        - text: 쿠우라와의 마지막 결투
+        - generic [ref=e137] [cursor=pointer]: 완료 · 재방문 · 7장
+      - button "S32 아리아나 공주 구출 완료 · 재방문 · 7장" [ref=e138] [cursor=pointer]:
+        - generic [ref=e139] [cursor=pointer]: S32
+        - text: 아리아나 공주 구출
+        - generic [ref=e140] [cursor=pointer]: 완료 · 재방문 · 7장
+      - button "S33 로크새와 귀환 비행 완료 · 재방문 · 7장" [ref=e141] [cursor=pointer]:
+        - generic [ref=e142] [cursor=pointer]: S33
+        - text: 로크새와 귀환 비행
+        - generic [ref=e143] [cursor=pointer]: 완료 · 재방문 · 7장
+      - button "S34 궁전으로 돌아가는 길 완료 · 재방문 · 7장" [ref=e144] [cursor=pointer]:
+        - generic [ref=e145] [cursor=pointer]: S34
+        - text: 궁전으로 돌아가는 길
+        - generic [ref=e146] [cursor=pointer]: 완료 · 재방문 · 7장
+      - button "S35 왕의 축복과 결혼식 완료 · 재방문 · 7장" [ref=e147] [cursor=pointer]:
+        - generic [ref=e148] [cursor=pointer]: S35
+        - text: 왕의 축복과 결혼식
+        - generic [ref=e149] [cursor=pointer]: 완료 · 재방문 · 7장
+      - button "S36 함께 여는 새로운 항해 완료 · 재방문 · 7장" [ref=e150] [cursor=pointer]:
+        - generic [ref=e151] [cursor=pointer]: S36
+        - text: 함께 여는 새로운 항해
+        - generic [ref=e152] [cursor=pointer]: 완료 · 재방문 · 7장
+    - generic [ref=e153]:
+      - button "현재 모험으로" [ref=e154] [cursor=pointer]
+      - button "대화 다시 보기" [ref=e155] [cursor=pointer]
+  - generic "터치 조작":
+    - generic [ref=e156]:
+      - button "터치 ←" [ref=e157] [cursor=pointer]:
+        - generic: ◀
+      - button "터치 →" [ref=e158] [cursor=pointer]:
+        - generic: ▶
+    - generic:
+      - button "터치 ↑" [ref=e159] [cursor=pointer]:
+        - generic: ▲
+        - text: 점프
+      - button "터치 무기 바꾸기 · 지금 여행자의 곡도" [ref=e160] [cursor=pointer]:
+        - generic: 바꾸기
+      - button "터치 행동" [ref=e161] [cursor=pointer]:
+        - generic: 공격
+```

@@ -1,0 +1,10 @@
+{
+  "date": "2026-10-03",
+  "method": "Manual record of the observed command output. Playwright failed during test collection before running tests; no raw Playwright JSON report was produced.",
+  "command": "npm run test:e2e -- tests/e2e/weapon-art.spec.ts --reporter=list,html,json",
+  "pass": false,
+  "exitCode": 1,
+  "executedTests": 0,
+  "error": "TypeError: Module src/content/hero-action.generated.json needs an import attribute of type: json. Error: No tests found.",
+  "fix": "Added the JSON import attribute in the additional weapon artwork test. No game code changed for this fix."
+}

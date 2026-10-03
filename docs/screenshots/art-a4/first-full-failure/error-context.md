@@ -1,0 +1,49 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - generic:
+    - generic:
+      - generic: S32
+      - generic:
+        - generic:
+          - generic: ♥
+          - text: "190"
+          - generic: / 190
+        - meter "체력"
+      - generic:
+        - generic: Lv.17
+        - generic: XP 118 / 380 · MP 92 / 92
+    - generic [ref=e5] [cursor=pointer]:
+      - generic [ref=e6] [cursor=pointer]: 현재 항로
+      - strong [ref=e7] [cursor=pointer]: 아리아나 공주 구출
+      - generic [ref=e8] [cursor=pointer]: 별자리 ① → 별자리 ② → 별자리 ③ → 아리아나 구출
+    - generic:
+      - generic: ◈ 48
+      - button "가방과 지도" [ref=e9] [cursor=pointer]:
+        - generic [ref=e10] [cursor=pointer]: 🎒
+        - generic [ref=e11] [cursor=pointer]: 가방 M
+      - button "일시정지" [ref=e12] [cursor=pointer]: Ⅱ
+    - generic:
+      - text: 새벽의 검
+      - generic: Q 교체
+      - text: · 새벽 R · 폭풍 수정
+  - status: 레벨 업! Lv.17 · 체력과 마력 완전 회복
+  - generic "터치 조작":
+    - generic [ref=e13]:
+      - button "터치 ←" [ref=e14] [cursor=pointer]:
+        - generic: ◀
+      - button "터치 →" [ref=e15] [cursor=pointer]:
+        - generic: ▶
+    - generic:
+      - button "터치 ↑" [ref=e16] [cursor=pointer]:
+        - generic: ▲
+        - text: 점프
+      - button "터치 새벽의 나침반" [ref=e17] [cursor=pointer]:
+        - generic: ✦
+        - generic: 새벽
+      - button "터치 무기 바꾸기 · 지금 새벽의 검" [ref=e18] [cursor=pointer]:
+        - generic: 바꾸기
+      - button "터치 행동" [ref=e19] [cursor=pointer]:
+        - generic: 공격
+```

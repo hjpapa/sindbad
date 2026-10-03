@@ -110,8 +110,12 @@ test('new game → S01 → S02 → S03 with real keyboard inputs and checkpoint 
     await expect.poll(async () => (await state(page)).stage).toBe('S02');
     for (const [index, x] of [960, 1930, 2830].entries()) {
         await move(page, x - 45);
-        await page.keyboard.down('d'); await page.waitForTimeout(60); await page.keyboard.up('d');
+        // Keep a deliberate direction during the strike: stationary aim assist
+        // can otherwise turn toward a nearby crab instead of the shell bell.
+        await page.keyboard.down('d'); await page.waitForTimeout(60);
         await page.keyboard.press('j');
+        await page.waitForTimeout(100);
+        await page.keyboard.up('d');
         await page.waitForTimeout(350);
         expect((await state(page)).save.completedObjectiveIds).toContain(`S02.shell.${index + 1}`);
     }

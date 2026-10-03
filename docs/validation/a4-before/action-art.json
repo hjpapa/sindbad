@@ -1,0 +1,918 @@
+{
+  "method": "Edge phone/tablet art inspection with unlocked-weapon and stage-save fixtures, real CDP touch and keyboard input; not campaign completion",
+  "devices": {
+    "phone": {
+      "shots": [
+        {
+          "weapon": "W01",
+          "direction": 1,
+          "frame": 5,
+          "hero": {
+            "texture": "hero-action",
+            "frame": 5,
+            "x": 151.0406588921555,
+            "y": 610,
+            "flipX": false,
+            "originY": 0.95703125
+          },
+          "hand": {
+            "x": 118.4156588921555,
+            "y": 529.84375
+          },
+          "weaponArt": {
+            "visible": true,
+            "x": 118.4156588921555,
+            "y": 529.84375,
+            "texture": "weapon-W01",
+            "angle": 4.463224495920485
+          },
+          "path": "docs/screenshots/art-a1-a2/phone-W01-right.png"
+        },
+        {
+          "weapon": "W02",
+          "direction": 1,
+          "frame": 5,
+          "hero": {
+            "texture": "hero-action",
+            "frame": 5,
+            "x": 148.85599333945547,
+            "y": 610,
+            "flipX": false,
+            "originY": 0.95703125
+          },
+          "hand": {
+            "x": 116.23099333945547,
+            "y": 529.84375
+          },
+          "weaponArt": {
+            "visible": true,
+            "x": 116.23099333945547,
+            "y": 529.84375,
+            "texture": "weapon-W02",
+            "angle": -17.96875
+          },
+          "path": "docs/screenshots/art-a1-a2/phone-W02-right.png"
+        },
+        {
+          "weapon": "W03",
+          "direction": 1,
+          "frame": 5,
+          "hero": {
+            "texture": "hero-action",
+            "frame": 5,
+            "x": 148.8589008392185,
+            "y": 610,
+            "flipX": false,
+            "originY": 0.95703125
+          },
+          "hand": {
+            "x": 116.2339008392185,
+            "y": 529.84375
+          },
+          "weaponArt": {
+            "visible": true,
+            "x": 116.2339008392185,
+            "y": 529.84375,
+            "texture": "weapon-W03",
+            "angle": -15.907129049819332
+          },
+          "path": "docs/screenshots/art-a1-a2/phone-W03-right.png"
+        },
+        {
+          "weapon": "W04",
+          "direction": 1,
+          "frame": 5,
+          "hero": {
+            "texture": "hero-action",
+            "frame": 5,
+            "x": 146.2477743799097,
+            "y": 610,
+            "flipX": false,
+            "originY": 0.95703125
+          },
+          "hand": {
+            "x": 113.62277437990971,
+            "y": 529.84375
+          },
+          "weaponArt": {
+            "visible": true,
+            "x": 113.62277437990971,
+            "y": 529.84375,
+            "texture": "weapon-W04",
+            "angle": -6
+          },
+          "path": "docs/screenshots/art-a1-a2/phone-W04-right.png"
+        },
+        {
+          "weapon": "W05",
+          "direction": 1,
+          "frame": 5,
+          "hero": {
+            "texture": "hero-action",
+            "frame": 5,
+            "x": 146.25109623901724,
+            "y": 610,
+            "flipX": false,
+            "originY": 0.95703125
+          },
+          "hand": {
+            "x": 113.62609623901724,
+            "y": 529.84375
+          },
+          "weaponArt": {
+            "visible": true,
+            "x": 113.62609623901724,
+            "y": 529.84375,
+            "texture": "weapon-W05",
+            "angle": 0
+          },
+          "path": "docs/screenshots/art-a1-a2/phone-W05-right.png"
+        },
+        {
+          "weapon": "W06",
+          "direction": 1,
+          "frame": 5,
+          "hero": {
+            "texture": "hero-action",
+            "frame": 5,
+            "x": 146.24445211543278,
+            "y": 610,
+            "flipX": false,
+            "originY": 0.95703125
+          },
+          "hand": {
+            "x": 113.61945211543278,
+            "y": 529.84375
+          },
+          "weaponArt": {
+            "visible": true,
+            "x": 113.61945211543278,
+            "y": 529.84375,
+            "texture": "weapon-W06",
+            "angle": -72.12443414437638
+          },
+          "path": "docs/screenshots/art-a1-a2/phone-W06-right.png"
+        },
+        {
+          "weapon": "W07",
+          "direction": 1,
+          "frame": 5,
+          "hero": {
+            "texture": "hero-action",
+            "frame": 5,
+            "x": 148.85599333945547,
+            "y": 610,
+            "flipX": false,
+            "originY": 0.95703125
+          },
+          "hand": {
+            "x": 116.23099333945547,
+            "y": 529.84375
+          },
+          "weaponArt": {
+            "visible": true,
+            "x": 116.23099333945547,
+            "y": 529.84375,
+            "texture": "weapon-W07",
+            "angle": -15.9375
+          },
+          "path": "docs/screenshots/art-a1-a2/phone-W07-right.png"
+        },
+        {
+          "weapon": "W01",
+          "direction": -1,
+          "frame": 5,
+          "hero": {
+            "texture": "hero-action",
+            "frame": 5,
+            "x": 117.6483690053777,
+            "y": 610,
+            "flipX": true,
+            "originY": 0.95703125
+          },
+          "hand": {
+            "x": 150.2733690053777,
+            "y": 529.84375
+          },
+          "weaponArt": {
+            "visible": true,
+            "x": 150.2733690053777,
+            "y": 529.84375,
+            "texture": "weapon-W01",
+            "angle": 16.761789856822134
+          },
+          "path": "docs/screenshots/art-a1-a2/phone-W01-left.png"
+        },
+        {
+          "weapon": "W02",
+          "direction": -1,
+          "frame": 5,
+          "hero": {
+            "texture": "hero-action",
+            "frame": 5,
+            "x": 117.64109916078209,
+            "y": 610,
+            "flipX": true,
+            "originY": 0.95703125
+          },
+          "hand": {
+            "x": 150.2660991607821,
+            "y": 529.84375
+          },
+          "weaponArt": {
+            "visible": true,
+            "x": 150.2660991607821,
+            "y": 529.84375,
+            "texture": "weapon-W02",
+            "angle": 17.953564524912395
+          },
+          "path": "docs/screenshots/art-a1-a2/phone-W02-left.png"
+        },
+        {
+          "weapon": "W03",
+          "direction": -1,
+          "frame": 5,
+          "hero": {
+            "texture": "hero-action",
+            "frame": 5,
+            "x": 117.64546062948907,
+            "y": 610,
+            "flipX": true,
+            "originY": 0.95703125
+          },
+          "hand": {
+            "x": 150.27046062948907,
+            "y": 529.84375
+          },
+          "weaponArt": {
+            "visible": true,
+            "x": 150.27046062948907,
+            "y": 529.84375,
+            "texture": "weapon-W03",
+            "angle": 15.952688512525583
+          },
+          "path": "docs/screenshots/art-a1-a2/phone-W03-left.png"
+        },
+        {
+          "weapon": "W04",
+          "direction": -1,
+          "frame": 5,
+          "hero": {
+            "texture": "hero-action",
+            "frame": 5,
+            "x": 117.64546062948854,
+            "y": 610,
+            "flipX": true,
+            "originY": 0.95703125
+          },
+          "hand": {
+            "x": 150.27046062948853,
+            "y": 529.84375
+          },
+          "weaponArt": {
+            "visible": true,
+            "x": 150.27046062948853,
+            "y": 529.84375,
+            "texture": "weapon-W04",
+            "angle": 6
+          },
+          "path": "docs/screenshots/art-a1-a2/phone-W04-left.png"
+        },
+        {
+          "weapon": "W05",
+          "direction": -1,
+          "frame": 5,
+          "hero": {
+            "texture": "hero-action",
+            "frame": 5,
+            "x": 117.64691474444156,
+            "y": 610,
+            "flipX": true,
+            "originY": 0.95703125
+          },
+          "hand": {
+            "x": 150.27191474444157,
+            "y": 529.84375
+          },
+          "weaponArt": {
+            "visible": true,
+            "x": 150.27191474444157,
+            "y": 529.84375,
+            "texture": "weapon-W05",
+            "angle": 0
+          },
+          "path": "docs/screenshots/art-a1-a2/phone-W05-left.png"
+        },
+        {
+          "weapon": "W06",
+          "direction": -1,
+          "frame": 5,
+          "hero": {
+            "texture": "hero-action",
+            "frame": 5,
+            "x": 117.64546062948907,
+            "y": 610,
+            "flipX": true,
+            "originY": 0.95703125
+          },
+          "hand": {
+            "x": 150.27046062948907,
+            "y": 529.84375
+          },
+          "weaponArt": {
+            "visible": true,
+            "x": 150.27046062948907,
+            "y": 529.84375,
+            "texture": "weapon-W06",
+            "angle": 43.06248541565128
+          },
+          "path": "docs/screenshots/art-a1-a2/phone-W06-left.png"
+        },
+        {
+          "weapon": "W07",
+          "direction": -1,
+          "frame": 5,
+          "hero": {
+            "texture": "hero-action",
+            "frame": 5,
+            "x": 120.2505646398509,
+            "y": 610,
+            "flipX": true,
+            "originY": 0.95703125
+          },
+          "hand": {
+            "x": 152.8755646398509,
+            "y": 529.84375
+          },
+          "weaponArt": {
+            "visible": true,
+            "x": 152.8755646398509,
+            "y": 529.84375,
+            "texture": "weapon-W07",
+            "angle": 44.17291679166419
+          },
+          "path": "docs/screenshots/art-a1-a2/phone-W07-left.png"
+        }
+      ],
+      "npcs": [
+        {
+          "stage": "S01",
+          "src": "/assets/webtoon/captain-webtoon.webp",
+          "path": "docs/screenshots/art-a1-a2/phone-S01-dialogue.png"
+        },
+        {
+          "stage": "S03",
+          "src": "/assets/webtoon/captain-webtoon.webp",
+          "path": "docs/screenshots/art-a1-a2/phone-S03-dialogue.png"
+        },
+        {
+          "stage": "S04",
+          "src": "/assets/webtoon/sailor-webtoon.webp",
+          "path": "docs/screenshots/art-a1-a2/phone-S04-dialogue.png"
+        }
+      ],
+      "actions": [
+        {
+          "label": "idle-a",
+          "frame": 0,
+          "path": "docs/screenshots/art-a1-a2/phone-idle-a.png",
+          "hero": {
+            "texture": "hero-action",
+            "frame": 0,
+            "x": 120,
+            "y": 609.6610800462969,
+            "flipX": false,
+            "originY": 0.9609375
+          }
+        },
+        {
+          "label": "idle-b",
+          "frame": 1,
+          "path": "docs/screenshots/art-a1-a2/phone-idle-b.png",
+          "hero": {
+            "texture": "hero-action",
+            "frame": 1,
+            "x": 120,
+            "y": 608.830071459038,
+            "flipX": false,
+            "originY": 0.9609375
+          }
+        },
+        {
+          "label": "jump",
+          "frame": 2,
+          "path": "docs/screenshots/art-a1-a2/phone-jump.png",
+          "hero": {
+            "texture": "hero-action",
+            "frame": 2,
+            "x": 207,
+            "y": 482.25000000000006,
+            "flipX": false,
+            "originY": 0.80859375
+          }
+        },
+        {
+          "label": "fall",
+          "frame": 3,
+          "path": "docs/screenshots/art-a1-a2/phone-fall.png",
+          "hero": {
+            "texture": "hero-action",
+            "frame": 3,
+            "x": 231.83333333333331,
+            "y": 483.75000000000006,
+            "flipX": false,
+            "originY": 0.896484375
+          }
+        },
+        {
+          "label": "hurt",
+          "frame": 4,
+          "path": "docs/screenshots/art-a1-a2/phone-hurt.png",
+          "hero": {
+            "texture": "hero-action",
+            "frame": 4,
+            "x": 117.76861974080339,
+            "y": 610,
+            "flipX": false,
+            "originY": 0.974609375
+          }
+        },
+        {
+          "label": "joy",
+          "frame": 8,
+          "path": "docs/screenshots/art-a1-a2/phone-joy.png",
+          "hero": {
+            "texture": "hero-action",
+            "frame": 8,
+            "x": 791.8333333333334,
+            "y": 496.543858015144,
+            "flipX": false,
+            "originY": 0.92578125
+          }
+        }
+      ],
+      "runJump": {
+        "dx": 87,
+        "dy": -127.74999999999994
+      },
+      "errors": []
+    },
+    "tablet": {
+      "shots": [
+        {
+          "weapon": "W01",
+          "direction": 1,
+          "frame": 5,
+          "hero": {
+            "texture": "hero-action",
+            "frame": 5,
+            "x": 151.03120772017897,
+            "y": 610,
+            "flipX": false,
+            "originY": 0.95703125
+          },
+          "hand": {
+            "x": 118.40620772017897,
+            "y": 529.84375
+          },
+          "weaponArt": {
+            "visible": true,
+            "x": 118.40620772017897,
+            "y": 529.84375,
+            "texture": "weapon-W01",
+            "angle": 4.372303782160088
+          },
+          "path": "docs/screenshots/art-a1-a2/tablet-W01-right.png"
+        },
+        {
+          "weapon": "W02",
+          "direction": 1,
+          "frame": 5,
+          "hero": {
+            "texture": "hero-action",
+            "frame": 5,
+            "x": 146.25275701648627,
+            "y": 610,
+            "flipX": false,
+            "originY": 0.95703125
+          },
+          "hand": {
+            "x": 113.62775701648627,
+            "y": 529.84375
+          },
+          "weaponArt": {
+            "visible": true,
+            "x": 113.62775701648627,
+            "y": 529.84375,
+            "texture": "weapon-W02",
+            "angle": -32.06770989578138
+          },
+          "path": "docs/screenshots/art-a1-a2/tablet-W02-right.png"
+        },
+        {
+          "weapon": "W03",
+          "direction": 1,
+          "frame": 5,
+          "hero": {
+            "texture": "hero-action",
+            "frame": 5,
+            "x": 146.2759972381973,
+            "y": 610,
+            "flipX": false,
+            "originY": 0.95703125
+          },
+          "hand": {
+            "x": 113.6509972381973,
+            "y": 529.84375
+          },
+          "weaponArt": {
+            "visible": true,
+            "x": 113.6509972381973,
+            "y": 529.84375,
+            "texture": "weapon-W03",
+            "angle": -43.873192705146266
+          },
+          "path": "docs/screenshots/art-a1-a2/tablet-W03-right.png"
+        },
+        {
+          "weapon": "W04",
+          "direction": 1,
+          "frame": 5,
+          "hero": {
+            "texture": "hero-action",
+            "frame": 5,
+            "x": 148.85453937051128,
+            "y": 610,
+            "flipX": false,
+            "originY": 0.95703125
+          },
+          "hand": {
+            "x": 116.22953937051128,
+            "y": 529.84375
+          },
+          "weaponArt": {
+            "visible": true,
+            "x": 116.22953937051128,
+            "y": 529.84375,
+            "texture": "weapon-W04",
+            "angle": -6
+          },
+          "path": "docs/screenshots/art-a1-a2/tablet-W04-right.png"
+        },
+        {
+          "weapon": "W05",
+          "direction": 1,
+          "frame": 5,
+          "hero": {
+            "texture": "hero-action",
+            "frame": 5,
+            "x": 146.2477743799097,
+            "y": 610,
+            "flipX": false,
+            "originY": 0.95703125
+          },
+          "hand": {
+            "x": 113.62277437990971,
+            "y": 529.84375
+          },
+          "weaponArt": {
+            "visible": true,
+            "x": 113.62277437990971,
+            "y": 529.84375,
+            "texture": "weapon-W05",
+            "angle": 0
+          },
+          "path": "docs/screenshots/art-a1-a2/tablet-W05-right.png"
+        },
+        {
+          "weapon": "W06",
+          "direction": 1,
+          "frame": 5,
+          "hero": {
+            "texture": "hero-action",
+            "frame": 5,
+            "x": 148.85599333945547,
+            "y": 610,
+            "flipX": false,
+            "originY": 0.95703125
+          },
+          "hand": {
+            "x": 116.23099333945547,
+            "y": 529.84375
+          },
+          "weaponArt": {
+            "visible": true,
+            "x": 116.23099333945547,
+            "y": 529.84375,
+            "texture": "weapon-W06",
+            "angle": -43.046875
+          },
+          "path": "docs/screenshots/art-a1-a2/tablet-W06-right.png"
+        },
+        {
+          "weapon": "W07",
+          "direction": 1,
+          "frame": 5,
+          "hero": {
+            "texture": "hero-action",
+            "frame": 5,
+            "x": 146.24943536014888,
+            "y": 610,
+            "flipX": false,
+            "originY": 0.95703125
+          },
+          "hand": {
+            "x": 113.62443536014888,
+            "y": 529.84375
+          },
+          "weaponArt": {
+            "visible": true,
+            "x": 113.62443536014888,
+            "y": 529.84375,
+            "texture": "weapon-W07",
+            "angle": -44.1729167916676
+          },
+          "path": "docs/screenshots/art-a1-a2/tablet-W07-right.png"
+        },
+        {
+          "weapon": "W01",
+          "direction": -1,
+          "frame": 5,
+          "hero": {
+            "texture": "hero-action",
+            "frame": 5,
+            "x": 120.24890376098283,
+            "y": 610,
+            "flipX": true,
+            "originY": 0.95703125
+          },
+          "hand": {
+            "x": 152.87390376098284,
+            "y": 529.84375
+          },
+          "weaponArt": {
+            "visible": true,
+            "x": 152.87390376098284,
+            "y": 529.84375,
+            "texture": "weapon-W01",
+            "angle": 43.36782454628974
+          },
+          "path": "docs/screenshots/art-a1-a2/tablet-W01-left.png"
+        },
+        {
+          "weapon": "W02",
+          "direction": -1,
+          "frame": 5,
+          "hero": {
+            "texture": "hero-action",
+            "frame": 5,
+            "x": 117.64109916078209,
+            "y": 610,
+            "flipX": true,
+            "originY": 0.95703125
+          },
+          "hand": {
+            "x": 150.2660991607821,
+            "y": 529.84375
+          },
+          "weaponArt": {
+            "visible": true,
+            "x": 150.2660991607821,
+            "y": 529.84375,
+            "texture": "weapon-W02",
+            "angle": 17.953564524912395
+          },
+          "path": "docs/screenshots/art-a1-a2/tablet-W02-left.png"
+        },
+        {
+          "weapon": "W03",
+          "direction": -1,
+          "frame": 5,
+          "hero": {
+            "texture": "hero-action",
+            "frame": 5,
+            "x": 117.64546062948907,
+            "y": 610,
+            "flipX": true,
+            "originY": 0.95703125
+          },
+          "hand": {
+            "x": 150.27046062948907,
+            "y": 529.84375
+          },
+          "weaponArt": {
+            "visible": true,
+            "x": 150.27046062948907,
+            "y": 529.84375,
+            "texture": "weapon-W03",
+            "angle": 15.952688512525583
+          },
+          "path": "docs/screenshots/art-a1-a2/tablet-W03-left.png"
+        },
+        {
+          "weapon": "W04",
+          "direction": -1,
+          "frame": 5,
+          "hero": {
+            "texture": "hero-action",
+            "frame": 5,
+            "x": 117.64109916078156,
+            "y": 610,
+            "flipX": true,
+            "originY": 0.95703125
+          },
+          "hand": {
+            "x": 150.26609916078155,
+            "y": 529.84375
+          },
+          "weaponArt": {
+            "visible": true,
+            "x": 150.26609916078155,
+            "y": 529.84375,
+            "texture": "weapon-W04",
+            "angle": 6
+          },
+          "path": "docs/screenshots/art-a1-a2/tablet-W04-left.png"
+        },
+        {
+          "weapon": "W05",
+          "direction": -1,
+          "frame": 5,
+          "hero": {
+            "texture": "hero-action",
+            "frame": 5,
+            "x": 120.24890376098283,
+            "y": 610,
+            "flipX": true,
+            "originY": 0.95703125
+          },
+          "hand": {
+            "x": 152.87390376098284,
+            "y": 529.84375
+          },
+          "weaponArt": {
+            "visible": true,
+            "x": 152.87390376098284,
+            "y": 529.84375,
+            "texture": "weapon-W05",
+            "angle": 0
+          },
+          "path": "docs/screenshots/art-a1-a2/tablet-W05-left.png"
+        },
+        {
+          "weapon": "W06",
+          "direction": -1,
+          "frame": 5,
+          "hero": {
+            "texture": "hero-action",
+            "frame": 5,
+            "x": 120.25388670167159,
+            "y": 610,
+            "flipX": true,
+            "originY": 0.95703125
+          },
+          "hand": {
+            "x": 152.8788867016716,
+            "y": 529.84375
+          },
+          "weaponArt": {
+            "visible": true,
+            "x": 152.8788867016716,
+            "y": 529.84375,
+            "texture": "weapon-W06",
+            "angle": 72.10515675839315
+          },
+          "path": "docs/screenshots/art-a1-a2/tablet-W06-left.png"
+        },
+        {
+          "weapon": "W07",
+          "direction": -1,
+          "frame": 5,
+          "hero": {
+            "texture": "hero-action",
+            "frame": 5,
+            "x": 120.25056463985149,
+            "y": 610,
+            "flipX": true,
+            "originY": 0.95703125
+          },
+          "hand": {
+            "x": 152.8755646398515,
+            "y": 529.84375
+          },
+          "weaponArt": {
+            "visible": true,
+            "x": 152.8755646398515,
+            "y": 529.84375,
+            "texture": "weapon-W07",
+            "angle": 44.172916791671014
+          },
+          "path": "docs/screenshots/art-a1-a2/tablet-W07-left.png"
+        }
+      ],
+      "npcs": [
+        {
+          "stage": "S01",
+          "src": "/assets/webtoon/captain-webtoon.webp",
+          "path": "docs/screenshots/art-a1-a2/tablet-S01-dialogue.png"
+        },
+        {
+          "stage": "S03",
+          "src": "/assets/webtoon/captain-webtoon.webp",
+          "path": "docs/screenshots/art-a1-a2/tablet-S03-dialogue.png"
+        },
+        {
+          "stage": "S04",
+          "src": "/assets/webtoon/sailor-webtoon.webp",
+          "path": "docs/screenshots/art-a1-a2/tablet-S04-dialogue.png"
+        }
+      ],
+      "actions": [
+        {
+          "label": "idle-a",
+          "frame": 0,
+          "path": "docs/screenshots/art-a1-a2/tablet-idle-a.png",
+          "hero": {
+            "texture": "hero-action",
+            "frame": 0,
+            "x": 120,
+            "y": 609.1377709793915,
+            "flipX": false,
+            "originY": 0.9609375
+          }
+        },
+        {
+          "label": "idle-b",
+          "frame": 1,
+          "path": "docs/screenshots/art-a1-a2/tablet-idle-b.png",
+          "hero": {
+            "texture": "hero-action",
+            "frame": 1,
+            "x": 120,
+            "y": 608.6837433706783,
+            "flipX": false,
+            "originY": 0.9609375
+          }
+        },
+        {
+          "label": "jump",
+          "frame": 2,
+          "path": "docs/screenshots/art-a1-a2/tablet-jump.png",
+          "hero": {
+            "texture": "hero-action",
+            "frame": 2,
+            "x": 167.00000000000003,
+            "y": 509.25,
+            "flipX": false,
+            "originY": 0.80859375
+          }
+        },
+        {
+          "label": "fall",
+          "frame": 3,
+          "path": "docs/screenshots/art-a1-a2/tablet-fall.png",
+          "hero": {
+            "texture": "hero-action",
+            "frame": 3,
+            "x": 191.83333333333334,
+            "y": 478.75,
+            "flipX": false,
+            "originY": 0.896484375
+          }
+        },
+        {
+          "label": "hurt",
+          "frame": 4,
+          "path": "docs/screenshots/art-a1-a2/tablet-hurt.png",
+          "hero": {
+            "texture": "hero-action",
+            "frame": 4,
+            "x": 117.76861974080339,
+            "y": 610,
+            "flipX": false,
+            "originY": 0.974609375
+          }
+        },
+        {
+          "label": "joy",
+          "frame": 8,
+          "path": "docs/screenshots/art-a1-a2/tablet-joy.png",
+          "hero": {
+            "texture": "hero-action",
+            "frame": 8,
+            "x": 791.8333333333334,
+            "y": 496.5441161986063,
+            "flipX": false,
+            "originY": 0.92578125
+          }
+        }
+      ],
+      "runJump": {
+        "dx": 47.00000000000003,
+        "dy": -100.75
+      },
+      "errors": []
+    }
+  },
+  "pass": true
+}

@@ -1,19 +1,145 @@
-#app{min-height:320px}
+/* ---------- Touch hygiene: no zoom, text selection or callouts while playing ---------- */
+html,body{overscroll-behavior:none;background:#102d3b}
+#app{min-height:320px;-webkit-user-select:none;user-select:none;-webkit-touch-callout:none;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+#overlay input,#overlay select{-webkit-user-select:auto;user-select:auto}
+#game canvas{touch-action:none}
 #overlay{padding:max(12px,env(safe-area-inset-top)) max(12px,env(safe-area-inset-right)) max(12px,env(safe-area-inset-bottom)) max(12px,env(safe-area-inset-left))}
 #hud{padding:max(12px,env(safe-area-inset-top)) max(14px,env(safe-area-inset-right)) 22px max(14px,env(safe-area-inset-left))}
-#touch{bottom:max(8px,env(safe-area-inset-bottom));left:max(12px,env(safe-area-inset-left));right:max(12px,env(safe-area-inset-right));display:flex;gap:10px}
-#touch button{min-height:58px;border-radius:18px;background:linear-gradient(155deg,#315c6cee,#173849ee);opacity:.94;box-shadow:0 5px 15px #071d2980}
-#touch button:nth-child(3){margin-left:0}
-#touch button[data-action=skill]{margin-left:auto}
-#touch button:last-child{margin-left:auto;background:linear-gradient(155deg,#f0c978,#c98557);color:#173747;border-color:#ffe8a8}
-#touch button[data-action=skill]:not([hidden])+button{margin-left:0}
-#touch button[hidden]{display:none}
+
+/* ---------- HUD ---------- */
+.vitals{display:flex;flex-direction:column}
+.hp-line{display:flex;align-items:baseline;gap:4px}
+.hp-line .heart{color:#ff8f86;font-size:.95em}
+.hp-line .max{font-size:13px;color:#b5ced1}
+meter.low::-webkit-meter-optimum-value,meter.low::-webkit-meter-suboptimum-value,meter.low::-webkit-meter-even-less-good-value{background:#ff6f61}
+meter.low{animation:low-hp 1s ease-in-out infinite}
+@keyframes low-hp{50%{filter:brightness(1.5)}}
+.mp-bar{display:block;width:138px;height:5px;margin-top:4px;border-radius:3px;background:#23485a;overflow:hidden}
+.mp-bar i{display:block;height:100%;background:linear-gradient(90deg,#7fd1ff,#c3a4ff);border-radius:3px}
+.mission{pointer-events:auto;cursor:pointer}
+.weapon-chip img{height:18px;vertical-align:-4px;margin-right:6px}
+.hud-actions .coins{margin-top:13px;color:#f2d38d}
+.touch-mode .key-label,.touch-mode .weapon-chip{display:none}
+.touch-mode .hud-actions button{min-width:48px;font-size:20px;padding:6px 10px}
+.equipment button img{height:24px;vertical-align:middle;margin-right:8px}
+
+/* ---------- Loading ---------- */
+#loading{position:absolute;inset:0;z-index:35;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;background:radial-gradient(ellipse at 50% 40%,#2c5d70,#102d3b 75%);color:#ffe7b0}
+#loading[hidden]{display:none}
+#loading .sail{font-size:56px;animation:bob 1.4s ease-in-out infinite}
+#loading p{margin:0;font-weight:700}
+#loading progress{width:min(320px,70vw);height:12px;accent-color:#f0c978}
+@keyframes bob{50%{transform:translateY(-8px) rotate(-4deg)}}
+
+/* ---------- Rotate hint (phones held upright) ---------- */
+#rotate-hint{display:none;position:absolute;left:50%;transform:translateX(-50%);top:calc(max(12px,env(safe-area-inset-top)) + 64px);z-index:22;width:max-content;max-width:88%;padding:8px 14px;border-radius:999px;background:#132f40e6;color:#f8dca2;font-size:14px;text-align:center;pointer-events:none}
+@media(orientation:portrait){.touch-mode #hud:not([hidden])~#rotate-hint{display:block}}
+
+/* ---------- Touch controls ---------- */
+#touch{position:absolute;inset:0;z-index:25;pointer-events:none;--pad:76px;--big:94px;--mid:76px;--small:60px;--edge-l:max(18px,env(safe-area-inset-left));--edge-r:max(18px,env(safe-area-inset-right));--edge-b:max(14px,env(safe-area-inset-bottom))}
+#touch[hidden]{display:none}
+#touch button[hidden]{display:none!important}
+#touch button{pointer-events:auto;touch-action:none;-webkit-user-select:none;user-select:none;margin:0;padding:0;min-height:0;min-width:0;border-radius:50%;border:2px solid #f7e2b099;background:radial-gradient(circle at 35% 28%,#477b8ef0,#173849f0 70%);color:#ffefc8;box-shadow:0 6px 16px #04121b80,inset 0 2px 0 #ffffff2e;display:flex;flex-direction:column;align-items:center;justify-content:center;font-weight:800;line-height:1;opacity:.92;transition:transform .06s,filter .06s}
+#touch button:hover{background:radial-gradient(circle at 35% 28%,#477b8ef0,#173849f0 70%)}
+#touch button.down{transform:scale(.9);filter:brightness(1.3)}
+#touch .glyph{font-size:30px;pointer-events:none}
+#touch .caption{font-size:12px;margin-top:4px;letter-spacing:-.3px;pointer-events:none}
+#touch img{width:auto;height:auto;max-width:72%;max-height:72%;pointer-events:none;transform:rotate(-35deg);filter:drop-shadow(0 2px 2px #0006)}
+/* Left thumb: direction pad. The whole pad listens so a sliding finger keeps steering. */
+#touch .pad{position:absolute;left:var(--edge-l);bottom:var(--edge-b);display:grid;grid-template-columns:repeat(2,var(--pad));grid-auto-rows:var(--pad);grid-template-areas:'left right';gap:12px;padding:8px;border-radius:30px;background:#0b223026;pointer-events:auto;touch-action:none}
+#touch .pad button{width:100%;height:100%;border-radius:24px}
+#touch [data-action=left]{grid-area:left}
+#touch [data-action=right]{grid-area:right}
+#touch [data-action=up]{grid-area:up}
+#touch [data-action=down]{grid-area:down}
+#touch.free-move .pad{grid-template-columns:repeat(3,calc(var(--pad)*.78));grid-auto-rows:calc(var(--pad)*.78);grid-template-areas:'. up .' 'left . right' '. down .';gap:4px;border-radius:50%}
+#touch.free-move .pad .glyph{font-size:24px}
+/* Right thumb: action, jump, skill and weapon buttons around the corner. */
+#touch .act{position:absolute;inset:0;pointer-events:none}
+#touch .act button{position:absolute}
+#touch [data-action=primary]{right:var(--edge-r);bottom:calc(var(--edge-b) + 18px);width:var(--big);height:var(--big);background:radial-gradient(circle at 35% 28%,#ffe6ab,#d08a55 75%);color:#173747;border-color:#fff1c6}
+#touch [data-action=primary]:hover{background:radial-gradient(circle at 35% 28%,#ffe6ab,#d08a55 75%)}
+#touch [data-action=primary][data-kind=talk],#touch [data-action=primary][data-kind=use],#touch [data-action=primary][data-kind=exit]{background:radial-gradient(circle at 35% 28%,#d9fff1,#4aa597 75%);animation:ready 1.1s ease-in-out infinite}
+#touch [data-action=primary] .caption{font-size:13px}
+#touch [data-action=primary] img{max-width:78%;max-height:62%}
+@keyframes ready{50%{box-shadow:0 0 0 6px #b9ffe755,0 6px 16px #04121b80}}
+#touch [data-action=jump]{right:calc(var(--edge-r) + var(--big) + 14px);bottom:var(--edge-b);width:var(--mid);height:var(--mid)}
+#touch [data-action=jump]::after{content:attr(data-caption);font-size:12px;margin-top:2px}
+#touch [data-action=skill]{right:calc(var(--edge-r) + 10px);bottom:calc(var(--edge-b) + var(--big) + 30px);width:var(--small);height:var(--small);background:radial-gradient(circle at 35% 28%,#e6d4ff,#6f5aa8 75%)}
+#touch [data-action=skill] .glyph{font-size:18px}
+#touch [data-action=cycle]{right:calc(var(--edge-r) + var(--big) + 22px);bottom:calc(var(--edge-b) + var(--mid) + 14px);width:var(--small);height:var(--small)}
+#touch [data-action=cycle] .caption{font-size:10px;margin-top:0}
+#touch [data-action=cycle] img{max-width:66%;max-height:56%}
+
+/* Small phones in landscape (iPhone SE/mini, compact Android). */
+@media(max-height:420px){#touch{--pad:66px;--big:84px;--mid:68px;--small:52px}#touch .pad{gap:10px;padding:6px}}
+/* Tablets: bigger targets, the canvas has letterbox room below. */
+@media(min-width:900px) and (min-height:600px){.touch-mode #touch{--pad:88px;--big:110px;--mid:90px;--small:68px}}
+/* Phones held upright: plenty of room under the game for full-size buttons. */
+/* Phones held upright: the buttons stack in the empty space under the game. */
+@media(orientation:portrait) and (max-width:600px){
+ #touch{--pad:62px;--big:88px;--mid:74px;--small:54px;--edge-b:max(22px,env(safe-area-inset-bottom))}
+ #touch [data-action=primary]{bottom:var(--edge-b)}
+ #touch [data-action=jump]{right:calc(var(--edge-r) + 7px);bottom:calc(var(--edge-b) + var(--big) + 14px)}
+ #touch [data-action=cycle]{right:calc(var(--edge-r) + var(--big) + 12px);bottom:var(--edge-b)}
+ #touch [data-action=skill]{right:calc(var(--edge-r) + var(--big) + 12px);bottom:calc(var(--edge-b) + var(--small) + 12px)}
+}
+
+/* ---------- Notices sit under the HUD on touch screens, away from the thumbs ---------- */
+.touch-mode #notice{bottom:auto;top:calc(max(10px,env(safe-area-inset-top)) + 56px);max-width:70%;font-size:15px;line-height:1.7}
+
+/* ---------- Dialogue: a speech box at the bottom, the scene stays visible ---------- */
+#overlay.talk{align-items:flex-end;background:linear-gradient(transparent 35%,#0b2230b8);backdrop-filter:none}
+/* Keep reward/status announcements below the opaque dialogue box. */
+#app:has(> #overlay.talk:not([hidden])) #notice{z-index:35}
+#overlay.talk .panel{width:min(980px,100%);max-height:none;overflow:visible;padding:16px 22px 14px;border-radius:20px;background:linear-gradient(170deg,#fffaf0,#f2e2c4);color:#2c2622;border:3px solid #3b2b24;box-shadow:0 14px 40px #061a2490}
+#overlay.talk .dialogue{min-height:0;gap:18px;align-items:flex-end}
+#overlay.talk .dialogue-portrait{position:relative;display:block;overflow:hidden;flex:none;width:118px;height:177px;margin-top:-58px;border-radius:16px;background:linear-gradient(#cfe7e2,#9fc7c3);border:3px solid #3b2b24}
+#overlay.talk .dialogue-portrait img{position:absolute;top:0;width:100%;height:100%;max-width:none;margin:0;border:0;border-radius:0;background:none;object-fit:contain}
+#overlay.talk .dialogue-portrait[data-sheet="true"] img{width:300%;object-fit:fill}
+#overlay.talk h2{color:#3b2b24;font-size:20px;margin:2px 0 4px}
+#overlay.talk .eyebrow{color:#a2733e;margin:0;font-size:11px}
+#overlay.talk .dialogue p{color:#2c2622;font-size:21px;line-height:1.55;margin:4px 0}
+#overlay.talk small{color:#7a6a5a}
+#overlay.talk .buttons{margin-top:10px;justify-content:flex-end}
+#overlay.talk button.secondary{background:#e7d6b3;color:#4b3a2b;border-color:#bfa477}
+
+/* ---------- Existing helpers ---------- */
 .control-guide{display:grid;grid-template-columns:auto 1fr auto 1fr;gap:10px 14px;align-items:center;background:#0d293788;border:1px solid #496c76;border-radius:12px;padding:15px}
 .control-guide b{color:#ffe09a;font-size:20px}.control-guide span{color:#d7e7e4}
-@media(max-width:480px){#touch{gap:4px}#touch button{min-width:44px;padding:5px 7px}.hud-actions #bag{display:block}.stats{gap:4px}.stats b{font-size:15px}.stats small{display:none}.mission{min-width:0}.mission strong{font-size:13px}.hud-actions{gap:4px}.hud-actions button{padding:5px;min-width:40px}.weapon-chip{display:none}}
-@media(max-width:900px){#touch{bottom:max(5px,env(safe-area-inset-bottom));left:max(7px,env(safe-area-inset-left));right:max(7px,env(safe-area-inset-right));grid-template-columns:54px 54px 54px 84px;gap:6px}#touch button{font-size:15px;min-height:50px;padding:5px 8px}}
-@media(max-height:520px){#hud{padding-top:max(5px,env(safe-area-inset-top))}.mission span,.stats small,.weapon-chip{display:none}.mission strong{font-size:16px}.stats b{font-size:17px}meter{width:82px}.hud-actions button{min-height:38px;padding:5px 9px}.panel{max-height:calc(100dvh - 16px);padding:18px 22px}.panel h1{font-size:38px}.panel h2{margin:6px 0 10px}.panel p{line-height:1.45}.dialogue{min-height:100px}.buttons{margin-top:8px}#notice{bottom:68px}}
 .ending-portraits{display:flex;justify-content:center;gap:1rem;height:180px;margin:12px 0;background:linear-gradient(90deg,#dbe9dd,#f6e5ba);border-radius:18px;overflow:hidden}
 .ending-portraits img{height:100%;object-fit:contain;width:120px}
 .dialogue img{object-fit:contain}
 .title-art img{object-fit:contain}
+
+/* ---------- Narrow and short screens ---------- */
+@media(max-width:480px){.stats{gap:4px}.stats b{font-size:15px}.stats small{display:none}.mission{min-width:0}.mission strong{font-size:13px}.hud-actions{gap:4px}.hud-actions button{padding:5px;min-width:40px}.weapon-chip{display:none}.control-guide{grid-template-columns:auto 1fr}}
+@media(max-height:520px){
+ #hud{padding-top:max(5px,env(safe-area-inset-top));padding-bottom:10px;background:linear-gradient(#102f40e0,#102f4099 70%,transparent)}
+ .mission span,.level small,.weapon-chip{display:none}.mission strong{font-size:16px}.stats b{font-size:17px}meter,.mp-bar{width:96px}
+ .hud-actions button{min-height:40px;padding:5px 9px}.hud-actions .coins{margin-top:10px}
+ .panel{max-height:calc(100dvh - 16px);padding:18px 22px}.panel h1{font-size:38px}.panel h2{margin:6px 0 10px}.panel p{line-height:1.45}.buttons{margin-top:8px}
+ #notice{bottom:68px}
+ #overlay.talk .panel{padding:12px 18px 10px}
+ #overlay.talk .dialogue-portrait{width:92px;height:138px;margin-top:-46px}
+ #overlay.talk .dialogue p{font-size:18px;line-height:1.45}
+ #overlay.talk .buttons button{min-height:42px;padding:8px 16px}
+ #overlay.title .title-art{width:120px;height:150px;margin-top:4px}
+ #overlay.title .title-art img{width:104px;height:140px;left:8px;top:6px}
+ #overlay.title footer{display:none}
+}
+/* Upright phones: stats and buttons on one row, the stage title on its own row. */
+@media(orientation:portrait) and (max-width:600px){
+ #hud{flex-wrap:wrap;row-gap:4px;padding-bottom:12px}
+ #hud .stats{flex:1 1 auto;min-width:0}
+ #hud .hud-actions{flex:none}
+ #hud .mission{order:3;flex:1 0 100%;max-width:none;min-width:0}
+ #hud .mission small,#hud .mission span{display:none}
+ #hud .mission strong{font-size:15px;margin:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+ meter,.mp-bar{width:84px}
+ #rotate-hint{top:auto;bottom:calc(50% + 120px);font-size:13px}
+}
+/* Keyboard players still see the buttons, smaller and quieter. */
+#app:not(.touch-mode) #touch{--pad:58px;--big:72px;--mid:60px;--small:48px}
+#app:not(.touch-mode) #touch button{opacity:.6}
+#app:not(.touch-mode) #touch .glyph{font-size:22px}

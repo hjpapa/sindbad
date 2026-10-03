@@ -1,0 +1,130 @@
+{
+  "metadata": {
+    "actualWorkers": 1
+  },
+  "startTime": 1791027475982,
+  "duration": 35331.643000000004,
+  "files": [
+    {
+      "fileId": "c119594a44b7c72f06bb",
+      "fileName": "terrain-art.spec.ts",
+      "tests": [
+        {
+          "testId": "c119594a44b7c72f06bb-dab6b33b336da678fa55",
+          "title": "17 real terrain styles load only their pair and preserve platform geometry on phone/tablet",
+          "projectName": "",
+          "location": {
+            "file": "terrain-art.spec.ts",
+            "line": 14,
+            "column": 1
+          },
+          "duration": 4581,
+          "annotations": [],
+          "tags": [],
+          "outcome": "unexpected",
+          "path": [],
+          "ok": false,
+          "results": [
+            {
+              "attachments": [
+                {
+                  "name": "screenshot",
+                  "contentType": "image/png",
+                  "path": "data/7855da3611f2c227ca5b6784c26d6869ae2f2ec2.png"
+                },
+                {
+                  "name": "error-context",
+                  "contentType": "text/markdown",
+                  "path": "data/5d590fff2fa2e8f4e610d44ae4685a2632c55eaa.md"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "testId": "c119594a44b7c72f06bb-bf488dbb3bf483e6c390",
+          "title": "missing terrain fill keeps the loaded half and a playable generated fallback",
+          "projectName": "",
+          "location": {
+            "file": "terrain-art.spec.ts",
+            "line": 135,
+            "column": 48
+          },
+          "duration": 9417,
+          "annotations": [],
+          "tags": [],
+          "outcome": "expected",
+          "path": [],
+          "ok": true,
+          "results": [
+            {
+              "attachments": []
+            }
+          ]
+        },
+        {
+          "testId": "c119594a44b7c72f06bb-6fa12680b2654aef0afc",
+          "title": "missing terrain top keeps the loaded half and a playable generated fallback",
+          "projectName": "",
+          "location": {
+            "file": "terrain-art.spec.ts",
+            "line": 135,
+            "column": 48
+          },
+          "duration": 7949,
+          "annotations": [],
+          "tags": [],
+          "outcome": "expected",
+          "path": [],
+          "ok": true,
+          "results": [
+            {
+              "attachments": []
+            }
+          ]
+        },
+        {
+          "testId": "c119594a44b7c72f06bb-b91c24fa5f787ee44d4e",
+          "title": "missing terrain both keeps the loaded half and a playable generated fallback",
+          "projectName": "",
+          "location": {
+            "file": "terrain-art.spec.ts",
+            "line": 135,
+            "column": 48
+          },
+          "duration": 7970,
+          "annotations": [],
+          "tags": [],
+          "outcome": "expected",
+          "path": [],
+          "ok": true,
+          "results": [
+            {
+              "attachments": []
+            }
+          ]
+        }
+      ],
+      "stats": {
+        "total": 4,
+        "expected": 3,
+        "unexpected": 1,
+        "flaky": 0,
+        "skipped": 0,
+        "ok": false
+      }
+    }
+  ],
+  "projectNames": [
+    ""
+  ],
+  "stats": {
+    "total": 4,
+    "expected": 3,
+    "unexpected": 1,
+    "flaky": 0,
+    "skipped": 0,
+    "ok": false
+  },
+  "errors": []
+}

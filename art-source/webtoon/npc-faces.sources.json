@@ -1,0 +1,217 @@
+{
+  "status": "ART_DRAFT",
+  "cells": [
+    512,
+    768
+  ],
+  "order": [
+    "neutral",
+    "joy",
+    "worried"
+  ],
+  "selected": {
+    "naira": "generated/faces/naira-v2.png",
+    "siren": "generated/faces/siren-v2.png",
+    "rah": "generated/faces/rah.png",
+    "genie": "generated/faces/genie.png",
+    "ariana": "generated/faces/ariana-v2.png",
+    "king": "generated/faces/king.png",
+    "mira": "generated/faces/mira.png",
+    "baru": "generated/faces/baru.png",
+    "captain": "generated/faces/captain.png"
+  },
+  "candidates": [
+    {
+      "key": "naira",
+      "source": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-381f52a7-a216-4b8a-aea0-3b08a96e9d39.png",
+      "file": "generated/faces/naira.png",
+      "prompt": "Create a NEW transparent NPC dialogue expression sprite sheet, 3 columns by 1 row, total 1536 x 768, exact equal 512 x 768 cells. Reference image 1 defines Naira's identity and costume; reference image 2 defines only the project's clean Korean adventure webtoon linework and 2-3 tone cel shading. Keep Naira's existing adult face, deep navy flowing hair, gold coral/pearl hair ornaments, fin-shaped earrings, teal jewel necklace, cream/coral modest draped costume. Three identical waist-up portraits looking slightly RIGHT in 3/4 view, same head size and position, same camera and costume, only the face expression changes. LEFT: calm attentive neutral mouth. MIDDLE: clearly joyful warm smile, smiling eyes. RIGHT: gently worried/surprised, raised inward brows, small parted mouth, child-friendly not frightened. The face must be large and readable in a 92px wide game dialogue portrait. Each entire bust including all hair, head ornaments, shoulders, elbows and garment hem is completely inside its own cell with generous empty transparent margins on EVERY side; bottom is a deliberate clean garment ending with transparent space below. No tail necessary. No sea, bubbles, background, aura, panels, grid lines, letters, numbers, captions, speech bubbles, logos or watermark. Genuine transparent alpha background. Do not cross cell boundaries. Produce exactly three portraits only, evenly spaced.",
+      "sha256": "77e7d858a6f11020d420a60125b8b3de1e4bccdf1844abbf7f9486f65f299a5d",
+      "nativeSize": [
+        1774,
+        887
+      ],
+      "references": [
+        "art-source/webtoon/naira-webtoon.webp",
+        "art-source/webtoon/hero-webtoon.webp"
+      ],
+      "selectionStatus": "rejected: visible cell seam/canvas boundary crossed"
+    },
+    {
+      "key": "naira-v2",
+      "source": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-ed8fe09f-8515-4538-a2bf-77898f8495f8.png",
+      "file": "generated/faces/naira-v2.png",
+      "prompt": "Create a NEW transparent NPC dialogue expression sprite sheet, 3 columns by 1 row, total 1536 x 768, exact equal 512 x 768 cells. Reference image 1 defines Naira's identity and costume; reference image 2 defines only the project's clean Korean adventure webtoon linework and 2-3 tone cel shading. Keep Naira's existing adult face, deep navy flowing hair, gold coral/pearl hair ornaments, fin-shaped earrings, teal jewel necklace, cream/coral modest draped costume. Three identical waist-up portraits looking slightly RIGHT in 3/4 view, same head size and position, same camera and costume, only the face expression changes. LEFT: calm attentive neutral mouth. MIDDLE: clearly joyful warm smile, smiling eyes. RIGHT: gently worried/surprised, raised inward brows, small parted mouth, child-friendly not frightened. The face must be large and readable in a 92px wide game dialogue portrait. Each entire bust including all hair, head ornaments, shoulders, elbows and garment hem is completely inside its own cell with generous empty transparent margins on EVERY side; bottom is a deliberate clean garment ending with transparent space below. No tail necessary. No sea, bubbles, background, aura, panels, grid lines, letters, numbers, captions, speech bubbles, logos or watermark. Genuine transparent alpha background. Do not cross cell boundaries. Produce exactly three portraits only, evenly spaced. CRITICAL CORRECTION: all three busts must be narrower. Reserve the leftmost and rightmost 15% of EACH individual cell completely EMPTY and transparent, creating wide vertical empty gutters between portraits. The bust silhouette occupies only the central 70% of its cell and the middle 80% of its height. Keep arms close to torso; flowing hair must be tucked within shoulders. No clothing, hair or pale alpha glow can enter any gutter. Preserve the same adult identity and modest costume, make facial expressions more distinct. Render THREE isolated non-touching compact busts.",
+      "sha256": "dba27ab5529bdd40d7d7354c5cb92730e6d6ccad210e5fe7f61e3556cb9d69a7",
+      "nativeSize": [
+        1774,
+        887
+      ],
+      "references": [
+        "art-source/webtoon/naira-webtoon.webp",
+        "art-source/webtoon/hero-webtoon.webp"
+      ],
+      "selectionStatus": "selected"
+    },
+    {
+      "key": "siren",
+      "source": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-54bca690-f16b-4e37-8213-455a6a835406.png",
+      "file": "generated/faces/siren.png",
+      "prompt": "Create a NEW transparent NPC dialogue expression sprite sheet, exactly 3 columns and 1 row, total 1536 x 768, equal 512 x 768 cells. Reference 1 supplies the character identity/costume; reference 2 supplies only this original project's bright Korean adventure webtoon crisp outlines and 2-3 tone cel shading. Three identical WAIST-UP compact busts, 3/4 looking slightly RIGHT, identical scale/camera/pose/clothing; only facial expression changes. LEFT calm attentive neutral closed mouth; CENTER clearly joyful smile with smiling eyes; RIGHT gently worried/surprised with raised inward brows and slightly parted mouth. Friendly children's adventure, no fear, blood, wounds or pain. Face large/readable at 92px width. All hair, headgear, shoulders, arms, prop and a deliberate clean garment bottom edge must be inside each own cell. Reserve transparent side margins at least 10% per cell, wide empty vertical gutters, transparent top/bottom margins; arms close to torso, no flowing items entering gutters. Exactly three NON-TOUCHING separate busts. Truly transparent alpha. No background, scenery, glow, aura, frames, gridlines, letters, numbers, labels, logos, watermark or musical symbols. Maintain the same adult Siren, long deep navy hair, gold shell hair ornament and teal jewels, navy/gold/ivory modest robe and short teal scarf. Her small gold lyre is held close to the torso within the cell, no musical notes. Same age, facial shape and costume as reference.",
+      "sha256": "ea7288d500e0fd923b068d34ed14a49c1115747cc07b0215e1cbd700b30dab91",
+      "nativeSize": [
+        1774,
+        887
+      ],
+      "references": [
+        "art-source/webtoon/siren-webtoon.webp",
+        "art-source/webtoon/hero-webtoon.webp"
+      ],
+      "selectionStatus": "rejected: visible cell seam/canvas boundary crossed"
+    },
+    {
+      "key": "rah",
+      "source": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-6c3768e8-1a3c-44d4-b408-1a3be28e634c.png",
+      "file": "generated/faces/rah.png",
+      "prompt": "Create a NEW transparent NPC dialogue expression sprite sheet, exactly 3 columns and 1 row, total 1536 x 768, equal 512 x 768 cells. Reference 1 supplies the character identity/costume; reference 2 supplies only this original project's bright Korean adventure webtoon crisp outlines and 2-3 tone cel shading. Three identical WAIST-UP compact busts, 3/4 looking slightly RIGHT, identical scale/camera/pose/clothing; only facial expression changes. LEFT calm attentive neutral closed mouth; CENTER clearly joyful smile with smiling eyes; RIGHT gently worried/surprised with raised inward brows and slightly parted mouth. Friendly children's adventure, no fear, blood, wounds or pain. Face large/readable at 92px width. All hair, headgear, shoulders, arms, prop and a deliberate clean garment bottom edge must be inside each own cell. Reserve transparent side margins at least 10% per cell, wide empty vertical gutters, transparent top/bottom margins; arms close to torso, no flowing items entering gutters. Exactly three NON-TOUCHING separate busts. Truly transparent alpha. No background, scenery, glow, aura, frames, gridlines, letters, numbers, labels, logos, watermark or musical symbols. Maintain the same adult flame guardian Rah, curly dark hair, teal necklace, navy/gold vest and cream shirt, short red shoulder scarf with gold shoulder ornament. Hold the little warm gold lantern close to torso; no large flames or aura. Same age, face and costume as reference.",
+      "sha256": "c9d2f81f539769828efd9e0c403db142e2be7cedc978ec4eb0e6c86f23f46436",
+      "nativeSize": [
+        1774,
+        887
+      ],
+      "references": [
+        "art-source/webtoon/rah-webtoon.webp",
+        "art-source/webtoon/hero-webtoon.webp"
+      ],
+      "selectionStatus": "selected"
+    },
+    {
+      "key": "siren-v2",
+      "source": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-b95f1d67-4fe7-4be2-8535-fc127a2cc7fc.png",
+      "file": "generated/faces/siren-v2.png",
+      "prompt": "Create a NEW transparent NPC dialogue expression sprite sheet, exactly 3 columns and 1 row, total 1536 x 768, equal 512 x 768 cells. Reference 1 supplies the character identity/costume; reference 2 supplies only this original project's bright Korean adventure webtoon crisp outlines and 2-3 tone cel shading. Three identical WAIST-UP compact busts, 3/4 looking slightly RIGHT, identical scale/camera/pose/clothing; only facial expression changes. LEFT calm attentive neutral closed mouth; CENTER clearly joyful smile with smiling eyes; RIGHT gently worried/surprised with raised inward brows and slightly parted mouth. Friendly children's adventure, no fear, blood, wounds or pain. Face large/readable at 92px width. All hair, headgear, shoulders, arms, prop and a deliberate clean garment bottom edge must be inside each own cell. Reserve transparent side margins at least 10% per cell, wide empty vertical gutters, transparent top/bottom margins; arms close to torso, no flowing items entering gutters. Exactly three NON-TOUCHING separate busts. Truly transparent alpha. No background, scenery, glow, aura, frames, gridlines, letters, numbers, labels, logos, watermark or musical symbols.  Maintain the same adult Siren face, long deep navy hair, gold shell hairpiece and teal jewels, navy/gold/ivory modest robe. IMPORTANT composition is HEAD AND UPPER CHEST only, no hands, arms or lyre in this dialogue sheet. Each bust is only 65% as wide as its cell, centered at cell centers, leaving extra-wide transparent gutters. Hair ends cleanly within the bust. Left/right margins must be completely empty, especially the far right edge. Same identity and costume as reference. Calm, smiling, concerned expressions left to right.",
+      "sha256": "80bcd137533ee85fc42dbf941485efd38a535832ae7befe5f9692ce070f2fc38",
+      "nativeSize": [
+        1774,
+        887
+      ],
+      "references": [
+        "art-source/webtoon/siren-webtoon.webp",
+        "art-source/webtoon/hero-webtoon.webp"
+      ],
+      "selectionStatus": "selected"
+    },
+    {
+      "key": "genie",
+      "source": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-d263286c-4ab0-4f64-b075-09afbdb047ba.png",
+      "file": "generated/faces/genie.png",
+      "prompt": "Create a NEW transparent NPC dialogue expression sprite sheet, exactly 3 columns and 1 row, total 1536 x 768, equal 512 x 768 cells. Reference 1 supplies the character identity/costume; reference 2 supplies only this original project's bright Korean adventure webtoon crisp outlines and 2-3 tone cel shading. Three identical WAIST-UP compact busts, 3/4 looking slightly RIGHT, identical scale/camera/pose/clothing; only facial expression changes. LEFT calm attentive neutral closed mouth; CENTER clearly joyful smile with smiling eyes; RIGHT gently worried/surprised with raised inward brows and slightly parted mouth. Friendly children's adventure, no fear, blood, wounds or pain. Face large/readable at 92px width. All hair, headgear, shoulders, arms, prop and a deliberate clean garment bottom edge must be inside each own cell. Reserve transparent side margins at least 10% per cell, wide empty vertical gutters, transparent top/bottom margins; arms close to torso, no flowing items entering gutters. Exactly three NON-TOUCHING separate busts. Truly transparent alpha. No background, scenery, glow, aura, frames, gridlines, letters, numbers, labels, logos, watermark or musical symbols.  Character: the same friendly ADULT blue-skinned genie Hazil with dark navy turban, gold head jewel, short dark goatee, gold embroidered vest over cream sleeves and navy collar/scarf. HEAD AND SHOULDERS/CHEST only, no hands, floating orb, smoke or tails. Keep the same face and turban as reference, not a famous animated character. Make three compact narrow isolated portrait busts with unusually wide transparent gaps and transparent outer margins. Every shoulder edge and entire turban must fit completely inside its cell.",
+      "sha256": "122be6e5b70eaf9d0987dd07d564903d356f995dd3f466fe4a349632e819b702",
+      "nativeSize": [
+        1774,
+        887
+      ],
+      "references": [
+        "art-source/webtoon/genie-webtoon.webp",
+        "art-source/webtoon/hero-webtoon.webp"
+      ],
+      "selectionStatus": "selected"
+    },
+    {
+      "key": "ariana",
+      "source": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-55ed9951-a4f9-4f7e-9ffd-3f3f39fc1d80.png",
+      "file": "generated/faces/ariana.png",
+      "prompt": "Create a NEW transparent NPC dialogue expression sprite sheet, exactly 3 columns and 1 row, total 1536 x 768, equal 512 x 768 cells. Reference 1 supplies the character identity/costume; reference 2 supplies only this original project's bright Korean adventure webtoon crisp outlines and 2-3 tone cel shading. Three identical WAIST-UP compact busts, 3/4 looking slightly RIGHT, identical scale/camera/pose/clothing; only facial expression changes. LEFT calm attentive neutral closed mouth; CENTER clearly joyful smile with smiling eyes; RIGHT gently worried/surprised with raised inward brows and slightly parted mouth. Friendly children's adventure, no fear, blood, wounds or pain. Face large/readable at 92px width. All hair, headgear, shoulders, arms, prop and a deliberate clean garment bottom edge must be inside each own cell. Reserve transparent side margins at least 10% per cell, wide empty vertical gutters, transparent top/bottom margins; arms close to torso, no flowing items entering gutters. Exactly three NON-TOUCHING separate busts. Truly transparent alpha. No background, scenery, glow, aura, frames, gridlines, letters, numbers, labels, logos, watermark or musical symbols.  Character: the same ADULT mapmaker princess Ariana, dark brown hair in an updo tied with teal ribbon, small GOLD STAR hairpin, teal jewel necklace, short navy/gold cape over modest cream travel shirt, brown corset belt. Three HEAD/SHOULDERS and chest portraits with face taking almost half the bust height. No maps or props or arms spreading outward. A narrow bust occupying central 65% of EACH cell, deliberately large empty transparent margins between portraits and at outer edges. Do not crop any hair or shoulders. Match reference face, age and costume exactly.",
+      "sha256": "594dd515d0bcba86ea128be76a6edde71e90bac71507c7f6a4f60ce47cd96434",
+      "nativeSize": [
+        1774,
+        887
+      ],
+      "references": [
+        "art-source/webtoon/ariana-webtoon.webp",
+        "art-source/webtoon/hero-webtoon.webp"
+      ],
+      "selectionStatus": "rejected: visible cell seam/canvas boundary crossed"
+    },
+    {
+      "key": "king",
+      "source": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-89be1a09-ffe4-4d67-a61e-f0f1811c86f8.png",
+      "file": "generated/faces/king.png",
+      "prompt": "Create a NEW transparent NPC dialogue expression sprite sheet, exactly 3 columns and 1 row, total 1536 x 768, equal 512 x 768 cells. Reference 1 supplies the character identity/costume; reference 2 supplies only this original project's bright Korean adventure webtoon crisp outlines and 2-3 tone cel shading. Three identical WAIST-UP compact busts, 3/4 looking slightly RIGHT, identical scale/camera/pose/clothing; only facial expression changes. LEFT calm attentive neutral closed mouth; CENTER clearly joyful smile with smiling eyes; RIGHT gently worried/surprised with raised inward brows and slightly parted mouth. Friendly children's adventure, no fear, blood, wounds or pain. Face large/readable at 92px width. All hair, headgear, shoulders, arms, prop and a deliberate clean garment bottom edge must be inside each own cell. Reserve transparent side margins at least 10% per cell, wide empty vertical gutters, transparent top/bottom margins; arms close to torso, no flowing items entering gutters. Exactly three NON-TOUCHING separate busts. Truly transparent alpha. No background, scenery, glow, aura, frames, gridlines, letters, numbers, labels, logos, watermark or musical symbols.  Character: the same friendly elderly king with white/gray wavy hair and beard, warm dignified face, gold crown with blue jewel, navy and gold royal robe with cream center and gold clasp. HEAD AND UPPER CHEST only, no hands or scroll. Three especially NARROW busts, all shoulders and crown completely contained in central 65% of each cell, with 15% side margins fully transparent and very wide empty gutters. Busts should NOT fill the cell width. Neutral welcoming attentive face; joyful celebration; mildly concerned for travelers. Not angry.",
+      "sha256": "65b4d609c257ca0050b96b387147ca4b95e6ff2e276682346f32810525940897",
+      "nativeSize": [
+        1774,
+        887
+      ],
+      "references": [
+        "art-source/webtoon/king-webtoon.webp",
+        "art-source/webtoon/hero-webtoon.webp"
+      ],
+      "selectionStatus": "selected"
+    },
+    {
+      "key": "ariana-v2",
+      "source": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-24ecd9f5-8aa3-43e7-ae55-1e48f4170bba.png",
+      "file": "generated/faces/ariana-v2.png",
+      "prompt": "Create a NEW transparent NPC dialogue expression sprite sheet, exactly 3 columns and 1 row, total 1536 x 768, equal 512 x 768 cells. Reference 1 supplies the character identity/costume; reference 2 supplies only this original project's bright Korean adventure webtoon crisp outlines and 2-3 tone cel shading. Three identical WAIST-UP compact busts, 3/4 looking slightly RIGHT, identical scale/camera/pose/clothing; only facial expression changes. LEFT calm attentive neutral closed mouth; CENTER clearly joyful smile with smiling eyes; RIGHT gently worried/surprised with raised inward brows and slightly parted mouth. Friendly children's adventure, no fear, blood, wounds or pain. Face large/readable at 92px width. All hair, headgear, shoulders, arms, prop and a deliberate clean garment bottom edge must be inside each own cell. Reserve transparent side margins at least 10% per cell, wide empty vertical gutters, transparent top/bottom margins; arms close to torso, no flowing items entering gutters. Exactly three NON-TOUCHING separate busts. Truly transparent alpha. No background, scenery, glow, aura, frames, gridlines, letters, numbers, labels, logos, watermark or musical symbols.  Character: the same ADULT mapmaker princess Ariana, dark brown hair in an updo tied with teal ribbon, small GOLD STAR hairpin, teal jewel necklace, short navy/gold cape over modest cream travel shirt, brown corset belt. Three HEAD/SHOULDERS and chest portraits with face taking almost half the bust height. No maps or props or arms spreading outward. A narrow bust occupying central 65% of EACH cell, deliberately large empty transparent margins between portraits and at outer edges. Do not crop any hair or shoulders. Match reference face, age and costume exactly. CRITICAL: previous candidate's LEFT cape entered the adjacent cell. Make ALL THREE busts 20% smaller than normal, substantially narrower cape/shoulders, large empty margins. Sideways silhouette width maximum 360 in each 512 wide cell, absolutely no cape or ribbon near the cell boundaries. Portraits float inside each separate cell, with wide blank transparent gaps. All three shoulders fully visible and not cropped. Do not add text.",
+      "sha256": "d9360f9be074e21972638f8769a226366fa895742bfa3e48c070b9f267f0dc43",
+      "nativeSize": [
+        1774,
+        887
+      ],
+      "references": [
+        "art-source/webtoon/ariana-webtoon.webp",
+        "art-source/webtoon/hero-webtoon.webp"
+      ],
+      "selectionStatus": "selected"
+    },
+    {
+      "key": "mira",
+      "source": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-1524b7c4-26c5-4a21-9940-ffe1f215b113.png",
+      "file": "generated/faces/mira.png",
+      "prompt": "Create a NEW transparent NPC dialogue expression sprite sheet, exactly 3 columns and 1 row, total 1536 x 768, equal 512 x 768 cells. Reference 1 supplies the character identity/costume; reference 2 supplies only this original project's bright Korean adventure webtoon crisp outlines and 2-3 tone cel shading. Three identical WAIST-UP compact busts, 3/4 looking slightly RIGHT, identical scale/camera/pose/clothing; only facial expression changes. LEFT calm attentive neutral closed mouth; CENTER clearly joyful smile with smiling eyes; RIGHT gently worried/surprised with raised inward brows and slightly parted mouth. Friendly children's adventure, no fear, blood, wounds or pain. Face large/readable at 92px width. All hair, headgear, shoulders, arms, prop and a deliberate clean garment bottom edge must be inside each own cell. Reserve transparent side margins at least 10% per cell, wide empty vertical gutters, transparent top/bottom margins; arms close to torso, no flowing items entering gutters. Exactly three NON-TOUCHING separate busts. Truly transparent alpha. No background, scenery, glow, aura, frames, gridlines, letters, numbers, labels, logos, watermark or musical symbols.  Character: the same adult port guide Mira, dark long braid with white flowers and gold rings, warm brown skin, gold jewelry and teal pendant, orange and teal modest sari over cream blouse. HEAD AND UPPER CHEST only, no basket, fruit, scroll or extended arms. Three compact portraits, each 20% SMALLER than a normal cell-filling bust; maximum silhouette width 360 in each 512 cell, large completely transparent side margins, braid close to chest and not crossing boundaries. Same mature face and costume as reference. Neutral thoughtful, joyful warmly smiling, gentle worried expressions.",
+      "sha256": "9c54b340c0c23ef9c76a8cf7fd5d83e7e5d9ac5e46bdef9add8a10e88be4ab6a",
+      "nativeSize": [
+        1774,
+        887
+      ],
+      "references": [
+        "art-source/webtoon/mira-webtoon.webp",
+        "art-source/webtoon/hero-webtoon.webp"
+      ],
+      "selectionStatus": "selected"
+    },
+    {
+      "key": "baru",
+      "source": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-4923048b-d24a-44fd-b1db-e48f189cdc73.png",
+      "file": "generated/faces/baru.png",
+      "prompt": "Create a NEW transparent NPC dialogue expression sprite sheet, exactly 3 columns and 1 row, total 1536 x 768, equal 512 x 768 cells. Reference 1 supplies the character identity/costume; reference 2 supplies only this original project's bright Korean adventure webtoon crisp outlines and 2-3 tone cel shading. Three identical WAIST-UP compact busts, 3/4 looking slightly RIGHT, identical scale/camera/pose/clothing; only facial expression changes. LEFT calm attentive neutral closed mouth; CENTER clearly joyful smile with smiling eyes; RIGHT gently worried/surprised with raised inward brows and slightly parted mouth. Friendly children's adventure, no fear, blood, wounds or pain. Face large/readable at 92px width. All hair, headgear, shoulders, arms, prop and a deliberate clean garment bottom edge must be inside each own cell. Reserve transparent side margins at least 10% per cell, wide empty vertical gutters, transparent top/bottom margins; arms close to torso, no flowing items entering gutters. Exactly three NON-TOUCHING separate busts. Truly transparent alpha. No background, scenery, glow, aura, frames, gridlines, letters, numbers, labels, logos, watermark or musical symbols.  Character: the project's friendly original goblin traveler Baru, orange skin, one small ivory forehead horn, fluffy white hair, pointed ears, large warm eyes, teal robe with gold cloud embroidery, cream collar and dark navy scarf. Respect the reference's identity; this is a fictional goblin, not a religious figure. HEAD AND UPPER CHEST portrait, NO staff, bell, hands or spreading arms. Three compact NARROW complete busts, 20% smaller than cell-filling, maximum width 360 per 512 cell and wide transparent gutters. LEFT calm neutral closed mouth; CENTER joyous open smile; RIGHT concerned with raised inward eyebrows and small open mouth, all friendly not angry/frightening. Same face/costume.",
+      "sha256": "d10c127c22a6656e964e86ca854c8b4e07f2df7b6948ef68bbb92a79dc0646ca",
+      "nativeSize": [
+        1774,
+        887
+      ],
+      "references": [
+        "art-source/webtoon/baru-webtoon.webp",
+        "art-source/webtoon/hero-webtoon.webp"
+      ],
+      "selectionStatus": "selected"
+    },
+    {
+      "key": "captain",
+      "source": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-44ef9f11-cf1d-400c-8c94-8180993fe9f7.png",
+      "file": "generated/faces/captain.png",
+      "prompt": "Create a NEW transparent NPC dialogue expression sprite sheet, exactly 3 columns and 1 row, total 1536 x 768, equal 512 x 768 cells. Reference 1 supplies the character identity/costume; reference 2 supplies only this original project's bright Korean adventure webtoon crisp outlines and 2-3 tone cel shading. Three identical WAIST-UP compact busts, 3/4 looking slightly RIGHT, identical scale/camera/pose/clothing; only facial expression changes. LEFT calm attentive neutral closed mouth; CENTER clearly joyful smile with smiling eyes; RIGHT gently worried/surprised with raised inward brows and slightly parted mouth. Friendly children's adventure, no fear, blood, wounds or pain. Face large/readable at 92px width. All hair, headgear, shoulders, arms, prop and a deliberate clean garment bottom edge must be inside each own cell. Reserve transparent side margins at least 10% per cell, wide empty vertical gutters, transparent top/bottom margins; arms close to torso, no flowing items entering gutters. Exactly three NON-TOUCHING separate busts. Truly transparent alpha. No background, scenery, glow, aura, frames, gridlines, letters, numbers, labels, logos, watermark or musical symbols.  Character: the same friendly mature captain from reference, curly gray hair, full gray beard and mustache, NAVY GOLD TRICORNE hat, navy gold coat over modest cream shirt, brown diagonal leather shoulder strap. HEAD AND UPPER CHEST only, telescope may be omitted in dialogue bust to keep shoulders narrow. Three compact busts 20% SMALLER than cell-filling portraits, maximum width 360 in each 512 cell, large transparent gutters and outer margins. Entire tricorne and both shoulders visible, never clipped or crossing cells. LEFT attentive neutral; CENTER clearly happy open warm smile; RIGHT mildly worried/surprised watching a storm, raised inward brows and small open mouth. Same age/face, no anger.",
+      "sha256": "b09b3d490037af70f6ce5733c925f8ed2ae6d72dd6d818841c977a60ad3258ac",
+      "nativeSize": [
+        1774,
+        887
+      ],
+      "references": [
+        "art-source/webtoon/captain-webtoon.webp",
+        "art-source/webtoon/hero-webtoon.webp"
+      ],
+      "selectionStatus": "selected"
+    }
+  ]
+}

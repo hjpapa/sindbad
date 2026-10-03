@@ -1,5 +1,6 @@
 import {expect,type Page} from '@playwright/test';
 import {maps,type ObjectDef} from '../../src/content/maps';
+import campaign from '../../src/content/stageIndex';
 import {mirrorSolution} from '../../src/core/crystal';
 import type {Save} from '../../src/core/state';
 
@@ -98,5 +99,5 @@ export async function finishJourneyStage(page:Page,beforeExit?:()=>Promise<void>
  if(beforeExit)await beforeExit();
  await moveJourney(page,exit.x,exit.y);await page.keyboard.press('e');
  await expect.poll(async()=>(await readJourney(page)).save.clearedStageIds.includes(map.id)).toBe(true);
- if(map.id!=='S36'){await page.getByRole('button',{name:'다음 스테이지'}).click();await expect.poll(async()=>(await readJourney(page)).stage).not.toBe(map.id);}
+ if(map.id!=='S36'){await page.getByRole('button',{name:'다음 스테이지'}).click();await expect.poll(async()=>(await readJourney(page)).stage).toBe(campaign.find(stage=>stage.id===map.id)!.nextStageId);}
 }

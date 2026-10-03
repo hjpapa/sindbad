@@ -1,5 +1,342 @@
 # PROJECT_STATUS.md
 
+## 최신 실제 상태 · 2026-10-03 · Codex A6 무기7종
+
+### 구현 범위
+
+- 작업 지침3문서 전체와 명세의 웹툰·전투·무기·검수 규칙을 확인해 다음 작업 A6를 진행했다. 기존 사용자 변경·Phaser 3.90.0·의존성/lockfile·저장 형식·W01~W07 ID·손 JSON·판정·공격 시간·표시 크기/회전 규칙을 유지했다. 커밋·push·배포 없음.
+- 내장 imagegen과 프로젝트 자체 hero-webtoon/기존 SVG 참조로 여행자의 곡도·바람 부메랑·불꽃 곡도·폭풍의 창·파도의 활·달빛 방망이·새벽의 검7종을 생성했다. 실제 가로 원본1983×793/활887×1774이며 생성8개(선택7/미선택1)를 바이트 동일 보존했다. 부메랑의 높이가 큰 첫 V자 후보는 낮고 넓은 형태로 다시 생성했다. 원본 이미지와 기존 SVG7개를 삭제하지 않았다.
+- `pack-weapons.py`가 완전한 생성 알파를 보존하며 균일 축소·위치 조정만 적용해 원본640×256/활320×640의 PNG와 동일 RGBA 무손실 WebP7개를 만든다. 실제 원본 손잡이 측정·코드 회전 중심·변환·경계·SVG 해시는 `art-source/weapons/weapons.measurements.json`, 전체 프롬프트/참조/선택/크기/생성 해시는 `weapons.sources.json`이다. 덧칠·알파 추출·실루엣 자르기·비율 늘이기는 하지 않았다.
+- `SIZES`/`runtimeSize`에 같은 게임 키를 등록해160×64/활80×160 런타임7종24,518바이트를 만든다. Phaser의 손 장착/교체 표시와 HUD·장비·터치 아이콘이 새 WebP를 사용한다. 파일 누락 시 기존 SVG로 복구하며 양쪽 무기 파일이 없으면 무기 그림만 숨기고 실제 공격은 유지한다. A1의 JSON 손 좌표·`weaponLooks`·휘두르기·기존 화살/부메랑 투사체는 유지한다.
+- `docs/ART_PROMPTS.md`/`docs/ASSET_REGISTER.md`에 실제 출처·파일·크기·프롬프트·손잡이/변환을 기록했다. **ART_DRAFT 유지**. 기능 구현/브라우저 검증과 사용자 최종 아트 승인은 구별한다.
+
+### 실제 검사 결과
+
+| 명령 | 실제 결과 |
+|---|---|
+| `python scripts/pack-weapons.py` | 통과 · 7무손실 RGBA 동일, 생성8개 바이트 보존 |
+| `python scripts/optimize-webtoon.py` | 통과 · 기존 웹툰38종/4014KiB·지형34종/71,178바이트·무기7종/24,518바이트 |
+| `python scripts/audit-webtoon.py` | 통과 · 기존76일러스트·68지형 파일, 새14무기 파일·투명 경계·불투명 손잡이·8생성/7SVG 해시 |
+| `npm run typecheck` | 통과 · 최종 검사 보완 뒤 |
+| `npm run lint` | 통과 · 최종 검사 보완 뒤 |
+| `npm run test` | 통과 · 17파일96개, 파일 누락 복구·7측정 회전 중심/크기 등록 포함 |
+| `npm run validate:content` | 통과 · 36스테이지·24장면·7무기·7보물·8황금 하트 |
+| `npm run build` | 통과 · 기존 Phaser500KB 청크 경고 유지 |
+| `npx tsx scripts/check-art-budget.ts` | 통과 · 2,803,857 / 8,000,000바이트(2.80MB), WebP7개/SVG 대체물 포함 |
+| `npm run dev -- --port 5175 --strictPort` | 실행 통과 · 소유한 로컬 서버, E2E는별도5174 |
+| `node scripts/mobile-check.mjs http://127.0.0.1:5175` | 통과(exit0) · 최종폰/태블릿 우측252/257px·방향 전환·점프dy−110·첫 해골·선장 첫 대사·오류0 |
+| `node scripts/check-action-art.mjs http://127.0.0.1:5175 A6` | 통과(exit0) · 7무기×좌우×2터치 화면·JSON 손 위치·6행동/6NPC초상·열린 공간 동시 터치dx+52/dy−105.58·오류0 |
+| `npm run test:e2e -- tests/e2e/weapon-art.spec.ts` | 통과(exit0) · 최종2개/2.1분, 실제7이미지 요청·28좌우 포즈/아이콘·7파일 차단/14SVG포즈·전투 보상·저장 재개 |
+| `npm run test:e2e` | 통과(exit0) · 최종41개/37.06분, 실패·불안정·건너뜀0. 새 게임36스테이지 무주입 완주820초 포함 |
+| `python scripts/snapshot-art-validation.py finish a6` | 통과 · 전체 실행 전후 실제438파일 SHA256 모두 동일 |
+| `git diff --check` | 통과 · 최종 문서 포함, 의존성/lockfile 변경 없음 |
+
+초기 빌드는 추가 검사에서 전투 도우미의 인수를3개 전달해 타입 오류가 났고, 첫 추가 E2E는 JSON import attribute가 빠져 실행되지 않았다. 검사만 수정했다. 다음 추가2개는 통과했지만, 긴 무기 끝이 화면 밖으로 잘리는 비교 구도를 개선하려 실제 조작으로 부두 안쪽에서 검사하도록 옮겼다. 이때 원거리 검사 중 첫 해골을 이미 쓰러뜨려 추가 전투에서 같은 보상의 XP를 다시 기대한 검사1개가 실패했다(1통과/1실패). 아직 살아 있는 적을 선택해 실제 처치·새 보상·저장 재개를 검사하도록 보완한 뒤 최종2개를 다시 실행해 모두 통과했다. 게임 보상·전투 코드는 바꾸지 않았다. `a6-{first,second,third}-target.json`, 실패 화면/컨텍스트 `docs/screenshots/art-a6/first-target-failure/`를 보존했다.
+
+### 화면 기록 / 기능 완료 / 최종 아트 / 미검증
+
+- `docs/screenshots/art-a6/{phone,tablet}-W01~W07-{right,left}.png`: 실제 키 입력28포즈. 기존 손 JSON과 좌표 오차<0.0001px, 마지막 회전 각도·실제 요청·장비 아이콘 확인. 검사에는 7무기 저장 픽스처와 움직임 줄이기 설정을 쓰며 캠페인 완주와 구별한다.
+- `docs/screenshots/art-a6/phone-fallback-W01~W07-{right,left}.png`: WebP7개를 의도적으로 차단한14포즈. 기존 SVG로 아이콘과 장착 복구, 실제 적 처치·XP·보상·새로고침 동일성 확인. 의도한 요청 중단은 일반 콘솔 오류 없음 판정과 구별한다.
+- `docs/validation/a6-weapon-art.json`, `a6-weapon-fallback.json`, `a6-target-passed.json`: 최종 실제 관찰/추가 검사 보고서. `weapons.json`:14실제 파일 감사/해시.
+- `docs/screenshots/art-a6/touch/`와 `docs/validation/a6-touch.json`: 실제 CDP 터치46장과 관찰값을 검사 원본 경로에서 바이트 동일 복사했고 해시·원래 경로도 보존했다. 두 화면 각각 별도 열린 공간 dx+52/dy−105.58 성공이다.
+- `docs/validation/a6-mobile.json`: 최종 터치 스모크 출력. 상자 옆 이동+점프는폰dx0/태블릿dx7, dy−110이므로 동시 이동 성공으로 기록하지 않는다. 앞선 스모크의 dx28/29 관찰은 `a6-first-mobile.json`에 별도 보존했다. 최종6화면은 `art-a6/mobile-{phone,tablet}-{start,swing,dialogue}.png`다.
+- 기존 모바일/액션 화면·공통 A5 보고서는 `docs/screenshots/art-a6-before/`/`docs/validation/a6-before/`에 보존했다. A5 고유 전체 보고서/원본은 유지한다.
+- `docs/validation/a6-e2e-full.json`, `a6-final-full-report/`: 최종 전체41개 통과, 실패/불안정/건너뜀0의 실제 JSON/HTML 보고서를 보존했다. 기존 전투·능력·표정·지형·하트·레벨·저장·사망·씬 전환과 새7무기/누락 복구를 최종 코드로 재검증했다.
+- `docs/validation/complete-journey.json`: 새 게임부터 실제 키 입력·저장/장비 주입 없이36스테이지를820초에 완주했다. S16/S32 뒤 새로고침·보상 동일성, 일곱 무기/보물·36클리어·엔딩·자유 탐험 후 S01 재방문, 예외/HTTP 오류0 확인이다. JSON의 저장 스냅샷은 S01 재방문 전 S36 상태이며 재방문은 실제 지도 입력과 S01 입장 검사로 확인했다.
+- `docs/screenshots/art-a6/campaign-S{05,10,15,19,25,29,36}-route.png`: 이번 새 게임 무주입 완주7장. 원래 test-results 경로와 바이트 동일 해시는 `docs/validation/a6-campaign-screenshots.json`에 있다. A6 정상 화면은 좌우28+누락14+모바일6+터치46+완주7=**101장**이며 실패 화면은 별도 하위 폴더다. 과거 공통 모바일3종의 사본은 `art-a6-before/extra-copies/`에 분리 보존했다.
+- `docs/validation/a6-runtime-hashes.json`: 전체 실행 전후 게임/에셋/빌드/스크립트/검사/새원본438파일의 SHA256이 모두 동일했다. 검증 중 게임·에셋·검사 파일을 수정하지 않았다. 문서/보고서/캡처는 검사 산출물이며 이 해시 목록과 구별한다.
+- `docs/validation/a6-checks.json`: 실제 명령 종료/검사 수·예산·미검증 요약. 공통 A3/A4/A5 화면·보고서는 이번 전체 회귀 결과로 갱신됐고 각 작업의 기존 고유 보고서/원본은 보존한다. 소유한5175 개발 서버는 검증 후 종료했다.
+- A6 무기 아트 제작·기능 연결·모사 브라우저·전체 회귀 검증을 완료했다. **ART_DRAFT 유지**하며 사용자 최종 아트 승인과 실기기 검수를 완료로 처리하지 않는다.
+- **미검증**: 실제 휴대폰·태블릿 하드웨어, iOS Safari, 어린이 손 크기/조작성, 발열·장시간 FPS·실제 스피커, 최종 사용자 아트 승인. 이 환경에는 실기기가 없어 Edge의 화면/터치 모사를 사용했다. A7/A8은 미완료다. 배포하지 않았다.
+
+### 다음 한 작업
+
+- `docs/CODEX_ART_TASKS.md`의 A7 투사체·효과를 제작·연결·검증한다. 현재 판정 반경·피해·공격 시각·저장 ID를 유지하며 별도 다음 작업으로 진행한다.
+
+아래는 이전 작업 기록이며 최신 판정은 위 절을 우선한다.
+
+## 최신 실제 상태 · 2026-10-03 · Codex A5 장소별 지형 타일
+
+### 구현 범위
+
+- `AGENTS.md`, 이 문서와 `docs/CODEX_ART_TASKS.md` 전체 및 명세의 관련 지형·웹툰 규칙을 확인해 다음 작업 A5를 진행했다. 기존 사용자 변경·Phaser 3.90.0·의존성/lockfile·저장 형식·발판 판정·오브젝트/보상/아이템 ID를 유지했다. 커밋·push·배포는 하지 않았다.
+- 내장 imagegen으로 기존17개 스타일 `dock, deck, reef, coral, whale, basalt, crystal, cloud, village, warehouse, sand, shadow, jungle, temple, garden, tower, kingdom`의 채움/윗면 **34타일**을 만들었다. 프로젝트 자체 `hero-webtoon`의 외곽선·셀 음영만 참조했다. 불투명 재질이며 인물·글자·로고·외부 작품은 없다.
+- 생성 PNG41개(선택34/미선택7)를 `art-source/terrain/generated/`에 도구 원본과 바이트 동일하게 보존했다. 부두 윗면의 띠 밖 여백/번짐과6종 채움의 반복되는 윗면/테두리 때문에 다시 생성했다. 원본을 삭제하지 않았다. 실제 전체 프롬프트·참조·선택·원본 크기/SHA256은 `terrain.sources.json`이다.
+- 도구 반환 채움은1254×1254이고 윗면은1935×812~2048×768이다. `pack-terrain.py`는 전체 불투명 캔버스를 **512×512/512×136**으로 정규화하고 같은 RGBA의 무손실 WebP를 만든다. 채움은 균등 축소, 윗면은 가로 재질 띠 규격으로 세로 비율도 맞췄다. 덧칠·이음새 블렌딩·그림 잘라내기는 하지 않았다. 원본과 정규화 PNG34개를 보존했다.
+- `SIZES`와 매니페스트 `runtimeSize`에34개 키·크기·출처·ART_DRAFT를 등록했다. 최적화 스크립트가 `public/assets/terrain/`에 **128×128/128×34** 런타임을 만든다. 윗면 아래6px의 어두운 그림자 띠와34개 파일 디코딩을 검사했다. 총 런타임 크기는71,178바이트다.
+- 현재 맵의 두 재질만 로드하고 이전 스타일은 제거한다. 기존 Graphics 대체물을 유지하며 파일 한쪽만 없을 때 정상 파일을 덮어쓰지 않고 빠진 쪽만 생성한다. 물리 발판·윗면의 위치/크기·이동 발판 동기화는 유지했다. 개발용 읽기 전용 스냅샷에 원본 TileSprite 패턴·크기/위치·요청 이미지 관찰값을 추가했다.
+
+### 실제 검사 결과
+
+| 명령 | 실제 결과 |
+|---|---|
+| `python scripts/pack-terrain.py` | 통과 · 34원본 무손실 RGBA 동일, 생성41개 원본 해시 보존 |
+| `python scripts/optimize-webtoon.py` | 통과 · 기존 웹툰38종/4014KiB, 지형34종/71,178바이트 |
+| `python scripts/audit-webtoon.py` | 통과 · 기존76개 일러스트와 지형 원본/런타임68개, 크기·불투명도·무손실 원본·윗면 그림자 |
+| `npm run typecheck` | 통과 · 최종 코드/추가 검사 포함 |
+| `npm run lint` | 통과 · 최종 코드/추가 검사 포함 |
+| `npm run test` | 통과 · 16파일94개, 36맵/17스타일 등록·파일 한쪽 누락 보완 포함 |
+| `npm run validate:content` | 통과 · 36스테이지·24장면·7무기·7보물·8황금 하트 |
+| `npm run build` | 통과 · 기존 Phaser 500KB 초과 청크 경고 유지 |
+| `npx tsx scripts/check-art-budget.ts` | 통과 · 2,778,303 / 8,000,000바이트(2.78MB), 시작 지형 두 파일 포함 |
+| `npm run dev -- --port 5175 --strictPort` | 실행 통과 · 기존5173 보존, E2E 별도5174 |
+| `node scripts/mobile-check.mjs http://127.0.0.1:5175` | 통과(exit0) · 두 화면 CDP 터치, 우측 이동 각252px·방향 전환·점프dy−110·첫 해골 처치·선장 대화·콘솔 오류0 |
+| `npx playwright test tests/e2e/terrain-art.spec.ts` | 통과(exit0) · 추가4개/2.1분, 두 화면17종 순회·발판 정렬·이동/점프·34실제 요청·3종 누락 시 전투/저장 재개 |
+| `npm run test:e2e` | 통과(exit0) · 최종39개/34.58분, 실패·불안정·건너뜀0. 새 게임36스테이지 무주입 완주13.5분 포함 |
+| `npx tsx scripts/check-terrain-motion.ts http://127.0.0.1:5175` | 통과(exit0) · 두 화면 S07의6개 이동 갑판을6시점씩 관찰, 실제 가로/세로 변위>2px, 채움/윗면 정렬 오차 최대0.705/0.526px |
+| `git diff --check` | 통과 · 최종 문서 포함, 의존성/lockfile 변경 없음 |
+
+초기 추가 검사는 세 번 각각3통과/1실패였다. Phaser의 실제 `blob:` 이미지 주소를 파일 주소로 기대했고, TileSprite의 내부 렌더 캔버스 대신 원본 패턴을 관찰해야 했으며, 전체 스테이지 픽스처에 실제 입장 플래그가 빠져 있었다. 파일 요청/디코딩 관찰·원본 패턴 관찰·실제 캠페인 보상 플래그를 사용하도록 검사와 읽기 전용 관찰을 보완한 뒤4개를 통과했다. 게임 해금·물리·보상 코드를 바꾸지 않았다. 실패 보고서는 `docs/validation/a5-{first,second,third}-target.json`, 화면은 `docs/screenshots/art-a5/{first,second,third}-target-failure/`에 보존했다.
+
+첫 전체 실행의 초반 S01~S03 검사는 S02 조개 종 앞에서 실패했다. 검사에서 공격 직전에 방향키를 놓아 정지 상태 자동 조준이 근처 게를 향해 방향을 바꾸는 기존 동작을 확인했다. 방향키를 공격 입력 처리 프레임까지 유지하는 정상 조작으로 검사만 보완했다. 실패 화면/컨텍스트는 `docs/screenshots/art-a5/first-full-failure/`, 중단 기록은 `docs/validation/a5-first-full-interrupted.json`이다. 최초 실행은 전체가 끝나기 전에 중단했으므로 완주/최종 통과 개수를 주장하지 않는다. 보완 뒤 S01~S03 입력 검사1개를1.5분에 통과했고 `a5-input-regression.json`에 실제 보고서를 보존했다. 그 뒤 최종 전체39개를 처음부터 다시 실행해 모두 통과했다.
+
+### 화면 기록 / 기능 완료 / 최종 아트
+
+- `docs/screenshots/art-a5/terrain-repeat-{candidates,runtime}-{1,2,3}.png`: 채움3×3/윗면3회 반복 진단6장. 최종 런타임3장과 실제 부두·정원·신전 화면을 육안 확인했다. 경계 RGB 차이는 줄눈/질감도 포함하는 검수 보조값이며 수학적 픽셀 주기성 판정과 구별한다.
+- `docs/screenshots/art-a5/{phone,tablet}-S{01,02,03,04,05,06,08,09,11,12,13,15,16,23,28,30,34}-*.png`:17스타일×2화면의 실제 지도 순회34장. 최종 `terrain-art.json`은 모든 파일 요청·현재 텍스처2개·발판 위치/크기·윗면 정렬·오류0의 실제 관찰이다. 저장/아이템 해금 픽스처를 명시하며 새 게임 무주입 완주와 구별한다.
+- `docs/screenshots/art-a5/{phone,tablet}-S07-moving-deck.png`, `docs/validation/a5-moving-platforms.json`: 별도 S07 검사2장. 앞선6스테이지/장비/적 보상 픽스처와 실제 이어하기·키보드 조작으로6개 갑판의 실제 XY 움직임과 채움/윗면 정렬을6시점씩 확인했다. 물리 프레임 처리 순서에3px 허용치를 명시했고 실제 최대 오차는 휴대폰0.705/태블릿0.526px다. 판정 위치·크기는 바꾸지 않았다.
+- `docs/screenshots/art-a5/phone-missing-{fill,top,both}.png`, `docs/validation/terrain-fallback-{fill,top,both}.json`: 요청을 의도적으로 중단해 기존 재질 대체물로 전투·처치 보상·경험치·새로고침 재개를 확인했다. 예외0, 요청 중단은 의도한 조건이다.
+- `docs/validation/a5-target-passed.json`, `terrain.json`, `a5-terrain-runtime-repeat.json`: 실제 추가4개 통과 보고서·68개 지형 파일 감사·반복 진단. 추가4개를 최종 전체 실행에서도 모두 통과했다.
+- `docs/validation/a5-e2e-full.json`, `a5-final-full-report/`: 실제 최종 Playwright 보고서39개 통과, 실패/불안정/건너뜀0. 기존 적 행동·NPC 표정·보상·저장·전투·이동·능력·씬 전환도 최종 지형을 적용한 상태로 재검증했다. 공통 `art-a3/`, `art-a4/` 화면과 보고서는 최신 실행으로 갱신됐다.
+- `docs/validation/complete-journey.json`: 최종 코드의 새 게임에서 실제 키보드 입력·저장 주입 없이36스테이지를806초에 완주했다. S16/S32 뒤 새로고침 재개·일곱 무기/보물·36클리어·엔딩·자유 탐험 후 S01 재방문, 예외/HTTP 오류0을 확인했다.
+- `docs/screenshots/art-a5/campaign-S{05,10,15,19,25,29,36}-route.png`: 최종 무주입 완주7장. 원래 test-results 경로와 바이트 동일 보존 해시는 `docs/validation/a5-campaign-screenshots.json`이다. A5 폴더의 정상 화면은 반복6+스타일34+누락3+이동 갑판2+완주7=52장이고 실패 화면은 별도 하위 폴더에 있다.
+- `docs/validation/a5-runtime-hashes.json`: 최종 전체 실행 전후 게임 소스/런타임/빌드247개와 검사 파일35개(합계282)의 바이트 해시가 모두 같았다. 검증 중 게임과 검사 파일을 수정하지 않았다. 새 이동 갑판 관찰 스크립트는 별도의 검증 도구이며 게임 소스/판정을 수정하지 않는다.
+- 이전 모바일6장과 A4 공통 보고서는 `docs/screenshots/art-a5-before/`, `docs/validation/a5-before/`에 보존했다. 출처/이용 조건/원본 크기는 `docs/ART_PROMPTS.md`, `docs/ASSET_REGISTER.md`에 기록했다.
+- `docs/validation/a5-mobile.json`은 최종 실제 터치 출력이다. 이동+점프 샘플은 상자 옆에서dx0/dy−110이므로 동시 이동 성공으로 기록하지 않는다. `docs/screenshots/mobile-{phone,tablet}-{start,swing,dialogue}.png`의 최종6장과 이전6장을 보존했다.
+- A5 기능 구현·모사 브라우저 검증·전체 회귀 검증을 완료했다. **ART_DRAFT 유지**. **미검증**: 실제 휴대폰·태블릿 하드웨어, iOS Safari, 아이의 손 크기/조작성, 발열·장시간 FPS·실제 스피커. 이 환경에서는 실기기에 접근할 수 없어 Edge/CDP 터치·뷰포트 모사를 사용했다. 최종 사용자 아트 승인도 미완료다. A6~A8은 별도 미완료이며 공개 배포는 하지 않았다.
+
+### 다음 한 작업
+
+- `docs/CODEX_ART_TASKS.md`의 A6 무기7종 최종 아트를 제작·연결·검증한다. 현재 무기별 캔버스 비율·손잡이 회전 중심·W01~W07 ID·판정·공격 시간을 유지한다.
+
+아래는 이전 작업 기록이며 최신 판정은 위 절을 우선한다.
+
+## 최신 실제 상태 · 2026-10-03 · Codex A4 NPC 표정 초상
+
+### 구현 범위
+
+- `AGENTS.md`, 이 문서와 `docs/CODEX_ART_TASKS.md` 전체 및 명세의 인물·웹툰·대화 규칙을 확인하고 다음 작업 A4를 진행했다. 사용자 변경·Phaser 3.90.0·의존성/lockfile·저장 형식·대화/오브젝트/보상/아이템 ID를 유지했다. 커밋·push·배포는 하지 않았다.
+- 내장 imagegen으로 나이라·세이렌·라흐·지니 하질·아리아나·왕·미라·바루·선장의 기본/기쁨/걱정 초상 **9종·27셀**을 제작했다. 인물별 기존 원화는 얼굴/의상, 프로젝트 자체 `hero-webtoon`은 화풍 참조다. 상반신·오른쪽 3/4 방향·투명 RGBA·글자/로고/피/상처 없음이며 외부 작품은 참조하지 않았다.
+- 실제 생성 결과는 1774×887이다. 처음 나이라·세이렌·아리아나 후보가 옷/악기로 셀 경계를 넘어 다시 생성했다. 선택9/미선택3 PNG를 `art-source/webtoon/generated/faces/`에 도구 원본과 바이트 동일하게 보존했다. 모든 실제 프롬프트·참조·선택·원본 크기/해시는 `npc-faces.sources.json`에 있다. 원본은 삭제하지 않았다.
+- `pack-npc-faces.py`는 가시 알파 >16의 원본 셀 경계가 비었음을 먼저 확인하고, 완전한 세 셀을 균일 축소·투명 여백으로 배열한다. 실루엣을 자르거나 그림을 덧칠하지 않는다. 무손실 `{key}-faces.webp` 9개는 **1536×768, 셀512×768**이며 `encode-webtoon.py`에서 보이는 RGBA/알파 동일성을 확인했다. 최적화/매니페스트에 키를 등록해 **768×384, 셀256×384** 런타임을 만들었다. 측정 경계는 `npc-faces.measurements.json`이다.
+- 기존 문구를 유지한 채 대사 데이터에 선택적 `[기쁨]`/`[걱정]` 접두 태그를 붙인다. `dialogueArt.ts`가 태그를 먼저 제거한 뒤 실제 화자와 셀을 선택한다. 무태그 줄은 기본 표정으로 돌아가며 `dialogue-text`에 태그가 나타나지 않는다. 신밧드·일지·비슈누 환영은 기존 그림을 유지하고, 같은 대화 안의 아리아나/왕/신밧드도 각자의 초상을 표시한다. 침몰 대화의 세 화자도 구분했다.
+- DOM의 2:3 초상창이 필요한 한 시트만 요청·클리핑하고, 파일 누락은 같은 인물의 기존 초상으로 돌아간다. 표정 시트를 Phaser에 일괄 사전 로드하지 않는다. 대화 다음/전체 생략·정지/재개·보상 흐름은 유지했다. S20의 미라 NPC 전신은 미라 원화로 맞췄고, 보상 알림이 대사를 가리던 실제 화면 문제를 대화창 아래 배치로 보완했다.
+
+### 실제 검사 결과
+
+| 명령 | 실제 결과 |
+|---|---|
+| `python scripts/pack-npc-faces.py` | 통과 · 9시트/27개 완전한 셀, 원본 복사 해시·빈 가시 경계·균일 축소 검사 |
+| `python scripts/encode-webtoon.py` | 통과 · 9종 무손실 인코딩, 보이는 RGBA/알파 동일 |
+| `python scripts/optimize-webtoon.py` | 통과 · 런타임38종, 합계4014KiB |
+| `python scripts/audit-webtoon.py` | 통과 · 원본/런타임76개 디코딩, 54,642,164바이트, 27개 원본/런타임 셀 경계·크기/알파/측정값 검사 |
+| `npm run typecheck` | 통과 · 최종 코드/추가 검사 포함 |
+| `npm run lint` | 통과 · 최종 코드/추가 검사 포함 |
+| `npm run test` | 통과 · 15파일89개, 태그 제거·화자 전환·기본 복귀·9종 실제 대사3표정·S20 인물 일치 포함 |
+| `npm run validate:content` | 통과 · 36스테이지·24장면·7무기·7보물·8황금 하트 |
+| `npm run build` | 통과 · 기존 Phaser 500KB 초과 청크 경고 유지 |
+| `npx tsx scripts/check-art-budget.ts` | 통과 · 최종 2,773,116 / 8,000,000바이트 (2.77MB), 선장 첫 대화 시트도 포함 |
+| `npm run dev -- --port 5175 --strictPort` | 실행 통과 · 기존 5173 보존, E2E 별도5174 |
+| `node scripts/mobile-check.mjs http://127.0.0.1:5175` | 통과(exit0) · 최종 전환 보완 뒤 CDP 터치 두 화면, 우측 이동257/252px·방향 전환·점프dy−110·첫 해골 처치·선장 대화·콘솔 오류0 |
+| `node scripts/check-action-art.mjs http://127.0.0.1:5175` | 통과(exit0) · 7무기×좌우×2터치화면·JSON 손 위치·행동·선장/선원 초상·콘솔/HTTP 오류0. 알림/S20 화면 보완 전 실행 |
+| `npm run test:e2e -- tests/e2e/npc-faces.spec.ts` | 통과(exit0) · 최종 추가3개, 2.2분. 두 화면 27표정·대체 초상·실제 씬 전환6회/480프레임 관찰(로딩30샘플). 최종 전체 실행에서도3개 통과, 로딩29샘플 |
+| `npm run test:e2e` | 통과(exit0) · 최종35개/31.70분, 실패·불안정·건너뜀0. 첫 실행33통과/1실패의 관찰 훅 문제를 보완 후 전체 재실행 |
+| `git diff --check` | 통과 · 최종 문서 포함 |
+
+초기 추가 E2E는 대화가 열리기 전에 보상 상태를 읽어서 한 번 실패했다. 실제 대화 표시를 기다린 뒤 비교하도록 검사 절차를 보완했다. 다음 실행은 구조 오브젝트 ID `S05.rescue`를 보상 ID로 잘못 기대해 실패했고, 실제 기존 ID `S05.rescue.reward`로 검사만 바로잡았다. 그 뒤 추가2개가 통과했다. 게임의 보상/저장 코드는 바꾸지 않았다. 추가 검사는 스테이지·아이템 저장 픽스처와 실제 메뉴/키보드/선물/보스 조작이며, 캠페인 무주입 완주와 구별한다.
+
+첫 전체 실행은 33통과/1실패였다. S31→S32에서 개발용 읽기 전용 `snapshot()`이 이전 씬의 해제된 적 텍스처 높이를 읽어 `sourceSize` 예외를 냈다. 씬이 활성화되고 플레이어 물리가 준비되기 전에는 로딩 스냅샷을 반환하도록 보완했으며, 완주 검사는 다음 스테이지의 정확한 ID를 기다리게 했다. 새 회귀 검사는 실제 지도 버튼으로 S31/S32 등을 6번 전환하며 480프레임을 관찰해 통과했다. 실패 보고서/화면은 `docs/validation/a4-e2e-first-full.json`, `a4-first-full-report/`, `docs/screenshots/art-a4/first-full-failure/`에 보존했다. `docs/validation/a4-transition.json`은 보완 뒤의 실제 결과다.
+
+최종 터치 스모크의 실제 출력은 `docs/validation/a4-mobile.json`이다. 이동+점프 샘플은 상자 옆에서 dx0/dy−110이어서 동시 이동 성공으로 기록하지 않는다. 앞선 7무기 아트 검사의 별도 열린 공간 동시 터치는 `docs/validation/action-art.json`에 실제 값이 있다. 이전 A3 모바일 화면과 A1·A2/초기 A4 화면·보상 검증 기록은 `docs/screenshots/art-a4-before/`, `docs/validation/a4-before/`에 보존했다.
+
+### 화면 기록 / 기능 완료 / 최종 아트
+
+- `docs/screenshots/mobile-{phone,tablet}-{start,swing,dialogue}.png`: 최종 화면 보완 뒤 실제 터치6장.
+- `docs/screenshots/art-a4/{phone,tablet}-*.png`: 최종 실제 대화76장(두 화면의 세 표정·화자 전환), 별도 누락 복구1장. 대화창·초상·대사·버튼이 화면 안에 있고 태그가 출력되지 않음을 확인했다.
+- `docs/screenshots/art-a4/phone-captain-fallback.png`: 요청을 의도적으로 중단해 같은 선장 원화로 대화·전체 생략·목표 저장을 유지한 화면.
+- `docs/validation/npc-faces.json`, `npc-faces-fallback.json`: 최종 대사/화자/표정/실제 이미지 크기·클리핑·보상·저장 재개·오류 관찰. 정상 대화 오류0, 누락 검사는 의도한 선장 시트 요청 중단을 기록한다.
+- `docs/validation/a4-e2e-full.json`, `a4-final-full-report/`: 실제 최종 Playwright 보고서35개 통과, 실패/불안정/건너뜀0. `a4-transition.json`은 최종 전체 실행에서 관찰한6전환/480프레임/로딩29샘플의 오류 없는 결과다.
+- `docs/validation/complete-journey.json`: 최종 코드로 새 게임에서 실제 키보드 입력·저장 주입 없이36스테이지를800초에 완주했다. S16/S32 뒤 새로고침의 보상 동일성, 무기7/보물7/36클리어/엔딩, 자유 탐험 후 S01 재방문을 확인했다. 콘솔 예외/HTTP 오류0.
+- `docs/screenshots/art-a4/campaign-S{05,10,15,19,25,29,36}-route.png`: 최종 무주입 완주의 실제 화면7장. 원래 test-results 경로와 보존 해시는 `docs/validation/a4-campaign-screenshots.json`이다. 최종 A4 폴더의 화면은 대화76+누락1+완주7=84장이고, 첫 실패 화면은 별도 하위 폴더에 보존했다.
+- `docs/validation/a4-runtime-hashes.json`: 전체 실행 전후 게임 소스/런타임/빌드75파일의 바이트 해시가 모두 일치했다. 검증 도중 게임을 수정하지 않았음을 기록했다. 생성 원본 PNG12개도 sources JSON 해시와 일치한다.
+- A4 기능 구현과 모사 브라우저 검증을 완료했다. **ART_DRAFT 유지**. 인물 상반신은 기존 원화와 맞췄지만 사용자 최종 아트 승인·실기기 검수와 구별한다. A5~A8은 미완료다.
+- **미검증**: 실제 휴대폰·태블릿 하드웨어, iOS Safari, 아이의 손 크기/조작성, 발열·장시간 FPS·실제 스피커. 이 환경에서 실기기에 접근할 수 없어 Edge의 터치/뷰포트 모사를 사용했다. 최종 아트 사용자 승인도 미완료다.
+
+### 다음 한 작업
+
+- `docs/CODEX_ART_TASKS.md`의 A5 장소별 지형 타일17스타일을 제작·연결·검증한다. 현재 `terrain.ts` 스타일 키와 코드 대체 렌더링을 유지하며 별도 다음 작업으로 진행한다.
+
+아래는 이전 작업 기록이며 최신 판정은 위 절을 우선한다.
+
+## 최신 실제 상태 · 2026-10-03 · Codex A3 적 행동 10종
+
+### 구현 범위
+
+- 중단했던 A3를 이어 진행했다. `AGENTS.md`, 이 문서와 `docs/CODEX_ART_TASKS.md` 전체 및 명세의 관련 전투·아트 규칙을 확인했다. 기존 사용자 변경·Phaser 3.90.0·의존성·lockfile·저장 형식·오브젝트/보상/아이템 ID를 유지했다. 커밋·push·배포는 하지 않았다.
+- 내장 imagegen으로 해골·산적·경비병·해적 선장·뱀·호랑이·용·게·돌 거인·쿠우라의 대기/공격 예고/공격/평화로운 패배 40셀을 제작했다. 프로젝트 자체 `hero-webtoon`, `enemy-atlas`, `kuura-webtoon`을 참조했다. 오른쪽 방향·투명 RGBA·글자/피/상처 없음. 경계를 넘거나 최종 축소 때 경계에 닿는 후보는 다시 생성했다.
+- 선택 10개와 미선택 8개 PNG는 `art-source/webtoon/generated/enemy-actions/`에 원본 그대로 보존했다. 도구 원본 18개와 SHA256 바이트 동일성을 확인했다. 선택 목록은 `enemy-actions.sources.json`이다. 실제 도구 반환 크기는 1254×1254(2×2, 셀 627px)이며 `pack-enemy-actions.py`가 완전한 정사각 셀을 512px로 균등 축소·재배열했다. 그림을 다시 칠하거나 실루엣을 잘라내지 않았다.
+- `art-source/webtoon/enemy-actions.webp`는 2048×5120, 4열×10행 무손실 원본이다. `enemy-actions.json`에 실제 가시 알파 경계와 40개 기준선·대기 높이를 측정했다. 런타임은 1024×2560, 셀 256px, 428,836바이트다. 최적화가 생성 JSON을 `src/content/enemy-actions.generated.json`에 바이트 그대로 복사하고 감사에서 동일성을 검사한다.
+- `maps.ts`의 선택적 `actionArt`로 기존 적 ID와 전투 종류를 유지하며 행을 연결했다. `updateEnemies()`에서 대기/예고/공격/회복을 0/1/2/0셀로 표시하고, 처치 때 3셀을 보여 준다. 전투 시계·타격 창·판정 중심은 유지했다. 투명 여백 대신 대기 가시 높이로 몸 크기를 맞추고, 각 셀 JSON 기준선과 고정 지면 윗면으로 발을 정렬했다. HP 막대·그림자·타격 숫자는 몸 크기를 기준으로 표시한다.
+- 인간은 무기를 내려놓고 두 손을 든 항복 자세로 남는다. 동물은 편안해진 정화 셀을 900ms 보여 준 뒤 기존 빛 트윈, 마법 적은 소멸 직전 셀을 300ms 보여 준 뒤 빛 트윈을 실행한다. 움직임 줄이기에서도 셀을 먼저 보여 준다. S01 궁수·대장도 해골이므로 기존 인간 분류를 마법으로 바로잡았다. 에셋 요청 실패 때 실제 존재하는 SVG/정지 원화로 플레이를 유지한다.
+
+### 실제 검사 결과
+
+| 명령 | 실제 결과 |
+|---|---|
+| `python scripts/pack-enemy-actions.py` | 통과 · 10종, 40개 완전한 셀, 가시 알파 경계 비어 있음 |
+| `python scripts/encode-webtoon.py` | 통과 · 새 아틀라스 무손실 인코딩, 보이는 RGBA/알파 동일 |
+| `python scripts/optimize-webtoon.py` | 통과 · 29종 런타임, 합계 3392KiB |
+| `python scripts/audit-webtoon.py` | 통과 · 원본/런타임 58개 디코딩, 원본/축소 런타임의 가시 셀 경계·크기·JSON 복사·측정값 검사 |
+| `npm run typecheck` | 통과 |
+| `npm run lint` | 통과 |
+| `npm run test` | 통과 · 14파일 84개, 40프레임 기준선 불변·마법/인간/동물 분류 검사 포함 |
+| `npm run validate:content` | 통과 · 36스테이지·24장면·7무기·7보물·8황금 하트 |
+| `npm run build` | 통과 · 기존 Phaser 500KB 초과 청크 경고 유지 |
+| `npx tsx scripts/check-art-budget.ts` | 통과 · 2,711,231 / 8,000,000바이트 (2.71MB), 최종 빌드 기준 |
+| `npm run dev -- --port 5175 --strictPort` | 실행 통과 · 기존 5173 서버 보존, E2E는 별도 5174 |
+| `node scripts/mobile-check.mjs http://127.0.0.1:5175` | 통과(exit0) · 두 화면 CDP 터치, 우측 이동 각257px, 밀어 방향 전환, 점프 dy −110px, 첫 해골 처치, 선장 대화, 콘솔 오류0 |
+| `npm run test:e2e -- tests/e2e/enemy-actions.spec.ts` | 통과 · 추가 2개, 3.7분. 발의 지면 정렬 보정 전 실행이며 같은 2개를 최종 코드의 아래 전체 실행에서 재통과 |
+| `npm run test:e2e` | 통과(exit0) · 전체 32개, 29.7분 · 새 게임 S01~S36 무주입 완주 13.4분 포함, 실패/flaky/skipped 0 |
+| `git diff --check` | 통과 |
+
+모바일 스모크의 이동+점프 샘플은 상자 옆에서 dx=0, dy=−110이었다. 이동+점프 동시 성공으로 기록하지 않는다. 실제 출력은 `docs/validation/a3-mobile.json`이며 두 화면에서 첫 해골 처치와 실제 선장 대사를 확인했다.
+
+초기 추가 E2E는 Node의 JSON import attribute 누락으로 실행되지 않았다. 이를 수정한 뒤 S01 상자 위의 유효 위치가 검사 이동 도우미의 y 허용 범위를 벗어나 한 번 실패했다. 실제 조작 경로의 접근 높이를 보완하고 추가 2개를 재실행해 통과했다. 첫 패킹에서도 해적 셀의 부츠가 축소 후 경계에 닿아 새 PNG를 생성한 뒤 통과했다. 실패 후보와 원본은 삭제하지 않았다.
+
+최종 전체 실행의 실제 Playwright 보고서는 `docs/validation/a3-e2e-full.json`에 보존했다(32/32, flaky/skipped 0). 추가 아트 검사는 10종×2화면의 실제 대기/예고/공격/회복/패배 프레임과 좌우 전환, 항복/정화/빛 소멸, 보상·경험치의 저장 재개를 통과했고 120개 화면·관찰값·콘솔/HTTP 오류0을 `docs/validation/enemy-art.json`에 기록했다. 아틀라스 요청을 의도적으로 중단한 별도 검사도 SVG로 실제 전투를 유지하고 해골을 빛으로 처리했다.
+
+별도의 새 게임 완주는 저장/장비 주입 없이 정상 키보드 입력으로 S01~S36, S16/S32 뒤 새로고침·이어하기, 일곱 무기·일곱 보물·엔딩·S01 자유 탐험 재방문을 통과했다. 실제 저장·36단계별 시간·오류0은 `docs/validation/complete-journey.json`이다. 검사 중 게임 코드/에셋을 수정하지 않았고 주요 A3 런타임 5개가 전체 실행 시작 전 파일이며 끝난 뒤 바이트 동일함을 `docs/validation/a3-runtime-hashes.json`으로 확인했다. 이전 완주/발 정렬 전 추가 보고서는 `docs/validation/a3-before/`에 보존했다.
+
+### 화면 기록 / 기능 완료 / 최종 아트
+
+- `docs/screenshots/mobile-{phone,tablet}-{start,swing,dialogue}.png`: 최종 발 정렬 후 실제 터치 6개 화면.
+- `docs/screenshots/art-a3-before/mobile-*.png`: 발 정렬 전 화면 보존.
+- `docs/screenshots/art-a3/{phone,tablet}-{skeleton,bandit,guard,pirate,snake,tiger,dragon,crab,stone,kuura}-{idle,telegraph,attack,recover,defeated,right}.png`: 최종 전체 실행의 120개 비교 화면. 전후 모바일 화면과 게·쿠우라·호랑이·경비병·해적 선장 대표 화면을 열어 기준선·크기·방향·항복 자세를 육안 확인했다.
+- `docs/screenshots/art-a3/campaign-S{05,10,15,19,25,29,36}-route.png`: 새 게임 완주의 실제 7장 화면. `test-results`에서 보존 경로로 복사했고 원래/보존 경로는 `docs/validation/a3-campaign-screenshots.json`이다.
+- 추가 검사는 스테이지/장비 저장 픽스처와 실제 키보드 조작으로 네 포즈·회복·좌우·패배·보상 저장 재개를 확인한다. 캠페인 완주와 구별하며 읽기 전용 관찰만 사용한다. 원화 출처·이용 조건은 `docs/ART_PROMPTS.md`, `docs/ASSET_REGISTER.md`에 기록했다.
+- A3 기능은 구현했고 위 범위의 자동·실제 입력 브라우저 검증을 통과했다. **ART_DRAFT 유지**. 세이렌·로크새·박쥐·정령·공중 연은 이번 10종 아틀라스에 포함되지 않아 기존 표시를 유지한다. A4~A8과 최종 아트 승인은 미완료다.
+- **미검증**: 실제 휴대폰·태블릿 하드웨어, iOS Safari, 아이의 손 크기·조작성, 발열·장시간 FPS·실제 스피커. 실기기에 접근할 수 없어 Edge 터치/뷰포트 모사로 검사했다. 사용자 최종 아트 승인도 미완료다. 경계 검사는 가시 알파 >16 기준이며 생성 매트의 미세 알파는 원본에 보존했다.
+
+### 다음 한 작업
+
+- `docs/CODEX_ART_TASKS.md`의 A4 NPC 기본/기쁨/걱정 표정 초상을 제작·연결한다.
+
+아래는 이전 작업 기록이며 최신 판정은 위 절을 우선한다. 공통 화면/검증 파일은 후속 검사로 갱신될 수 있고 A1·A2 전체 결과는 `docs/validation/a1-a2-e2e-full.json`에 보존되어 있다.
+
+## 최신 실제 상태 · 2026-10-03 · Codex A1 신밧드 액션 / A2 선장·선원
+
+### 구현 범위
+- `AGENTS.md`, 이 상태 문서, `docs/CODEX_ART_TASKS.md` 전체와 명세의 구조·0/14/15장 및 관련 아트·초반 스테이지를 읽고 기존 사용자 변경을 유지했다. Phaser 3.90.0·의존성·lockfile·저장 형식·오브젝트/보상 ID는 그대로다. 커밋·push·배포는 수행하지 않았다.
+- 내장 imagegen과 자체 `hero-webtoon.webp` 참조로 `hero-action`, `captain-webtoon`, `sailor-webtoon`을 제작했다. 경계/여백/크기 문제가 있던 액션 후보는 다시 생성했다. 선택/미선택 PNG 8개는 `art-source/webtoon/generated/`와 도구 원본 보관소에 보존했다. 액션의 도구 반환 크기는 1254×1254이며 PNG는 그대로 남겼다. `encode-webtoon.py`에서 전체 시트를 1536×1536(512px 셀)으로 정규화하고 무손실 인코딩했다. NPC 원본은 각각 1024×1536이다. 잘라내기·다시 칠하기 없이 인코딩 입력과 디코딩 WebP의 보이는 RGBA·알파 동일성을 검사했다.
+- `hero-action.json`에 9셀의 발 기준선·무기를 장착할 주먹 중심을 512px 좌표로 측정했다. `heroArt.ts`가 JSON을 직접 사용한다. 표시 144px에서 `x = 중심 + 방향 × (hand.x − 256) × 144/512`, `y = 발 기준 위치 + (hand.y − baseline) × 144/512`로 환산한다. 무기 회전 중심에 별도 reach/lift를 더하지 않아 손에서 떨어지지 않는다.
+- 원본 폴더가 업로드에서 제외될 때 좌표 import가 빠지지 않도록 최적화 스크립트가 `src/content/hero-action.generated.json`을 만든다. 원본 JSON의 바이트를 그대로 복사하고 감사에서 동일성을 검사한다. 생성본 연결 전후 프로덕션 JS/CSS SHA256은 모두 동일하다. 좌표 수정의 기준은 계속 `art-source/webtoon/hero-action.json`이다.
+- 비행 맵 외에는 액션 시트를 로드한다. 숨쉬기 0/1, 상승 2, 낙하 3, 피격 4, 공격 5→6→7(0~80 / 80~200 / 200ms 이후), 신규 보물·장비·유물 획득 기쁨 8을 연결했다. 달리기는 `hero-run`, 비행 탑승은 기존 원화다. 공격 중 캐릭터와 무기는 같은 방향으로 표시되고 물리·공격 판정은 기존 코드다. 스테이지 재시작 때 피격/기쁨 시간을 초기화한다.
+- S01·S03 선장 전신 및 `captain`/`storm` 초상은 전용 선장, S04 전신·`whale` 초상은 전용 선원이다. 기존 라벨이 새 NPC 얼굴을 가리는 것을 화면에서 발견해 해당 두 원화의 라벨만 머리 위로 올렸다.
+- `optimize-webtoon.py`와 매니페스트에 액션 768×768(256px 셀), 두 NPC 각각 512×768을 등록했다. 첫 다운로드 예산 계산에도 새 시트·선장을 포함했다. 원화 출처·크기·이용 조건은 `ART_PROMPTS.md`/`ASSET_REGISTER.md`, 디코딩·해시는 `docs/validation/illustrations.json`이다.
+
+### 실제 검사 결과
+| 명령 | 실제 결과 |
+|---|---|
+| `python scripts/encode-webtoon.py` | 통과 · 3종 무손실 인코딩, 보이는 RGBA/알파 동일 |
+| `python scripts/optimize-webtoon.py` | 통과 · 원본 28종 → 런타임 28종, 총 런타임 2973KiB |
+| `python scripts/audit-webtoon.py` | 통과 · 원본/런타임 56개 디코딩, 새 원화 크기·투명 알파·눈에 보이는 셀 경계·손 픽셀 검사 |
+| `npm run typecheck` | 통과 |
+| `npm run lint` | 통과 · 추가 검사 스크립트도 포함 |
+| `npm run test` | 통과 · 13파일 82개, 공격 시간 경계·JSON 손 좌우 환산 2개 추가 |
+| `npm run validate:content` | 통과 · 36스테이지·24장면·7무기·7보물·8황금 하트 |
+| `npm run build` | 통과 · 기존 Phaser 500KB 초과 청크 경고 유지 |
+| `npx tsx scripts/check-art-budget.ts` | 통과 · 2,438,616바이트 / 8,000,000 (2.44MB) |
+| `npm run dev -- --port 5175 --strictPort` | 실행 통과 · 기존 5173 서버를 건드리지 않고 분리. E2E 서버는 5174 |
+| `node scripts/mobile-check.mjs http://127.0.0.1:5175` | 통과(exit0) · 844×390/1180×820 CDP 터치, 우측 이동 각252px, 손가락 방향 전환, 점프 dy −110px, 첫 해골 처치, 돌아와 선장 첫 대사, 콘솔 오류0 |
+| `node scripts/check-action-art.mjs http://127.0.0.1:5175` | 통과(exit0) · 7종×좌우×2화면 실제 터치 공격/무기 교체, 손 좌표 오차<0.01px, NPC 초상6개, 행동6종×2화면, 콘솔/HTTP 오류0 |
+| `npm run test:e2e` | 통과(exit0) · 전체 30개, 26.0분 · 새 게임 S01~S36 무주입 완주 13.3분 포함 |
+| `npm run test:e2e -- tests/e2e/adventure.spec.ts` | 통과(exit0) · 최종 JSON 생성본 import로 S01~S03/체크포인트·터치·누락 에셋 3개 재검사, 1.6분 |
+| `git diff --check` | 통과 |
+
+기존 모바일 스모크의 이동+점프 측정 위치는 상자 옆이어서 두 화면에서 dx=0, dy=−110을 출력했다. 이 결과를 이동+점프 동시 성공으로 바꾸어 기록하지 않는다. 추가 아트 검사에서는 시작 부두의 열린 공간에서 동시 CDP 터치를 별도로 확인했다: 최종 재검사에서 휴대폰 dx +87px / dy −127.75px, 태블릿 dx +47px / dy −100.75px. 실제 관찰·좌표·46개 화면 경로는 `docs/validation/action-art.json`에 기록했다.
+
+추가 아트 검사는 7무기 보유·S01/S03/S04 저장 픽스처로 원화를 검사하는 것이며 캠페인 완주가 아니다. 실제 입력으로 7종×좌우×두 화면의 무기 손 좌표와 초상을 확인한다. 숨쉬기·점프·낙하·자연 번개 피격·실제 S01 메달 획득 기쁨도 캡처한다. 원화 검사 훅은 읽기 전용이다. 중간 검사에서 짧은 무기 표시 구간 관찰 timeout 1회가 있었고 스크린샷 전에 무기 교체 아이콘이 사라지도록 기다리는 절차를 보완했다. 첫 E2E 실행은 9개 통과 후 NPC 얼굴 가림 수정 때문에 중단했고, 최종 코드로 전체를 다시 실행했다.
+
+전체 실행은 S16/S32 뒤 새로고침·이어하기, 7보물·7무기·엔딩과 S01 재방문까지 정상 입력으로 검증했다. 실제 완주 저장·단계별 시간·오류0은 `docs/validation/complete-journey.json`에 있다. 전체 E2E 후 좌표 import 경로만 생성본으로 정리하고 최적화·감사·타입·린트·82개 단위·콘텐츠·빌드를 재통과했다. 빌드된 게임 JS/CSS 바이트가 동일한 것을 확인했고, 새 import 경로의 S01~S03 3개 E2E(1.6분)와 7종 무기 아트 검사도 다시 통과했다. 전체 30개를 경로 정리 뒤 또 실행한 결과로 쓰지 않는다. 전체 실행의 실제 Playwright 보고서는 `docs/validation/a1-a2-e2e-full.json`(30/30, flaky/skipped 0)에 보존했으며 마지막 HTML 보고서는 추가 3개 재검사 결과다.
+
+스크린샷:
+- `docs/screenshots/mobile-phone-start.png`, `mobile-phone-swing.png`, `mobile-phone-dialogue.png` 및 `mobile-tablet-*.png` — 최종 라벨 조정 후 실제 터치 스모크.
+- `docs/screenshots/art-a1-a2-before/mobile-*.png` — 작업 시작 당시 이전 화면 보존, 전후 크기·방향 비교.
+- `docs/screenshots/art-a1-a2/{phone,tablet}-W01~W07-{right,left}.png` — 28개 무기 비교 화면.
+- `docs/screenshots/art-a1-a2/{phone,tablet}-{S01,S03,S04}-dialogue.png` — 새 초상 6개.
+- `docs/screenshots/art-a1-a2/{phone,tablet}-{idle-a,idle-b,jump,fall,hurt,joy}.png` — 실제 행동 프레임.
+- `docs/screenshots/art-a1-a2-measurement.png` — 원화 좌표 측정용 격자 진단, 게임 에셋에는 글자·격자가 없음.
+- `docs/screenshots/art-a1-a2/phone-weapon-comparison.png`, `tablet-weapon-comparison.png` — 28개 화면을 잘라 나란히 둔 비교표. 원본 스크린샷은 그대로 보존했다.
+
+### 기능 완료 / 최종 아트 / 미검증
+- A1·A2 기능 연결은 구현했고 위 범위의 자동·브라우저 검증을 통과했다. 아트는 **ART_DRAFT 유지**이며 출시/최종 애니메이션 승인과 구별한다. 나머지 적 행동·NPC 표정·지형·무기 최종 원화·효과·아이콘(A3~A8)은 이번 범위가 아니다.
+- **미검증**: 실제 휴대폰·태블릿 하드웨어와 iOS Safari, 어린이 손 크기·조작성, 발열·장시간 FPS, 실제 스피커 음량. 이 환경에서 실기기에 접근할 수 없어 Edge의 터치/뷰포트 모사로 검증했다. 최종 아트 사용자 승인도 미완료다.
+- 생성 시트에는 보이지 않을 정도의 알파 ≤16 매트 픽셀이 일부 있다. 원본을 훼손하지 않고 보존했으며 눈에 보이는 실루엣은 셀 경계를 넘지 않는다. 감사의 경계 판정 임계값도 문서화했다.
+
+### 다음 한 작업
+- `docs/CODEX_ART_TASKS.md`의 A3 적 행동 시트를 제작·연결하고 예고/공격/항복·저주 해제·빛 소멸을 검증한다.
+
+아래는 이전 작업 기록이며 최신 판정은 위 절을 우선한다.
+
+## 최신 실제 상태 · 2026-10-03 · 모바일·태블릿 UI/UX, 무기 연출, 장면 정리 (Claude)
+
+### 구현 범위
+- **터치 조작 재설계** (`src/game/touch.ts`, `src/mobile.css`): 왼손은 ◀ ▶ 방향 패드다. 손가락을 떼지 않고 밀어도 방향이 바뀌고, 수영·비행에서는 4방향 패드가 된다. 오른손은 큰 행동 버튼과 ▲ 점프, 보물 능력(✦), 무기 바꾸기(다음 무기 아이콘)다. 행동 버튼은 무기 아이콘·💬 대화·✋ 살펴보기·⛵ 출발로 바뀐다. 휴대폰 가로·세로와 태블릿 크기를 따로 배치했고 세로 화면에서 버튼이 겹치지 않는 것을 확인했다. `data-action`과 `aria-label` 값은 유지했다.
+- **행동 버튼 규칙** (`stage.ts` `actionAttacks`): 손이 닿는 대상이 없거나 맞혀야 하는 표적(조개·금 간 바위)이면 공격한다. 바로 옆의 적이 공격을 예고하거나 공격 중일 때, 또는 이미 대화한 친구 앞에서 적이 가까울 때도 공격한다(같은 힌트 대화가 계속 다시 열리는 문제 해결). 이야기 장치·선물·출구·구조·밧줄은 항상 상호작용이 먼저이고, 비행 구간은 이 규칙을 쓰지 않는다. 설정에 "공격할 때 가까운 적 쪽으로 돌아보기"(기존에 쓰이지 않던 `aimAssist`)를 연결했다.
+- **터치 문구**: `src/game/controlText.ts`가 휴대폰에서 "E/J/Q/Space/R"을 "행동/무기 버튼/능력"으로 바꾼다. 맵 라벨, 알림, 대사, HUD에 모두 적용된다. 모든 맵 라벨·대사에 키 이름이 남지 않는지 단위 테스트로 검사한다. S01 선장 튜토리얼의 "Space로 뛰어 보렴"(실제로는 ↑가 점프)도 고쳤다.
+- **무기 연출**: 7종 무기 SVG(`public/assets/weapons/`)를 공격할 때 손에 들고 휘두른다(`src/game/weapons.ts`): 곡도·검은 베기 궤적, 창은 찌르기, 방망이는 내려치기, 활은 당기기, 부메랑은 던지기. 이 밖에 공격 때 몸 내밀기, 피격 때 뒤로 밀림·붉은 깜빡임·화면 흔들림, 맞힌 적의 흰 섬광·피해 숫자·별 입자·부드러운 넉백을 더했다. 무기를 바꾸면 머리 위에 아이콘이 뜬다.
+- **장면 정리**:
+  - 장 배경을 3:2 비율로 바로잡았다(16:9로 늘어나 있었다). 카메라를 따라 천천히 움직이게 해 바닥만 미끄러지던 느낌을 없앴다.
+  - 갈색 상자 발판을 장소별 지형 텍스처 17종으로 바꿨다(`src/game/terrain.ts`).
+  - 주인공·적에 그림자를 넣고, 적 체력은 "24 / 24" 글자 대신 막대로 보여 준다.
+  - 디버그 상자 같던 공격 예고를 바닥 경고 타원으로, 잠긴 문을 흐르는 빛 기둥으로 바꿨다. 적은 공격할 때 앞으로 돌진한다.
+  - 점프 중에는 달리기 시트의 공중 프레임을 쓴다.
+  - 라벨은 가까운 것만 보이고 서로 겹치면 우선순위(적 경고 → 가까운 물체)에 따라 숨는다.
+  - 인물 원화는 원래 비율로 표시한다(NPC 3:4, 보스 압축 해소).
+- **휴대폰 UI**:
+  - HUD를 정리했다: 하트 체력 막대, 마력 막대, 아이콘 버튼, 지원 기기의 전체 화면(⛶)과 가로 고정.
+  - 대화창을 화면 아래 말풍선으로 바꿨다. 아무 곳이나 눌러 넘기고, 게임 장면이 뒤에 보인다.
+  - 진행 막대가 있는 로딩 화면, 세로 화면 회전 안내, 홈 화면 설치(manifest·아이콘)를 추가했다.
+  - 확대·텍스트 선택·길게 누르기 메뉴를 막았다. 휴대폰에서는 게임 안 글씨를 1.1~1.45배로 키운다.
+- **휴대폰 다운로드 경량화**: 원화 원본을 `art-source/webtoon/`(무손실, 배포 제외)으로 옮기고 런타임 축소본을 만들었다(`scripts/optimize-webtoon.py`). 원화 합계는 34.6MB → 2.7MB, 첫 화면 다운로드는 7.60MB → 2.25MB(`check-art-budget`)다.
+
+### 이번에 찾아 고친 버그
+1. **S01 되돌아가기 막힘**: 높이 144px 상자(최대 점프 136px) 오른쪽에서는 왼쪽으로 돌아갈 수 없었다. 선장과 대화하지 않고 지나가면 출구 조건(`S01.captainTalk`)을 채울 수 없었다. 상자를 112px로 낮추고 메달 위치를 맞췄다. 바닥 위 블록이 벽이 되는 경우를 `reachability.ts`의 `wallIssues`로 검사한다(36개 맵 중 S01만 해당). 단위 테스트를 추가했다.
+2. **터치로 대화를 열면 첫 대사가 넘어감**: 행동 버튼을 누른 손가락의 click이 새로 열린 말풍선에 떨어졌다. 컨트롤 터치 직후 450ms 동안의 click을 막았다. 휴대폰·태블릿 모두 첫 대사가 보이는 것을 실제 터치로 확인했다.
+3. **NPC가 주인공과 같은 그림**: S01·S03 선장, S04 선원, S10 안내자가 주인공 원화로 그려져 신밧드가 두 명이었다. 지금은 임시 대체 원화를 쓴다(ART_DRAFT, 전용 원화는 Codex A2).
+4. **NPC 옆에서 반격 불가**: 단일 행동 버튼이 대화를 우선해서 생긴 문제다. 이미 대화한 NPC 앞에서는 같은 대화만 다시 열렸다. 위의 행동 버튼 규칙으로 고쳤다. 첫 규칙은 "빈틈" 상태의 연까지 위협으로 보아 S10 선물 앞에서 공격이 나갔다. 전체 E2E에서 이를 발견해 예고·공격 상태만 위협으로 보게 좁혔다.
+6. **E2E 경쟁 조건**: S07 파도 테스트가 4번 중 1번 실패했다. 출렁이는 갑판이 높고 부두에 가까운 순간에는 주인공이 물에 빠지지 않고 걸어서 건넌다(충돌 허용 오차 4px). 게임 문제가 아니라 테스트가 갑판 위상을 기다리지 않은 탓이다. 틈이 넓고 낮을 때 걷도록 바꾸고 5회 반복 통과를 확인했다.
+5. **키보드 전용 안내**: 휴대폰에서도 "E 대화", "J로 이 조개를 쳐 보세요"처럼 키 이름이 나왔다. 위의 터치 문구로 고쳤다.
+
+### 실제 검사 결과 (2026-10-03)
+- `npm run typecheck` 통과 · `npm run lint` 통과 · `npm run test` 12개 파일 80개 통과 · `npm run validate:content` PASS · `npm run build` 통과 · `npx tsx scripts/check-art-budget.ts` 2.25MB/8MB PASS · `python scripts/audit-webtoon.py` 50개 디코딩 PASS.
+- 대상 E2E 9개 통과(adventure 3, controls-ui, mobile-abilities, safety 4).
+- 전체 E2E (`npm run test:e2e`, Edge, 30개):
+  - 1차: 28 통과, 2 실패(26.5분). flight-rings 실패는 첫 행동 버튼 규칙 탓이어서 규칙을 고쳤다. 파도 테스트 실패는 테스트 쪽 경쟁 조건이어서 테스트를 고쳤다.
+  - 수정 뒤 2차: 29 통과, 1 실패(25.8분). 새 게임 S01~S36 전체 완주(complete-journey)는 두 번 모두 통과했다.
+  - 2차에서 실패한 `flame-waves.spec.ts` "S06 furnaces … S07 waves"는 단독 3회 반복에서 3/3 통과했다. 실패 화면은 S07 첫 부두와 출렁이는 갑판 사이(폭 76~124px, 높이차 0~24px)에서 주인공이 물에 세 번 빠진 모습이다. 테스트의 walk 도우미가 위치와 관계없이 430ms마다 점프해서 생기는 간헐적 실패로 판단한다(같은 구간의 다른 테스트에서도 같은 원인을 확인하고 고쳤다).
+  - headless Edge 1280×720에서 S01은 60fps였다. 이 테스트 도우미를 "가장자리에서만 점프"로 바꾸는 일은 남은 작업이다.
+- `node scripts/mobile-check.mjs`(Edge headless, `hasTouch/isMobile`, CDP 실제 터치): 휴대폰 844×390과 태블릿 1180×820에서 다음을 확인했다. 콘솔 오류는 0이다.
+  - 오른쪽 이동 약 250px
+  - 손가락 밀기로 방향 전환
+  - 이동+점프 동시 입력(별도 디버그에서 dx +67, dy −118)
+  - 첫 해골 처치
+  - 선장 앞에서 행동 버튼이 "대화"로 바뀌고 첫 대사 표시
+
+  스크린샷: `docs/screenshots/mobile-phone-*.png`, `mobile-tablet-*.png`.
+- 세로 360×740에서 버튼 8개가 겹치지 않는 것을 확인했다. S02·S04·S05·S06·S08·S10·S11·S16·S25·S31을 휴대폰 화면으로 촬영해 라벨 겹침·무기 아이콘 크기·배너 겹침을 고쳤다.
+- 미검증: 실제 휴대폰·태블릿 실기기(손 크기·FPS·발열·소리)와 iOS Safari 동작은 확인하지 않았다(전체 화면 API가 iPhone에서 제한되므로 홈 화면 설치를 안내한다). 앱 내 브라우저 창은 화면에 그려지지 않을 때 게임 시계가 멈춰서 정밀 확인은 headless Playwright로 했다.
+
+### 기능 완료와 최종 아트 완료의 구분
+- 기능: 모바일 조작·무기 연출·장면 정리는 구현과 자동 검증까지 끝났다. 실기기 검수는 남았다.
+- 아트: 여전히 ART_DRAFT다. 주인공 공격·피격 프레임, 적 행동 프레임, NPC 표정, 선장·선원 전용 원화, 지형 타일·무기·효과·UI 아이콘 최종화가 남았다. 이미지 생성이 필요해 Claude 세션에서는 하지 않았다. 계약과 Codex 지시문은 `docs/CODEX_ART_TASKS.md`에 있다.
+
+### 다음 한 작업
+- `docs/CODEX_ART_TASKS.md` 6절 지시문으로 A1(신밧드 액션 시트)과 A2(선장·선원)를 제작하고, 실제 휴대폰에서 S01~S03을 직접 플레이해 버튼 크기와 손가락 위치를 조정한다.
+
+아래는 이전 작업 기록이며 최신 판정은 위 절을 우선한다.
+
+
 ## 최신 실제 상태 · 2026-10-02 · 후기 기믹과 웹툰 아트
 
 - Git·공개 배포: 게임 변경은 `d66e08594de1626cccb1862680c28b8c26877174`로 커밋해 `hjpapa/sindbad`의 `origin/main`에 푸시했다. Vercel 생산 배포 `dpl_76oR4MFgL4JvQc3TJGcP4wTzjoUQ`는 같은 SHA로 READY다. https://sindbad-orcin.vercel.app 에서 Edge의 실제 입력으로 새 모험·저장·새로고침·이어하기·새 원화 로드·개발 훅 부재를 확인했고 콘솔/HTTP 오류는 0개, 검사 명령 exit0이었다. 증거는 docs/validation/production-smoke.json과 docs/screenshots/production-play.png, production-resume.png다. 공개 주소의 36구간 재완주는 하지 않았으며 전체 완주 결과는 동일 코드의 로컬 E2E다.

@@ -6,6 +6,8 @@ playwright-report/
 .vercel/
 .env*
 SINBAD_CODEX_PACKAGE.zip
+__pycache__/
+*.py[cod]
 
 .vercel
 .env*

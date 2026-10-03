@@ -1,0 +1,13 @@
+{
+  "purpose": "Critical A3 runtime files predate the full E2E run and remain byte-identical after it",
+  "files": {
+    "src/game/stage.ts": "1126f8d5eb663846f7f616738efb4f0c2623f78848ad5fb2277bbdd26d9bc129",
+    "src/content/maps.ts": "6b49f4cecf0c935321404293a5e01a25ef79a34cef0166fc243a1c97db8f38fc",
+    "src/content/enemyActions.ts": "8b1128160ad549e2fdeea4cad0954f7d023014c2d3a19a960aec23fd3277ab54",
+    "src/content/enemy-actions.generated.json": "740d7be9ab80434f372a04b7ad90cb348c7daadaab3714b3338bd8f7b4ffde0c",
+    "public/assets/webtoon/enemy-actions.webp": "aef2117b166d24219f4bc00ff646a31e4f6d2b866d2d77bb4ba369bdfa644c43"
+  },
+  "unchangedAfterFullE2E": true,
+  "allFilesPredateFullE2E": true,
+  "fullE2EStartTime": 1791014442789
+}

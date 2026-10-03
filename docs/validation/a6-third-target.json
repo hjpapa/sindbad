@@ -1,0 +1,268 @@
+{
+  "config": {
+    "configFile": "C:\\code\\code10(sindbad)\\playwright.config.ts",
+    "rootDir": "C:/code/code10(sindbad)/tests/e2e",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": "C:\\code\\code10(sindbad)\\tests\\e2e\\server.setup.ts",
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "html"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "C:/code/code10(sindbad)/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "C:/code/code10(sindbad)/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 240000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.55.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "weapon-art.spec.ts",
+      "file": "weapon-art.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "seven raster weapons and icons stay attached to JSON fists on phone and tablet",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 78098,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 24
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 14
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 11
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 10
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 12
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 10
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 9
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 19
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 9
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 26
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 14
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 14
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 17
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 13
+                    }
+                  ],
+                  "startTime": "2026-10-03T13:18:15.056Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d7edcb92ee43126c0570-f5bd801115a16fa7bf39",
+          "file": "weapon-art.spec.ts",
+          "line": 98,
+          "column": 1
+        },
+        {
+          "title": "all seven missing rasters retain SVG weapons and icons, combat rewards and reload",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 38567,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m6\u001b[39m\nReceived:   \u001b[31m6\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m6\u001b[39m\nReceived:   \u001b[31m6\u001b[39m\n    at C:\\code\\code10(sindbad)\\tests\\e2e\\weapon-art.spec.ts:84:105",
+                    "location": {
+                      "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\weapon-art.spec.ts",
+                      "column": 105,
+                      "line": 84
+                    },
+                    "snippet": "  82 |     await fightJourney(page,'S01.enemy.skeleton.01');\n  83 |     const earned=await readJourney(page);\n> 84 |     expect(earned.save.claimedRewardIds).toContain('S01.enemy.skeleton.01');expect(earned.save.totalXp).toBeGreaterThan(before.save.totalXp);\n     |                                                                                                         ^\n  85 |     await page.reload();await page.getByRole('button',{name:'이어하기 · S01'}).click();\n  86 |     await page.waitForFunction(()=>Reflect.get(window,'__SINBAD_TEST__')?.player?.grounded);\n  87 |     const resumed=await readJourney(page);"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\weapon-art.spec.ts",
+                        "column": 105,
+                        "line": 84
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m6\u001b[39m\nReceived:   \u001b[31m6\u001b[39m\n\n  82 |     await fightJourney(page,'S01.enemy.skeleton.01');\n  83 |     const earned=await readJourney(page);\n> 84 |     expect(earned.save.claimedRewardIds).toContain('S01.enemy.skeleton.01');expect(earned.save.totalXp).toBeGreaterThan(before.save.totalXp);\n     |                                                                                                         ^\n  85 |     await page.reload();await page.getByRole('button',{name:'이어하기 · S01'}).click();\n  86 |     await page.waitForFunction(()=>Reflect.get(window,'__SINBAD_TEST__')?.player?.grounded);\n  87 |     const resumed=await readJourney(page);\n    at C:\\code\\code10(sindbad)\\tests\\e2e\\weapon-art.spec.ts:84:105"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 18
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 16
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 26
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 20
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 14
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 11
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 11
+                    }
+                  ],
+                  "startTime": "2026-10-03T13:19:34.490Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\code\\code10(sindbad)\\test-results\\weapon-art-all-seven-missi-cf874-s-combat-rewards-and-reload\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\code\\code10(sindbad)\\test-results\\weapon-art-all-seven-missi-cf874-s-combat-rewards-and-reload\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\weapon-art.spec.ts",
+                    "column": 105,
+                    "line": 84
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "d7edcb92ee43126c0570-d6ef056691eb1d0fdd96",
+          "file": "weapon-art.spec.ts",
+          "line": 145,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-03T13:18:10.606Z",
+    "duration": 123264.699,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

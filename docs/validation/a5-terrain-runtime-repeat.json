@@ -1,0 +1,512 @@
+[
+  {
+    "key": "dock",
+    "kind": "fill",
+    "file": "generated/dock-fill-v1.png",
+    "nativeSize": [
+      128,
+      128
+    ],
+    "nativeAlphaRange": [
+      255,
+      255
+    ],
+    "horizontalMeanRgbDifference": 18.966145833333332,
+    "verticalMeanRgbDifference": 78.13802083333333
+  },
+  {
+    "key": "dock",
+    "kind": "top",
+    "file": "generated/dock-top-v2.png",
+    "nativeSize": [
+      128,
+      34
+    ],
+    "nativeAlphaRange": [
+      255,
+      255
+    ],
+    "horizontalMeanRgbDifference": 3.4313725490196076,
+    "verticalMeanRgbDifference": 85.05208333333333
+  },
+  {
+    "key": "deck",
+    "kind": "fill",
+    "file": "generated/deck-fill-v1.png",
+    "nativeSize": [
+      128,
+      128
+    ],
+    "nativeAlphaRange": [
+      255,
+      255
+    ],
+    "horizontalMeanRgbDifference": 3.1770833333333335,
+    "verticalMeanRgbDifference": 48.442708333333336
+  },
+  {
+    "key": "deck",
+    "kind": "top",
+    "file": "generated/deck-top-v1.png",
+    "nativeSize": [
+      128,
+      34
+    ],
+    "nativeAlphaRange": [
+      255,
+      255
+    ],
+    "horizontalMeanRgbDifference": 3.549019607843137,
+    "verticalMeanRgbDifference": 62.895833333333336
+  },
+  {
+    "key": "reef",
+    "kind": "fill",
+    "file": "generated/reef-fill-v1.png",
+    "nativeSize": [
+      128,
+      128
+    ],
+    "nativeAlphaRange": [
+      255,
+      255
+    ],
+    "horizontalMeanRgbDifference": 7.278645833333333,
+    "verticalMeanRgbDifference": 11.044270833333334
+  },
+  {
+    "key": "reef",
+    "kind": "top",
+    "file": "generated/reef-top-v1.png",
+    "nativeSize": [
+      128,
+      34
+    ],
+    "nativeAlphaRange": [
+      255,
+      255
+    ],
+    "horizontalMeanRgbDifference": 5.980392156862745,
+    "verticalMeanRgbDifference": 37.481770833333336
+  },
+  {
+    "key": "coral",
+    "kind": "fill",
+    "file": "generated/coral-fill-v1.png",
+    "nativeSize": [
+      128,
+      128
+    ],
+    "nativeAlphaRange": [
+      255,
+      255
+    ],
+    "horizontalMeanRgbDifference": 9.611979166666666,
+    "verticalMeanRgbDifference": 35.447916666666664
+  },
+  {
+    "key": "coral",
+    "kind": "top",
+    "file": "generated/coral-top-v1.png",
+    "nativeSize": [
+      128,
+      34
+    ],
+    "nativeAlphaRange": [
+      255,
+      255
+    ],
+    "horizontalMeanRgbDifference": 8.980392156862745,
+    "verticalMeanRgbDifference": 106.72135416666667
+  },
+  {
+    "key": "whale",
+    "kind": "fill",
+    "file": "generated/whale-fill-v1.png",
+    "nativeSize": [
+      128,
+      128
+    ],
+    "nativeAlphaRange": [
+      255,
+      255
+    ],
+    "horizontalMeanRgbDifference": 5.744791666666667,
+    "verticalMeanRgbDifference": 15.182291666666666
+  },
+  {
+    "key": "whale",
+    "kind": "top",
+    "file": "generated/whale-top-v1.png",
+    "nativeSize": [
+      128,
+      34
+    ],
+    "nativeAlphaRange": [
+      255,
+      255
+    ],
+    "horizontalMeanRgbDifference": 5.137254901960785,
+    "verticalMeanRgbDifference": 70.81770833333333
+  },
+  {
+    "key": "basalt",
+    "kind": "fill",
+    "file": "generated/basalt-fill-v2.png",
+    "nativeSize": [
+      128,
+      128
+    ],
+    "nativeAlphaRange": [
+      255,
+      255
+    ],
+    "horizontalMeanRgbDifference": 4.8828125,
+    "verticalMeanRgbDifference": 5.9296875
+  },
+  {
+    "key": "basalt",
+    "kind": "top",
+    "file": "generated/basalt-top-v1.png",
+    "nativeSize": [
+      128,
+      34
+    ],
+    "nativeAlphaRange": [
+      255,
+      255
+    ],
+    "horizontalMeanRgbDifference": 4.245098039215686,
+    "verticalMeanRgbDifference": 78.97916666666667
+  },
+  {
+    "key": "crystal",
+    "kind": "fill",
+    "file": "generated/crystal-fill-v2.png",
+    "nativeSize": [
+      128,
+      128
+    ],
+    "nativeAlphaRange": [
+      255,
+      255
+    ],
+    "horizontalMeanRgbDifference": 7.739583333333333,
+    "verticalMeanRgbDifference": 6.846354166666667
+  },
+  {
+    "key": "crystal",
+    "kind": "top",
+    "file": "generated/crystal-top-v1.png",
+    "nativeSize": [
+      128,
+      34
+    ],
+    "nativeAlphaRange": [
+      255,
+      255
+    ],
+    "horizontalMeanRgbDifference": 9.5,
+    "verticalMeanRgbDifference": 31.7421875
+  },
+  {
+    "key": "cloud",
+    "kind": "fill",
+    "file": "generated/cloud-fill-v1.png",
+    "nativeSize": [
+      128,
+      128
+    ],
+    "nativeAlphaRange": [
+      255,
+      255
+    ],
+    "horizontalMeanRgbDifference": 4.388020833333333,
+    "verticalMeanRgbDifference": 6.674479166666667
+  },
+  {
+    "key": "cloud",
+    "kind": "top",
+    "file": "generated/cloud-top-v1.png",
+    "nativeSize": [
+      128,
+      34
+    ],
+    "nativeAlphaRange": [
+      255,
+      255
+    ],
+    "horizontalMeanRgbDifference": 6.9901960784313735,
+    "verticalMeanRgbDifference": 15.5859375
+  },
+  {
+    "key": "village",
+    "kind": "fill",
+    "file": "generated/village-fill-v2.png",
+    "nativeSize": [
+      128,
+      128
+    ],
+    "nativeAlphaRange": [
+      255,
+      255
+    ],
+    "horizontalMeanRgbDifference": 5.072916666666667,
+    "verticalMeanRgbDifference": 19.442708333333332
+  },
+  {
+    "key": "village",
+    "kind": "top",
+    "file": "generated/village-top-v1.png",
+    "nativeSize": [
+      128,
+      34
+    ],
+    "nativeAlphaRange": [
+      255,
+      255
+    ],
+    "horizontalMeanRgbDifference": 5.892156862745099,
+    "verticalMeanRgbDifference": 67.5546875
+  },
+  {
+    "key": "warehouse",
+    "kind": "fill",
+    "file": "generated/warehouse-fill-v1.png",
+    "nativeSize": [
+      128,
+      128
+    ],
+    "nativeAlphaRange": [
+      255,
+      255
+    ],
+    "horizontalMeanRgbDifference": 4.760416666666667,
+    "verticalMeanRgbDifference": 13.395833333333334
+  },
+  {
+    "key": "warehouse",
+    "kind": "top",
+    "file": "generated/warehouse-top-v1.png",
+    "nativeSize": [
+      128,
+      34
+    ],
+    "nativeAlphaRange": [
+      255,
+      255
+    ],
+    "horizontalMeanRgbDifference": 2.5980392156862746,
+    "verticalMeanRgbDifference": 76.79166666666667
+  },
+  {
+    "key": "sand",
+    "kind": "fill",
+    "file": "generated/sand-fill-v1.png",
+    "nativeSize": [
+      128,
+      128
+    ],
+    "nativeAlphaRange": [
+      255,
+      255
+    ],
+    "horizontalMeanRgbDifference": 6.09375,
+    "verticalMeanRgbDifference": 7.783854166666667
+  },
+  {
+    "key": "sand",
+    "kind": "top",
+    "file": "generated/sand-top-v1.png",
+    "nativeSize": [
+      128,
+      34
+    ],
+    "nativeAlphaRange": [
+      255,
+      255
+    ],
+    "horizontalMeanRgbDifference": 4.666666666666667,
+    "verticalMeanRgbDifference": 77.9140625
+  },
+  {
+    "key": "shadow",
+    "kind": "fill",
+    "file": "generated/shadow-fill-v1.png",
+    "nativeSize": [
+      128,
+      128
+    ],
+    "nativeAlphaRange": [
+      255,
+      255
+    ],
+    "horizontalMeanRgbDifference": 2.0651041666666665,
+    "verticalMeanRgbDifference": 19.598958333333332
+  },
+  {
+    "key": "shadow",
+    "kind": "top",
+    "file": "generated/shadow-top-v1.png",
+    "nativeSize": [
+      128,
+      34
+    ],
+    "nativeAlphaRange": [
+      255,
+      255
+    ],
+    "horizontalMeanRgbDifference": 10.078431372549021,
+    "verticalMeanRgbDifference": 49.3671875
+  },
+  {
+    "key": "jungle",
+    "kind": "fill",
+    "file": "generated/jungle-fill-v2.png",
+    "nativeSize": [
+      128,
+      128
+    ],
+    "nativeAlphaRange": [
+      255,
+      255
+    ],
+    "horizontalMeanRgbDifference": 4.416666666666667,
+    "verticalMeanRgbDifference": 5.0
+  },
+  {
+    "key": "jungle",
+    "kind": "top",
+    "file": "generated/jungle-top-v1.png",
+    "nativeSize": [
+      128,
+      34
+    ],
+    "nativeAlphaRange": [
+      255,
+      255
+    ],
+    "horizontalMeanRgbDifference": 6.245098039215686,
+    "verticalMeanRgbDifference": 80.921875
+  },
+  {
+    "key": "temple",
+    "kind": "fill",
+    "file": "generated/temple-fill-v1.png",
+    "nativeSize": [
+      128,
+      128
+    ],
+    "nativeAlphaRange": [
+      255,
+      255
+    ],
+    "horizontalMeanRgbDifference": 4.8984375,
+    "verticalMeanRgbDifference": 52.604166666666664
+  },
+  {
+    "key": "temple",
+    "kind": "top",
+    "file": "generated/temple-top-v1.png",
+    "nativeSize": [
+      128,
+      34
+    ],
+    "nativeAlphaRange": [
+      255,
+      255
+    ],
+    "horizontalMeanRgbDifference": 3.225490196078431,
+    "verticalMeanRgbDifference": 74.53645833333333
+  },
+  {
+    "key": "garden",
+    "kind": "fill",
+    "file": "generated/garden-fill-v2.png",
+    "nativeSize": [
+      128,
+      128
+    ],
+    "nativeAlphaRange": [
+      255,
+      255
+    ],
+    "horizontalMeanRgbDifference": 4.25,
+    "verticalMeanRgbDifference": 4.966145833333333
+  },
+  {
+    "key": "garden",
+    "kind": "top",
+    "file": "generated/garden-top-v1.png",
+    "nativeSize": [
+      128,
+      34
+    ],
+    "nativeAlphaRange": [
+      255,
+      255
+    ],
+    "horizontalMeanRgbDifference": 9.754901960784315,
+    "verticalMeanRgbDifference": 80.21614583333333
+  },
+  {
+    "key": "tower",
+    "kind": "fill",
+    "file": "generated/tower-fill-v1.png",
+    "nativeSize": [
+      128,
+      128
+    ],
+    "nativeAlphaRange": [
+      255,
+      255
+    ],
+    "horizontalMeanRgbDifference": 3.8567708333333335,
+    "verticalMeanRgbDifference": 17.739583333333332
+  },
+  {
+    "key": "tower",
+    "kind": "top",
+    "file": "generated/tower-top-v1.png",
+    "nativeSize": [
+      128,
+      34
+    ],
+    "nativeAlphaRange": [
+      255,
+      255
+    ],
+    "horizontalMeanRgbDifference": 3.0098039215686274,
+    "verticalMeanRgbDifference": 33.171875
+  },
+  {
+    "key": "kingdom",
+    "kind": "fill",
+    "file": "generated/kingdom-fill-v2.png",
+    "nativeSize": [
+      128,
+      128
+    ],
+    "nativeAlphaRange": [
+      255,
+      255
+    ],
+    "horizontalMeanRgbDifference": 4.841145833333333,
+    "verticalMeanRgbDifference": 13.169270833333334
+  },
+  {
+    "key": "kingdom",
+    "kind": "top",
+    "file": "generated/kingdom-top-v1.png",
+    "nativeSize": [
+      128,
+      34
+    ],
+    "nativeAlphaRange": [
+      255,
+      255
+    ],
+    "horizontalMeanRgbDifference": 4.0,
+    "verticalMeanRgbDifference": 75.35677083333333
+  }
+]

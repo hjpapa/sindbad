@@ -1,0 +1,380 @@
+{
+  "recordedBeforeFullRun": "2026-10-03T09:11:06.870428+00:00",
+  "files": [
+    {
+      "path": "dist/assets/index-C7iIYZ8F.js",
+      "sha256": "fed16b9f9c20d574f2f552ffa15315f0f2f18f3f649a68b6de083a746a6316bb",
+      "bytes": 205018
+    },
+    {
+      "path": "dist/assets/index-Dtc3v8_n.css",
+      "sha256": "be2da55cb0e268f0b3221621be2a1d573192c8cadad1d477c320a11b07db6a58",
+      "bytes": 16686
+    },
+    {
+      "path": "dist/assets/phaser-Czz4FBZH.js",
+      "sha256": "a457e09aa916bbe0c7669ed49cddb5ece24db69f11f0c4a2f96fa7b7e6290051",
+      "bytes": 1481772
+    },
+    {
+      "path": "public/assets/webtoon/ariana-faces.webp",
+      "sha256": "face1f1e5f5778e7ceecca0058e74ba43e33631af3a77597be4f1d3298b8927b",
+      "bytes": 64752
+    },
+    {
+      "path": "public/assets/webtoon/ariana-webtoon.webp",
+      "sha256": "e6d3234506fee15011ea4f4425fc70d719df7c678397716c936e73ab13967a86",
+      "bytes": 58148
+    },
+    {
+      "path": "public/assets/webtoon/baru-faces.webp",
+      "sha256": "9203f4d6e8806161c8108457bf6c1310cba583d0fbbf3b657c4e8a7a851f1c52",
+      "bytes": 77116
+    },
+    {
+      "path": "public/assets/webtoon/baru-webtoon.webp",
+      "sha256": "c39bcac0eb640ab68e8a537e70ab51df6c49f70f8cb209d842aa8e4cc76620c0",
+      "bytes": 110472
+    },
+    {
+      "path": "public/assets/webtoon/captain-faces.webp",
+      "sha256": "f251e45c95883770d3e3245e29a8e496381b6877857644ff66c65234448d3eb8",
+      "bytes": 57866
+    },
+    {
+      "path": "public/assets/webtoon/captain-webtoon.webp",
+      "sha256": "4b7d67ac7cb0841ae3e14474b56bbf6a740e8418dc466bc3afb7f0579c6a6e7c",
+      "bytes": 66296
+    },
+    {
+      "path": "public/assets/webtoon/chapter-1.webp",
+      "sha256": "c8c0db1e61208972a90a7fdf2060b3342cb0b1190f5166db4385e75ef4271b2a",
+      "bytes": 194742
+    },
+    {
+      "path": "public/assets/webtoon/chapter-2.webp",
+      "sha256": "1e538e6cb03814b6a75ad84fe95674d2877d25bd78c2b95fb8c6d76415018ae8",
+      "bytes": 136070
+    },
+    {
+      "path": "public/assets/webtoon/chapter-3.webp",
+      "sha256": "c8c38ace3f182e49edfc7b3fa42e1a50c3ca0de26bea2a2c51f179033da94a2f",
+      "bytes": 243064
+    },
+    {
+      "path": "public/assets/webtoon/chapter-4.webp",
+      "sha256": "e7dced3a596144e79155215d9e5396eaeb9d951b3252f673089c75344d25b9e7",
+      "bytes": 99222
+    },
+    {
+      "path": "public/assets/webtoon/chapter-5.webp",
+      "sha256": "367d9b8831ac89f064647ed987c429d23782c1cf8972191ba73e7051f057dcc6",
+      "bytes": 151480
+    },
+    {
+      "path": "public/assets/webtoon/chapter-6.webp",
+      "sha256": "b0f514cfb81676601e8faff8f8d75f9a8b1404b6b5632351d6d5f4adb906a775",
+      "bytes": 183486
+    },
+    {
+      "path": "public/assets/webtoon/chapter-7.webp",
+      "sha256": "7656bb9c98829e35a8879d7fe3123b96c3184fac6202c9a9c5e0343f2dbe45ee",
+      "bytes": 156292
+    },
+    {
+      "path": "public/assets/webtoon/chef-webtoon.webp",
+      "sha256": "10082270c85f332cca5263809775da3a2f530640e414f1b9d32cda237ddb2636",
+      "bytes": 74986
+    },
+    {
+      "path": "public/assets/webtoon/crab-webtoon.webp",
+      "sha256": "3f663f4a3c42afefcda65d4e7e0b6d6131c2ff01197098b1915be098f9aaa5ad",
+      "bytes": 46830
+    },
+    {
+      "path": "public/assets/webtoon/elephant-webtoon.webp",
+      "sha256": "165f16330c060a1a4b4ffe71a1fcb1290a8f143926cd3daa023efa93406a7579",
+      "bytes": 41554
+    },
+    {
+      "path": "public/assets/webtoon/enemy-actions.webp",
+      "sha256": "aef2117b166d24219f4bc00ff646a31e4f6d2b866d2d77bb4ba369bdfa644c43",
+      "bytes": 428836
+    },
+    {
+      "path": "public/assets/webtoon/enemy-atlas.webp",
+      "sha256": "48abeb651acd61e466895324361a7d9b2e56688174e33d152ea8294d79200690",
+      "bytes": 160690
+    },
+    {
+      "path": "public/assets/webtoon/genie-faces.webp",
+      "sha256": "9f6dc8d342fe8b8a2c04c2329892a91efcfd040bf0fb7c59f5e2d2a08d613cb3",
+      "bytes": 71974
+    },
+    {
+      "path": "public/assets/webtoon/genie-webtoon.webp",
+      "sha256": "58512f3ca1b73e600cdf0aa7b27098c0bb418802b7634c0e6f4c9602e09bd8af",
+      "bytes": 113808
+    },
+    {
+      "path": "public/assets/webtoon/hero-action.webp",
+      "sha256": "8b4c5d84d516ea9f7da89a68704b2830e9e5f21d682e5ba6cf53785684ba85ea",
+      "bytes": 119426
+    },
+    {
+      "path": "public/assets/webtoon/hero-run.webp",
+      "sha256": "5ba847855b36a337390e42c7dfbaaecced114b13de6425a0a6d26fb61323a66b",
+      "bytes": 96484
+    },
+    {
+      "path": "public/assets/webtoon/hero-webtoon.webp",
+      "sha256": "70d27188663d99d1bb43bf72ac3026e9903993e8dec214d69b2d8cc59ba4fbb4",
+      "bytes": 49532
+    },
+    {
+      "path": "public/assets/webtoon/king-faces.webp",
+      "sha256": "3c62e8d038f768aada369d5f09fdab1991e35cd5aa9d785af979a9985da2d3c6",
+      "bytes": 69350
+    },
+    {
+      "path": "public/assets/webtoon/king-webtoon.webp",
+      "sha256": "73e29774d44ab1af99c3153f90be3a6722eb85648b0f5980dedd70e9aaff8ef9",
+      "bytes": 63932
+    },
+    {
+      "path": "public/assets/webtoon/kuura-webtoon.webp",
+      "sha256": "d1fa9e621fbf40e0f0a02f8b7389cca19c6b104980774616cc426284b0104519",
+      "bytes": 101846
+    },
+    {
+      "path": "public/assets/webtoon/mira-faces.webp",
+      "sha256": "cf548931570171fe67450f467169e8ff6a0fb990319547b05d065205256cd388",
+      "bytes": 62164
+    },
+    {
+      "path": "public/assets/webtoon/mira-webtoon.webp",
+      "sha256": "34e1cfb40ac31bb88f5a458ddc51c99685ee74c77404f749cc9eefd4ea1a7541",
+      "bytes": 67924
+    },
+    {
+      "path": "public/assets/webtoon/naira-faces.webp",
+      "sha256": "c6b350f93501f1d73a38581c8cebaa9917368c932df19d201f9931865f8d0cb0",
+      "bytes": 73052
+    },
+    {
+      "path": "public/assets/webtoon/naira-webtoon.webp",
+      "sha256": "e06517aabf3e4b96b778c074282fc6e5df43ffb87b87b661aa83ed031bd2adea",
+      "bytes": 114308
+    },
+    {
+      "path": "public/assets/webtoon/rah-faces.webp",
+      "sha256": "2da4e090a9f7bd679136c751e2647ff052185b7ea055a1d5d2683eb4c4f98567",
+      "bytes": 91494
+    },
+    {
+      "path": "public/assets/webtoon/rah-webtoon.webp",
+      "sha256": "34adb5cf5b59ebb6440cc99df2a970f75c8d4ac22c439834e9f8c5e07310f2d0",
+      "bytes": 137152
+    },
+    {
+      "path": "public/assets/webtoon/roc-webtoon.webp",
+      "sha256": "9789b4bafb31dcadda1d5af62d093acf918038a9c3e99da76c02c674b458339a",
+      "bytes": 101806
+    },
+    {
+      "path": "public/assets/webtoon/sailor-webtoon.webp",
+      "sha256": "6a8d99318aa0a0d2d786393825506395f323d325ff3f7f648c43850c5cbb3f47",
+      "bytes": 57238
+    },
+    {
+      "path": "public/assets/webtoon/siren-faces.webp",
+      "sha256": "846f26ecaca7b54bbd6ecdc30af93fa0cd3d6e8608ab12940720053e53ab6133",
+      "bytes": 69182
+    },
+    {
+      "path": "public/assets/webtoon/siren-webtoon.webp",
+      "sha256": "5bd8adc19bac85099577b68ae6449e88ccf29110a84216be5645295564d4c98c",
+      "bytes": 126080
+    },
+    {
+      "path": "public/assets/webtoon/villager-webtoon.webp",
+      "sha256": "f81cb60448a9f319a2da8cc83e3e193fcbc8348e45dcf693bf65556600898ff4",
+      "bytes": 59760
+    },
+    {
+      "path": "public/assets/webtoon/whale-webtoon.webp",
+      "sha256": "270c9ac8f0973f1cc0127b52698fc0f49d7dbcffce871867dcd3024302e7965d",
+      "bytes": 112596
+    },
+    {
+      "path": "src/content/assets.manifest.ts",
+      "sha256": "fde31ee579456712676ef46192a81937f3fe2d4eff6a12160d258dfa52fc0dcd",
+      "bytes": 4755
+    },
+    {
+      "path": "src/content/campaign.json",
+      "sha256": "99ebb2cf2184801fbd56c2e9fd33d35907e47a807fe0563f13ea3da23a8ad1a8",
+      "bytes": 40997
+    },
+    {
+      "path": "src/content/dialogues.ko.ts",
+      "sha256": "284eb23a2b7c20ace1ade00cc754008bcb8e33f15195c6f56e76d4194a8aebd9",
+      "bytes": 7274
+    },
+    {
+      "path": "src/content/enemy-actions.generated.json",
+      "sha256": "740d7be9ab80434f372a04b7ad90cb348c7daadaab3714b3338bd8f7b4ffde0c",
+      "bytes": 6328
+    },
+    {
+      "path": "src/content/enemyActions.ts",
+      "sha256": "8b1128160ad549e2fdeea4cad0954f7d023014c2d3a19a960aec23fd3277ab54",
+      "bytes": 1369
+    },
+    {
+      "path": "src/content/finalStages.ts",
+      "sha256": "b86e5976cbc81d5645a70f030fdc5290250e8b8afc18d45797906ccd2eb5e06d",
+      "bytes": 24075
+    },
+    {
+      "path": "src/content/hero-action.generated.json",
+      "sha256": "f6fdc7c4cfb7aa3e61a4e426e16bd5ccbe9108007e9128279ec3ff11eb164f4d",
+      "bytes": 390
+    },
+    {
+      "path": "src/content/items.ts",
+      "sha256": "3a2080600bc372b28640af626df61958a3a04cca42db05f0e9577e6e5e2bae95",
+      "bytes": 2045
+    },
+    {
+      "path": "src/content/maps.ts",
+      "sha256": "6b49f4cecf0c935321404293a5e01a25ef79a34cef0166fc243a1c97db8f38fc",
+      "bytes": 16949
+    },
+    {
+      "path": "src/content/reachability.ts",
+      "sha256": "7af571d1ec39f6a170001c2d886d22f4b5bd9cc90f4d6e5b2b8c0f3345d212bf",
+      "bytes": 5464
+    },
+    {
+      "path": "src/content/stageIndex.ts",
+      "sha256": "76c3c20653293a27cc0a33a2fdb6bcab53dae838012a7f07f78b496948280771",
+      "bytes": 693
+    },
+    {
+      "path": "src/content/storyDesign.ts",
+      "sha256": "3eb84d45d79a781efe22ec2dc1846b2fb0ede551e6d396e46554dc12617c1cc8",
+      "bytes": 5359
+    },
+    {
+      "path": "src/content/validate.ts",
+      "sha256": "ad1eef46b1a197c86a842734a483be473e4d01318a6ef2e8d7fc33dff6b2b110",
+      "bytes": 7914
+    },
+    {
+      "path": "src/core/adventure.ts",
+      "sha256": "f700d1f0c308f1ba16d9ae5b7ec612a7161c0cc2579fefca19d6715172a6b1d9",
+      "bytes": 2073
+    },
+    {
+      "path": "src/core/combat.ts",
+      "sha256": "9526b3ceddb7845f5f8e4ac2f44568412bc312750042906eb1fade26fea78ba1",
+      "bytes": 1384
+    },
+    {
+      "path": "src/core/crystal.ts",
+      "sha256": "7ac871f4981702ec5d9fd4b12593dbd004427df853ba5fbd8c8d1e2945bfa865",
+      "bytes": 524
+    },
+    {
+      "path": "src/core/flame.ts",
+      "sha256": "723db8021b0217c5cb411351461906fc5828aa037337e04e967ef2d67a4b14f5",
+      "bytes": 650
+    },
+    {
+      "path": "src/core/passives.ts",
+      "sha256": "74d1a57d756c39a8946c0b1c0c412138ed884a05cf5c0ee729b7cdd1007b14b2",
+      "bytes": 284
+    },
+    {
+      "path": "src/core/save.ts",
+      "sha256": "ecd19ae470e45564ee7857fab7e629769c189989d67833635a072c82076f7de6",
+      "bytes": 7053
+    },
+    {
+      "path": "src/core/skills.ts",
+      "sha256": "3de8f4bb75ef85b548fa3a069897e8bec7e0cb76622136893d7f77dc3132f5fe",
+      "bytes": 1034
+    },
+    {
+      "path": "src/core/state.ts",
+      "sha256": "9e4820eb85289cbc7b70dc77636001ef04a63661758880df0ccac12fd530765b",
+      "bytes": 4605
+    },
+    {
+      "path": "src/core/storyMechanics.ts",
+      "sha256": "46c020549c2090ed414a07b679f1ffd240c9353a462429f4c09c2152f89dd775",
+      "bytes": 1031
+    },
+    {
+      "path": "src/game/audio.ts",
+      "sha256": "b3d52e4c0e946910124b506bdec84b3f0b89cf919b1981d68b7a46f91a27c371",
+      "bytes": 4872
+    },
+    {
+      "path": "src/game/controlText.ts",
+      "sha256": "2877f711abd642a2b8709af3a9051de1fecf88c8b92cab204b76d28e51eca277",
+      "bytes": 2426
+    },
+    {
+      "path": "src/game/dialogueArt.ts",
+      "sha256": "a2db4a736a07c53f25ff241d3c59940f12497f7a918680673404784d7a82f16e",
+      "bytes": 2350
+    },
+    {
+      "path": "src/game/heroArt.ts",
+      "sha256": "a64f46fbde43add32d88e6993df8c6e117fdb2fc611517089a9606dd2aa1177f",
+      "bytes": 1029
+    },
+    {
+      "path": "src/game/input.ts",
+      "sha256": "c17ced6666274555c9d75102c425547581355bad39fdfbd1d652b37c9aa64fd8",
+      "bytes": 1771
+    },
+    {
+      "path": "src/game/stage.ts",
+      "sha256": "1126f8d5eb663846f7f616738efb4f0c2623f78848ad5fb2277bbdd26d9bc129",
+      "bytes": 103219
+    },
+    {
+      "path": "src/game/terrain.ts",
+      "sha256": "43ecc4a632631d483dfe3c5a8694b59f5365f908e8e4de05e57b7ad40b0c3bc7",
+      "bytes": 7441
+    },
+    {
+      "path": "src/game/touch.ts",
+      "sha256": "7a9b9a850d8f35b880ab4be4ad8880481bf951da5818dcb1eccda2b36323c126",
+      "bytes": 7753
+    },
+    {
+      "path": "src/game/weapons.ts",
+      "sha256": "c046f69304f26801cd56b72c9c3f4ec38447016d72f3b7f6f9e412746a72cd38",
+      "bytes": 2093
+    },
+    {
+      "path": "src/main.ts",
+      "sha256": "96ab011a4f015a3a22beb9e7349100a38b2620ae764441cc5e455dd5b71761cf",
+      "bytes": 28482
+    },
+    {
+      "path": "src/mobile.css",
+      "sha256": "6b2e6aa9a37cd9b2f8296d1ec889723b47db8fca08f404954e2ec4e94a25146d",
+      "bytes": 12269
+    },
+    {
+      "path": "src/styles.css",
+      "sha256": "acc2e8be3820b09fcdc0d18a6de690771efa4aa84ed4311e2ef26cb401367d16",
+      "bytes": 5897
+    }
+  ]
+}

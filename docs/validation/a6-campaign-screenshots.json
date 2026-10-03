@@ -1,0 +1,41 @@
+{
+  "date": "2026-10-03T13:57:59.942Z",
+  "method": "byte-identical copies of the just-completed fresh 36-stage keyboard playthrough screenshots",
+  "files": [
+    {
+      "source": "test-results/complete-journey-new-game--139b0-ntrols-and-no-injected-save/S05-route.png",
+      "path": "docs/screenshots/art-a6/campaign-S05-route.png",
+      "sha256": "49a86f19bd9785229c01b01b73b22d53005bef63cbd8662f044fada120250780"
+    },
+    {
+      "source": "test-results/complete-journey-new-game--139b0-ntrols-and-no-injected-save/S10-route.png",
+      "path": "docs/screenshots/art-a6/campaign-S10-route.png",
+      "sha256": "c78345ec8c905a49295ddc20b8af0966009d979fa64c918d91753879825a1a02"
+    },
+    {
+      "source": "test-results/complete-journey-new-game--139b0-ntrols-and-no-injected-save/S15-route.png",
+      "path": "docs/screenshots/art-a6/campaign-S15-route.png",
+      "sha256": "11cbe86b6e2b7e126d1e3d5665a4b3d988412fe657c5121a51cc5975c8c3ba2d"
+    },
+    {
+      "source": "test-results/complete-journey-new-game--139b0-ntrols-and-no-injected-save/S19-route.png",
+      "path": "docs/screenshots/art-a6/campaign-S19-route.png",
+      "sha256": "6becda21066f151e01e4e3fd2d4ae407a381de36cf51313bc54758c524d01abf"
+    },
+    {
+      "source": "test-results/complete-journey-new-game--139b0-ntrols-and-no-injected-save/S25-route.png",
+      "path": "docs/screenshots/art-a6/campaign-S25-route.png",
+      "sha256": "6cd369fe332749cec56f9776ace78f1f14fb550d17360111e45e68622711d1a5"
+    },
+    {
+      "source": "test-results/complete-journey-new-game--139b0-ntrols-and-no-injected-save/S29-route.png",
+      "path": "docs/screenshots/art-a6/campaign-S29-route.png",
+      "sha256": "23727353d7e6b2a21432f6454905e0b682886f8ae34acbf8f04af135cd409b59"
+    },
+    {
+      "source": "test-results/complete-journey-new-game--139b0-ntrols-and-no-injected-save/S36-route.png",
+      "path": "docs/screenshots/art-a6/campaign-S36-route.png",
+      "sha256": "5a1c7b171671a1593c1d6b3105984a52fa68f1579df9025ea054f75da16ed25b"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "date": "2026-10-03T08:27:33.637Z",
+  "input": "normal keyboard, fresh game, no seed/save injection",
+  "screenshots": [
+    {
+      "stage": "S05",
+      "source": "test-results\\complete-journey-new-game--139b0-ntrols-and-no-injected-save\\S05-route.png",
+      "path": "docs/screenshots/art-a3/campaign-S05-route.png"
+    },
+    {
+      "stage": "S10",
+      "source": "test-results\\complete-journey-new-game--139b0-ntrols-and-no-injected-save\\S10-route.png",
+      "path": "docs/screenshots/art-a3/campaign-S10-route.png"
+    },
+    {
+      "stage": "S15",
+      "source": "test-results\\complete-journey-new-game--139b0-ntrols-and-no-injected-save\\S15-route.png",
+      "path": "docs/screenshots/art-a3/campaign-S15-route.png"
+    },
+    {
+      "stage": "S19",
+      "source": "test-results\\complete-journey-new-game--139b0-ntrols-and-no-injected-save\\S19-route.png",
+      "path": "docs/screenshots/art-a3/campaign-S19-route.png"
+    },
+    {
+      "stage": "S25",
+      "source": "test-results\\complete-journey-new-game--139b0-ntrols-and-no-injected-save\\S25-route.png",
+      "path": "docs/screenshots/art-a3/campaign-S25-route.png"
+    },
+    {
+      "stage": "S29",
+      "source": "test-results\\complete-journey-new-game--139b0-ntrols-and-no-injected-save\\S29-route.png",
+      "path": "docs/screenshots/art-a3/campaign-S29-route.png"
+    },
+    {
+      "stage": "S36",
+      "source": "test-results\\complete-journey-new-game--139b0-ntrols-and-no-injected-save\\S36-route.png",
+      "path": "docs/screenshots/art-a3/campaign-S36-route.png"
+    }
+  ]
+}

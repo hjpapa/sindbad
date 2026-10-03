@@ -42,8 +42,41 @@ export function reachablePlatformIndexes(map: MapDef) {
     return reached;
 }
 
-export function mapReachabilityIssues(map: MapDef) {
+const PLAYER_BODY_HEIGHT = 84;
+
+// A solid block standing on a walkway splits it in two. The block-graph above
+// treats the walkway as one platform, so it cannot see that a block taller than
+// a jump traps a child on one side (for example after walking past a friend who
+// must be talked to). Each such wall needs a climbable step on both sides.
+export function wallIssues(map: MapDef) {
+    if (map.mode === 'flight' || map.mode === 'swim') return [];
     const issues: string[] = [];
+    const solid = map.platforms.filter(p => !p.oneWay && !p.motion);
+    for (const walkway of solid) {
+        for (const wall of solid) {
+            if (wall === walkway) continue;
+            const onTop = wall.x < walkway.x + walkway.w && wall.x + wall.w > walkway.x;
+            const blocksBody = wall.y + wall.h > walkway.y - PLAYER_BODY_HEIGHT && wall.y < walkway.y;
+            const rise = walkway.y - wall.y;
+            if (!onTop || !blocksBody || rise <= SAFE_JUMP_RISE) continue;
+            const stepOn = (side: 'left' | 'right') => map.platforms.some(step => {
+                if (step === wall || step === walkway) return false;
+                const gap = side === 'left' ? wall.x - (step.x + step.w) : step.x - (wall.x + wall.w);
+                const stepTop = step.y - (step.motion?.rise ?? 0);
+                return gap >= -step.w && gap <= SAFE_JUMP_GAP && stepTop - wall.y <= SAFE_JUMP_RISE && walkway.y - stepTop <= SAFE_JUMP_RISE && stepTop > wall.y;
+            });
+            for (const side of ['left', 'right'] as const) {
+                const edge = side === 'left' ? wall.x : wall.x + wall.w;
+                if (edge <= walkway.x + 30 || edge >= walkway.x + walkway.w - 30) continue;
+                if (!stepOn(side)) issues.push(`${map.id}: wall at (${wall.x},${wall.y}) rises ${rise}px with no step on its ${side} side`);
+            }
+        }
+    }
+    return issues;
+}
+
+export function mapReachabilityIssues(map: MapDef) {
+    const issues: string[] = [...wallIssues(map)];
     const reachable = reachablePlatformIndexes(map);
     map.platforms.forEach((platform, index) => {
         if (!reachable.has(index))

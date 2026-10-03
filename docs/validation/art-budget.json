@@ -1,8 +1,8 @@
 {
-  "date": "2026-10-01T16:38:00.327Z",
+  "date": "2026-10-03T13:22:56.539Z",
   "method": "raw production JS/CSS plus currently requested S01 artwork; excludes HTTP overhead, not a device/network benchmark",
   "budgetBytes": 8000000,
-  "totalBytes": 7597522,
+  "totalBytes": 2803857,
   "pass": true,
   "files": [
     {
@@ -238,30 +238,106 @@
       "bytes": 867
     },
     {
+      "path": "public/assets/weapons/W01.webp",
+      "bytes": 3210
+    },
+    {
+      "path": "public/assets/weapons/W01.svg",
+      "bytes": 1705
+    },
+    {
+      "path": "public/assets/weapons/W02.webp",
+      "bytes": 3118
+    },
+    {
+      "path": "public/assets/weapons/W02.svg",
+      "bytes": 1612
+    },
+    {
+      "path": "public/assets/weapons/W03.webp",
+      "bytes": 3634
+    },
+    {
+      "path": "public/assets/weapons/W03.svg",
+      "bytes": 1807
+    },
+    {
+      "path": "public/assets/weapons/W04.webp",
+      "bytes": 3176
+    },
+    {
+      "path": "public/assets/weapons/W04.svg",
+      "bytes": 1725
+    },
+    {
+      "path": "public/assets/weapons/W05.webp",
+      "bytes": 4448
+    },
+    {
+      "path": "public/assets/weapons/W05.svg",
+      "bytes": 1776
+    },
+    {
+      "path": "public/assets/weapons/W06.webp",
+      "bytes": 3512
+    },
+    {
+      "path": "public/assets/weapons/W06.svg",
+      "bytes": 1770
+    },
+    {
+      "path": "public/assets/weapons/W07.webp",
+      "bytes": 3420
+    },
+    {
+      "path": "public/assets/weapons/W07.svg",
+      "bytes": 1804
+    },
+    {
       "path": "public/assets/webtoon/chapter-1.webp",
-      "bytes": 1800106
+      "bytes": 194742
     },
     {
       "path": "public/assets/webtoon/hero-webtoon.webp",
-      "bytes": 935578
+      "bytes": 49532
+    },
+    {
+      "path": "public/assets/webtoon/hero-action.webp",
+      "bytes": 119426
+    },
+    {
+      "path": "public/assets/webtoon/captain-webtoon.webp",
+      "bytes": 66296
     },
     {
       "path": "public/assets/webtoon/hero-run.webp",
-      "bytes": 1281500
+      "bytes": 96484
     },
     {
-      "path": "public/assets/webtoon/enemy-atlas.webp",
-      "bytes": 1871468
+      "path": "public/assets/webtoon/enemy-actions.webp",
+      "bytes": 428836
+    },
+    {
+      "path": "public/assets/webtoon/captain-faces.webp",
+      "bytes": 57866
+    },
+    {
+      "path": "public/assets/terrain/terrain-dock-fill.webp",
+      "bytes": 2986
+    },
+    {
+      "path": "public/assets/terrain/terrain-dock-top.webp",
+      "bytes": 686
     }
   ],
   "bundleFiles": [
     {
-      "path": "dist/assets/index-C22nsGYx.js",
-      "bytes": 173868
+      "path": "dist/assets/index-Dtc3v8_n.css",
+      "bytes": 16686
     },
     {
-      "path": "dist/assets/index-KFdmONPr.css",
-      "bytes": 9172
+      "path": "dist/assets/index-Stf1tMil.js",
+      "bytes": 207770
     },
     {
       "path": "dist/assets/phaser-Czz4FBZH.js",

@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-03T11:53:47.454906+00:00",
+  "command": "npm run test:e2e",
+  "exitCode": 1,
+  "method": "run interrupted with Ctrl+C after first test failed; HTML reporter did not finish, no final pass counts asserted",
+  "observedPassed": [
+    "adventure pause/export/import/touch",
+    "adventure fallback/corrupt saves",
+    "audio",
+    "controls UI",
+    "crystal"
+  ],
+  "observedFailed": "adventure S01-S03, S02 shell 2; stationary aim assist turns toward nearby crab",
+  "gameFilesEditedDuringRun": false
+}
