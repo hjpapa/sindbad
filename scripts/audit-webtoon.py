@@ -22,7 +22,7 @@ for path in sorted([*(root / 'art-source' / 'webtoon').glob('*.webp'), *(root / 
             'role': 'original' if 'art-source' in path.parts else 'runtime',
             'artStatus': 'ART_DRAFT',
         })
-assert len(files) == 170, f'Expected 85 originals + 85 runtime copies, got {len(files)}'
+assert len(files) == 172, f'Expected 86 originals + 86 runtime copies, got {len(files)}'
 face_measurements = json.loads((root / 'art-source/webtoon/npc-faces.measurements.json').read_text(encoding='utf-8'))
 assert len(face_measurements) == 9
 for measurement in face_measurements:
@@ -103,3 +103,4 @@ subprocess.run([sys.executable,str(root/'scripts/audit-touch-icons.py')],check=T
 
 subprocess.run([sys.executable,str(root/'scripts/audit-world-props.py')],check=True)
 subprocess.run([sys.executable,str(root/'scripts/audit-kite-actions.py')],check=True)
+subprocess.run([sys.executable,str(root/'scripts/audit-siren-actions.py')],check=True)

@@ -1,0 +1,1358 @@
+{
+  "date": "2026-10-04T10:17:50.921175+00:00",
+  "pass": true,
+  "status": "ART_DRAFT",
+  "method": "native SHA256; exact RGBA normalized PNG/lossless WebP; runtime decode and alpha >16 bounds; preserved SVG hashes; final visual approval separate",
+  "files": [
+    {
+      "path": "art-source/webtoon/prop-chest.png",
+      "size": [
+        384,
+        512
+      ],
+      "bounds": [
+        16,
+        133,
+        369,
+        383
+      ],
+      "bytes": 132725,
+      "sha256": "746a7d96d9dc021aaf88b11e0a232eea55750fb45f6580dc6715779c2d4c9933"
+    },
+    {
+      "path": "art-source/webtoon/prop-chest.webp",
+      "size": [
+        384,
+        512
+      ],
+      "bounds": [
+        16,
+        133,
+        369,
+        383
+      ],
+      "bytes": 102262,
+      "sha256": "5c158f842b0fb03ee276e379d317d2202a5ffb4d9825a6d082694147a547a89b"
+    },
+    {
+      "path": "public/assets/webtoon/prop-chest.webp",
+      "size": [
+        96,
+        128
+      ],
+      "bounds": [
+        4,
+        33,
+        93,
+        96
+      ],
+      "bytes": 3872,
+      "sha256": "fc76b180154ed91d7571d7dc126612505e8fa922d0cfe9af60e3c119c62191db"
+    },
+    {
+      "path": "art-source/webtoon/prop-heart.png",
+      "size": [
+        384,
+        512
+      ],
+      "bounds": [
+        21,
+        126,
+        363,
+        418
+      ],
+      "bytes": 89770,
+      "sha256": "d4b0f42952666a828abb49b9f3b4d42ced15543aaf1cb6dccb7e1b8de1726452"
+    },
+    {
+      "path": "art-source/webtoon/prop-heart.webp",
+      "size": [
+        384,
+        512
+      ],
+      "bounds": [
+        21,
+        126,
+        363,
+        418
+      ],
+      "bytes": 63630,
+      "sha256": "6b35face9af9c73e5e643ebe21bfcf7debedbe40d8b03b16fce37725db242966"
+    },
+    {
+      "path": "public/assets/webtoon/prop-heart.webp",
+      "size": [
+        96,
+        128
+      ],
+      "bounds": [
+        5,
+        31,
+        91,
+        105
+      ],
+      "bytes": 2882,
+      "sha256": "b3acf465c2d04a63429267fb9337a124e80a92b3e94174eddeac9fbb1364b3ff"
+    },
+    {
+      "path": "art-source/webtoon/prop-shell.png",
+      "size": [
+        384,
+        512
+      ],
+      "bounds": [
+        20,
+        67,
+        363,
+        451
+      ],
+      "bytes": 136214,
+      "sha256": "2be5e2ae66a3445515a2683e28c6fb8e92e00371926a1b42405311b5862cbcc4"
+    },
+    {
+      "path": "art-source/webtoon/prop-shell.webp",
+      "size": [
+        384,
+        512
+      ],
+      "bounds": [
+        20,
+        67,
+        363,
+        451
+      ],
+      "bytes": 95038,
+      "sha256": "224b206661fd5fae9d48c98b2092d930938368c64c271e9ba2a1173c4e297985"
+    },
+    {
+      "path": "public/assets/webtoon/prop-shell.webp",
+      "size": [
+        96,
+        128
+      ],
+      "bounds": [
+        5,
+        16,
+        91,
+        113
+      ],
+      "bytes": 4178,
+      "sha256": "8bcf8c42db3311bb81b5d2e046d75fa6397c9fec6555d24e1f112755ca61cd4c"
+    },
+    {
+      "path": "art-source/webtoon/prop-bell.png",
+      "size": [
+        384,
+        512
+      ],
+      "bounds": [
+        15,
+        39,
+        369,
+        456
+      ],
+      "bytes": 147859,
+      "sha256": "0869b146f15670dec91cb90af46bbcca765ceb2a12a00a0f647ad96e3017d067"
+    },
+    {
+      "path": "art-source/webtoon/prop-bell.webp",
+      "size": [
+        384,
+        512
+      ],
+      "bounds": [
+        15,
+        39,
+        369,
+        456
+      ],
+      "bytes": 108252,
+      "sha256": "da46f73e48a7858cc60108aaf5fa329030ba4b20049a0e158494c105b92d7fe4"
+    },
+    {
+      "path": "public/assets/webtoon/prop-bell.webp",
+      "size": [
+        96,
+        128
+      ],
+      "bounds": [
+        3,
+        9,
+        93,
+        114
+      ],
+      "bytes": 4720,
+      "sha256": "13653fb4a71b9f22ea7607e48dbe23bbfef41c85ac567fc7585a103a1d810ee9"
+    },
+    {
+      "path": "art-source/webtoon/prop-golden.png",
+      "size": [
+        384,
+        512
+      ],
+      "bounds": [
+        21,
+        100,
+        363,
+        412
+      ],
+      "bytes": 116581,
+      "sha256": "1451cd600a54dda0a39fe92f04d05ed695016a1a9b55fd3832235d88ea24a0dc"
+    },
+    {
+      "path": "art-source/webtoon/prop-golden.webp",
+      "size": [
+        384,
+        512
+      ],
+      "bounds": [
+        21,
+        100,
+        363,
+        412
+      ],
+      "bytes": 84342,
+      "sha256": "967c40b9e3df7045cbe1d8b5c78fa6d3609d6f8d5641274d481cf9a477e9c09e"
+    },
+    {
+      "path": "public/assets/webtoon/prop-golden.webp",
+      "size": [
+        96,
+        128
+      ],
+      "bounds": [
+        5,
+        25,
+        91,
+        103
+      ],
+      "bytes": 4352,
+      "sha256": "a675bab940b0322b1c35613e0cf88142991d4622be23ec88e166425ea3e88a38"
+    },
+    {
+      "path": "art-source/webtoon/prop-key.png",
+      "size": [
+        384,
+        512
+      ],
+      "bounds": [
+        22,
+        39,
+        363,
+        459
+      ],
+      "bytes": 119384,
+      "sha256": "8f2ea75b4e1bc4596ad7ce31ff5390f9d4a66e5a4308c5a3793b49f2d4405502"
+    },
+    {
+      "path": "art-source/webtoon/prop-key.webp",
+      "size": [
+        384,
+        512
+      ],
+      "bounds": [
+        22,
+        39,
+        363,
+        459
+      ],
+      "bytes": 91426,
+      "sha256": "e9793da8bd5fd358adc4f83d6c7f904b4566290245a7fa1a8e7f3c450a664a93"
+    },
+    {
+      "path": "public/assets/webtoon/prop-key.webp",
+      "size": [
+        96,
+        128
+      ],
+      "bounds": [
+        5,
+        9,
+        91,
+        115
+      ],
+      "bytes": 5058,
+      "sha256": "65db0c1fa2f45a02632c9553e3cef08b823386358bdb3f03963bfb227ad7910d"
+    },
+    {
+      "path": "art-source/webtoon/prop-lifevest.png",
+      "size": [
+        384,
+        512
+      ],
+      "bounds": [
+        29,
+        71,
+        355,
+        443
+      ],
+      "bytes": 178373,
+      "sha256": "88aca71ac4c061e2786a6ec5fa407be8c12bddc9be19631fd12f94fe3df84f88"
+    },
+    {
+      "path": "art-source/webtoon/prop-lifevest.webp",
+      "size": [
+        384,
+        512
+      ],
+      "bounds": [
+        29,
+        71,
+        355,
+        443
+      ],
+      "bytes": 133182,
+      "sha256": "8c1ce759d520180313cae2aa929351a18df656aadf115925a0a219f7094c2ffa"
+    },
+    {
+      "path": "public/assets/webtoon/prop-lifevest.webp",
+      "size": [
+        96,
+        128
+      ],
+      "bounds": [
+        7,
+        17,
+        89,
+        111
+      ],
+      "bytes": 5362,
+      "sha256": "47d67458a3c59fdde8443813c0861bd80fafa91500676fe0950abcd623965de4"
+    },
+    {
+      "path": "art-source/webtoon/prop-rescue-rope.png",
+      "size": [
+        384,
+        512
+      ],
+      "bounds": [
+        17,
+        99,
+        375,
+        425
+      ],
+      "bytes": 194099,
+      "sha256": "8bb8d76b8ee53001b04df89cbbb0ab036a102f717ad4864b025150d14bf89edd"
+    },
+    {
+      "path": "art-source/webtoon/prop-rescue-rope.webp",
+      "size": [
+        384,
+        512
+      ],
+      "bounds": [
+        17,
+        99,
+        375,
+        425
+      ],
+      "bytes": 136924,
+      "sha256": "dc0811d33319527c383415152c94efec9ed058cd22eef4a262814604a7f811e8"
+    },
+    {
+      "path": "public/assets/webtoon/prop-rescue-rope.webp",
+      "size": [
+        96,
+        128
+      ],
+      "bounds": [
+        4,
+        24,
+        94,
+        107
+      ],
+      "bytes": 5718,
+      "sha256": "50bc72b0b75b6a156a934b3414d0e6d1ea5af1b130d246a2624d0eaf7e8fd97a"
+    },
+    {
+      "path": "art-source/webtoon/prop-lifering.png",
+      "size": [
+        384,
+        512
+      ],
+      "bounds": [
+        18,
+        83,
+        366,
+        434
+      ],
+      "bytes": 148597,
+      "sha256": "95f40685f059c34c0c20aa9dfb8e97b2bdf9f1031a10bd50052d505bc064f4b9"
+    },
+    {
+      "path": "art-source/webtoon/prop-lifering.webp",
+      "size": [
+        384,
+        512
+      ],
+      "bounds": [
+        18,
+        83,
+        366,
+        434
+      ],
+      "bytes": 107432,
+      "sha256": "631e96d7b752691602653e2ab4de3eca0455bb8fe02f46ae9ccba19c21c746c4"
+    },
+    {
+      "path": "public/assets/webtoon/prop-lifering.webp",
+      "size": [
+        96,
+        128
+      ],
+      "bounds": [
+        4,
+        20,
+        92,
+        109
+      ],
+      "bytes": 4938,
+      "sha256": "471ded337469ae233e28036cc57203955d7c2bd72dca7a90664f62e460e66824"
+    },
+    {
+      "path": "art-source/webtoon/prop-lightning-rod.png",
+      "size": [
+        384,
+        512
+      ],
+      "bounds": [
+        47,
+        7,
+        337,
+        478
+      ],
+      "bytes": 109002,
+      "sha256": "644011e1f70c110d14f7f0d15506fe050a64be604a4e48094bc52e8b32384805"
+    },
+    {
+      "path": "art-source/webtoon/prop-lightning-rod.webp",
+      "size": [
+        384,
+        512
+      ],
+      "bounds": [
+        47,
+        7,
+        337,
+        478
+      ],
+      "bytes": 81066,
+      "sha256": "a7a626ba9dde0372a007a31046109a48588be3de27ba9a15695b551b25698977"
+    },
+    {
+      "path": "public/assets/webtoon/prop-lightning-rod.webp",
+      "size": [
+        96,
+        128
+      ],
+      "bounds": [
+        12,
+        2,
+        84,
+        120
+      ],
+      "bytes": 4998,
+      "sha256": "f7bdfef3deeac13e980d70978cdad5aea4461b2f106f5e84aea17c8314151096"
+    },
+    {
+      "path": "art-source/webtoon/prop-damaged-mast.png",
+      "size": [
+        384,
+        512
+      ],
+      "bounds": [
+        16,
+        25,
+        369,
+        478
+      ],
+      "bytes": 158664,
+      "sha256": "2d1ccd8367836a754073f7b3827ee34743bbd63e1cb9fe58aad62869bdd1e7ae"
+    },
+    {
+      "path": "art-source/webtoon/prop-damaged-mast.webp",
+      "size": [
+        384,
+        512
+      ],
+      "bounds": [
+        16,
+        25,
+        369,
+        478
+      ],
+      "bytes": 114194,
+      "sha256": "05c8ddb2de30da59fd8e53f511b023286ba3a942590ad8a77d805617b4725825"
+    },
+    {
+      "path": "public/assets/webtoon/prop-damaged-mast.webp",
+      "size": [
+        96,
+        128
+      ],
+      "bounds": [
+        4,
+        6,
+        93,
+        120
+      ],
+      "bytes": 6400,
+      "sha256": "f1ad63a2b3d09f5c4fec5928d5692e7be80af70ccf9054601756bc1c7df1f180"
+    },
+    {
+      "path": "art-source/webtoon/prop-coral-gate.png",
+      "size": [
+        384,
+        512
+      ],
+      "bounds": [
+        21,
+        68,
+        364,
+        443
+      ],
+      "bytes": 159449,
+      "sha256": "3f0826934084cd5f72cbc4313c002bf08b4bb99d60f784bdcffe7f44662bd1c6"
+    },
+    {
+      "path": "art-source/webtoon/prop-coral-gate.webp",
+      "size": [
+        384,
+        512
+      ],
+      "bounds": [
+        21,
+        68,
+        364,
+        443
+      ],
+      "bytes": 119190,
+      "sha256": "3f2413b2dea1b57bc83202b817b7a6ebaa4c555a52dabcb76d12a1841d5670c7"
+    },
+    {
+      "path": "public/assets/webtoon/prop-coral-gate.webp",
+      "size": [
+        96,
+        128
+      ],
+      "bounds": [
+        5,
+        17,
+        91,
+        111
+      ],
+      "bytes": 4658,
+      "sha256": "ca2c65c20d1272533716de5166dc18fdaa31d5d48ff1af8acc920575ccec273e"
+    },
+    {
+      "path": "art-source/webtoon/prop-vine.png",
+      "size": [
+        384,
+        512
+      ],
+      "bounds": [
+        56,
+        31,
+        331,
+        483
+      ],
+      "bytes": 133688,
+      "sha256": "8e811daf6d562919ba33b18ef6ed70c6e10e7a2285cc5e633c406bfd0b4f55a7"
+    },
+    {
+      "path": "art-source/webtoon/prop-vine.webp",
+      "size": [
+        384,
+        512
+      ],
+      "bounds": [
+        56,
+        31,
+        331,
+        483
+      ],
+      "bytes": 95688,
+      "sha256": "00e57082c3ef437dde6838f08d5c06c7cdcfa6097ed45921979648b96d873560"
+    },
+    {
+      "path": "public/assets/webtoon/prop-vine.webp",
+      "size": [
+        96,
+        128
+      ],
+      "bounds": [
+        14,
+        7,
+        83,
+        121
+      ],
+      "bytes": 5654,
+      "sha256": "c1c0b1067d7ab828e8e99a42f581dbdb88630c29621618431b99a719ca3a22d0"
+    },
+    {
+      "path": "art-source/webtoon/prop-torch.png",
+      "size": [
+        384,
+        512
+      ],
+      "bounds": [
+        123,
+        8,
+        266,
+        482
+      ],
+      "bytes": 80505,
+      "sha256": "7cd39229a390c5b48a4727c4b14c17f7442c7098b42308fd98cbc0c42e9e663e"
+    },
+    {
+      "path": "art-source/webtoon/prop-torch.webp",
+      "size": [
+        384,
+        512
+      ],
+      "bounds": [
+        123,
+        8,
+        266,
+        482
+      ],
+      "bytes": 57792,
+      "sha256": "2b33d8a1dbad389cdbd1aea03ed74c9179537bd0f3150b30c3dcbfcd24faba3d"
+    },
+    {
+      "path": "public/assets/webtoon/prop-torch.webp",
+      "size": [
+        96,
+        128
+      ],
+      "bounds": [
+        30,
+        2,
+        67,
+        121
+      ],
+      "bytes": 3486,
+      "sha256": "84ab763b60a108e49f429f0e2b093e9b0e158882b4995a13ad8af8dd60a45b8f"
+    },
+    {
+      "path": "art-source/webtoon/prop-furnace.png",
+      "size": [
+        384,
+        512
+      ],
+      "bounds": [
+        22,
+        95,
+        362,
+        439
+      ],
+      "bytes": 182381,
+      "sha256": "00cd95e30f7530726c18a0b8eca87dce70f5ef59f0a0ebd8cd49bdffae846270"
+    },
+    {
+      "path": "art-source/webtoon/prop-furnace.webp",
+      "size": [
+        384,
+        512
+      ],
+      "bounds": [
+        22,
+        95,
+        362,
+        439
+      ],
+      "bytes": 134020,
+      "sha256": "718618d67b6b3ef13614fae6b012e8e6bb6627be9412fbe764220543e985bec4"
+    },
+    {
+      "path": "public/assets/webtoon/prop-furnace.webp",
+      "size": [
+        96,
+        128
+      ],
+      "bounds": [
+        5,
+        23,
+        91,
+        110
+      ],
+      "bytes": 5106,
+      "sha256": "942cbe054583999944b776c6267c5111be021b3ccaf7ca1b5d621072d90224ba"
+    },
+    {
+      "path": "art-source/webtoon/prop-wave-rope.png",
+      "size": [
+        384,
+        512
+      ],
+      "bounds": [
+        103,
+        13,
+        282,
+        495
+      ],
+      "bytes": 90897,
+      "sha256": "c372457e96b40151e130d1c695246b998eef95f080bfbb5618315ad3da6442c2"
+    },
+    {
+      "path": "art-source/webtoon/prop-wave-rope.webp",
+      "size": [
+        384,
+        512
+      ],
+      "bounds": [
+        103,
+        13,
+        282,
+        495
+      ],
+      "bytes": 61896,
+      "sha256": "b451f0460ae019251722c4f36ad35e662807ccd9e21ce6a05f42fcf2f9e0dda1"
+    },
+    {
+      "path": "public/assets/webtoon/prop-wave-rope.webp",
+      "size": [
+        96,
+        128
+      ],
+      "bounds": [
+        25,
+        3,
+        71,
+        124
+      ],
+      "bytes": 4114,
+      "sha256": "e0ddb84389446784d01268d31ea1a28b7bbed0f197106bbb4af264b0654ce0a4"
+    },
+    {
+      "path": "art-source/webtoon/prop-mirror.png",
+      "size": [
+        384,
+        512
+      ],
+      "bounds": [
+        33,
+        35,
+        351,
+        474
+      ],
+      "bytes": 176175,
+      "sha256": "49020ab586b0e53c4d7531d84ad388679b09931cadb0c59c67d5312528e39c77"
+    },
+    {
+      "path": "art-source/webtoon/prop-mirror.webp",
+      "size": [
+        384,
+        512
+      ],
+      "bounds": [
+        33,
+        35,
+        351,
+        474
+      ],
+      "bytes": 127692,
+      "sha256": "c05f7c9a46c54d81acc05b47078d58f854d162c578d883ee8233a18fbce018d4"
+    },
+    {
+      "path": "public/assets/webtoon/prop-mirror.webp",
+      "size": [
+        96,
+        128
+      ],
+      "bounds": [
+        8,
+        9,
+        88,
+        119
+      ],
+      "bytes": 5254,
+      "sha256": "f22f2c4160634c7905961adde2a88865c83cf19771056f9f16f25f825d3e4bcb"
+    },
+    {
+      "path": "art-source/webtoon/prop-journal.png",
+      "size": [
+        384,
+        512
+      ],
+      "bounds": [
+        53,
+        65,
+        339,
+        444
+      ],
+      "bytes": 143693,
+      "sha256": "2d59e76d7ed1b542a84025be8d285adbcc84daf42543cfed5e3fd2f493303438"
+    },
+    {
+      "path": "art-source/webtoon/prop-journal.webp",
+      "size": [
+        384,
+        512
+      ],
+      "bounds": [
+        53,
+        65,
+        339,
+        444
+      ],
+      "bytes": 100208,
+      "sha256": "2e442f1751915cfbdf5b2762e01a5f25884b2b7ca9b6ba75a9fb4556d0abac04"
+    },
+    {
+      "path": "public/assets/webtoon/prop-journal.webp",
+      "size": [
+        96,
+        128
+      ],
+      "bounds": [
+        13,
+        16,
+        85,
+        111
+      ],
+      "bytes": 3838,
+      "sha256": "ddb9f8e536309d2938dbcccff96322af9ef0fa75cb5e440e2d1a616403d8e047"
+    },
+    {
+      "path": "art-source/webtoon/prop-star-map.png",
+      "size": [
+        384,
+        512
+      ],
+      "bounds": [
+        6,
+        94,
+        380,
+        418
+      ],
+      "bytes": 203840,
+      "sha256": "1791b9fd5dffeba8906e8994e2a8fa526e274a8811e05d5e0e68780453519591"
+    },
+    {
+      "path": "art-source/webtoon/prop-star-map.webp",
+      "size": [
+        384,
+        512
+      ],
+      "bounds": [
+        6,
+        94,
+        380,
+        418
+      ],
+      "bytes": 154470,
+      "sha256": "f535de9e8dd071f12ab6e9f9ff3498aebae9416151ab2320ad4e1eacd87db35b"
+    },
+    {
+      "path": "public/assets/webtoon/prop-star-map.webp",
+      "size": [
+        96,
+        128
+      ],
+      "bounds": [
+        1,
+        23,
+        95,
+        105
+      ],
+      "bytes": 5720,
+      "sha256": "2f827b75ed5225490123a7c9e46b4c4affdc8ccdcf086822bf8498a8204ea87a"
+    },
+    {
+      "path": "art-source/webtoon/prop-lantern.png",
+      "size": [
+        384,
+        512
+      ],
+      "bounds": [
+        69,
+        18,
+        314,
+        475
+      ],
+      "bytes": 153811,
+      "sha256": "0363aed30f41f5e9bd4cfb6e49b6dbd778f0785d02d5f095e82cf4171fbea055"
+    },
+    {
+      "path": "art-source/webtoon/prop-lantern.webp",
+      "size": [
+        384,
+        512
+      ],
+      "bounds": [
+        69,
+        18,
+        314,
+        475
+      ],
+      "bytes": 115174,
+      "sha256": "3d773826ddd39157341117245135047b58ae01d24cdf5a022507765974e81c92"
+    },
+    {
+      "path": "public/assets/webtoon/prop-lantern.webp",
+      "size": [
+        96,
+        128
+      ],
+      "bounds": [
+        17,
+        4,
+        79,
+        119
+      ],
+      "bytes": 4664,
+      "sha256": "4d5c33f7a9687a8b636ed32b5179dc7a90729bed5399575ffffd010733f07f7e"
+    },
+    {
+      "path": "art-source/webtoon/prop-star-device.png",
+      "size": [
+        384,
+        512
+      ],
+      "bounds": [
+        33,
+        31,
+        351,
+        460
+      ],
+      "bytes": 180422,
+      "sha256": "d49e37a69a273101e9006be80bc005a44f9564385fa4d4b6db3b7a5f119f76f1"
+    },
+    {
+      "path": "art-source/webtoon/prop-star-device.webp",
+      "size": [
+        384,
+        512
+      ],
+      "bounds": [
+        33,
+        31,
+        351,
+        460
+      ],
+      "bytes": 131820,
+      "sha256": "32e7a75067e1c55b87955636b070480299c2afafe26d2ab3c79437c52b4d2fcc"
+    },
+    {
+      "path": "public/assets/webtoon/prop-star-device.webp",
+      "size": [
+        96,
+        128
+      ],
+      "bounds": [
+        8,
+        7,
+        88,
+        115
+      ],
+      "bytes": 5944,
+      "sha256": "e221399e491605110d0538352ca723539de48b30a1ace14b6aec2aecd7814b57"
+    },
+    {
+      "path": "art-source/webtoon/prop-cargo.png",
+      "size": [
+        384,
+        512
+      ],
+      "bounds": [
+        23,
+        76,
+        362,
+        414
+      ],
+      "bytes": 175632,
+      "sha256": "28a0401864a22a896eb25add71e84719f9704352bba125c7d29188cd1fb5a2c2"
+    },
+    {
+      "path": "art-source/webtoon/prop-cargo.webp",
+      "size": [
+        384,
+        512
+      ],
+      "bounds": [
+        23,
+        76,
+        362,
+        414
+      ],
+      "bytes": 124026,
+      "sha256": "9ee6b8c79dc346cc4a7d197b1ffc217e6fd03710121811a85e382aebfe380ba7"
+    },
+    {
+      "path": "public/assets/webtoon/prop-cargo.webp",
+      "size": [
+        96,
+        128
+      ],
+      "bounds": [
+        5,
+        19,
+        91,
+        104
+      ],
+      "bytes": 4222,
+      "sha256": "079f90984e1e01e9cf59fbbed8281b82203905f9dbd47ddbf800186fa1151f7d"
+    },
+    {
+      "path": "art-source/webtoon/prop-gift.png",
+      "size": [
+        384,
+        512
+      ],
+      "bounds": [
+        18,
+        70,
+        366,
+        449
+      ],
+      "bytes": 176743,
+      "sha256": "48c1f0a7ab3da01ea491d326e34c8d8ef019a33d2e0bcbd0cc51b48bf4728b49"
+    },
+    {
+      "path": "art-source/webtoon/prop-gift.webp",
+      "size": [
+        384,
+        512
+      ],
+      "bounds": [
+        18,
+        70,
+        366,
+        449
+      ],
+      "bytes": 132234,
+      "sha256": "65ca9193f5a8c4c2d3004bad2d03cdba5b04a25f32499858f6c2e5f600bf510c"
+    },
+    {
+      "path": "public/assets/webtoon/prop-gift.webp",
+      "size": [
+        96,
+        128
+      ],
+      "bounds": [
+        4,
+        17,
+        92,
+        113
+      ],
+      "bytes": 5280,
+      "sha256": "953a0e0b529b6e9a67b604114c403183f98423e8feee9c1ae712899701ba40e4"
+    },
+    {
+      "path": "art-source/webtoon/prop-treasure-altar.png",
+      "size": [
+        384,
+        512
+      ],
+      "bounds": [
+        42,
+        42,
+        342,
+        463
+      ],
+      "bytes": 156205,
+      "sha256": "fc92259d99308d385df4767cb3dd37087cb7f93569863fc6c0718fb5cba57f5a"
+    },
+    {
+      "path": "art-source/webtoon/prop-treasure-altar.webp",
+      "size": [
+        384,
+        512
+      ],
+      "bounds": [
+        42,
+        42,
+        342,
+        463
+      ],
+      "bytes": 118288,
+      "sha256": "c4ea92d27fd165aa1a9a98bcc5f70505173281839bb8fe9d362d89842809319b"
+    },
+    {
+      "path": "public/assets/webtoon/prop-treasure-altar.webp",
+      "size": [
+        96,
+        128
+      ],
+      "bounds": [
+        10,
+        10,
+        86,
+        116
+      ],
+      "bytes": 5360,
+      "sha256": "ec0ad74a6d5841f709751ff61efddab70b7e58847384e12531400179fadd3ab5"
+    },
+    {
+      "path": "art-source/webtoon/prop-moon-rock.png",
+      "size": [
+        384,
+        512
+      ],
+      "bounds": [
+        34,
+        84,
+        350,
+        433
+      ],
+      "bytes": 144254,
+      "sha256": "6f67f1fba32da408ac609215e2eda744820d9baec3907890a12e9069f5bdee61"
+    },
+    {
+      "path": "art-source/webtoon/prop-moon-rock.webp",
+      "size": [
+        384,
+        512
+      ],
+      "bounds": [
+        34,
+        84,
+        350,
+        433
+      ],
+      "bytes": 101438,
+      "sha256": "53affe06e661277ab8593f3f923569b3466ee556f6ce19ed4866e3071b868773"
+    },
+    {
+      "path": "public/assets/webtoon/prop-moon-rock.webp",
+      "size": [
+        96,
+        128
+      ],
+      "bounds": [
+        8,
+        21,
+        88,
+        108
+      ],
+      "bytes": 3982,
+      "sha256": "ac30bc113263270e60fcc268fa1b1dd536a00be1e39f8e05cefda3e05ebdeb52"
+    },
+    {
+      "path": "art-source/webtoon/prop-lotus-shrine.png",
+      "size": [
+        384,
+        512
+      ],
+      "bounds": [
+        7,
+        76,
+        379,
+        444
+      ],
+      "bytes": 201209,
+      "sha256": "96612ece72c34fce2554aa6669870a83e65c852d984141ebdbb38e36a22a5fc4"
+    },
+    {
+      "path": "art-source/webtoon/prop-lotus-shrine.webp",
+      "size": [
+        384,
+        512
+      ],
+      "bounds": [
+        7,
+        76,
+        379,
+        444
+      ],
+      "bytes": 150146,
+      "sha256": "e0e1d25d802cb0831bbf9ec211a7d042a3f9c26e6cc02492a81ea30a96f6c88b"
+    },
+    {
+      "path": "public/assets/webtoon/prop-lotus-shrine.webp",
+      "size": [
+        96,
+        128
+      ],
+      "bounds": [
+        2,
+        19,
+        95,
+        111
+      ],
+      "bytes": 5696,
+      "sha256": "7a2d4651cee8ab14b75285143b762ea933b575bc233862223bf13294d9020b18"
+    },
+    {
+      "path": "art-source/webtoon/prop-ending.png",
+      "size": [
+        384,
+        512
+      ],
+      "bounds": [
+        34,
+        25,
+        350,
+        490
+      ],
+      "bytes": 201786,
+      "sha256": "6ce0766b0e0e4d8b4541ea8c161bb92b31a29601da4140c7f08517530dec90be"
+    },
+    {
+      "path": "art-source/webtoon/prop-ending.webp",
+      "size": [
+        384,
+        512
+      ],
+      "bounds": [
+        34,
+        25,
+        350,
+        490
+      ],
+      "bytes": 149540,
+      "sha256": "de35d8e48c25e12874c4bd92635659b95c726101e7eee464cc0f5585a36fce77"
+    },
+    {
+      "path": "public/assets/webtoon/prop-ending.webp",
+      "size": [
+        96,
+        128
+      ],
+      "bounds": [
+        8,
+        6,
+        88,
+        123
+      ],
+      "bytes": 8080,
+      "sha256": "94d559030f6f37fa50a9ac706dc039fde5bfed40468d6b13aa1fa3343a314169"
+    },
+    {
+      "path": "art-source/webtoon/prop-flight-ring.png",
+      "size": [
+        384,
+        512
+      ],
+      "bounds": [
+        27,
+        12,
+        357,
+        492
+      ],
+      "bytes": 207586,
+      "sha256": "882a5e5cc469dfd9c67b10878e281ec77f47d3e3a31cce8f2f86b3fda7146ca7"
+    },
+    {
+      "path": "art-source/webtoon/prop-flight-ring.webp",
+      "size": [
+        384,
+        512
+      ],
+      "bounds": [
+        27,
+        12,
+        357,
+        492
+      ],
+      "bytes": 172176,
+      "sha256": "6d751d567a4d368c3cf6812e08f13d967e59a35824cd80d4dba484d2c337ba86"
+    },
+    {
+      "path": "public/assets/webtoon/prop-flight-ring.webp",
+      "size": [
+        96,
+        128
+      ],
+      "bounds": [
+        7,
+        3,
+        89,
+        123
+      ],
+      "bytes": 8458,
+      "sha256": "33a98d3fbf2ddcedec9473c7f0a6c95936e258a339757634c0663f48cc1f65cc"
+    },
+    {
+      "path": "art-source/webtoon/prop-gust-cloud.png",
+      "size": [
+        384,
+        512
+      ],
+      "bounds": [
+        19,
+        119,
+        367,
+        393
+      ],
+      "bytes": 114532,
+      "sha256": "8fa8aad2008223c5cf90e41214aaad093ce65b0988e8bd04acedf769ebd08ca5"
+    },
+    {
+      "path": "art-source/webtoon/prop-gust-cloud.webp",
+      "size": [
+        384,
+        512
+      ],
+      "bounds": [
+        19,
+        119,
+        367,
+        393
+      ],
+      "bytes": 82406,
+      "sha256": "d5b73aed35d1879410e2bf8f2ff59c300d187b86b791fb640401a50f9b4632e6"
+    },
+    {
+      "path": "public/assets/webtoon/prop-gust-cloud.webp",
+      "size": [
+        96,
+        128
+      ],
+      "bounds": [
+        4,
+        29,
+        92,
+        98
+      ],
+      "bytes": 4912,
+      "sha256": "be4f41990fd6c768c045a20225e0f381cfb3cf3c740d1f469bff4e98f0ad9704"
+    },
+    {
+      "path": "art-source/webtoon/prop-falling-debris.png",
+      "size": [
+        384,
+        512
+      ],
+      "bounds": [
+        70,
+        73,
+        351,
+        428
+      ],
+      "bytes": 136950,
+      "sha256": "92f1c8b4e9a9213bec0f677ef025399f732ab6b11ebba78bc844c1be6653ae0c"
+    },
+    {
+      "path": "art-source/webtoon/prop-falling-debris.webp",
+      "size": [
+        384,
+        512
+      ],
+      "bounds": [
+        70,
+        73,
+        351,
+        428
+      ],
+      "bytes": 99408,
+      "sha256": "7be99e9f0e59a3147d769c22769e5d172274a03af419efb45ed9c6856d2079fc"
+    },
+    {
+      "path": "public/assets/webtoon/prop-falling-debris.webp",
+      "size": [
+        96,
+        128
+      ],
+      "bounds": [
+        17,
+        18,
+        88,
+        107
+      ],
+      "bytes": 4274,
+      "sha256": "da17201c93f5d539d0d7e241c71a8a1e215954d88de193f8e4f3693f4421fcb5"
+    }
+  ]
+}

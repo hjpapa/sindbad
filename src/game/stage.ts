@@ -310,7 +310,7 @@ export class Stage extends Phaser.Scene {
             const label = this.txt(def.x, def.y - (def.kind==='boss'?125:87), '', { fontSize: '19px', color: '#fff5cf', backgroundColor: '#173746', padding:{x:6,y:3} }).setOrigin(0.5).setDepth(6);
             const enemy:Enemy = { def, sprite, label, hp, maxHp: hp, state: 'idle', until: 0, target: def.x, targetY:def.y, pattern: 0, art };
             if(art){
-                enemy.bodyHeight=def.kind==='kite'?128:def.kind==='boss'?172:def.kind==='captain'?150:def.kind==='crab'?128:130;
+                enemy.bodyHeight=['kite','siren','crab'].includes(def.kind)?128:def.kind==='boss'?172:def.kind==='captain'?150:130;
                 const support=this.mapDef.platforms.filter(p=>!p.oneWay&&!p.motion&&def.x>=p.x&&def.x<=p.x+p.w&&p.y>=def.y).sort((a,b)=>a.y-b.y)[0];
                 enemy.footOffset=def.kind==='kite'?0:support?support.y-def.y+2:def.kind==='boss'?172*.35:enemy.bodyHeight*.5;
                 this.setEnemyPose(enemy);

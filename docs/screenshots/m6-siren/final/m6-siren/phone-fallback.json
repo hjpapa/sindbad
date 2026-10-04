@@ -1,0 +1,472 @@
+{
+  "device": "phone",
+  "viewport": {
+    "width": 844,
+    "height": 390
+  },
+  "fallback": true,
+  "fixture": {
+    "checkpoint": "S02.boss",
+    "totalXp": 5000,
+    "precompletedShells": 2
+  },
+  "checks": [
+    {
+      "label": "shield",
+      "observed": {
+        "id": "S02.enemy.siren",
+        "x": 3770,
+        "y": 552,
+        "hp": 136,
+        "state": "idle",
+        "visible": true,
+        "alpha": 1,
+        "art": "siren",
+        "texture": "siren-webtoon",
+        "frame": null,
+        "flipX": false,
+        "originX": 0.5,
+        "originY": 0.5,
+        "displayHeight": 128,
+        "label": "조개 종 3개로 방벽 해제"
+      },
+      "path": "docs/screenshots/m6-siren/final/m6-siren/phone-fallback-shield.png"
+    },
+    {
+      "label": "idle",
+      "observed": {
+        "id": "S02.enemy.siren",
+        "x": 3770,
+        "y": 552,
+        "hp": 136,
+        "state": "idle",
+        "visible": true,
+        "alpha": 1,
+        "art": "siren",
+        "texture": "siren-webtoon",
+        "frame": null,
+        "flipX": true,
+        "originX": 0.5,
+        "originY": 0.5,
+        "displayHeight": 128,
+        "label": "조개 종 3개로 방벽 해제"
+      },
+      "path": "docs/screenshots/m6-siren/final/m6-siren/phone-fallback-idle.png"
+    },
+    {
+      "label": "telegraph",
+      "observed": {
+        "id": "S02.enemy.siren",
+        "x": 3770,
+        "y": 552,
+        "hp": 136,
+        "state": "telegraph",
+        "visible": true,
+        "alpha": 1,
+        "art": "siren",
+        "texture": "siren-webtoon",
+        "frame": null,
+        "flipX": true,
+        "originX": 0.5,
+        "originY": 0.5,
+        "displayHeight": 128,
+        "label": "⚠ 준비… 피하세요!"
+      },
+      "path": "docs/screenshots/m6-siren/final/m6-siren/phone-fallback-telegraph.png"
+    },
+    {
+      "label": "attack",
+      "observed": {
+        "id": "S02.enemy.siren",
+        "x": 3770,
+        "y": 552,
+        "hp": 136,
+        "state": "attack",
+        "visible": true,
+        "alpha": 1,
+        "art": "siren",
+        "texture": "siren-webtoon",
+        "frame": null,
+        "flipX": true,
+        "originX": 0.5,
+        "originY": 0.5,
+        "displayHeight": 128,
+        "label": "⚠ 준비… 피하세요!"
+      },
+      "path": "docs/screenshots/m6-siren/final/m6-siren/phone-fallback-attack.png"
+    },
+    {
+      "pattern": "wave",
+      "shots": [
+        {
+          "x": 3727.8318,
+          "y": 587,
+          "vx": -230,
+          "vy": 0,
+          "wave": true,
+          "start": 15078.840800000005,
+          "remaining": 3833.33,
+          "type": "Sprite",
+          "texture": "projectile-siren-wave",
+          "frame": 1,
+          "flipX": true,
+          "rotation": 0,
+          "displayWidth": 64,
+          "displayHeight": 64,
+          "glyph": null
+        }
+      ]
+    },
+    {
+      "label": "recover",
+      "observed": {
+        "id": "S02.enemy.siren",
+        "x": 3770,
+        "y": 552,
+        "hp": 136,
+        "state": "recover",
+        "visible": true,
+        "alpha": 1,
+        "art": "siren",
+        "texture": "siren-webtoon",
+        "frame": null,
+        "flipX": true,
+        "originX": 0.5,
+        "originY": 0.5,
+        "displayHeight": 128,
+        "label": "✦"
+      },
+      "path": "docs/screenshots/m6-siren/final/m6-siren/phone-fallback-recover.png"
+    },
+    {
+      "pattern": "three notes",
+      "shots": [
+        {
+          "x": 3766.8346,
+          "y": 549.6676,
+          "vx": -190,
+          "vy": -140,
+          "wave": false,
+          "start": 18729.070799999936,
+          "remaining": 4000,
+          "type": "Sprite",
+          "texture": "projectile-siren-note",
+          "frame": 0,
+          "flipX": false,
+          "rotation": 0,
+          "displayWidth": 64,
+          "displayHeight": 64,
+          "glyph": null
+        },
+        {
+          "x": 3766.8346,
+          "y": 551.0837,
+          "vx": -190,
+          "vy": -55,
+          "wave": false,
+          "start": 18729.070799999936,
+          "remaining": 4000,
+          "type": "Sprite",
+          "texture": "projectile-siren-note",
+          "frame": 0,
+          "flipX": false,
+          "rotation": 0,
+          "displayWidth": 64,
+          "displayHeight": 64,
+          "glyph": null
+        },
+        {
+          "x": 3766.8346,
+          "y": 552.5831000000001,
+          "vx": -190,
+          "vy": 35,
+          "wave": false,
+          "start": 18729.070799999936,
+          "remaining": 4000,
+          "type": "Sprite",
+          "texture": "projectile-siren-note",
+          "frame": 0,
+          "flipX": false,
+          "rotation": 0,
+          "displayWidth": 64,
+          "displayHeight": 64,
+          "glyph": null
+        }
+      ]
+    },
+    {
+      "label": "right",
+      "observed": {
+        "id": "S02.enemy.siren",
+        "x": 3770,
+        "y": 552,
+        "hp": 136,
+        "state": "recover",
+        "visible": true,
+        "alpha": 1,
+        "art": "siren",
+        "texture": "siren-webtoon",
+        "frame": null,
+        "flipX": false,
+        "originX": 0.5,
+        "originY": 0.5,
+        "displayHeight": 128,
+        "label": "빈틈 · J 공격"
+      },
+      "path": "docs/screenshots/m6-siren/final/m6-siren/phone-fallback-right.png"
+    },
+    {
+      "label": "defeated",
+      "observed": {
+        "id": "S02.enemy.siren",
+        "x": 3770,
+        "y": 531.2307692307693,
+        "hp": 0,
+        "state": "defeated",
+        "visible": true,
+        "alpha": 0.16923076923076918,
+        "art": "siren",
+        "texture": "siren-webtoon",
+        "frame": null,
+        "flipX": false,
+        "originX": 0.5,
+        "originY": 0.5,
+        "displayHeight": 154.58461538461538,
+        "label": "저주가 풀렸어!"
+      },
+      "path": "docs/screenshots/m6-siren/final/m6-siren/phone-fallback-defeated.png"
+    },
+    {
+      "label": "weapon",
+      "observed": {
+        "id": "S02.enemy.siren",
+        "x": 3770,
+        "y": 527,
+        "hp": 0,
+        "state": "defeated",
+        "visible": false,
+        "alpha": 0,
+        "art": "siren",
+        "texture": "siren-webtoon",
+        "frame": null,
+        "flipX": false,
+        "originX": 0.5,
+        "originY": 0.5,
+        "displayHeight": 160,
+        "label": "저주가 풀렸어!"
+      },
+      "path": "docs/screenshots/m6-siren/final/m6-siren/phone-fallback-weapon.png"
+    }
+  ],
+  "screens": [
+    "docs/screenshots/m6-siren/final/m6-siren/phone-fallback-shield.png",
+    "docs/screenshots/m6-siren/final/m6-siren/phone-fallback-idle.png",
+    "docs/screenshots/m6-siren/final/m6-siren/phone-fallback-telegraph.png",
+    "docs/screenshots/m6-siren/final/m6-siren/phone-fallback-attack.png",
+    "docs/screenshots/m6-siren/final/m6-siren/phone-fallback-recover.png",
+    "docs/screenshots/m6-siren/final/m6-siren/phone-fallback-right.png",
+    "docs/screenshots/m6-siren/final/m6-siren/phone-fallback-defeated.png",
+    "docs/screenshots/m6-siren/final/m6-siren/phone-fallback-weapon.png"
+  ],
+  "blocked": [
+    "http://127.0.0.1:5174/assets/webtoon/siren-actions.webp",
+    "http://127.0.0.1:5174/assets/webtoon/siren-actions.webp",
+    "http://127.0.0.1:5174/assets/webtoon/siren-actions.webp",
+    "http://127.0.0.1:5174/assets/webtoon/siren-actions.webp",
+    "http://127.0.0.1:5174/assets/webtoon/siren-actions.webp",
+    "http://127.0.0.1:5174/assets/webtoon/siren-actions.webp"
+  ],
+  "before": {
+    "schemaVersion": 1,
+    "buildVersion": "0.1.0",
+    "writtenAt": "2026-10-04T10:48:28.780Z",
+    "checkpoint": {
+      "stageId": "S02",
+      "checkpointId": "boss"
+    },
+    "totalXp": 5011,
+    "coins": 3,
+    "weapons": [
+      "W01"
+    ],
+    "equippedWeapon": "W01",
+    "upgrades": {},
+    "treasures": [],
+    "relics": [],
+    "goldenHearts": [],
+    "equippedSkill": null,
+    "clearedStageIds": [
+      "S01"
+    ],
+    "claimedRewardIds": [
+      "S01.reward.start",
+      "S02.heart.02",
+      "S02.enemy.crab.04",
+      "S02.shell.3.reward"
+    ],
+    "completedObjectiveIds": [
+      "S02.shell.1",
+      "S02.shell.2",
+      "S02.shell.3"
+    ],
+    "flags": [],
+    "journalPageIds": [],
+    "settings": {
+      "difficulty": "relaxed",
+      "musicVolume": 0.18,
+      "sfxVolume": 0.3,
+      "reducedMotion": false,
+      "largeText": false,
+      "aimAssist": false
+    }
+  },
+  "rewarded": {
+    "schemaVersion": 1,
+    "buildVersion": "0.1.0",
+    "writtenAt": "2026-10-04T10:48:28.780Z",
+    "checkpoint": {
+      "stageId": "S02",
+      "checkpointId": "boss"
+    },
+    "totalXp": 5061,
+    "coins": 6,
+    "weapons": [
+      "W01"
+    ],
+    "equippedWeapon": "W01",
+    "upgrades": {},
+    "treasures": [],
+    "relics": [],
+    "goldenHearts": [],
+    "equippedSkill": null,
+    "clearedStageIds": [
+      "S01"
+    ],
+    "claimedRewardIds": [
+      "S01.reward.start",
+      "S02.heart.02",
+      "S02.enemy.crab.04",
+      "S02.shell.3.reward",
+      "S02.enemy.siren"
+    ],
+    "completedObjectiveIds": [
+      "S02.shell.1",
+      "S02.shell.2",
+      "S02.shell.3",
+      "S02.enemy.siren"
+    ],
+    "flags": [],
+    "journalPageIds": [],
+    "settings": {
+      "difficulty": "relaxed",
+      "musicVolume": 0.18,
+      "sfxVolume": 0.3,
+      "reducedMotion": false,
+      "largeText": false,
+      "aimAssist": false
+    }
+  },
+  "acquired": {
+    "schemaVersion": 1,
+    "buildVersion": "0.1.0",
+    "writtenAt": "2026-10-04T10:48:28.780Z",
+    "checkpoint": {
+      "stageId": "S02",
+      "checkpointId": "boss"
+    },
+    "totalXp": 5061,
+    "coins": 6,
+    "weapons": [
+      "W01",
+      "W02"
+    ],
+    "equippedWeapon": "W01",
+    "upgrades": {},
+    "treasures": [],
+    "relics": [],
+    "goldenHearts": [],
+    "equippedSkill": null,
+    "clearedStageIds": [
+      "S01"
+    ],
+    "claimedRewardIds": [
+      "S01.reward.start",
+      "S02.heart.02",
+      "S02.enemy.crab.04",
+      "S02.shell.3.reward",
+      "S02.enemy.siren",
+      "S02.boomerang.reward"
+    ],
+    "completedObjectiveIds": [
+      "S02.shell.1",
+      "S02.shell.2",
+      "S02.shell.3",
+      "S02.enemy.siren",
+      "S02.boomerang"
+    ],
+    "flags": [],
+    "journalPageIds": [],
+    "settings": {
+      "difficulty": "relaxed",
+      "musicVolume": 0.18,
+      "sfxVolume": 0.3,
+      "reducedMotion": false,
+      "largeText": false,
+      "aimAssist": false
+    }
+  },
+  "restored": {
+    "schemaVersion": 1,
+    "buildVersion": "0.1.0",
+    "writtenAt": "2026-10-04T10:48:57.895Z",
+    "checkpoint": {
+      "stageId": "S02",
+      "checkpointId": "boss"
+    },
+    "totalXp": 5061,
+    "coins": 6,
+    "weapons": [
+      "W01",
+      "W02"
+    ],
+    "equippedWeapon": "W01",
+    "upgrades": {},
+    "treasures": [],
+    "relics": [],
+    "goldenHearts": [],
+    "equippedSkill": null,
+    "clearedStageIds": [
+      "S01"
+    ],
+    "claimedRewardIds": [
+      "S01.reward.start",
+      "S02.heart.02",
+      "S02.enemy.crab.04",
+      "S02.shell.3.reward",
+      "S02.enemy.siren",
+      "S02.boomerang.reward"
+    ],
+    "completedObjectiveIds": [
+      "S02.shell.1",
+      "S02.shell.2",
+      "S02.shell.3",
+      "S02.enemy.siren",
+      "S02.boomerang"
+    ],
+    "flags": [],
+    "journalPageIds": [],
+    "settings": {
+      "difficulty": "relaxed",
+      "musicVolume": 0.18,
+      "sfxVolume": 0.3,
+      "reducedMotion": false,
+      "largeText": false,
+      "aimAssist": false
+    }
+  },
+  "cachedActionKeys": [
+    "enemy-actions"
+  ],
+  "errors": [],
+  "artStatus": "ART_DRAFT"
+}

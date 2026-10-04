@@ -1,0 +1,58 @@
+[
+  {
+    "command": "python scripts/optimize-webtoon.py",
+    "started": "2026-10-04T10:17:15.700208+00:00",
+    "exitCode": 0,
+    "seconds": 17.86,
+    "output": "docs/validation/m6-siren-release-check-1.txt"
+  },
+  {
+    "command": "python scripts/audit-webtoon.py",
+    "started": "2026-10-04T10:17:33.561850+00:00",
+    "exitCode": 0,
+    "seconds": 19.88,
+    "output": "docs/validation/m6-siren-release-check-2.txt"
+  },
+  {
+    "command": "npm run typecheck",
+    "started": "2026-10-04T10:17:53.430811+00:00",
+    "exitCode": 0,
+    "seconds": 9.88,
+    "output": "docs/validation/m6-siren-release-check-3.txt"
+  },
+  {
+    "command": "npm run lint",
+    "started": "2026-10-04T10:18:03.313526+00:00",
+    "exitCode": 0,
+    "seconds": 16.78,
+    "output": "docs/validation/m6-siren-release-check-4.txt"
+  },
+  {
+    "command": "npm run test",
+    "started": "2026-10-04T10:18:20.089317+00:00",
+    "exitCode": 0,
+    "seconds": 7.66,
+    "output": "docs/validation/m6-siren-release-check-5.txt"
+  },
+  {
+    "command": "npm run validate:content",
+    "started": "2026-10-04T10:18:27.749109+00:00",
+    "exitCode": 0,
+    "seconds": 2.38,
+    "output": "docs/validation/m6-siren-release-check-6.txt"
+  },
+  {
+    "command": "npm run build",
+    "started": "2026-10-04T10:18:30.120573+00:00",
+    "exitCode": 0,
+    "seconds": 21.77,
+    "output": "docs/validation/m6-siren-release-check-7.txt"
+  },
+  {
+    "command": "npx tsx scripts/check-art-budget.ts",
+    "started": "2026-10-04T10:18:51.897340+00:00",
+    "exitCode": 0,
+    "seconds": 8.03,
+    "output": "docs/validation/m6-siren-release-check-8.txt"
+  }
+]

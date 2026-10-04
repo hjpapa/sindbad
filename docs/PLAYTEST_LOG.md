@@ -1,5 +1,15 @@
 # 플레이 검증 기록
 
+## M6 세이렌 행동4셀 후 실제 회귀 · 2026-10-04
+
+Windows Edge 정적8명령·단위111개·신규 세이렌4개(원화/시트 누락×폰844×390/태블릿1180×820)가 통과했다. 추가검사는 S02보스 체크포인트·레벨·종2개 완료 픽스처를 명시하고 세 번째 종·방벽·두 공격 패턴·실제 터치 공격·해제·보스/W02 보상·저장 재개를 정상 입력으로 검증했다. 태블릿은 연출 줄이기도 확인했다. JSON은 `docs/validation/m6-siren-{phone,tablet}-{normal,fallback}.json`이다.
+
+전체 E2E는 **64통과·1실패/52.1분/exit1**이며, S07 파도 목표 완료 대기의10초 시간 초과가 실패다. 같은 구간은 저장 주입 없는 새 게임 연속 진행에서 통과했다. 검사만 기존 캠페인 이동/실제 밧줄 E 도우미로 보완해 **해당1개 통과/2.3분/exit0**했다. 게임·보상·동굴 재개 검증을 유지했다. `m6-siren-e2e-final.json`, `m6-siren-wave-repair.json`; 단일65통과로 기록하지 않는다. 두 실행은 각각958파일 동일이며 사이 차이는 파도 E2E파일 하나다.
+
+새 게임36구간은 **818초**에 정상 키 입력으로 완주했고, 무기·보물7종·엔딩·S01재방문·S16/S32 새로고침 보상 ID 유지·오류[]를 확인했다. 실제 구간별 누적 시간은 `m6-siren-complete-journey.json`이다. 자동 완주 시간을 어린이 목표 시간이나 모든 구간 사망 재시도 검수로 취급하지 않는다.
+
+CDP 실제 터치 스모크는 폰/태블릿 이동+252px·밀기 반전·점프−110px·첫 해골 처치·선장 대화·오류[]이며 exit0이다. 동시 이동/점프 가로값0px 항목은 판정 보류했다. 주요45화면은 `docs/screenshots/m6-siren/final/m6-siren/`, 보완3화면은 `docs/screenshots/m6-siren/wave-repair/`, 경로·SHA·치수는 `m6-siren-{final-screenshots,postcheck}.json`에 있다. 실기기·iOS Safari·어린이 조작성·장시간 FPS/발열·실제 스피커·최종 아트 승인은 **미검증**, ART_DRAFT 유지, 배포 없음.
+
 ## M6 비행 고리·돌풍·낙하 파편 후 실제 회귀 · 2026-10-04
 
 Windows Edge 로컬 전체 E2E는 **57개/exit0(52.4분)** 통과했다. 실패·flaky·skipped는 각0이다. 별도 **새 모험 시작·저장 주입 없음·정상 키 입력**으로 S01~S36을 **843초**에 완주했으며, 무기·보물 각7종·엔딩·S16/S32 새로고침 보상 ID 유지·엔딩 뒤 S01 재방문·실행/HTTP 오류0을 확인했다. 원시 결과는 `docs/validation/m6-flight-complete-journey.json`, 전체 JSON/콘솔은 `m6-flight-e2e-final.json`·`m6-flight-e2e-final-output.txt`다.

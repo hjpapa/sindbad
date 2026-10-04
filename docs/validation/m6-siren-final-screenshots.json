@@ -1,0 +1,464 @@
+{
+  "screens": [
+    {
+      "path": "docs/screenshots/m6-siren/final/m6-siren/campaign-S05-route.png",
+      "size": [
+        1280,
+        720
+      ],
+      "bytes": 1102761,
+      "sha256": "4c206e0a4f057e3b834da2dad3ee5f690f915b5d5b06f892a56a468fa10bcfff"
+    },
+    {
+      "path": "docs/screenshots/m6-siren/final/m6-siren/campaign-S10-route.png",
+      "size": [
+        1280,
+        720
+      ],
+      "bytes": 1081893,
+      "sha256": "9c27d2fbc8b9b76d968d75d64901e7a52f139737fb02725637109f7a8d86c783"
+    },
+    {
+      "path": "docs/screenshots/m6-siren/final/m6-siren/campaign-S15-route.png",
+      "size": [
+        1280,
+        720
+      ],
+      "bytes": 1250614,
+      "sha256": "8de2815532ed023b6ba6ceab792260ec9b5231acc1c2f1896cbc1fd417c1268c"
+    },
+    {
+      "path": "docs/screenshots/m6-siren/final/m6-siren/campaign-S19-route.png",
+      "size": [
+        1280,
+        720
+      ],
+      "bytes": 849778,
+      "sha256": "512431abf4d431aa112606c9a40dc2f34329efc53d300d12db0b304392b17175"
+    },
+    {
+      "path": "docs/screenshots/m6-siren/final/m6-siren/campaign-S25-route.png",
+      "size": [
+        1280,
+        720
+      ],
+      "bytes": 1059884,
+      "sha256": "8c6586ed23a8859a53ed66db38c05f36e5c3a753b6cc4f9a28ea49d05411fe41"
+    },
+    {
+      "path": "docs/screenshots/m6-siren/final/m6-siren/campaign-S29-route.png",
+      "size": [
+        1280,
+        720
+      ],
+      "bytes": 1186520,
+      "sha256": "566f0aa789918364ed9c7593b64b18c4a1dadb3225ce2f5266431189f83c5647"
+    },
+    {
+      "path": "docs/screenshots/m6-siren/final/m6-siren/campaign-S36-route.png",
+      "size": [
+        1280,
+        720
+      ],
+      "bytes": 1004252,
+      "sha256": "563d7dde13d84f6694ecda638ccba3f26a7ee24e62b588227d17733ec91e062b"
+    },
+    {
+      "path": "docs/screenshots/m6-siren/final/m6-siren/mobile-phone-dialogue.png",
+      "size": [
+        2532,
+        1170
+      ],
+      "bytes": 1675598,
+      "sha256": "6331bb93c7c748c464a9c9e992804da4eed912e71dbc9e5b8fd77dc03645db99"
+    },
+    {
+      "path": "docs/screenshots/m6-siren/final/m6-siren/mobile-phone-start.png",
+      "size": [
+        2532,
+        1170
+      ],
+      "bytes": 2681083,
+      "sha256": "ae3b984cb6057ea3ca8a6c27b5ab7ff471809ebb321fee0ad8143fd48efe3e24"
+    },
+    {
+      "path": "docs/screenshots/m6-siren/final/m6-siren/mobile-phone-swing.png",
+      "size": [
+        2532,
+        1170
+      ],
+      "bytes": 2646440,
+      "sha256": "513261a78de70af14f09bd6c8517cdca9bc3726b1d169b94ee033ff030c3cba8"
+    },
+    {
+      "path": "docs/screenshots/m6-siren/final/m6-siren/mobile-tablet-dialogue.png",
+      "size": [
+        2360,
+        1640
+      ],
+      "bytes": 2970956,
+      "sha256": "6b79aa78224594ceef989a203256c3e134b96e94d460a5a236be7f7a3557f92d"
+    },
+    {
+      "path": "docs/screenshots/m6-siren/final/m6-siren/mobile-tablet-start.png",
+      "size": [
+        2360,
+        1640
+      ],
+      "bytes": 2940648,
+      "sha256": "0650c09bc4b13f122f35530e0597193f75f21cab0cc038348fed10898c30e174"
+    },
+    {
+      "path": "docs/screenshots/m6-siren/final/m6-siren/mobile-tablet-swing.png",
+      "size": [
+        2360,
+        1640
+      ],
+      "bytes": 2909382,
+      "sha256": "f2ef4b53905b5732c736ab1473e28f301a2822ea6b7781e3dce5dd5fa6ecccfa"
+    },
+    {
+      "path": "docs/screenshots/m6-siren/final/m6-siren/phone-fallback-attack.png",
+      "size": [
+        844,
+        390
+      ],
+      "bytes": 475375,
+      "sha256": "7239d8f07987f33afc94d021dddfb06310bc7727fa6febc83644b36e3897cc3d"
+    },
+    {
+      "path": "docs/screenshots/m6-siren/final/m6-siren/phone-fallback-defeated.png",
+      "size": [
+        844,
+        390
+      ],
+      "bytes": 291609,
+      "sha256": "81ec7ff455c6eb2275b8b556363666e4e662c0d8cecd33c51256501cb984c40e"
+    },
+    {
+      "path": "docs/screenshots/m6-siren/final/m6-siren/phone-fallback-idle.png",
+      "size": [
+        844,
+        390
+      ],
+      "bytes": 474908,
+      "sha256": "9214747ebfd3ea733a24ab5f4917de9d8efa0ffea63b6dab5a9d8920eb8dfa18"
+    },
+    {
+      "path": "docs/screenshots/m6-siren/final/m6-siren/phone-fallback-recover.png",
+      "size": [
+        844,
+        390
+      ],
+      "bytes": 471610,
+      "sha256": "45f92da118c3ee4ca2b85d41f8eeddb4ca2d6a62fa87179b441bfd7d805a5d5d"
+    },
+    {
+      "path": "docs/screenshots/m6-siren/final/m6-siren/phone-fallback-right.png",
+      "size": [
+        844,
+        390
+      ],
+      "bytes": 470638,
+      "sha256": "f23b807b0cb8703e76b87317876854107aeea77c3b6beb1964d090d8c84a8b65"
+    },
+    {
+      "path": "docs/screenshots/m6-siren/final/m6-siren/phone-fallback-shield.png",
+      "size": [
+        844,
+        390
+      ],
+      "bytes": 468857,
+      "sha256": "80dbeaf30afe3ac86630e75fa31db14e451e8e2083171a6e1f58a88809b4d2a5"
+    },
+    {
+      "path": "docs/screenshots/m6-siren/final/m6-siren/phone-fallback-telegraph.png",
+      "size": [
+        844,
+        390
+      ],
+      "bytes": 471398,
+      "sha256": "64a59503f9858fd91c89a0bdf7d6a14ce2e9d7ca4528e4f0055bd7cb4de3ee93"
+    },
+    {
+      "path": "docs/screenshots/m6-siren/final/m6-siren/phone-fallback-weapon.png",
+      "size": [
+        844,
+        390
+      ],
+      "bytes": 471585,
+      "sha256": "ddbb87a338f61fa0a994883c33f29622c0f35552bf6fcea55e49134dbb90b0da"
+    },
+    {
+      "path": "docs/screenshots/m6-siren/final/m6-siren/phone-normal-attack.png",
+      "size": [
+        844,
+        390
+      ],
+      "bytes": 476399,
+      "sha256": "86b62fb2f4c303a2a5f07b417e43e9c48c96d998a71ef5b47c8fd0b4f76c11a0"
+    },
+    {
+      "path": "docs/screenshots/m6-siren/final/m6-siren/phone-normal-defeated.png",
+      "size": [
+        844,
+        390
+      ],
+      "bytes": 291543,
+      "sha256": "0eb0d13a57da5dc3bfb1f6cfc3d038efd4497ad5f4b640d78a122f88d028d79b"
+    },
+    {
+      "path": "docs/screenshots/m6-siren/final/m6-siren/phone-normal-idle.png",
+      "size": [
+        844,
+        390
+      ],
+      "bytes": 474723,
+      "sha256": "754e4ef8a233a27c572a27dbac19e29bcfdaaf371196be004c47bea741450cdf"
+    },
+    {
+      "path": "docs/screenshots/m6-siren/final/m6-siren/phone-normal-recover.png",
+      "size": [
+        844,
+        390
+      ],
+      "bytes": 471633,
+      "sha256": "10f11bb83926fbfa7c7a042805ca781bc025e66e0cd6acc6db6cf78c3e841cc5"
+    },
+    {
+      "path": "docs/screenshots/m6-siren/final/m6-siren/phone-normal-right.png",
+      "size": [
+        844,
+        390
+      ],
+      "bytes": 469868,
+      "sha256": "b3afd84779b4e2ea3daca16383f9a423f5699b4fc2ca062f266364791880949c"
+    },
+    {
+      "path": "docs/screenshots/m6-siren/final/m6-siren/phone-normal-shield.png",
+      "size": [
+        844,
+        390
+      ],
+      "bytes": 468993,
+      "sha256": "a13e2824bf79b0eaa9888e6524329b2f05098780751f8686bbdf1919a8350ca7"
+    },
+    {
+      "path": "docs/screenshots/m6-siren/final/m6-siren/phone-normal-telegraph.png",
+      "size": [
+        844,
+        390
+      ],
+      "bytes": 471818,
+      "sha256": "04d3e7ffa42c15469069bd568fa1686f15337b303ca71cc9ba63174e30379e97"
+    },
+    {
+      "path": "docs/screenshots/m6-siren/final/m6-siren/phone-normal-weapon.png",
+      "size": [
+        844,
+        390
+      ],
+      "bytes": 471511,
+      "sha256": "f4df4cdb51b5c4a50bba78571ece5e386db61c4c474af5cabea6828e1d383ef8"
+    },
+    {
+      "path": "docs/screenshots/m6-siren/final/m6-siren/tablet-fallback-attack.png",
+      "size": [
+        1180,
+        820
+      ],
+      "bytes": 1007449,
+      "sha256": "939078ce0008a0694133cd929bc4cec6bd59bbb7ab2a967dff74c1383cc2cb7d"
+    },
+    {
+      "path": "docs/screenshots/m6-siren/final/m6-siren/tablet-fallback-defeated.png",
+      "size": [
+        1180,
+        820
+      ],
+      "bytes": 979441,
+      "sha256": "e5817bdaa57999b6f2c9d367692e27bad3f2046f700a0d70b6320728859fa68c"
+    },
+    {
+      "path": "docs/screenshots/m6-siren/final/m6-siren/tablet-fallback-idle.png",
+      "size": [
+        1180,
+        820
+      ],
+      "bytes": 1003970,
+      "sha256": "9e32e20a90d158dbb9dfc5553006248b897cc0c7315c864fc218725fa0f6d3e4"
+    },
+    {
+      "path": "docs/screenshots/m6-siren/final/m6-siren/tablet-fallback-recover.png",
+      "size": [
+        1180,
+        820
+      ],
+      "bytes": 1004855,
+      "sha256": "b1e88b72a7c45d25efe854428280806e7f6fa6145827b2d8977993e37550eb87"
+    },
+    {
+      "path": "docs/screenshots/m6-siren/final/m6-siren/tablet-fallback-right.png",
+      "size": [
+        1180,
+        820
+      ],
+      "bytes": 957254,
+      "sha256": "ebd2510fe00cfc985c792fbd67671237df982e4ebe85f8abc3ae7eb5e2b36916"
+    },
+    {
+      "path": "docs/screenshots/m6-siren/final/m6-siren/tablet-fallback-shield.png",
+      "size": [
+        1180,
+        820
+      ],
+      "bytes": 969830,
+      "sha256": "d3db8e3b7f2c4b3845e8fdfd4f6da0262ae900e7f49841a33b9fb1f9ddcbffcc"
+    },
+    {
+      "path": "docs/screenshots/m6-siren/final/m6-siren/tablet-fallback-telegraph.png",
+      "size": [
+        1180,
+        820
+      ],
+      "bytes": 1004134,
+      "sha256": "5c6f299954e46ff9241107ee189065633d02cc676ef748bda401716be9297179"
+    },
+    {
+      "path": "docs/screenshots/m6-siren/final/m6-siren/tablet-fallback-weapon.png",
+      "size": [
+        1180,
+        820
+      ],
+      "bytes": 973358,
+      "sha256": "3a82ad33e60023d154be88d5f25d9094868531201649ed9434a9f2427d8f3289"
+    },
+    {
+      "path": "docs/screenshots/m6-siren/final/m6-siren/tablet-normal-attack.png",
+      "size": [
+        1180,
+        820
+      ],
+      "bytes": 1010251,
+      "sha256": "e2b5f29041f2f43315bcb633e873c4f495d73ead0b3a5bf77275ee7f104684f6"
+    },
+    {
+      "path": "docs/screenshots/m6-siren/final/m6-siren/tablet-normal-defeated.png",
+      "size": [
+        1180,
+        820
+      ],
+      "bytes": 981280,
+      "sha256": "d3d09cdceecac14ec8df66fbce6d2dbd7441c2982bdb98bebc45a375e7b5ff30"
+    },
+    {
+      "path": "docs/screenshots/m6-siren/final/m6-siren/tablet-normal-idle.png",
+      "size": [
+        1180,
+        820
+      ],
+      "bytes": 1002943,
+      "sha256": "ec41b348e64b64b70642f3e9fb9e90e6db8b1fc810f609669b4cfd7dd183d1af"
+    },
+    {
+      "path": "docs/screenshots/m6-siren/final/m6-siren/tablet-normal-recover.png",
+      "size": [
+        1180,
+        820
+      ],
+      "bytes": 1004313,
+      "sha256": "171d26c037ec1486cbeb8bf5c2c1e7fda85d1ed5eefe8d63f93d855178087340"
+    },
+    {
+      "path": "docs/screenshots/m6-siren/final/m6-siren/tablet-normal-right.png",
+      "size": [
+        1180,
+        820
+      ],
+      "bytes": 956072,
+      "sha256": "fe14ab86dacd6aed2969ccf2f3dd4a0ba35a98ce2b65fb0866c1db54ac5124be"
+    },
+    {
+      "path": "docs/screenshots/m6-siren/final/m6-siren/tablet-normal-shield.png",
+      "size": [
+        1180,
+        820
+      ],
+      "bytes": 967723,
+      "sha256": "6e6cc6173ef9719009c917ad8c050615af7f08caf0cafd226c4d1f1b3c75eb8b"
+    },
+    {
+      "path": "docs/screenshots/m6-siren/final/m6-siren/tablet-normal-telegraph.png",
+      "size": [
+        1180,
+        820
+      ],
+      "bytes": 1005549,
+      "sha256": "b02c3a2a435247708026ee945c9b0965fe70ffea263507b4817c1bf4500a4dc9"
+    },
+    {
+      "path": "docs/screenshots/m6-siren/final/m6-siren/tablet-normal-weapon.png",
+      "size": [
+        1180,
+        820
+      ],
+      "bytes": 973339,
+      "sha256": "4872e32ab0931328986fc0e6bcc0dc4691f5631c9f81c803cb78e0b2fc74889c"
+    }
+  ],
+  "verifiedCopies": [
+    {
+      "source": "docs/screenshots/m6-siren/mobile/mobile-phone-start.png",
+      "preserved": "docs/screenshots/m6-siren/final/m6-siren/mobile-phone-start.png"
+    },
+    {
+      "source": "docs/screenshots/m6-siren/mobile/mobile-phone-swing.png",
+      "preserved": "docs/screenshots/m6-siren/final/m6-siren/mobile-phone-swing.png"
+    },
+    {
+      "source": "docs/screenshots/m6-siren/mobile/mobile-phone-dialogue.png",
+      "preserved": "docs/screenshots/m6-siren/final/m6-siren/mobile-phone-dialogue.png"
+    },
+    {
+      "source": "docs/screenshots/m6-siren/mobile/mobile-tablet-start.png",
+      "preserved": "docs/screenshots/m6-siren/final/m6-siren/mobile-tablet-start.png"
+    },
+    {
+      "source": "docs/screenshots/m6-siren/mobile/mobile-tablet-swing.png",
+      "preserved": "docs/screenshots/m6-siren/final/m6-siren/mobile-tablet-swing.png"
+    },
+    {
+      "source": "docs/screenshots/m6-siren/mobile/mobile-tablet-dialogue.png",
+      "preserved": "docs/screenshots/m6-siren/final/m6-siren/mobile-tablet-dialogue.png"
+    },
+    {
+      "source": "test-results/complete-journey-new-game--139b0-ntrols-and-no-injected-save/S05-route.png",
+      "preserved": "docs/screenshots/m6-siren/final/m6-siren/campaign-S05-route.png"
+    },
+    {
+      "source": "test-results/complete-journey-new-game--139b0-ntrols-and-no-injected-save/S10-route.png",
+      "preserved": "docs/screenshots/m6-siren/final/m6-siren/campaign-S10-route.png"
+    },
+    {
+      "source": "test-results/complete-journey-new-game--139b0-ntrols-and-no-injected-save/S15-route.png",
+      "preserved": "docs/screenshots/m6-siren/final/m6-siren/campaign-S15-route.png"
+    },
+    {
+      "source": "test-results/complete-journey-new-game--139b0-ntrols-and-no-injected-save/S19-route.png",
+      "preserved": "docs/screenshots/m6-siren/final/m6-siren/campaign-S19-route.png"
+    },
+    {
+      "source": "test-results/complete-journey-new-game--139b0-ntrols-and-no-injected-save/S25-route.png",
+      "preserved": "docs/screenshots/m6-siren/final/m6-siren/campaign-S25-route.png"
+    },
+    {
+      "source": "test-results/complete-journey-new-game--139b0-ntrols-and-no-injected-save/S29-route.png",
+      "preserved": "docs/screenshots/m6-siren/final/m6-siren/campaign-S29-route.png"
+    },
+    {
+      "source": "test-results/complete-journey-new-game--139b0-ntrols-and-no-injected-save/S36-route.png",
+      "preserved": "docs/screenshots/m6-siren/final/m6-siren/campaign-S36-route.png"
+    }
+  ],
+  "count": 45
+}

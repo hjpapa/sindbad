@@ -1,5 +1,20 @@
 # 자산 등록 · ART_DRAFT
 
+## M6 세이렌 행동 시트 · 2026-10-04 · ART_DRAFT
+
+실제 검사: 정적8명령·단위111개·세이렌4검사 통과. 전체64통과·1실패(S07파도 목표 대기 시간 초과) 뒤 검사 이동/실제 E 입력만 보완해 해당1개 통과했다. 단일 전체65통과로 취급하지 않는다. 저장 주입 없는 새 게임36구간818초/무기·보물7종/엔딩/오류[] 확인. 전체·보완958파일 각각 동일, 사이 차이는 파도 검사 하나이며 게임/런타임/빌드는 동일하다. 주요45장+보완3장·기존 미디어561개·네이티브2장·백업308개 보존은 `m6-siren-postcheck.json`과 `PROJECT_STATUS.md`에 있다.
+
+| 실제 키 / 파일 | 규격 / 역할 | 출처·조건 |
+|---|---|---|
+| `siren-actions` · `art-source/webtoon/siren-actions.png`, `.webp` | 2048×512/4셀512px, 동일 RGBA 무손실 WebP441,120B | 프로젝트 자체 세이렌 인물·신밧드 화풍 참조, OpenAI 내장 imagegen. 프로젝트 사용·수정용 생성 자산, 외부 작품/작가 참조 없음. 최종 승인 전 ART_DRAFT. |
+| `public/assets/webtoon/siren-actions.webp` | 1024×256/4셀256px,49,312B | `optimize-webtoon.py` SIZES·manifest runtimeSize에서 생성. S02 세이렌 보스만 사용. |
+| `art-source/webtoon/siren-actions.json` → `src/content/siren-actions.generated.json` | 가시 경계·baseline461/461/448/450·대기 높이312 | 원본 메타데이터를 바이트 동일 복사. 기존 타깃 좌표3770/552·몸128px·바닥 오프셋58·ID·AI·보상은 유지. |
+| `art-source/webtoon/generated/siren-m6/siren-actions-02.png`, `.json` | 선택 네이티브1254×1254/2×2, 전체 실제 프롬프트·도구 경로 | 도구 원본을 바이트 동일 보존, 중앙/외곽 경계 비어 있음. 전체 셀 균일 축소·재배열만 수행. |
+| `art-source/webtoon/generated/siren-m6/siren-actions-01.png`, `.json` | 반려 네이티브1254×1254, 프롬프트·이유 | 공격 파동이 셀 경계를 넘음. 사용하지 않고 원본 보존. |
+| `art-source/webtoon/siren-webtoon.webp`, `public/assets/webtoon/siren-webtoon.webp` | 기존 인물 원화·런타임 | 누락 복구 및 기존 NPC/대화용. 바이트 동일 보존. 기존 표정 시트·10행 적 행동 시트도 유지. |
+
+`scripts/audit-siren-actions.py`가 네이티브SHA·무손실 RGBA·런타임 규격·투명 경계·실측 기준선 계약을 검사한다. 새 시트 연결은 조개 종3개의 방벽·두 음파 패턴·저주 해제·안정 보상/저장 ID를 유지한다. 실제 검사/화면 경로는 `PROJECT_STATUS.md`와 `docs/validation/m6-siren-*.json`에 기록한다. 기능 검증과 최종 아트 승인을 구별한다.
+
 ## M6 공중 연 행동 시트 · 2026-10-04 · ART_DRAFT
 
 실제 결과: 정적8명령·단위109개·연4검사 통과, 새 게임36스테이지833초/무기·보물7종/엔딩/오류[]. 전체 E2E60통과·1기록 쓰기 실패 → 결과 저장 경로 수정 후 무기2검사 통과(별도 실행). 기존미디어556파일과 보존281파일 확인, 두 실행의944파일 각각 동일이며 사이 차이는 무기 테스트의 결과 경로뿐이다. 최종69화면+보완42화면과 실제 로그·미검증은 `PROJECT_STATUS.md`, `docs/validation/m6-kite-postcheck.json`에 기록했다. 전체61개의 단일 실행 통과·실기기 승인으로 취급하지 않는다.

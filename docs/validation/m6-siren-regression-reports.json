@@ -1,0 +1,215 @@
+{
+  "method": "Legacy tests/audits write fixed report names. Current-run bytes preserved under a unique folder; exact previous report bytes restored from pre-task backup. No evidence deleted.",
+  "reports": [
+    {
+      "restoredOriginal": "docs/validation/a4-transition.json",
+      "originalSha256": "96edc68fb867088f19e75b77d1030ca99a2b213a96f7b4d12c4369a44aa05755",
+      "currentRunCopy": "docs/validation/m6-siren-regression-reports/a4-transition.json",
+      "currentRunSha256": "c42f6ffe490c6ff07b3243e99b1dae6c86d31a8e43b8cc8dccccb7ae8e333a5a"
+    },
+    {
+      "restoredOriginal": "docs/validation/a7-effects-fallback.json",
+      "originalSha256": "ec74756607eced17f02b606a04f5482f2ba4fdd142466d690d2df6565c4e5f4d",
+      "currentRunCopy": "docs/validation/m6-siren-regression-reports/a7-effects-fallback.json",
+      "currentRunSha256": "7693684afee023b11c033ef56ba9ab06b56132836fd7f77b4090c820fd8aa125"
+    },
+    {
+      "restoredOriginal": "docs/validation/a7-effects.json",
+      "originalSha256": "ad3d4870722c86f503797f11e975beb82e201e0ba531d16e3d9ee8d7d363e980",
+      "currentRunCopy": "docs/validation/m6-siren-regression-reports/a7-effects.json",
+      "currentRunSha256": "44f69bf3814288335e34db4472a427b4ca8965d331fb8bb8486e85b8dcba2270"
+    },
+    {
+      "restoredOriginal": "docs/validation/a7-projectiles.json",
+      "originalSha256": "3ba59a4edfbec85f9d2c95949daeaa0b407900fdf261a309a97b36c13b59c6ce",
+      "currentRunCopy": "docs/validation/m6-siren-regression-reports/a7-projectiles.json",
+      "currentRunSha256": "5f28bc75cdcf558c246f0a1017cea04e5d78e0f0e9350a147b01c1788a85f0f0"
+    },
+    {
+      "restoredOriginal": "docs/validation/a8-touch-fallback.json",
+      "originalSha256": "7063cf719a133f89b0b902753b718d02d1f4a6d4d83f11c06596d15928006a79",
+      "currentRunCopy": "docs/validation/m6-siren-regression-reports/a8-touch-fallback.json",
+      "currentRunSha256": "d1c2b0cc41c33dbbcc81c1e4ea4d4f2794a7548ef8eeca5edc4acb7d97e59d8c"
+    },
+    {
+      "restoredOriginal": "docs/validation/a8-touch-icons.json",
+      "originalSha256": "5f60b17a7493630e92e157253b3ff11bc8851e89ee296042858bcb9dcfae27b2",
+      "currentRunCopy": "docs/validation/m6-siren-regression-reports/a8-touch-icons.json",
+      "currentRunSha256": "5833ef0d4b42de3afa2d885a1785a76f0f3ca04dc3ba86d685139308896fabbe"
+    },
+    {
+      "restoredOriginal": "docs/validation/art-budget.json",
+      "originalSha256": "e205ad6e7d787258984b80648985978183235de0dbe654dcc9a071fffd98c34c",
+      "currentRunCopy": "docs/validation/m6-siren-regression-reports/art-budget.json",
+      "currentRunSha256": "32f745167a4a0183339865d6ceae2f7cae778b4a2eaaeedc02d5795c99075f9c"
+    },
+    {
+      "restoredOriginal": "docs/validation/complete-journey.json",
+      "originalSha256": "39c964f728b31a6646db900ef94224dee3098b5eddbe9f33e6c8ba0168702177",
+      "currentRunCopy": "docs/validation/m6-siren-regression-reports/complete-journey.json",
+      "currentRunSha256": "a5f5b36933ff396eb85d2d7cabffb95aa10c59c00db2fba0c1c42678cc7592c2"
+    },
+    {
+      "restoredOriginal": "docs/validation/effects.json",
+      "originalSha256": "7fd8297a68a602150eeeb11795ecca37c53eb378f4382a04b0bcd724776d719e",
+      "currentRunCopy": "docs/validation/m6-siren-regression-reports/effects.json",
+      "currentRunSha256": "f5cc2c444711736ac602fa22c63fc7a031fed5be967cd841f3343030c8e51aa1"
+    },
+    {
+      "restoredOriginal": "docs/validation/enemy-art.json",
+      "originalSha256": "513cc583aab03ec6663ae347d32faa633d435ac6dd351fdebd75552d796bdc23",
+      "currentRunCopy": "docs/validation/m6-siren-regression-reports/enemy-art.json",
+      "currentRunSha256": "b9434e16fe57ac3a6a48fedca682e95c64937c0edf4a4be2620c8e804e74d007"
+    },
+    {
+      "restoredOriginal": "docs/validation/illustrations.json",
+      "originalSha256": "75a2bcc592028342c4abd290b6e2c9b08ca7079ae89df604ef380b38ea571a5f",
+      "currentRunCopy": "docs/validation/m6-siren-regression-reports/illustrations.json",
+      "currentRunSha256": "b224880f4d79278ddc40dd93747d242b035535bb4261ff97a8a6ee9487be7ad7"
+    },
+    {
+      "restoredOriginal": "docs/validation/m6-flight-phone-fallback.json",
+      "originalSha256": "bd502f9fdc08dd58ca6936b2151248b4eb571b84c413d74cc36fccc1f3e720a7",
+      "currentRunCopy": "docs/validation/m6-siren-regression-reports/m6-flight-phone-fallback.json",
+      "currentRunSha256": "34d147b85b4a9ef8a79fb5552d7f028c2d98a421895655029a09ebe18ec77121"
+    },
+    {
+      "restoredOriginal": "docs/validation/m6-flight-phone-normal.json",
+      "originalSha256": "35eea6f2fb90131f03272193b558a95e7d8749e28ad8a700172d2ed770d8194b",
+      "currentRunCopy": "docs/validation/m6-siren-regression-reports/m6-flight-phone-normal.json",
+      "currentRunSha256": "cdac13e569d65e819e294e970e181ea5fe4449f86763a282fe002f2ea68a35b0"
+    },
+    {
+      "restoredOriginal": "docs/validation/m6-flight-tablet-fallback.json",
+      "originalSha256": "5ac9f96b4fef2eaa62f2d6594532f4c71b07f47fda892e938c41133961c15fc7",
+      "currentRunCopy": "docs/validation/m6-siren-regression-reports/m6-flight-tablet-fallback.json",
+      "currentRunSha256": "3ac8bbf48648e9cd8c74284c759721cbc92abdbb65854f7699e7aeaec429086e"
+    },
+    {
+      "restoredOriginal": "docs/validation/m6-flight-tablet-normal.json",
+      "originalSha256": "3e220aae14fe9ccce01d8e57ba92ff96e46e017cf9b35525fabdf13fdd3e7243",
+      "currentRunCopy": "docs/validation/m6-siren-regression-reports/m6-flight-tablet-normal.json",
+      "currentRunSha256": "842231947a4e37bb39aca87c2c8cb5c64f1cfb0991d4dbd44837341bf7b72501"
+    },
+    {
+      "restoredOriginal": "docs/validation/m6-interact-chest-fallback.json",
+      "originalSha256": "9d65aad860bc6990ca7c8ccae28523735721cf8e49ed3157796b2759ea090731",
+      "currentRunCopy": "docs/validation/m6-siren-regression-reports/m6-interact-chest-fallback.json",
+      "currentRunSha256": "d98b88f72d562bf533c7cd0349140b529371e6d116906f12911f56f4875f3733"
+    },
+    {
+      "restoredOriginal": "docs/validation/m6-interact-chest-play.json",
+      "originalSha256": "2e9cfcfb99cd9da664b1b964daa613bea5d9673385c22853167eb08171757de2",
+      "currentRunCopy": "docs/validation/m6-siren-regression-reports/m6-interact-chest-play.json",
+      "currentRunSha256": "85d75d12a643dd19c4f62e5ee15aafd478db4be3442f71f12b1f574d38dbc608"
+    },
+    {
+      "restoredOriginal": "docs/validation/m6-interact-map-fallback.json",
+      "originalSha256": "bae759105e6d8a7f7bec3902deb2dea43d821f114518cb1e4f08059a91c89b8f",
+      "currentRunCopy": "docs/validation/m6-siren-regression-reports/m6-interact-map-fallback.json",
+      "currentRunSha256": "a03cdd8e4388b8d10d4b9daf11a7460bf0401c21d54e576cda4bd86f25ff5c04"
+    },
+    {
+      "restoredOriginal": "docs/validation/m6-interact-map-normal.json",
+      "originalSha256": "9c6b2c2ca03d075fc343c8dc642c862b3848aa036bbf2ad3a930b2c96450211e",
+      "currentRunCopy": "docs/validation/m6-siren-regression-reports/m6-interact-map-normal.json",
+      "currentRunSha256": "488cabff669142f4430f680594eaba86ab46f38503befd7b5fd787f851059235"
+    },
+    {
+      "restoredOriginal": "docs/validation/m6-interact-rescue-fallback.json",
+      "originalSha256": "dd5a22757a3c3bc7b76f5f4de314076349544266994f9fa4abb7a379cf9460c1",
+      "currentRunCopy": "docs/validation/m6-siren-regression-reports/m6-interact-rescue-fallback.json",
+      "currentRunSha256": "c96ccf46dce9e24970f00d2b7d7fc21435d5e1c5b1513178ac9cba790ec6d509"
+    },
+    {
+      "restoredOriginal": "docs/validation/m6-interact-rescue-normal.json",
+      "originalSha256": "47c6f5160135297284c63ec42cf88f3438cf7a8978e6874bf0ee37967b0fe412",
+      "currentRunCopy": "docs/validation/m6-siren-regression-reports/m6-interact-rescue-normal.json",
+      "currentRunSha256": "f36dfed68e10dc07ae31c471575ee54ddefe8385c9d0b91869a3f58974bc517d"
+    },
+    {
+      "restoredOriginal": "docs/validation/m6-kite-phone-fallback.json",
+      "originalSha256": "fa295062c950f3e22a88f4a37124aacd050f67418b0c0d07aad03ed7c5fd2cae",
+      "currentRunCopy": "docs/validation/m6-siren-regression-reports/m6-kite-phone-fallback.json",
+      "currentRunSha256": "2dde866d4e80fcbcf90ec2fe90abb1b484c87d84e46c3ad53f792013dcbd817b"
+    },
+    {
+      "restoredOriginal": "docs/validation/m6-kite-phone-normal.json",
+      "originalSha256": "c01a22a427109ed68e76682c0a74bf3bbe680d7d65144b61cf2841ceb69f472a",
+      "currentRunCopy": "docs/validation/m6-siren-regression-reports/m6-kite-phone-normal.json",
+      "currentRunSha256": "d8d4e6c1620bacd0cd6d673f4b8b003a31913e6acb0bf5da60f2f0563112b7f6"
+    },
+    {
+      "restoredOriginal": "docs/validation/m6-kite-tablet-fallback.json",
+      "originalSha256": "0e2e232dc6feda47d578934a6503d4daae16579c044229b531f496c733ec67df",
+      "currentRunCopy": "docs/validation/m6-siren-regression-reports/m6-kite-tablet-fallback.json",
+      "currentRunSha256": "21ebaf028110d06dc1d530f34fbed008d11b00894e2599b6eba5c7ad0ffa02f6"
+    },
+    {
+      "restoredOriginal": "docs/validation/m6-kite-tablet-normal.json",
+      "originalSha256": "2124b3b47d1869a91410c97d0d526c997c3f97eebd7ce32db8638e84757399c3",
+      "currentRunCopy": "docs/validation/m6-siren-regression-reports/m6-kite-tablet-normal.json",
+      "currentRunSha256": "1f9040d590dd140c588ccb151503fc2d937fee67a25e0699ac7aae435dd0adcc"
+    },
+    {
+      "restoredOriginal": "docs/validation/npc-faces-fallback.json",
+      "originalSha256": "d89ffdccdd523612d9c989d1a40d28af0e4f05f24202ece31075d4547d413bc5",
+      "currentRunCopy": "docs/validation/m6-siren-regression-reports/npc-faces-fallback.json",
+      "currentRunSha256": "b95f4e989bc996127e32c921151f615b1aaa97f3d7631bd9134634d6872b709f"
+    },
+    {
+      "restoredOriginal": "docs/validation/npc-faces.json",
+      "originalSha256": "44c2ea8a2870f3f3470c38d59f0e9346f5062ee7901121cbc482d18583f96827",
+      "currentRunCopy": "docs/validation/m6-siren-regression-reports/npc-faces.json",
+      "currentRunSha256": "204cbef62862e3863992c52579151fa530f35ae7c59885ce39e8c586c0b4a97b"
+    },
+    {
+      "restoredOriginal": "docs/validation/terrain-art.json",
+      "originalSha256": "41762be3d761d27e84eba242081d6e649d12cb5df28f2bb6ea787400eaec8444",
+      "currentRunCopy": "docs/validation/m6-siren-regression-reports/terrain-art.json",
+      "currentRunSha256": "5aa280eecdc1fed5b87fbb9380f9c4f2a19bf756728c27ba89eab0f424c84d9e"
+    },
+    {
+      "restoredOriginal": "docs/validation/terrain-fallback-both.json",
+      "originalSha256": "056241d20816cd636e9d9657f78c380abf6242d4fbd9ae200e3dba18af73e4ab",
+      "currentRunCopy": "docs/validation/m6-siren-regression-reports/terrain-fallback-both.json",
+      "currentRunSha256": "1fda61a84d1e28ee2df611775e19e8ac06c1468bde059aa03da8611724bb2ebb"
+    },
+    {
+      "restoredOriginal": "docs/validation/terrain-fallback-fill.json",
+      "originalSha256": "f7146362f2128c31dbba91f49196cb42872cb84de01ad267346226568872345f",
+      "currentRunCopy": "docs/validation/m6-siren-regression-reports/terrain-fallback-fill.json",
+      "currentRunSha256": "5af16ad6c341690877852d4d35038fa8b346cbde55e55b044424c00b5b512b05"
+    },
+    {
+      "restoredOriginal": "docs/validation/terrain-fallback-top.json",
+      "originalSha256": "f5baee6f53d9542e52625ae2dfe95107d74fdf69e305c4c443292bc34f93a054",
+      "currentRunCopy": "docs/validation/m6-siren-regression-reports/terrain-fallback-top.json",
+      "currentRunSha256": "dbc44c4e56f0df5872e4f09e32fd48b54da7ead063cae479cb4d81bd316c8027"
+    },
+    {
+      "restoredOriginal": "docs/validation/terrain.json",
+      "originalSha256": "0940187955f8d3fa31c85ab438c46c04aaf8601a53d08373ba3e03b0ef2f1d3d",
+      "currentRunCopy": "docs/validation/m6-siren-regression-reports/terrain.json",
+      "currentRunSha256": "1aac5e9dfcb1212d5128edbf5a7851113d5c10d676e64757e118d9f32bb7bb4e"
+    },
+    {
+      "restoredOriginal": "docs/validation/touch-icons.json",
+      "originalSha256": "64d08a43484541b589b5b98eb1bc953b5569015d64f5800a95373130c000215c",
+      "currentRunCopy": "docs/validation/m6-siren-regression-reports/touch-icons.json",
+      "currentRunSha256": "d9d70583c01600d832bc7806c85758008d2d2b2153802cec00b9af83512cb927"
+    },
+    {
+      "restoredOriginal": "docs/validation/weapons.json",
+      "originalSha256": "fa79ade99091ef77eec041dda0645a1ab4d975330cebd377023e85837b759e70",
+      "currentRunCopy": "docs/validation/m6-siren-regression-reports/weapons.json",
+      "currentRunSha256": "1d6e82167be8cf8c3801299cf9064a5354311dbc06a03adfe7b4e49ff4a72883"
+    },
+    {
+      "restoredOriginal": "docs/validation/world-props.json",
+      "originalSha256": "174a3b0e99decf4221231d3d6f4a8f1e857b5c8cb8e9c390462e4f24f2d61c96",
+      "currentRunCopy": "docs/validation/m6-siren-regression-reports/world-props.json",
+      "currentRunSha256": "239369b7f52c07edf520b69e7962dbae7b7044946619b9a33332fc13a03064db"
+    }
+  ]
+}

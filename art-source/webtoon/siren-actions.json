@@ -1,0 +1,58 @@
+{
+  "key": "siren",
+  "texture": "siren-actions",
+  "cellSize": 512,
+  "columns": 4,
+  "rows": 1,
+  "idleHeight": 312,
+  "frames": [
+    {
+      "pose": "idle",
+      "frame": 0,
+      "bounds": [
+        181,
+        150,
+        359,
+        462
+      ],
+      "baseline": 461
+    },
+    {
+      "pose": "telegraph",
+      "frame": 1,
+      "bounds": [
+        158,
+        149,
+        366,
+        462
+      ],
+      "baseline": 461
+    },
+    {
+      "pose": "attack",
+      "frame": 2,
+      "bounds": [
+        133,
+        156,
+        444,
+        449
+      ],
+      "baseline": 448
+    },
+    {
+      "pose": "defeated",
+      "frame": 3,
+      "bounds": [
+        170,
+        156,
+        338,
+        451
+      ],
+      "baseline": 450
+    }
+  ],
+  "source": "art-source/webtoon/generated/siren-m6/siren-actions-02.png",
+  "sourceSha256": "95fa01cec189f4dd1d2c2edd26d652fcd7c89b366977c72c5140aa60ce482fdd",
+  "method": "Complete native square cells uniformly resized to512 and repacked4x1. Alpha>16 bounds/baseline. No repaint or silhouette crop. Exact lossless WebP.",
+  "artStatus": "ART_DRAFT"
+}

@@ -1,0 +1,283 @@
+{
+  "date": "2026-10-04T11:14:27.699151+00:00",
+  "fullStats": {
+    "startTime": "2026-10-04T10:21:36.512Z",
+    "duration": 3123865.376,
+    "expected": 64,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  },
+  "staticCommands": 8,
+  "units": 111,
+  "frozenFiles": 958,
+  "screenshots": 45,
+  "mediaPreserved": 561,
+  "backupsPreserved": 308,
+  "budgetBytes": 3081692,
+  "campaign": [
+    {
+      "id": "S01",
+      "elapsedSeconds": 22
+    },
+    {
+      "id": "S02",
+      "elapsedSeconds": 56
+    },
+    {
+      "id": "S03",
+      "elapsedSeconds": 78
+    },
+    {
+      "id": "S04",
+      "elapsedSeconds": 97
+    },
+    {
+      "id": "S05",
+      "elapsedSeconds": 117
+    },
+    {
+      "id": "S06",
+      "elapsedSeconds": 173
+    },
+    {
+      "id": "S07",
+      "elapsedSeconds": 205
+    },
+    {
+      "id": "S08",
+      "elapsedSeconds": 221
+    },
+    {
+      "id": "S09",
+      "elapsedSeconds": 243
+    },
+    {
+      "id": "S10",
+      "elapsedSeconds": 254
+    },
+    {
+      "id": "S11",
+      "elapsedSeconds": 282
+    },
+    {
+      "id": "S12",
+      "elapsedSeconds": 303
+    },
+    {
+      "id": "S13",
+      "elapsedSeconds": 328
+    },
+    {
+      "id": "S14",
+      "elapsedSeconds": 346
+    },
+    {
+      "id": "S15",
+      "elapsedSeconds": 365
+    },
+    {
+      "id": "S16",
+      "elapsedSeconds": 388
+    },
+    {
+      "id": "S17",
+      "elapsedSeconds": 407
+    },
+    {
+      "id": "S18",
+      "elapsedSeconds": 430
+    },
+    {
+      "id": "S19",
+      "elapsedSeconds": 451
+    },
+    {
+      "id": "S20",
+      "elapsedSeconds": 471
+    },
+    {
+      "id": "S21",
+      "elapsedSeconds": 497
+    },
+    {
+      "id": "S22",
+      "elapsedSeconds": 518
+    },
+    {
+      "id": "S23",
+      "elapsedSeconds": 537
+    },
+    {
+      "id": "S24",
+      "elapsedSeconds": 557
+    },
+    {
+      "id": "S25",
+      "elapsedSeconds": 581
+    },
+    {
+      "id": "S26",
+      "elapsedSeconds": 599
+    },
+    {
+      "id": "S27",
+      "elapsedSeconds": 622
+    },
+    {
+      "id": "S28",
+      "elapsedSeconds": 643
+    },
+    {
+      "id": "S29",
+      "elapsedSeconds": 669
+    },
+    {
+      "id": "S30",
+      "elapsedSeconds": 694
+    },
+    {
+      "id": "S31",
+      "elapsedSeconds": 728
+    },
+    {
+      "id": "S32",
+      "elapsedSeconds": 752
+    },
+    {
+      "id": "S33",
+      "elapsedSeconds": 764
+    },
+    {
+      "id": "S34",
+      "elapsedSeconds": 780
+    },
+    {
+      "id": "S35",
+      "elapsedSeconds": 800
+    },
+    {
+      "id": "S36",
+      "elapsedSeconds": 818
+    }
+  ],
+  "mobile": {
+    "phone": {
+      "visibleButtons": [
+        "left",
+        "right",
+        "jump",
+        "primary"
+      ],
+      "touchMode": true,
+      "walkRight": 252,
+      "slideReverses": true,
+      "runJump": {
+        "dx": 0,
+        "dy": -110
+      },
+      "firstSkeleton": "defeated",
+      "walkBack": 226,
+      "actionKind": "talk",
+      "dialogue": "바닷길에 검은 마법이 드리웠구나. 먼저 이 항구를 안전하게 만들자.",
+      "errors": []
+    },
+    "tablet": {
+      "visibleButtons": [
+        "left",
+        "right",
+        "jump",
+        "primary"
+      ],
+      "touchMode": true,
+      "walkRight": 252,
+      "slideReverses": true,
+      "runJump": {
+        "dx": 0,
+        "dy": -110
+      },
+      "firstSkeleton": "defeated",
+      "walkBack": 223,
+      "actionKind": "talk",
+      "dialogue": "바닷길에 검은 마법이 드리웠구나. 먼저 이 항구를 안전하게 만들자.",
+      "errors": []
+    }
+  },
+  "artStatus": "ART_DRAFT",
+  "previousCommit": "9727657",
+  "push": "blocked by automatic review; explicit payload/destination approval pending",
+  "deploy": false,
+  "unverified": [
+    "physical phone/tablet",
+    "iOS Safari",
+    "child usability",
+    "long-run FPS/heat",
+    "physical speaker mix",
+    "final user art approval"
+  ],
+  "fullRunExitCode": 1,
+  "repairExitCode": 0,
+  "repairStats": {
+    "startTime": "2026-10-04T11:15:23.447Z",
+    "duration": 136037.77399999998,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "repairFrozenFiles": 958,
+  "betweenRunsChanged": [
+    "tests/e2e/flame-waves.spec.ts"
+  ],
+  "gameRuntimeAssetsBuildUnchangedAcrossRuns": true,
+  "repairScreenshots": [
+    {
+      "source": "test-results/flame-waves-S06-furnaces-a-19dc8-aves-blessing-and-cave-save/S06-first-flame.png",
+      "preserved": "docs/screenshots/m6-siren/wave-repair/S06-first-flame.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "df914efcb6d95b74fa3660f29ec7d4c446f6f976959e625f1388eb46feeee2ca"
+    },
+    {
+      "source": "test-results/flame-waves-S06-furnaces-a-19dc8-aves-blessing-and-cave-save/S07-boat.png",
+      "preserved": "docs/screenshots/m6-siren/wave-repair/S07-boat.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "ea693219d7ab87d05eeb95c3c19b6164499b8fdbb5d7d16cb64f5f3035ce2084"
+    },
+    {
+      "source": "test-results/flame-waves-S06-furnaces-a-19dc8-aves-blessing-and-cave-save/S07-cave-resume.png",
+      "preserved": "docs/screenshots/m6-siren/wave-repair/S07-cave-resume.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "697eb390ff698e2e521b322afc718c8eee4a09cf7d36df79dd969aca9cab825f"
+    }
+  ],
+  "restoredPriorReports": 35,
+  "gitDiffCheckExitCode": 0,
+  "stoppedServerChecks": [
+    {
+      "port": 5174,
+      "result": "ECONNREFUSED"
+    },
+    {
+      "port": 5175,
+      "result": "ECONNREFUSED"
+    }
+  ],
+  "development": {
+    "firstTarget": {
+      "passed": 0,
+      "failed": 4,
+      "reason": "New test omitted existing .reward suffix; game reward IDs unchanged"
+    },
+    "fullFailure": "S07 wave objective poll timed out; exact first-run frame timing unconfirmed; movement/real rope input helper repaired",
+    "documentationPatch": "One multi-file patch reported an already replaced PROJECT_STATUS line missing; inspected applied status and updated remaining docs separately"
+  }
+}

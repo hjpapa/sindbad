@@ -1,5 +1,34 @@
 # PROJECT_STATUS.md
 
+<!-- M6_SIREN_STATUS_START -->
+## 최신 실제 상태 · 2026-10-04 · M6 세이렌 행동 4프레임
+
+**구현·추가 브라우저 검증 완료 / 전체64통과·1실패 후 해당1개 보완 통과 / ART_DRAFT.** 내장 imagegen으로 자체 세이렌 인물·신밧드 화풍을 참조해 대기·노래 예고·음파 공격·저주 해제4셀을 제작했다. 첫 후보의 공격 파동이 셀 경계를 넘어 반려하고 삭제 없이 보존했다. 선택2번은1254×1254/2×2이며 전체 셀을 균일 축소·재배열해2048×512 PNG + 동일 RGBA 무손실 WebP441,120B를 저장했다. 런타임은1024×256/4셀256px WebP49,312B다. 가시 알파>16의 중앙/외곽 경계와 글자 없음·안전한 해제 자세를 확인했다.
+
+실측 JSON의512px 기준선461/461/448/450·대기 높이312를 게임 JSON으로 동일 복사하여 기존 바닥 오프셋58·몸128px에 맞춘다. S02 보스에만 연결하고 다른 맵에서 해제하며 누락은 보존 세이렌 원화로 복구한다. 조개 종3개 방벽·단일 파동/음표3개 발사·기존 피해/타이밍·저주 해제·보상/오브젝트/저장 ID를 유지했다. 이전 파일308개 백업과 기존 미디어561개 해시를 기록했다.
+
+- **정적8명령 순서대로 통과:** 최적화→이미지 감사→typecheck→lint→test→validate:content→build→용량 검사. `docs/validation/m6-siren-release-checks.json`, `m6-siren-release-check-{1..8}.txt`.
+- **단위111개/22파일 통과**, 콘텐츠36스테이지·24아이 장면·7무기·7보물·8하트 검증 통과. 실제 웹툰 원화86+런타임86=172파일 및 기존 지형·무기·효과·아이콘·소품·연을 감사했다. 새 시트 네이티브SHA/동일 RGBA/JSON·측정 기준선·경계 검사 통과.
+- **빌드 통과:**44모듈, JS218.25KB/CSS16.93KB/Phaser1,481.77KB. 기존500KB청크 경고 유지. 첫 화면3,081,692/8,000,000B 통과; HTTP/실기기 성능 검사로 취급하지 않는다.
+- **추가4개 E2E 통과/exit0/3.2분:** 폰844×390/태블릿1180×820 × 원화/의도적 시트 누락. 방벽 피해 차단·실제 세 번째 종 공격·대기/예고/공격/회복/평온한 해제·양방향 기준선·일시정지·파동230/음표190의 두 패턴·실제 터치 공격·해제 때 투사체 제거·보스 XP50/금화3 한 번 지급·W02 실제 상자 획득·저장 재개/중복 방지·S01 캐시 해제를 확인했다. 명시적 S02보스 체크포인트/레벨/종2개 완료 픽스처 사용이며 새 게임 완주와 구별한다. 태블릿은 연출 줄이기를 사용했다. `m6-siren-recheck.json`, `m6-siren-recheck-output.txt`, 화면 `docs/screenshots/m6-siren/recheck/m6-siren/`.
+- 최초 추가 검사4개 실패는 테스트의 상자 보상 ID에서 기존 `.reward` 접미사를 빠뜨린 문제였다. 게임/ID를 바꾸지 않고 검사만 바로잡았다. 실패 로그 `m6-siren-target.json`, 원시 화면/문맥 `docs/screenshots/m6-siren/first-target-failure/`, 최초 검사 소스 `m6-siren-first-test.ts.txt`를 보존했다.
+- **CDP 실제 터치 스모크 exit0:** 폰/태블릿 모두 이동+252px·밀기 반전·점프−110px·첫 해골 처치·선장 대화·오류[]. 동시 이동/점프의 가로값은 둘 다0px여서 그 항목의 판정은 보류했다. `m6-siren-mobile.json`, `m6-siren-mobile-output.txt`,6화면 `docs/screenshots/m6-siren/mobile/`. 실기기 결과로 취급하지 않는다.
+- **전체65개 E2E 실제 결과64통과·1실패/52.1분/exit1.** `m6-siren-e2e-final-output.txt`, `m6-siren-e2e-final.json`, `m6-siren-final-report/index.html`. 세이렌4검사·기존 적40자세·무기·지형·효과·터치·소품·저장/사망/엔딩 검사는 통과했다. 실패는 `flame-waves`의 S07 파도 목표 완료를10초 기다리다 시간 초과한 건이다. 실패 화면/문맥은 `docs/screenshots/m6-siren/full-first-failure/flame-waves/`에 보존했다. 이동 중 불필요한 반복 점프·착지 대기로2.2초 파도 예고를 놓칠 가능성이 있었으나, 최초 실행의 프레임별 원인은 확정하지 않았다.
+- **해당 검사만 보완해1개 통과/2.3분/exit0.** 기존 캠페인의 `useJourney`로 움직이는 갑판에 접근하고 실제 밧줄 E를 재시도하게 바꿨다. 게임/파도 규칙·기존 보물/무기/목표/보상/동굴 저장 검증은 유지했다. `m6-siren-wave-repair.json`, `m6-siren-wave-repair-output.txt`, `m6-siren-wave-repair-report/index.html`. 타입·린트·단위111개도 재통과했다. 전체64통과+1실패와 보완1통과는 별도 실행이며 **전체65개 단일 실행 통과라고 쓰지 않는다.**
+- **저장 주입 없는 새 게임36스테이지 정상 입력 완주818초.** 무기/보물 각7·엔딩·S01재방문·S16/S32새로고침 보상 ID 유지·콘솔/HTTP 오류[]를 확인했다(`m6-siren-complete-journey.json`). 실패한 별도 검사와 같은 S07도 캠페인에서는 통과했다. 자동 완주 시간을 어린이 플레이 시간으로 취급하지 않는다.
+- **보존/실행 일치:** 전체·보완 실행 전후 각각958파일 동일이며 두 실행 사이 차이는 `tests/e2e/flame-waves.spec.ts` 하나다. 게임 소스/런타임/빌드/원화는 동일하다(`m6-siren-{final,wave-repair}-runtime-hashes.json`, `m6-siren-postcheck.json`). 백업308개·기존 미디어561개·기존 src35개·네이티브 후보2 PNG의 도구 원본 일치가 확인됐다(`m6-siren-preservation.json`). 고정 이름에 쓰인 이번 회귀 결과35개는 새 폴더로 바이트 동일 보존하고 이전 보고서 원본을 복구했다(`m6-siren-regression-reports.json`). 삭제한 원본은 없다.
+
+**실제 화면:** 주요45장은 `docs/screenshots/m6-siren/final/m6-siren/`에 있다. 세이렌32장(2뷰포트×2모드×8상태/맥락), 터치6장, 캠페인7장이다. 예: `phone-normal-attack.png`, `tablet-normal-defeated.png`; 평온한 해제 캡처에는 기존 대화창이 일부 겹친다. 경로·디코딩 크기·SHA·원본복사13개 일치는 `m6-siren-final-screenshots.json`에 기록했다. 보완3화면은 `docs/screenshots/m6-siren/wave-repair/`, 실제 경로/해시는 `m6-siren-postcheck.json`이다.
+
+**미검증:** 실제 폰/태블릿·iOS Safari·어린이 조작성·장시간 FPS/발열·실제 스피커 믹스·최종 사용자 아트 승인. Windows Edge/실제 CDP터치만 가능했다. **ART_DRAFT 유지**, 배포 없음. 이번4셀을 M6 전체/최종 아트 완료로 취급하지 않는다.
+
+자체 서버/로그 모니터는 종료했다. Node TCP검사에서5174/5175 ECONNREFUSED 확인(`m6-siren-stopped-servers.json`), 최종 `git diff --check` exit0(`m6-siren-final-diff-check.txt`). Ctrl+C exit1은 정리 결과다.
+
+**Git:** 이전 완료 작업을 `9727657`(`feat: integrate webtoon effects, touch icons, props and kite actions`)로 main에 커밋했다. 약581MB의 코드·자산·검증 자료를 `https://github.com/hjpapa/sindbad.git` main으로 올리는 푸시는 자동 승인 검토가 구체적 대상/전송 내용 승인이 부족하다는 이유로 거부했다. 푸시는 실행되지 않았으며 명시적 승인 응답을 기다린다. 이번 세이렌은 아직 별도 커밋하지 않았다.
+
+**다음 한 작업:** M6 박쥐 행동4프레임. 기존 자체 디자인으로 대기·공격 예고·공격·저주 해제 자세를 제작하고 비행 AI·안정 보상·저장·누락 복구를 유지해 연결·검증한다. 정령·로크새 행동과 실기기 검수는 별도 미완료다.
+<!-- M6_SIREN_STATUS_END -->
+
 <!-- M6_KITE_STATUS_START -->
 ## 최신 실제 상태 · 2026-10-04 · M6 공중 연 행동 4프레임
 

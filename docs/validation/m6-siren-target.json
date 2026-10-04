@@ -1,0 +1,409 @@
+{
+  "config": {
+    "configFile": "C:\\code\\code10(sindbad)\\playwright.config.ts",
+    "rootDir": "C:/code/code10(sindbad)/tests/e2e",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": "C:\\code\\code10(sindbad)\\tests\\e2e\\server.setup.ts",
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ],
+      [
+        "html"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "C:/code/code10(sindbad)/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "C:/code/code10(sindbad)/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 240000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.55.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "siren-actions.spec.ts",
+      "file": "siren-actions.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "phone siren four actions preserves shield, two songs and saved reward",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 43636,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoHaveLength\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected length: \u001b[32m1\u001b[39m\nReceived length: \u001b[31m0\u001b[39m\nReceived array:  \u001b[31m[]\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoHaveLength\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected length: \u001b[32m1\u001b[39m\nReceived length: \u001b[31m0\u001b[39m\nReceived array:  \u001b[31m[]\u001b[39m\n    at C:\\code\\code10(sindbad)\\tests\\e2e\\siren-actions.spec.ts:81:76",
+                    "location": {
+                      "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\siren-actions.spec.ts",
+                      "column": 76,
+                      "line": 81
+                    },
+                    "snippet": "  79 |         await useJourney(page,maps.S02.objects.find(o=>o.id==='S02.boomerang')!);\n  80 |         const acquired=(await read(page)).save as Save;expect(acquired.weapons).toContain('W02');\n> 81 |         expect(acquired.claimedRewardIds.filter(id=>id==='S02.boomerang')).toHaveLength(1);await capture('weapon');\n     |                                                                            ^\n  82 |         await resume(page);expect((await read(page)).enemies.some((e:EnemyView)=>e.id===boss.id)).toBe(false);\n  83 |         const restored=(await read(page)).save as Save;expect(restored.claimedRewardIds).toEqual(acquired.claimedRewardIds);\n  84 |         expect(restored.totalXp).toBe(acquired.totalXp);expect(restored.coins).toBe(acquired.coins);expect(restored.weapons).toContain('W02');"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\siren-actions.spec.ts",
+                        "column": 76,
+                        "line": 81
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoHaveLength\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected length: \u001b[32m1\u001b[39m\nReceived length: \u001b[31m0\u001b[39m\nReceived array:  \u001b[31m[]\u001b[39m\n\n  79 |         await useJourney(page,maps.S02.objects.find(o=>o.id==='S02.boomerang')!);\n  80 |         const acquired=(await read(page)).save as Save;expect(acquired.weapons).toContain('W02');\n> 81 |         expect(acquired.claimedRewardIds.filter(id=>id==='S02.boomerang')).toHaveLength(1);await capture('weapon');\n     |                                                                            ^\n  82 |         await resume(page);expect((await read(page)).enemies.some((e:EnemyView)=>e.id===boss.id)).toBe(false);\n  83 |         const restored=(await read(page)).save as Save;expect(restored.claimedRewardIds).toEqual(acquired.claimedRewardIds);\n  84 |         expect(restored.totalXp).toBe(acquired.totalXp);expect(restored.coins).toBe(acquired.coins);expect(restored.weapons).toContain('W02');\n    at C:\\code\\code10(sindbad)\\tests\\e2e\\siren-actions.spec.ts:81:76"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 9
+                    },
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 131
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 896
+                    }
+                  ],
+                  "startTime": "2026-10-04T10:14:00.499Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\code\\code10(sindbad)\\test-results\\siren-actions-phone-siren--23ce4--two-songs-and-saved-reward\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\code\\code10(sindbad)\\test-results\\siren-actions-phone-siren--23ce4--two-songs-and-saved-reward\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\siren-actions.spec.ts",
+                    "column": 76,
+                    "line": 81
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "5a734bfa38564d9db5f4-301332f7a606654d347f",
+          "file": "siren-actions.spec.ts",
+          "line": 35,
+          "column": 41
+        },
+        {
+          "title": "phone siren missing-sheet recovery preserves shield, two songs and saved reward",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 28055,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoHaveLength\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected length: \u001b[32m1\u001b[39m\nReceived length: \u001b[31m0\u001b[39m\nReceived array:  \u001b[31m[]\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoHaveLength\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected length: \u001b[32m1\u001b[39m\nReceived length: \u001b[31m0\u001b[39m\nReceived array:  \u001b[31m[]\u001b[39m\n    at C:\\code\\code10(sindbad)\\tests\\e2e\\siren-actions.spec.ts:81:76",
+                    "location": {
+                      "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\siren-actions.spec.ts",
+                      "column": 76,
+                      "line": 81
+                    },
+                    "snippet": "  79 |         await useJourney(page,maps.S02.objects.find(o=>o.id==='S02.boomerang')!);\n  80 |         const acquired=(await read(page)).save as Save;expect(acquired.weapons).toContain('W02');\n> 81 |         expect(acquired.claimedRewardIds.filter(id=>id==='S02.boomerang')).toHaveLength(1);await capture('weapon');\n     |                                                                            ^\n  82 |         await resume(page);expect((await read(page)).enemies.some((e:EnemyView)=>e.id===boss.id)).toBe(false);\n  83 |         const restored=(await read(page)).save as Save;expect(restored.claimedRewardIds).toEqual(acquired.claimedRewardIds);\n  84 |         expect(restored.totalXp).toBe(acquired.totalXp);expect(restored.coins).toBe(acquired.coins);expect(restored.weapons).toContain('W02');"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\siren-actions.spec.ts",
+                        "column": 76,
+                        "line": 81
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoHaveLength\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected length: \u001b[32m1\u001b[39m\nReceived length: \u001b[31m0\u001b[39m\nReceived array:  \u001b[31m[]\u001b[39m\n\n  79 |         await useJourney(page,maps.S02.objects.find(o=>o.id==='S02.boomerang')!);\n  80 |         const acquired=(await read(page)).save as Save;expect(acquired.weapons).toContain('W02');\n> 81 |         expect(acquired.claimedRewardIds.filter(id=>id==='S02.boomerang')).toHaveLength(1);await capture('weapon');\n     |                                                                            ^\n  82 |         await resume(page);expect((await read(page)).enemies.some((e:EnemyView)=>e.id===boss.id)).toBe(false);\n  83 |         const restored=(await read(page)).save as Save;expect(restored.claimedRewardIds).toEqual(acquired.claimedRewardIds);\n  84 |         expect(restored.totalXp).toBe(acquired.totalXp);expect(restored.coins).toBe(acquired.coins);expect(restored.weapons).toContain('W02');\n    at C:\\code\\code10(sindbad)\\tests\\e2e\\siren-actions.spec.ts:81:76"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 10
+                    },
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 118
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 6
+                    }
+                  ],
+                  "startTime": "2026-10-04T10:14:46.627Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\code\\code10(sindbad)\\test-results\\siren-actions-phone-siren--40d49--two-songs-and-saved-reward\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\code\\code10(sindbad)\\test-results\\siren-actions-phone-siren--40d49--two-songs-and-saved-reward\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\siren-actions.spec.ts",
+                    "column": 76,
+                    "line": 81
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "5a734bfa38564d9db5f4-8120c852c0b4af2b81db",
+          "file": "siren-actions.spec.ts",
+          "line": 35,
+          "column": 41
+        },
+        {
+          "title": "tablet siren four actions preserves shield, two songs and saved reward",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 29203,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoHaveLength\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected length: \u001b[32m1\u001b[39m\nReceived length: \u001b[31m0\u001b[39m\nReceived array:  \u001b[31m[]\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoHaveLength\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected length: \u001b[32m1\u001b[39m\nReceived length: \u001b[31m0\u001b[39m\nReceived array:  \u001b[31m[]\u001b[39m\n    at C:\\code\\code10(sindbad)\\tests\\e2e\\siren-actions.spec.ts:81:76",
+                    "location": {
+                      "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\siren-actions.spec.ts",
+                      "column": 76,
+                      "line": 81
+                    },
+                    "snippet": "  79 |         await useJourney(page,maps.S02.objects.find(o=>o.id==='S02.boomerang')!);\n  80 |         const acquired=(await read(page)).save as Save;expect(acquired.weapons).toContain('W02');\n> 81 |         expect(acquired.claimedRewardIds.filter(id=>id==='S02.boomerang')).toHaveLength(1);await capture('weapon');\n     |                                                                            ^\n  82 |         await resume(page);expect((await read(page)).enemies.some((e:EnemyView)=>e.id===boss.id)).toBe(false);\n  83 |         const restored=(await read(page)).save as Save;expect(restored.claimedRewardIds).toEqual(acquired.claimedRewardIds);\n  84 |         expect(restored.totalXp).toBe(acquired.totalXp);expect(restored.coins).toBe(acquired.coins);expect(restored.weapons).toContain('W02');"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\siren-actions.spec.ts",
+                        "column": 76,
+                        "line": 81
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoHaveLength\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected length: \u001b[32m1\u001b[39m\nReceived length: \u001b[31m0\u001b[39m\nReceived array:  \u001b[31m[]\u001b[39m\n\n  79 |         await useJourney(page,maps.S02.objects.find(o=>o.id==='S02.boomerang')!);\n  80 |         const acquired=(await read(page)).save as Save;expect(acquired.weapons).toContain('W02');\n> 81 |         expect(acquired.claimedRewardIds.filter(id=>id==='S02.boomerang')).toHaveLength(1);await capture('weapon');\n     |                                                                            ^\n  82 |         await resume(page);expect((await read(page)).enemies.some((e:EnemyView)=>e.id===boss.id)).toBe(false);\n  83 |         const restored=(await read(page)).save as Save;expect(restored.claimedRewardIds).toEqual(acquired.claimedRewardIds);\n  84 |         expect(restored.totalXp).toBe(acquired.totalXp);expect(restored.coins).toBe(acquired.coins);expect(restored.weapons).toContain('W02');\n    at C:\\code\\code10(sindbad)\\tests\\e2e\\siren-actions.spec.ts:81:76"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 8
+                    },
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 127
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 127
+                    }
+                  ],
+                  "startTime": "2026-10-04T10:15:17.166Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\code\\code10(sindbad)\\test-results\\siren-actions-tablet-siren-5228c--two-songs-and-saved-reward\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\code\\code10(sindbad)\\test-results\\siren-actions-tablet-siren-5228c--two-songs-and-saved-reward\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\siren-actions.spec.ts",
+                    "column": 76,
+                    "line": 81
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "5a734bfa38564d9db5f4-e7c9757acf00008c583e",
+          "file": "siren-actions.spec.ts",
+          "line": 35,
+          "column": 41
+        },
+        {
+          "title": "tablet siren missing-sheet recovery preserves shield, two songs and saved reward",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 32535,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoHaveLength\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected length: \u001b[32m1\u001b[39m\nReceived length: \u001b[31m0\u001b[39m\nReceived array:  \u001b[31m[]\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoHaveLength\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected length: \u001b[32m1\u001b[39m\nReceived length: \u001b[31m0\u001b[39m\nReceived array:  \u001b[31m[]\u001b[39m\n    at C:\\code\\code10(sindbad)\\tests\\e2e\\siren-actions.spec.ts:81:76",
+                    "location": {
+                      "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\siren-actions.spec.ts",
+                      "column": 76,
+                      "line": 81
+                    },
+                    "snippet": "  79 |         await useJourney(page,maps.S02.objects.find(o=>o.id==='S02.boomerang')!);\n  80 |         const acquired=(await read(page)).save as Save;expect(acquired.weapons).toContain('W02');\n> 81 |         expect(acquired.claimedRewardIds.filter(id=>id==='S02.boomerang')).toHaveLength(1);await capture('weapon');\n     |                                                                            ^\n  82 |         await resume(page);expect((await read(page)).enemies.some((e:EnemyView)=>e.id===boss.id)).toBe(false);\n  83 |         const restored=(await read(page)).save as Save;expect(restored.claimedRewardIds).toEqual(acquired.claimedRewardIds);\n  84 |         expect(restored.totalXp).toBe(acquired.totalXp);expect(restored.coins).toBe(acquired.coins);expect(restored.weapons).toContain('W02');"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\siren-actions.spec.ts",
+                        "column": 76,
+                        "line": 81
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoHaveLength\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected length: \u001b[32m1\u001b[39m\nReceived length: \u001b[31m0\u001b[39m\nReceived array:  \u001b[31m[]\u001b[39m\n\n  79 |         await useJourney(page,maps.S02.objects.find(o=>o.id==='S02.boomerang')!);\n  80 |         const acquired=(await read(page)).save as Save;expect(acquired.weapons).toContain('W02');\n> 81 |         expect(acquired.claimedRewardIds.filter(id=>id==='S02.boomerang')).toHaveLength(1);await capture('weapon');\n     |                                                                            ^\n  82 |         await resume(page);expect((await read(page)).enemies.some((e:EnemyView)=>e.id===boss.id)).toBe(false);\n  83 |         const restored=(await read(page)).save as Save;expect(restored.claimedRewardIds).toEqual(acquired.claimedRewardIds);\n  84 |         expect(restored.totalXp).toBe(acquired.totalXp);expect(restored.coins).toBe(acquired.coins);expect(restored.weapons).toContain('W02');\n    at C:\\code\\code10(sindbad)\\tests\\e2e\\siren-actions.spec.ts:81:76"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 10
+                    },
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 119
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 6
+                    }
+                  ],
+                  "startTime": "2026-10-04T10:15:48.815Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\code\\code10(sindbad)\\test-results\\siren-actions-tablet-siren-812a9--two-songs-and-saved-reward\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\code\\code10(sindbad)\\test-results\\siren-actions-tablet-siren-812a9--two-songs-and-saved-reward\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\siren-actions.spec.ts",
+                    "column": 76,
+                    "line": 81
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "5a734bfa38564d9db5f4-a798b90ba195948e86b2",
+          "file": "siren-actions.spec.ts",
+          "line": 35,
+          "column": 41
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-04T10:13:57.140Z",
+    "duration": 145653.82,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 4,
+    "flaky": 0
+  }
+}

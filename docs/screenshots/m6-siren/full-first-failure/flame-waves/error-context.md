@@ -1,0 +1,45 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - generic:
+    - generic:
+      - generic: S07
+      - generic:
+        - generic:
+          - generic: ♥
+          - text: "84"
+          - generic: / 115
+        - meter "체력"
+      - generic:
+        - generic: Lv.4
+        - generic: XP 117 / 120 · MP 66 / 66
+    - generic [ref=e5] [cursor=pointer]:
+      - generic [ref=e6] [cursor=pointer]: 현재 항로
+      - strong [ref=e7] [cursor=pointer]: 거대한 파도와 침몰하는 배
+      - generic [ref=e8] [cursor=pointer]: 파도 예고 → 밧줄 E 또는 점프 · 세 파도 통과 → 하강 동굴의 닻
+    - generic:
+      - generic: ◈ 40
+      - button "가방과 지도" [ref=e9] [cursor=pointer]:
+        - generic [ref=e10] [cursor=pointer]: 🎒
+        - generic [ref=e11] [cursor=pointer]: 가방 M
+      - button "일시정지" [ref=e12] [cursor=pointer]: Ⅱ
+    - generic:
+      - text: 여행자의 곡도
+      - generic: Q 교체
+      - text: · 불꽃 R
+  - generic "터치 조작":
+    - generic [ref=e13]:
+      - button "터치 ←" [ref=e14] [cursor=pointer]:
+        - generic: ◀
+      - button "터치 →" [ref=e15] [cursor=pointer]:
+        - generic: ▶
+    - generic:
+      - button "터치 ↑" [ref=e16] [cursor=pointer]: 점프
+      - button "터치 영원의 불씨" [ref=e17] [cursor=pointer]:
+        - generic: 불꽃
+      - button "터치 무기 바꾸기 · 지금 여행자의 곡도" [ref=e18] [cursor=pointer]:
+        - generic: 바꾸기
+      - button "터치 행동" [ref=e19] [cursor=pointer]:
+        - generic: 공격
+```

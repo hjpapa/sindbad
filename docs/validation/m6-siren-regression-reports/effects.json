@@ -1,0 +1,598 @@
+{
+  "date": "2026-10-04T10:17:45.948048+00:00",
+  "pass": true,
+  "artStatus": "ART_DRAFT",
+  "method": "7 native PNG hashes; uniform complete-cell normalization; exact source lossless RGBA; 14 real WebP decodes; 34 visible frame boundaries per role (alpha >16); visual approval separate",
+  "files": [
+    {
+      "path": "art-source/webtoon/projectile-siren-wave.webp",
+      "role": "original",
+      "size": [
+        1024,
+        1024
+      ],
+      "cell": 512,
+      "frames": [
+        [
+          168,
+          169,
+          379,
+          392
+        ],
+        [
+          121,
+          150,
+          395,
+          414
+        ],
+        [
+          128,
+          93,
+          455,
+          383
+        ],
+        [
+          146,
+          128,
+          373,
+          354
+        ]
+      ],
+      "bytes": 427516,
+      "sha256": "4b2fa38d492c6cea246fcf2362aeb0dff3b5d5b9e30012d3c885b07886333d3f"
+    },
+    {
+      "path": "public/assets/webtoon/projectile-siren-wave.webp",
+      "role": "runtime",
+      "size": [
+        128,
+        128
+      ],
+      "cell": 64,
+      "frames": [
+        [
+          21,
+          21,
+          47,
+          49
+        ],
+        [
+          15,
+          19,
+          50,
+          52
+        ],
+        [
+          16,
+          11,
+          57,
+          48
+        ],
+        [
+          18,
+          16,
+          47,
+          44
+        ]
+      ],
+      "bytes": 6790,
+      "sha256": "1cee45acb2e6643c94113efe187581d603b5137fd23161eacbab42825c050f74"
+    },
+    {
+      "path": "art-source/webtoon/projectile-siren-note.webp",
+      "role": "original",
+      "size": [
+        1024,
+        1024
+      ],
+      "cell": 512,
+      "frames": [
+        [
+          155,
+          98,
+          413,
+          432
+        ],
+        [
+          113,
+          99,
+          384,
+          433
+        ],
+        [
+          138,
+          74,
+          413,
+          408
+        ],
+        [
+          128,
+          73,
+          384,
+          407
+        ]
+      ],
+      "bytes": 404808,
+      "sha256": "51e283877c0e7fe432c22847e32b270f19a4418cc356461fe1bafbdd09d9dfd2"
+    },
+    {
+      "path": "public/assets/webtoon/projectile-siren-note.webp",
+      "role": "runtime",
+      "size": [
+        128,
+        128
+      ],
+      "cell": 64,
+      "frames": [
+        [
+          19,
+          12,
+          52,
+          54
+        ],
+        [
+          14,
+          12,
+          48,
+          55
+        ],
+        [
+          17,
+          9,
+          52,
+          51
+        ],
+        [
+          16,
+          9,
+          48,
+          51
+        ]
+      ],
+      "bytes": 7010,
+      "sha256": "a54f8815bba05bf79a64573cda4e8acd7ed154f6da8e069bf57d4e0b8bf642a5"
+    },
+    {
+      "path": "art-source/webtoon/projectile-kite-wind.webp",
+      "role": "original",
+      "size": [
+        1024,
+        1024
+      ],
+      "cell": 512,
+      "frames": [
+        [
+          96,
+          153,
+          467,
+          410
+        ],
+        [
+          86,
+          157,
+          434,
+          406
+        ],
+        [
+          92,
+          121,
+          464,
+          370
+        ],
+        [
+          70,
+          124,
+          443,
+          381
+        ]
+      ],
+      "bytes": 416112,
+      "sha256": "e54c45cb4643df192d8b120630db7e6e375431b503319681dfbb870973a4ef18"
+    },
+    {
+      "path": "public/assets/webtoon/projectile-kite-wind.webp",
+      "role": "runtime",
+      "size": [
+        128,
+        128
+      ],
+      "cell": 64,
+      "frames": [
+        [
+          12,
+          19,
+          59,
+          52
+        ],
+        [
+          10,
+          19,
+          55,
+          51
+        ],
+        [
+          11,
+          15,
+          58,
+          47
+        ],
+        [
+          8,
+          15,
+          56,
+          48
+        ]
+      ],
+      "bytes": 7210,
+      "sha256": "0a58723acd9867b56a3e955c6869ada6dc3c09a9de596a98042803ccfa6032d5"
+    },
+    {
+      "path": "art-source/webtoon/projectile-kuura-orb.webp",
+      "role": "original",
+      "size": [
+        1024,
+        1024
+      ],
+      "cell": 512,
+      "frames": [
+        [
+          102,
+          120,
+          420,
+          384
+        ],
+        [
+          100,
+          114,
+          410,
+          408
+        ],
+        [
+          131,
+          117,
+          425,
+          383
+        ],
+        [
+          112,
+          104,
+          415,
+          370
+        ]
+      ],
+      "bytes": 418144,
+      "sha256": "cc9f4ce4a6e825d5e1ba29e006dfa9e6e63bfac85043fbb0638f050b8bdff3db"
+    },
+    {
+      "path": "public/assets/webtoon/projectile-kuura-orb.webp",
+      "role": "runtime",
+      "size": [
+        128,
+        128
+      ],
+      "cell": 64,
+      "frames": [
+        [
+          12,
+          15,
+          53,
+          48
+        ],
+        [
+          12,
+          14,
+          52,
+          51
+        ],
+        [
+          16,
+          14,
+          54,
+          48
+        ],
+        [
+          14,
+          13,
+          52,
+          47
+        ]
+      ],
+      "bytes": 6784,
+      "sha256": "c4d3d34f820a3185c2bdf6b10c59ec14e70add364e15182efce150bf6723c551"
+    },
+    {
+      "path": "art-source/webtoon/effect-hit-spark.webp",
+      "role": "original",
+      "size": [
+        1536,
+        1024
+      ],
+      "cell": 512,
+      "frames": [
+        [
+          189,
+          183,
+          320,
+          320
+        ],
+        [
+          121,
+          101,
+          386,
+          388
+        ],
+        [
+          103,
+          79,
+          417,
+          405
+        ],
+        [
+          100,
+          92,
+          391,
+          375
+        ],
+        [
+          147,
+          140,
+          361,
+          341
+        ],
+        [
+          209,
+          188,
+          331,
+          305
+        ]
+      ],
+      "bytes": 421442,
+      "sha256": "2eabdd7d398262373d824716ce56bafdc757a4f7d7c52e7a623dcc94fedc493e"
+    },
+    {
+      "path": "public/assets/webtoon/effect-hit-spark.webp",
+      "role": "runtime",
+      "size": [
+        384,
+        256
+      ],
+      "cell": 128,
+      "frames": [
+        [
+          47,
+          46,
+          80,
+          80
+        ],
+        [
+          30,
+          25,
+          97,
+          97
+        ],
+        [
+          26,
+          20,
+          104,
+          101
+        ],
+        [
+          25,
+          23,
+          98,
+          94
+        ],
+        [
+          37,
+          35,
+          90,
+          85
+        ],
+        [
+          52,
+          47,
+          83,
+          76
+        ]
+      ],
+      "bytes": 22310,
+      "sha256": "2446b515875ddbf0fde1946e8542e4a84527a3cd748814ec7bb8f10fbac352ce"
+    },
+    {
+      "path": "art-source/webtoon/effect-purify-light.webp",
+      "role": "original",
+      "size": [
+        1536,
+        1024
+      ],
+      "cell": 512,
+      "frames": [
+        [
+          175,
+          214,
+          338,
+          310
+        ],
+        [
+          150,
+          94,
+          359,
+          425
+        ],
+        [
+          107,
+          114,
+          399,
+          406
+        ],
+        [
+          137,
+          96,
+          392,
+          361
+        ],
+        [
+          201,
+          91,
+          332,
+          387
+        ],
+        [
+          215,
+          199,
+          284,
+          285
+        ]
+      ],
+      "bytes": 373290,
+      "sha256": "1bfeff04d9f64b46dc789602b0b713bbcda1247d53524a4329f0419d01984a7c"
+    },
+    {
+      "path": "public/assets/webtoon/effect-purify-light.webp",
+      "role": "runtime",
+      "size": [
+        384,
+        256
+      ],
+      "cell": 128,
+      "frames": [
+        [
+          44,
+          54,
+          84,
+          77
+        ],
+        [
+          37,
+          24,
+          90,
+          106
+        ],
+        [
+          27,
+          29,
+          99,
+          101
+        ],
+        [
+          34,
+          24,
+          98,
+          90
+        ],
+        [
+          50,
+          23,
+          83,
+          96
+        ],
+        [
+          54,
+          50,
+          71,
+          71
+        ]
+      ],
+      "bytes": 18940,
+      "sha256": "6fc0d8bf078c25dcbd8cdc7149080d996966f5eee123d7de9d77350b019a6756"
+    },
+    {
+      "path": "art-source/webtoon/effect-surrender-flag.webp",
+      "role": "original",
+      "size": [
+        1536,
+        1024
+      ],
+      "cell": 512,
+      "frames": [
+        [
+          160,
+          70,
+          300,
+          445
+        ],
+        [
+          135,
+          71,
+          379,
+          445
+        ],
+        [
+          98,
+          70,
+          427,
+          445
+        ],
+        [
+          154,
+          67,
+          451,
+          444
+        ],
+        [
+          131,
+          65,
+          425,
+          443
+        ],
+        [
+          105,
+          67,
+          422,
+          444
+        ]
+      ],
+      "bytes": 489804,
+      "sha256": "d3307ab6fcb236cd4ada17bb2a8745c907e6dcc1bd7fc0a1d5b69eb5a9b751eb"
+    },
+    {
+      "path": "public/assets/webtoon/effect-surrender-flag.webp",
+      "role": "runtime",
+      "size": [
+        384,
+        256
+      ],
+      "cell": 128,
+      "frames": [
+        [
+          40,
+          17,
+          75,
+          112
+        ],
+        [
+          33,
+          17,
+          95,
+          112
+        ],
+        [
+          24,
+          17,
+          107,
+          112
+        ],
+        [
+          38,
+          17,
+          113,
+          111
+        ],
+        [
+          32,
+          16,
+          107,
+          111
+        ],
+        [
+          26,
+          16,
+          105,
+          111
+        ]
+      ],
+      "bytes": 24538,
+      "sha256": "142cd3c39e0e9f55d597cfc3fbfad3ba66ede2036cac7364b4b95192c8dafc97"
+    }
+  ]
+}

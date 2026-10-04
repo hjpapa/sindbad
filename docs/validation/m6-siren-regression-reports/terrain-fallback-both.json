@@ -1,0 +1,178 @@
+{
+  "pass": true,
+  "missing": "both",
+  "observed": {
+    "style": "dock",
+    "cachedKeys": [
+      "terrain-dock-fill",
+      "terrain-dock-top"
+    ],
+    "textures": [
+      {
+        "key": "terrain-dock-fill",
+        "width": 128,
+        "height": 128,
+        "source": "generated"
+      },
+      {
+        "key": "terrain-dock-top",
+        "width": 128,
+        "height": 34,
+        "source": "generated"
+      }
+    ],
+    "platforms": [
+      {
+        "x": 2400,
+        "y": 664,
+        "width": 4800,
+        "height": 112,
+        "texture": "terrain-dock-fill",
+        "visible": true,
+        "skinX": 2400,
+        "skinY": 664,
+        "skinWidth": 4800,
+        "skinHeight": 112
+      },
+      {
+        "x": 560,
+        "y": 572,
+        "width": 160,
+        "height": 72,
+        "texture": "terrain-dock-fill",
+        "visible": true,
+        "skinX": 560,
+        "skinY": 572,
+        "skinWidth": 160,
+        "skinHeight": 72
+      },
+      {
+        "x": 776,
+        "y": 552,
+        "width": 192,
+        "height": 112,
+        "texture": "terrain-dock-fill",
+        "visible": true,
+        "skinX": 776,
+        "skinY": 552,
+        "skinWidth": 192,
+        "skinHeight": 112
+      },
+      {
+        "x": 1426,
+        "y": 576,
+        "width": 192,
+        "height": 64,
+        "texture": "terrain-dock-fill",
+        "visible": true,
+        "skinX": 1426,
+        "skinY": 576,
+        "skinWidth": 192,
+        "skinHeight": 64
+      },
+      {
+        "x": 2128,
+        "y": 568,
+        "width": 256,
+        "height": 80,
+        "texture": "terrain-dock-fill",
+        "visible": true,
+        "skinX": 2128,
+        "skinY": 568,
+        "skinWidth": 256,
+        "skinHeight": 80
+      },
+      {
+        "x": 2766,
+        "y": 576,
+        "width": 192,
+        "height": 64,
+        "texture": "terrain-dock-fill",
+        "visible": true,
+        "skinX": 2766,
+        "skinY": 576,
+        "skinWidth": 192,
+        "skinHeight": 64
+      },
+      {
+        "x": 3496,
+        "y": 576,
+        "width": 192,
+        "height": 64,
+        "texture": "terrain-dock-fill",
+        "visible": true,
+        "skinX": 3496,
+        "skinY": 576,
+        "skinWidth": 192,
+        "skinHeight": 64
+      }
+    ],
+    "tops": [
+      {
+        "x": 2400,
+        "y": 621,
+        "width": 4800,
+        "height": 34,
+        "texture": "terrain-dock-top"
+      },
+      {
+        "x": 560,
+        "y": 549,
+        "width": 160,
+        "height": 34,
+        "texture": "terrain-dock-top"
+      },
+      {
+        "x": 776,
+        "y": 509,
+        "width": 192,
+        "height": 34,
+        "texture": "terrain-dock-top"
+      },
+      {
+        "x": 1426,
+        "y": 557,
+        "width": 192,
+        "height": 34,
+        "texture": "terrain-dock-top"
+      },
+      {
+        "x": 2128,
+        "y": 541,
+        "width": 256,
+        "height": 34,
+        "texture": "terrain-dock-top"
+      },
+      {
+        "x": 2766,
+        "y": 557,
+        "width": 192,
+        "height": 34,
+        "texture": "terrain-dock-top"
+      },
+      {
+        "x": 3496,
+        "y": 557,
+        "width": 192,
+        "height": 34,
+        "texture": "terrain-dock-top"
+      }
+    ]
+  },
+  "expectedAbortedRequests": [
+    "http://127.0.0.1:5174/assets/terrain/terrain-dock-fill.webp",
+    "http://127.0.0.1:5174/assets/terrain/terrain-dock-top.webp",
+    "http://127.0.0.1:5174/assets/terrain/terrain-dock-fill.webp",
+    "http://127.0.0.1:5174/assets/terrain/terrain-dock-top.webp",
+    "http://127.0.0.1:5174/assets/terrain/terrain-dock-fill.webp",
+    "http://127.0.0.1:5174/assets/terrain/terrain-dock-top.webp",
+    "http://127.0.0.1:5174/assets/terrain/terrain-dock-fill.webp",
+    "http://127.0.0.1:5174/assets/terrain/terrain-dock-top.webp",
+    "http://127.0.0.1:5174/assets/terrain/terrain-dock-fill.webp",
+    "http://127.0.0.1:5174/assets/terrain/terrain-dock-top.webp",
+    "http://127.0.0.1:5174/assets/terrain/terrain-dock-fill.webp",
+    "http://127.0.0.1:5174/assets/terrain/terrain-dock-top.webp"
+  ],
+  "path": "docs/screenshots/m6-siren/final/art-a5/phone-missing-both.png",
+  "errors": []
+}

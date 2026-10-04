@@ -147,6 +147,7 @@ for (const map of Object.values(maps)) for (const [index, spawn] of map.spawns.e
     else if (['skeleton','archer','captain'].includes(spawn.kind)) spawn.actionArt = 'skeleton';
     else if (spawn.kind === 'guardian') spawn.actionArt = 'guard';
     else if (spawn.kind === 'crab') spawn.actionArt = 'crab';
+    else if (spawn.kind === 'siren') spawn.actionArt = 'siren';
     else if (spawn.kind === 'bandit') spawn.actionArt = map.id === 'S14' ? 'guard' : ['S17','S18'].includes(map.id) ? 'pirate' : 'bandit';
     else if (spawn.kind === 'beast') spawn.actionArt = map.id === 'S22' || index % 2 ? 'tiger' : 'snake';
 }

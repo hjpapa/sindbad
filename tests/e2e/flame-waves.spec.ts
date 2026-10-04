@@ -1,6 +1,8 @@
 import {test,expect,type Page} from '@playwright/test';
 import {freshSave} from '../../src/core/state';
 import {SAVE_KEY} from '../../src/core/save';
+import {maps} from '../../src/content/maps';
+import {useJourney} from './journey-bot';
 const read=(p:Page)=>p.evaluate(()=>Reflect.get(window,'__SINBAD_TEST__'));
 async function walk(p:Page,x:number){const end=Date.now()+30000;let jump=0;for(;;){const s=await read(p);if(!s.player){await p.waitForTimeout(50);continue;}if(Math.abs(s.player.x-x)<12)break;if(Date.now()>end)throw Error(`walk ${x}: ${JSON.stringify(s.player)}`);const key=s.player.x<x?'d':'a';await p.keyboard.up(key==='d'?'a':'d');await p.keyboard.down(key);if(Date.now()-jump>430){await p.keyboard.press('ArrowUp');jump=Date.now();}await p.waitForTimeout(60);}await p.keyboard.up('a');await p.keyboard.up('d');await p.waitForTimeout(450);}
 async function use(p:Page,x:number){await walk(p,x);await expect.poll(async()=>!!(await read(p)).player?.grounded).toBe(true);await p.keyboard.press('e');await p.waitForTimeout(100);}
@@ -18,7 +20,10 @@ test('S06 furnaces and first treasure → S07 waves, blessing and cave save',asy
  await use(page,350);expect((await read(page)).save.completedObjectiveIds).toContain('S06.vine');await use(page,550);const coins=(await read(page)).save.coins;await page.keyboard.press('e');expect((await read(page)).save.coins).toBe(coins);
  await use(page,3750);await page.getByRole('button',{name:'다음 스테이지'}).click();await expect.poll(async()=>(await read(page)).stage).toBe('S07');
  for(const [i,x] of [900,1900,2900].entries()){
-   await use(page,x);await expect.poll(async()=>(await read(page)).save.completedObjectiveIds.includes(`S07.wave.${i+1}`)).toBe(true);
+   // Follow the moving deck and retry real rope input if a warning was missed.
+   // The generic hopping helper can arrive after the 2.2s warning expires.
+   await useJourney(page,maps.S07.objects.find(o=>o.x===x&&o.kind==='rope')!);
+   await expect.poll(async()=>(await read(page)).save.completedObjectiveIds.includes(`S07.wave.${i+1}`)).toBe(true);
    if(i===0){await page.screenshot({path:info.outputPath('S07-boat.png')});await use(page,1410);}
  }
  await use(page,3500);await expect(page.getByTestId('dialogue-text')).toBeVisible();s=await read(page);expect(s.save.flags).toContain('genieCave');await page.reload();await page.getByRole('button',{name:'이어하기 · S07'}).click();await expect.poll(async()=>(await read(page)).submerged).toBe(true);await page.waitForTimeout(11000);expect((await read(page)).air).toBe(10000);await page.screenshot({path:info.outputPath('S07-cave-resume.png')});

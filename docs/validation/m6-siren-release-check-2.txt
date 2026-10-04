@@ -1,0 +1,8 @@
+PASS: 34 original + 34 runtime terrain tiles; preserved native hashes, lossless pixels, sizes/opacity and bottom6 shadow.
+PASS: 7 original + 7 runtime weapons; 8 native PNG and 7 SVG hashes preserved; opaque grip, sizes, transparency and lossless RGBA.
+PASS: 7 native PNG preserved, 7 lossless originals + 7 runtime sheets, 34 complete frames each.
+PASS: 27 icon files; 10 native hashes; 9 actual 128px PNGs
+PASS: 90 world prop files; native and legacy SVG hashes preserved
+PASS: kite 4 frames; preserved native, exact lossless source, runtime, transparent seams and measured flight centres; ART_DRAFT
+PASS: siren4 native/lossless/runtime frames, transparent seams and measured foot baselines; ART_DRAFT
+PASS: decoded 172 real illustrations; 63,447,044 bytes.

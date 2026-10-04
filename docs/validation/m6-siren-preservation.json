@@ -1,0 +1,26 @@
+{
+  "backups": 308,
+  "unchangedMedia": 561,
+  "unchangedOldSource": 35,
+  "allowedChangedSource": [
+    "src/content/assets.manifest.ts",
+    "src/content/enemyActions.ts",
+    "src/content/maps.ts",
+    "src/game/stage.ts"
+  ],
+  "natives": [
+    {
+      "path": "art-source/webtoon/generated/siren-m6/siren-actions-01.png",
+      "toolPath": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-40c6c288-5bfa-4a53-acbb-ec4376f836e2.png",
+      "sha256": "7769577fd1a9f49150e0c99c52a2a054f90f3e0e8727a309bbb0ca6dfda04e55",
+      "status": "rejected; attack sound ripple crosses vertical native cell seam x626..627, y724..822; PNG/prompt preserved"
+    },
+    {
+      "path": "art-source/webtoon/generated/siren-m6/siren-actions-02.png",
+      "toolPath": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-7e65c087-c59b-4126-ba4d-4a02841c8e4c.png",
+      "sha256": "95fa01cec189f4dd1d2c2edd26d652fcd7c89b366977c72c5140aa60ce482fdd",
+      "status": "selected; transparent seams checked before packing; ART_DRAFT"
+    }
+  ],
+  "artStatus": "ART_DRAFT"
+}

@@ -1,8 +1,9 @@
 import atlas from './enemy-actions.generated.json' with {type:'json'};
 import kite from './kite-actions.generated.json' with {type:'json'};
+import siren from './siren-actions.generated.json' with {type:'json'};
 
-export type EnemyActionKey = 'skeleton' | 'bandit' | 'guard' | 'pirate' | 'snake' | 'tiger' | 'dragon' | 'crab' | 'stone' | 'kuura' | 'kite';
-export const enemyActionTexture = (key:EnemyActionKey) => key==='kite'?'kite-actions':'enemy-actions';
+export type EnemyActionKey = 'skeleton' | 'bandit' | 'guard' | 'pirate' | 'snake' | 'tiger' | 'dragon' | 'crab' | 'stone' | 'kuura' | 'kite' | 'siren';
+export const enemyActionTexture = (key:EnemyActionKey) => key==='kite'?'kite-actions':key==='siren'?'siren-actions':'enemy-actions';
 export type EnemyState = 'idle' | 'telegraph' | 'attack' | 'recover' | 'defeated';
 export const enemyActionRows = atlas.rows;
 
@@ -13,6 +14,11 @@ export function enemyActionPose(state: EnemyState) {
 // Keep the old combat centre and chosen resting foot position, despite transparent
 // margins or a crouching pose. Pose changes never move the collision target.
 export function enemyActionLayout(key: EnemyActionKey, state: EnemyState, bodyHeight: number, footOffset: number) {
+    if(key==='siren'){
+        const frame=enemyActionPose(state),pose=siren.frames[frame],displaySize=bodyHeight*siren.cellSize/siren.idleHeight;
+        return {frame,displaySize,originX:.5,originY:pose.baseline/siren.cellSize-footOffset/displaySize,
+            bodyWidth:(siren.frames[0].bounds[2]-siren.frames[0].bounds[0])*bodyHeight/siren.idleHeight};
+    }
     if(key==='kite'){
         const frame=enemyActionPose(state),pose=kite.frames[frame];
         return {frame,displaySize:bodyHeight*kite.cellSize/kite.idleHeight,
@@ -27,5 +33,5 @@ export function enemyActionLayout(key: EnemyActionKey, state: EnemyState, bodyHe
 }
 
 export function actionDefeatKind(key: EnemyActionKey) {
-    return ['bandit', 'guard', 'pirate'].includes(key) ? 'human' : ['snake', 'tiger', 'dragon', 'crab'].includes(key) ? 'animal' : 'magic';
+    return ['bandit', 'guard', 'pirate'].includes(key) ? 'human' : ['snake', 'tiger', 'dragon', 'crab', 'siren'].includes(key) ? 'animal' : 'magic';
 }

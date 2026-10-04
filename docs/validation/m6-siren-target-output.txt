@@ -1,0 +1,131 @@
+
+> sinbad-seven-treasures@0.1.0 test:e2e
+> playwright test tests/e2e/siren-actions.spec.ts --reporter=list,json,html
+
+
+Running 4 tests using 1 worker
+
+(node:43264) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:43264) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x  1 tests\e2e\siren-actions.spec.ts:35:41 › phone siren four actions preserves shield, two songs and saved reward (43.6s)
+(node:54944) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:54944) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x  2 tests\e2e\siren-actions.spec.ts:35:41 › phone siren missing-sheet recovery preserves shield, two songs and saved reward (28.1s)
+(node:15684) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:15684) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x  3 tests\e2e\siren-actions.spec.ts:35:41 › tablet siren four actions preserves shield, two songs and saved reward (29.2s)
+(node:57532) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:57532) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x  4 tests\e2e\siren-actions.spec.ts:35:41 › tablet siren missing-sheet recovery preserves shield, two songs and saved reward (32.5s)
+
+
+  1) tests\e2e\siren-actions.spec.ts:35:41 › phone siren four actions preserves shield, two songs and saved reward 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoHaveLength[2m([22m[32mexpected[39m[2m)[22m
+
+    Expected length: [32m1[39m
+    Received length: [31m0[39m
+    Received array:  [31m[][39m
+
+      79 |         await useJourney(page,maps.S02.objects.find(o=>o.id==='S02.boomerang')!);
+      80 |         const acquired=(await read(page)).save as Save;expect(acquired.weapons).toContain('W02');
+    > 81 |         expect(acquired.claimedRewardIds.filter(id=>id==='S02.boomerang')).toHaveLength(1);await capture('weapon');
+         |                                                                            ^
+      82 |         await resume(page);expect((await read(page)).enemies.some((e:EnemyView)=>e.id===boss.id)).toBe(false);
+      83 |         const restored=(await read(page)).save as Save;expect(restored.claimedRewardIds).toEqual(acquired.claimedRewardIds);
+      84 |         expect(restored.totalXp).toBe(acquired.totalXp);expect(restored.coins).toBe(acquired.coins);expect(restored.weapons).toContain('W02');
+        at C:\code\code10(sindbad)\tests\e2e\siren-actions.spec.ts:81:76
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\siren-actions-phone-siren--23ce4--two-songs-and-saved-reward\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\siren-actions-phone-siren--23ce4--two-songs-and-saved-reward\error-context.md
+
+  2) tests\e2e\siren-actions.spec.ts:35:41 › phone siren missing-sheet recovery preserves shield, two songs and saved reward 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoHaveLength[2m([22m[32mexpected[39m[2m)[22m
+
+    Expected length: [32m1[39m
+    Received length: [31m0[39m
+    Received array:  [31m[][39m
+
+      79 |         await useJourney(page,maps.S02.objects.find(o=>o.id==='S02.boomerang')!);
+      80 |         const acquired=(await read(page)).save as Save;expect(acquired.weapons).toContain('W02');
+    > 81 |         expect(acquired.claimedRewardIds.filter(id=>id==='S02.boomerang')).toHaveLength(1);await capture('weapon');
+         |                                                                            ^
+      82 |         await resume(page);expect((await read(page)).enemies.some((e:EnemyView)=>e.id===boss.id)).toBe(false);
+      83 |         const restored=(await read(page)).save as Save;expect(restored.claimedRewardIds).toEqual(acquired.claimedRewardIds);
+      84 |         expect(restored.totalXp).toBe(acquired.totalXp);expect(restored.coins).toBe(acquired.coins);expect(restored.weapons).toContain('W02');
+        at C:\code\code10(sindbad)\tests\e2e\siren-actions.spec.ts:81:76
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\siren-actions-phone-siren--40d49--two-songs-and-saved-reward\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\siren-actions-phone-siren--40d49--two-songs-and-saved-reward\error-context.md
+
+  3) tests\e2e\siren-actions.spec.ts:35:41 › tablet siren four actions preserves shield, two songs and saved reward 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoHaveLength[2m([22m[32mexpected[39m[2m)[22m
+
+    Expected length: [32m1[39m
+    Received length: [31m0[39m
+    Received array:  [31m[][39m
+
+      79 |         await useJourney(page,maps.S02.objects.find(o=>o.id==='S02.boomerang')!);
+      80 |         const acquired=(await read(page)).save as Save;expect(acquired.weapons).toContain('W02');
+    > 81 |         expect(acquired.claimedRewardIds.filter(id=>id==='S02.boomerang')).toHaveLength(1);await capture('weapon');
+         |                                                                            ^
+      82 |         await resume(page);expect((await read(page)).enemies.some((e:EnemyView)=>e.id===boss.id)).toBe(false);
+      83 |         const restored=(await read(page)).save as Save;expect(restored.claimedRewardIds).toEqual(acquired.claimedRewardIds);
+      84 |         expect(restored.totalXp).toBe(acquired.totalXp);expect(restored.coins).toBe(acquired.coins);expect(restored.weapons).toContain('W02');
+        at C:\code\code10(sindbad)\tests\e2e\siren-actions.spec.ts:81:76
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\siren-actions-tablet-siren-5228c--two-songs-and-saved-reward\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\siren-actions-tablet-siren-5228c--two-songs-and-saved-reward\error-context.md
+
+  4) tests\e2e\siren-actions.spec.ts:35:41 › tablet siren missing-sheet recovery preserves shield, two songs and saved reward 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoHaveLength[2m([22m[32mexpected[39m[2m)[22m
+
+    Expected length: [32m1[39m
+    Received length: [31m0[39m
+    Received array:  [31m[][39m
+
+      79 |         await useJourney(page,maps.S02.objects.find(o=>o.id==='S02.boomerang')!);
+      80 |         const acquired=(await read(page)).save as Save;expect(acquired.weapons).toContain('W02');
+    > 81 |         expect(acquired.claimedRewardIds.filter(id=>id==='S02.boomerang')).toHaveLength(1);await capture('weapon');
+         |                                                                            ^
+      82 |         await resume(page);expect((await read(page)).enemies.some((e:EnemyView)=>e.id===boss.id)).toBe(false);
+      83 |         const restored=(await read(page)).save as Save;expect(restored.claimedRewardIds).toEqual(acquired.claimedRewardIds);
+      84 |         expect(restored.totalXp).toBe(acquired.totalXp);expect(restored.coins).toBe(acquired.coins);expect(restored.weapons).toContain('W02');
+        at C:\code\code10(sindbad)\tests\e2e\siren-actions.spec.ts:81:76
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\siren-actions-tablet-siren-812a9--two-songs-and-saved-reward\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\siren-actions-tablet-siren-812a9--two-songs-and-saved-reward\error-context.md
+
+  4 failed
+    tests\e2e\siren-actions.spec.ts:35:41 › phone siren four actions preserves shield, two songs and saved reward 
+    tests\e2e\siren-actions.spec.ts:35:41 › phone siren missing-sheet recovery preserves shield, two songs and saved reward 
+    tests\e2e\siren-actions.spec.ts:35:41 › tablet siren four actions preserves shield, two songs and saved reward 
+    tests\e2e\siren-actions.spec.ts:35:41 › tablet siren missing-sheet recovery preserves shield, two songs and saved reward 
+
+To open last HTML report run:
+[36m[39m
+[36m  npx playwright show-report[39m
+[36m[39m
