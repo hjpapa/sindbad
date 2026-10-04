@@ -1,0 +1,704 @@
+{
+  "date": "2026-10-04",
+  "status": "ART_DRAFT",
+  "generator": "OpenAI built-in imagegen",
+  "styleReference": "art-source/webtoon/hero-webtoon.webp",
+  "requestedSize": [
+    768,
+    1024
+  ],
+  "candidates": [
+    {
+      "key": "prop-chest",
+      "nativePath": "C:/Users/tbose/.codex/generated_images/01a10013-499c-7b11-9c12-3ae8826e542a/exec-51ac0afc-092f-4013-ad03-c7fce06e6b46.png",
+      "path": "art-source/webtoon/generated/props/prop-chest-01.png",
+      "prompt": "Create ONE original game treasure chest sprite for a bright child-friendly Korean adventure webtoon game. Use the attached project hero only as STYLE reference for dark navy ink outlines, warm teal/gold/wood palette, clean 2-3 level cel shading and top-left light. Do not draw the hero. Output a PORTRAIT 3:4 canvas (768x1024), true transparent RGBA background. One CLOSED sturdy warm honey-brown wooden treasure chest, broad rectangular trunk with gently rounded hinged lid, two brass vertical reinforcing bands, small centered gold latch with a simple keyhole. Front view with just a subtle visible top and right side, no extreme perspective. Large clean silhouette readable when displayed at only 65x87 game pixels. Entire chest occupies roughly x=8%-92% and y=30%-75% of the portrait canvas, centered; keep generous fully transparent space above and below as sprite padding, object stays completely inside canvas. Thick confident navy outline, 2-3 flat shade levels, limited wood grain details and friendly gold highlights. No coins, treasure spilling, hands, characters, floor, cast shadow outside the chest, extra objects, circular backing, scene, grid, text, lettering, labels, logos or watermark. ORIGINAL design only.",
+      "selected": true,
+      "nativeSize": [
+        1086,
+        1448
+      ],
+      "mode": "RGBA",
+      "alphaBounds": [
+        46,
+        376,
+        1044,
+        1082
+      ],
+      "sha256": "b41a502d2aaf4836675e44e32ae8a73ccd215dd368e0f06aee8e0a14dd706d06"
+    },
+    {
+      "key": "prop-heart",
+      "nativePath": "C:/Users/tbose/.codex/generated_images/01a10013-499c-7b11-9c12-3ae8826e542a/exec-cab0cac3-7d62-48d0-b363-2dc60b74c93f.png",
+      "path": "art-source/webtoon/generated/props/prop-heart-01.png",
+      "prompt": "Create ONE original healing heart pickup sprite for a child-friendly Korean adventure webtoon game. Attached project hero is STYLE reference only: dark navy clean ink outlines, warm palette, 2-3 level cel shading, top-left light. Do not draw the hero. PORTRAIT 3:4 canvas requested 768x1024, true transparent RGBA background. One large friendly coral-red HEART SYMBOL, two rounded top lobes and tapered bottom point, front view, bold navy outline and a simple warm cream highlight at upper left. Clean silhouette readable at only 35x46 game pixels. Heart occupies x=8%-92% and y=21%-80%, centered, generous transparent padding on all sides, completely inside canvas. Limited flat cel shades, no tiny decoration. No anatomical organ, blood, wounds, faces, characters, extra objects, floor, cast shadow, circular backing, sparkles outside heart, text, letters, labels, logos or watermark. Original game pickup design.",
+      "selected": true,
+      "nativeSize": [
+        1086,
+        1448
+      ],
+      "mode": "RGBA",
+      "alphaBounds": [
+        61,
+        359,
+        1026,
+        1182
+      ],
+      "sha256": "f991a9772ffd72c0c3696b31efd4da9173f7f0f86425b7ce21cedd13a27ceff0"
+    },
+    {
+      "key": "prop-shell",
+      "legacy": "shell",
+      "subject": "A fan-shaped ivory clam shell with coral-pink ribs and a small teal striker bead attached at its bottom. Closed front silhouette, no animal face. It is a musical shell switch, not a pearl treasure.",
+      "status": "generated",
+      "prompt": "Create ONE original world interaction sprite for a bright child-friendly Korean adventure webtoon game. Attached project hero is STYLE reference ONLY: confident navy ink outlines, warm teal/gold palette, clean 2-3 flat cel shade levels, top-left lighting. Do not draw the hero. PORTRAIT 3:4 canvas requested 768x1024, true transparent RGBA background. Subject: A fan-shaped ivory clam shell with coral-pink ribs and a small teal striker bead attached at its bottom. Closed front silhouette, no animal face. It is a musical shell switch, not a pearl treasure. Front-facing readable silhouette at only 65x87 game pixels. Entire object centered, occupies roughly x=10%-90%, y=14%-86%, with fully transparent padding on every side. Keep the complete silhouette and all parts inside canvas. No scene, floor, cast shadow, circular backing, characters, hands, extra objects, labels, letters, numbers, logos, signature, watermark, blood, wounds or scary faces. Original project design only. Use clean limited broad color shapes rather than tiny decorative detail.",
+      "nativePath": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-5cc83a00-db21-4427-8ce5-d45746f0e3ef.png",
+      "path": "art-source/webtoon/generated/props-m6/prop-shell-01.png",
+      "sha256": "c603327b307010957b541e78a5052d4cb794b2e72bfdd985706fce204391abf7",
+      "nativeSize": [
+        1086,
+        1448
+      ],
+      "alphaBounds": [
+        58,
+        191,
+        1027,
+        1275
+      ],
+      "selected": true
+    },
+    {
+      "key": "prop-bell",
+      "legacy": "bell",
+      "subject": "A golden brass ship departure bell, front view, small suspension loop at top, broad flared lip and visible clapper at bottom. No support pole.",
+      "targets": [
+        "S01.exit"
+      ],
+      "status": "generated",
+      "prompt": "Create ONE original world interaction sprite for a bright child-friendly Korean adventure webtoon game. Attached project hero is STYLE reference ONLY: confident navy ink outlines, warm teal/gold palette, clean 2-3 flat cel shade levels, top-left lighting. Do not draw the hero. PORTRAIT 3:4 canvas requested 768x1024, true transparent RGBA background. Subject: A golden brass ship departure bell, front view, small suspension loop at top, broad flared lip and visible clapper at bottom. No support pole. Front-facing readable silhouette at only 65x87 game pixels. Entire object centered, occupies roughly x=10%-90%, y=14%-86%, with fully transparent padding on every side. Keep the complete silhouette and all parts inside canvas. No scene, floor, cast shadow, circular backing, characters, hands, extra objects, labels, letters, numbers, logos, signature, watermark, blood, wounds or scary faces. Original project design only. Use clean limited broad color shapes rather than tiny decorative detail.",
+      "nativePath": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-7e78c09b-2d7a-455c-bcc3-58aa900f78d3.png",
+      "path": "art-source/webtoon/generated/props-m6/prop-bell-01.png",
+      "sha256": "88bfbe962c1ce8dd36a2d0b69ac35ba27007fb29fb70658d7ed93a19c9fe59ad",
+      "nativeSize": [
+        1086,
+        1448
+      ],
+      "alphaBounds": [
+        42,
+        111,
+        1044,
+        1289
+      ],
+      "selected": true
+    },
+    {
+      "key": "prop-golden",
+      "legacy": "golden",
+      "subject": "A friendly heart SYMBOL made of polished warm gold, two rounded lobes and a pointed bottom, thick navy outline, cream highlight and three small contained gleam marks. Clearly distinct from a coral-red healing heart. No anatomy.",
+      "status": "generated",
+      "prompt": "Create ONE original world interaction sprite for a bright child-friendly Korean adventure webtoon game. Attached project hero is STYLE reference ONLY: confident navy ink outlines, warm teal/gold palette, clean 2-3 flat cel shade levels, top-left lighting. Do not draw the hero. PORTRAIT 3:4 canvas requested 768x1024, true transparent RGBA background. Subject: A friendly heart SYMBOL made of polished warm gold, two rounded lobes and a pointed bottom, thick navy outline, cream highlight and three small contained gleam marks. Clearly distinct from a coral-red healing heart. No anatomy. Front-facing readable silhouette at only 65x87 game pixels. Entire object centered, occupies roughly x=10%-90%, y=14%-86%, with fully transparent padding on every side. Keep the complete silhouette and all parts inside canvas. No scene, floor, cast shadow, circular backing, characters, hands, extra objects, labels, letters, numbers, logos, signature, watermark, blood, wounds or scary faces. Original project design only. Use clean limited broad color shapes rather than tiny decorative detail.",
+      "nativePath": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-602a7ef1-3936-45d7-acb4-4af862b9ff63.png",
+      "path": "art-source/webtoon/generated/props-m6/prop-golden-01.png",
+      "sha256": "796455dd97422e6bddad67298a86d7d0f28644aee46fa3b59f0ce0b0da18ea6d",
+      "nativeSize": [
+        1087,
+        1447
+      ],
+      "alphaBounds": [
+        59,
+        285,
+        1028,
+        1166
+      ],
+      "selected": true,
+      "normalizationNote": "Native ratio differs by one pixel; uniformly contain entire canvas with transparent padding, do not crop/repaint"
+    },
+    {
+      "key": "prop-key",
+      "legacy": "key",
+      "subject": "A large golden coral gate key, diagonally from upper left to lower right, circular bow handle, solid shaft and two broad teeth. Clearly readable key silhouette.",
+      "status": "generated",
+      "prompt": "Create ONE original world interaction sprite for a bright child-friendly Korean adventure webtoon game. Attached project hero is STYLE reference ONLY: confident navy ink outlines, warm teal/gold palette, clean 2-3 flat cel shade levels, top-left lighting. Do not draw the hero. PORTRAIT 3:4 canvas requested 768x1024, true transparent RGBA background. Subject: A large golden coral gate key, diagonally from upper left to lower right, circular bow handle, solid shaft and two broad teeth. Clearly readable key silhouette. Front-facing readable silhouette at only 65x87 game pixels. Entire object centered, occupies roughly x=10%-90%, y=14%-86%, with fully transparent padding on every side. Keep the complete silhouette and all parts inside canvas. No scene, floor, cast shadow, circular backing, characters, hands, extra objects, labels, letters, numbers, logos, signature, watermark, blood, wounds or scary faces. Original project design only. Use clean limited broad color shapes rather than tiny decorative detail.",
+      "nativePath": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-88ddfb79-a224-4129-b96b-1124156dba6f.png",
+      "path": "art-source/webtoon/generated/props-m6/prop-key-01.png",
+      "sha256": "99e00dd79f55a84482744a9b2aec84c037720a3fc6ca2fb296ab042d61e8f97f",
+      "nativeSize": [
+        1086,
+        1448
+      ],
+      "alphaBounds": [
+        62,
+        111,
+        1026,
+        1299
+      ],
+      "selected": true
+    },
+    {
+      "key": "prop-lifevest",
+      "legacy": "gear",
+      "subject": "One orange and warm-gold sleeveless life jacket, two buoyant front panels with a teal belt and simple navy buckle. Empty jacket, no body, face, arms or text.",
+      "targets": [
+        "S04.gear.1"
+      ],
+      "status": "generated",
+      "prompt": "Create ONE original world interaction sprite for a bright child-friendly Korean adventure webtoon game. Attached project hero is STYLE reference ONLY: confident navy ink outlines, warm teal/gold palette, clean 2-3 flat cel shade levels, top-left lighting. Do not draw the hero. PORTRAIT 3:4 canvas requested 768x1024, true transparent RGBA background. Subject: One orange and warm-gold sleeveless life jacket, two buoyant front panels with a teal belt and simple navy buckle. Empty jacket, no body, face, arms or text. Front-facing readable silhouette at only 65x87 game pixels. Entire object centered, occupies roughly x=10%-90%, y=14%-86%, with fully transparent padding on every side. Keep the complete silhouette and all parts inside canvas. No scene, floor, cast shadow, circular backing, characters, hands, extra objects, labels, letters, numbers, logos, signature, watermark, blood, wounds or scary faces. Original project design only. Use clean limited broad color shapes rather than tiny decorative detail.",
+      "nativePath": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-1c4302fe-6cfc-4da7-8f74-25059df47447.png",
+      "path": "art-source/webtoon/generated/props-m6/prop-lifevest-01.png",
+      "sha256": "b3759e02c8bc6bab7f03e938f2ec5a804706162cc88e6871f1feda27a0157564",
+      "nativeSize": [
+        1086,
+        1448
+      ],
+      "alphaBounds": [
+        82,
+        201,
+        1004,
+        1252
+      ],
+      "selected": true
+    },
+    {
+      "key": "prop-rescue-rope",
+      "legacy": "gear",
+      "subject": "One neatly coiled thick cream maritime rescue rope with a short tied tail. Broad simple loop shape, visible twist shading, no hands or anchor.",
+      "targets": [
+        "S04.gear.2"
+      ],
+      "status": "generated",
+      "prompt": "Create ONE original world interaction sprite for a bright child-friendly Korean adventure webtoon game. Attached project hero is STYLE reference ONLY: confident navy ink outlines, warm teal/gold palette, clean 2-3 flat cel shade levels, top-left lighting. Do not draw the hero. PORTRAIT 3:4 canvas requested 768x1024, true transparent RGBA background. Subject: One neatly coiled thick cream maritime rescue rope with a short tied tail. Broad simple loop shape, visible twist shading, no hands or anchor. Front-facing readable silhouette at only 65x87 game pixels. Entire object centered, occupies roughly x=10%-90%, y=14%-86%, with fully transparent padding on every side. Keep the complete silhouette and all parts inside canvas. No scene, floor, cast shadow, circular backing, characters, hands, extra objects, labels, letters, numbers, logos, signature, watermark, blood, wounds or scary faces. Original project design only. Use clean limited broad color shapes rather than tiny decorative detail.",
+      "nativePath": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-1488b3c6-bfc1-484a-85b0-81576a78398a.png",
+      "path": "art-source/webtoon/generated/props-m6/prop-rescue-rope-01.png",
+      "sha256": "c837d65398c8ac0664dce51c35094185b9402edd6bcfff02ee9fd8c36bb2da90",
+      "nativeSize": [
+        1086,
+        1448
+      ],
+      "alphaBounds": [
+        48,
+        280,
+        1061,
+        1202
+      ],
+      "selected": true
+    },
+    {
+      "key": "prop-lifering",
+      "legacy": "gear",
+      "subject": "One round orange and cream life ring with four broad cream sections and a dark teal center opening. Small integral rope attachments, no ocean or people.",
+      "targets": [
+        "S04.gear.3"
+      ],
+      "status": "generated",
+      "prompt": "Create ONE original world interaction sprite for a bright child-friendly Korean adventure webtoon game. Attached project hero is STYLE reference ONLY: confident navy ink outlines, warm teal/gold palette, clean 2-3 flat cel shade levels, top-left lighting. Do not draw the hero. PORTRAIT 3:4 canvas requested 768x1024, true transparent RGBA background. Subject: One round orange and cream life ring with four broad cream sections and a dark teal center opening. Small integral rope attachments, no ocean or people. Front-facing readable silhouette at only 65x87 game pixels. Entire object centered, occupies roughly x=10%-90%, y=14%-86%, with fully transparent padding on every side. Keep the complete silhouette and all parts inside canvas. No scene, floor, cast shadow, circular backing, characters, hands, extra objects, labels, letters, numbers, logos, signature, watermark, blood, wounds or scary faces. Original project design only. Use clean limited broad color shapes rather than tiny decorative detail.",
+      "nativePath": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-30dce87d-e81e-47ba-bb4a-c6f6c77868d3.png",
+      "path": "art-source/webtoon/generated/props-m6/prop-lifering-01.png",
+      "sha256": "21647234ced660aa2a2cf4160b55fccaa957bf6b39cd7ad87dea0bcfa1c35244",
+      "nativeSize": [
+        1086,
+        1448
+      ],
+      "alphaBounds": [
+        51,
+        236,
+        1033,
+        1227
+      ],
+      "selected": true
+    },
+    {
+      "key": "prop-lightning-rod",
+      "legacy": "rod",
+      "subject": "One safe fantasy lightning protection device: upright teal-metal mast, horizontal upper crossbar, sturdy small flat base, central golden lightning bolt emblem. Not an electrical hazard, no lightning arcs outside object.",
+      "targets": [
+        "S03.rod.1",
+        "S03.rod.2"
+      ],
+      "status": "generated",
+      "prompt": "Create ONE original world interaction sprite for a bright child-friendly Korean adventure webtoon game. Attached project hero is STYLE reference ONLY: confident navy ink outlines, warm teal/gold palette, clean 2-3 flat cel shade levels, top-left lighting. Do not draw the hero. PORTRAIT 3:4 canvas requested 768x1024, true transparent RGBA background. Subject: One safe fantasy lightning protection device: upright teal-metal mast, horizontal upper crossbar, sturdy small flat base, central golden lightning bolt emblem. Not an electrical hazard, no lightning arcs outside object. Front-facing readable silhouette at only 65x87 game pixels. Entire object centered, occupies roughly x=10%-90%, y=14%-86%, with fully transparent padding on every side. Keep the complete silhouette and all parts inside canvas. No scene, floor, cast shadow, circular backing, characters, hands, extra objects, labels, letters, numbers, logos, signature, watermark, blood, wounds or scary faces. Original project design only. Use clean limited broad color shapes rather than tiny decorative detail.",
+      "nativePath": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-0c095591-68c9-4508-8c4b-c1a40a86a04c.png",
+      "path": "art-source/webtoon/generated/props-m6/prop-lightning-rod-01.png",
+      "sha256": "6526f9c4cf0e0e5afa9cd7f414117924ecce45c1132743bee5255ef254490595",
+      "nativeSize": [
+        1086,
+        1448
+      ],
+      "alphaBounds": [
+        134,
+        21,
+        952,
+        1353
+      ],
+      "selected": true
+    },
+    {
+      "key": "prop-damaged-mast",
+      "legacy": "rod",
+      "subject": "One short wooden ship mast with a slightly bent spar, thick rope bindings and one mild structural crack, warm honey wood and teal metal fittings. No people, splinters flying or dangerous damage.",
+      "targets": [
+        "S03.crisis"
+      ],
+      "status": "generated",
+      "prompt": "Create ONE original world interaction sprite for a bright child-friendly Korean adventure webtoon game. Attached project hero is STYLE reference ONLY: confident navy ink outlines, warm teal/gold palette, clean 2-3 flat cel shade levels, top-left lighting. Do not draw the hero. PORTRAIT 3:4 canvas requested 768x1024, true transparent RGBA background. Subject: One short wooden ship mast with a slightly bent spar, thick rope bindings and one mild structural crack, warm honey wood and teal metal fittings. No people, splinters flying or dangerous damage. Front-facing readable silhouette at only 65x87 game pixels. Entire object centered, occupies roughly x=10%-90%, y=14%-86%, with fully transparent padding on every side. Keep the complete silhouette and all parts inside canvas. No scene, floor, cast shadow, circular backing, characters, hands, extra objects, labels, letters, numbers, logos, signature, watermark, blood, wounds or scary faces. Original project design only. Use clean limited broad color shapes rather than tiny decorative detail.",
+      "nativePath": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-78fe8482-b64a-4e6e-a3e7-307c5864cb03.png",
+      "path": "art-source/webtoon/generated/props-m6/prop-damaged-mast-01.png",
+      "sha256": "b6347e4e2f6ce1273d54d5ccb9d4d39a512a3f12e4bb1b82de34bebb2249ca8b",
+      "nativeSize": [
+        1086,
+        1448
+      ],
+      "alphaBounds": [
+        45,
+        73,
+        1042,
+        1352
+      ],
+      "selected": true
+    },
+    {
+      "key": "prop-coral-gate",
+      "legacy": "gate",
+      "subject": "One small upright arch gate in coral-pink stone, navy opening with two teal bars and a centered gold diamond lock. Whole arch and footings inside canvas.",
+      "status": "generated",
+      "prompt": "Create ONE original world interaction sprite for a bright child-friendly Korean adventure webtoon game. Attached project hero is STYLE reference ONLY: confident navy ink outlines, warm teal/gold palette, clean 2-3 flat cel shade levels, top-left lighting. Do not draw the hero. PORTRAIT 3:4 canvas requested 768x1024, true transparent RGBA background. Subject: One small upright arch gate in coral-pink stone, navy opening with two teal bars and a centered gold diamond lock. Whole arch and footings inside canvas. Front-facing readable silhouette at only 65x87 game pixels. Entire object centered, occupies roughly x=10%-90%, y=14%-86%, with fully transparent padding on every side. Keep the complete silhouette and all parts inside canvas. No scene, floor, cast shadow, circular backing, characters, hands, extra objects, labels, letters, numbers, logos, signature, watermark, blood, wounds or scary faces. Original project design only. Use clean limited broad color shapes rather than tiny decorative detail.",
+      "nativePath": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-7aea1d32-2ced-4ca1-8ead-f477e33b82f7.png",
+      "path": "art-source/webtoon/generated/props-m6/prop-coral-gate-01.png",
+      "sha256": "8d3ca129d7a1845d5c488dd79441c5d516c30f1a99d3468de56ddbed23140903",
+      "nativeSize": [
+        1086,
+        1448
+      ],
+      "alphaBounds": [
+        60,
+        192,
+        1027,
+        1251
+      ],
+      "selected": true
+    },
+    {
+      "key": "prop-vine",
+      "legacy": "vine",
+      "subject": "One upright intertwined green vine with four broad friendly rounded leaves, forming a loose S shape. Thick readable stems, no thorns or flowers.",
+      "status": "generated",
+      "prompt": "Create ONE original world interaction sprite for a bright child-friendly Korean adventure webtoon game. Attached project hero is STYLE reference ONLY: confident navy ink outlines, warm teal/gold palette, clean 2-3 flat cel shade levels, top-left lighting. Do not draw the hero. PORTRAIT 3:4 canvas requested 768x1024, true transparent RGBA background. Subject: One upright intertwined green vine with four broad friendly rounded leaves, forming a loose S shape. Thick readable stems, no thorns or flowers. Front-facing readable silhouette at only 65x87 game pixels. Entire object centered, occupies roughly x=10%-90%, y=14%-86%, with fully transparent padding on every side. Keep the complete silhouette and all parts inside canvas. No scene, floor, cast shadow, circular backing, characters, hands, extra objects, labels, letters, numbers, logos, signature, watermark, blood, wounds or scary faces. Original project design only. Use clean limited broad color shapes rather than tiny decorative detail.",
+      "nativePath": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-f544aece-7ec6-4390-86ba-ba6af36c7b40.png",
+      "path": "art-source/webtoon/generated/props-m6/prop-vine-01.png",
+      "sha256": "a38bd07db2e5757148d3d6602751988f870bab8294aafe9a8cbe658e7be4f221",
+      "nativeSize": [
+        1086,
+        1448
+      ],
+      "alphaBounds": [
+        160,
+        89,
+        937,
+        1366
+      ],
+      "selected": true
+    },
+    {
+      "key": "prop-torch",
+      "legacy": "torch",
+      "subject": "One upright short wooden torch, cloth wrapping at top and a contained warm orange flame with cream inner core. Entire flame and handle inside canvas, no sparks outside.",
+      "status": "generated",
+      "prompt": "Create ONE original world interaction sprite for a bright child-friendly Korean adventure webtoon game. Attached project hero is STYLE reference ONLY: confident navy ink outlines, warm teal/gold palette, clean 2-3 flat cel shade levels, top-left lighting. Do not draw the hero. PORTRAIT 3:4 canvas requested 768x1024, true transparent RGBA background. Subject: One upright short wooden torch, cloth wrapping at top and a contained warm orange flame with cream inner core. Entire flame and handle inside canvas, no sparks outside. Front-facing readable silhouette at only 65x87 game pixels. Entire object centered, occupies roughly x=10%-90%, y=14%-86%, with fully transparent padding on every side. Keep the complete silhouette and all parts inside canvas. No scene, floor, cast shadow, circular backing, characters, hands, extra objects, labels, letters, numbers, logos, signature, watermark, blood, wounds or scary faces. Original project design only. Use clean limited broad color shapes rather than tiny decorative detail.",
+      "nativePath": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-d5015d67-341b-4036-b260-a8fa520294d7.png",
+      "path": "art-source/webtoon/generated/props-m6/prop-torch-01.png",
+      "sha256": "c4f1dc01a3aabee3241e1d1032542ec28af51bcf50aba560852631aeccd9b534",
+      "nativeSize": [
+        1086,
+        1448
+      ],
+      "alphaBounds": [
+        349,
+        23,
+        751,
+        1363
+      ],
+      "selected": true
+    },
+    {
+      "key": "prop-furnace",
+      "legacy": "furnace",
+      "subject": "One friendly squat stone fantasy furnace, navy-purple body, wide rectangular fire opening, gold-bronze upper rim and small warm orange contained inner flame. No chimney smoke.",
+      "status": "generated",
+      "prompt": "Create ONE original world interaction sprite for a bright child-friendly Korean adventure webtoon game. Attached project hero is STYLE reference ONLY: confident navy ink outlines, warm teal/gold palette, clean 2-3 flat cel shade levels, top-left lighting. Do not draw the hero. PORTRAIT 3:4 canvas requested 768x1024, true transparent RGBA background. Subject: One friendly squat stone fantasy furnace, navy-purple body, wide rectangular fire opening, gold-bronze upper rim and small warm orange contained inner flame. No chimney smoke. Front-facing readable silhouette at only 65x87 game pixels. Entire object centered, occupies roughly x=10%-90%, y=14%-86%, with fully transparent padding on every side. Keep the complete silhouette and all parts inside canvas. No scene, floor, cast shadow, circular backing, characters, hands, extra objects, labels, letters, numbers, logos, signature, watermark, blood, wounds or scary faces. Original project design only. Use clean limited broad color shapes rather than tiny decorative detail.",
+      "nativePath": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-d8203688-3e41-40da-832f-cfaff252ed43.png",
+      "path": "art-source/webtoon/generated/props-m6/prop-furnace-01.png",
+      "sha256": "4aa484c27bd3bab4e721a6cba097c682f654f2a667ef592d7864f1dc14b5110d",
+      "nativeSize": [
+        1086,
+        1448
+      ],
+      "alphaBounds": [
+        62,
+        270,
+        1024,
+        1239
+      ],
+      "selected": true
+    },
+    {
+      "key": "prop-wave-rope",
+      "legacy": "rope",
+      "subject": "One upright hanging cream maritime rope with a large loop knot at its lower end, clear three horizontal twist bands. Entire rope and loop inside canvas.",
+      "status": "generated",
+      "prompt": "Create ONE original world interaction sprite for a bright child-friendly Korean adventure webtoon game. Attached project hero is STYLE reference ONLY: confident navy ink outlines, warm teal/gold palette, clean 2-3 flat cel shade levels, top-left lighting. Do not draw the hero. PORTRAIT 3:4 canvas requested 768x1024, true transparent RGBA background. Subject: One upright hanging cream maritime rope with a large loop knot at its lower end, clear three horizontal twist bands. Entire rope and loop inside canvas. Front-facing readable silhouette at only 65x87 game pixels. Entire object centered, occupies roughly x=10%-90%, y=14%-86%, with fully transparent padding on every side. Keep the complete silhouette and all parts inside canvas. No scene, floor, cast shadow, circular backing, characters, hands, extra objects, labels, letters, numbers, logos, signature, watermark, blood, wounds or scary faces. Original project design only. Use clean limited broad color shapes rather than tiny decorative detail.",
+      "nativePath": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-3edcfa7d-dc8e-4932-9719-21afe38affab.png",
+      "path": "art-source/webtoon/generated/props-m6/prop-wave-rope-01.png",
+      "sha256": "cafac53794f378291a5da5e9018ff52ad9990098be202fe7b410bd1fdae59b25",
+      "nativeSize": [
+        1086,
+        1448
+      ],
+      "alphaBounds": [
+        293,
+        37,
+        797,
+        1398
+      ],
+      "selected": true
+    },
+    {
+      "key": "prop-mirror",
+      "legacy": "mirror",
+      "subject": "One upright hexagonal pale-blue crystal mirror with a lavender-and-gold frame and one simple UP ARROW symbol engraved in cream at its center. Arrow only, no letters or numbers. Preserve clear arrow direction for rotation puzzle.",
+      "status": "generated",
+      "prompt": "Create ONE original world interaction sprite for a bright child-friendly Korean adventure webtoon game. Attached project hero is STYLE reference ONLY: confident navy ink outlines, warm teal/gold palette, clean 2-3 flat cel shade levels, top-left lighting. Do not draw the hero. PORTRAIT 3:4 canvas requested 768x1024, true transparent RGBA background. Subject: One upright hexagonal pale-blue crystal mirror with a lavender-and-gold frame and one simple UP ARROW symbol engraved in cream at its center. Arrow only, no letters or numbers. Preserve clear arrow direction for rotation puzzle. Front-facing readable silhouette at only 65x87 game pixels. Entire object centered, occupies roughly x=10%-90%, y=14%-86%, with fully transparent padding on every side. Keep the complete silhouette and all parts inside canvas. No scene, floor, cast shadow, circular backing, characters, hands, extra objects, labels, letters, numbers, logos, signature, watermark, blood, wounds or scary faces. Original project design only. Use clean limited broad color shapes rather than tiny decorative detail.",
+      "nativePath": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-a88ea395-57ce-4a29-839f-17cd014650e3.png",
+      "path": "art-source/webtoon/generated/props-m6/prop-mirror-01.png",
+      "sha256": "1df413cd20cdd59984f5fd5027378c3569c0708a56f34068a27f9562b5cfe3d5",
+      "nativeSize": [
+        1086,
+        1448
+      ],
+      "alphaBounds": [
+        94,
+        101,
+        991,
+        1341
+      ],
+      "selected": true
+    },
+    {
+      "key": "prop-journal",
+      "legacy": "journal",
+      "subject": "One closed upright cream-and-brown travel journal, navy binding, blank cover, small teal bookmark ribbon. Simple raised bands rather than writing, no letters or readable marks.",
+      "status": "generated",
+      "prompt": "Create ONE original world interaction sprite for a bright child-friendly Korean adventure webtoon game. Attached project hero is STYLE reference ONLY: confident navy ink outlines, warm teal/gold palette, clean 2-3 flat cel shade levels, top-left lighting. Do not draw the hero. PORTRAIT 3:4 canvas requested 768x1024, true transparent RGBA background. Subject: One closed upright cream-and-brown travel journal, navy binding, blank cover, small teal bookmark ribbon. Simple raised bands rather than writing, no letters or readable marks. Front-facing readable silhouette at only 65x87 game pixels. Entire object centered, occupies roughly x=10%-90%, y=14%-86%, with fully transparent padding on every side. Keep the complete silhouette and all parts inside canvas. No scene, floor, cast shadow, circular backing, characters, hands, extra objects, labels, letters, numbers, logos, signature, watermark, blood, wounds or scary faces. Original project design only. Use clean limited broad color shapes rather than tiny decorative detail.",
+      "nativePath": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-be9b5bb1-945f-4112-b6f1-9aa787c87c1e.png",
+      "path": "art-source/webtoon/generated/props-m6/prop-journal-01.png",
+      "sha256": "337432a18490aee9019f07c4983e48b6f7cf8fe81869c6acfb8934991a12b206",
+      "nativeSize": [
+        1086,
+        1448
+      ],
+      "alphaBounds": [
+        149,
+        184,
+        958,
+        1255
+      ],
+      "selected": true
+    },
+    {
+      "key": "prop-star-map",
+      "legacy": "starMap",
+      "subject": "One unfolded upright cream and lavender travel map with two fold lines, a large golden five-point star and a simple teal triangle route. Symbols only, no labels, letters, coordinates or numbers.",
+      "status": "generated",
+      "prompt": "Create ONE original world interaction sprite for a bright child-friendly Korean adventure webtoon game. Attached project hero is STYLE reference ONLY: confident navy ink outlines, warm teal/gold palette, clean 2-3 flat cel shade levels, top-left lighting. Do not draw the hero. PORTRAIT 3:4 canvas requested 768x1024, true transparent RGBA background. Subject: One unfolded upright cream and lavender travel map with two fold lines, a large golden five-point star and a simple teal triangle route. Symbols only, no labels, letters, coordinates or numbers. Front-facing readable silhouette at only 65x87 game pixels. Entire object centered, occupies roughly x=10%-90%, y=14%-86%, with fully transparent padding on every side. Keep the complete silhouette and all parts inside canvas. No scene, floor, cast shadow, circular backing, characters, hands, extra objects, labels, letters, numbers, logos, signature, watermark, blood, wounds or scary faces. Original project design only. Use clean limited broad color shapes rather than tiny decorative detail.",
+      "nativePath": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-84f8194d-05bc-43c9-9144-5bfdfe47a2af.png",
+      "path": "art-source/webtoon/generated/props-m6/prop-star-map-01.png",
+      "sha256": "ee456caf00b314b968a789e327c56e5758875d2d5d82a1eb161362e437d89f08",
+      "nativeSize": [
+        1086,
+        1448
+      ],
+      "alphaBounds": [
+        19,
+        266,
+        1073,
+        1181
+      ],
+      "selected": true
+    },
+    {
+      "key": "prop-lantern",
+      "legacy": "lantern",
+      "subject": "One upright friendly teal and brass lantern with a small loop handle, warm gold glass panes and a cream inner flame. Short broad foot, no light rays or glow outside silhouette.",
+      "status": "generated",
+      "prompt": "Create ONE original world interaction sprite for a bright child-friendly Korean adventure webtoon game. Attached project hero is STYLE reference ONLY: confident navy ink outlines, warm teal/gold palette, clean 2-3 flat cel shade levels, top-left lighting. Do not draw the hero. PORTRAIT 3:4 canvas requested 768x1024, true transparent RGBA background. Subject: One upright friendly teal and brass lantern with a small loop handle, warm gold glass panes and a cream inner flame. Short broad foot, no light rays or glow outside silhouette. Front-facing readable silhouette at only 65x87 game pixels. Entire object centered, occupies roughly x=10%-90%, y=14%-86%, with fully transparent padding on every side. Keep the complete silhouette and all parts inside canvas. No scene, floor, cast shadow, circular backing, characters, hands, extra objects, labels, letters, numbers, logos, signature, watermark, blood, wounds or scary faces. Original project design only. Use clean limited broad color shapes rather than tiny decorative detail.",
+      "nativePath": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-cef50d8f-fa8d-4540-b2bd-c7afdbbc1309.png",
+      "path": "art-source/webtoon/generated/props-m6/prop-lantern-01.png",
+      "sha256": "cc1e6d45b6fc63763be6f3a90145ba3482be3f8b13098f2efe86c01cdc33fa22",
+      "nativeSize": [
+        1086,
+        1448
+      ],
+      "alphaBounds": [
+        197,
+        53,
+        887,
+        1341
+      ],
+      "selected": true
+    },
+    {
+      "key": "prop-star-device",
+      "legacy": "starDevice",
+      "subject": "One upright small fantasy compass puzzle device on a gold pedestal: navy circular dial inside lavender rim, large four-point gold compass star with teal center gem. No letters, numerals or tick labels.",
+      "status": "generated",
+      "prompt": "Create ONE original world interaction sprite for a bright child-friendly Korean adventure webtoon game. Attached project hero is STYLE reference ONLY: confident navy ink outlines, warm teal/gold palette, clean 2-3 flat cel shade levels, top-left lighting. Do not draw the hero. PORTRAIT 3:4 canvas requested 768x1024, true transparent RGBA background. Subject: One upright small fantasy compass puzzle device on a gold pedestal: navy circular dial inside lavender rim, large four-point gold compass star with teal center gem. No letters, numerals or tick labels. Front-facing readable silhouette at only 65x87 game pixels. Entire object centered, occupies roughly x=10%-90%, y=14%-86%, with fully transparent padding on every side. Keep the complete silhouette and all parts inside canvas. No scene, floor, cast shadow, circular backing, characters, hands, extra objects, labels, letters, numbers, logos, signature, watermark, blood, wounds or scary faces. Original project design only. Use clean limited broad color shapes rather than tiny decorative detail.",
+      "nativePath": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-94d1fab4-d778-4a00-9338-e2fc4a4306a4.png",
+      "path": "art-source/webtoon/generated/props-m6/prop-star-device-01.png",
+      "sha256": "d4080184556b54f8c8ec92be0e7a6df8580246ca702b045af31db439812a46ed",
+      "nativeSize": [
+        1086,
+        1448
+      ],
+      "alphaBounds": [
+        94,
+        88,
+        992,
+        1300
+      ],
+      "selected": true
+    },
+    {
+      "key": "prop-cargo",
+      "legacy": "cargo",
+      "subject": "One sturdy honey-brown wooden delivery crate with diagonal reinforcing planks and broad brass bands, simple gold diamond plate without text. Subtle top and right side, no tools or contents outside.",
+      "status": "generated",
+      "prompt": "Create ONE original world interaction sprite for a bright child-friendly Korean adventure webtoon game. Attached project hero is STYLE reference ONLY: confident navy ink outlines, warm teal/gold palette, clean 2-3 flat cel shade levels, top-left lighting. Do not draw the hero. PORTRAIT 3:4 canvas requested 768x1024, true transparent RGBA background. Subject: One sturdy honey-brown wooden delivery crate with diagonal reinforcing planks and broad brass bands, simple gold diamond plate without text. Subtle top and right side, no tools or contents outside. Front-facing readable silhouette at only 65x87 game pixels. Entire object centered, occupies roughly x=10%-90%, y=14%-86%, with fully transparent padding on every side. Keep the complete silhouette and all parts inside canvas. No scene, floor, cast shadow, circular backing, characters, hands, extra objects, labels, letters, numbers, logos, signature, watermark, blood, wounds or scary faces. Original project design only. Use clean limited broad color shapes rather than tiny decorative detail.",
+      "nativePath": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-e2efa618-2960-446c-91db-4ece71b97d1a.png",
+      "path": "art-source/webtoon/generated/props-m6/prop-cargo-01.png",
+      "sha256": "013bddbee3dd65ef1b6f23958b84b9d8ec2fa4c126d827705ed39e11bfcb8b8f",
+      "nativeSize": [
+        1086,
+        1448
+      ],
+      "alphaBounds": [
+        65,
+        215,
+        1024,
+        1169
+      ],
+      "selected": true
+    },
+    {
+      "key": "prop-gift",
+      "legacy": "gift",
+      "subject": "One teal square reward gift box with gold ribbon, coral-red bow on top, thick navy outline. No letters, tags or additional gifts.",
+      "status": "generated",
+      "prompt": "Create ONE original world interaction sprite for a bright child-friendly Korean adventure webtoon game. Attached project hero is STYLE reference ONLY: confident navy ink outlines, warm teal/gold palette, clean 2-3 flat cel shade levels, top-left lighting. Do not draw the hero. PORTRAIT 3:4 canvas requested 768x1024, true transparent RGBA background. Subject: One teal square reward gift box with gold ribbon, coral-red bow on top, thick navy outline. No letters, tags or additional gifts. Front-facing readable silhouette at only 65x87 game pixels. Entire object centered, occupies roughly x=10%-90%, y=14%-86%, with fully transparent padding on every side. Keep the complete silhouette and all parts inside canvas. No scene, floor, cast shadow, circular backing, characters, hands, extra objects, labels, letters, numbers, logos, signature, watermark, blood, wounds or scary faces. Original project design only. Use clean limited broad color shapes rather than tiny decorative detail.",
+      "nativePath": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-cab6711c-b703-49bc-a3c2-c195368a4967.png",
+      "path": "art-source/webtoon/generated/props-m6/prop-gift-01.png",
+      "sha256": "f988730e2ca3d6da359da162e9bb2314c247953cba35dab3e86fdafc21119f52",
+      "nativeSize": [
+        1086,
+        1448
+      ],
+      "alphaBounds": [
+        51,
+        197,
+        1035,
+        1269
+      ],
+      "selected": true
+    },
+    {
+      "key": "prop-treasure-altar",
+      "legacy": "treasureAltar",
+      "subject": "One small friendly fantasy treasure pedestal with navy stone stepped base, gold trim and a large teal diamond-shaped crystal floating immediately above it. Simple cream center glow contained inside crystal, no deity or person.",
+      "status": "generated",
+      "prompt": "Create ONE original world interaction sprite for a bright child-friendly Korean adventure webtoon game. Attached project hero is STYLE reference ONLY: confident navy ink outlines, warm teal/gold palette, clean 2-3 flat cel shade levels, top-left lighting. Do not draw the hero. PORTRAIT 3:4 canvas requested 768x1024, true transparent RGBA background. Subject: One small friendly fantasy treasure pedestal with navy stone stepped base, gold trim and a large teal diamond-shaped crystal floating immediately above it. Simple cream center glow contained inside crystal, no deity or person. Front-facing readable silhouette at only 65x87 game pixels. Entire object centered, occupies roughly x=10%-90%, y=14%-86%, with fully transparent padding on every side. Keep the complete silhouette and all parts inside canvas. No scene, floor, cast shadow, circular backing, characters, hands, extra objects, labels, letters, numbers, logos, signature, watermark, blood, wounds or scary faces. Original project design only. Use clean limited broad color shapes rather than tiny decorative detail.",
+      "nativePath": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-6c8c7cc5-1536-4537-914e-27bda40f6458.png",
+      "path": "art-source/webtoon/generated/props-m6/prop-treasure-altar-01.png",
+      "sha256": "feafea46c01b2705a9a3a5454e180997f628932c1f861ae6766a9a42bc6b4dbe",
+      "nativeSize": [
+        1086,
+        1448
+      ],
+      "alphaBounds": [
+        119,
+        118,
+        967,
+        1308
+      ],
+      "selected": true
+    },
+    {
+      "key": "prop-moon-rock",
+      "legacy": "moonRock",
+      "subject": "One small faceted lavender moon rock with broad cream fracture seams and a small gold four-point sparkle engraved on its face. Stable whole rock, no fragments flying, no face.",
+      "status": "generated",
+      "prompt": "Create ONE original world interaction sprite for a bright child-friendly Korean adventure webtoon game. Attached project hero is STYLE reference ONLY: confident navy ink outlines, warm teal/gold palette, clean 2-3 flat cel shade levels, top-left lighting. Do not draw the hero. PORTRAIT 3:4 canvas requested 768x1024, true transparent RGBA background. Subject: One small faceted lavender moon rock with broad cream fracture seams and a small gold four-point sparkle engraved on its face. Stable whole rock, no fragments flying, no face. Front-facing readable silhouette at only 65x87 game pixels. Entire object centered, occupies roughly x=10%-90%, y=14%-86%, with fully transparent padding on every side. Keep the complete silhouette and all parts inside canvas. No scene, floor, cast shadow, circular backing, characters, hands, extra objects, labels, letters, numbers, logos, signature, watermark, blood, wounds or scary faces. Original project design only. Use clean limited broad color shapes rather than tiny decorative detail.",
+      "nativePath": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-fee0a1eb-d30a-4147-b1a0-b2b19bba59c7.png",
+      "path": "art-source/webtoon/generated/props-m6/prop-moon-rock-01.png",
+      "sha256": "2fae4fb0023bae60d8a18af4c7c53ba3f48caea8c10f6eacaf8d2dca637ea5e5",
+      "nativeSize": [
+        1086,
+        1448
+      ],
+      "alphaBounds": [
+        97,
+        238,
+        990,
+        1222
+      ],
+      "selected": true
+    },
+    {
+      "key": "prop-lotus-shrine",
+      "legacy": "lotusShrine",
+      "subject": "One peaceful original decorative lotus pedestal: a large rounded pink lotus blossom on a low gold stone base, tiny teal center. Pure floral decoration, no person, deity or religious figure.",
+      "status": "generated",
+      "prompt": "Create ONE original world interaction sprite for a bright child-friendly Korean adventure webtoon game. Attached project hero is STYLE reference ONLY: confident navy ink outlines, warm teal/gold palette, clean 2-3 flat cel shade levels, top-left lighting. Do not draw the hero. PORTRAIT 3:4 canvas requested 768x1024, true transparent RGBA background. Subject: One peaceful original decorative lotus pedestal: a large rounded pink lotus blossom on a low gold stone base, tiny teal center. Pure floral decoration, no person, deity or religious figure. Front-facing readable silhouette at only 65x87 game pixels. Entire object centered, occupies roughly x=10%-90%, y=14%-86%, with fully transparent padding on every side. Keep the complete silhouette and all parts inside canvas. No scene, floor, cast shadow, circular backing, characters, hands, extra objects, labels, letters, numbers, logos, signature, watermark, blood, wounds or scary faces. Original project design only. Use clean limited broad color shapes rather than tiny decorative detail.",
+      "nativePath": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-ab98b1cf-5200-47e6-8865-bc9a22713a9a.png",
+      "path": "art-source/webtoon/generated/props-m6/prop-lotus-shrine-01.png",
+      "sha256": "a1063d89db18cd36e1c662c244108d9a6cfb727c6f16cb619cfbe0fa94c9f952",
+      "nativeSize": [
+        1086,
+        1448
+      ],
+      "alphaBounds": [
+        21,
+        216,
+        1070,
+        1255
+      ],
+      "selected": true
+    },
+    {
+      "key": "prop-ending",
+      "legacy": "ending",
+      "subject": "One celebratory gold bell on a short upright gold stand, coral clapper, cream engraved wave band. Three small gold gleams stay within canvas. No people, letters or confetti outside.",
+      "status": "generated",
+      "prompt": "Create ONE original world interaction sprite for a bright child-friendly Korean adventure webtoon game. Attached project hero is STYLE reference ONLY: confident navy ink outlines, warm teal/gold palette, clean 2-3 flat cel shade levels, top-left lighting. Do not draw the hero. PORTRAIT 3:4 canvas requested 768x1024, true transparent RGBA background. Subject: One celebratory gold bell on a short upright gold stand, coral clapper, cream engraved wave band. Three small gold gleams stay within canvas. No people, letters or confetti outside. Front-facing readable silhouette at only 65x87 game pixels. Entire object centered, occupies roughly x=10%-90%, y=14%-86%, with fully transparent padding on every side. Keep the complete silhouette and all parts inside canvas. No scene, floor, cast shadow, circular backing, characters, hands, extra objects, labels, letters, numbers, logos, signature, watermark, blood, wounds or scary faces. Original project design only. Use clean limited broad color shapes rather than tiny decorative detail.",
+      "nativePath": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-c552e2f1-1fbd-42a5-9c2e-921786719807.png",
+      "path": "art-source/webtoon/generated/props-m6/prop-ending-01.png",
+      "sha256": "4f226470c9b85db5ab79a645d879d87b30a8d2b0fbeaabba1753643c2e11bd73",
+      "nativeSize": [
+        1086,
+        1448
+      ],
+      "alphaBounds": [
+        96,
+        73,
+        990,
+        1386
+      ],
+      "selected": true
+    },
+    {
+      "key": "prop-flight-ring",
+      "legacy": "flightRing",
+      "subject": "A single vertical oval magical wind ring, luminous warm gold and teal with a clean thick outlined rim, subtle small teal wind curls around the rim; wide completely transparent empty oval center. Front view, clearly pass-through aerial hoop, no physical base or platform. The entire ring and all curls must fit the canvas with at least 8% outer transparent margin.",
+      "prompt": "Use case: illustration-story. Asset type: original child-friendly 2D side-scrolling Sinbad flight game prop. Image 1 is only the project's own hero-webtoon style reference: use clean ink contours, crisp cel shading, warm teal and gold palette, upper-left light; do not depict the hero. Primary subject: A single vertical oval magical wind ring, luminous warm gold and teal with a clean thick outlined rim, subtle small teal wind curls around the rim; wide completely transparent empty oval center. Front view, clearly pass-through aerial hoop, no physical base or platform. The entire ring and all curls must fit the canvas with at least 8% outer transparent margin. Composition: one single isolated centered object in a portrait 3:4 canvas, target canvas 1024x1365 or closest supported 3:4 portrait. Genuine RGBA transparent background, no cast backdrop, no text, letters, numerals, logo, watermark, signature, frame or grid. No blood or wounds. Do not mimic external artists, copyrighted characters or existing games. Original project design. Keep the outer margin transparent, no clipping.",
+      "nativePath": "C:/Users/tbose/.codex/generated_images/01a10013-499c-7b11-9c12-3ae8826e542a/exec-e6125b38-2390-4411-a0d4-b3795c3b10cd.png",
+      "path": "art-source/webtoon/generated/flight-m6/prop-flight-ring-01.png",
+      "selected": true,
+      "status": "generated",
+      "tool": "OpenAI built-in imagegen",
+      "references": [
+        "art-source/webtoon/hero-webtoon.webp"
+      ],
+      "visualReview": "No visible text, wounds or cropped silhouette. Transparent exterior; ring center empty. Final user art approval pending.",
+      "sha256": "749f93eb58e24a69816a3e245203e59f649d6f5d632cf5b4fa7cceac66897de0",
+      "nativeSize": [
+        1086,
+        1448
+      ],
+      "alphaBounds": [
+        77,
+        35,
+        1011,
+        1392
+      ]
+    },
+    {
+      "key": "prop-gust-cloud",
+      "legacy": "stormCloud",
+      "subject": "A compact friendly-looking wind hazard cloud: rounded slate teal and cream storm cloud billows, three short curling wind streamers to the right and a small warm gold lightning-shaped decorative glint below; no face, no rain, no scenery. Broad clear cel shaded silhouettes legible at 91x122 pixels. All billows and wind curls fully inside canvas with at least 8% transparent margin.",
+      "prompt": "Use case: illustration-story. Asset type: original child-friendly 2D side-scrolling Sinbad flight game prop. Image 1 is only the project's own hero-webtoon style reference: use clean ink contours, crisp cel shading, warm teal and gold palette, upper-left light; do not depict the hero. Primary subject: A compact friendly-looking wind hazard cloud: rounded slate teal and cream storm cloud billows, three short curling wind streamers to the right and a small warm gold lightning-shaped decorative glint below; no face, no rain, no scenery. Broad clear cel shaded silhouettes legible at 91x122 pixels. All billows and wind curls fully inside canvas with at least 8% transparent margin. Composition: one single isolated centered object in a portrait 3:4 canvas, target canvas 1024x1365 or closest supported 3:4 portrait. Genuine RGBA transparent background, no cast backdrop, no text, letters, numerals, logo, watermark, signature, frame or grid. No blood or wounds. Do not mimic external artists, copyrighted characters or existing games. Original project design. Keep the outer margin transparent, no clipping.",
+      "nativePath": "C:/Users/tbose/.codex/generated_images/01a10013-499c-7b11-9c12-3ae8826e542a/exec-05a7dd4f-c537-484e-870f-11c069822b7f.png",
+      "path": "art-source/webtoon/generated/flight-m6/prop-gust-cloud-01.png",
+      "selected": true,
+      "status": "generated",
+      "tool": "OpenAI built-in imagegen",
+      "references": [
+        "art-source/webtoon/hero-webtoon.webp"
+      ],
+      "visualReview": "No visible text, wounds or cropped silhouette. Transparent exterior; ring center empty. Final user art approval pending.",
+      "sha256": "e91daaa38922e7f29c75b806fd8be909ebb47e96dfa309b30edf7e6d3dd4d6ab",
+      "nativeSize": [
+        1086,
+        1448
+      ],
+      "alphaBounds": [
+        55,
+        336,
+        1037,
+        1113
+      ]
+    },
+    {
+      "key": "prop-falling-debris",
+      "legacy": "debris",
+      "subject": "A single cluster of falling ruined tower masonry: one larger chipped warm sandstone block with teal shaded facets and two small separated stone fragments. No sharp threatening spikes, no skulls or bodies, no embedded letters, no ground shadow. Fully isolated object, all stones fully inside with at least 8% outer transparent margin.",
+      "prompt": "Use case: illustration-story. Asset type: original child-friendly 2D side-scrolling Sinbad flight game prop. Image 1 is only the project's own hero-webtoon style reference: use clean ink contours, crisp cel shading, warm teal and gold palette, upper-left light; do not depict the hero. Primary subject: A single cluster of falling ruined tower masonry: one larger chipped warm sandstone block with teal shaded facets and two small separated stone fragments. No sharp threatening spikes, no skulls or bodies, no embedded letters, no ground shadow. Fully isolated object, all stones fully inside with at least 8% outer transparent margin. Composition: one single isolated centered object in a portrait 3:4 canvas, target canvas 1024x1365 or closest supported 3:4 portrait. Genuine RGBA transparent background, no cast backdrop, no text, letters, numerals, logo, watermark, signature, frame or grid. No blood or wounds. Do not mimic external artists, copyrighted characters or existing games. Original project design. Keep the outer margin transparent, no clipping.",
+      "nativePath": "C:/Users/tbose/.codex/generated_images/01a10013-499c-7b11-9c12-3ae8826e542a/exec-d58fae6a-5308-4017-b01f-4ba886d4e309.png",
+      "path": "art-source/webtoon/generated/flight-m6/prop-falling-debris-01.png",
+      "selected": true,
+      "status": "generated",
+      "tool": "OpenAI built-in imagegen",
+      "references": [
+        "art-source/webtoon/hero-webtoon.webp"
+      ],
+      "visualReview": "No visible text, wounds or cropped silhouette. Transparent exterior; ring center empty. Final user art approval pending.",
+      "sha256": "3e86147b2b7370fad1c72c4007820f789f356ffdf30350c8e6f2e4dcfdc079f8",
+      "nativeSize": [
+        1086,
+        1448
+      ],
+      "alphaBounds": [
+        200,
+        207,
+        992,
+        1209
+      ]
+    }
+  ],
+  "legacyHashes": {
+    "chest": "4bb46cc5f67a2d865a95d486894c833bf2915036be32da9b6c9591844023377a",
+    "heart": "97d316a21329ff6ebf43e72b19008dc15058377e106aa23b4c3397a9eece0fcc"
+  },
+  "preservedSvgHashes": {
+    "public/assets/draft/shell.svg": "8135e6a324a8c69cf015b3386b648a9a04df839c395afd5b65d49ba33a577314",
+    "public/assets/draft/bell.svg": "ec7cf5287d060dcb635bbe2b3f2b0e45e79ab717c0b8cec4f4157fd552a0d5d4",
+    "public/assets/draft/golden.svg": "9c6b5e9d00f6b28328f830655d44239b9f10071f7bd7e1e2960e7a19f500e7fe",
+    "public/assets/draft/key.svg": "26f99e80763d879d4b8ea02c9bc91b7d91c71b64df2e51281cd15654fc347675",
+    "public/assets/draft/gear.svg": "1ee2f1b42c33cc651321ba3337efc32b2a67c3a8d6a3f4e5e8477ebf0e41eca0",
+    "public/assets/draft/rod.svg": "41d4db4fbeb90ba752f99973569a5abaaa306ba4bb19c3b0249a6c2fadd54f5f",
+    "public/assets/draft/gate.svg": "d3ce2eb5d379561869adf5bbda70c318cea8c4e12af1fa55b385401ac8f2017a",
+    "public/assets/draft/vine.svg": "814ef63efe58699690041e6d852588e87c66b3723eedc16c84ed9fddff3e1e17",
+    "public/assets/draft/torch.svg": "e44d649646fd6652691276307e7804318857050d56aa39c99ee50377bde2099d",
+    "public/assets/draft/furnace.svg": "26d483ebef10b8e87182e017363ad978cb722ef2635b19e0ce89a0010c10a264",
+    "public/assets/draft/rope.svg": "bffbec4933a0ffdf052bec1aac4f740a96de051d29de028e7efda8ac1870d3a8",
+    "public/assets/draft/mirror.svg": "8ded1e57023dc0f61b767221d65355656bc94db050f345a37098f90d62c3bdb9",
+    "public/assets/draft/journal.svg": "d46539f47ccd658bf075af6b867986718cfd18d479a99971a805084c32f377a4",
+    "public/assets/draft/starMap.svg": "7be1abc2ce0f902b755b3f52611e8af2cbb67a91f24c1402931c0b019c26b951",
+    "public/assets/story/lantern.svg": "ae5de0899ee5ac64a7f445cf23e2475c666d4d6402127f3f5b34e244b5e9c39e",
+    "public/assets/story/starDevice.svg": "67fe35b9559c4d3256eeabc4d610181e89ab7a981809a97149e4eb4c7dc15cbf",
+    "public/assets/story/cargo.svg": "86c690842d5cf8baa833f69dc0bd93d3b960d4fa421cde510b4193a5307e9f95",
+    "public/assets/draft/gift.svg": "5bf3da5e86272ce54f16765f4ba4fa30bfddd14a86f1e1d1a3276eaa22fb46f5",
+    "public/assets/story/treasureAltar.svg": "3b03ac08c1dee971303c6a0e29e9710a7a3f0a39e49f2ab0bbe3dc49e1345b0e",
+    "public/assets/story/moonRock.svg": "f7fe2dceb96e452f57ba89832928beadf0d27f0ca4f80101cb5579b2c2fd5815",
+    "public/assets/story/lotusShrine.svg": "ded2618173e38cb33e52d7021574fa80c9ab1c1680c0b67fc62a45649db707bb",
+    "public/assets/draft/ending.svg": "337d796ffdbc9d34bf8b0b4bfa4fb8f86b6bf93f7d3bc10e1cf310161d81d3a5",
+    "public/assets/draft/flightRing.svg": "8136c91325655684fbbe114e1f1ae30b799279e4a28f65f6224ed4837aea2520",
+    "public/assets/draft/stormCloud.svg": "acd0fc58cb79bed9eefa9c4ad1b869a2081ce358637fe5ba2957f9d22208507e",
+    "public/assets/draft/debris.svg": "86cd8bd5782b8328d3fe7d2342c0344ce98f9127028b628c7a83fee8e9675eb4"
+  }
+}

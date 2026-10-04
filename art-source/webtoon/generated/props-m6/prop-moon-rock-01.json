@@ -1,0 +1,21 @@
+{
+  "key": "prop-moon-rock",
+  "legacy": "moonRock",
+  "subject": "One small faceted lavender moon rock with broad cream fracture seams and a small gold four-point sparkle engraved on its face. Stable whole rock, no fragments flying, no face.",
+  "status": "generated",
+  "prompt": "Create ONE original world interaction sprite for a bright child-friendly Korean adventure webtoon game. Attached project hero is STYLE reference ONLY: confident navy ink outlines, warm teal/gold palette, clean 2-3 flat cel shade levels, top-left lighting. Do not draw the hero. PORTRAIT 3:4 canvas requested 768x1024, true transparent RGBA background. Subject: One small faceted lavender moon rock with broad cream fracture seams and a small gold four-point sparkle engraved on its face. Stable whole rock, no fragments flying, no face. Front-facing readable silhouette at only 65x87 game pixels. Entire object centered, occupies roughly x=10%-90%, y=14%-86%, with fully transparent padding on every side. Keep the complete silhouette and all parts inside canvas. No scene, floor, cast shadow, circular backing, characters, hands, extra objects, labels, letters, numbers, logos, signature, watermark, blood, wounds or scary faces. Original project design only. Use clean limited broad color shapes rather than tiny decorative detail.",
+  "nativePath": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-fee0a1eb-d30a-4147-b1a0-b2b19bba59c7.png",
+  "path": "art-source/webtoon/generated/props-m6/prop-moon-rock-01.png",
+  "sha256": "2fae4fb0023bae60d8a18af4c7c53ba3f48caea8c10f6eacaf8d2dca637ea5e5",
+  "nativeSize": [
+    1086,
+    1448
+  ],
+  "alphaBounds": [
+    97,
+    238,
+    990,
+    1222
+  ],
+  "selected": true
+}

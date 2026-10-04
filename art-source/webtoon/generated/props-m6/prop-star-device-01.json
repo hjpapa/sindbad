@@ -1,0 +1,21 @@
+{
+  "key": "prop-star-device",
+  "legacy": "starDevice",
+  "subject": "One upright small fantasy compass puzzle device on a gold pedestal: navy circular dial inside lavender rim, large four-point gold compass star with teal center gem. No letters, numerals or tick labels.",
+  "status": "generated",
+  "prompt": "Create ONE original world interaction sprite for a bright child-friendly Korean adventure webtoon game. Attached project hero is STYLE reference ONLY: confident navy ink outlines, warm teal/gold palette, clean 2-3 flat cel shade levels, top-left lighting. Do not draw the hero. PORTRAIT 3:4 canvas requested 768x1024, true transparent RGBA background. Subject: One upright small fantasy compass puzzle device on a gold pedestal: navy circular dial inside lavender rim, large four-point gold compass star with teal center gem. No letters, numerals or tick labels. Front-facing readable silhouette at only 65x87 game pixels. Entire object centered, occupies roughly x=10%-90%, y=14%-86%, with fully transparent padding on every side. Keep the complete silhouette and all parts inside canvas. No scene, floor, cast shadow, circular backing, characters, hands, extra objects, labels, letters, numbers, logos, signature, watermark, blood, wounds or scary faces. Original project design only. Use clean limited broad color shapes rather than tiny decorative detail.",
+  "nativePath": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-94d1fab4-d778-4a00-9338-e2fc4a4306a4.png",
+  "path": "art-source/webtoon/generated/props-m6/prop-star-device-01.png",
+  "sha256": "d4080184556b54f8c8ec92be0e7a6df8580246ca702b045af31db439812a46ed",
+  "nativeSize": [
+    1086,
+    1448
+  ],
+  "alphaBounds": [
+    94,
+    88,
+    992,
+    1300
+  ],
+  "selected": true
+}

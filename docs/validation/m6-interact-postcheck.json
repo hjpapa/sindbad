@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-04",
+  "pass": true,
+  "fullE2eExitCode": 0,
+  "expected": 53,
+  "unexpected": 0,
+  "flaky": 0,
+  "skipped": 0,
+  "frozenFilesUnchanged": 911,
+  "diffCheckExitCode": 0,
+  "portsChecked": [5174, 5175],
+  "remainingListeners": 0,
+  "afterFullRun": "Documentation and evidence collection only; game, assets, build and tests unchanged",
+  "artStatus": "ART_DRAFT"
+}

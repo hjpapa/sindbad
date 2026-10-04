@@ -1,0 +1,32 @@
+{
+  "status": "ART_DRAFT",
+  "e2eExitCode": 0,
+  "stats": {
+    "startTime": "2026-10-04T06:43:20.447Z",
+    "duration": 3143774.988,
+    "expected": 57,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "unchangedFiles": 930,
+  "servers": {
+    "5174": "ECONNREFUSED",
+    "5175": "ECONNREFUSED"
+  },
+  "cleanup": "owned dev server and read-only log monitor terminated; cleanup exit1 is not test failure",
+  "unverified": [
+    "physical phone/tablet",
+    "iOS Safari",
+    "child playtest",
+    "long thermal/FPS",
+    "actual speaker mix",
+    "user final art approval"
+  ],
+  "gitCommitPushDeploy": false,
+  "gitDiffExitCode": 0,
+  "finalScreenshotCount": 41,
+  "staticCommandsPassed": 8,
+  "unitTestsPassed": 107,
+  "freshJourneySeconds": 843
+}

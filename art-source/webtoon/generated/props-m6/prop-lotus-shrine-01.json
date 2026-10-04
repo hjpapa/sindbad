@@ -1,0 +1,21 @@
+{
+  "key": "prop-lotus-shrine",
+  "legacy": "lotusShrine",
+  "subject": "One peaceful original decorative lotus pedestal: a large rounded pink lotus blossom on a low gold stone base, tiny teal center. Pure floral decoration, no person, deity or religious figure.",
+  "status": "generated",
+  "prompt": "Create ONE original world interaction sprite for a bright child-friendly Korean adventure webtoon game. Attached project hero is STYLE reference ONLY: confident navy ink outlines, warm teal/gold palette, clean 2-3 flat cel shade levels, top-left lighting. Do not draw the hero. PORTRAIT 3:4 canvas requested 768x1024, true transparent RGBA background. Subject: One peaceful original decorative lotus pedestal: a large rounded pink lotus blossom on a low gold stone base, tiny teal center. Pure floral decoration, no person, deity or religious figure. Front-facing readable silhouette at only 65x87 game pixels. Entire object centered, occupies roughly x=10%-90%, y=14%-86%, with fully transparent padding on every side. Keep the complete silhouette and all parts inside canvas. No scene, floor, cast shadow, circular backing, characters, hands, extra objects, labels, letters, numbers, logos, signature, watermark, blood, wounds or scary faces. Original project design only. Use clean limited broad color shapes rather than tiny decorative detail.",
+  "nativePath": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-ab98b1cf-5200-47e6-8865-bc9a22713a9a.png",
+  "path": "art-source/webtoon/generated/props-m6/prop-lotus-shrine-01.png",
+  "sha256": "a1063d89db18cd36e1c662c244108d9a6cfb727c6f16cb619cfbe0fa94c9f952",
+  "nativeSize": [
+    1086,
+    1448
+  ],
+  "alphaBounds": [
+    21,
+    216,
+    1070,
+    1255
+  ],
+  "selected": true
+}

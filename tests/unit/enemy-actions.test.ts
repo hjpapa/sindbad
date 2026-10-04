@@ -24,6 +24,6 @@ describe('enemy action artwork preserves combat and safe defeat semantics',()=>{
         expect(actionDefeatKind('pirate')).toBe('human');
         expect(actionDefeatKind('kuura')).toBe('magic');
         expect(maps.S09.spawns.at(-1)?.actionArt).toBeUndefined();
-        expect(maps.S10.spawns.every(spawn=>!spawn.actionArt)).toBe(true);
+        expect(maps.S10.spawns.every(spawn=>spawn.actionArt==='kite')).toBe(true);
     });
 });

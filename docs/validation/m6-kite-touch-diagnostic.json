@@ -1,0 +1,118 @@
+[
+  {
+    "device": "phone",
+    "scenario": "open-space",
+    "before": {
+      "x": 120,
+      "y": 546,
+      "grounded": true,
+      "vx": 0,
+      "vy": 0,
+      "hp": 100,
+      "maxHp": 100,
+      "bodyWidth": 42,
+      "bodyHeight": 84
+    },
+    "air": {
+      "x": 177.00000000000003,
+      "y": 436,
+      "grounded": false,
+      "vx": 300,
+      "vy": -265,
+      "hp": 100,
+      "maxHp": 100,
+      "bodyWidth": 42,
+      "bodyHeight": 84
+    },
+    "dx": 57.00000000000003,
+    "dy": -110,
+    "errors": []
+  },
+  {
+    "device": "phone",
+    "scenario": "after-walk-slide",
+    "before": {
+      "x": 317,
+      "y": 546,
+      "grounded": true,
+      "vx": -300,
+      "vy": 0,
+      "hp": 100,
+      "maxHp": 100,
+      "bodyWidth": 42,
+      "bodyHeight": 84
+    },
+    "air": {
+      "x": 354.1666666666667,
+      "y": 436,
+      "grounded": false,
+      "vx": 300,
+      "vy": -265,
+      "hp": 100,
+      "maxHp": 100,
+      "bodyWidth": 42,
+      "bodyHeight": 84
+    },
+    "dx": 37.166666666666686,
+    "dy": -110,
+    "errors": []
+  },
+  {
+    "device": "tablet",
+    "scenario": "open-space",
+    "before": {
+      "x": 120,
+      "y": 546,
+      "grounded": true,
+      "vx": 0,
+      "vy": 0,
+      "hp": 100,
+      "maxHp": 100,
+      "bodyWidth": 42,
+      "bodyHeight": 84
+    },
+    "air": {
+      "x": 177.00000000000003,
+      "y": 436,
+      "grounded": false,
+      "vx": 300,
+      "vy": -265,
+      "hp": 100,
+      "maxHp": 100,
+      "bodyWidth": 42,
+      "bodyHeight": 84
+    },
+    "dx": 57.00000000000003,
+    "dy": -110,
+    "errors": []
+  },
+  {
+    "device": "tablet",
+    "scenario": "after-walk-slide",
+    "before": {
+      "x": 317,
+      "y": 546,
+      "grounded": true,
+      "vx": -300,
+      "vy": 0,
+      "hp": 100,
+      "maxHp": 100,
+      "bodyWidth": 42,
+      "bodyHeight": 84
+    },
+    "air": {
+      "x": 354.1666666666667,
+      "y": 436,
+      "grounded": false,
+      "vx": 300,
+      "vy": -265,
+      "hp": 100,
+      "maxHp": 100,
+      "bodyWidth": 42,
+      "bodyHeight": 84
+    },
+    "dx": 37.166666666666686,
+    "dy": -110,
+    "errors": []
+  }
+]

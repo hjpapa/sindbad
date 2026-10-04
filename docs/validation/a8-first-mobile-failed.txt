@@ -1,0 +1,16 @@
+node:internal/fs/promises:640
+  return new FileHandle(await PromisePrototypeThen(
+                        ^
+
+Error: UNKNOWN: unknown error, open 'C:\code\code10(sindbad)\docs\screenshots\mobile-phone-swing.png'
+    at async open (node:internal/fs/promises:640:25)
+    at async Object.writeFile (node:internal/fs/promises:1257:14)
+    at async Page.screenshot (C:\code\code10(sindbad)\node_modules\playwright-core\lib\client\page.js:476:7)
+    at async file:///C:/code/code10(sindbad)/scripts/mobile-check.mjs:47:3 {
+  errno: -4094,
+  code: 'UNKNOWN',
+  syscall: 'open',
+  path: 'C:\\code\\code10(sindbad)\\docs\\screenshots\\mobile-phone-swing.png'
+}
+
+Node.js v24.16.0

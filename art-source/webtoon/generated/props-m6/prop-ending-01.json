@@ -1,0 +1,21 @@
+{
+  "key": "prop-ending",
+  "legacy": "ending",
+  "subject": "One celebratory gold bell on a short upright gold stand, coral clapper, cream engraved wave band. Three small gold gleams stay within canvas. No people, letters or confetti outside.",
+  "status": "generated",
+  "prompt": "Create ONE original world interaction sprite for a bright child-friendly Korean adventure webtoon game. Attached project hero is STYLE reference ONLY: confident navy ink outlines, warm teal/gold palette, clean 2-3 flat cel shade levels, top-left lighting. Do not draw the hero. PORTRAIT 3:4 canvas requested 768x1024, true transparent RGBA background. Subject: One celebratory gold bell on a short upright gold stand, coral clapper, cream engraved wave band. Three small gold gleams stay within canvas. No people, letters or confetti outside. Front-facing readable silhouette at only 65x87 game pixels. Entire object centered, occupies roughly x=10%-90%, y=14%-86%, with fully transparent padding on every side. Keep the complete silhouette and all parts inside canvas. No scene, floor, cast shadow, circular backing, characters, hands, extra objects, labels, letters, numbers, logos, signature, watermark, blood, wounds or scary faces. Original project design only. Use clean limited broad color shapes rather than tiny decorative detail.",
+  "nativePath": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-c552e2f1-1fbd-42a5-9c2e-921786719807.png",
+  "path": "art-source/webtoon/generated/props-m6/prop-ending-01.png",
+  "sha256": "4f226470c9b85db5ab79a645d879d87b30a8d2b0fbeaabba1753643c2e11bd73",
+  "nativeSize": [
+    1086,
+    1448
+  ],
+  "alphaBounds": [
+    96,
+    73,
+    990,
+    1386
+  ],
+  "selected": true
+}

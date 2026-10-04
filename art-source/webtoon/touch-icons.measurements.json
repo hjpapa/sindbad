@@ -1,0 +1,209 @@
+[
+  {
+    "key": "ui-talk",
+    "candidate": "art-source/webtoon/generated/touch/ui-talk-01.png",
+    "nativeSize": [
+      1254,
+      1254
+    ],
+    "sourceSize": [
+      512,
+      512
+    ],
+    "runtimeSize": [
+      128,
+      128
+    ],
+    "sourceBounds": [
+      45,
+      69,
+      467,
+      441
+    ],
+    "method": "uniform whole-canvas resize; generated alpha preserved; no cropping or repainting"
+  },
+  {
+    "key": "ui-inspect",
+    "candidate": "art-source/webtoon/generated/touch/ui-inspect-01.png",
+    "nativeSize": [
+      1254,
+      1254
+    ],
+    "sourceSize": [
+      512,
+      512
+    ],
+    "runtimeSize": [
+      128,
+      128
+    ],
+    "sourceBounds": [
+      71,
+      35,
+      444,
+      477
+    ],
+    "method": "uniform whole-canvas resize; generated alpha preserved; no cropping or repainting"
+  },
+  {
+    "key": "ui-depart",
+    "candidate": "art-source/webtoon/generated/touch/ui-depart-01.png",
+    "nativeSize": [
+      1254,
+      1254
+    ],
+    "sourceSize": [
+      512,
+      512
+    ],
+    "runtimeSize": [
+      128,
+      128
+    ],
+    "sourceBounds": [
+      45,
+      24,
+      474,
+      484
+    ],
+    "method": "uniform whole-canvas resize; generated alpha preserved; no cropping or repainting"
+  },
+  {
+    "key": "ui-wing",
+    "candidate": "art-source/webtoon/generated/touch/ui-wing-01.png",
+    "nativeSize": [
+      1254,
+      1254
+    ],
+    "sourceSize": [
+      512,
+      512
+    ],
+    "runtimeSize": [
+      128,
+      128
+    ],
+    "sourceBounds": [
+      35,
+      19,
+      497,
+      495
+    ],
+    "method": "uniform whole-canvas resize; generated alpha preserved; no cropping or repainting"
+  },
+  {
+    "key": "ui-flame",
+    "candidate": "art-source/webtoon/generated/touch/ui-flame-01.png",
+    "nativeSize": [
+      1254,
+      1254
+    ],
+    "sourceSize": [
+      512,
+      512
+    ],
+    "runtimeSize": [
+      128,
+      128
+    ],
+    "sourceBounds": [
+      59,
+      30,
+      468,
+      485
+    ],
+    "method": "uniform whole-canvas resize; generated alpha preserved; no cropping or repainting"
+  },
+  {
+    "key": "ui-bridge",
+    "candidate": "art-source/webtoon/generated/touch/ui-bridge-01.png",
+    "nativeSize": [
+      1254,
+      1254
+    ],
+    "sourceSize": [
+      512,
+      512
+    ],
+    "runtimeSize": [
+      128,
+      128
+    ],
+    "sourceBounds": [
+      16,
+      52,
+      497,
+      464
+    ],
+    "method": "uniform whole-canvas resize; generated alpha preserved; no cropping or repainting"
+  },
+  {
+    "key": "ui-shield",
+    "candidate": "art-source/webtoon/generated/touch/ui-shield-01.png",
+    "nativeSize": [
+      1254,
+      1254
+    ],
+    "sourceSize": [
+      512,
+      512
+    ],
+    "runtimeSize": [
+      128,
+      128
+    ],
+    "sourceBounds": [
+      52,
+      22,
+      460,
+      484
+    ],
+    "method": "uniform whole-canvas resize; generated alpha preserved; no cropping or repainting"
+  },
+  {
+    "key": "ui-dawn",
+    "candidate": "art-source/webtoon/generated/touch/ui-dawn-01.png",
+    "nativeSize": [
+      1254,
+      1254
+    ],
+    "sourceSize": [
+      512,
+      512
+    ],
+    "runtimeSize": [
+      128,
+      128
+    ],
+    "sourceBounds": [
+      19,
+      34,
+      493,
+      422
+    ],
+    "method": "uniform whole-canvas resize; generated alpha preserved; no cropping or repainting"
+  },
+  {
+    "key": "ui-jump",
+    "candidate": "art-source/webtoon/generated/touch/ui-jump-02.png",
+    "nativeSize": [
+      1254,
+      1254
+    ],
+    "sourceSize": [
+      512,
+      512
+    ],
+    "runtimeSize": [
+      128,
+      128
+    ],
+    "sourceBounds": [
+      97,
+      70,
+      427,
+      446
+    ],
+    "method": "uniform whole-canvas resize; generated alpha preserved; no cropping or repainting"
+  }
+]

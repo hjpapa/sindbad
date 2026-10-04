@@ -1,0 +1,300 @@
+{
+  "count": 42,
+  "method": "actual final report paths and byte-identical copies; 72px previews display only",
+  "files": [
+    {
+      "kind": "touch-full-run",
+      "source": "docs/screenshots/art-a8/phone-ui-jump.png",
+      "path": "docs/screenshots/art-a8/final/art-a8/phone-ui-jump.png",
+      "sha256": "002e7a0be4b9864e3e762d3ce4e2e6f14d66e78c6666ba860b91646c674a9e48",
+      "bytes": 450383
+    },
+    {
+      "kind": "touch-full-run",
+      "source": "docs/screenshots/art-a8/phone-ui-flame.png",
+      "path": "docs/screenshots/art-a8/final/art-a8/phone-ui-flame.png",
+      "sha256": "bc8dbc0bf5f2836ae0a7d86e087e3a3db7becc26d311d69ee1aa72772e033798",
+      "bytes": 475436
+    },
+    {
+      "kind": "touch-full-run",
+      "source": "docs/screenshots/art-a8/phone-ui-bridge.png",
+      "path": "docs/screenshots/art-a8/final/art-a8/phone-ui-bridge.png",
+      "sha256": "152882be4532aadaf0ea9c513d1d2dfb37da6cda1ef53185c697493427da720a",
+      "bytes": 478625
+    },
+    {
+      "kind": "touch-full-run",
+      "source": "docs/screenshots/art-a8/phone-ui-shield.png",
+      "path": "docs/screenshots/art-a8/final/art-a8/phone-ui-shield.png",
+      "sha256": "bc510676279b807a92420654c58a72484dca7d255669529c6d476c439e827cab",
+      "bytes": 473408
+    },
+    {
+      "kind": "touch-full-run",
+      "source": "docs/screenshots/art-a8/phone-ui-dawn.png",
+      "path": "docs/screenshots/art-a8/final/art-a8/phone-ui-dawn.png",
+      "sha256": "8721041f787a99eb5afb48beb41f97f25b379b741092a0922badb548cbaf3f06",
+      "bytes": 472679
+    },
+    {
+      "kind": "touch-full-run",
+      "source": "docs/screenshots/art-a8/phone-ui-talk.png",
+      "path": "docs/screenshots/art-a8/final/art-a8/phone-ui-talk.png",
+      "sha256": "faa5fd55ebcc8b033fec5887c1dd5c6084fe899af9d5c5867ccb8a5d55c9b462",
+      "bytes": 448446
+    },
+    {
+      "kind": "touch-full-run",
+      "source": "docs/screenshots/art-a8/phone-ui-inspect.png",
+      "path": "docs/screenshots/art-a8/final/art-a8/phone-ui-inspect.png",
+      "sha256": "0bc8d7eb5ed9d776be0880613b595b0bf503726811ce861e4f3eeefd8b9908dc",
+      "bytes": 505023
+    },
+    {
+      "kind": "touch-full-run",
+      "source": "docs/screenshots/art-a8/phone-ui-depart.png",
+      "path": "docs/screenshots/art-a8/final/art-a8/phone-ui-depart.png",
+      "sha256": "20d7b20cfb290cfac214fb27d71d762db195417d9f0663fbcdc0d0ce7f68531f",
+      "bytes": 461203
+    },
+    {
+      "kind": "touch-full-run",
+      "source": "docs/screenshots/art-a8/phone-ui-wing.png",
+      "path": "docs/screenshots/art-a8/final/art-a8/phone-ui-wing.png",
+      "sha256": "a7e85c6e0da7a7e6af6a1a10407941a5e13e4c8e3dd31e1e9eb3c54a4cdd7837",
+      "bytes": 463556
+    },
+    {
+      "kind": "touch-full-run",
+      "source": "docs/screenshots/art-a8/tablet-ui-jump.png",
+      "path": "docs/screenshots/art-a8/final/art-a8/tablet-ui-jump.png",
+      "sha256": "98c780bea78548f8e0fe3ec9942941f0797eece10b8d60f0d28fed7942c81ff0",
+      "bytes": 995657
+    },
+    {
+      "kind": "touch-full-run",
+      "source": "docs/screenshots/art-a8/tablet-ui-flame.png",
+      "path": "docs/screenshots/art-a8/final/art-a8/tablet-ui-flame.png",
+      "sha256": "17cd6e836a08ae8747d3dbac41ebf683e15b35edef9b99a8f6fbe7587fd01786",
+      "bytes": 1035038
+    },
+    {
+      "kind": "touch-full-run",
+      "source": "docs/screenshots/art-a8/tablet-ui-bridge.png",
+      "path": "docs/screenshots/art-a8/final/art-a8/tablet-ui-bridge.png",
+      "sha256": "e1edd147b86c9067d7a54cc8fbd7fe32929a3e7fb4132a53f521781ebc31d9e6",
+      "bytes": 1034796
+    },
+    {
+      "kind": "touch-full-run",
+      "source": "docs/screenshots/art-a8/tablet-ui-shield.png",
+      "path": "docs/screenshots/art-a8/final/art-a8/tablet-ui-shield.png",
+      "sha256": "bf412b1b3b8c9df25b3c40bd3a1cbaaea37749e6ca99582efb21d5de38d6a852",
+      "bytes": 1032987
+    },
+    {
+      "kind": "touch-full-run",
+      "source": "docs/screenshots/art-a8/tablet-ui-dawn.png",
+      "path": "docs/screenshots/art-a8/final/art-a8/tablet-ui-dawn.png",
+      "sha256": "01a549ea74e122d8f07c886a3a05abb87bd2d68b58c0ff52a4533f17d75bb627",
+      "bytes": 1032580
+    },
+    {
+      "kind": "touch-full-run",
+      "source": "docs/screenshots/art-a8/tablet-ui-talk.png",
+      "path": "docs/screenshots/art-a8/final/art-a8/tablet-ui-talk.png",
+      "sha256": "38c4d649a6c2598b4b45b5f658bcab5589913159a097252de4ab055138ebd569",
+      "bytes": 993519
+    },
+    {
+      "kind": "touch-full-run",
+      "source": "docs/screenshots/art-a8/tablet-ui-inspect.png",
+      "path": "docs/screenshots/art-a8/final/art-a8/tablet-ui-inspect.png",
+      "sha256": "e75f49d7bd15e3bf8a20422f7ded205fcf40783407e68398b87f0a0a1be99daf",
+      "bytes": 1102800
+    },
+    {
+      "kind": "touch-full-run",
+      "source": "docs/screenshots/art-a8/tablet-ui-depart.png",
+      "path": "docs/screenshots/art-a8/final/art-a8/tablet-ui-depart.png",
+      "sha256": "b3a39b4e9ee387d38b15da0409fe6114810930046e008a85ca6c14adad1cf1eb",
+      "bytes": 1000206
+    },
+    {
+      "kind": "touch-full-run",
+      "source": "docs/screenshots/art-a8/tablet-ui-wing.png",
+      "path": "docs/screenshots/art-a8/final/art-a8/tablet-ui-wing.png",
+      "sha256": "ee9462800346a7e2df27949bbbff7667f5ec448705b3dc8d63409a8b6041811c",
+      "bytes": 1000038
+    },
+    {
+      "kind": "touch-full-run",
+      "source": "docs/screenshots/art-a8/phone-fallback-ui-jump.png",
+      "path": "docs/screenshots/art-a8/final/art-a8/phone-fallback-ui-jump.png",
+      "sha256": "37c10d7e39cc44a11238e8b944c5d33eafd71e61e1a25e2a780b6079c9d893fc",
+      "bytes": 448880
+    },
+    {
+      "kind": "touch-full-run",
+      "source": "docs/screenshots/art-a8/phone-fallback-ui-flame.png",
+      "path": "docs/screenshots/art-a8/final/art-a8/phone-fallback-ui-flame.png",
+      "sha256": "4c9548677f06898c6ac3d6e637dd9db3c5c21f47ffba6c2f9e6acb6a7390db56",
+      "bytes": 473912
+    },
+    {
+      "kind": "touch-full-run",
+      "source": "docs/screenshots/art-a8/phone-fallback-ui-bridge.png",
+      "path": "docs/screenshots/art-a8/final/art-a8/phone-fallback-ui-bridge.png",
+      "sha256": "ade53b15ec5d2f0c9e6032863090e8fc1df34d54ec9facc198f2cf669a6ed871",
+      "bytes": 475343
+    },
+    {
+      "kind": "touch-full-run",
+      "source": "docs/screenshots/art-a8/phone-fallback-ui-shield.png",
+      "path": "docs/screenshots/art-a8/final/art-a8/phone-fallback-ui-shield.png",
+      "sha256": "fb0dce6ebf25e8ff94569eb8ab5a1bba1b6fec52089f2967cef2bf1b862a0133",
+      "bytes": 470096
+    },
+    {
+      "kind": "touch-full-run",
+      "source": "docs/screenshots/art-a8/phone-fallback-ui-dawn.png",
+      "path": "docs/screenshots/art-a8/final/art-a8/phone-fallback-ui-dawn.png",
+      "sha256": "cb95c8d45012ef0630f68bfacb7c25428ef9a5001493b30878ca231b061b85af",
+      "bytes": 469419
+    },
+    {
+      "kind": "touch-full-run",
+      "source": "docs/screenshots/art-a8/phone-fallback-ui-talk.png",
+      "path": "docs/screenshots/art-a8/final/art-a8/phone-fallback-ui-talk.png",
+      "sha256": "4c08b522e6ba40ed6da602feff083463e88e1b9ec76163c809bd264056664702",
+      "bytes": 444503
+    },
+    {
+      "kind": "touch-full-run",
+      "source": "docs/screenshots/art-a8/phone-fallback-ui-inspect.png",
+      "path": "docs/screenshots/art-a8/final/art-a8/phone-fallback-ui-inspect.png",
+      "sha256": "e017acb55a40643f52e95d857efe7c89732641b65ef6de3ca6e3112df80b9a58",
+      "bytes": 502054
+    },
+    {
+      "kind": "touch-full-run",
+      "source": "docs/screenshots/art-a8/phone-fallback-ui-depart.png",
+      "path": "docs/screenshots/art-a8/final/art-a8/phone-fallback-ui-depart.png",
+      "sha256": "2650af741507195e14d55a14cebf997cb0e13bde6ec4995748a4b62c7738d72c",
+      "bytes": 457397
+    },
+    {
+      "kind": "touch-full-run",
+      "source": "docs/screenshots/art-a8/phone-fallback-ui-wing.png",
+      "path": "docs/screenshots/art-a8/final/art-a8/phone-fallback-ui-wing.png",
+      "sha256": "d508622d98bcf59dddba9be87091e837eb17ea845b5f0fcc74101ce2cc83e20b",
+      "bytes": 460695
+    },
+    {
+      "kind": "72px-display-only",
+      "source": "docs/screenshots/art-a8/final/art-a8/phone-72px-icons.png",
+      "path": "docs/screenshots/art-a8/final/art-a8/phone-72px-icons.png",
+      "sha256": "39c84299931b9ec866e6621054cf30207c58afc6c541c2ade452a0dd4ec69c3e",
+      "bytes": 71295
+    },
+    {
+      "kind": "mobile",
+      "source": "docs/screenshots/art-a8/mobile-phone-start.png",
+      "path": "docs/screenshots/art-a8/final/art-a8/mobile-phone-start.png",
+      "sha256": "36e0f4bd97f43d553c474e72b182fe21975f3b680cf7df201b414a496e6254d5",
+      "bytes": 2672541
+    },
+    {
+      "kind": "mobile",
+      "source": "docs/screenshots/art-a8/mobile-phone-swing.png",
+      "path": "docs/screenshots/art-a8/final/art-a8/mobile-phone-swing.png",
+      "sha256": "77e97d5e8deed56ba276961204a1b86e8229c0e9a1e29eb74964f8e586b85132",
+      "bytes": 2645957
+    },
+    {
+      "kind": "mobile",
+      "source": "docs/screenshots/art-a8/mobile-phone-dialogue.png",
+      "path": "docs/screenshots/art-a8/final/art-a8/mobile-phone-dialogue.png",
+      "sha256": "6331bb93c7c748c464a9c9e992804da4eed912e71dbc9e5b8fd77dc03645db99",
+      "bytes": 1675598
+    },
+    {
+      "kind": "72px-display-only",
+      "source": "docs/screenshots/art-a8/final/art-a8/tablet-72px-icons.png",
+      "path": "docs/screenshots/art-a8/final/art-a8/tablet-72px-icons.png",
+      "sha256": "91a1bfdb870e1294c631026ad84676ae8a0a8e6057b08d857a5c6d8b89232489",
+      "bytes": 76456
+    },
+    {
+      "kind": "mobile",
+      "source": "docs/screenshots/art-a8/mobile-tablet-start.png",
+      "path": "docs/screenshots/art-a8/final/art-a8/mobile-tablet-start.png",
+      "sha256": "d1c9a4c88ffb09fe03743a71c40715df5e8cc6ccf0b6df0f30171442ad2b4e28",
+      "bytes": 2929315
+    },
+    {
+      "kind": "mobile",
+      "source": "docs/screenshots/art-a8/mobile-tablet-swing.png",
+      "path": "docs/screenshots/art-a8/final/art-a8/mobile-tablet-swing.png",
+      "sha256": "f657769c27137b62db497b22b78a64e261448b45a556f84728302296ec5fd03e",
+      "bytes": 2907982
+    },
+    {
+      "kind": "mobile",
+      "source": "docs/screenshots/art-a8/mobile-tablet-dialogue.png",
+      "path": "docs/screenshots/art-a8/final/art-a8/mobile-tablet-dialogue.png",
+      "sha256": "5e1ecf9d4e4e8add218774613395feaf75bc8cafdf65a7eb45633ebf79db26f8",
+      "bytes": 2962403
+    },
+    {
+      "kind": "fresh-campaign",
+      "source": "test-results/complete-journey-new-game--139b0-ntrols-and-no-injected-save/S05-route.png",
+      "path": "docs/screenshots/art-a8/final/art-a8/campaign-S05-route.png",
+      "sha256": "734baca8ea2e10a4ece6bc85a1a2bcc5719aac45b959e8bd1b842d97f4fc25f8",
+      "bytes": 1097361
+    },
+    {
+      "kind": "fresh-campaign",
+      "source": "test-results/complete-journey-new-game--139b0-ntrols-and-no-injected-save/S10-route.png",
+      "path": "docs/screenshots/art-a8/final/art-a8/campaign-S10-route.png",
+      "sha256": "ae22a201f222c4aa6eea312062f71d50b8d7941321c52d5ff48f0d134732e160",
+      "bytes": 1050666
+    },
+    {
+      "kind": "fresh-campaign",
+      "source": "test-results/complete-journey-new-game--139b0-ntrols-and-no-injected-save/S15-route.png",
+      "path": "docs/screenshots/art-a8/final/art-a8/campaign-S15-route.png",
+      "sha256": "e517f4d4261934df4478a165ab53da8953b9fc4aaf48e30d9c3a8a6a59b0dbf9",
+      "bytes": 1243280
+    },
+    {
+      "kind": "fresh-campaign",
+      "source": "test-results/complete-journey-new-game--139b0-ntrols-and-no-injected-save/S19-route.png",
+      "path": "docs/screenshots/art-a8/final/art-a8/campaign-S19-route.png",
+      "sha256": "9722f2f0fd4e572feba884fbe17faae64e4a191ddd44d5e2541297346e45ec0e",
+      "bytes": 847217
+    },
+    {
+      "kind": "fresh-campaign",
+      "source": "test-results/complete-journey-new-game--139b0-ntrols-and-no-injected-save/S25-route.png",
+      "path": "docs/screenshots/art-a8/final/art-a8/campaign-S25-route.png",
+      "sha256": "90dc5b0165eeb2a93a6c062ab605aea0cde71f7d5f224b3e11c7fae4e448a069",
+      "bytes": 1064091
+    },
+    {
+      "kind": "fresh-campaign",
+      "source": "test-results/complete-journey-new-game--139b0-ntrols-and-no-injected-save/S29-route.png",
+      "path": "docs/screenshots/art-a8/final/art-a8/campaign-S29-route.png",
+      "sha256": "3eb2a4aab915ed27180a6054acf6cd5ed8812e4e427f3f443d09b65d6e298455",
+      "bytes": 1182553
+    },
+    {
+      "kind": "fresh-campaign",
+      "source": "test-results/complete-journey-new-game--139b0-ntrols-and-no-injected-save/S36-route.png",
+      "path": "docs/screenshots/art-a8/final/art-a8/campaign-S36-route.png",
+      "sha256": "7ee8c796bd8b1e1a6cfdf9afac3930cbbd9f440b6828c28d3fefef717fecabf1",
+      "bytes": 998537
+    }
+  ]
+}

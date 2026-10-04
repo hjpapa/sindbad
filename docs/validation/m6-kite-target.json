@@ -1,0 +1,69 @@
+{
+  "config": {
+    "configFile": "C:\\code\\code10(sindbad)\\playwright.config.ts",
+    "rootDir": "C:/code/code10(sindbad)/tests/e2e",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": "C:\\code\\code10(sindbad)\\tests\\e2e\\server.setup.ts",
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {},
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ],
+      [
+        "html"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "C:/code/code10(sindbad)/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "id": "",
+        "name": "",
+        "testDir": "C:/code/code10(sindbad)/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 240000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.55.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [],
+  "errors": [
+    {
+      "message": "TypeError: Module \"file:///C:/code/code10(sindbad)/src/content/kite-actions.generated.json\" needs an import attribute of \"type: json\"",
+      "stack": "TypeError: Module \"file:///C:/code/code10(sindbad)/src/content/kite-actions.generated.json\" needs an import attribute of \"type: json\""
+    }
+  ],
+  "stats": {
+    "startTime": "2026-10-04T08:28:25.474Z",
+    "duration": 923.778,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

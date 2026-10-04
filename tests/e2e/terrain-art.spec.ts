@@ -1,3 +1,4 @@
+import {evidencePath} from './art-evidence';
 import {test,expect,type Page} from '@playwright/test';
 import {mkdirSync,writeFileSync} from 'node:fs';
 import {maps} from '../../src/content/maps';
@@ -18,7 +19,7 @@ test('17 real terrain styles load only their pair and preserve platform geometry
     page.on('pageerror',error=>errors.push(error.message));page.on('console',message=>{if(message.type()==='error')errors.push(message.text());});
     page.on('response',response=>{if(response.status()>=400)errors.push(`${response.status()} ${response.url()}`);});
     page.on('request',request=>{if(request.url().includes('/assets/terrain/'))requests.push(request.url());});
-    mkdirSync('docs/screenshots/art-a5',{recursive:true});
+    mkdirSync(evidencePath('art-a5'),{recursive:true});
     for(const [device,viewport] of Object.entries({phone:{width:844,height:390},tablet:{width:1180,height:820}})){
         await page.setViewportSize(viewport);await page.goto('/');
         const save=freshSave();save.totalXp=10000;save.weapons=['W01','W02','W03','W04','W05','W06','W07'];save.treasures=['T01','T02','T03','T04','T05','T06','T07'];
@@ -45,7 +46,7 @@ test('17 real terrain styles load only their pair and preserve platform geometry
             }
             const before=(await readJourney(page)).player.x;await page.keyboard.down('d');await page.keyboard.press('ArrowUp');await page.waitForTimeout(250);await page.keyboard.up('d');await page.keyboard.up('ArrowUp');
             expect((await readJourney(page)).player.x).toBeGreaterThan(before+8);
-            const path=`docs/screenshots/art-a5/${device}-${map.id}-${style}.png`;await page.screenshot({path});checks.push({device,stage:map.id,style,observed,path});
+            const path=evidencePath(`art-a5/${device}-${map.id}-${style}.png`);await page.screenshot({path});checks.push({device,stage:map.id,style,observed,path});
         }
         console.log(`A5 ${device}: 17 styles / 34 image tiles / actual map transitions / moving-platform alignment passed`);
     }
@@ -62,7 +63,7 @@ for(const missing of ['fill','top','both'])test(`missing terrain ${missing} keep
     for(const texture of observed.textures){expect(texture.width).toBe(128);expect(texture.height).toBe(texture.key.endsWith('-fill')?128:34);const fallback=missing==='both'||texture.key.endsWith(`-${missing}`);expect(texture.source=== 'generated').toBe(fallback);}
     const enemy=maps.S01.spawns.find(spawn=>spawn.id==='S01.enemy.skeleton.01')!;await fightJourney(page,enemy.id);
     const saved=(await readJourney(page)).save;expect(saved.claimedRewardIds).toContain(enemy.id);
-    const path=`docs/screenshots/art-a5/phone-missing-${missing}.png`;await page.screenshot({path});
+    const path=evidencePath(`art-a5/phone-missing-${missing}.png`);await page.screenshot({path});
     await page.reload();await page.getByRole('button',{name:'이어하기 · S01'}).click();await ready(page,'S01');
     expect((await readJourney(page)).save.claimedRewardIds).toEqual(saved.claimedRewardIds);expect((await readJourney(page)).save.totalXp).toBe(saved.totalXp);expect(errors).toEqual([]);
     expect(failures.filter(url=>url.includes('/assets/terrain/')).length).toBeGreaterThanOrEqual(missing==='both'?2:1);

@@ -1,0 +1,58 @@
+[
+  {
+    "command": "python scripts/optimize-webtoon.py",
+    "started": "2026-10-04T03:49:42.254645+00:00",
+    "exitCode": 0,
+    "seconds": 13.27,
+    "output": "docs/validation/m6-interact-check-1.txt"
+  },
+  {
+    "command": "python scripts/audit-webtoon.py",
+    "started": "2026-10-04T03:49:55.522795+00:00",
+    "exitCode": 0,
+    "seconds": 16.03,
+    "output": "docs/validation/m6-interact-check-2.txt"
+  },
+  {
+    "command": "npm run typecheck",
+    "started": "2026-10-04T03:50:11.551684+00:00",
+    "exitCode": 0,
+    "seconds": 3.8,
+    "output": "docs/validation/m6-interact-check-3.txt"
+  },
+  {
+    "command": "npm run lint",
+    "started": "2026-10-04T03:50:15.357567+00:00",
+    "exitCode": 0,
+    "seconds": 4.5,
+    "output": "docs/validation/m6-interact-check-4.txt"
+  },
+  {
+    "command": "npm run test",
+    "started": "2026-10-04T03:50:19.849840+00:00",
+    "exitCode": 0,
+    "seconds": 4.66,
+    "output": "docs/validation/m6-interact-check-5.txt"
+  },
+  {
+    "command": "npm run validate:content",
+    "started": "2026-10-04T03:50:24.502706+00:00",
+    "exitCode": 0,
+    "seconds": 1.69,
+    "output": "docs/validation/m6-interact-check-6.txt"
+  },
+  {
+    "command": "npm run build",
+    "started": "2026-10-04T03:50:26.190085+00:00",
+    "exitCode": 0,
+    "seconds": 12.62,
+    "output": "docs/validation/m6-interact-check-7.txt"
+  },
+  {
+    "command": "npx tsx scripts/check-art-budget.ts",
+    "started": "2026-10-04T03:50:38.825189+00:00",
+    "exitCode": 0,
+    "seconds": 4.33,
+    "output": "docs/validation/m6-interact-check-8.txt"
+  }
+]

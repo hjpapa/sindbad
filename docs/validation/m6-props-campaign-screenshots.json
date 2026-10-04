@@ -1,0 +1,37 @@
+[
+  {
+    "source": "test-results/complete-journey-new-game--139b0-ntrols-and-no-injected-save/S05-route.png",
+    "path": "docs/screenshots/m6-props/final/m6-props/campaign-S05-route.png",
+    "sha256": "602ca85897fdeaf9389f35372772eca44f790c02a7f7e1eb90a13f46bd9911eb"
+  },
+  {
+    "source": "test-results/complete-journey-new-game--139b0-ntrols-and-no-injected-save/S10-route.png",
+    "path": "docs/screenshots/m6-props/final/m6-props/campaign-S10-route.png",
+    "sha256": "0a829e8da66a1153d39ce72cdafc23b0ee70bc2b5f9b7ccd24e04819ecc00b20"
+  },
+  {
+    "source": "test-results/complete-journey-new-game--139b0-ntrols-and-no-injected-save/S15-route.png",
+    "path": "docs/screenshots/m6-props/final/m6-props/campaign-S15-route.png",
+    "sha256": "3ea9d795ce65b5b17a781eb49ce34b29404577ec25f2a8f546f2066f79fb22df"
+  },
+  {
+    "source": "test-results/complete-journey-new-game--139b0-ntrols-and-no-injected-save/S19-route.png",
+    "path": "docs/screenshots/m6-props/final/m6-props/campaign-S19-route.png",
+    "sha256": "893187a2ab08f98facc727ffd151cb89f83e5fc503ce48d4ad267910661ef7fb"
+  },
+  {
+    "source": "test-results/complete-journey-new-game--139b0-ntrols-and-no-injected-save/S25-route.png",
+    "path": "docs/screenshots/m6-props/final/m6-props/campaign-S25-route.png",
+    "sha256": "e78ac3fc2565bd690a14ddfdc076ff3d2c2d02ece391c4670a85062ebda51329"
+  },
+  {
+    "source": "test-results/complete-journey-new-game--139b0-ntrols-and-no-injected-save/S29-route.png",
+    "path": "docs/screenshots/m6-props/final/m6-props/campaign-S29-route.png",
+    "sha256": "031991490246e2aaf33311f45fd1e46c798acf2a6c14cc2993dc60f0ced7693c"
+  },
+  {
+    "source": "test-results/complete-journey-new-game--139b0-ntrols-and-no-injected-save/S36-route.png",
+    "path": "docs/screenshots/m6-props/final/m6-props/campaign-S36-route.png",
+    "sha256": "5254e778b70e5d4391c75c9d44e5d5eebba4005ba55e99f51ff39d2ba9c07671"
+  }
+]

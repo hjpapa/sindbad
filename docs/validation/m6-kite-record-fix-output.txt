@@ -1,0 +1,20 @@
+
+> sinbad-seven-treasures@0.1.0 test:e2e
+> playwright test tests/e2e/weapon-art.spec.ts --reporter=list,json,html
+
+
+Running 2 tests using 1 worker
+
+(node:34980) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:34980) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 tests\e2e\weapon-art.spec.ts:99:1 › seven raster weapons and icons stay attached to JSON fists on phone and tablet (1.4m)
+  ok 2 tests\e2e\weapon-art.spec.ts:148:1 › all seven missing rasters retain SVG weapons and icons, combat rewards and reload (43.6s)
+
+  2 passed (2.2m)
+
+To open last HTML report run:
+[36m[39m
+[36m  npx playwright show-report[39m
+[36m[39m

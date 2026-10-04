@@ -1,0 +1,13 @@
+{
+  "status": "development history retained; final static and 57 E2E passed",
+  "notes": [
+    "An attempted read of tests/e2e/flight.spec.ts found no file; rg located flight-rings.spec.ts.",
+    "Creating candidate JSON before its parent directory existed failed; the directory was then created and all three candidates registered.",
+    "An initial code patch used a non-existent type name and was rejected before mutation; the actual declaration was inspected and patched.",
+    "All three first native candidates passed visible alpha boundary checks; originals and prior source/report backups preserved.",
+    "First unit run: 106 passed, 1 failed; flightRing flag was masked by inherited lantern texture. Corrected actual objectTexture priority; 107 passed.",
+    "First targeted E2E: 2 existing flight tests passed, 4 new art tests failed because the test moved to 1400 before the actual middle checkpoint. Raw reports and four failure images preserved. Game checkpoint unchanged.",
+    "Target rerun: all four art tests passed. Ordinary kite enemies respawn despite claimed reward IDs; method corrected to say live enemies, not disabled combat.",
+    "Get-NetTCPConnection was denied while reading listeners; no process/network state was changed. Own dev/test server sessions remain explicitly tracked."
+  ]
+}

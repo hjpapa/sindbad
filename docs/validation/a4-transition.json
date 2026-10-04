@@ -1,7 +1,7 @@
 {
   "pass": true,
   "method": "explicit unlocked-stage fixture; real map buttons; 80 read-only animation-frame samples per transition; chapter-7 request delayed 150ms",
-  "loadingSamples": 29,
+  "loadingSamples": 36,
   "checks": [
     {
       "target": "S31",
@@ -15,56 +15,56 @@
           "loading": false
         },
         {
-          "stage": null,
-          "loading": true
-        },
-        {
-          "stage": null,
-          "loading": true
-        },
-        {
-          "stage": null,
-          "loading": true
-        },
-        {
-          "stage": null,
-          "loading": true
-        },
-        {
-          "stage": null,
-          "loading": true
-        },
-        {
-          "stage": null,
-          "loading": true
-        },
-        {
-          "stage": null,
-          "loading": true
-        },
-        {
-          "stage": null,
-          "loading": true
-        },
-        {
-          "stage": null,
-          "loading": true
-        },
-        {
-          "stage": null,
-          "loading": true
-        },
-        {
-          "stage": "S31",
+          "stage": "S01",
           "loading": false
         },
         {
-          "stage": "S31",
+          "stage": "S01",
           "loading": false
         },
         {
-          "stage": "S31",
-          "loading": false
+          "stage": null,
+          "loading": true
+        },
+        {
+          "stage": null,
+          "loading": true
+        },
+        {
+          "stage": null,
+          "loading": true
+        },
+        {
+          "stage": null,
+          "loading": true
+        },
+        {
+          "stage": null,
+          "loading": true
+        },
+        {
+          "stage": null,
+          "loading": true
+        },
+        {
+          "stage": null,
+          "loading": true
+        },
+        {
+          "stage": null,
+          "loading": true
+        },
+        {
+          "stage": null,
+          "loading": true
+        },
+        {
+          "stage": null,
+          "loading": true
+        },
+        {
+          "stage": null,
+          "loading": true
         },
         {
           "stage": "S31",
@@ -340,8 +340,8 @@
           "loading": false
         },
         {
-          "stage": "S31",
-          "loading": false
+          "stage": null,
+          "loading": true
         },
         {
           "stage": null,
@@ -665,6 +665,10 @@
           "loading": false
         },
         {
+          "stage": "S32",
+          "loading": false
+        },
+        {
           "stage": null,
           "loading": true
         },
@@ -673,16 +677,12 @@
           "loading": true
         },
         {
-          "stage": "S31",
-          "loading": false
+          "stage": null,
+          "loading": true
         },
         {
-          "stage": "S31",
-          "loading": false
-        },
-        {
-          "stage": "S31",
-          "loading": false
+          "stage": null,
+          "loading": true
         },
         {
           "stage": "S31",
@@ -990,8 +990,8 @@
           "loading": false
         },
         {
-          "stage": "S31",
-          "loading": false
+          "stage": null,
+          "loading": true
         },
         {
           "stage": null,
@@ -1339,8 +1339,8 @@
           "loading": true
         },
         {
-          "stage": "S01",
-          "loading": false
+          "stage": null,
+          "loading": true
         },
         {
           "stage": "S01",
@@ -1640,8 +1640,8 @@
           "loading": false
         },
         {
-          "stage": "S01",
-          "loading": false
+          "stage": null,
+          "loading": true
         },
         {
           "stage": null,

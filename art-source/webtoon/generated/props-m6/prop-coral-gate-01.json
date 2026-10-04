@@ -1,0 +1,21 @@
+{
+  "key": "prop-coral-gate",
+  "legacy": "gate",
+  "subject": "One small upright arch gate in coral-pink stone, navy opening with two teal bars and a centered gold diamond lock. Whole arch and footings inside canvas.",
+  "status": "generated",
+  "prompt": "Create ONE original world interaction sprite for a bright child-friendly Korean adventure webtoon game. Attached project hero is STYLE reference ONLY: confident navy ink outlines, warm teal/gold palette, clean 2-3 flat cel shade levels, top-left lighting. Do not draw the hero. PORTRAIT 3:4 canvas requested 768x1024, true transparent RGBA background. Subject: One small upright arch gate in coral-pink stone, navy opening with two teal bars and a centered gold diamond lock. Whole arch and footings inside canvas. Front-facing readable silhouette at only 65x87 game pixels. Entire object centered, occupies roughly x=10%-90%, y=14%-86%, with fully transparent padding on every side. Keep the complete silhouette and all parts inside canvas. No scene, floor, cast shadow, circular backing, characters, hands, extra objects, labels, letters, numbers, logos, signature, watermark, blood, wounds or scary faces. Original project design only. Use clean limited broad color shapes rather than tiny decorative detail.",
+  "nativePath": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-7aea1d32-2ced-4ca1-8ead-f477e33b82f7.png",
+  "path": "art-source/webtoon/generated/props-m6/prop-coral-gate-01.png",
+  "sha256": "8d3ca129d7a1845d5c488dd79441c5d516c30f1a99d3468de56ddbed23140903",
+  "nativeSize": [
+    1086,
+    1448
+  ],
+  "alphaBounds": [
+    60,
+    192,
+    1027,
+    1251
+  ],
+  "selected": true
+}

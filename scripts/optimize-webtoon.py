@@ -1,8 +1,8 @@
-"""Build the runtime WebP files that phones download.
+"""Build the runtime WebP files and A8 PNG icons that phones download.
 
 The lossless originals stay untouched in art-source/webtoon/. Each runtime copy
 is resized to what the 1280x720 canvas and the dialogue portrait can actually
-show, then saved as lossy WebP. Run from the repository root:
+show, then saved as lossy WebP (touch icons are lossless PNG). Run from the repository root:
 
     python scripts/optimize-webtoon.py
 """
@@ -18,6 +18,39 @@ WEAPON_TARGET = Path('public/assets/weapons')
 # Longest-edge-preserving target sizes. Portraits are shown at most ~330 game px
 # tall and 200 CSS px in dialogue, so 512x768 still covers 2x-density screens.
 SIZES = {
+    'prop-flight-ring': (96,128),
+    'prop-gust-cloud': (96,128),
+    'prop-falling-debris': (96,128),
+    'prop-chest': (96,128),
+    'prop-heart': (96,128),
+    'prop-shell': (96,128),
+    'prop-bell': (96,128),
+    'prop-golden': (96,128),
+    'prop-key': (96,128),
+    'prop-lifevest': (96,128),
+    'prop-rescue-rope': (96,128),
+    'prop-lifering': (96,128),
+    'prop-lightning-rod': (96,128),
+    'prop-damaged-mast': (96,128),
+    'prop-coral-gate': (96,128),
+    'prop-vine': (96,128),
+    'prop-torch': (96,128),
+    'prop-furnace': (96,128),
+    'prop-wave-rope': (96,128),
+    'prop-mirror': (96,128),
+    'prop-journal': (96,128),
+    'prop-star-map': (96,128),
+    'prop-lantern': (96,128),
+    'prop-star-device': (96,128),
+    'prop-cargo': (96,128),
+    'prop-gift': (96,128),
+    'prop-treasure-altar': (96,128),
+    'prop-moon-rock': (96,128),
+    'prop-lotus-shrine': (96,128),
+    'prop-ending': (96,128),
+    **{f'ui-{name}': (128,128) for name in ('jump','talk','inspect','depart','wing','flame','bridge','shield','dawn')},
+    **{f'projectile-{name}': (128,128) for name in ('siren-wave','siren-note','kite-wind','kuura-orb')},
+    **{f'effect-{name}': (384,256) for name in ('hit-spark','purify-light','surrender-flag')},
     **{f'weapon-W0{n}': (80,160) if n==5 else (160,64) for n in range(1,8)},
     'hero-run': (768, 512),       # 3x2 sheet, 256 px frames
     'hero-action': (768, 768),    # 3x3 sheet, 256 px frames
@@ -25,6 +58,7 @@ SIZES = {
     'sailor-webtoon': (512, 768),
     'enemy-atlas': (768, 512),    # 3x2 sheet, 256 px frames
     'enemy-actions': (1024, 2560),  # 4x10 sheet, 256 px frames
+    'kite-actions': (1024, 256),   # Flight-only 4x1 sheet, 256px frames
     'roc-webtoon': (768, 512),
     'whale-webtoon': (1536, 1024),  # stretched across the whole S04 island
     'crab-webtoon': (512, 512),
@@ -50,7 +84,7 @@ def main() -> None:
     TARGET.mkdir(parents=True, exist_ok=True)
     # Keep the measurements in the build even when art-source/ is excluded from
     # the uploaded source. The original JSON remains the single editing source.
-    for key in ('hero-action', 'enemy-actions'):
+    for key in ('hero-action', 'enemy-actions', 'kite-actions'):
         measurements = SOURCE / f'{key}.json'
         compiled_measurements = Path(f'src/content/{key}.generated.json')
         data = measurements.read_bytes()
@@ -65,9 +99,13 @@ def main() -> None:
         image.load()
         if image.size != size:
             image = image.resize(size, Image.LANCZOS)
-        out = TARGET / source.name
+        # A8's DOM touch icons use the specified lossless 128px PNG contract.
+        out = TARGET / (f'{key}.png' if key.startswith('ui-') else source.name)
         quality = 80 if key.startswith('chapter-') else 86
-        image.save(out, 'WEBP', quality=quality, alpha_quality=90, method=6)
+        if key.startswith('ui-'):
+            image.save(out, 'PNG', optimize=True)
+        else:
+            image.save(out, 'WEBP', quality=quality, alpha_quality=90, method=6)
         before += source.stat().st_size
         after += out.stat().st_size
         print(f'{source.name}: {source.stat().st_size // 1024} KiB -> {out.stat().st_size // 1024} KiB {image.size}')

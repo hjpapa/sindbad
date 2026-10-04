@@ -1,0 +1,26 @@
+{
+  "key": "prop-falling-debris",
+  "legacy": "debris",
+  "subject": "A single cluster of falling ruined tower masonry: one larger chipped warm sandstone block with teal shaded facets and two small separated stone fragments. No sharp threatening spikes, no skulls or bodies, no embedded letters, no ground shadow. Fully isolated object, all stones fully inside with at least 8% outer transparent margin.",
+  "prompt": "Use case: illustration-story. Asset type: original child-friendly 2D side-scrolling Sinbad flight game prop. Image 1 is only the project's own hero-webtoon style reference: use clean ink contours, crisp cel shading, warm teal and gold palette, upper-left light; do not depict the hero. Primary subject: A single cluster of falling ruined tower masonry: one larger chipped warm sandstone block with teal shaded facets and two small separated stone fragments. No sharp threatening spikes, no skulls or bodies, no embedded letters, no ground shadow. Fully isolated object, all stones fully inside with at least 8% outer transparent margin. Composition: one single isolated centered object in a portrait 3:4 canvas, target canvas 1024x1365 or closest supported 3:4 portrait. Genuine RGBA transparent background, no cast backdrop, no text, letters, numerals, logo, watermark, signature, frame or grid. No blood or wounds. Do not mimic external artists, copyrighted characters or existing games. Original project design. Keep the outer margin transparent, no clipping.",
+  "nativePath": "C:/Users/tbose/.codex/generated_images/01a10013-499c-7b11-9c12-3ae8826e542a/exec-d58fae6a-5308-4017-b01f-4ba886d4e309.png",
+  "path": "art-source/webtoon/generated/flight-m6/prop-falling-debris-01.png",
+  "selected": true,
+  "status": "generated",
+  "tool": "OpenAI built-in imagegen",
+  "references": [
+    "art-source/webtoon/hero-webtoon.webp"
+  ],
+  "visualReview": "No visible text, wounds or cropped silhouette. Transparent exterior; ring center empty. Final user art approval pending.",
+  "sha256": "3e86147b2b7370fad1c72c4007820f789f356ffdf30350c8e6f2e4dcfdc079f8",
+  "nativeSize": [
+    1086,
+    1448
+  ],
+  "alphaBounds": [
+    200,
+    207,
+    992,
+    1209
+  ]
+}

@@ -1,3 +1,4 @@
+import {evidencePath} from './art-evidence';
 import { expect, test, type Page } from '@playwright/test';
 
 interface TestState {
@@ -39,5 +40,5 @@ test('simple controls jump, smart action attacks, monster fades, and phone UI fi
         expect(box!.x+box!.width).toBeLessThanOrEqual(844);expect(box!.y+box!.height).toBeLessThanOrEqual(390);
     }
     expect(await page.evaluate(()=>document.documentElement.scrollWidth<=document.documentElement.clientWidth)).toBe(true);
-    await page.screenshot({path:'docs/screenshots/mobile-polished.png'});
+    await page.screenshot({path:evidencePath('mobile-polished.png')});
 });

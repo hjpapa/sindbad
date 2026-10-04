@@ -1,0 +1,24 @@
+{
+  "key": "prop-lifevest",
+  "legacy": "gear",
+  "subject": "One orange and warm-gold sleeveless life jacket, two buoyant front panels with a teal belt and simple navy buckle. Empty jacket, no body, face, arms or text.",
+  "targets": [
+    "S04.gear.1"
+  ],
+  "status": "generated",
+  "prompt": "Create ONE original world interaction sprite for a bright child-friendly Korean adventure webtoon game. Attached project hero is STYLE reference ONLY: confident navy ink outlines, warm teal/gold palette, clean 2-3 flat cel shade levels, top-left lighting. Do not draw the hero. PORTRAIT 3:4 canvas requested 768x1024, true transparent RGBA background. Subject: One orange and warm-gold sleeveless life jacket, two buoyant front panels with a teal belt and simple navy buckle. Empty jacket, no body, face, arms or text. Front-facing readable silhouette at only 65x87 game pixels. Entire object centered, occupies roughly x=10%-90%, y=14%-86%, with fully transparent padding on every side. Keep the complete silhouette and all parts inside canvas. No scene, floor, cast shadow, circular backing, characters, hands, extra objects, labels, letters, numbers, logos, signature, watermark, blood, wounds or scary faces. Original project design only. Use clean limited broad color shapes rather than tiny decorative detail.",
+  "nativePath": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-1c4302fe-6cfc-4da7-8f74-25059df47447.png",
+  "path": "art-source/webtoon/generated/props-m6/prop-lifevest-01.png",
+  "sha256": "b3759e02c8bc6bab7f03e938f2ec5a804706162cc88e6871f1feda27a0157564",
+  "nativeSize": [
+    1086,
+    1448
+  ],
+  "alphaBounds": [
+    82,
+    201,
+    1004,
+    1252
+  ],
+  "selected": true
+}

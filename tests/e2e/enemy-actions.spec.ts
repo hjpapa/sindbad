@@ -1,3 +1,4 @@
+import {evidencePath} from './art-evidence';
 import {test,expect,type Page} from '@playwright/test';
 import {mkdirSync,writeFileSync} from 'node:fs';
 import {freshSave,type Save} from '../../src/core/state';
@@ -28,7 +29,7 @@ test('40 enemy poses, mirrored direction, safe defeat and save reload on phone/t
     test.setTimeout(12*60*1000);
     const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));page.on('console',m=>{if(m.type()==='error')errors.push(m.text());});page.on('response',r=>{if(r.status()>=400)errors.push(`${r.status()} ${r.url()}`);});
     await page.goto('/');
-    mkdirSync('docs/screenshots/art-a3',{recursive:true});
+    mkdirSync(evidencePath('art-a3'),{recursive:true});
     const checks:unknown[]=[];
     for(const [device,viewport] of Object.entries({phone:{width:844,height:390},tablet:{width:1180,height:820}})){
         await page.setViewportSize(viewport);
@@ -40,11 +41,17 @@ test('40 enemy poses, mirrored direction, safe defeat and save reload on phone/t
             const row=enemyActionRows.find(row=>row.key===key)!;
             const captures:unknown[]=[];
             const capture=async(state:string,pose:number)=>{
-                await page.waitForFunction(({id,state})=>Reflect.get(window,'__SINBAD_TEST__')?.enemies.find((e:EnemyView)=>e.id===id)?.state===state,{id:def.id,state});
-                const observed=await enemy();expect(observed.texture).toBe('enemy-actions');expect(observed.frame).toBe(row.row*4+pose);
+                // Return the snapshot that matched the state. A second browser
+                // read can land in recover after the brief attack has ended.
+                const sample=await page.waitForFunction(({id,state})=>{
+                    const e=Reflect.get(window,'__SINBAD_TEST__')?.enemies.find((e:EnemyView)=>e.id===id);
+                    return e?.state===state?e:false;
+                },{id:def.id,state});
+                const observed=await sample.jsonValue() as EnemyView;await sample.dispose();
+                expect(observed.texture).toBe('enemy-actions');expect(observed.frame).toBe(row.row*4+pose);
                 const feet=(row.baseline[pose]/512-observed.originY)*observed.displayHeight;
                 expect(feet).toBeCloseTo(observed.footOffset,5);
-                const path=`docs/screenshots/art-a3/${device}-${key}-${state}.png`;
+                const path=evidencePath(`art-a3/${device}-${key}-${state}.png`);
                 await page.screenshot({path});captures.push({state,path,observed});
             };
             // S01's optional crate top is 126px above the enemy centre; the
@@ -55,7 +62,7 @@ test('40 enemy poses, mirrored direction, safe defeat and save reload on phone/t
             expect((await enemy()).flipX).toBe(true);
             await moveJourney(page,(await enemy()).x+130,def.y);
             await expect.poll(async()=>(await enemy()).flipX,{timeout:12000}).toBe(false);
-            const rightPath=`docs/screenshots/art-a3/${device}-${key}-right.png`;await page.screenshot({path:rightPath});
+            const rightPath=evidencePath(`art-a3/${device}-${key}-right.png`);await page.screenshot({path:rightPath});
             for(let attempt=0;attempt<8&&(await enemy()).hp>0;attempt++){
                 const target=await enemy();await moveJourney(page,target.x+55,target.y);
                 await page.keyboard.down('a');await page.waitForTimeout(35);await page.keyboard.up('a');

@@ -1,0 +1,44 @@
+[
+  {
+    "kind": "mobile",
+    "source": "docs/screenshots/art-a8/mobile-phone-start.png",
+    "path": "docs/screenshots/art-a8/final/art-a8/mobile-phone-start.png",
+    "sha256": "36e0f4bd97f43d553c474e72b182fe21975f3b680cf7df201b414a496e6254d5",
+    "bytes": 2672541
+  },
+  {
+    "kind": "mobile",
+    "source": "docs/screenshots/art-a8/mobile-phone-swing.png",
+    "path": "docs/screenshots/art-a8/final/art-a8/mobile-phone-swing.png",
+    "sha256": "77e97d5e8deed56ba276961204a1b86e8229c0e9a1e29eb74964f8e586b85132",
+    "bytes": 2645957
+  },
+  {
+    "kind": "mobile",
+    "source": "docs/screenshots/art-a8/mobile-phone-dialogue.png",
+    "path": "docs/screenshots/art-a8/final/art-a8/mobile-phone-dialogue.png",
+    "sha256": "6331bb93c7c748c464a9c9e992804da4eed912e71dbc9e5b8fd77dc03645db99",
+    "bytes": 1675598
+  },
+  {
+    "kind": "mobile",
+    "source": "docs/screenshots/art-a8/mobile-tablet-start.png",
+    "path": "docs/screenshots/art-a8/final/art-a8/mobile-tablet-start.png",
+    "sha256": "d1c9a4c88ffb09fe03743a71c40715df5e8cc6ccf0b6df0f30171442ad2b4e28",
+    "bytes": 2929315
+  },
+  {
+    "kind": "mobile",
+    "source": "docs/screenshots/art-a8/mobile-tablet-swing.png",
+    "path": "docs/screenshots/art-a8/final/art-a8/mobile-tablet-swing.png",
+    "sha256": "f657769c27137b62db497b22b78a64e261448b45a556f84728302296ec5fd03e",
+    "bytes": 2907982
+  },
+  {
+    "kind": "mobile",
+    "source": "docs/screenshots/art-a8/mobile-tablet-dialogue.png",
+    "path": "docs/screenshots/art-a8/final/art-a8/mobile-tablet-dialogue.png",
+    "sha256": "5e1ecf9d4e4e8add218774613395feaf75bc8cafdf65a7eb45633ebf79db26f8",
+    "bytes": 2962403
+  }
+]

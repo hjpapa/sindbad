@@ -1,0 +1,24 @@
+{
+  "key": "prop-bell",
+  "legacy": "bell",
+  "subject": "A golden brass ship departure bell, front view, small suspension loop at top, broad flared lip and visible clapper at bottom. No support pole.",
+  "targets": [
+    "S01.exit"
+  ],
+  "status": "generated",
+  "prompt": "Create ONE original world interaction sprite for a bright child-friendly Korean adventure webtoon game. Attached project hero is STYLE reference ONLY: confident navy ink outlines, warm teal/gold palette, clean 2-3 flat cel shade levels, top-left lighting. Do not draw the hero. PORTRAIT 3:4 canvas requested 768x1024, true transparent RGBA background. Subject: A golden brass ship departure bell, front view, small suspension loop at top, broad flared lip and visible clapper at bottom. No support pole. Front-facing readable silhouette at only 65x87 game pixels. Entire object centered, occupies roughly x=10%-90%, y=14%-86%, with fully transparent padding on every side. Keep the complete silhouette and all parts inside canvas. No scene, floor, cast shadow, circular backing, characters, hands, extra objects, labels, letters, numbers, logos, signature, watermark, blood, wounds or scary faces. Original project design only. Use clean limited broad color shapes rather than tiny decorative detail.",
+  "nativePath": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-7e78c09b-2d7a-455c-bcc3-58aa900f78d3.png",
+  "path": "art-source/webtoon/generated/props-m6/prop-bell-01.png",
+  "sha256": "88bfbe962c1ce8dd36a2d0b69ac35ba27007fb29fb70658d7ed93a19c9fe59ad",
+  "nativeSize": [
+    1086,
+    1448
+  ],
+  "alphaBounds": [
+    42,
+    111,
+    1044,
+    1289
+  ],
+  "selected": true
+}

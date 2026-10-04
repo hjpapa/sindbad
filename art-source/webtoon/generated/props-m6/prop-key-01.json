@@ -1,0 +1,21 @@
+{
+  "key": "prop-key",
+  "legacy": "key",
+  "subject": "A large golden coral gate key, diagonally from upper left to lower right, circular bow handle, solid shaft and two broad teeth. Clearly readable key silhouette.",
+  "status": "generated",
+  "prompt": "Create ONE original world interaction sprite for a bright child-friendly Korean adventure webtoon game. Attached project hero is STYLE reference ONLY: confident navy ink outlines, warm teal/gold palette, clean 2-3 flat cel shade levels, top-left lighting. Do not draw the hero. PORTRAIT 3:4 canvas requested 768x1024, true transparent RGBA background. Subject: A large golden coral gate key, diagonally from upper left to lower right, circular bow handle, solid shaft and two broad teeth. Clearly readable key silhouette. Front-facing readable silhouette at only 65x87 game pixels. Entire object centered, occupies roughly x=10%-90%, y=14%-86%, with fully transparent padding on every side. Keep the complete silhouette and all parts inside canvas. No scene, floor, cast shadow, circular backing, characters, hands, extra objects, labels, letters, numbers, logos, signature, watermark, blood, wounds or scary faces. Original project design only. Use clean limited broad color shapes rather than tiny decorative detail.",
+  "nativePath": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-88ddfb79-a224-4129-b96b-1124156dba6f.png",
+  "path": "art-source/webtoon/generated/props-m6/prop-key-01.png",
+  "sha256": "99e00dd79f55a84482744a9b2aec84c037720a3fc6ca2fb296ab042d61e8f97f",
+  "nativeSize": [
+    1086,
+    1448
+  ],
+  "alphaBounds": [
+    62,
+    111,
+    1026,
+    1299
+  ],
+  "selected": true
+}

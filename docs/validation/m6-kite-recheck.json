@@ -1,0 +1,469 @@
+{
+  "config": {
+    "configFile": "C:\\code\\code10(sindbad)\\playwright.config.ts",
+    "rootDir": "C:/code/code10(sindbad)/tests/e2e",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": "C:\\code\\code10(sindbad)\\tests\\e2e\\server.setup.ts",
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ],
+      [
+        "html"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "C:/code/code10(sindbad)/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "C:/code/code10(sindbad)/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 240000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.55.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "flight-rings.spec.ts",
+      "file": "flight-rings.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "flight rings collect through movement once, persist, and never gate landing",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 34384,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 475
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 7
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 7
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 441
+                    }
+                  ],
+                  "startTime": "2026-10-04T08:29:32.763Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a905626241707dd069b7-8ae447fbfeb56cc21fd7",
+          "file": "flight-rings.spec.ts",
+          "line": 18,
+          "column": 1
+        },
+        {
+          "title": "S33 return flight has five moving debris routes and does not require combat",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 9658,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 489
+                    }
+                  ],
+                  "startTime": "2026-10-04T08:30:08.057Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a905626241707dd069b7-7655a01e206347e28a4d",
+          "file": "flight-rings.spec.ts",
+          "line": 92,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "kite-actions.spec.ts",
+      "file": "kite-actions.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "phone kite four actions keeps flight combat, release and stable rewards",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 10927,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeCloseTo\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m, \u001b[22mprecision\u001b[2m)\u001b[22m\n\nExpected: \u001b[32m229.14685314685315\u001b[39m\nReceived: \u001b[31m247.54470145239378\u001b[39m\n\nExpected precision:    6\nExpected difference: < \u001b[32m0.0000005\u001b[39m\nReceived difference:   \u001b[31m18.397848305540634\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeCloseTo\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m, \u001b[22mprecision\u001b[2m)\u001b[22m\n\nExpected: \u001b[32m229.14685314685315\u001b[39m\nReceived: \u001b[31m247.54470145239378\u001b[39m\n\nExpected precision:    6\nExpected difference: < \u001b[32m0.0000005\u001b[39m\nReceived difference:   \u001b[31m18.397848305540634\u001b[39m\n    at inspect (C:\\code\\code10(sindbad)\\tests\\e2e\\kite-actions.spec.ts:45:45)\n    at capture (C:\\code\\code10(sindbad)\\tests\\e2e\\kite-actions.spec.ts:52:93)\n    at C:\\code\\code10(sindbad)\\tests\\e2e\\kite-actions.spec.ts:71:48",
+                    "location": {
+                      "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\kite-actions.spec.ts",
+                      "column": 45,
+                      "line": 45
+                    },
+                    "snippet": "  43 |                     expect(e.originX).toBeCloseTo(e.flipX?1-centre[0]/512:centre[0]/512,8);\n  44 |                     expect(e.originY).toBeCloseTo(centre[1]/512,8);\n> 45 |                     expect(e.displayHeight).toBeCloseTo(128*512/kite.idleHeight,6);\n     |                                             ^\n  46 |                 }\n  47 |             };\n  48 |             const capture=async(state:string)=>{"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\kite-actions.spec.ts",
+                        "column": 45,
+                        "line": 45
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeCloseTo\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m, \u001b[22mprecision\u001b[2m)\u001b[22m\n\nExpected: \u001b[32m229.14685314685315\u001b[39m\nReceived: \u001b[31m247.54470145239378\u001b[39m\n\nExpected precision:    6\nExpected difference: < \u001b[32m0.0000005\u001b[39m\nReceived difference:   \u001b[31m18.397848305540634\u001b[39m\n\n  43 |                     expect(e.originX).toBeCloseTo(e.flipX?1-centre[0]/512:centre[0]/512,8);\n  44 |                     expect(e.originY).toBeCloseTo(centre[1]/512,8);\n> 45 |                     expect(e.displayHeight).toBeCloseTo(128*512/kite.idleHeight,6);\n     |                                             ^\n  46 |                 }\n  47 |             };\n  48 |             const capture=async(state:string)=>{\n    at inspect (C:\\code\\code10(sindbad)\\tests\\e2e\\kite-actions.spec.ts:45:45)\n    at capture (C:\\code\\code10(sindbad)\\tests\\e2e\\kite-actions.spec.ts:52:93)\n    at C:\\code\\code10(sindbad)\\tests\\e2e\\kite-actions.spec.ts:71:48"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 6
+                    },
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 123
+                    }
+                  ],
+                  "startTime": "2026-10-04T08:30:17.769Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\code\\code10(sindbad)\\test-results\\kite-actions-phone-kite-fo-fb2c0--release-and-stable-rewards\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\code\\code10(sindbad)\\test-results\\kite-actions-phone-kite-fo-fb2c0--release-and-stable-rewards\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\kite-actions.spec.ts",
+                    "column": 45,
+                    "line": 45
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "f061c0a50e7ad8e54b6e-06d198d30e4a94be48ed",
+          "file": "kite-actions.spec.ts",
+          "line": 49,
+          "column": 41
+        },
+        {
+          "title": "phone kite missing-sheet recovery keeps flight combat, release and stable rewards",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 35680,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "KITE phone S10 fallback: poses / both directions / pause / touch attack / release / reward reload passed\n"
+                    },
+                    {
+                      "text": "KITE phone S33 fallback: poses / both directions / pause / touch attack / release / reward reload passed\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 6
+                    },
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 117
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 7
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 6
+                    },
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 119
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 8
+                    }
+                  ],
+                  "startTime": "2026-10-04T08:30:30.169Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f061c0a50e7ad8e54b6e-72c03c79b8b7e57d5ed7",
+          "file": "kite-actions.spec.ts",
+          "line": 49,
+          "column": 41
+        },
+        {
+          "title": "tablet kite four actions keeps flight combat, release and stable rewards",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 11337,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeCloseTo\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m, \u001b[22mprecision\u001b[2m)\u001b[22m\n\nExpected: \u001b[32m229.14685314685315\u001b[39m\nReceived: \u001b[31m245.67186659494354\u001b[39m\n\nExpected precision:    6\nExpected difference: < \u001b[32m0.0000005\u001b[39m\nReceived difference:   \u001b[31m16.52501344809039\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeCloseTo\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m, \u001b[22mprecision\u001b[2m)\u001b[22m\n\nExpected: \u001b[32m229.14685314685315\u001b[39m\nReceived: \u001b[31m245.67186659494354\u001b[39m\n\nExpected precision:    6\nExpected difference: < \u001b[32m0.0000005\u001b[39m\nReceived difference:   \u001b[31m16.52501344809039\u001b[39m\n    at inspect (C:\\code\\code10(sindbad)\\tests\\e2e\\kite-actions.spec.ts:45:45)\n    at capture (C:\\code\\code10(sindbad)\\tests\\e2e\\kite-actions.spec.ts:52:93)\n    at C:\\code\\code10(sindbad)\\tests\\e2e\\kite-actions.spec.ts:71:48",
+                    "location": {
+                      "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\kite-actions.spec.ts",
+                      "column": 45,
+                      "line": 45
+                    },
+                    "snippet": "  43 |                     expect(e.originX).toBeCloseTo(e.flipX?1-centre[0]/512:centre[0]/512,8);\n  44 |                     expect(e.originY).toBeCloseTo(centre[1]/512,8);\n> 45 |                     expect(e.displayHeight).toBeCloseTo(128*512/kite.idleHeight,6);\n     |                                             ^\n  46 |                 }\n  47 |             };\n  48 |             const capture=async(state:string)=>{"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\kite-actions.spec.ts",
+                        "column": 45,
+                        "line": 45
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeCloseTo\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m, \u001b[22mprecision\u001b[2m)\u001b[22m\n\nExpected: \u001b[32m229.14685314685315\u001b[39m\nReceived: \u001b[31m245.67186659494354\u001b[39m\n\nExpected precision:    6\nExpected difference: < \u001b[32m0.0000005\u001b[39m\nReceived difference:   \u001b[31m16.52501344809039\u001b[39m\n\n  43 |                     expect(e.originX).toBeCloseTo(e.flipX?1-centre[0]/512:centre[0]/512,8);\n  44 |                     expect(e.originY).toBeCloseTo(centre[1]/512,8);\n> 45 |                     expect(e.displayHeight).toBeCloseTo(128*512/kite.idleHeight,6);\n     |                                             ^\n  46 |                 }\n  47 |             };\n  48 |             const capture=async(state:string)=>{\n    at inspect (C:\\code\\code10(sindbad)\\tests\\e2e\\kite-actions.spec.ts:45:45)\n    at capture (C:\\code\\code10(sindbad)\\tests\\e2e\\kite-actions.spec.ts:52:93)\n    at C:\\code\\code10(sindbad)\\tests\\e2e\\kite-actions.spec.ts:71:48"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 6
+                    },
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 121
+                    }
+                  ],
+                  "startTime": "2026-10-04T08:31:06.654Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\code\\code10(sindbad)\\test-results\\kite-actions-tablet-kite-f-d0d37--release-and-stable-rewards\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\code\\code10(sindbad)\\test-results\\kite-actions-tablet-kite-f-d0d37--release-and-stable-rewards\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\kite-actions.spec.ts",
+                    "column": 45,
+                    "line": 45
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "f061c0a50e7ad8e54b6e-886118bda2bc2ca58ede",
+          "file": "kite-actions.spec.ts",
+          "line": 49,
+          "column": 41
+        },
+        {
+          "title": "tablet kite missing-sheet recovery keeps flight combat, release and stable rewards",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 36896,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "KITE tablet S10 fallback: poses / both directions / pause / touch attack / release / reward reload passed\n"
+                    },
+                    {
+                      "text": "KITE tablet S33 fallback: poses / both directions / pause / touch attack / release / reward reload passed\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 8
+                    },
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 121
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 7
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 5
+                    },
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 116
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 6
+                    }
+                  ],
+                  "startTime": "2026-10-04T08:31:19.503Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f061c0a50e7ad8e54b6e-ae397bf2b144480592f7",
+          "file": "kite-actions.spec.ts",
+          "line": 49,
+          "column": 41
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-04T08:29:30.568Z",
+    "duration": 147101.659,
+    "expected": 4,
+    "skipped": 0,
+    "unexpected": 2,
+    "flaky": 0
+  }
+}

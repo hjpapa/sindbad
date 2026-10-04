@@ -1,0 +1,386 @@
+{
+  "date": "2026-10-04T07:36:28.766790+00:00",
+  "status": "ART_DRAFT",
+  "screenshots": [
+    {
+      "path": "docs/screenshots/m6-flight/final/m6-flight/campaign-S05-route.png",
+      "original": "test-results/complete-journey-new-game--139b0-ntrols-and-no-injected-save/S05-route.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "f594ee128d3805728c5e1f484122ef561e7daaef312a2a23b3dbebfb4a5e9281"
+    },
+    {
+      "path": "docs/screenshots/m6-flight/final/m6-flight/campaign-S10-route.png",
+      "original": "test-results/complete-journey-new-game--139b0-ntrols-and-no-injected-save/S10-route.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "34b94396dd2633b467d0059d032bacf8cb597ba0705f5fd5a43723004b913ce8"
+    },
+    {
+      "path": "docs/screenshots/m6-flight/final/m6-flight/campaign-S15-route.png",
+      "original": "test-results/complete-journey-new-game--139b0-ntrols-and-no-injected-save/S15-route.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "af5b5c1accba51eee6ba89b86a2e5ee8f49409571e31213a319f967476d7832c"
+    },
+    {
+      "path": "docs/screenshots/m6-flight/final/m6-flight/campaign-S19-route.png",
+      "original": "test-results/complete-journey-new-game--139b0-ntrols-and-no-injected-save/S19-route.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "bcb172227836aaa8c5fec872ff8d6a7139aa2f9904dadcaecbcafdbf884735c0"
+    },
+    {
+      "path": "docs/screenshots/m6-flight/final/m6-flight/campaign-S25-route.png",
+      "original": "test-results/complete-journey-new-game--139b0-ntrols-and-no-injected-save/S25-route.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "e1cfa887d6c373e3199128518ddf9007c44ee2d36008a421211c3c339b8137f5"
+    },
+    {
+      "path": "docs/screenshots/m6-flight/final/m6-flight/campaign-S29-route.png",
+      "original": "test-results/complete-journey-new-game--139b0-ntrols-and-no-injected-save/S29-route.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "212f8906edfcca7507dd984b3ada4dc25e237fa900c885bb65961872c9fbccd5"
+    },
+    {
+      "path": "docs/screenshots/m6-flight/final/m6-flight/campaign-S36-route.png",
+      "original": "test-results/complete-journey-new-game--139b0-ntrols-and-no-injected-save/S36-route.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "a587ce4958f6a3268a4abba2490ec9b83fd6c34b0097fc995c2310c196af7721"
+    },
+    {
+      "path": "docs/screenshots/m6-flight/final/m6-flight/mobile-phone-dialogue.png",
+      "original": "docs/screenshots/m6-flight/mobile/mobile-phone-dialogue.png",
+      "size": [
+        2532,
+        1170
+      ],
+      "sha256": "6331bb93c7c748c464a9c9e992804da4eed912e71dbc9e5b8fd77dc03645db99"
+    },
+    {
+      "path": "docs/screenshots/m6-flight/final/m6-flight/mobile-phone-start.png",
+      "original": "docs/screenshots/m6-flight/mobile/mobile-phone-start.png",
+      "size": [
+        2532,
+        1170
+      ],
+      "sha256": "ae3b984cb6057ea3ca8a6c27b5ab7ff471809ebb321fee0ad8143fd48efe3e24"
+    },
+    {
+      "path": "docs/screenshots/m6-flight/final/m6-flight/mobile-phone-swing.png",
+      "original": "docs/screenshots/m6-flight/mobile/mobile-phone-swing.png",
+      "size": [
+        2532,
+        1170
+      ],
+      "sha256": "a8d7ba910e39c59a556a7f3e79f6ed3e0f565c28f68759b401a3466182c66655"
+    },
+    {
+      "path": "docs/screenshots/m6-flight/final/m6-flight/mobile-tablet-dialogue.png",
+      "original": "docs/screenshots/m6-flight/mobile/mobile-tablet-dialogue.png",
+      "size": [
+        2360,
+        1640
+      ],
+      "sha256": "bd91929d8b7dfc7720373d88df7dde912ae4d32132c997d61f584e2f966cc5b6"
+    },
+    {
+      "path": "docs/screenshots/m6-flight/final/m6-flight/mobile-tablet-start.png",
+      "original": "docs/screenshots/m6-flight/mobile/mobile-tablet-start.png",
+      "size": [
+        2360,
+        1640
+      ],
+      "sha256": "0650c09bc4b13f122f35530e0597193f75f21cab0cc038348fed10898c30e174"
+    },
+    {
+      "path": "docs/screenshots/m6-flight/final/m6-flight/mobile-tablet-swing.png",
+      "original": "docs/screenshots/m6-flight/mobile/mobile-tablet-swing.png",
+      "size": [
+        2360,
+        1640
+      ],
+      "sha256": "a14a1ef0770da5b12fff2da165721d1d81987cec91db1c136936a65778433817"
+    },
+    {
+      "path": "docs/screenshots/m6-flight/final/m6-flight/phone-fallback-S10-gust-contact.png",
+      "original": "docs/screenshots/m6-flight/final/m6-flight/phone-fallback-S10-gust-contact.png",
+      "size": [
+        844,
+        390
+      ],
+      "sha256": "45597cc76c7ab2eaa64655abc7b4c66baa77dcaa790085964e0bbb8a3ba85467"
+    },
+    {
+      "path": "docs/screenshots/m6-flight/final/m6-flight/phone-fallback-S10-revisit.png",
+      "original": "docs/screenshots/m6-flight/final/m6-flight/phone-fallback-S10-revisit.png",
+      "size": [
+        844,
+        390
+      ],
+      "sha256": "75ce4aaaf167d6c1e7388150439095b0dd6bfb2c262571d54959fde2d939ab13"
+    },
+    {
+      "path": "docs/screenshots/m6-flight/final/m6-flight/phone-fallback-S10-ring-approach.png",
+      "original": "docs/screenshots/m6-flight/final/m6-flight/phone-fallback-S10-ring-approach.png",
+      "size": [
+        844,
+        390
+      ],
+      "sha256": "2642ae57bc1f8e5a944717fd6b8caac70e0abc6de32dd7e9c436b16af90ad6e7"
+    },
+    {
+      "path": "docs/screenshots/m6-flight/final/m6-flight/phone-fallback-S10-ring-collected.png",
+      "original": "docs/screenshots/m6-flight/final/m6-flight/phone-fallback-S10-ring-collected.png",
+      "size": [
+        844,
+        390
+      ],
+      "sha256": "0d8dcaf30263b5cfe390defeb98ea88edf0bf1dada2750b1bcc874adf35ad864"
+    },
+    {
+      "path": "docs/screenshots/m6-flight/final/m6-flight/phone-fallback-S33-debris.png",
+      "original": "docs/screenshots/m6-flight/final/m6-flight/phone-fallback-S33-debris.png",
+      "size": [
+        844,
+        390
+      ],
+      "sha256": "df49b1d55bf6e1858ce3a66fdcbf7e101919221c90aff32e1d4d641c1afb9d81"
+    },
+    {
+      "path": "docs/screenshots/m6-flight/final/m6-flight/phone-fallback-S33-ring-approach.png",
+      "original": "docs/screenshots/m6-flight/final/m6-flight/phone-fallback-S33-ring-approach.png",
+      "size": [
+        844,
+        390
+      ],
+      "sha256": "d12ab498f5d4c7730f7c1ee1819240be9633e5e2e9408eb7dd5564a8587f12df"
+    },
+    {
+      "path": "docs/screenshots/m6-flight/final/m6-flight/phone-fallback-S33-ring.png",
+      "original": "docs/screenshots/m6-flight/final/m6-flight/phone-fallback-S33-ring.png",
+      "size": [
+        844,
+        390
+      ],
+      "sha256": "bf3c34d009f2287ff4da9e09af16446bf4c198d924e09876f804c3c13f170730"
+    },
+    {
+      "path": "docs/screenshots/m6-flight/final/m6-flight/phone-normal-S10-gust-contact.png",
+      "original": "docs/screenshots/m6-flight/final/m6-flight/phone-normal-S10-gust-contact.png",
+      "size": [
+        844,
+        390
+      ],
+      "sha256": "a4911884f08cef0b86d3313b0176c55886c952931cec4cf091863a75dbd154f9"
+    },
+    {
+      "path": "docs/screenshots/m6-flight/final/m6-flight/phone-normal-S10-revisit.png",
+      "original": "docs/screenshots/m6-flight/final/m6-flight/phone-normal-S10-revisit.png",
+      "size": [
+        844,
+        390
+      ],
+      "sha256": "1c8728b4894f13fd8416615e4f8414a838bc96cd5febbe1fd02c48a9af0a14b0"
+    },
+    {
+      "path": "docs/screenshots/m6-flight/final/m6-flight/phone-normal-S10-ring-approach.png",
+      "original": "docs/screenshots/m6-flight/final/m6-flight/phone-normal-S10-ring-approach.png",
+      "size": [
+        844,
+        390
+      ],
+      "sha256": "876c72a24e6332809a97afb7cef13c6abd02b5da41daec556c5a42ec2cb55f6f"
+    },
+    {
+      "path": "docs/screenshots/m6-flight/final/m6-flight/phone-normal-S10-ring-collected.png",
+      "original": "docs/screenshots/m6-flight/final/m6-flight/phone-normal-S10-ring-collected.png",
+      "size": [
+        844,
+        390
+      ],
+      "sha256": "df5bc81ab359535d24592c088f956d3af6e91a85897847e459e6d3afaf5b1620"
+    },
+    {
+      "path": "docs/screenshots/m6-flight/final/m6-flight/phone-normal-S33-debris.png",
+      "original": "docs/screenshots/m6-flight/final/m6-flight/phone-normal-S33-debris.png",
+      "size": [
+        844,
+        390
+      ],
+      "sha256": "d6f0e3732858029f66efe84d7e5b64b45c1ea24f16beb429cd52302f3630b67b"
+    },
+    {
+      "path": "docs/screenshots/m6-flight/final/m6-flight/phone-normal-S33-ring-approach.png",
+      "original": "docs/screenshots/m6-flight/final/m6-flight/phone-normal-S33-ring-approach.png",
+      "size": [
+        844,
+        390
+      ],
+      "sha256": "6943c32f2b2bafe84e6c2f4e7180536fd63bd0771aa89a8a626e1ba7f6a46dfe"
+    },
+    {
+      "path": "docs/screenshots/m6-flight/final/m6-flight/phone-normal-S33-ring.png",
+      "original": "docs/screenshots/m6-flight/final/m6-flight/phone-normal-S33-ring.png",
+      "size": [
+        844,
+        390
+      ],
+      "sha256": "d88b6e2a24cec87a53953dc6fe9b703fc9da036aaac3c3d2243ccba7eb0a7d3a"
+    },
+    {
+      "path": "docs/screenshots/m6-flight/final/m6-flight/tablet-fallback-S10-gust-contact.png",
+      "original": "docs/screenshots/m6-flight/final/m6-flight/tablet-fallback-S10-gust-contact.png",
+      "size": [
+        1180,
+        820
+      ],
+      "sha256": "fe4f2e0297857a93cab3ba1d9c7693ec78ffb0cea68fd75c78e373107c40018c"
+    },
+    {
+      "path": "docs/screenshots/m6-flight/final/m6-flight/tablet-fallback-S10-revisit.png",
+      "original": "docs/screenshots/m6-flight/final/m6-flight/tablet-fallback-S10-revisit.png",
+      "size": [
+        1180,
+        820
+      ],
+      "sha256": "f8a13f22ea38e99cb2177fcb4a43b5409c8fa13994383f832d0a8f3b8f42980f"
+    },
+    {
+      "path": "docs/screenshots/m6-flight/final/m6-flight/tablet-fallback-S10-ring-approach.png",
+      "original": "docs/screenshots/m6-flight/final/m6-flight/tablet-fallback-S10-ring-approach.png",
+      "size": [
+        1180,
+        820
+      ],
+      "sha256": "607dd2b3c23fb549c4ed86d363fccc21dc241e95e8c0ea40e54eb15e28c72f0e"
+    },
+    {
+      "path": "docs/screenshots/m6-flight/final/m6-flight/tablet-fallback-S10-ring-collected.png",
+      "original": "docs/screenshots/m6-flight/final/m6-flight/tablet-fallback-S10-ring-collected.png",
+      "size": [
+        1180,
+        820
+      ],
+      "sha256": "bd6c621a1f14aa8de5141df486e36f45526f5a2d8ace07b32b638d800eeed0a5"
+    },
+    {
+      "path": "docs/screenshots/m6-flight/final/m6-flight/tablet-fallback-S33-debris.png",
+      "original": "docs/screenshots/m6-flight/final/m6-flight/tablet-fallback-S33-debris.png",
+      "size": [
+        1180,
+        820
+      ],
+      "sha256": "ffc14b74aedabdfd7f1501dfcf0ef3c06470b4a68fe940413c1c5233a93b55cf"
+    },
+    {
+      "path": "docs/screenshots/m6-flight/final/m6-flight/tablet-fallback-S33-ring-approach.png",
+      "original": "docs/screenshots/m6-flight/final/m6-flight/tablet-fallback-S33-ring-approach.png",
+      "size": [
+        1180,
+        820
+      ],
+      "sha256": "e4673f4d654dd3fb85859322ecdb32e677f03a55f6fa6a77e7627870da7d93f9"
+    },
+    {
+      "path": "docs/screenshots/m6-flight/final/m6-flight/tablet-fallback-S33-ring.png",
+      "original": "docs/screenshots/m6-flight/final/m6-flight/tablet-fallback-S33-ring.png",
+      "size": [
+        1180,
+        820
+      ],
+      "sha256": "35b57fe75fb7cc5b85eee269502970dfdbae1003367caf0bf7b66edde03b054a"
+    },
+    {
+      "path": "docs/screenshots/m6-flight/final/m6-flight/tablet-normal-S10-gust-contact.png",
+      "original": "docs/screenshots/m6-flight/final/m6-flight/tablet-normal-S10-gust-contact.png",
+      "size": [
+        1180,
+        820
+      ],
+      "sha256": "38f95aa51828da9547fb07e12479a727f0c1503924d57e68b0f479b9b2f9498c"
+    },
+    {
+      "path": "docs/screenshots/m6-flight/final/m6-flight/tablet-normal-S10-revisit.png",
+      "original": "docs/screenshots/m6-flight/final/m6-flight/tablet-normal-S10-revisit.png",
+      "size": [
+        1180,
+        820
+      ],
+      "sha256": "72edfa074dca4bb2bbe852566cfa30576b533ed9d8dd7617b04a2aa35cdbbc11"
+    },
+    {
+      "path": "docs/screenshots/m6-flight/final/m6-flight/tablet-normal-S10-ring-approach.png",
+      "original": "docs/screenshots/m6-flight/final/m6-flight/tablet-normal-S10-ring-approach.png",
+      "size": [
+        1180,
+        820
+      ],
+      "sha256": "c9917ad67ed42590134ece74d319fc84717019ecd6b6febf6ccacd576abf50bd"
+    },
+    {
+      "path": "docs/screenshots/m6-flight/final/m6-flight/tablet-normal-S10-ring-collected.png",
+      "original": "docs/screenshots/m6-flight/final/m6-flight/tablet-normal-S10-ring-collected.png",
+      "size": [
+        1180,
+        820
+      ],
+      "sha256": "0a00423517a0670add01d378da63d26b625c0e5c0de280f45ca34fe7053ba96e"
+    },
+    {
+      "path": "docs/screenshots/m6-flight/final/m6-flight/tablet-normal-S33-debris.png",
+      "original": "docs/screenshots/m6-flight/final/m6-flight/tablet-normal-S33-debris.png",
+      "size": [
+        1180,
+        820
+      ],
+      "sha256": "35207152519ac908aedb1b1fa360e78bcfb0a0fcdc6a0d60661197112129159f"
+    },
+    {
+      "path": "docs/screenshots/m6-flight/final/m6-flight/tablet-normal-S33-ring-approach.png",
+      "original": "docs/screenshots/m6-flight/final/m6-flight/tablet-normal-S33-ring-approach.png",
+      "size": [
+        1180,
+        820
+      ],
+      "sha256": "f3c2b51b335583205476dd6686ef3d9ee0452abcc54f2bf0b87ca83c942df504"
+    },
+    {
+      "path": "docs/screenshots/m6-flight/final/m6-flight/tablet-normal-S33-ring.png",
+      "original": "docs/screenshots/m6-flight/final/m6-flight/tablet-normal-S33-ring.png",
+      "size": [
+        1180,
+        820
+      ],
+      "sha256": "045a9bf1777c98be540e266611add614f31a096622c832f3cd928607685fa4b1"
+    }
+  ],
+  "copiedScreenshots": 13,
+  "stats": {
+    "startTime": "2026-10-04T06:43:20.447Z",
+    "duration": 3143774.988,
+    "expected": 57,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "frozenFiles": 930,
+  "method": "real final flight captures 28; mobile smoke 6; this fresh campaign 7; PNG decode and byte-identical copies. Save fixtures are distinct from the fresh campaign; physical devices and final art approval unverified."
+}

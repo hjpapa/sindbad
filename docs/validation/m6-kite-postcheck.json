@@ -1,0 +1,390 @@
+{
+  "method": "Full60passed/1Windows report-open failure; after changing only weapon test report paths, isolated2passed. Not an uninterrupted61pass full run.",
+  "fullStats": {
+    "startTime": "2026-10-04T08:42:57.440Z",
+    "duration": 3003530.548,
+    "expected": 60,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  },
+  "recordRepairStats": {
+    "startTime": "2026-10-04T09:35:58.903Z",
+    "duration": 133238.61500000002,
+    "expected": 2,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "fullFrozenFiles": 944,
+  "repairFrozenFiles": 944,
+  "betweenRunsChanged": [
+    "tests/e2e/weapon-art.spec.ts"
+  ],
+  "gameRuntimeAssetsBuildUnchangedAcrossRuns": true,
+  "unitTests": 109,
+  "staticChecks": 8,
+  "primaryScreenshots": 69,
+  "repairScreenshots": [
+    {
+      "path": "docs/screenshots/m6-kite/record-fix/art-a6/phone-fallback-W01-left.png",
+      "size": [
+        844,
+        390
+      ],
+      "sha256": "7b5b25e57cf6c0f8336c6350c182e3ef8ae18b6891f4625b7632b6ba70b12dc9"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/record-fix/art-a6/phone-fallback-W01-right.png",
+      "size": [
+        844,
+        390
+      ],
+      "sha256": "4fe1ce385e649ccde50a900da713b8b7675e456e402b6688cc5154d33f4ef21a"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/record-fix/art-a6/phone-fallback-W02-left.png",
+      "size": [
+        844,
+        390
+      ],
+      "sha256": "a241d51dc4323a2b856ae961ef6550085316900020b0fec64aa972ae82ce3f80"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/record-fix/art-a6/phone-fallback-W02-right.png",
+      "size": [
+        844,
+        390
+      ],
+      "sha256": "6f1880e815b3f74cec9bb76ffe1e60a68f51787497423b11d63b9ca0f10dc4c1"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/record-fix/art-a6/phone-fallback-W03-left.png",
+      "size": [
+        844,
+        390
+      ],
+      "sha256": "33c16b62a452ef582428ed50c353ed131a27302f1aed7eb7a7d55aee37fd4e17"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/record-fix/art-a6/phone-fallback-W03-right.png",
+      "size": [
+        844,
+        390
+      ],
+      "sha256": "8bbc6bc16ea11b179b440dfac826c549f199250bce4b7aa1826ec1a7232ec94f"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/record-fix/art-a6/phone-fallback-W04-left.png",
+      "size": [
+        844,
+        390
+      ],
+      "sha256": "c647857b33e93060bff51d9b54bce070beaade911c4aee5bbf6f99aa6f48c42f"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/record-fix/art-a6/phone-fallback-W04-right.png",
+      "size": [
+        844,
+        390
+      ],
+      "sha256": "a6a650974c2760d957373795ab6e05b998c25257b9d01d3f147ff41b6fe550a9"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/record-fix/art-a6/phone-fallback-W05-left.png",
+      "size": [
+        844,
+        390
+      ],
+      "sha256": "dcd4ff913d1dc15ef8287bb00cff6674600ee2196fe3a455a86bee0c49befaed"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/record-fix/art-a6/phone-fallback-W05-right.png",
+      "size": [
+        844,
+        390
+      ],
+      "sha256": "29e4df762bd9ffdcfebca995f7b18924962d17a5e02c6781ca10e0d9b2856697"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/record-fix/art-a6/phone-fallback-W06-left.png",
+      "size": [
+        844,
+        390
+      ],
+      "sha256": "5e23e26a410bc39587cd6263b020797839c3353163f013c3c96061e7880d3fe3"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/record-fix/art-a6/phone-fallback-W06-right.png",
+      "size": [
+        844,
+        390
+      ],
+      "sha256": "d7c06a024eaccae38368a39b8cef6c52ca0041a62746e9d490d9a0900cd03e6d"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/record-fix/art-a6/phone-fallback-W07-left.png",
+      "size": [
+        844,
+        390
+      ],
+      "sha256": "868fc2ef8e6c6eeca9dd2241a4dce45f1855e20aa0cc371da4c6a046f659578f"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/record-fix/art-a6/phone-fallback-W07-right.png",
+      "size": [
+        844,
+        390
+      ],
+      "sha256": "1cb86dcf53dc9682bd99f62cf6bec5c72b64ac50adc29e955318eec3934dad0b"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/record-fix/art-a6/phone-W01-left.png",
+      "size": [
+        844,
+        390
+      ],
+      "sha256": "ac8dab5dcce7252e32bd0dd8bc525b033b5b8d1269d8e7357dadf316f40599d8"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/record-fix/art-a6/phone-W01-right.png",
+      "size": [
+        844,
+        390
+      ],
+      "sha256": "46c93c9833111d2d50e0131a26d71ea37726053a3ade3c6be3037b4bbed96e89"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/record-fix/art-a6/phone-W02-left.png",
+      "size": [
+        844,
+        390
+      ],
+      "sha256": "74323174c576bf3197cb98bc2e0e6fb7ad5bd64e0391504662e91fa7b2cb1619"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/record-fix/art-a6/phone-W02-right.png",
+      "size": [
+        844,
+        390
+      ],
+      "sha256": "0766bde03ffef52565866e3568c6b5880411e107eea8a07447ffb2b80151ebcc"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/record-fix/art-a6/phone-W03-left.png",
+      "size": [
+        844,
+        390
+      ],
+      "sha256": "0bcf50f6f8f1b5f12645bb72963155fb40132a66ada3eb97209ecfb2df980623"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/record-fix/art-a6/phone-W03-right.png",
+      "size": [
+        844,
+        390
+      ],
+      "sha256": "6506fc7adf9f96fb4ba77fd66a612d1bf933637a857e122f22347333dfed89bc"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/record-fix/art-a6/phone-W04-left.png",
+      "size": [
+        844,
+        390
+      ],
+      "sha256": "c698325501d94ebec899651e09c9813b76ba19621bc1715189fe1526bca9da16"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/record-fix/art-a6/phone-W04-right.png",
+      "size": [
+        844,
+        390
+      ],
+      "sha256": "20dae351b0e8218e6a614ff29aa24f74775ed2ff4e67649c2cc834087e79ed8d"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/record-fix/art-a6/phone-W05-left.png",
+      "size": [
+        844,
+        390
+      ],
+      "sha256": "e17dd17b9e786e6d275d07e730f80979ca8b98ea10181f9928c6b507f2b71f1e"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/record-fix/art-a6/phone-W05-right.png",
+      "size": [
+        844,
+        390
+      ],
+      "sha256": "b075c54565bdc9862ac18ee0d4f99e45e7540c0323d1c65764df735f890207d4"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/record-fix/art-a6/phone-W06-left.png",
+      "size": [
+        844,
+        390
+      ],
+      "sha256": "4753fa38f5211215f655af37e9833f6c08b00af18e34deb675c3d1546d4be739"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/record-fix/art-a6/phone-W06-right.png",
+      "size": [
+        844,
+        390
+      ],
+      "sha256": "3021eb55a897894f866108e9f725df8ab1d79886282f0312bb6c17b290dc51c0"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/record-fix/art-a6/phone-W07-left.png",
+      "size": [
+        844,
+        390
+      ],
+      "sha256": "3ad3dba4f2375485a14e24235c546df046a5cb6e4c327f63724c01db9430aabc"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/record-fix/art-a6/phone-W07-right.png",
+      "size": [
+        844,
+        390
+      ],
+      "sha256": "60cac638cdca43bdfc619f9b9a12dbad60405e3d3e0d4a7d291f135b5de4b9b9"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/record-fix/art-a6/tablet-W01-left.png",
+      "size": [
+        1180,
+        820
+      ],
+      "sha256": "f7151f089b09cfc312bbf72399eb973e915c0c56c22483dd25cf6a6bf911334f"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/record-fix/art-a6/tablet-W01-right.png",
+      "size": [
+        1180,
+        820
+      ],
+      "sha256": "d4fb6e5af03962b3e31629acb7f0133d93a8e97696039e5be55f884fce177e39"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/record-fix/art-a6/tablet-W02-left.png",
+      "size": [
+        1180,
+        820
+      ],
+      "sha256": "b58e64f21fa4f8bbc7b80bffda81f2d373dbd02893c601954244ba0a155d5356"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/record-fix/art-a6/tablet-W02-right.png",
+      "size": [
+        1180,
+        820
+      ],
+      "sha256": "29d40c05d0cf778854eb87c7568595831ec37402f43c4959bf204e5f1acef657"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/record-fix/art-a6/tablet-W03-left.png",
+      "size": [
+        1180,
+        820
+      ],
+      "sha256": "a65853341f0baf0c7c2a6e85c8018b93d7e01903f273821def253a192ef39f88"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/record-fix/art-a6/tablet-W03-right.png",
+      "size": [
+        1180,
+        820
+      ],
+      "sha256": "cc558ff588a589526ba853e85845d02c231d8bb0581668b6d8526ddefcd4100b"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/record-fix/art-a6/tablet-W04-left.png",
+      "size": [
+        1180,
+        820
+      ],
+      "sha256": "2a392c902c41b304ecdb064c6faf9fc6bc37d47af9f7f108a29f48bab35d5ddb"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/record-fix/art-a6/tablet-W04-right.png",
+      "size": [
+        1180,
+        820
+      ],
+      "sha256": "2917c1547d0b86ea572ef94433b242906777f41cace5e7c4ec21fbe8eecabccf"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/record-fix/art-a6/tablet-W05-left.png",
+      "size": [
+        1180,
+        820
+      ],
+      "sha256": "a7c3f8533774a676753eaf012715a23440154246d188af9a63ab35c0b342f59b"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/record-fix/art-a6/tablet-W05-right.png",
+      "size": [
+        1180,
+        820
+      ],
+      "sha256": "f78f26d2695f0a7eef849be36163607cea5649453c9e337bdd414f290d443ba8"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/record-fix/art-a6/tablet-W06-left.png",
+      "size": [
+        1180,
+        820
+      ],
+      "sha256": "50b9b83144385faf636bfdb00578ab794b2d2d6471f7f44b9780dbc0b0dcccaf"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/record-fix/art-a6/tablet-W06-right.png",
+      "size": [
+        1180,
+        820
+      ],
+      "sha256": "9140aa04e3c1dbd978fb9dc8fdbb30ca17e8ccb3ea9721f6a49b77e55a7c7436"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/record-fix/art-a6/tablet-W07-left.png",
+      "size": [
+        1180,
+        820
+      ],
+      "sha256": "d3b9980af41bd04bc055cc4540e7646330386710ad2c60583096a6e4432f3869"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/record-fix/art-a6/tablet-W07-right.png",
+      "size": [
+        1180,
+        820
+      ],
+      "sha256": "2769a775391e18a7223cdd2bebacc282cb5c01aff86be3899a81eedfb978aa6a"
+    }
+  ],
+  "artStatus": "ART_DRAFT",
+  "commit": false,
+  "push": false,
+  "deploy": false,
+  "unverified": [
+    "physical phone/tablet",
+    "iOS Safari",
+    "child usability",
+    "long-run FPS/heat",
+    "physical speaker mix",
+    "final user art approval"
+  ],
+  "fullRunExitCode": 1,
+  "recordRepairExitCode": 0,
+  "repairScreenshotCount": 42,
+  "gitDiffCheckExitCode": 0,
+  "stoppedServerChecks": {
+    "5174": "ECONNREFUSED",
+    "5175": "ECONNREFUSED"
+  },
+  "nativeToolPaths": [
+    "C:/Users/tbose/.codex/generated_images/01a10013-499c-7b11-9c12-3ae8826e542a/exec-028feba0-2c38-4bd4-81f6-a92b9eeaed7e.png",
+    "C:/Users/tbose/.codex/generated_images/01a10013-499c-7b11-9c12-3ae8826e542a/exec-b7184a37-c641-4be9-8f10-bb3bc05bf4e0.png"
+  ]
+}

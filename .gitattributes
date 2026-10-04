@@ -1,2 +1,2 @@
-# Preserve the measured SVG bytes when checking out on Windows.
-/public/assets/weapons/*.svg text eol=lf
+# Preserve actual command output verbatim; whitespace in raw logs is evidence.
+docs/validation/*.txt -text -whitespace

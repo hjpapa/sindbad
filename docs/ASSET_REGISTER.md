@@ -1,5 +1,108 @@
 # 자산 등록 · ART_DRAFT
 
+## M6 공중 연 행동 시트 · 2026-10-04 · ART_DRAFT
+
+실제 결과: 정적8명령·단위109개·연4검사 통과, 새 게임36스테이지833초/무기·보물7종/엔딩/오류[]. 전체 E2E60통과·1기록 쓰기 실패 → 결과 저장 경로 수정 후 무기2검사 통과(별도 실행). 기존미디어556파일과 보존281파일 확인, 두 실행의944파일 각각 동일이며 사이 차이는 무기 테스트의 결과 경로뿐이다. 최종69화면+보완42화면과 실제 로그·미검증은 `PROJECT_STATUS.md`, `docs/validation/m6-kite-postcheck.json`에 기록했다. 전체61개의 단일 실행 통과·실기기 승인으로 취급하지 않는다.
+
+| 키 / 경로 | 원화 / 런타임 | 사용 / 출처 / 조건 |
+|---|---|---|
+| `kite-actions` · `art-source/webtoon/kite-actions.png`, `.webp` · `public/assets/webtoon/kite-actions.webp` | 2048×512/4셀512px PNG + 동일 RGBA 무손실 WebP(249,586B) →1024×256/4셀256px WebP(33,784B) | S10 공중 해적 연6/S33 그림자 연5. 프로젝트 `hero-webtoon.webp` 화풍·보존 자체 `draft/kite.svg` 디자인·내장 imagegen. 프로젝트용 원본, 특정 작품/작가·외부 이미지 참조 없음. 최종 아트/실기기 승인 전 ART_DRAFT. |
+| `art-source/webtoon/kite-actions.json` → `src/content/kite-actions.generated.json` | 순서 대기/예고/공격/빛으로 정화. 셀 가시 경계/baseline/중심 `(286,291),(262,319),(321,253),(255,236)` | 실측 중심을 좌우 원점에 사용. 비행 타깃/기존96×128몸 기준·ID·AI·바람탄/날개 공격·보상은 유지. |
+| `art-source/webtoon/generated/kite-m6/kite-actions-02.png`, `.json` | 선택 네이티브1254×1254/2×2/627px 셀. 원본 PNG + 전체 실제 프롬프트 | 도구 원본과 바이트 동일 보존. 전체 셀 균일 축소·4×1 재배열만 수행. 가시 알파>16의 외곽/중앙 경계 비어 있음. |
+| `art-source/webtoon/generated/kite-m6/kite-actions-01-rejected.png`, `.json` | 반려 네이티브1254×1254 + 실제 프롬프트/이유 | 공격 바람이 세로 중앙 셀 경계를 넘어 사용하지 않음. 원본 삭제 없음. |
+| `public/assets/draft/kite.svg` | 기존 자체SVG96×128, 바이트 동일 보존 | 새 시트 누락 시 복구. SVG 및 기존10행 `enemy-actions` 시트/측정은 변경 없음. |
+
+`scripts/pack-kite-actions.py`는 덧칠/실루엣 크롭 없이 전체 셀을 재배열·무손실 인코딩하며, `optimize-webtoon.py`의 SIZES와 manifest runtimeSize가 런타임을 만든다. `scripts/audit-kite-actions.py`가 네이티브SHA256·동일 RGBA·소스/런타임 경계·메타데이터/중심을 검사한다. 새 시트는 비행2맵에서만 로드하고 S01에서 해제한다. JSON은 원본에서 게임 빌드로 바이트 동일 복사된다. 이번 파일을 추가한 전체 웹툰은 **원화85 + 런타임85 =170파일**이며 최종 아트 상태는 모두 ART_DRAFT다. 전체 실제 검사 결과/스크린샷은 PROJECT_STATUS 및 `docs/validation/m6-kite-*.json`에 기록한다.
+
+## M6 비행 소품 3종 · 2026-10-04 · ART_DRAFT
+
+출처: OpenAI **내장 imagegen**, 프로젝트 자체 `hero-webtoon.webp` 화풍 참조만 사용. 외부 작품·작가 참조 없음. 본 프로젝트 사용·수정용 생성 자산. 최종 사용자 아트 승인 전 **ART_DRAFT**다. 기존 SVG와 생성 네이티브 PNG를 삭제하지 않았다.
+
+| 새 키 | 보존 SVG | 적용 | 런타임 바이트 |
+|---|---|---|---:|
+| prop-flight-ring | public/assets/draft/flightRing.svg | S10 고리3개·S33 고리5개 | 8,458 |
+| prop-gust-cloud | public/assets/draft/stormCloud.svg | S10 돌풍3개 | 4,912 |
+| prop-falling-debris | public/assets/draft/debris.svg | S33 낙하 파편5개 | 4,274 |
+
+각 키의 실제 파일은 `art-source/webtoon/generated/flight-m6/{key}-01.png`(1086×1448 네이티브)·동명 JSON(전체 실제 프롬프트/원래 경로/해시), `art-source/webtoon/{key}.png`와 `{key}.webp`(384×512, 동일 RGBA 무손실), `public/assets/webtoon/{key}.webp`(96×128 런타임)이다. 합계 **17,644바이트**. 원본은 원래 `.codex/generated_images/01a10013-499c-7b11-9c12-3ae8826e542a/`에도 보존하며 실제 파일명은 JSON에 있다.
+
+고리 표시129.6×172.8·통과 타원 반경65/80, 구름 기본91.2×121.6·기존반경62/70, 파편 기본67.2×89.6·기존반경48을 유지한다. 구름·파편은 기존0.96~1.04배 맥동·상하 이동/회전을 그대로 쓴다. 고리 플래그가 기존 `lantern` 이야기 텍스처보다 우선하도록 표시 선택을 바로잡았다. 오브젝트/보상/저장 ID와 물리·피해·조작·손 좌표는 변경하지 않았다. 필요한 맵만 로드하고 누락 시 보존 SVG로 복구한다.
+
+기능/브라우저 검증: 단위107개·전체E2E57개 통과(실패/flaky/skipped0), 새 게임36구간843초 완주·오류0. 최종 비행 화면41장은 `docs/screenshots/m6-flight/final/m6-flight/`, 경로/치수/SHA256은 `docs/validation/m6-flight-final-screenshots.json`, 전체 실제 보고서는 `m6-flight-e2e-final.json`이다. 정상/누락×폰/태블릿4개에서 실제 크기·움직임·첫 고리 금화 중복 방지·저장·캐시/재방문·SVG 복구를 확인했다. 기능 통과를 최종 아트·실기기 승인으로 취급하지 않는다.
+
+## M6 상호작용 소품 25종 · 2026-10-04 · ART_DRAFT
+
+출처: OpenAI **내장 imagegen**, 프로젝트 자체 `hero-webtoon.webp` 참조. 외부 작품·작가 참조 없음. 본 프로젝트 사용·수정용 생성 자산이며 최종 아트 승인 전 **ART_DRAFT**다. 원래 생성 PNG, 저장소 네이티브 복사본, 기존 SVG를 모두 보존했다.
+
+각 키의 파일: `art-source/webtoon/generated/props-m6/{key}-01.png`(네이티브)·동명 JSON(전체 프롬프트/경로/해시), `art-source/webtoon/{key}.png`와 `{key}.webp`(384×512, 동일 RGBA·무손실), `public/assets/webtoon/{key}.webp`(96×128 런타임). 25개 런타임 합계 **126,782바이트**다. 원본 24장은 1086×1448, `prop-golden`만 1087×1447이며 전체 캔버스 비례 축소와 투명 여백으로 규격화했다.
+
+일반 소품 표시 사각형은 65.28×87.04다. 기존 NPC 역할 소품은 96×128, 체크포인트는 40.32×53.76 등 기존 kind별 크기를 유지한다. 맵별 실제 크기는 `m6-interact-map-{normal,fallback}.json` 검사가 기록한다. 보상·오브젝트·저장 ID와 손 JSON·무기·물리·조작 이름을 변경하지 않았다.
+
+| 새 키 | 보존 SVG 텍스처 | 적용 대상 | 런타임 바이트 |
+|---|---|---|---:|
+| prop-shell | shell | 해당 텍스처의 실제 맵 소품 | 4,178 |
+| prop-bell | bell | S01.exit | 4,720 |
+| prop-golden | golden | 해당 텍스처의 실제 맵 소품 | 4,352 |
+| prop-key | key | 해당 텍스처의 실제 맵 소품 | 5,058 |
+| prop-lifevest | gear | S04.gear.1 | 5,362 |
+| prop-rescue-rope | gear | S04.gear.2 | 5,718 |
+| prop-lifering | gear | S04.gear.3 | 4,938 |
+| prop-lightning-rod | rod | S03.rod.1, S03.rod.2 | 4,998 |
+| prop-damaged-mast | rod | S03.crisis | 6,400 |
+| prop-coral-gate | gate | 해당 텍스처의 실제 맵 소품 | 4,658 |
+| prop-vine | vine | 해당 텍스처의 실제 맵 소품 | 5,654 |
+| prop-torch | torch | 해당 텍스처의 실제 맵 소품 | 3,486 |
+| prop-furnace | furnace | 해당 텍스처의 실제 맵 소품 | 5,106 |
+| prop-wave-rope | rope | 해당 텍스처의 실제 맵 소품 | 4,114 |
+| prop-mirror | mirror | 해당 텍스처의 실제 맵 소품 | 5,254 |
+| prop-journal | journal | 해당 텍스처의 실제 맵 소품 | 3,838 |
+| prop-star-map | starMap | 해당 텍스처의 실제 맵 소품 | 5,720 |
+| prop-lantern | lantern | 해당 텍스처의 실제 맵 소품 | 4,664 |
+| prop-star-device | starDevice | 해당 텍스처의 실제 맵 소품 | 5,944 |
+| prop-cargo | cargo | 해당 텍스처의 실제 맵 소품 | 4,222 |
+| prop-gift | gift | 해당 텍스처의 실제 맵 소품 | 5,280 |
+| prop-treasure-altar | treasureAltar | 해당 텍스처의 실제 맵 소품 | 5,360 |
+| prop-moon-rock | moonRock | 해당 텍스처의 실제 맵 소품 | 3,982 |
+| prop-lotus-shrine | lotusShrine | 해당 텍스처의 실제 맵 소품 | 5,696 |
+| prop-ending | ending | 해당 텍스처의 실제 맵 소품 | 8,080 |
+
+실제 원본 해시·선택·기존 SVG 해시: `art-source/webtoon/world-props.sources.json`. 측정: `world-props.measurements.json`. 연결: `src/content/worldProps.ts`, `assets.manifest.ts`, `src/game/stage.ts`. 생성 파이프라인: `pack-world-props.py` → `optimize-webtoon.py`; 재현 가능한 감사: `audit-world-props.py`. 검사 결과·화면·미검증 사유는 `PROJECT_STATUS.md`에 별도 기록한다.
+
+## M6 보물 상자·회복 하트 · 2026-10-04 · ART_DRAFT
+
+출처: OpenAI **내장 imagegen**, 프로젝트 자체 `hero-webtoon.webp`를 화풍 참조로 사용. 외부 작품·작가 참조 없음. 본 프로젝트에서 사용·수정하는 생성 자산이며 사용자 최종 아트 승인·실기기 검수 전 **ART_DRAFT**다. 원본과 기존 SVG는 삭제하지 않았다.
+
+| 키·용도 | 원화 PNG/무손실 WebP | 실제 런타임 |
+|---|---|---|
+| `prop-chest` · 기본 보물 상자 | `art-source/webtoon/prop-chest.{png,webp}` · 384×512 | `public/assets/webtoon/prop-chest.webp` · 96×128 · 3,872바이트 |
+| `prop-heart` · 일반/큰 회복 하트 | `art-source/webtoon/prop-heart.{png,webp}` · 384×512 | `public/assets/webtoon/prop-heart.webp` · 96×128 · 2,882바이트 |
+
+생성 PNG 2장은 **1086×1448 RGBA**이며 `art-source/webtoon/generated/props/prop-{chest,heart}-01.png`에 바이트 동일 보존했다. `world-props.sources.json`에 프롬프트 전문·실제 생성 경로·해시·참조·기존 SVG 해시, `world-props.measurements.json`에 원화 경계·표시 크기를 기록했다. `scripts/pack-world-props.py` → `optimize-webtoon.py` → `audit-world-props.py`로 재현·검사한다. 원화 PNG/무손실 WebP는 동일 RGBA다.
+
+`worldProps.ts`·`stage.ts`는 현재 맵의 기본 상자와 하트만 필요에 따라 로드한다. `cargo` 등 별도 이야기 텍스처는 유지하고 누락 시 `public/assets/draft/chest.svg`, `heart.svg`를 사용한다. 상자 표시 65.28×87.04, 일반/큰 하트 34.56×46.08 / 48×64를 유지했다. 회복량·획득 거리·보상 ID·저장 형식은 변경하지 않았다. 첫 누락 검사의 사람 모양 대체 문제를 수정했으며 실제 검사·실패 이력은 `PROJECT_STATUS.md`, `docs/validation/m6-props-*.json`에 기록한다. 최종 전체 E2E **49개/exit0**, 단위 **104개**, 신규 36스테이지 완주 **815초**가 통과했다. 최종 PNG 24장은 `docs/screenshots/m6-props/final/m6-props/`, 디코딩·실제 경로·해시는 `m6-props-final-screenshots.json`에 있다. 전체 M6/최종 아트 승인과 구별하며 ART_DRAFT를 유지한다.
+
+## A8 터치 UI 아이콘 · 2026-10-04 · ART_DRAFT
+
+출처: OpenAI **내장 imagegen**, 프로젝트 자체 `hero-webtoon.webp`의 선·셀 음영만 참조. 외부 작품·작가 참조 없음. 본 프로젝트에서 사용·수정하는 생성 자산이며 최종 사용자 아트 승인·실기기 검수 전 ART_DRAFT다.
+
+| 원화 PNG/무손실 WebP (`art-source/webtoon/`) | 실제 런타임 PNG (`public/assets/webtoon/`) | 용도 |
+|---|---|---|
+| `ui-jump.{png,webp}` | `ui-jump.png` | 점프/위로 · 부츠와 위쪽 화살표 |
+| `ui-talk.{png,webp}` | `ui-talk.png` | 대화 · 말풍선 |
+| `ui-inspect.{png,webp}` | `ui-inspect.png` | 살펴보기 · 펼친 손 |
+| `ui-depart.{png,webp}` | `ui-depart.png` | 출발 · 돛배 |
+| `ui-wing.{png,webp}` | `ui-wing.png` | 비행 중 날개 공격 |
+| `ui-flame.{png,webp}` | `ui-flame.png` | 영원의 불씨 능력 |
+| `ui-bridge.{png,webp}` | `ui-bridge.png` | 도깨비의 방울 능력 |
+| `ui-shield.{png,webp}` | `ui-shield.png` | 균형의 연꽃 능력 |
+| `ui-dawn.{png,webp}` | `ui-dawn.png` | 새벽의 나침반 능력 |
+
+원화는 모두 **512×512**, 실제 런타임은 **128×128 투명 PNG**이며 합계 **182,840바이트**다. 생성 원본은 모두1254×1254, `art-source/webtoon/generated/touch/{key}-01.png` 9개와 `ui-jump-02.png` 1개를 바이트 동일 보존했다. 첫 점프 후보는 아래쪽 화살표가 함께 생겨 방향이 모호했고 두 번째 단순한 위쪽 화살표를 선택했다. 미선택 원본을 삭제하지 않았다.
+
+실제 프롬프트·도구 경로·참조·선택·해시는 `touch-icons.sources.json`, 균일한 전체 캔버스 변환·원화 경계는 `touch-icons.measurements.json`이다. 재현 경로는 `pack-touch-icons.py` → `optimize-webtoon.py` → `audit-webtoon.py`/`audit-touch-icons.py`다. 원화 PNG/WebP와 런타임 PNG **27개**의 실제 디코딩·동일 RGBA·투명 경계, 생성 PNG 10개 해시 검사를 통과했다. 등록 경로·runtimeSize는 매니페스트와 일치한다. 실제 터치 검증과 최종 아트 승인을 구별하고 결과·미검증은 `PROJECT_STATUS.md`에 기록한다.
+
+실제 최종 검증: 단위103개·전체 E2E46개 통과, 새 게임36구간·무기/보물 각7종·엔딩·재개·재방문 확인. 738개 실제 소스/런타임/빌드/검사/원본 파일이 전체 실행 전후 동일했다. 생성10개와 이전 증거476개, 추가 검증 소스8개의 보존 해시를 재확인했다. 최종42장 모음은 `docs/screenshots/art-a8/final/art-a8/`, 원시 보고서는 `docs/validation/a8-e2e-final.json`, 실제 출처 경로/해시는 `a8-final-screenshots.json`이다. 실패/중단 이력은 `a8-development.json`에 기록했고 원본을 삭제하지 않았다. 실기기·어린이 이해도·최종 사용자 아트 승인은 미검증이므로 ART_DRAFT 유지.
+
 ## A6 무기7종 · 2026-10-03 · ART_DRAFT
 
 출처: OpenAI **내장 imagegen**, 프로젝트 자체 hero-webtoon의 선/음영과 기존 자체 SVG7종의 형태/색만 참조. 특정 작품·작가·외부 이미지 없음. 본 프로젝트에서 사용·수정 가능, 최종 사용자 아트 승인 전 **ART_DRAFT**다.
@@ -187,3 +290,23 @@ public/assets/draft/genie.svg, mirror.svg, bat.svg, starMap.svg, journal.svg를 
 ## 2026-09-23 · 핵심 아트 품질 개선
 
 `scripts/make-polished-art.mjs`가 `player`, `playerRun`, `bandit`, `beast`, `boss`, `quest`, `gift`, `bridge`, `ending` 9개 SVG를 재생성한다. 그라데이션, 굵은 외곽선, 얼굴·의상 세부, 바닥 그림자를 추가한 프로젝트 자체 벡터이며 외부 자산은 없다. Phaser 배경에는 원경/중경 시차, 안개층과 발판의 측면·상단·그림자를 추가했다. 기능 자산 품질은 높였지만 표정·공격·피격의 다중 프레임 최종 승인은 남아 있어 전체 상태는 `ART_DRAFT`다. 배경음은 외부 파일이 아닌 Web Audio 오실레이터 3개의 낮은 음량 합성 패드이며 설정에서 끌 수 있다.
+
+## A7 투사체·효과 · 2026-10-04 · ART_DRAFT
+
+출처: OpenAI 내장 imagegen, 프로젝트 자체 hero-webtoon 화풍 참조. 본 프로젝트에서 사용·수정하는 생성 원본이며 외부 작품/작가 참조와 핫링크가 없다. 최종 아트/애니메이션 승인은 미완료다.
+
+| 원본 PNG/무손실 WebP (`art-source/webtoon/`) | 런타임 WebP (`public/assets/webtoon/`) | 크기/프레임/용도 |
+|---|---|---|
+| `projectile-siren-wave.{png,webp}` | `projectile-siren-wave.webp` | 원본1024×1024·4프레임 / 런타임128×128·셀64; 오른쪽으로 열린 청록 음파 곡선과 진주 중심. 네 단계 잔물결 반복. |
+| `projectile-siren-note.{png,webp}` | `projectile-siren-note.webp` | 원본1024×1024·4프레임 / 런타임128×128·셀64; 보라색 8분음표 모양 소품과 금빛 반짝임. 네 단계 빛 띠 반복; 글자 레이블 없음. |
+| `projectile-kite-wind.{png,webp}` | `projectile-kite-wind.webp` | 원본1024×1024·4프레임 / 런타임128×128·셀64; 오른쪽으로 날아가는 민트 소용돌이·왼쪽 짧은 바람 꼬리. 네 단계 회전 반복. |
+| `projectile-kuura-orb.{png,webp}` | `projectile-kuura-orb.webp` | 원본1024×1024·4프레임 / 런타임128×128·셀64; 보라 수정 마법구·라벤더 궤도 띠. 네 단계 맥동 반복, 공포/종교 표식 없음. |
+| `effect-hit-spark.{png,webp}` | `effect-hit-spark.webp` | 원본1536×1024·6프레임 / 런타임384×256·셀128; 작은 별빛→확장→금색/아이보리 타격 불꽃→흩어짐→작은 반짝임→소멸의6단계. 피/상처 없음. |
+| `effect-purify-light.{png,webp}` | `effect-purify-light.webp` | 원본1536×1024·6프레임 / 런타임384×256·셀128; 진주 빛→민트 리본→열린 정화 고리→별빛 분산→상승/소멸의6단계. 동물과 마법 적의 평화로운 전환. |
+| `effect-surrender-flag.{png,webp}` | `effect-surrender-flag.webp` | 원본1536×1024·6프레임 / 런타임384×256·셀128; 접힌 흰 깃발→펼침→금빛 반짝임→잔잔한 천→희미해짐의6단계. 문양 없는 깃발과 짧은 나무 기둥, 사람/무기 없음. |
+
+생성 원본7개: `art-source/webtoon/generated/effects/{projectile-siren-wave,projectile-siren-note,projectile-kite-wind,projectile-kuura-orb,effect-hit-spark,effect-purify-light,effect-surrender-flag}-01.png`. 모두 도구 반환 PNG의 바이트/SHA256과 동일하다. 실제 프롬프트/도구 경로/참조/선택은 `effects.sources.json`, 네/여섯 셀의 원본 경계·내부480px 경계·16px 여백 변환은 `effects.measurements.json`에 있다. 생성 크기는 투사체1254×1254, 효과1536×1024이고 원화 WebP는512px 셀의 손실 없는 정규화본이다.
+
+재현 경로: `pack-effects.py` → `optimize-webtoon.py` → `audit-webtoon.py`/`audit-effects.py`. 원본/런타임14개 실제 디코딩·34셀 가시 경계와 완전한 RGBA 인코딩을 검사한다. 원본을 런타임으로 직접 배포하지 않는다. 등록 키·frame·runtimeSize는 매니페스트와 일치하며 모든7개는 `draft`다. 런타임 합계93,582바이트. 최종 사용자 승인·실기기 검수는 별도 미검증이다.
+
+실제 연결·검증 완료: 단위 101개·전체 E2E 44개 통과, 정상 키 입력 새 게임 36스테이지 완주·보상 저장 재개 확인. `docs/validation/effects.json`, `a7-checks.json`, `a7-e2e-full.json`과 최종 캡처 36장의 `a7-final-screenshots.json`에 근거를 보존했다. 생성 원본과 기존 자산을 삭제하지 않았고 실행 전후 실제 684파일 해시가 동일하다. 기능 검증과 최종 아트 승인을 구별해 ART_DRAFT를 유지한다. 커밋·푸시·배포 없음.

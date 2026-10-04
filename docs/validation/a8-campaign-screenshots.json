@@ -1,0 +1,51 @@
+[
+  {
+    "kind": "fresh-campaign",
+    "source": "test-results/complete-journey-new-game--139b0-ntrols-and-no-injected-save/S05-route.png",
+    "path": "docs/screenshots/art-a8/final/art-a8/campaign-S05-route.png",
+    "sha256": "734baca8ea2e10a4ece6bc85a1a2bcc5719aac45b959e8bd1b842d97f4fc25f8",
+    "bytes": 1097361
+  },
+  {
+    "kind": "fresh-campaign",
+    "source": "test-results/complete-journey-new-game--139b0-ntrols-and-no-injected-save/S10-route.png",
+    "path": "docs/screenshots/art-a8/final/art-a8/campaign-S10-route.png",
+    "sha256": "ae22a201f222c4aa6eea312062f71d50b8d7941321c52d5ff48f0d134732e160",
+    "bytes": 1050666
+  },
+  {
+    "kind": "fresh-campaign",
+    "source": "test-results/complete-journey-new-game--139b0-ntrols-and-no-injected-save/S15-route.png",
+    "path": "docs/screenshots/art-a8/final/art-a8/campaign-S15-route.png",
+    "sha256": "e517f4d4261934df4478a165ab53da8953b9fc4aaf48e30d9c3a8a6a59b0dbf9",
+    "bytes": 1243280
+  },
+  {
+    "kind": "fresh-campaign",
+    "source": "test-results/complete-journey-new-game--139b0-ntrols-and-no-injected-save/S19-route.png",
+    "path": "docs/screenshots/art-a8/final/art-a8/campaign-S19-route.png",
+    "sha256": "9722f2f0fd4e572feba884fbe17faae64e4a191ddd44d5e2541297346e45ec0e",
+    "bytes": 847217
+  },
+  {
+    "kind": "fresh-campaign",
+    "source": "test-results/complete-journey-new-game--139b0-ntrols-and-no-injected-save/S25-route.png",
+    "path": "docs/screenshots/art-a8/final/art-a8/campaign-S25-route.png",
+    "sha256": "90dc5b0165eeb2a93a6c062ab605aea0cde71f7d5f224b3e11c7fae4e448a069",
+    "bytes": 1064091
+  },
+  {
+    "kind": "fresh-campaign",
+    "source": "test-results/complete-journey-new-game--139b0-ntrols-and-no-injected-save/S29-route.png",
+    "path": "docs/screenshots/art-a8/final/art-a8/campaign-S29-route.png",
+    "sha256": "3eb2a4aab915ed27180a6054acf6cd5ed8812e4e427f3f443d09b65d6e298455",
+    "bytes": 1182553
+  },
+  {
+    "kind": "fresh-campaign",
+    "source": "test-results/complete-journey-new-game--139b0-ntrols-and-no-injected-save/S36-route.png",
+    "path": "docs/screenshots/art-a8/final/art-a8/campaign-S36-route.png",
+    "sha256": "7ee8c796bd8b1e1a6cfdf9afac3930cbbd9f440b6828c28d3fefef717fecabf1",
+    "bytes": 998537
+  }
+]

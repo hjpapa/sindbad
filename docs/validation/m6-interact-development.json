@@ -1,0 +1,50 @@
+{
+  "date": "2026-10-04",
+  "events": [
+    {
+      "check": "npm run test (first development run)",
+      "result": "failed",
+      "passed": 105,
+      "failed": 1,
+      "reason": "New unit test incorrectly assumed lantern was in S13; actual map has cargo, journal and gift",
+      "correction": "Expect actual S13 textures; game content unchanged"
+    },
+    {
+      "operation": "source file patch",
+      "result": "rejected before mutation",
+      "reason": "apply_patch does not allow Delete and Add targeting the same path in one patch",
+      "correction": "Used Update File"
+    },
+    {
+      "operation": "source read",
+      "result": "path not found",
+      "reason": "worldProps.ts is under src/content rather than src/game",
+      "correction": "Located with rg --files"
+    },
+    {
+      "check": "first interaction-props E2E",
+      "passed": 2,
+      "failed": 1,
+      "reason": "Map texture test assumed all props use 0.68 scale; actual NPC story prop scale is 1.0",
+      "correction": "Check existing kind-dependent display size and add all-file fallback coverage",
+      "report": "docs/validation/m6-interact-target.json",
+      "screenshot": "docs/screenshots/m6-interact/first-failure/test-failed-1.png"
+    },
+    {
+      "operation": "in-app browser bootstrap",
+      "result": "unavailable",
+      "reason": "privileged native pipe bridge unavailable; browser-client not trusted",
+      "alternative": "Existing local Edge Playwright and CDP touch tests"
+    },
+    {
+      "operation": "native golden-heart selection",
+      "result": "initial exact-ratio check rejected 1087x1447",
+      "correction": "Preserved native PNG; uniform whole-canvas contain plus transparent padding; source PNG/WebP exact RGBA verified; no crop or repaint"
+    },
+    {
+      "operation": "first source registration patch",
+      "result": "nested folder creation failed",
+      "correction": "Created generated/props-m6 directory with New-Item; then registered preserved native PNG"
+    }
+  ]
+}

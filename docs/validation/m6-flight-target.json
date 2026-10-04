@@ -1,0 +1,477 @@
+{
+  "config": {
+    "configFile": "C:\\code\\code10(sindbad)\\playwright.config.ts",
+    "rootDir": "C:/code/code10(sindbad)/tests/e2e",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": "C:\\code\\code10(sindbad)\\tests\\e2e\\server.setup.ts",
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ],
+      [
+        "html"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "C:/code/code10(sindbad)/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "C:/code/code10(sindbad)/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 240000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.55.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "flight-art.spec.ts",
+      "file": "flight-art.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "phone flight art webtoon preserves rings, hazards and resume",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 24060,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"middle\"\u001b[39m\nReceived: \u001b[31m\"start\"\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"middle\"\u001b[39m\nReceived: \u001b[31m\"start\"\u001b[39m\n    at C:\\code\\code10(sindbad)\\tests\\e2e\\flight-art.spec.ts:74:98",
+                    "location": {
+                      "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\flight-art.spec.ts",
+                      "column": 98,
+                      "line": 74
+                    },
+                    "snippet": "  72 |         await resume(page,'S10');expect((await read(page)).save.claimedRewardIds).toEqual(collected.save.claimedRewardIds);\n  73 |         expect((await read(page)).save.coins).toBe(collected.save.coins);\n> 74 |         await moveJourney(page,1400,535);expect((await read(page)).save.checkpoint.checkpointId).toBe('middle');\n     |                                                                                                  ^\n  75 |         await resume(page,'S10');expect((await read(page)).save.completedObjectiveIds).toContain('S10.quest.1');\n  76 |         const beforeDamage=(await read(page)).player.hp;\n  77 |         await moveJourney(page,1680,300);await expect.poll(async()=>(await read(page)).player.hp).toBeLessThan(beforeDamage);"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\flight-art.spec.ts",
+                        "column": 98,
+                        "line": 74
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"middle\"\u001b[39m\nReceived: \u001b[31m\"start\"\u001b[39m\n\n  72 |         await resume(page,'S10');expect((await read(page)).save.claimedRewardIds).toEqual(collected.save.claimedRewardIds);\n  73 |         expect((await read(page)).save.coins).toBe(collected.save.coins);\n> 74 |         await moveJourney(page,1400,535);expect((await read(page)).save.checkpoint.checkpointId).toBe('middle');\n     |                                                                                                  ^\n  75 |         await resume(page,'S10');expect((await read(page)).save.completedObjectiveIds).toContain('S10.quest.1');\n  76 |         const beforeDamage=(await read(page)).player.hp;\n  77 |         await moveJourney(page,1680,300);await expect.poll(async()=>(await read(page)).player.hp).toBeLessThan(beforeDamage);\n    at C:\\code\\code10(sindbad)\\tests\\e2e\\flight-art.spec.ts:74:98"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toContain\"",
+                      "duration": 9
+                    }
+                  ],
+                  "startTime": "2026-10-04T06:33:08.553Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\code\\code10(sindbad)\\test-results\\flight-art-phone-flight-ar-7d972-es-rings-hazards-and-resume\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\code\\code10(sindbad)\\test-results\\flight-art-phone-flight-ar-7d972-es-rings-hazards-and-resume\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\flight-art.spec.ts",
+                    "column": 98,
+                    "line": 74
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "dbbdb9258d65a16065e7-cbbeed0a80614db37763",
+          "file": "flight-art.spec.ts",
+          "line": 40,
+          "column": 41
+        },
+        {
+          "title": "phone flight art missing SVG recovery preserves rings, hazards and resume",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 12395,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"middle\"\u001b[39m\nReceived: \u001b[31m\"start\"\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"middle\"\u001b[39m\nReceived: \u001b[31m\"start\"\u001b[39m\n    at C:\\code\\code10(sindbad)\\tests\\e2e\\flight-art.spec.ts:74:98",
+                    "location": {
+                      "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\flight-art.spec.ts",
+                      "column": 98,
+                      "line": 74
+                    },
+                    "snippet": "  72 |         await resume(page,'S10');expect((await read(page)).save.claimedRewardIds).toEqual(collected.save.claimedRewardIds);\n  73 |         expect((await read(page)).save.coins).toBe(collected.save.coins);\n> 74 |         await moveJourney(page,1400,535);expect((await read(page)).save.checkpoint.checkpointId).toBe('middle');\n     |                                                                                                  ^\n  75 |         await resume(page,'S10');expect((await read(page)).save.completedObjectiveIds).toContain('S10.quest.1');\n  76 |         const beforeDamage=(await read(page)).player.hp;\n  77 |         await moveJourney(page,1680,300);await expect.poll(async()=>(await read(page)).player.hp).toBeLessThan(beforeDamage);"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\flight-art.spec.ts",
+                        "column": 98,
+                        "line": 74
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"middle\"\u001b[39m\nReceived: \u001b[31m\"start\"\u001b[39m\n\n  72 |         await resume(page,'S10');expect((await read(page)).save.claimedRewardIds).toEqual(collected.save.claimedRewardIds);\n  73 |         expect((await read(page)).save.coins).toBe(collected.save.coins);\n> 74 |         await moveJourney(page,1400,535);expect((await read(page)).save.checkpoint.checkpointId).toBe('middle');\n     |                                                                                                  ^\n  75 |         await resume(page,'S10');expect((await read(page)).save.completedObjectiveIds).toContain('S10.quest.1');\n  76 |         const beforeDamage=(await read(page)).player.hp;\n  77 |         await moveJourney(page,1680,300);await expect.poll(async()=>(await read(page)).player.hp).toBeLessThan(beforeDamage);\n    at C:\\code\\code10(sindbad)\\tests\\e2e\\flight-art.spec.ts:74:98"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toContain\"",
+                      "duration": 14
+                    }
+                  ],
+                  "startTime": "2026-10-04T06:33:35.197Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\code\\code10(sindbad)\\test-results\\flight-art-phone-flight-ar-3bbd4-es-rings-hazards-and-resume\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\code\\code10(sindbad)\\test-results\\flight-art-phone-flight-ar-3bbd4-es-rings-hazards-and-resume\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\flight-art.spec.ts",
+                    "column": 98,
+                    "line": 74
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "dbbdb9258d65a16065e7-8870a92e61bc30c8cc0d",
+          "file": "flight-art.spec.ts",
+          "line": 40,
+          "column": 41
+        },
+        {
+          "title": "tablet flight art webtoon preserves rings, hazards and resume",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 12622,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"middle\"\u001b[39m\nReceived: \u001b[31m\"start\"\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"middle\"\u001b[39m\nReceived: \u001b[31m\"start\"\u001b[39m\n    at C:\\code\\code10(sindbad)\\tests\\e2e\\flight-art.spec.ts:74:98",
+                    "location": {
+                      "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\flight-art.spec.ts",
+                      "column": 98,
+                      "line": 74
+                    },
+                    "snippet": "  72 |         await resume(page,'S10');expect((await read(page)).save.claimedRewardIds).toEqual(collected.save.claimedRewardIds);\n  73 |         expect((await read(page)).save.coins).toBe(collected.save.coins);\n> 74 |         await moveJourney(page,1400,535);expect((await read(page)).save.checkpoint.checkpointId).toBe('middle');\n     |                                                                                                  ^\n  75 |         await resume(page,'S10');expect((await read(page)).save.completedObjectiveIds).toContain('S10.quest.1');\n  76 |         const beforeDamage=(await read(page)).player.hp;\n  77 |         await moveJourney(page,1680,300);await expect.poll(async()=>(await read(page)).player.hp).toBeLessThan(beforeDamage);"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\flight-art.spec.ts",
+                        "column": 98,
+                        "line": 74
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"middle\"\u001b[39m\nReceived: \u001b[31m\"start\"\u001b[39m\n\n  72 |         await resume(page,'S10');expect((await read(page)).save.claimedRewardIds).toEqual(collected.save.claimedRewardIds);\n  73 |         expect((await read(page)).save.coins).toBe(collected.save.coins);\n> 74 |         await moveJourney(page,1400,535);expect((await read(page)).save.checkpoint.checkpointId).toBe('middle');\n     |                                                                                                  ^\n  75 |         await resume(page,'S10');expect((await read(page)).save.completedObjectiveIds).toContain('S10.quest.1');\n  76 |         const beforeDamage=(await read(page)).player.hp;\n  77 |         await moveJourney(page,1680,300);await expect.poll(async()=>(await read(page)).player.hp).toBeLessThan(beforeDamage);\n    at C:\\code\\code10(sindbad)\\tests\\e2e\\flight-art.spec.ts:74:98"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toContain\"",
+                      "duration": 8
+                    }
+                  ],
+                  "startTime": "2026-10-04T06:33:50.444Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\code\\code10(sindbad)\\test-results\\flight-art-tablet-flight-a-a1ba4-es-rings-hazards-and-resume\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\code\\code10(sindbad)\\test-results\\flight-art-tablet-flight-a-a1ba4-es-rings-hazards-and-resume\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\flight-art.spec.ts",
+                    "column": 98,
+                    "line": 74
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "dbbdb9258d65a16065e7-94a516b5af8066b4e821",
+          "file": "flight-art.spec.ts",
+          "line": 40,
+          "column": 41
+        },
+        {
+          "title": "tablet flight art missing SVG recovery preserves rings, hazards and resume",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 18215,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"middle\"\u001b[39m\nReceived: \u001b[31m\"start\"\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"middle\"\u001b[39m\nReceived: \u001b[31m\"start\"\u001b[39m\n    at C:\\code\\code10(sindbad)\\tests\\e2e\\flight-art.spec.ts:74:98",
+                    "location": {
+                      "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\flight-art.spec.ts",
+                      "column": 98,
+                      "line": 74
+                    },
+                    "snippet": "  72 |         await resume(page,'S10');expect((await read(page)).save.claimedRewardIds).toEqual(collected.save.claimedRewardIds);\n  73 |         expect((await read(page)).save.coins).toBe(collected.save.coins);\n> 74 |         await moveJourney(page,1400,535);expect((await read(page)).save.checkpoint.checkpointId).toBe('middle');\n     |                                                                                                  ^\n  75 |         await resume(page,'S10');expect((await read(page)).save.completedObjectiveIds).toContain('S10.quest.1');\n  76 |         const beforeDamage=(await read(page)).player.hp;\n  77 |         await moveJourney(page,1680,300);await expect.poll(async()=>(await read(page)).player.hp).toBeLessThan(beforeDamage);"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\flight-art.spec.ts",
+                        "column": 98,
+                        "line": 74
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"middle\"\u001b[39m\nReceived: \u001b[31m\"start\"\u001b[39m\n\n  72 |         await resume(page,'S10');expect((await read(page)).save.claimedRewardIds).toEqual(collected.save.claimedRewardIds);\n  73 |         expect((await read(page)).save.coins).toBe(collected.save.coins);\n> 74 |         await moveJourney(page,1400,535);expect((await read(page)).save.checkpoint.checkpointId).toBe('middle');\n     |                                                                                                  ^\n  75 |         await resume(page,'S10');expect((await read(page)).save.completedObjectiveIds).toContain('S10.quest.1');\n  76 |         const beforeDamage=(await read(page)).player.hp;\n  77 |         await moveJourney(page,1680,300);await expect.poll(async()=>(await read(page)).player.hp).toBeLessThan(beforeDamage);\n    at C:\\code\\code10(sindbad)\\tests\\e2e\\flight-art.spec.ts:74:98"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toContain\"",
+                      "duration": 9
+                    }
+                  ],
+                  "startTime": "2026-10-04T06:34:08.852Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\code\\code10(sindbad)\\test-results\\flight-art-tablet-flight-a-9f8af-es-rings-hazards-and-resume\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\code\\code10(sindbad)\\test-results\\flight-art-tablet-flight-a-9f8af-es-rings-hazards-and-resume\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\flight-art.spec.ts",
+                    "column": 98,
+                    "line": 74
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "dbbdb9258d65a16065e7-9b5aa28426ff76b87e31",
+          "file": "flight-art.spec.ts",
+          "line": 40,
+          "column": 41
+        }
+      ]
+    },
+    {
+      "title": "flight-rings.spec.ts",
+      "file": "flight-rings.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "flight rings collect through movement once, persist, and never gate landing",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 28555,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 1163
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 11
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 10
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 1563
+                    }
+                  ],
+                  "startTime": "2026-10-04T06:34:34.149Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a905626241707dd069b7-8ae447fbfeb56cc21fd7",
+          "file": "flight-rings.spec.ts",
+          "line": 18,
+          "column": 1
+        },
+        {
+          "title": "S33 return flight has five moving debris routes and does not require combat",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 14329,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 2113
+                    }
+                  ],
+                  "startTime": "2026-10-04T06:35:04.833Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a905626241707dd069b7-7655a01e206347e28a4d",
+          "file": "flight-rings.spec.ts",
+          "line": 92,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-04T06:33:03.116Z",
+    "duration": 140878.964,
+    "expected": 2,
+    "skipped": 0,
+    "unexpected": 4,
+    "flaky": 0
+  }
+}

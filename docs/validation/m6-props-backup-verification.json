@@ -1,0 +1,1136 @@
+{
+  "pass": true,
+  "count": 226,
+  "files": [
+    {
+      "path": "PROJECT_STATUS.md",
+      "backup": "docs/validation/m6-props-before/PROJECT_STATUS.md",
+      "sha256": "716295d6d72f3f5d10670cb687e13dc793b454662c3922b2fe1604eac54ffc49"
+    },
+    {
+      "path": "docs/ART_PROMPTS.md",
+      "backup": "docs/validation/m6-props-before/docs/ART_PROMPTS.md",
+      "sha256": "ee8690f6761aaeb6ca1567aacec221b4a27ac0406b7216da932ef46bbaf0612d"
+    },
+    {
+      "path": "docs/ASSET_REGISTER.md",
+      "backup": "docs/validation/m6-props-before/docs/ASSET_REGISTER.md",
+      "sha256": "8b4c9e5d7bafd2da395e05e90d1bb073a9abc25b96e51311106f2cc11ffadde4"
+    },
+    {
+      "path": "src/main.ts",
+      "backup": "docs/validation/m6-props-before/src/main.ts",
+      "sha256": "a903397e6b527e7da39018e451765c1b9cc928a605ae48257bde44f827f44b17"
+    },
+    {
+      "path": "src/mobile.css",
+      "backup": "docs/validation/m6-props-before/src/mobile.css",
+      "sha256": "8c187be5284d7c4a6a6705052ab6f471a46c85cdd76d83eb0cd6cae62c77b384"
+    },
+    {
+      "path": "src/styles.css",
+      "backup": "docs/validation/m6-props-before/src/styles.css",
+      "sha256": "acc2e8be3820b09fcdc0d18a6de690771efa4aa84ed4311e2ef26cb401367d16"
+    },
+    {
+      "path": "src/content/assets.manifest.ts",
+      "backup": "docs/validation/m6-props-before/src/content/assets.manifest.ts",
+      "sha256": "66617e5ae2adce5bcbfcaca453ae1c0de6ab932a1069d75d32d00545aa125db1"
+    },
+    {
+      "path": "src/content/campaign.json",
+      "backup": "docs/validation/m6-props-before/src/content/campaign.json",
+      "sha256": "99ebb2cf2184801fbd56c2e9fd33d35907e47a807fe0563f13ea3da23a8ad1a8"
+    },
+    {
+      "path": "src/content/dialogues.ko.ts",
+      "backup": "docs/validation/m6-props-before/src/content/dialogues.ko.ts",
+      "sha256": "284eb23a2b7c20ace1ade00cc754008bcb8e33f15195c6f56e76d4194a8aebd9"
+    },
+    {
+      "path": "src/content/effects.ts",
+      "backup": "docs/validation/m6-props-before/src/content/effects.ts",
+      "sha256": "9b04c96e22e99f8e10adc04aaaf599f6988d4e56425c9427a06fc5e7c8690f42"
+    },
+    {
+      "path": "src/content/enemy-actions.generated.json",
+      "backup": "docs/validation/m6-props-before/src/content/enemy-actions.generated.json",
+      "sha256": "740d7be9ab80434f372a04b7ad90cb348c7daadaab3714b3338bd8f7b4ffde0c"
+    },
+    {
+      "path": "src/content/enemyActions.ts",
+      "backup": "docs/validation/m6-props-before/src/content/enemyActions.ts",
+      "sha256": "8b1128160ad549e2fdeea4cad0954f7d023014c2d3a19a960aec23fd3277ab54"
+    },
+    {
+      "path": "src/content/finalStages.ts",
+      "backup": "docs/validation/m6-props-before/src/content/finalStages.ts",
+      "sha256": "b86e5976cbc81d5645a70f030fdc5290250e8b8afc18d45797906ccd2eb5e06d"
+    },
+    {
+      "path": "src/content/hero-action.generated.json",
+      "backup": "docs/validation/m6-props-before/src/content/hero-action.generated.json",
+      "sha256": "f6fdc7c4cfb7aa3e61a4e426e16bd5ccbe9108007e9128279ec3ff11eb164f4d"
+    },
+    {
+      "path": "src/content/items.ts",
+      "backup": "docs/validation/m6-props-before/src/content/items.ts",
+      "sha256": "3a2080600bc372b28640af626df61958a3a04cca42db05f0e9577e6e5e2bae95"
+    },
+    {
+      "path": "src/content/maps.ts",
+      "backup": "docs/validation/m6-props-before/src/content/maps.ts",
+      "sha256": "6b49f4cecf0c935321404293a5e01a25ef79a34cef0166fc243a1c97db8f38fc"
+    },
+    {
+      "path": "src/content/reachability.ts",
+      "backup": "docs/validation/m6-props-before/src/content/reachability.ts",
+      "sha256": "7af571d1ec39f6a170001c2d886d22f4b5bd9cc90f4d6e5b2b8c0f3345d212bf"
+    },
+    {
+      "path": "src/content/stageIndex.ts",
+      "backup": "docs/validation/m6-props-before/src/content/stageIndex.ts",
+      "sha256": "76c3c20653293a27cc0a33a2fdb6bcab53dae838012a7f07f78b496948280771"
+    },
+    {
+      "path": "src/content/storyDesign.ts",
+      "backup": "docs/validation/m6-props-before/src/content/storyDesign.ts",
+      "sha256": "3eb84d45d79a781efe22ec2dc1846b2fb0ede551e6d396e46554dc12617c1cc8"
+    },
+    {
+      "path": "src/content/terrainStyles.ts",
+      "backup": "docs/validation/m6-props-before/src/content/terrainStyles.ts",
+      "sha256": "870b5d0f1bf1f7949d521823f938459d73f2029cf23cf9ca639a5e219cb4233d"
+    },
+    {
+      "path": "src/content/touchIcons.ts",
+      "backup": "docs/validation/m6-props-before/src/content/touchIcons.ts",
+      "sha256": "a306e658749b3fd8a74a71cd6660d4d2a8beb20002309b934fa09033693bd6c6"
+    },
+    {
+      "path": "src/content/validate.ts",
+      "backup": "docs/validation/m6-props-before/src/content/validate.ts",
+      "sha256": "ad1eef46b1a197c86a842734a483be473e4d01318a6ef2e8d7fc33dff6b2b110"
+    },
+    {
+      "path": "src/core/adventure.ts",
+      "backup": "docs/validation/m6-props-before/src/core/adventure.ts",
+      "sha256": "f700d1f0c308f1ba16d9ae5b7ec612a7161c0cc2579fefca19d6715172a6b1d9"
+    },
+    {
+      "path": "src/core/combat.ts",
+      "backup": "docs/validation/m6-props-before/src/core/combat.ts",
+      "sha256": "9526b3ceddb7845f5f8e4ac2f44568412bc312750042906eb1fade26fea78ba1"
+    },
+    {
+      "path": "src/core/crystal.ts",
+      "backup": "docs/validation/m6-props-before/src/core/crystal.ts",
+      "sha256": "7ac871f4981702ec5d9fd4b12593dbd004427df853ba5fbd8c8d1e2945bfa865"
+    },
+    {
+      "path": "src/core/flame.ts",
+      "backup": "docs/validation/m6-props-before/src/core/flame.ts",
+      "sha256": "723db8021b0217c5cb411351461906fc5828aa037337e04e967ef2d67a4b14f5"
+    },
+    {
+      "path": "src/core/passives.ts",
+      "backup": "docs/validation/m6-props-before/src/core/passives.ts",
+      "sha256": "74d1a57d756c39a8946c0b1c0c412138ed884a05cf5c0ee729b7cdd1007b14b2"
+    },
+    {
+      "path": "src/core/save.ts",
+      "backup": "docs/validation/m6-props-before/src/core/save.ts",
+      "sha256": "ecd19ae470e45564ee7857fab7e629769c189989d67833635a072c82076f7de6"
+    },
+    {
+      "path": "src/core/skills.ts",
+      "backup": "docs/validation/m6-props-before/src/core/skills.ts",
+      "sha256": "3de8f4bb75ef85b548fa3a069897e8bec7e0cb76622136893d7f77dc3132f5fe"
+    },
+    {
+      "path": "src/core/state.ts",
+      "backup": "docs/validation/m6-props-before/src/core/state.ts",
+      "sha256": "9e4820eb85289cbc7b70dc77636001ef04a63661758880df0ccac12fd530765b"
+    },
+    {
+      "path": "src/core/storyMechanics.ts",
+      "backup": "docs/validation/m6-props-before/src/core/storyMechanics.ts",
+      "sha256": "46c020549c2090ed414a07b679f1ffd240c9353a462429f4c09c2152f89dd775"
+    },
+    {
+      "path": "src/game/audio.ts",
+      "backup": "docs/validation/m6-props-before/src/game/audio.ts",
+      "sha256": "b3d52e4c0e946910124b506bdec84b3f0b89cf919b1981d68b7a46f91a27c371"
+    },
+    {
+      "path": "src/game/controlText.ts",
+      "backup": "docs/validation/m6-props-before/src/game/controlText.ts",
+      "sha256": "2877f711abd642a2b8709af3a9051de1fecf88c8b92cab204b76d28e51eca277"
+    },
+    {
+      "path": "src/game/dialogueArt.ts",
+      "backup": "docs/validation/m6-props-before/src/game/dialogueArt.ts",
+      "sha256": "a2db4a736a07c53f25ff241d3c59940f12497f7a918680673404784d7a82f16e"
+    },
+    {
+      "path": "src/game/heroArt.ts",
+      "backup": "docs/validation/m6-props-before/src/game/heroArt.ts",
+      "sha256": "a64f46fbde43add32d88e6993df8c6e117fdb2fc611517089a9606dd2aa1177f"
+    },
+    {
+      "path": "src/game/input.ts",
+      "backup": "docs/validation/m6-props-before/src/game/input.ts",
+      "sha256": "c17ced6666274555c9d75102c425547581355bad39fdfbd1d652b37c9aa64fd8"
+    },
+    {
+      "path": "src/game/stage.ts",
+      "backup": "docs/validation/m6-props-before/src/game/stage.ts",
+      "sha256": "253daa13c583cb84852f663bc4a391adac329d066f5d223658c4a7d568ee9560"
+    },
+    {
+      "path": "src/game/terrain.ts",
+      "backup": "docs/validation/m6-props-before/src/game/terrain.ts",
+      "sha256": "5e6b087b4e971a8e2f95563db394d9ddb536c4b6c395c34b71358cdd49f73a42"
+    },
+    {
+      "path": "src/game/touch.ts",
+      "backup": "docs/validation/m6-props-before/src/game/touch.ts",
+      "sha256": "e7d8d7dd5b0535cd9ab1d303c1f4b623dda2bf13e86e313f979ae96ca7c530f8"
+    },
+    {
+      "path": "src/game/weapons.ts",
+      "backup": "docs/validation/m6-props-before/src/game/weapons.ts",
+      "sha256": "a7faa375f3f00a566f5f7400877b989d9a5616ffb4714ec68dfcedf5c57ce615"
+    },
+    {
+      "path": "scripts/audit-effects.py",
+      "backup": "docs/validation/m6-props-before/scripts/audit-effects.py",
+      "sha256": "51723e1c974692cc730a40756dfef8643df46cffd28d401bfd0f7fac1c810a06"
+    },
+    {
+      "path": "scripts/audit-terrain.py",
+      "backup": "docs/validation/m6-props-before/scripts/audit-terrain.py",
+      "sha256": "3607d4427d7657293f7efda1d3e2e1f139d41cf95ebd34fcbee03379493c9ab8"
+    },
+    {
+      "path": "scripts/audit-touch-icons.py",
+      "backup": "docs/validation/m6-props-before/scripts/audit-touch-icons.py",
+      "sha256": "3eef3af3a73a9fc8e4483f5b6057293b643cd68df20743bf3d58be3eeb341e97"
+    },
+    {
+      "path": "scripts/audit-weapons.py",
+      "backup": "docs/validation/m6-props-before/scripts/audit-weapons.py",
+      "sha256": "ca42c2fb090fb77d870c742102c02b74e3bfda7cd1793f9493eb259f47ecadc2"
+    },
+    {
+      "path": "scripts/audit-webtoon.py",
+      "backup": "docs/validation/m6-props-before/scripts/audit-webtoon.py",
+      "sha256": "4906063304ecae479bc01a34a4aaaa0e206ef4a9e08dfe6d6dfdca51c3f2e1a5"
+    },
+    {
+      "path": "scripts/check-action-art.mjs",
+      "backup": "docs/validation/m6-props-before/scripts/check-action-art.mjs",
+      "sha256": "78011828624a44688c7b0ec53f9ca0fc53cc6299fcf20a23e1ab2e55292fd34b"
+    },
+    {
+      "path": "scripts/check-art-budget.ts",
+      "backup": "docs/validation/m6-props-before/scripts/check-art-budget.ts",
+      "sha256": "1df0eabb87289136ca5d73585368b92ef8992b5b3793d1e1e4e2a1bef05c6845"
+    },
+    {
+      "path": "scripts/check-terrain-motion.ts",
+      "backup": "docs/validation/m6-props-before/scripts/check-terrain-motion.ts",
+      "sha256": "b34669bd3f61b91f2f0c3c6c7a7e6cb881e594a421f98743996160c0599aaec1"
+    },
+    {
+      "path": "scripts/encode-webtoon.py",
+      "backup": "docs/validation/m6-props-before/scripts/encode-webtoon.py",
+      "sha256": "191876dd96b772d9f70173c7390054e376a9fb743dd74f9845802935a28ba6c7"
+    },
+    {
+      "path": "scripts/format-typescript.mjs",
+      "backup": "docs/validation/m6-props-before/scripts/format-typescript.mjs",
+      "sha256": "481439049e9e576d54be466dc380986cc04dbe51fdb476c659b0fdd690f85471"
+    },
+    {
+      "path": "scripts/inspect-game.mjs",
+      "backup": "docs/validation/m6-props-before/scripts/inspect-game.mjs",
+      "sha256": "932c2773408203413a591ce20a2d65a3a9fceaa299fe0e9102df87884b895f3b"
+    },
+    {
+      "path": "scripts/inspect-terrain.py",
+      "backup": "docs/validation/m6-props-before/scripts/inspect-terrain.py",
+      "sha256": "bbe34d4157e12aa9354ae914e627359279de79bd03e395c79377b445bfd3d04a"
+    },
+    {
+      "path": "scripts/make-app-icons.py",
+      "backup": "docs/validation/m6-props-before/scripts/make-app-icons.py",
+      "sha256": "c22c32fbbe75f4323825b699b326282dd39ac8a48b6085e74c3e99740572b3ea"
+    },
+    {
+      "path": "scripts/make-crystal-art.mjs",
+      "backup": "docs/validation/m6-props-before/scripts/make-crystal-art.mjs",
+      "sha256": "4bed8501c2451e2680ed09c990404bd80885cc9c5b11b82d4e8ae1d805c6a784"
+    },
+    {
+      "path": "scripts/make-draft-art.mjs",
+      "backup": "docs/validation/m6-props-before/scripts/make-draft-art.mjs",
+      "sha256": "8aab214ad146379ed118a7519bbefb07a9a74d8b816202ff99ed5f575f48f9b7"
+    },
+    {
+      "path": "scripts/make-flame-art.mjs",
+      "backup": "docs/validation/m6-props-before/scripts/make-flame-art.mjs",
+      "sha256": "343da21b1e438ffc45750556faf2c9ce7f9446cfa404ce58c691918cfbac82f6"
+    },
+    {
+      "path": "scripts/make-m2-art.mjs",
+      "backup": "docs/validation/m6-props-before/scripts/make-m2-art.mjs",
+      "sha256": "1f2d96ae714c58fff9287224d50d1e94d233b251f1841b713c52eb05ae84a534"
+    },
+    {
+      "path": "scripts/make-polished-art.mjs",
+      "backup": "docs/validation/m6-props-before/scripts/make-polished-art.mjs",
+      "sha256": "06d1228a260fcaee710612c9893dbeb7699f6dd333e77818be562fc94d759a7f"
+    },
+    {
+      "path": "scripts/make-story-art.mjs",
+      "backup": "docs/validation/m6-props-before/scripts/make-story-art.mjs",
+      "sha256": "53eccdc7bccf30b1fb4e79147a9c47d64405b7e17577ea6b7ada1ce6ede4d014"
+    },
+    {
+      "path": "scripts/make-weapon-art.mjs",
+      "backup": "docs/validation/m6-props-before/scripts/make-weapon-art.mjs",
+      "sha256": "e60a2a72e6f63833728bac31dc5f79fc38acb94317a5760a8e62890682d3f9a3"
+    },
+    {
+      "path": "scripts/mobile-check.mjs",
+      "backup": "docs/validation/m6-props-before/scripts/mobile-check.mjs",
+      "sha256": "d978e3503658e871d55cc0bdb6630b65c9e81e7f67f46a285871302a37cfb36f"
+    },
+    {
+      "path": "scripts/optimize-webtoon.py",
+      "backup": "docs/validation/m6-props-before/scripts/optimize-webtoon.py",
+      "sha256": "18d8e892ff0ac7f39e3f126ada3f15e28ba0585454b7e7eb98abb921bd9c11dc"
+    },
+    {
+      "path": "scripts/pack-effects.py",
+      "backup": "docs/validation/m6-props-before/scripts/pack-effects.py",
+      "sha256": "fd3cfa7ad61a9b746f096bbdf391babdb6fff8f60f97ad3cf28577f2e53f8846"
+    },
+    {
+      "path": "scripts/pack-enemy-actions.py",
+      "backup": "docs/validation/m6-props-before/scripts/pack-enemy-actions.py",
+      "sha256": "4984d013887ac0bd419824ae6355fb17007d4f221687053e1792636679d4ace3"
+    },
+    {
+      "path": "scripts/pack-npc-faces.py",
+      "backup": "docs/validation/m6-props-before/scripts/pack-npc-faces.py",
+      "sha256": "81162fe8f98b2e85fecb066755115a95df4afbf8be70c814ac927355372d7f58"
+    },
+    {
+      "path": "scripts/pack-terrain.py",
+      "backup": "docs/validation/m6-props-before/scripts/pack-terrain.py",
+      "sha256": "182eaf66ab6acb6fb51f8832a839f8bdee61af1a4252021d7b4a669f9be8e51b"
+    },
+    {
+      "path": "scripts/pack-touch-icons.py",
+      "backup": "docs/validation/m6-props-before/scripts/pack-touch-icons.py",
+      "sha256": "8d3e859241b019e2aa0811ccba152ec085f769adb3028bdd5a8ee1804e5f55c9"
+    },
+    {
+      "path": "scripts/pack-weapons.py",
+      "backup": "docs/validation/m6-props-before/scripts/pack-weapons.py",
+      "sha256": "eb6c25ff87f7596fd3c0a122d642b161d4acae4bc7cafcf39c8936a51aea4ce9"
+    },
+    {
+      "path": "scripts/register-campaign.mjs",
+      "backup": "docs/validation/m6-props-before/scripts/register-campaign.mjs",
+      "sha256": "a224849a6c0a94bb6d3a212fc4f321d483ec0475914f788e348467964d34cef9"
+    },
+    {
+      "path": "scripts/render-weapon-references.mjs",
+      "backup": "docs/validation/m6-props-before/scripts/render-weapon-references.mjs",
+      "sha256": "aa800a726f0cb3b01b8439bdb92b13b391dd0fbcc3d1ef67f2e70f1f25cb375c"
+    },
+    {
+      "path": "scripts/snapshot-art-validation.py",
+      "backup": "docs/validation/m6-props-before/scripts/snapshot-art-validation.py",
+      "sha256": "a5a172433fdb50fb84ab0309fdaf42ac69ed1bf3d08087ad6036f2ea7f57ac06"
+    },
+    {
+      "path": "scripts/validate-content.ts",
+      "backup": "docs/validation/m6-props-before/scripts/validate-content.ts",
+      "sha256": "75796a79804ad1f67b9c64763a8866c72447ed5d313d175f6971c0a7bfbc17c4"
+    },
+    {
+      "path": "scripts/verify-deployment.mjs",
+      "backup": "docs/validation/m6-props-before/scripts/verify-deployment.mjs",
+      "sha256": "14d3d2911751d6dc89a7791cffe92e99c183fa93591eb7c6a045692905bd193d"
+    },
+    {
+      "path": "tests/e2e/adventure.spec.ts",
+      "backup": "docs/validation/m6-props-before/tests/e2e/adventure.spec.ts",
+      "sha256": "b72e56fafd17fe8970e08ed9e3fcaf315a8a2d5c770649503144113f3519ac1d"
+    },
+    {
+      "path": "tests/e2e/art-evidence.ts",
+      "backup": "docs/validation/m6-props-before/tests/e2e/art-evidence.ts",
+      "sha256": "a9c407d55a0c46056e23ac2a37ce2459d8c8a13d55a9873be78dd8f2e6ebb45d"
+    },
+    {
+      "path": "tests/e2e/audio.spec.ts",
+      "backup": "docs/validation/m6-props-before/tests/e2e/audio.spec.ts",
+      "sha256": "6f21dbf0c74335a88f8016cc0b1cc27f45fac17cdefc897a8330845bfc13984d"
+    },
+    {
+      "path": "tests/e2e/complete-journey.spec.ts",
+      "backup": "docs/validation/m6-props-before/tests/e2e/complete-journey.spec.ts",
+      "sha256": "7e3e3ef2254b8323954aed9ee2f193a9a4947a6a0d655195e14cfb0e5f63d21e"
+    },
+    {
+      "path": "tests/e2e/controls-ui.spec.ts",
+      "backup": "docs/validation/m6-props-before/tests/e2e/controls-ui.spec.ts",
+      "sha256": "634a43c9e41bdfd7bcbb5b42608af26cc3598f86c1cf6f3bbcad1164c96975db"
+    },
+    {
+      "path": "tests/e2e/crystal.spec.ts",
+      "backup": "docs/validation/m6-props-before/tests/e2e/crystal.spec.ts",
+      "sha256": "6d96b00598b95296fced8c8eabb52562e11fe02e7ce43d6b3460d43c070dc1ef"
+    },
+    {
+      "path": "tests/e2e/effects-art.spec.ts",
+      "backup": "docs/validation/m6-props-before/tests/e2e/effects-art.spec.ts",
+      "sha256": "77cb27431480da5d66b4d9295205991d1c1496343271f34cb81e1d2d694c3089"
+    },
+    {
+      "path": "tests/e2e/enemy-actions.spec.ts",
+      "backup": "docs/validation/m6-props-before/tests/e2e/enemy-actions.spec.ts",
+      "sha256": "9b0563530bc9a27c57c102af3227607fc791f8f72bac13bcb3353de285577f2d"
+    },
+    {
+      "path": "tests/e2e/fall.spec.ts",
+      "backup": "docs/validation/m6-props-before/tests/e2e/fall.spec.ts",
+      "sha256": "bbe5d8af57e5b8e2eea431a6bb20c573dcbe1847f07c836e04e8776d3544b208"
+    },
+    {
+      "path": "tests/e2e/final-campaign.spec.ts",
+      "backup": "docs/validation/m6-props-before/tests/e2e/final-campaign.spec.ts",
+      "sha256": "d70f9f2996d76fd11c7e0db748dc850801aaea9398f77927e35ad44e61f2219f"
+    },
+    {
+      "path": "tests/e2e/flame-waves.spec.ts",
+      "backup": "docs/validation/m6-props-before/tests/e2e/flame-waves.spec.ts",
+      "sha256": "597cdf362bb8f3691dcdbaae0b00ee96a0728cd59113b8a1b37b4fff406c9f8d"
+    },
+    {
+      "path": "tests/e2e/flight-rings.spec.ts",
+      "backup": "docs/validation/m6-props-before/tests/e2e/flight-rings.spec.ts",
+      "sha256": "f03dd1fb742537a1a50a9dbbdbf49c847d56f900adf9c8c9d9a7ff6a18111916"
+    },
+    {
+      "path": "tests/e2e/journey-bot.ts",
+      "backup": "docs/validation/m6-props-before/tests/e2e/journey-bot.ts",
+      "sha256": "92932e92827d9eeaea2b794b747639d55e9271f2ba7401556acebf720d1c5cfa"
+    },
+    {
+      "path": "tests/e2e/m2.spec.ts",
+      "backup": "docs/validation/m6-props-before/tests/e2e/m2.spec.ts",
+      "sha256": "24ed8ec18dd6223a8312cb12428ce29b411a499cb1c316311f5af7fd5505fcdf"
+    },
+    {
+      "path": "tests/e2e/m3-opening.spec.ts",
+      "backup": "docs/validation/m6-props-before/tests/e2e/m3-opening.spec.ts",
+      "sha256": "a24a2a80d101eae650394cc5bce5105469ef479852c6d8478f1946f549da676f"
+    },
+    {
+      "path": "tests/e2e/mobile-abilities.spec.ts",
+      "backup": "docs/validation/m6-props-before/tests/e2e/mobile-abilities.spec.ts",
+      "sha256": "ed89b67c402de311c718e855c1b06161eb71c29d33b8db4f13119d09ea250afb"
+    },
+    {
+      "path": "tests/e2e/npc-faces.spec.ts",
+      "backup": "docs/validation/m6-props-before/tests/e2e/npc-faces.spec.ts",
+      "sha256": "34d2530fafc183425dd25e242faf2c93a434ec7acdf2f81518791c6a2b564a61"
+    },
+    {
+      "path": "tests/e2e/safety.spec.ts",
+      "backup": "docs/validation/m6-props-before/tests/e2e/safety.spec.ts",
+      "sha256": "062beb4926d1630252e70c6663d545814338838665967bd715996900eacb79b4"
+    },
+    {
+      "path": "tests/e2e/server.setup.ts",
+      "backup": "docs/validation/m6-props-before/tests/e2e/server.setup.ts",
+      "sha256": "b4172262da20345f3ac29ac47dc449fa8bc5387af80abbcff946f63823e34719"
+    },
+    {
+      "path": "tests/e2e/story-devices.spec.ts",
+      "backup": "docs/validation/m6-props-before/tests/e2e/story-devices.spec.ts",
+      "sha256": "1b4efa318d48297cd219b64f749da45594509de8b38e06ab2abffe56f1e7fbc7"
+    },
+    {
+      "path": "tests/e2e/terrain-art.spec.ts",
+      "backup": "docs/validation/m6-props-before/tests/e2e/terrain-art.spec.ts",
+      "sha256": "3e699f98ab1b252161fb1d7e16086b558d8d4d13723952c7bc782c7e8072af4e"
+    },
+    {
+      "path": "tests/e2e/touch-icons.spec.ts",
+      "backup": "docs/validation/m6-props-before/tests/e2e/touch-icons.spec.ts",
+      "sha256": "9f10893802360137989e951f2fe69a3b4ef4b787df746ab1cadcbce7841202ef"
+    },
+    {
+      "path": "tests/e2e/weapon-art.spec.ts",
+      "backup": "docs/validation/m6-props-before/tests/e2e/weapon-art.spec.ts",
+      "sha256": "035525530ed7649edd71a4a52309c49ba6fe3dfaad484260e763555fa16f0c4a"
+    },
+    {
+      "path": "docs/validation/a1-a2-e2e-full.json",
+      "backup": "docs/validation/m6-props-before/docs/validation/a1-a2-e2e-full.json",
+      "sha256": "33f33db807f8710471b443922185642e3715d68a2b682d54859dbe5ebca9fc08"
+    },
+    {
+      "path": "docs/validation/a3-campaign-screenshots.json",
+      "backup": "docs/validation/m6-props-before/docs/validation/a3-campaign-screenshots.json",
+      "sha256": "6df7dec4349cf38e28716e684a58e27624af20d074d024e5b855889af5edb536"
+    },
+    {
+      "path": "docs/validation/a3-e2e-full.json",
+      "backup": "docs/validation/m6-props-before/docs/validation/a3-e2e-full.json",
+      "sha256": "80a2b1410421ccf1c13b39f16d5baffe76e9a6d3e6ee35682f8641c64086eccd"
+    },
+    {
+      "path": "docs/validation/a3-mobile.json",
+      "backup": "docs/validation/m6-props-before/docs/validation/a3-mobile.json",
+      "sha256": "96644bd37e3da0439c52df1104ac2bc4931c2d5d751d66992575182158fd1810"
+    },
+    {
+      "path": "docs/validation/a3-runtime-hashes.json",
+      "backup": "docs/validation/m6-props-before/docs/validation/a3-runtime-hashes.json",
+      "sha256": "1c35cf975db8b5c07c08c95a43400b53be5b495709cfaa8b1b500888054a5afe"
+    },
+    {
+      "path": "docs/validation/a4-campaign-screenshots.json",
+      "backup": "docs/validation/m6-props-before/docs/validation/a4-campaign-screenshots.json",
+      "sha256": "5ad8464ee168c598bd5d5d786d469d4a7a24c8cf52cea4a7bc291ceef3024257"
+    },
+    {
+      "path": "docs/validation/a4-e2e-first-full.json",
+      "backup": "docs/validation/m6-props-before/docs/validation/a4-e2e-first-full.json",
+      "sha256": "6320f7bd02777472ff3c450a9df6bbb4133aacd23e1305d174432078df95278e"
+    },
+    {
+      "path": "docs/validation/a4-e2e-full.json",
+      "backup": "docs/validation/m6-props-before/docs/validation/a4-e2e-full.json",
+      "sha256": "4e849babfc6220f0a1e7c3920deabb766624fa754b061690c976544984d37fbc"
+    },
+    {
+      "path": "docs/validation/a4-mobile.json",
+      "backup": "docs/validation/m6-props-before/docs/validation/a4-mobile.json",
+      "sha256": "a4736476e9098f22f76d5a3caaab604c9c5de856857a766304625e07a1fc1d89"
+    },
+    {
+      "path": "docs/validation/a4-runtime-hashes.json",
+      "backup": "docs/validation/m6-props-before/docs/validation/a4-runtime-hashes.json",
+      "sha256": "e17c55a55818442063a6b7f0bee0a5b48c990643c1c45fa7ed10f59e212e8583"
+    },
+    {
+      "path": "docs/validation/a4-transition.json",
+      "backup": "docs/validation/m6-props-before/docs/validation/a4-transition.json",
+      "sha256": "2de717f8fddf13e5ac084a2723a7fcb7e9391504b67cf417c377515bdfd85dc7"
+    },
+    {
+      "path": "docs/validation/a5-campaign-screenshots.json",
+      "backup": "docs/validation/m6-props-before/docs/validation/a5-campaign-screenshots.json",
+      "sha256": "a0aca3d52f77d5262872a3888f9916da2ac8f3646afccdf5869384fc5f06b001"
+    },
+    {
+      "path": "docs/validation/a5-e2e-full.json",
+      "backup": "docs/validation/m6-props-before/docs/validation/a5-e2e-full.json",
+      "sha256": "905ea9bc522edb5f7e14703d0fa8ce89631660c06154c7a9a198320482492526"
+    },
+    {
+      "path": "docs/validation/a5-first-full-interrupted.json",
+      "backup": "docs/validation/m6-props-before/docs/validation/a5-first-full-interrupted.json",
+      "sha256": "8911054b1cf0e55a20009e554c8ccaf866bd0a241af0a8c0cc8c99311cbf0ad0"
+    },
+    {
+      "path": "docs/validation/a5-first-target.json",
+      "backup": "docs/validation/m6-props-before/docs/validation/a5-first-target.json",
+      "sha256": "c379fbd4c643887951bb4bfb5c43631697fd8806fe519131fd93173697bc22df"
+    },
+    {
+      "path": "docs/validation/a5-input-regression.json",
+      "backup": "docs/validation/m6-props-before/docs/validation/a5-input-regression.json",
+      "sha256": "693ea945ad61a9aa1446320ce5d2fca929cc5f1f46317918fe609e7be12e8072"
+    },
+    {
+      "path": "docs/validation/a5-mobile.json",
+      "backup": "docs/validation/m6-props-before/docs/validation/a5-mobile.json",
+      "sha256": "7b5636d8a0fcabc1bc94fb90e90ce3c5d081a59973fd321dc8727d0fcbc9b6fe"
+    },
+    {
+      "path": "docs/validation/a5-moving-platforms.json",
+      "backup": "docs/validation/m6-props-before/docs/validation/a5-moving-platforms.json",
+      "sha256": "3260090e80c88c81c57d0d8ce010fe98c0446e3e70931c8b297ef6afd14c64df"
+    },
+    {
+      "path": "docs/validation/a5-runtime-hashes.json",
+      "backup": "docs/validation/m6-props-before/docs/validation/a5-runtime-hashes.json",
+      "sha256": "9c625116e31f12e5ee2d2d37139325d47e03f3bc1c8319162d67fd6a0fc28276"
+    },
+    {
+      "path": "docs/validation/a5-second-target.json",
+      "backup": "docs/validation/m6-props-before/docs/validation/a5-second-target.json",
+      "sha256": "f6b0855a6217efb0d9ed4bd24532f957074e0caf8260054ef296054d16b936ab"
+    },
+    {
+      "path": "docs/validation/a5-target-passed.json",
+      "backup": "docs/validation/m6-props-before/docs/validation/a5-target-passed.json",
+      "sha256": "be1a81c9b063453b1dcd38f6f5c79de697c05621e9c75540f2c6104861dc4dd0"
+    },
+    {
+      "path": "docs/validation/a5-terrain-candidates.json",
+      "backup": "docs/validation/m6-props-before/docs/validation/a5-terrain-candidates.json",
+      "sha256": "39e578ccb63839d0a0003f1b341eed8617a8f57056da4d20e420ea0f217c87aa"
+    },
+    {
+      "path": "docs/validation/a5-terrain-runtime-repeat.json",
+      "backup": "docs/validation/m6-props-before/docs/validation/a5-terrain-runtime-repeat.json",
+      "sha256": "c2568e90189b94b3ba0229caa2afc599f6e688183378a8b57f6c0a9bee3287c8"
+    },
+    {
+      "path": "docs/validation/a5-third-target.json",
+      "backup": "docs/validation/m6-props-before/docs/validation/a5-third-target.json",
+      "sha256": "6a74b1e2e5ef1e3a36228c4f867a3307aab5855e14025ea90933ddeb0637f7d2"
+    },
+    {
+      "path": "docs/validation/a6-campaign-screenshots.json",
+      "backup": "docs/validation/m6-props-before/docs/validation/a6-campaign-screenshots.json",
+      "sha256": "6ef0fc562c462bd000dd6189f133d1ff0d0d5567600c7eddafd42fe557575a4c"
+    },
+    {
+      "path": "docs/validation/a6-checks.json",
+      "backup": "docs/validation/m6-props-before/docs/validation/a6-checks.json",
+      "sha256": "bdd085a21fbc926e6bc3626464748347ec1388d269588c35a5623b39b6b18893"
+    },
+    {
+      "path": "docs/validation/a6-e2e-full.json",
+      "backup": "docs/validation/m6-props-before/docs/validation/a6-e2e-full.json",
+      "sha256": "61a1db5a7592c67813e2cdd04070df6b35298dfb604870846f333acda13e5b83"
+    },
+    {
+      "path": "docs/validation/a6-first-mobile.json",
+      "backup": "docs/validation/m6-props-before/docs/validation/a6-first-mobile.json",
+      "sha256": "cecaf3efaa039aa27268cd4309c73257da9d3fd5baa1e8cb4737a0b2d3352145"
+    },
+    {
+      "path": "docs/validation/a6-first-target.json",
+      "backup": "docs/validation/m6-props-before/docs/validation/a6-first-target.json",
+      "sha256": "0ece601bd057823f2b691746c79ac430445f77c87ad47110ab4419b667462784"
+    },
+    {
+      "path": "docs/validation/a6-mobile.json",
+      "backup": "docs/validation/m6-props-before/docs/validation/a6-mobile.json",
+      "sha256": "dd07ddb53ae5aecab9500afa92b67ffccb9b48f9600ab2806094d541c09786eb"
+    },
+    {
+      "path": "docs/validation/a6-runtime-hashes.json",
+      "backup": "docs/validation/m6-props-before/docs/validation/a6-runtime-hashes.json",
+      "sha256": "9eec77dd9614d9d68a6b1a71c81fff1b4278328446e0932470d6080c6faae770"
+    },
+    {
+      "path": "docs/validation/a6-second-target.json",
+      "backup": "docs/validation/m6-props-before/docs/validation/a6-second-target.json",
+      "sha256": "4760af654b585c82c1c534f5c8682ab181fef82b4a211360a9e07ea6f7a2357a"
+    },
+    {
+      "path": "docs/validation/a6-target-passed.json",
+      "backup": "docs/validation/m6-props-before/docs/validation/a6-target-passed.json",
+      "sha256": "b57f50d45e7ab8946c813b32adb1aa38096df00a05d552d80870b7c90ab58728"
+    },
+    {
+      "path": "docs/validation/a6-third-target.json",
+      "backup": "docs/validation/m6-props-before/docs/validation/a6-third-target.json",
+      "sha256": "6c0b469d4e172c107ef821dbb34cd288f6c8e1aed5175c65a9a033558bd11557"
+    },
+    {
+      "path": "docs/validation/a6-touch.json",
+      "backup": "docs/validation/m6-props-before/docs/validation/a6-touch.json",
+      "sha256": "938d3f445d40fabfdfa242b04c418c01af5ffe0f2cccaece96802b06de12161d"
+    },
+    {
+      "path": "docs/validation/a6-weapon-art.json",
+      "backup": "docs/validation/m6-props-before/docs/validation/a6-weapon-art.json",
+      "sha256": "229fa935bec7b9ebe0b69ed617c959865e7000b7b2f550e286fa4af6f1183d19"
+    },
+    {
+      "path": "docs/validation/a6-weapon-fallback.json",
+      "backup": "docs/validation/m6-props-before/docs/validation/a6-weapon-fallback.json",
+      "sha256": "f0101dbf3c325397a9a76bf4375f44fb8b72998da90dead0ee60937072413fe4"
+    },
+    {
+      "path": "docs/validation/a7-campaign-screenshots.json",
+      "backup": "docs/validation/m6-props-before/docs/validation/a7-campaign-screenshots.json",
+      "sha256": "a74fbd4a1d3fbbce6c788080446af94419d5e45542d7ed434261a7f5fc3cbe0d"
+    },
+    {
+      "path": "docs/validation/a7-checks.json",
+      "backup": "docs/validation/m6-props-before/docs/validation/a7-checks.json",
+      "sha256": "c9f2fb46c54886aa1767b731b7a562c039ae6960d0b551ff9869a4cae0296816"
+    },
+    {
+      "path": "docs/validation/a7-complete-journey.json",
+      "backup": "docs/validation/m6-props-before/docs/validation/a7-complete-journey.json",
+      "sha256": "08cc3d8e352d286faec0872bf98cf637ca0147b1780ab1f8a8cf0c3899283ab3"
+    },
+    {
+      "path": "docs/validation/a7-e2e-full.json",
+      "backup": "docs/validation/m6-props-before/docs/validation/a7-e2e-full.json",
+      "sha256": "4832718dae9de588bf318b75c190373e00ceb9c93cdf55744827890b7943b172"
+    },
+    {
+      "path": "docs/validation/a7-effects-fallback.json",
+      "backup": "docs/validation/m6-props-before/docs/validation/a7-effects-fallback.json",
+      "sha256": "014a6198c5c6794bc6791643428377d8b709e07df4179dfef78b6c7d4e5e6c11"
+    },
+    {
+      "path": "docs/validation/a7-effects.json",
+      "backup": "docs/validation/m6-props-before/docs/validation/a7-effects.json",
+      "sha256": "814e4665d933607546fd1d3a18ff04041ca9b1ccd6b1c5442ef7be072fa30411"
+    },
+    {
+      "path": "docs/validation/a7-final-runtime-hashes.json",
+      "backup": "docs/validation/m6-props-before/docs/validation/a7-final-runtime-hashes.json",
+      "sha256": "6ce4b5bdbde5b342f9cdc844e374ded6fd10d74ca00c24895962fdd6a5d152b6"
+    },
+    {
+      "path": "docs/validation/a7-final-screenshots.json",
+      "backup": "docs/validation/m6-props-before/docs/validation/a7-final-screenshots.json",
+      "sha256": "c66629356ee416536ce37b8d8ff770eeefce7d9e2eee659cb443b8cd86e80028"
+    },
+    {
+      "path": "docs/validation/a7-first-full-interrupted.json",
+      "backup": "docs/validation/m6-props-before/docs/validation/a7-first-full-interrupted.json",
+      "sha256": "017127b94dacf83cd40f229f3076a5bb9d9190b20304c54a3f0eb46e6ed17839"
+    },
+    {
+      "path": "docs/validation/a7-first-target.json",
+      "backup": "docs/validation/m6-props-before/docs/validation/a7-first-target.json",
+      "sha256": "cee463ad73a9c8d5bb8876063b300f4c835c356f0d059e3b9e8dad3dfcfa355e"
+    },
+    {
+      "path": "docs/validation/a7-mobile-screenshots.json",
+      "backup": "docs/validation/m6-props-before/docs/validation/a7-mobile-screenshots.json",
+      "sha256": "87c613ae649ed8b0e850bd6641b3bc24b574944a39fec560fbda984602b4cef6"
+    },
+    {
+      "path": "docs/validation/a7-mobile.json",
+      "backup": "docs/validation/m6-props-before/docs/validation/a7-mobile.json",
+      "sha256": "7ff7f511935e8d8d65160580e9d4c7537b86f7ea84eefdbbb0dd15b7aab68bf9"
+    },
+    {
+      "path": "docs/validation/a7-projectiles.json",
+      "backup": "docs/validation/m6-props-before/docs/validation/a7-projectiles.json",
+      "sha256": "d594b5eb1b631819f52a3e1aa20ffd7627ca44051b98e2c62c7eb7b4737e5af1"
+    },
+    {
+      "path": "docs/validation/a7-runtime-hashes.json",
+      "backup": "docs/validation/m6-props-before/docs/validation/a7-runtime-hashes.json",
+      "sha256": "a7858703b13005c51da238506ecc7a6b40b3c90bd7144282524548300f2545c6"
+    },
+    {
+      "path": "docs/validation/a7-second-target.json",
+      "backup": "docs/validation/m6-props-before/docs/validation/a7-second-target.json",
+      "sha256": "23d4ae8e8fb08de6ed7c294a107b45d82139d23726d4d63606c0937c9abccac5"
+    },
+    {
+      "path": "docs/validation/a8-backup-verification.json",
+      "backup": "docs/validation/m6-props-before/docs/validation/a8-backup-verification.json",
+      "sha256": "793022aaaed52c538f376283d6ad266d660b46c7387a667cb816ffd11d6c56de"
+    },
+    {
+      "path": "docs/validation/a8-campaign-screenshots.json",
+      "backup": "docs/validation/m6-props-before/docs/validation/a8-campaign-screenshots.json",
+      "sha256": "fbfafad8ea4642d4fa7d8049415c6d9831eb1782565826a1b228436bf613f0b8"
+    },
+    {
+      "path": "docs/validation/a8-checks.json",
+      "backup": "docs/validation/m6-props-before/docs/validation/a8-checks.json",
+      "sha256": "6d8615730958e6d3caeb585064b062dd026a9120fe63c278ebc7a03fa839e5a1"
+    },
+    {
+      "path": "docs/validation/a8-complete-journey.json",
+      "backup": "docs/validation/m6-props-before/docs/validation/a8-complete-journey.json",
+      "sha256": "eac725d2edbe1cc324f290661e467315ea46113f50fc0e24732219b913790a3b"
+    },
+    {
+      "path": "docs/validation/a8-development.json",
+      "backup": "docs/validation/m6-props-before/docs/validation/a8-development.json",
+      "sha256": "85cd3134d19c35727c049bc6df2e57cab5c2194738c2d1b9369ad52988734cb4"
+    },
+    {
+      "path": "docs/validation/a8-e2e-final.json",
+      "backup": "docs/validation/m6-props-before/docs/validation/a8-e2e-final.json",
+      "sha256": "78e1f78082153f582ee51cf72bcc58782da0150dbe0167d084f6adab6edaabe5"
+    },
+    {
+      "path": "docs/validation/a8-enemy-target.json",
+      "backup": "docs/validation/m6-props-before/docs/validation/a8-enemy-target.json",
+      "sha256": "110acf8357b7fc2279701c248c37a89a9b7b9c6eae0b94554377a283053d7798"
+    },
+    {
+      "path": "docs/validation/a8-enemy-third-target.json",
+      "backup": "docs/validation/m6-props-before/docs/validation/a8-enemy-third-target.json",
+      "sha256": "13f29cbbfbdcb9494aea63cb2956dbd35e49f84425086cfb81704d6350fbf3cb"
+    },
+    {
+      "path": "docs/validation/a8-final-2-runtime-hashes.json",
+      "backup": "docs/validation/m6-props-before/docs/validation/a8-final-2-runtime-hashes.json",
+      "sha256": "de469ea8271d049ea3c74585d8b5f8045393c26e213005a79028d59d9720b91c"
+    },
+    {
+      "path": "docs/validation/a8-final-runtime-hashes.json",
+      "backup": "docs/validation/m6-props-before/docs/validation/a8-final-runtime-hashes.json",
+      "sha256": "ea51fb8d909535faac56be0727f63e1c515ac4be636f9c90396839eeeae9cd98"
+    },
+    {
+      "path": "docs/validation/a8-final-screenshots.json",
+      "backup": "docs/validation/m6-props-before/docs/validation/a8-final-screenshots.json",
+      "sha256": "21aa46b8f0e75130ce7f996f6ed9c078a7a65cfa0d819a7fb836fb51e272fce3"
+    },
+    {
+      "path": "docs/validation/a8-first-full-interrupted.json",
+      "backup": "docs/validation/m6-props-before/docs/validation/a8-first-full-interrupted.json",
+      "sha256": "332bea9e08df1dd7d87cedf2d9a91df432f4ee3d9c74be8d8678712aa27b0004"
+    },
+    {
+      "path": "docs/validation/a8-first-target.json",
+      "backup": "docs/validation/m6-props-before/docs/validation/a8-first-target.json",
+      "sha256": "7637e914f0bdeb1e49ff6a9c4f7db52340d69c9225c16358e82a53b550b656e0"
+    },
+    {
+      "path": "docs/validation/a8-mobile-screenshots.json",
+      "backup": "docs/validation/m6-props-before/docs/validation/a8-mobile-screenshots.json",
+      "sha256": "dd368e88299c4edfe9fc351c988959067d6adc291f27a72c0388dc4c4aca730b"
+    },
+    {
+      "path": "docs/validation/a8-mobile.json",
+      "backup": "docs/validation/m6-props-before/docs/validation/a8-mobile.json",
+      "sha256": "067c394045a84c6873a89a80cce6ad34314bd181b356b69a81c0a63b0df15283"
+    },
+    {
+      "path": "docs/validation/a8-second-target.json",
+      "backup": "docs/validation/m6-props-before/docs/validation/a8-second-target.json",
+      "sha256": "88af4cb77accb8109f62d8d9810e1436b5ce08b4f39443d204037617a1859e55"
+    },
+    {
+      "path": "docs/validation/a8-third-target.json",
+      "backup": "docs/validation/m6-props-before/docs/validation/a8-third-target.json",
+      "sha256": "4f1d3b86dc292e27be9e8cc310ed0951981e3fa948cdc8e088cdc6640f944d1f"
+    },
+    {
+      "path": "docs/validation/a8-touch-fallback.json",
+      "backup": "docs/validation/m6-props-before/docs/validation/a8-touch-fallback.json",
+      "sha256": "e901b610ed4e26e83425b7e91b04b0498421cd834e5b1335d3495f6bbceabee9"
+    },
+    {
+      "path": "docs/validation/a8-touch-icons.json",
+      "backup": "docs/validation/m6-props-before/docs/validation/a8-touch-icons.json",
+      "sha256": "1b65b3dc463d2be477ec48cf3259c4431c26c6b6ef870bd039aad806b81b7157"
+    },
+    {
+      "path": "docs/validation/action-art.json",
+      "backup": "docs/validation/m6-props-before/docs/validation/action-art.json",
+      "sha256": "12933555ec09b446db6f8a4e408a0f00bbf345bf7e7c3468f86f455659f300cc"
+    },
+    {
+      "path": "docs/validation/art-budget.json",
+      "backup": "docs/validation/m6-props-before/docs/validation/art-budget.json",
+      "sha256": "8cc7785eeb9b55f77b2777b556804e8550aa5875ecc1cfc499b64cf889dac539"
+    },
+    {
+      "path": "docs/validation/checks.json",
+      "backup": "docs/validation/m6-props-before/docs/validation/checks.json",
+      "sha256": "4ada7fecea2d4c11c874e1e94fdb9fff3b5485243f073438592f8ed7041cf3ae"
+    },
+    {
+      "path": "docs/validation/complete-journey.json",
+      "backup": "docs/validation/m6-props-before/docs/validation/complete-journey.json",
+      "sha256": "eac725d2edbe1cc324f290661e467315ea46113f50fc0e24732219b913790a3b"
+    },
+    {
+      "path": "docs/validation/effects.json",
+      "backup": "docs/validation/m6-props-before/docs/validation/effects.json",
+      "sha256": "d24aea84f74270b572c6ddb3e705153cc241c471378e2ee9ea11e5f0180cfaf1"
+    },
+    {
+      "path": "docs/validation/enemy-art.json",
+      "backup": "docs/validation/m6-props-before/docs/validation/enemy-art.json",
+      "sha256": "5c53b04b33ce8b5f7c75d2e1976994063f43d5e06d2fe4490939d86245aefe46"
+    },
+    {
+      "path": "docs/validation/illustrations.json",
+      "backup": "docs/validation/m6-props-before/docs/validation/illustrations.json",
+      "sha256": "8e2fc0fdf49a70bab6216f20b1eee3662f3a9c356feb5187dc5ea7f8058b9a9b"
+    },
+    {
+      "path": "docs/validation/npc-faces-fallback.json",
+      "backup": "docs/validation/m6-props-before/docs/validation/npc-faces-fallback.json",
+      "sha256": "bc4ad18f3366688137e3dfbcf6677ae9ec54784e76699e9186e2f6c452cdb3ba"
+    },
+    {
+      "path": "docs/validation/npc-faces.json",
+      "backup": "docs/validation/m6-props-before/docs/validation/npc-faces.json",
+      "sha256": "3412701e60ec827bc9d512483169b3b92ae6255bddcb3ce5786c5d6db64ec7cf"
+    },
+    {
+      "path": "docs/validation/production-smoke.json",
+      "backup": "docs/validation/m6-props-before/docs/validation/production-smoke.json",
+      "sha256": "3feecd16cf3815679c910bd5e9b119d541fc1e9a723b344986eb48c21935f85c"
+    },
+    {
+      "path": "docs/validation/terrain-art.json",
+      "backup": "docs/validation/m6-props-before/docs/validation/terrain-art.json",
+      "sha256": "488006d95b26a73e236ce4e5ce97484a77137079aff268cfd5f5d19dbaa68b1a"
+    },
+    {
+      "path": "docs/validation/terrain-fallback-both.json",
+      "backup": "docs/validation/m6-props-before/docs/validation/terrain-fallback-both.json",
+      "sha256": "01bbd76f084423463593b9b817fc2a6f779934ed876aff2c6442221cba927435"
+    },
+    {
+      "path": "docs/validation/terrain-fallback-fill.json",
+      "backup": "docs/validation/m6-props-before/docs/validation/terrain-fallback-fill.json",
+      "sha256": "5c3cff513689bf18fe0797a66f0cf04b6f8841f22783e14b22c613c62caf4b7c"
+    },
+    {
+      "path": "docs/validation/terrain-fallback-top.json",
+      "backup": "docs/validation/m6-props-before/docs/validation/terrain-fallback-top.json",
+      "sha256": "0af2ef22d98fc6be4cd111495ab02dd5c8432968055f52bb0677dc5b7cb5209c"
+    },
+    {
+      "path": "docs/validation/terrain.json",
+      "backup": "docs/validation/m6-props-before/docs/validation/terrain.json",
+      "sha256": "a6f77143bf78d3184da43269d64160a8f2b932b7aeca1e7094d65f44e90a802e"
+    },
+    {
+      "path": "docs/validation/touch-icons.json",
+      "backup": "docs/validation/m6-props-before/docs/validation/touch-icons.json",
+      "sha256": "9e242921c0240730947099311aebbf368b033babe8654abf5db67d2728dfa894"
+    },
+    {
+      "path": "docs/validation/weapons.json",
+      "backup": "docs/validation/m6-props-before/docs/validation/weapons.json",
+      "sha256": "eb8f6675fe8ace81378afc18ee387df6ea08e99c4b5c1e68632cc9410698b9fe"
+    },
+    {
+      "path": "docs/screenshots/art-a8/final/art-a8/campaign-S05-route.png",
+      "backup": "docs/validation/m6-props-before/docs/screenshots/art-a8/final/art-a8/campaign-S05-route.png",
+      "sha256": "734baca8ea2e10a4ece6bc85a1a2bcc5719aac45b959e8bd1b842d97f4fc25f8"
+    },
+    {
+      "path": "docs/screenshots/art-a8/final/art-a8/campaign-S10-route.png",
+      "backup": "docs/validation/m6-props-before/docs/screenshots/art-a8/final/art-a8/campaign-S10-route.png",
+      "sha256": "ae22a201f222c4aa6eea312062f71d50b8d7941321c52d5ff48f0d134732e160"
+    },
+    {
+      "path": "docs/screenshots/art-a8/final/art-a8/campaign-S15-route.png",
+      "backup": "docs/validation/m6-props-before/docs/screenshots/art-a8/final/art-a8/campaign-S15-route.png",
+      "sha256": "e517f4d4261934df4478a165ab53da8953b9fc4aaf48e30d9c3a8a6a59b0dbf9"
+    },
+    {
+      "path": "docs/screenshots/art-a8/final/art-a8/campaign-S19-route.png",
+      "backup": "docs/validation/m6-props-before/docs/screenshots/art-a8/final/art-a8/campaign-S19-route.png",
+      "sha256": "9722f2f0fd4e572feba884fbe17faae64e4a191ddd44d5e2541297346e45ec0e"
+    },
+    {
+      "path": "docs/screenshots/art-a8/final/art-a8/campaign-S25-route.png",
+      "backup": "docs/validation/m6-props-before/docs/screenshots/art-a8/final/art-a8/campaign-S25-route.png",
+      "sha256": "90dc5b0165eeb2a93a6c062ab605aea0cde71f7d5f224b3e11c7fae4e448a069"
+    },
+    {
+      "path": "docs/screenshots/art-a8/final/art-a8/campaign-S29-route.png",
+      "backup": "docs/validation/m6-props-before/docs/screenshots/art-a8/final/art-a8/campaign-S29-route.png",
+      "sha256": "3eb2a4aab915ed27180a6054acf6cd5ed8812e4e427f3f443d09b65d6e298455"
+    },
+    {
+      "path": "docs/screenshots/art-a8/final/art-a8/campaign-S36-route.png",
+      "backup": "docs/validation/m6-props-before/docs/screenshots/art-a8/final/art-a8/campaign-S36-route.png",
+      "sha256": "7ee8c796bd8b1e1a6cfdf9afac3930cbbd9f440b6828c28d3fefef717fecabf1"
+    },
+    {
+      "path": "docs/screenshots/art-a8/final/art-a8/mobile-phone-dialogue.png",
+      "backup": "docs/validation/m6-props-before/docs/screenshots/art-a8/final/art-a8/mobile-phone-dialogue.png",
+      "sha256": "6331bb93c7c748c464a9c9e992804da4eed912e71dbc9e5b8fd77dc03645db99"
+    },
+    {
+      "path": "docs/screenshots/art-a8/final/art-a8/mobile-phone-start.png",
+      "backup": "docs/validation/m6-props-before/docs/screenshots/art-a8/final/art-a8/mobile-phone-start.png",
+      "sha256": "36e0f4bd97f43d553c474e72b182fe21975f3b680cf7df201b414a496e6254d5"
+    },
+    {
+      "path": "docs/screenshots/art-a8/final/art-a8/mobile-phone-swing.png",
+      "backup": "docs/validation/m6-props-before/docs/screenshots/art-a8/final/art-a8/mobile-phone-swing.png",
+      "sha256": "77e97d5e8deed56ba276961204a1b86e8229c0e9a1e29eb74964f8e586b85132"
+    },
+    {
+      "path": "docs/screenshots/art-a8/final/art-a8/mobile-tablet-dialogue.png",
+      "backup": "docs/validation/m6-props-before/docs/screenshots/art-a8/final/art-a8/mobile-tablet-dialogue.png",
+      "sha256": "5e1ecf9d4e4e8add218774613395feaf75bc8cafdf65a7eb45633ebf79db26f8"
+    },
+    {
+      "path": "docs/screenshots/art-a8/final/art-a8/mobile-tablet-start.png",
+      "backup": "docs/validation/m6-props-before/docs/screenshots/art-a8/final/art-a8/mobile-tablet-start.png",
+      "sha256": "d1c9a4c88ffb09fe03743a71c40715df5e8cc6ccf0b6df0f30171442ad2b4e28"
+    },
+    {
+      "path": "docs/screenshots/art-a8/final/art-a8/mobile-tablet-swing.png",
+      "backup": "docs/validation/m6-props-before/docs/screenshots/art-a8/final/art-a8/mobile-tablet-swing.png",
+      "sha256": "f657769c27137b62db497b22b78a64e261448b45a556f84728302296ec5fd03e"
+    },
+    {
+      "path": "docs/screenshots/art-a8/final/art-a8/phone-72px-icons.png",
+      "backup": "docs/validation/m6-props-before/docs/screenshots/art-a8/final/art-a8/phone-72px-icons.png",
+      "sha256": "39c84299931b9ec866e6621054cf30207c58afc6c541c2ade452a0dd4ec69c3e"
+    },
+    {
+      "path": "docs/screenshots/art-a8/final/art-a8/phone-fallback-ui-bridge.png",
+      "backup": "docs/validation/m6-props-before/docs/screenshots/art-a8/final/art-a8/phone-fallback-ui-bridge.png",
+      "sha256": "ade53b15ec5d2f0c9e6032863090e8fc1df34d54ec9facc198f2cf669a6ed871"
+    },
+    {
+      "path": "docs/screenshots/art-a8/final/art-a8/phone-fallback-ui-dawn.png",
+      "backup": "docs/validation/m6-props-before/docs/screenshots/art-a8/final/art-a8/phone-fallback-ui-dawn.png",
+      "sha256": "cb95c8d45012ef0630f68bfacb7c25428ef9a5001493b30878ca231b061b85af"
+    },
+    {
+      "path": "docs/screenshots/art-a8/final/art-a8/phone-fallback-ui-depart.png",
+      "backup": "docs/validation/m6-props-before/docs/screenshots/art-a8/final/art-a8/phone-fallback-ui-depart.png",
+      "sha256": "2650af741507195e14d55a14cebf997cb0e13bde6ec4995748a4b62c7738d72c"
+    },
+    {
+      "path": "docs/screenshots/art-a8/final/art-a8/phone-fallback-ui-flame.png",
+      "backup": "docs/validation/m6-props-before/docs/screenshots/art-a8/final/art-a8/phone-fallback-ui-flame.png",
+      "sha256": "4c9548677f06898c6ac3d6e637dd9db3c5c21f47ffba6c2f9e6acb6a7390db56"
+    },
+    {
+      "path": "docs/screenshots/art-a8/final/art-a8/phone-fallback-ui-inspect.png",
+      "backup": "docs/validation/m6-props-before/docs/screenshots/art-a8/final/art-a8/phone-fallback-ui-inspect.png",
+      "sha256": "e017acb55a40643f52e95d857efe7c89732641b65ef6de3ca6e3112df80b9a58"
+    },
+    {
+      "path": "docs/screenshots/art-a8/final/art-a8/phone-fallback-ui-jump.png",
+      "backup": "docs/validation/m6-props-before/docs/screenshots/art-a8/final/art-a8/phone-fallback-ui-jump.png",
+      "sha256": "37c10d7e39cc44a11238e8b944c5d33eafd71e61e1a25e2a780b6079c9d893fc"
+    },
+    {
+      "path": "docs/screenshots/art-a8/final/art-a8/phone-fallback-ui-shield.png",
+      "backup": "docs/validation/m6-props-before/docs/screenshots/art-a8/final/art-a8/phone-fallback-ui-shield.png",
+      "sha256": "fb0dce6ebf25e8ff94569eb8ab5a1bba1b6fec52089f2967cef2bf1b862a0133"
+    },
+    {
+      "path": "docs/screenshots/art-a8/final/art-a8/phone-fallback-ui-talk.png",
+      "backup": "docs/validation/m6-props-before/docs/screenshots/art-a8/final/art-a8/phone-fallback-ui-talk.png",
+      "sha256": "4c08b522e6ba40ed6da602feff083463e88e1b9ec76163c809bd264056664702"
+    },
+    {
+      "path": "docs/screenshots/art-a8/final/art-a8/phone-fallback-ui-wing.png",
+      "backup": "docs/validation/m6-props-before/docs/screenshots/art-a8/final/art-a8/phone-fallback-ui-wing.png",
+      "sha256": "d508622d98bcf59dddba9be87091e837eb17ea845b5f0fcc74101ce2cc83e20b"
+    },
+    {
+      "path": "docs/screenshots/art-a8/final/art-a8/phone-ui-bridge.png",
+      "backup": "docs/validation/m6-props-before/docs/screenshots/art-a8/final/art-a8/phone-ui-bridge.png",
+      "sha256": "152882be4532aadaf0ea9c513d1d2dfb37da6cda1ef53185c697493427da720a"
+    },
+    {
+      "path": "docs/screenshots/art-a8/final/art-a8/phone-ui-dawn.png",
+      "backup": "docs/validation/m6-props-before/docs/screenshots/art-a8/final/art-a8/phone-ui-dawn.png",
+      "sha256": "8721041f787a99eb5afb48beb41f97f25b379b741092a0922badb548cbaf3f06"
+    },
+    {
+      "path": "docs/screenshots/art-a8/final/art-a8/phone-ui-depart.png",
+      "backup": "docs/validation/m6-props-before/docs/screenshots/art-a8/final/art-a8/phone-ui-depart.png",
+      "sha256": "20d7b20cfb290cfac214fb27d71d762db195417d9f0663fbcdc0d0ce7f68531f"
+    },
+    {
+      "path": "docs/screenshots/art-a8/final/art-a8/phone-ui-flame.png",
+      "backup": "docs/validation/m6-props-before/docs/screenshots/art-a8/final/art-a8/phone-ui-flame.png",
+      "sha256": "bc8dbc0bf5f2836ae0a7d86e087e3a3db7becc26d311d69ee1aa72772e033798"
+    },
+    {
+      "path": "docs/screenshots/art-a8/final/art-a8/phone-ui-inspect.png",
+      "backup": "docs/validation/m6-props-before/docs/screenshots/art-a8/final/art-a8/phone-ui-inspect.png",
+      "sha256": "0bc8d7eb5ed9d776be0880613b595b0bf503726811ce861e4f3eeefd8b9908dc"
+    },
+    {
+      "path": "docs/screenshots/art-a8/final/art-a8/phone-ui-jump.png",
+      "backup": "docs/validation/m6-props-before/docs/screenshots/art-a8/final/art-a8/phone-ui-jump.png",
+      "sha256": "002e7a0be4b9864e3e762d3ce4e2e6f14d66e78c6666ba860b91646c674a9e48"
+    },
+    {
+      "path": "docs/screenshots/art-a8/final/art-a8/phone-ui-shield.png",
+      "backup": "docs/validation/m6-props-before/docs/screenshots/art-a8/final/art-a8/phone-ui-shield.png",
+      "sha256": "bc510676279b807a92420654c58a72484dca7d255669529c6d476c439e827cab"
+    },
+    {
+      "path": "docs/screenshots/art-a8/final/art-a8/phone-ui-talk.png",
+      "backup": "docs/validation/m6-props-before/docs/screenshots/art-a8/final/art-a8/phone-ui-talk.png",
+      "sha256": "faa5fd55ebcc8b033fec5887c1dd5c6084fe899af9d5c5867ccb8a5d55c9b462"
+    },
+    {
+      "path": "docs/screenshots/art-a8/final/art-a8/phone-ui-wing.png",
+      "backup": "docs/validation/m6-props-before/docs/screenshots/art-a8/final/art-a8/phone-ui-wing.png",
+      "sha256": "a7e85c6e0da7a7e6af6a1a10407941a5e13e4c8e3dd31e1e9eb3c54a4cdd7837"
+    },
+    {
+      "path": "docs/screenshots/art-a8/final/art-a8/tablet-72px-icons.png",
+      "backup": "docs/validation/m6-props-before/docs/screenshots/art-a8/final/art-a8/tablet-72px-icons.png",
+      "sha256": "91a1bfdb870e1294c631026ad84676ae8a0a8e6057b08d857a5c6d8b89232489"
+    },
+    {
+      "path": "docs/screenshots/art-a8/final/art-a8/tablet-ui-bridge.png",
+      "backup": "docs/validation/m6-props-before/docs/screenshots/art-a8/final/art-a8/tablet-ui-bridge.png",
+      "sha256": "e1edd147b86c9067d7a54cc8fbd7fe32929a3e7fb4132a53f521781ebc31d9e6"
+    },
+    {
+      "path": "docs/screenshots/art-a8/final/art-a8/tablet-ui-dawn.png",
+      "backup": "docs/validation/m6-props-before/docs/screenshots/art-a8/final/art-a8/tablet-ui-dawn.png",
+      "sha256": "01a549ea74e122d8f07c886a3a05abb87bd2d68b58c0ff52a4533f17d75bb627"
+    },
+    {
+      "path": "docs/screenshots/art-a8/final/art-a8/tablet-ui-depart.png",
+      "backup": "docs/validation/m6-props-before/docs/screenshots/art-a8/final/art-a8/tablet-ui-depart.png",
+      "sha256": "b3a39b4e9ee387d38b15da0409fe6114810930046e008a85ca6c14adad1cf1eb"
+    },
+    {
+      "path": "docs/screenshots/art-a8/final/art-a8/tablet-ui-flame.png",
+      "backup": "docs/validation/m6-props-before/docs/screenshots/art-a8/final/art-a8/tablet-ui-flame.png",
+      "sha256": "17cd6e836a08ae8747d3dbac41ebf683e15b35edef9b99a8f6fbe7587fd01786"
+    },
+    {
+      "path": "docs/screenshots/art-a8/final/art-a8/tablet-ui-inspect.png",
+      "backup": "docs/validation/m6-props-before/docs/screenshots/art-a8/final/art-a8/tablet-ui-inspect.png",
+      "sha256": "e75f49d7bd15e3bf8a20422f7ded205fcf40783407e68398b87f0a0a1be99daf"
+    },
+    {
+      "path": "docs/screenshots/art-a8/final/art-a8/tablet-ui-jump.png",
+      "backup": "docs/validation/m6-props-before/docs/screenshots/art-a8/final/art-a8/tablet-ui-jump.png",
+      "sha256": "98c780bea78548f8e0fe3ec9942941f0797eece10b8d60f0d28fed7942c81ff0"
+    },
+    {
+      "path": "docs/screenshots/art-a8/final/art-a8/tablet-ui-shield.png",
+      "backup": "docs/validation/m6-props-before/docs/screenshots/art-a8/final/art-a8/tablet-ui-shield.png",
+      "sha256": "bf412b1b3b8c9df25b3c40bd3a1cbaaea37749e6ca99582efb21d5de38d6a852"
+    },
+    {
+      "path": "docs/screenshots/art-a8/final/art-a8/tablet-ui-talk.png",
+      "backup": "docs/validation/m6-props-before/docs/screenshots/art-a8/final/art-a8/tablet-ui-talk.png",
+      "sha256": "38c4d649a6c2598b4b45b5f658bcab5589913159a097252de4ab055138ebd569"
+    },
+    {
+      "path": "docs/screenshots/art-a8/final/art-a8/tablet-ui-wing.png",
+      "backup": "docs/validation/m6-props-before/docs/screenshots/art-a8/final/art-a8/tablet-ui-wing.png",
+      "sha256": "ee9462800346a7e2df27949bbbff7667f5ec448705b3dc8d63409a8b6041811c"
+    }
+  ]
+}

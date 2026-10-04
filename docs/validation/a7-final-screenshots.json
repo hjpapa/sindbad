@@ -1,0 +1,223 @@
+{
+  "date": "2026-10-03T20:32:58.837841+00:00",
+  "method": "29 art/mobile captures plus 7 byte-identical fresh-campaign captures; historical attempts preserved in separate subdirectories",
+  "captures": [
+    {
+      "path": "docs/screenshots/art-a7/campaign-S05-route.png",
+      "bytes": 1096930,
+      "mtimeUTC": "2026-10-03T20:18:12.420283+00:00",
+      "sha256": "615d19c3c7079e30ae13146ae5c9cd25088a249640b144b386b66b39eaaca41d"
+    },
+    {
+      "path": "docs/screenshots/art-a7/campaign-S10-route.png",
+      "bytes": 1049133,
+      "mtimeUTC": "2026-10-03T20:20:20.278188+00:00",
+      "sha256": "a0dd3ac60236d6cc9ac02fc18b1c5b92515f7865227d2f79ead55b3ac0b540f7"
+    },
+    {
+      "path": "docs/screenshots/art-a7/campaign-S15-route.png",
+      "bytes": 1243832,
+      "mtimeUTC": "2026-10-03T20:22:10.696328+00:00",
+      "sha256": "3934a04efd01d9b9f60f81f44f893215ad3ae143b3e223777bdd4501fbc00fd6"
+    },
+    {
+      "path": "docs/screenshots/art-a7/campaign-S19-route.png",
+      "bytes": 844613,
+      "mtimeUTC": "2026-10-03T20:23:38.024371+00:00",
+      "sha256": "d90f2c697864f3e252efbf2633d2dbc7888d75b518865786e477e7d0ef95457d"
+    },
+    {
+      "path": "docs/screenshots/art-a7/campaign-S25-route.png",
+      "bytes": 1052760,
+      "mtimeUTC": "2026-10-03T20:25:47.784233+00:00",
+      "sha256": "ee698b38b33fd9d81ed5d626f3a887a2950e8540b0b4652d85c15e7857f670a8"
+    },
+    {
+      "path": "docs/screenshots/art-a7/campaign-S29-route.png",
+      "bytes": 1180098,
+      "mtimeUTC": "2026-10-03T20:27:17.742065+00:00",
+      "sha256": "5f4bf713cf9f02c1f01d295a1c5a5a1942ea361961fb9b8bdfefc6bb64491a96"
+    },
+    {
+      "path": "docs/screenshots/art-a7/campaign-S36-route.png",
+      "bytes": 996874,
+      "mtimeUTC": "2026-10-03T20:29:46.723070+00:00",
+      "sha256": "83aafdb34122cee181cae0e17532fce6bd992087a884c11f9764ff25c87e438a"
+    },
+    {
+      "path": "docs/screenshots/art-a7/mobile-phone-dialogue.png",
+      "bytes": 1675598,
+      "mtimeUTC": "2026-10-03T19:39:05.688784+00:00",
+      "sha256": "6331bb93c7c748c464a9c9e992804da4eed912e71dbc9e5b8fd77dc03645db99"
+    },
+    {
+      "path": "docs/screenshots/art-a7/mobile-phone-start.png",
+      "bytes": 2664667,
+      "mtimeUTC": "2026-10-03T19:38:54.286778+00:00",
+      "sha256": "320bb3e437b42f02d8c772af237b446c667c865ae92ae18e0cf4c2016be66478"
+    },
+    {
+      "path": "docs/screenshots/art-a7/mobile-phone-swing.png",
+      "bytes": 2636850,
+      "mtimeUTC": "2026-10-03T19:39:00.121046+00:00",
+      "sha256": "d3166f0014f9461eab5f0e26569d66dcbe661496867903e461a2591db3f552e5"
+    },
+    {
+      "path": "docs/screenshots/art-a7/mobile-tablet-dialogue.png",
+      "bytes": 2952316,
+      "mtimeUTC": "2026-10-03T19:39:22.138578+00:00",
+      "sha256": "9ea970c6aeeb4455050448e7c52b5f78e7d7a49e260c87b5f9f15c27127d378a"
+    },
+    {
+      "path": "docs/screenshots/art-a7/mobile-tablet-start.png",
+      "bytes": 2920962,
+      "mtimeUTC": "2026-10-03T19:39:10.379680+00:00",
+      "sha256": "911ee3497f45affd8ce67486e9a2876fdc27ab1a459f37ac011f8f833f10ef5d"
+    },
+    {
+      "path": "docs/screenshots/art-a7/mobile-tablet-swing.png",
+      "bytes": 2897897,
+      "mtimeUTC": "2026-10-03T19:39:16.218422+00:00",
+      "sha256": "c0647a89336e489b7350bbeb0ff79159cac95149123436903d46624e8ff0440f"
+    },
+    {
+      "path": "docs/screenshots/art-a7/phone-projectile-kite-wind.png",
+      "bytes": 463280,
+      "mtimeUTC": "2026-10-03T19:57:20.032930+00:00",
+      "sha256": "1d213a9d9a9c7f0b274e5eff61658e07f32fae9546989a80d96b469bae798e01"
+    },
+    {
+      "path": "docs/screenshots/art-a7/phone-projectile-kuura-orb.png",
+      "bytes": 435307,
+      "mtimeUTC": "2026-10-03T19:57:29.322992+00:00",
+      "sha256": "2068195180ed44452e0e40ffbb7028b1645f004ad5e8c0d558f75f2509862f64"
+    },
+    {
+      "path": "docs/screenshots/art-a7/phone-projectile-siren-note.png",
+      "bytes": 475406,
+      "mtimeUTC": "2026-10-03T19:57:04.698438+00:00",
+      "sha256": "98061df42b5fdf64587b5dc4a15a89f1fea934e2ce82afe40482a77f171eef38"
+    },
+    {
+      "path": "docs/screenshots/art-a7/phone-projectile-siren-wave-right.png",
+      "bytes": 474814,
+      "mtimeUTC": "2026-10-03T19:57:15.637973+00:00",
+      "sha256": "c600a49bc9d44f2c05b32aa54e9f2524cec62a1567c0e24aeb4c7bc7150c653d"
+    },
+    {
+      "path": "docs/screenshots/art-a7/phone-projectile-siren-wave.png",
+      "bytes": 470842,
+      "mtimeUTC": "2026-10-03T19:57:00.735419+00:00",
+      "sha256": "867934d8aa8c7e05105e0e909ea537a2c2cd116f25ba0fa325d4843ad4163d79"
+    },
+    {
+      "path": "docs/screenshots/art-a7/phone-reduced-projectile-siren-wave.png",
+      "bytes": 474341,
+      "mtimeUTC": "2026-10-03T19:57:33.074452+00:00",
+      "sha256": "7b0c850e837f47c79c99322b461ec9106cccaf6ec1696439bcac0a3004a6621b"
+    },
+    {
+      "path": "docs/screenshots/art-a7/phone-S01-fallback-defeat.png",
+      "bytes": 461367,
+      "mtimeUTC": "2026-10-03T19:59:15.283068+00:00",
+      "sha256": "89e3ba5386353ae03c4437c2192b3538e36c9f143304ef005c071ed459098c81"
+    },
+    {
+      "path": "docs/screenshots/art-a7/phone-S01-skeleton-defeat.png",
+      "bytes": 461321,
+      "mtimeUTC": "2026-10-03T19:58:26.545994+00:00",
+      "sha256": "f2f95b60ef69f1fe003a0dfb8b1e88d568ac6dd0206cec5d72f25ccb04b99382"
+    },
+    {
+      "path": "docs/screenshots/art-a7/phone-S02-missing-sheets.png",
+      "bytes": 463478,
+      "mtimeUTC": "2026-10-03T19:58:56.314432+00:00",
+      "sha256": "aff9944fc2a9c8243618cde5926a4d1f8734f663566f5ddc56f9437315cfc4b0"
+    },
+    {
+      "path": "docs/screenshots/art-a7/phone-S04-crab-defeat.png",
+      "bytes": 468307,
+      "mtimeUTC": "2026-10-03T19:58:35.955621+00:00",
+      "sha256": "d81c6177f7822a84ac7be7e4be85004804df4912b23ec4295f0084314506d58b"
+    },
+    {
+      "path": "docs/screenshots/art-a7/phone-S10-missing-sheets.png",
+      "bytes": 463003,
+      "mtimeUTC": "2026-10-03T19:59:01.773647+00:00",
+      "sha256": "545dd782541601d8232b369ff10289bfaa0b8443dcfe9938b225047361fec019"
+    },
+    {
+      "path": "docs/screenshots/art-a7/phone-S11-bandit-defeat.png",
+      "bytes": 499308,
+      "mtimeUTC": "2026-10-03T19:58:31.660300+00:00",
+      "sha256": "03b5a5f278f5f91a6b9074ec693ff2bb92e10b9e0c3f1dae7be9cb050ba7eca2"
+    },
+    {
+      "path": "docs/screenshots/art-a7/phone-S11-fallback-defeat.png",
+      "bytes": 498770,
+      "mtimeUTC": "2026-10-03T19:59:20.413309+00:00",
+      "sha256": "812a63f14046ca2ae174f1c711789e0fb7e4b11b99f9bb00e35a41494b85e281"
+    },
+    {
+      "path": "docs/screenshots/art-a7/phone-S31-missing-sheets.png",
+      "bytes": 436272,
+      "mtimeUTC": "2026-10-03T19:59:10.166737+00:00",
+      "sha256": "2d9d641d7540eecae7cd6d072102ee629c7d4ccb2351e63de801eddbc5d0b077"
+    },
+    {
+      "path": "docs/screenshots/art-a7/tablet-projectile-kite-wind.png",
+      "bytes": 977966,
+      "mtimeUTC": "2026-10-03T19:58:01.631533+00:00",
+      "sha256": "6177b690ed21b2aedc2708eca9f616d6b5e5ee558c3e6131d2a0843fa53e6c0f"
+    },
+    {
+      "path": "docs/screenshots/art-a7/tablet-projectile-kuura-orb.png",
+      "bytes": 902981,
+      "mtimeUTC": "2026-10-03T19:58:11.140446+00:00",
+      "sha256": "010c2142792e7f3f4ce6977e9e6016386a673664229727d63453d0712bead6b6"
+    },
+    {
+      "path": "docs/screenshots/art-a7/tablet-projectile-siren-note.png",
+      "bytes": 1025673,
+      "mtimeUTC": "2026-10-03T19:57:46.049715+00:00",
+      "sha256": "775f30ac7a634e1bf2840c2a0d7cbcd3efd3d78ad4ad02014c59b6366d1b4659"
+    },
+    {
+      "path": "docs/screenshots/art-a7/tablet-projectile-siren-wave-right.png",
+      "bytes": 968127,
+      "mtimeUTC": "2026-10-03T19:57:56.919064+00:00",
+      "sha256": "921a3815cb5f2dd1d0d48a41801e3ffd7c45507ac0c827e4ca3ca5514330cfe3"
+    },
+    {
+      "path": "docs/screenshots/art-a7/tablet-projectile-siren-wave.png",
+      "bytes": 1006120,
+      "mtimeUTC": "2026-10-03T19:57:42.069889+00:00",
+      "sha256": "d3f7177c7ecfb4467365d19da46b4dbc3eba47b130237b292920366e403c2edc"
+    },
+    {
+      "path": "docs/screenshots/art-a7/tablet-reduced-projectile-siren-wave.png",
+      "bytes": 1022997,
+      "mtimeUTC": "2026-10-03T19:58:15.102889+00:00",
+      "sha256": "b3fe608ba0b179aabdd730f252f7c0c085d66f6783c07bdee527c532b19cd6a2"
+    },
+    {
+      "path": "docs/screenshots/art-a7/tablet-S01-skeleton-defeat.png",
+      "bytes": 970037,
+      "mtimeUTC": "2026-10-03T19:58:42.153361+00:00",
+      "sha256": "107229f6f35ad89166b9eda53e048f32eac3034349f15c627f5cd02555f3cade"
+    },
+    {
+      "path": "docs/screenshots/art-a7/tablet-S04-crab-defeat.png",
+      "bytes": 1085139,
+      "mtimeUTC": "2026-10-03T19:58:51.639794+00:00",
+      "sha256": "558b370e9066ed807aecd2b698243c685f0ac032b7dfbc1d376ea7218739c65c"
+    },
+    {
+      "path": "docs/screenshots/art-a7/tablet-S11-bandit-defeat.png",
+      "bytes": 1106917,
+      "mtimeUTC": "2026-10-03T19:58:47.334061+00:00",
+      "sha256": "e1664acd0f41c23e3107817372f7146c560de56a3f25aa2d7a2f45862f76e31a"
+    }
+  ],
+  "htmlReportFiles": 1
+}

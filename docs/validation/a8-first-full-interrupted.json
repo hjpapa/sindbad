@@ -1,0 +1,15 @@
+{
+  "status": "interrupted after one failure",
+  "exitCode": 1,
+  "observedPassed": 14,
+  "observedFailed": 1,
+  "unfinished": 31,
+  "plannedTotal": 46,
+  "completedRawJson": false,
+  "reason": "Stopped after enemy artwork regression failed; all completed output and failure screenshot retained. No completed raw full report was emitted.",
+  "failureEvidence": "docs/screenshots/art-a8/first-full-interrupted/failure",
+  "runtimeHashes": "docs/validation/a8-final-runtime-hashes.json",
+  "sameFiles": 737,
+  "unchanged": true,
+  "initialInference": "Failure screenshot showed dragon recover after attack; separate asynchronous state/frame reads could race. This inference was not a confirmed stack trace. A later completed focused run actually exposed Windows UNKNOWN opening an old screenshot."
+}

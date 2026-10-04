@@ -1,0 +1,345 @@
+{
+  "config": {
+    "configFile": "C:\\code\\code10(sindbad)\\playwright.config.ts",
+    "rootDir": "C:/code/code10(sindbad)/tests/e2e",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": "C:\\code\\code10(sindbad)\\tests\\e2e\\server.setup.ts",
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ],
+      [
+        "html"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "C:/code/code10(sindbad)/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "C:/code/code10(sindbad)/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 240000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.55.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "kite-actions.spec.ts",
+      "file": "kite-actions.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "phone kite four actions keeps flight combat, release and stable rewards",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 45290,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "KITE phone S10 webtoon: poses / both directions / pause / touch attack / release / reward reload passed\n"
+                    },
+                    {
+                      "text": "KITE phone S33 webtoon: poses / both directions / pause / touch attack / release / reward reload passed\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 10
+                    },
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 116
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 905
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 5
+                    },
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 118
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 382
+                    }
+                  ],
+                  "startTime": "2026-10-04T08:33:42.990Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f061c0a50e7ad8e54b6e-06d198d30e4a94be48ed",
+          "file": "kite-actions.spec.ts",
+          "line": 49,
+          "column": 41
+        },
+        {
+          "title": "phone kite missing-sheet recovery keeps flight combat, release and stable rewards",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 36034,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "KITE phone S10 fallback: poses / both directions / pause / touch attack / release / reward reload passed\n"
+                    },
+                    {
+                      "text": "KITE phone S33 fallback: poses / both directions / pause / touch attack / release / reward reload passed\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 6
+                    },
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 127
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 382
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 9
+                    },
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 120
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 10
+                    }
+                  ],
+                  "startTime": "2026-10-04T08:34:29.140Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f061c0a50e7ad8e54b6e-72c03c79b8b7e57d5ed7",
+          "file": "kite-actions.spec.ts",
+          "line": 49,
+          "column": 41
+        },
+        {
+          "title": "tablet kite four actions keeps flight combat, release and stable rewards",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 38348,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "KITE tablet S10 webtoon: poses / both directions / pause / touch attack / release / reward reload passed\n"
+                    },
+                    {
+                      "text": "KITE tablet S33 webtoon: poses / both directions / pause / touch attack / release / reward reload passed\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 7
+                    },
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 133
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 896
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 8
+                    },
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 128
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 119
+                    }
+                  ],
+                  "startTime": "2026-10-04T08:35:05.189Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f061c0a50e7ad8e54b6e-886118bda2bc2ca58ede",
+          "file": "kite-actions.spec.ts",
+          "line": 49,
+          "column": 41
+        },
+        {
+          "title": "tablet kite missing-sheet recovery keeps flight combat, release and stable rewards",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 37712,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "KITE tablet S10 fallback: poses / both directions / pause / touch attack / release / reward reload passed\n"
+                    },
+                    {
+                      "text": "KITE tablet S33 fallback: poses / both directions / pause / touch attack / release / reward reload passed\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 7
+                    },
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 121
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 395
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 6
+                    },
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 116
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 10
+                    }
+                  ],
+                  "startTime": "2026-10-04T08:35:43.558Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f061c0a50e7ad8e54b6e-ae397bf2b144480592f7",
+          "file": "kite-actions.spec.ts",
+          "line": 49,
+          "column": 41
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-04T08:33:40.145Z",
+    "duration": 161953.613,
+    "expected": 4,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

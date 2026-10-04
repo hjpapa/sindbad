@@ -1,0 +1,8 @@
+{
+  "date": "2026-10-04T04:43:11.240859+00:00",
+  "pass": true,
+  "backupFiles": 252,
+  "nativePngFiles": 27,
+  "previousChestHeartFiles": 6,
+  "method": "backup SHA256; native copied hashes and byte equality where nativePath recorded; previous chest/heart source and runtime hashes unchanged"
+}

@@ -1,0 +1,24 @@
+{
+  "key": "prop-damaged-mast",
+  "legacy": "rod",
+  "subject": "One short wooden ship mast with a slightly bent spar, thick rope bindings and one mild structural crack, warm honey wood and teal metal fittings. No people, splinters flying or dangerous damage.",
+  "targets": [
+    "S03.crisis"
+  ],
+  "status": "generated",
+  "prompt": "Create ONE original world interaction sprite for a bright child-friendly Korean adventure webtoon game. Attached project hero is STYLE reference ONLY: confident navy ink outlines, warm teal/gold palette, clean 2-3 flat cel shade levels, top-left lighting. Do not draw the hero. PORTRAIT 3:4 canvas requested 768x1024, true transparent RGBA background. Subject: One short wooden ship mast with a slightly bent spar, thick rope bindings and one mild structural crack, warm honey wood and teal metal fittings. No people, splinters flying or dangerous damage. Front-facing readable silhouette at only 65x87 game pixels. Entire object centered, occupies roughly x=10%-90%, y=14%-86%, with fully transparent padding on every side. Keep the complete silhouette and all parts inside canvas. No scene, floor, cast shadow, circular backing, characters, hands, extra objects, labels, letters, numbers, logos, signature, watermark, blood, wounds or scary faces. Original project design only. Use clean limited broad color shapes rather than tiny decorative detail.",
+  "nativePath": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-78fe8482-b64a-4e6e-a3e7-307c5864cb03.png",
+  "path": "art-source/webtoon/generated/props-m6/prop-damaged-mast-01.png",
+  "sha256": "b6347e4e2f6ce1273d54d5ccb9d4d39a512a3f12e4bb1b82de34bebb2249ca8b",
+  "nativeSize": [
+    1086,
+    1448
+  ],
+  "alphaBounds": [
+    45,
+    73,
+    1042,
+    1352
+  ],
+  "selected": true
+}

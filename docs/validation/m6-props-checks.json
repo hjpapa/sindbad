@@ -1,0 +1,50 @@
+[
+  {
+    "command": "python scripts/optimize-webtoon.py",
+    "exitCode": 0,
+    "seconds": 17.14,
+    "output": "docs/validation/m6-props-check-1.txt"
+  },
+  {
+    "command": "python scripts/audit-webtoon.py",
+    "exitCode": 0,
+    "seconds": 15.3,
+    "output": "docs/validation/m6-props-check-2.txt"
+  },
+  {
+    "command": "npm run typecheck",
+    "exitCode": 0,
+    "seconds": 4.1,
+    "output": "docs/validation/m6-props-check-3.txt"
+  },
+  {
+    "command": "npm run lint",
+    "exitCode": 0,
+    "seconds": 4.0,
+    "output": "docs/validation/m6-props-check-4.txt"
+  },
+  {
+    "command": "npm run test",
+    "exitCode": 0,
+    "seconds": 4.3,
+    "output": "docs/validation/m6-props-check-5.txt"
+  },
+  {
+    "command": "npm run validate:content",
+    "exitCode": 0,
+    "seconds": 1.51,
+    "output": "docs/validation/m6-props-check-6.txt"
+  },
+  {
+    "command": "npm run build",
+    "exitCode": 0,
+    "seconds": 11.67,
+    "output": "docs/validation/m6-props-check-7.txt"
+  },
+  {
+    "command": "npx tsx scripts/check-art-budget.ts",
+    "exitCode": 0,
+    "seconds": 3.35,
+    "output": "docs/validation/m6-props-check-8.txt"
+  }
+]

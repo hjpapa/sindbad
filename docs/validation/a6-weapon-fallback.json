@@ -6,12 +6,12 @@
       "id": "W01",
       "direction": 1,
       "hand": {
-        "x": 393.3194444444444,
+        "x": 403.3194444444444,
         "y": 529.84375
       },
       "observed": {
         "visible": true,
-        "x": 393.3194444444444,
+        "x": 403.3194444444444,
         "y": 529.84375,
         "texture": "weapon-fallback-W01",
         "angle": 55
@@ -19,23 +19,23 @@
       "hero": {
         "texture": "hero-action",
         "frame": 5,
-        "x": 425.9444444444444,
+        "x": 435.9444444444444,
         "y": 610,
         "flipX": false,
         "originY": 0.95703125
       },
-      "path": "docs/screenshots/art-a6/phone-fallback-W01-right.png"
+      "path": "docs/screenshots/m6-kite/final/art-a6/phone-fallback-W01-right.png"
     },
     {
       "id": "W02",
       "direction": 1,
       "hand": {
-        "x": 393.3194444444444,
+        "x": 403.3194444444444,
         "y": 529.84375
       },
       "observed": {
         "visible": true,
-        "x": 393.3194444444444,
+        "x": 403.3194444444444,
         "y": 529.84375,
         "texture": "weapon-fallback-W02",
         "angle": 20
@@ -43,23 +43,23 @@
       "hero": {
         "texture": "hero-action",
         "frame": 5,
-        "x": 425.9444444444444,
+        "x": 435.9444444444444,
         "y": 610,
         "flipX": false,
         "originY": 0.95703125
       },
-      "path": "docs/screenshots/art-a6/phone-fallback-W02-right.png"
+      "path": "docs/screenshots/m6-kite/final/art-a6/phone-fallback-W02-right.png"
     },
     {
       "id": "W03",
       "direction": 1,
       "hand": {
-        "x": 393.3194444444444,
+        "x": 403.3194444444444,
         "y": 529.84375
       },
       "observed": {
         "visible": true,
-        "x": 393.3194444444444,
+        "x": 403.3194444444444,
         "y": 529.84375,
         "texture": "weapon-fallback-W03",
         "angle": 60
@@ -67,23 +67,23 @@
       "hero": {
         "texture": "hero-action",
         "frame": 5,
-        "x": 425.9444444444444,
+        "x": 435.9444444444444,
         "y": 610,
         "flipX": false,
         "originY": 0.95703125
       },
-      "path": "docs/screenshots/art-a6/phone-fallback-W03-right.png"
+      "path": "docs/screenshots/m6-kite/final/art-a6/phone-fallback-W03-right.png"
     },
     {
       "id": "W04",
       "direction": 1,
       "hand": {
-        "x": 393.3194444444444,
+        "x": 403.3194444444444,
         "y": 529.84375
       },
       "observed": {
         "visible": true,
-        "x": 393.3194444444444,
+        "x": 403.3194444444444,
         "y": 529.84375,
         "texture": "weapon-fallback-W04",
         "angle": -6
@@ -91,23 +91,23 @@
       "hero": {
         "texture": "hero-action",
         "frame": 5,
-        "x": 425.9444444444444,
+        "x": 435.9444444444444,
         "y": 610,
         "flipX": false,
         "originY": 0.95703125
       },
-      "path": "docs/screenshots/art-a6/phone-fallback-W04-right.png"
+      "path": "docs/screenshots/m6-kite/final/art-a6/phone-fallback-W04-right.png"
     },
     {
       "id": "W05",
       "direction": 1,
       "hand": {
-        "x": 393.3194444444444,
+        "x": 403.3194444444444,
         "y": 529.84375
       },
       "observed": {
         "visible": true,
-        "x": 393.3194444444444,
+        "x": 403.3194444444444,
         "y": 529.84375,
         "texture": "weapon-fallback-W05",
         "angle": 0
@@ -115,23 +115,23 @@
       "hero": {
         "texture": "hero-action",
         "frame": 5,
-        "x": 425.9444444444444,
+        "x": 435.9444444444444,
         "y": 610,
         "flipX": false,
         "originY": 0.95703125
       },
-      "path": "docs/screenshots/art-a6/phone-fallback-W05-right.png"
+      "path": "docs/screenshots/m6-kite/final/art-a6/phone-fallback-W05-right.png"
     },
     {
       "id": "W06",
       "direction": 1,
       "hand": {
-        "x": 393.3194444444444,
+        "x": 403.3194444444444,
         "y": 529.84375
       },
       "observed": {
         "visible": true,
-        "x": 393.3194444444444,
+        "x": 403.3194444444444,
         "y": 529.84375,
         "texture": "weapon-fallback-W06",
         "angle": 35
@@ -139,23 +139,23 @@
       "hero": {
         "texture": "hero-action",
         "frame": 5,
-        "x": 425.9444444444444,
+        "x": 435.9444444444444,
         "y": 610,
         "flipX": false,
         "originY": 0.95703125
       },
-      "path": "docs/screenshots/art-a6/phone-fallback-W06-right.png"
+      "path": "docs/screenshots/m6-kite/final/art-a6/phone-fallback-W06-right.png"
     },
     {
       "id": "W07",
       "direction": 1,
       "hand": {
-        "x": 393.3194444444444,
+        "x": 403.3194444444444,
         "y": 529.84375
       },
       "observed": {
         "visible": true,
-        "x": 393.3194444444444,
+        "x": 403.3194444444444,
         "y": 529.84375,
         "texture": "weapon-fallback-W07",
         "angle": 60
@@ -163,23 +163,23 @@
       "hero": {
         "texture": "hero-action",
         "frame": 5,
-        "x": 425.9444444444444,
+        "x": 435.9444444444444,
         "y": 610,
         "flipX": false,
         "originY": 0.95703125
       },
-      "path": "docs/screenshots/art-a6/phone-fallback-W07-right.png"
+      "path": "docs/screenshots/m6-kite/final/art-a6/phone-fallback-W07-right.png"
     },
     {
       "id": "W01",
       "direction": -1,
       "hand": {
-        "x": 449.4583333333333,
+        "x": 454.40277777777777,
         "y": 529.84375
       },
       "observed": {
         "visible": true,
-        "x": 449.4583333333333,
+        "x": 454.40277777777777,
         "y": 529.84375,
         "texture": "weapon-fallback-W01",
         "angle": -55.00000000000006
@@ -187,23 +187,23 @@
       "hero": {
         "texture": "hero-action",
         "frame": 5,
-        "x": 416.8333333333333,
+        "x": 421.77777777777777,
         "y": 610,
         "flipX": true,
         "originY": 0.95703125
       },
-      "path": "docs/screenshots/art-a6/phone-fallback-W01-left.png"
+      "path": "docs/screenshots/m6-kite/final/art-a6/phone-fallback-W01-left.png"
     },
     {
       "id": "W02",
       "direction": -1,
       "hand": {
-        "x": 449.4583333333333,
+        "x": 454.40277777777777,
         "y": 529.84375
       },
       "observed": {
         "visible": true,
-        "x": 449.4583333333333,
+        "x": 454.40277777777777,
         "y": 529.84375,
         "texture": "weapon-fallback-W02",
         "angle": -20
@@ -211,23 +211,23 @@
       "hero": {
         "texture": "hero-action",
         "frame": 5,
-        "x": 416.8333333333333,
+        "x": 421.77777777777777,
         "y": 610,
         "flipX": true,
         "originY": 0.95703125
       },
-      "path": "docs/screenshots/art-a6/phone-fallback-W02-left.png"
+      "path": "docs/screenshots/m6-kite/final/art-a6/phone-fallback-W02-left.png"
     },
     {
       "id": "W03",
       "direction": -1,
       "hand": {
-        "x": 449.4583333333333,
+        "x": 454.40277777777777,
         "y": 529.84375
       },
       "observed": {
         "visible": true,
-        "x": 449.4583333333333,
+        "x": 454.40277777777777,
         "y": 529.84375,
         "texture": "weapon-fallback-W03",
         "angle": -59.99999999999994
@@ -235,23 +235,23 @@
       "hero": {
         "texture": "hero-action",
         "frame": 5,
-        "x": 416.8333333333333,
+        "x": 421.77777777777777,
         "y": 610,
         "flipX": true,
         "originY": 0.95703125
       },
-      "path": "docs/screenshots/art-a6/phone-fallback-W03-left.png"
+      "path": "docs/screenshots/m6-kite/final/art-a6/phone-fallback-W03-left.png"
     },
     {
       "id": "W04",
       "direction": -1,
       "hand": {
-        "x": 449.4583333333333,
+        "x": 454.40277777777777,
         "y": 529.84375
       },
       "observed": {
         "visible": true,
-        "x": 449.4583333333333,
+        "x": 454.40277777777777,
         "y": 529.84375,
         "texture": "weapon-fallback-W04",
         "angle": 6
@@ -259,23 +259,23 @@
       "hero": {
         "texture": "hero-action",
         "frame": 5,
-        "x": 416.8333333333333,
+        "x": 421.77777777777777,
         "y": 610,
         "flipX": true,
         "originY": 0.95703125
       },
-      "path": "docs/screenshots/art-a6/phone-fallback-W04-left.png"
+      "path": "docs/screenshots/m6-kite/final/art-a6/phone-fallback-W04-left.png"
     },
     {
       "id": "W05",
       "direction": -1,
       "hand": {
-        "x": 449.4583333333333,
+        "x": 454.40277777777777,
         "y": 529.84375
       },
       "observed": {
         "visible": true,
-        "x": 449.4583333333333,
+        "x": 454.40277777777777,
         "y": 529.84375,
         "texture": "weapon-fallback-W05",
         "angle": 0
@@ -283,23 +283,23 @@
       "hero": {
         "texture": "hero-action",
         "frame": 5,
-        "x": 416.8333333333333,
+        "x": 421.77777777777777,
         "y": 610,
         "flipX": true,
         "originY": 0.95703125
       },
-      "path": "docs/screenshots/art-a6/phone-fallback-W05-left.png"
+      "path": "docs/screenshots/m6-kite/final/art-a6/phone-fallback-W05-left.png"
     },
     {
       "id": "W06",
       "direction": -1,
       "hand": {
-        "x": 449.4583333333333,
+        "x": 454.40277777777777,
         "y": 529.84375
       },
       "observed": {
         "visible": true,
-        "x": 449.4583333333333,
+        "x": 454.40277777777777,
         "y": 529.84375,
         "texture": "weapon-fallback-W06",
         "angle": -35.00000000000006
@@ -307,23 +307,23 @@
       "hero": {
         "texture": "hero-action",
         "frame": 5,
-        "x": 416.8333333333333,
+        "x": 421.77777777777777,
         "y": 610,
         "flipX": true,
         "originY": 0.95703125
       },
-      "path": "docs/screenshots/art-a6/phone-fallback-W06-left.png"
+      "path": "docs/screenshots/m6-kite/final/art-a6/phone-fallback-W06-left.png"
     },
     {
       "id": "W07",
       "direction": -1,
       "hand": {
-        "x": 449.4583333333333,
+        "x": 454.40277777777777,
         "y": 529.84375
       },
       "observed": {
         "visible": true,
-        "x": 449.4583333333333,
+        "x": 454.40277777777777,
         "y": 529.84375,
         "texture": "weapon-fallback-W07",
         "angle": -59.99999999999994
@@ -331,12 +331,12 @@
       "hero": {
         "texture": "hero-action",
         "frame": 5,
-        "x": 416.8333333333333,
+        "x": 421.77777777777777,
         "y": 610,
         "flipX": true,
         "originY": 0.95703125
       },
-      "path": "docs/screenshots/art-a6/phone-fallback-W07-left.png"
+      "path": "docs/screenshots/m6-kite/final/art-a6/phone-fallback-W07-left.png"
     }
   ],
   "expectedAbortedRequests": [
@@ -396,7 +396,7 @@
   "earned": {
     "schemaVersion": 1,
     "buildVersion": "0.1.0",
-    "writtenAt": "2026-10-03T13:43:31.311Z",
+    "writtenAt": "2026-10-04T09:14:25.409Z",
     "checkpoint": {
       "stageId": "S01",
       "checkpointId": "start"
@@ -440,7 +440,7 @@
   "resumed": {
     "schemaVersion": 1,
     "buildVersion": "0.1.0",
-    "writtenAt": "2026-10-03T13:44:13.177Z",
+    "writtenAt": "2026-10-04T09:15:07.690Z",
     "checkpoint": {
       "stageId": "S01",
       "checkpointId": "start"

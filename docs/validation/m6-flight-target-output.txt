@@ -1,0 +1,134 @@
+
+> sinbad-seven-treasures@0.1.0 test:e2e
+> playwright test tests/e2e/flight-art.spec.ts tests/e2e/flight-rings.spec.ts --reporter=list,json,html
+
+
+Running 6 tests using 1 worker
+
+(node:39584) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:39584) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x  1 tests\e2e\flight-art.spec.ts:40:41 › phone flight art webtoon preserves rings, hazards and resume (24.1s)
+(node:46456) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:46456) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x  2 tests\e2e\flight-art.spec.ts:40:41 › phone flight art missing SVG recovery preserves rings, hazards and resume (12.4s)
+(node:11340) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:11340) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x  3 tests\e2e\flight-art.spec.ts:40:41 › tablet flight art webtoon preserves rings, hazards and resume (12.6s)
+(node:38776) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:38776) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x  4 tests\e2e\flight-art.spec.ts:40:41 › tablet flight art missing SVG recovery preserves rings, hazards and resume (18.2s)
+(node:39652) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:39652) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 5 tests\e2e\flight-rings.spec.ts:18:1 › flight rings collect through movement once, persist, and never gate landing (28.6s)
+  ok 6 tests\e2e\flight-rings.spec.ts:92:1 › S33 return flight has five moving debris routes and does not require combat (14.3s)
+
+
+  1) tests\e2e\flight-art.spec.ts:40:41 › phone flight art webtoon preserves rings, hazards and resume 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: [32m"middle"[39m
+    Received: [31m"start"[39m
+
+      72 |         await resume(page,'S10');expect((await read(page)).save.claimedRewardIds).toEqual(collected.save.claimedRewardIds);
+      73 |         expect((await read(page)).save.coins).toBe(collected.save.coins);
+    > 74 |         await moveJourney(page,1400,535);expect((await read(page)).save.checkpoint.checkpointId).toBe('middle');
+         |                                                                                                  ^
+      75 |         await resume(page,'S10');expect((await read(page)).save.completedObjectiveIds).toContain('S10.quest.1');
+      76 |         const beforeDamage=(await read(page)).player.hp;
+      77 |         await moveJourney(page,1680,300);await expect.poll(async()=>(await read(page)).player.hp).toBeLessThan(beforeDamage);
+        at C:\code\code10(sindbad)\tests\e2e\flight-art.spec.ts:74:98
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\flight-art-phone-flight-ar-7d972-es-rings-hazards-and-resume\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\flight-art-phone-flight-ar-7d972-es-rings-hazards-and-resume\error-context.md
+
+  2) tests\e2e\flight-art.spec.ts:40:41 › phone flight art missing SVG recovery preserves rings, hazards and resume 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: [32m"middle"[39m
+    Received: [31m"start"[39m
+
+      72 |         await resume(page,'S10');expect((await read(page)).save.claimedRewardIds).toEqual(collected.save.claimedRewardIds);
+      73 |         expect((await read(page)).save.coins).toBe(collected.save.coins);
+    > 74 |         await moveJourney(page,1400,535);expect((await read(page)).save.checkpoint.checkpointId).toBe('middle');
+         |                                                                                                  ^
+      75 |         await resume(page,'S10');expect((await read(page)).save.completedObjectiveIds).toContain('S10.quest.1');
+      76 |         const beforeDamage=(await read(page)).player.hp;
+      77 |         await moveJourney(page,1680,300);await expect.poll(async()=>(await read(page)).player.hp).toBeLessThan(beforeDamage);
+        at C:\code\code10(sindbad)\tests\e2e\flight-art.spec.ts:74:98
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\flight-art-phone-flight-ar-3bbd4-es-rings-hazards-and-resume\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\flight-art-phone-flight-ar-3bbd4-es-rings-hazards-and-resume\error-context.md
+
+  3) tests\e2e\flight-art.spec.ts:40:41 › tablet flight art webtoon preserves rings, hazards and resume 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: [32m"middle"[39m
+    Received: [31m"start"[39m
+
+      72 |         await resume(page,'S10');expect((await read(page)).save.claimedRewardIds).toEqual(collected.save.claimedRewardIds);
+      73 |         expect((await read(page)).save.coins).toBe(collected.save.coins);
+    > 74 |         await moveJourney(page,1400,535);expect((await read(page)).save.checkpoint.checkpointId).toBe('middle');
+         |                                                                                                  ^
+      75 |         await resume(page,'S10');expect((await read(page)).save.completedObjectiveIds).toContain('S10.quest.1');
+      76 |         const beforeDamage=(await read(page)).player.hp;
+      77 |         await moveJourney(page,1680,300);await expect.poll(async()=>(await read(page)).player.hp).toBeLessThan(beforeDamage);
+        at C:\code\code10(sindbad)\tests\e2e\flight-art.spec.ts:74:98
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\flight-art-tablet-flight-a-a1ba4-es-rings-hazards-and-resume\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\flight-art-tablet-flight-a-a1ba4-es-rings-hazards-and-resume\error-context.md
+
+  4) tests\e2e\flight-art.spec.ts:40:41 › tablet flight art missing SVG recovery preserves rings, hazards and resume 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: [32m"middle"[39m
+    Received: [31m"start"[39m
+
+      72 |         await resume(page,'S10');expect((await read(page)).save.claimedRewardIds).toEqual(collected.save.claimedRewardIds);
+      73 |         expect((await read(page)).save.coins).toBe(collected.save.coins);
+    > 74 |         await moveJourney(page,1400,535);expect((await read(page)).save.checkpoint.checkpointId).toBe('middle');
+         |                                                                                                  ^
+      75 |         await resume(page,'S10');expect((await read(page)).save.completedObjectiveIds).toContain('S10.quest.1');
+      76 |         const beforeDamage=(await read(page)).player.hp;
+      77 |         await moveJourney(page,1680,300);await expect.poll(async()=>(await read(page)).player.hp).toBeLessThan(beforeDamage);
+        at C:\code\code10(sindbad)\tests\e2e\flight-art.spec.ts:74:98
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\flight-art-tablet-flight-a-9f8af-es-rings-hazards-and-resume\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\flight-art-tablet-flight-a-9f8af-es-rings-hazards-and-resume\error-context.md
+
+  4 failed
+    tests\e2e\flight-art.spec.ts:40:41 › phone flight art webtoon preserves rings, hazards and resume 
+    tests\e2e\flight-art.spec.ts:40:41 › phone flight art missing SVG recovery preserves rings, hazards and resume 
+    tests\e2e\flight-art.spec.ts:40:41 › tablet flight art webtoon preserves rings, hazards and resume 
+    tests\e2e\flight-art.spec.ts:40:41 › tablet flight art missing SVG recovery preserves rings, hazards and resume 
+  2 passed (2.3m)
+
+To open last HTML report run:
+[36m[39m
+[36m  npx playwright show-report[39m
+[36m[39m

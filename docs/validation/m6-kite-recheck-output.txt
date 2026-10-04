@@ -1,0 +1,93 @@
+
+> sinbad-seven-treasures@0.1.0 test:e2e
+> playwright test tests/e2e/kite-actions.spec.ts tests/e2e/flight-rings.spec.ts --reporter=list,json,html
+
+
+Running 6 tests using 1 worker
+
+(node:13468) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:13468) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 tests\e2e\flight-rings.spec.ts:18:1 › flight rings collect through movement once, persist, and never gate landing (34.4s)
+  ok 2 tests\e2e\flight-rings.spec.ts:92:1 › S33 return flight has five moving debris routes and does not require combat (9.7s)
+  x  3 tests\e2e\kite-actions.spec.ts:49:41 › phone kite four actions keeps flight combat, release and stable rewards (10.9s)
+(node:25456) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:25456) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+KITE phone S10 fallback: poses / both directions / pause / touch attack / release / reward reload passed
+KITE phone S33 fallback: poses / both directions / pause / touch attack / release / reward reload passed
+  ok 4 tests\e2e\kite-actions.spec.ts:49:41 › phone kite missing-sheet recovery keeps flight combat, release and stable rewards (35.7s)
+  x  5 tests\e2e\kite-actions.spec.ts:49:41 › tablet kite four actions keeps flight combat, release and stable rewards (11.3s)
+(node:2308) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:2308) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+KITE tablet S10 fallback: poses / both directions / pause / touch attack / release / reward reload passed
+KITE tablet S33 fallback: poses / both directions / pause / touch attack / release / reward reload passed
+  ok 6 tests\e2e\kite-actions.spec.ts:49:41 › tablet kite missing-sheet recovery keeps flight combat, release and stable rewards (36.9s)
+
+
+  1) tests\e2e\kite-actions.spec.ts:49:41 › phone kite four actions keeps flight combat, release and stable rewards 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBeCloseTo[2m([22m[32mexpected[39m[2m, [22mprecision[2m)[22m
+
+    Expected: [32m229.14685314685315[39m
+    Received: [31m247.54470145239378[39m
+
+    Expected precision:    6
+    Expected difference: < [32m0.0000005[39m
+    Received difference:   [31m18.397848305540634[39m
+
+      43 |                     expect(e.originX).toBeCloseTo(e.flipX?1-centre[0]/512:centre[0]/512,8);
+      44 |                     expect(e.originY).toBeCloseTo(centre[1]/512,8);
+    > 45 |                     expect(e.displayHeight).toBeCloseTo(128*512/kite.idleHeight,6);
+         |                                             ^
+      46 |                 }
+      47 |             };
+      48 |             const capture=async(state:string)=>{
+        at inspect (C:\code\code10(sindbad)\tests\e2e\kite-actions.spec.ts:45:45)
+        at capture (C:\code\code10(sindbad)\tests\e2e\kite-actions.spec.ts:52:93)
+        at C:\code\code10(sindbad)\tests\e2e\kite-actions.spec.ts:71:48
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\kite-actions-phone-kite-fo-fb2c0--release-and-stable-rewards\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\kite-actions-phone-kite-fo-fb2c0--release-and-stable-rewards\error-context.md
+
+  2) tests\e2e\kite-actions.spec.ts:49:41 › tablet kite four actions keeps flight combat, release and stable rewards 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBeCloseTo[2m([22m[32mexpected[39m[2m, [22mprecision[2m)[22m
+
+    Expected: [32m229.14685314685315[39m
+    Received: [31m245.67186659494354[39m
+
+    Expected precision:    6
+    Expected difference: < [32m0.0000005[39m
+    Received difference:   [31m16.52501344809039[39m
+
+      43 |                     expect(e.originX).toBeCloseTo(e.flipX?1-centre[0]/512:centre[0]/512,8);
+      44 |                     expect(e.originY).toBeCloseTo(centre[1]/512,8);
+    > 45 |                     expect(e.displayHeight).toBeCloseTo(128*512/kite.idleHeight,6);
+         |                                             ^
+      46 |                 }
+      47 |             };
+      48 |             const capture=async(state:string)=>{
+        at inspect (C:\code\code10(sindbad)\tests\e2e\kite-actions.spec.ts:45:45)
+        at capture (C:\code\code10(sindbad)\tests\e2e\kite-actions.spec.ts:52:93)
+        at C:\code\code10(sindbad)\tests\e2e\kite-actions.spec.ts:71:48
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\kite-actions-tablet-kite-f-d0d37--release-and-stable-rewards\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\kite-actions-tablet-kite-f-d0d37--release-and-stable-rewards\error-context.md
+
+  2 failed
+    tests\e2e\kite-actions.spec.ts:49:41 › phone kite four actions keeps flight combat, release and stable rewards 
+    tests\e2e\kite-actions.spec.ts:49:41 › tablet kite four actions keeps flight combat, release and stable rewards 
+  4 passed (2.5m)
+
+[36m  Serving HTML report at http://localhost:9323. Press Ctrl+C to quit.[39m

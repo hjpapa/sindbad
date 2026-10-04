@@ -1,5 +1,98 @@
 # 장별 일러스트 제작 기록
 
+## M6 비행 고리·돌풍·낙하 파편 · 2026-10-04 · ART_DRAFT
+
+OpenAI **내장 imagegen**으로 3종을 개별 생성했다. 프로젝트 자체 `hero-webtoon.webp`는 외곽선·셀 음영·청록/금색·왼쪽 위 조명만 참조하고 인물은 그리지 않았다. 실제 원본은 각각 **1086×1448 RGBA**이며 원래 생성 경로와 `art-source/webtoon/generated/flight-m6/{key}-01.png`에 바이트 동일 보존했다. 외부 작품·작가를 참조하지 않았다. 글자·잘림·피/상처 없음은 육안 확인, 투명 경계는 alpha>16 검사다. 최종 사용자 아트 승인은 미검증으로 **ART_DRAFT**다.
+
+| 키 | 생성 지시 요지 |
+|---|---|
+| prop-flight-ring | 금색·청록색 세로 타원 바람 고리. 두꺼운 선명한 테두리와 작은 바람 곡선, 가운데는 완전히 비운 투명 공간. 받침·플랫폼 없음. |
+| prop-gust-cloud | 둥근 청록/크림 돌풍 구름과 오른쪽 짧은 바람 곡선 3개, 작은 금빛 장식. 얼굴·비·배경 없음. |
+| prop-falling-debris | 청록 음영이 있는 사암 탑 블록 1개와 작은 파편 2개. 날카로운 가시·해골·몸·문자 없음. |
+
+공통 지시: `illustration-story`, 어린이용 오리지널 횡스크롤 비행 소품, 하나의 중앙 오브젝트, 3:4 세로 캔버스, 실제 RGBA 투명 배경과 바깥 여백, 글자·숫자·로고·서명·워터마크·격자·잘림 금지. 요청 여백은8%였으나 실제 가시 경계는 각각 다르므로 측정값을 기록한다. 고리 원본 가시 경계는[77,35,1011,1392], 구름은[55,336,1037,1113], 파편은[200,207,992,1209]다.
+
+전체 실제 프롬프트·참조·네이티브 경로·SHA256·선택은 개별 `generated/flight-m6/{key}-01.json` 및 `world-props.sources.json`에 있다. 전체 캔버스만 비례 축소해 **384×512 PNG + 동일 RGBA 무손실 WebP**를 만들고 최적화 스크립트로 **96×128 WebP** 런타임을 출력했다. 자르거나 다시 칠하지 않았다. 변환·경계는 `world-props.measurements.json`이다.
+
+실제 원화/런타임 감사와 브라우저 연결 검증은 통과했다. 고리의 기존 등불 텍스처 우선 문제를 단위 검사로 찾아 수정했고 최종 단위107개·E2E57개·새 게임36구간843초 완주를 통과했다. 실제 최종 화면41장과 해시는 `docs/validation/m6-flight-final-screenshots.json`, 원시 전체 보고서는 `m6-flight-e2e-final.json`이다. 실기기·어린이 조작성·최종 사용자 아트 승인은 미검증이며 **ART_DRAFT**를 유지한다.
+
+## M6 상호작용 소품 25종 · 2026-10-04 · ART_DRAFT
+
+OpenAI **내장 imagegen**과 프로젝트 자체 `hero-webtoon.webp` 화풍 참조로 아래 25종을 별도 생성했다. 생성 PNG를 원래 경로와 `art-source/webtoon/generated/props-m6/{key}-01.png`에 바이트 동일 보존했다. 실제 치수는 24장 **1086×1448**, 황금 하트 1장 **1087×1447**이다. 원본을 다시 그리거나 잘라내지 않고 전체 캔버스를 비례 축소·투명 여백으로 **384×512 PNG + 동일 RGBA 무손실 WebP**에 넣었다. 런타임은 최적화 스크립트가 만드는 **96×128 WebP**다. 생성 완료를 최종 아트 승인으로 취급하지 않으며 **ART_DRAFT**를 유지한다.
+
+공통 프롬프트 앞부분:
+> Create ONE original world interaction sprite for a bright child-friendly Korean adventure webtoon game. Attached project hero is STYLE reference ONLY: confident navy ink outlines, warm teal/gold palette, clean 2-3 flat cel shade levels, top-left lighting. Do not draw the hero. PORTRAIT 3:4 canvas requested 768x1024, true transparent RGBA background. Subject:
+
+공통 프롬프트 뒷부분:
+>  Front-facing readable silhouette at only 65x87 game pixels. Entire object centered, occupies roughly x=10%-90%, y=14%-86%, with fully transparent padding on every side. Keep the complete silhouette and all parts inside canvas. No scene, floor, cast shadow, circular backing, characters, hands, extra objects, labels, letters, numbers, logos, signature, watermark, blood, wounds or scary faces. Original project design only. Use clean limited broad color shapes rather than tiny decorative detail.
+
+아래 subject를 두 공통 부분 사이에 넣었다. 전체 실제 프롬프트·참조·네이티브 경로·SHA256·선택·치수·투명 경계는 `art-source/webtoon/world-props.sources.json` 및 개별 `generated/props-m6/{key}-01.json`, 변환과 원화 경계는 `world-props.measurements.json`에 기록했다. 글자·잘림은 생성 결과 육안, 투명 경계·무손실 픽셀·기존 SVG 해시는 감사 스크립트로 검사한다. 게임 검증 상태는 `PROJECT_STATUS.md`에 별도로 기록한다.
+
+| 키 | 실제 subject |
+|---|---|
+| prop-shell | A fan-shaped ivory clam shell with coral-pink ribs and a small teal striker bead attached at its bottom. Closed front silhouette, no animal face. It is a musical shell switch, not a pearl treasure. |
+| prop-bell | A golden brass ship departure bell, front view, small suspension loop at top, broad flared lip and visible clapper at bottom. No support pole. |
+| prop-golden | A friendly heart SYMBOL made of polished warm gold, two rounded lobes and a pointed bottom, thick navy outline, cream highlight and three small contained gleam marks. Clearly distinct from a coral-red healing heart. No anatomy. |
+| prop-key | A large golden coral gate key, diagonally from upper left to lower right, circular bow handle, solid shaft and two broad teeth. Clearly readable key silhouette. |
+| prop-lifevest | One orange and warm-gold sleeveless life jacket, two buoyant front panels with a teal belt and simple navy buckle. Empty jacket, no body, face, arms or text. |
+| prop-rescue-rope | One neatly coiled thick cream maritime rescue rope with a short tied tail. Broad simple loop shape, visible twist shading, no hands or anchor. |
+| prop-lifering | One round orange and cream life ring with four broad cream sections and a dark teal center opening. Small integral rope attachments, no ocean or people. |
+| prop-lightning-rod | One safe fantasy lightning protection device: upright teal-metal mast, horizontal upper crossbar, sturdy small flat base, central golden lightning bolt emblem. Not an electrical hazard, no lightning arcs outside object. |
+| prop-damaged-mast | One short wooden ship mast with a slightly bent spar, thick rope bindings and one mild structural crack, warm honey wood and teal metal fittings. No people, splinters flying or dangerous damage. |
+| prop-coral-gate | One small upright arch gate in coral-pink stone, navy opening with two teal bars and a centered gold diamond lock. Whole arch and footings inside canvas. |
+| prop-vine | One upright intertwined green vine with four broad friendly rounded leaves, forming a loose S shape. Thick readable stems, no thorns or flowers. |
+| prop-torch | One upright short wooden torch, cloth wrapping at top and a contained warm orange flame with cream inner core. Entire flame and handle inside canvas, no sparks outside. |
+| prop-furnace | One friendly squat stone fantasy furnace, navy-purple body, wide rectangular fire opening, gold-bronze upper rim and small warm orange contained inner flame. No chimney smoke. |
+| prop-wave-rope | One upright hanging cream maritime rope with a large loop knot at its lower end, clear three horizontal twist bands. Entire rope and loop inside canvas. |
+| prop-mirror | One upright hexagonal pale-blue crystal mirror with a lavender-and-gold frame and one simple UP ARROW symbol engraved in cream at its center. Arrow only, no letters or numbers. Preserve clear arrow direction for rotation puzzle. |
+| prop-journal | One closed upright cream-and-brown travel journal, navy binding, blank cover, small teal bookmark ribbon. Simple raised bands rather than writing, no letters or readable marks. |
+| prop-star-map | One unfolded upright cream and lavender travel map with two fold lines, a large golden five-point star and a simple teal triangle route. Symbols only, no labels, letters, coordinates or numbers. |
+| prop-lantern | One upright friendly teal and brass lantern with a small loop handle, warm gold glass panes and a cream inner flame. Short broad foot, no light rays or glow outside silhouette. |
+| prop-star-device | One upright small fantasy compass puzzle device on a gold pedestal: navy circular dial inside lavender rim, large four-point gold compass star with teal center gem. No letters, numerals or tick labels. |
+| prop-cargo | One sturdy honey-brown wooden delivery crate with diagonal reinforcing planks and broad brass bands, simple gold diamond plate without text. Subtle top and right side, no tools or contents outside. |
+| prop-gift | One teal square reward gift box with gold ribbon, coral-red bow on top, thick navy outline. No letters, tags or additional gifts. |
+| prop-treasure-altar | One small friendly fantasy treasure pedestal with navy stone stepped base, gold trim and a large teal diamond-shaped crystal floating immediately above it. Simple cream center glow contained inside crystal, no deity or person. |
+| prop-moon-rock | One small faceted lavender moon rock with broad cream fracture seams and a small gold four-point sparkle engraved on its face. Stable whole rock, no fragments flying, no face. |
+| prop-lotus-shrine | One peaceful original decorative lotus pedestal: a large rounded pink lotus blossom on a low gold stone base, tiny teal center. Pure floral decoration, no person, deity or religious figure. |
+| prop-ending | One celebratory gold bell on a short upright gold stand, coral clapper, cream engraved wave band. Three small gold gleams stay within canvas. No people, letters or confetti outside. |
+
+## M6 소품 · 2026-10-04 · 보물 상자·회복 하트 · ART_DRAFT
+
+OpenAI **내장 imagegen**으로 소품마다 투명 PNG를 별도 생성했다. 프로젝트 자체 `hero-webtoon.webp`를 화풍 참조로 사용했다. 남색 외곽선, 따뜻한 목재·금색/산호 빨강, 왼쪽 위 빛, 작은 표시에서도 읽히는 셀 음영과 큰 실루엣을 지시했다. 글자·로고·서명·외부 작품·캐릭터·피·상처를 넣지 않았으며 육안으로 잘림과 글자 없음, 실제 RGBA 경계를 확인했다. 사용자 최종 아트 승인 전 **ART_DRAFT**다.
+
+| 키 | 생성 지시 요지 | 원본 보존 경로 |
+|---|---|---|
+| `prop-chest` | 닫힌 꿀빛 나무 보물 상자, 둥근 뚜껑, 금색 띠 2개와 중앙 열쇠구멍, 정면에서 윗면·오른쪽 면이 살짝 보이게, 상자 밖 소품·바닥 없음 | `art-source/webtoon/generated/props/prop-chest-01.png` |
+| `prop-heart` | 해부학 표현 없는 친근한 산호색 하트 기호 1개, 둥근 두 윗부분과 아래 끝, 남색 테두리·왼쪽 위 아이보리 하이라이트, 하트 밖 장식 없음 | `art-source/webtoon/generated/props/prop-heart-01.png` |
+
+요청은 768×1024이고 실제 생성 PNG는 둘 다 **1086×1448 RGBA**다. 생성 원본을 바이트 동일 보존하고 전체 3:4 캔버스를 균일 축소해 `art-source/webtoon/prop-{chest,heart}.{png,webp}` **384×512** PNG/동일 RGBA 무손실 WebP를 만들었다. 잘라내기·재채색·배경 추출 없음. `scripts/pack-world-props.py`로 재현하며 프롬프트 전문·기본 생성 경로·SHA256·참조·실제 치수는 `world-props.sources.json`, 원화 경계·실제 표시 크기는 `world-props.measurements.json`에 있다.
+
+`scripts/optimize-webtoon.py`의 SIZES와 매니페스트 runtimeSize는 **96×128**이다. 기존 월드 소품의 캔버스와 표시 사각형을 유지했다(상자 65.28×87.04, 일반 하트 34.56×46.08, 큰 하트 48×64). HUD 하트는 별도 UI이며 이번 두 파일은 월드 획득 소품이다. 런타임은 상자 **3,872바이트**, 하트 **2,882바이트**로 최적화 스크립트가 출력한다. 기존 `public/assets/draft/{chest,heart}.svg`도 그대로 보존했다. 원화/런타임 검사 결과는 `docs/validation/world-props.json`에 기록한다. 최종 전체 E2E **49개/exit0**, 신규 36스테이지 완주 **815초**, 최종 PNG 24장·실제 경로/해시는 `docs/validation/m6-props-final-screenshots.json`에 있다. 기능 검증과 아트 승인을 구별하며 ART_DRAFT를 유지한다.
+
+## A8 · 2026-10-04 · 터치 UI 아이콘 9종 · ART_DRAFT
+
+OpenAI **내장 imagegen**으로 아이콘마다 별도 투명 PNG를 생성했다. 프로젝트 자체 `hero-webtoon.webp`를 화풍 참조로만 사용했다. 굵은 남색 외곽선·셀 음영·청록/금색/아이보리, 왼쪽 위 빛, 작은 버튼 안에서도 구별되는 큰 실루엣, 글자/레이블/로고/서명/피/상처 없는 투명 RGBA가 공통 지시다. 버튼 배경이나 격자를 이미지에 넣지 않았다. 외부 작품·작가 참조 없음.
+
+| 키 | 실제 생성 지시 요지 |
+|---|---|
+| `ui-jump` | 단순한 아이보리 부츠와 위쪽을 향한 청록 화살표 하나. 첫 후보의 아래쪽 화살표가 모호해 장식·다른 화살표 없이 재생성. |
+| `ui-talk` | 아이보리 말풍선, 굵은 청록 테두리, 금색 점 3개. 문자 없음. |
+| `ui-inspect` | 손가락을 편 친근한 갈색 항해 장갑과 작은 금빛 반짝임. |
+| `ui-depart` | 오른쪽으로 향한 청록 돛배, 아이보리 돛, 금색 깃발, 짧은 물결. |
+| `ui-wing` | 청록·아이보리 로크 날개와 날개 공격을 나타내는 금색 궤적. |
+| `ui-flame` | 큰 주황/호박색 불꽃, 아이보리 중심, 청록 파동. |
+| `ui-bridge` | 라벤더·청록 아치 다리, 두 지지대, 금빛 반짝임. |
+| `ui-shield` | 청록 방패와 아이보리/금색 연꽃 문양. |
+| `ui-dawn` | 청록 수평선 위 떠오르는 금색 해, 굵은 빛살 5개, 작은 라벤더 반짝임. |
+
+전체 실제 프롬프트·도구 원본 경로·참조·선택·SHA256은 `art-source/webtoon/touch-icons.sources.json`에 있다. 실제 도구 반환 크기는 모두 **1254×1254**다. 생성 PNG **10개(선택 9/미선택 1)**를 `art-source/webtoon/generated/touch/{key}-01.png`와 `ui-jump-02.png`에 도구 원본과 바이트 동일 보존했다. 첫 점프 후보와 도구 원본을 삭제하지 않았다. 선택 9개는 글자 없이 가시 알파 >16의 바깥 경계가 비었음을 확인했다.
+
+`scripts/pack-touch-icons.py`는 정사각 **캔버스 전체**를 균일하게 512×512로 축소해 `{key}.png`와 동일 RGBA 무손실 `{key}.webp`를 만든다. 실루엣을 자르거나 다시 칠하거나 알파를 추출하지 않는다. 원화 경계·크기·선택 후보는 `touch-icons.measurements.json`이다. `optimize-webtoon.py`의 `SIZES`와 매니페스트 `runtimeSize`에 128×128을 등록했고 A8은 문서 규격대로 **`public/assets/webtoon/{key}.png`**로 출력한다. 런타임 9개 합계 **182,840바이트**.
+
+`touch.ts`의 점프·문맥 행동·보물 선택에 연결했다. 선택 스킬 ID `flamePulse/moonBridge/lotusShield/dawnWave`로 그림을 고르고, 무기 그림은 기존 표시를 유지한다. UI 그림은 회전하지 않으며 버튼의 한국어 캡션·접근성 이름·행동 ID·포인터 캡처를 유지한다. 그림 누락은 기존 기호로 복구하고 같은 능력의 HUD 갱신에서는 이미지 노드를 유지한다. 생성/원화/런타임 감사는 통과했으며 실제 브라우저 검증과 미검증 결과는 `PROJECT_STATUS.md`에 별도 기록한다. 최종 사용자 아트 승인은 미완료이므로 ART_DRAFT를 유지한다.
+
+실제 최종 검증: 원화/런타임 감사·단위103개·전체 E2E46개 통과, 새 게임 S01~S36 완주829초, 무기/보물 각7종·엔딩/재개/재방문 확인. 실제 버튼27장·72px 표시 비교2장·모바일6장·완주7장의 최종 모음은 `docs/screenshots/art-a8/final/art-a8/`이다. 원시 경로와 바이트 동일 복사 해시는 `a8-final-screenshots.json`에 있다. 첫 타입/터치 검사 실패, Windows 기존 화면 저장 실패와 중단 실행은 `a8-development.json`에 보존했다. 실기기·어린이 이해도·최종 사용자 승인은 미검증이며 ART_DRAFT 유지.
+
 ## A6 · 2026-10-03 · 무기7종 · ART_DRAFT
 
 OpenAI **내장 imagegen**으로 무기별 한 장씩 생성했다. 프로젝트 자체 `art-source/webtoon/hero-webtoon.webp`는 선명한 잉크 선·2~3단계 셀 음영·금속/가죽 재질의 화풍 참조, `art-source/weapons/references/W01~W07.png`는 기존 자체 SVG를 그대로 렌더한 형태/색 참조다. 외부 작품·작가·이미지는 참조하지 않았다. 투명 RGBA, 한 무기만, 글자·손·인물·피·상처·바닥 그림자 없음, 칼날/창끝은 오른쪽이다.
@@ -136,3 +229,34 @@ OpenAI **내장 imagegen**으로 제작했다. `art-source/webtoon/hero-webtoon.
 AI 생성 원본은 본 프로젝트를 위해 만든 자산이다. 서비스 약관과 관할권에 따른 권리 차이는 별도 출시 검토 대상이며, 이 기록은 타 작품의 라이선스를 부여한다는 뜻이 아니다. 런타임에서 AI 서비스를 호출하지 않는다.
 
 초반 인물 추가(2026-10-02): `siren-webtoon.webp`는 청록/남색 옷과 금빛 하프를 든 성인 세이렌, `rah-webtoon.webp`는 호박빛 갑옷·붉은 망토·불씨 등불을 든 창작 불꽃 수호자, `crab-webtoon.webp`는 둥근 집게와 저주 표식이 있는 붉은 암초 게다. 신밧드 원화의 화풍을 참조한 내장 imagegen 생성이며, 실제 크기는 각각 1024×1536, 1024×1536, 1280×1280이다. 원본은 `exec-40b1ed89-b5ab-434b-af3d-68b09787be36.png`, `exec-b0863fa2-ce51-47de-bd6f-479abb1e12db.png`, `exec-47ef5d8c-f903-4a66-aabf-6cc01f9ae9be.png`이고 원본을 삭제하지 않았다. 프레임·투명 영역을 육안 확인했고 무손실 WebP 변환 뒤 보이는 RGBA 동일성을 검사했다.
+
+## A7 · 2026-10-04 · 투사체·효과7종 / 34프레임 · ART_DRAFT
+
+OpenAI **내장 imagegen**으로 개별 시트7개를 생성했다. 프로젝트 자체 `hero-webtoon.webp`는 화풍 참조로만 사용했다. 선명한 외곽선·셀 음영·왼쪽 위 빛·청록/금색/보라 팔레트, 실제 투명 RGBA, 글자/레이블/로고/격자/서명/피/상처 없음, 완전한 셀과 투명 여백이 공통 지시다. 음표는 문자 출력이 아닌 그림 소품이다. 외부 작품·작가를 참조하지 않았다.
+
+| 원본 파일 (`art-source/webtoon/`) | 핵심 생성 지시 | 원본 → 런타임 |
+|---|---|---|
+| `projectile-siren-wave.webp` | 오른쪽으로 열린 청록 음파 곡선과 진주 중심. 네 단계 잔물결 반복. | 1024×1024 / 2×2 →128×128 / 셀64 |
+| `projectile-siren-note.webp` | 보라색 8분음표 모양 소품과 금빛 반짝임. 네 단계 빛 띠 반복; 글자 레이블 없음. | 1024×1024 / 2×2 →128×128 / 셀64 |
+| `projectile-kite-wind.webp` | 오른쪽으로 날아가는 민트 소용돌이·왼쪽 짧은 바람 꼬리. 네 단계 회전 반복. | 1024×1024 / 2×2 →128×128 / 셀64 |
+| `projectile-kuura-orb.webp` | 보라 수정 마법구·라벤더 궤도 띠. 네 단계 맥동 반복, 공포/종교 표식 없음. | 1024×1024 / 2×2 →128×128 / 셀64 |
+| `effect-hit-spark.webp` | 작은 별빛→확장→금색/아이보리 타격 불꽃→흩어짐→작은 반짝임→소멸의6단계. 피/상처 없음. | 1536×1024 / 3×2 →384×256 / 셀128 |
+| `effect-purify-light.webp` | 진주 빛→민트 리본→열린 정화 고리→별빛 분산→상승/소멸의6단계. 동물과 마법 적의 평화로운 전환. | 1536×1024 / 3×2 →384×256 / 셀128 |
+| `effect-surrender-flag.webp` | 접힌 흰 깃발→펼침→금빛 반짝임→잔잔한 천→희미해짐의6단계. 문양 없는 깃발과 짧은 나무 기둥, 사람/무기 없음. | 1536×1024 / 3×2 →384×256 / 셀128 |
+
+전체 실제 프롬프트·도구 원본 경로·선택 목록·크기/SHA256은 `art-source/webtoon/effects.sources.json`이다. 생성 PNG7개는 `art-source/webtoon/generated/effects/{key}-01.png`에 도구 원본과 바이트 동일 보존했다. 투사체 생성 크기는1254×1254(627px 셀), 효과는1536×1024(512px 셀)다. 선택7개이며 모두 가시 알파>16의 셀 경계가 비었다. 반려/재생성은 없었다.
+
+`scripts/pack-effects.py`는 **완전한 정사각 셀 전체**를 균일하게480×480으로 축소해512px 셀에16px 투명 여백으로 배열하고, PNG와 동일 RGBA 무손실 WebP를 만든다. 그림을 덧칠하거나 실루엣을 잘라내지 않고 생성 알파를 보존한다. 측정 JSON의 `bounds.source`는 내부480px의 좌표이며512px 셀 좌표는 각각+16px이다. `optimize-webtoon.py`가 등록된 SIZES로 런타임을 만들며 총93,582바이트다.
+
+`stage.ts`의 Sprite 애니메이션은 정지 가능한 게임 시계로4프레임을100ms씩 반복하고, 타격6프레임은180ms, 정화/항복6프레임은650ms에 끝난다. 연출 줄이기는 투사체를0셀에 고정하고 새 타격/정화/항복 효과를 생략한다. 판정·피해·발사 속도·패턴·4초 수명·보상/저장 ID는 유지한다. 파일 누락 시 기존 원/문자/별/빛 입자로 복구하며 현재 맵에 필요한 투사체만 로드한다. 궁수의 기존 음표 모양도 새 음표 시트로 표시하며 플레이어 화살/부메랑과 보물 파동은 이번 A7에서 교체하지 않았다. 실제 검증과 미검증은 PROJECT_STATUS.md에 별도 기록한다.
+
+최종 검증: 단위 101개·전체 E2E 44개 통과, 새 게임 36스테이지 완주와 무기/보물 각 7종·엔딩·저장 재개 확인. 실행 전후 실제 684파일의 해시가 동일하다. `docs/validation/a7-checks.json`, `a7-e2e-full.json`, `a7-final-screenshots.json`에 실제 결과와 캡처 36장의 경로·해시를 기록했다. 첫 중단 실행의 실패도 보존했으며 실기기·iOS·사용자 최종 아트 승인은 미검증이다. ART_DRAFT 유지, 배포 없음.
+# 2026-10-04 · M6 공중 연 네 행동 · ART_DRAFT
+
+실제 검증: 정적8명령·단위109개·새 연4검사 통과, 새 게임36스테이지833초 완주(7무기/7보물/엔딩/오류[]). 전체 E2E는60통과/1기록 쓰기 실패이며, 무기 검사의 마지막 기존JSON `UNKNOWN open`을 증거 폴더 저장으로 수정한 뒤 해당2검사 통과했다. 전체61개가 한 실행에서 모두 통과했다고 기록하지 않는다. 주요69화면 및 재검사42화면, 두 실행 각각944파일 해시 동일·실행 사이 게임/빌드/자산 동일은 PROJECT_STATUS/`m6-kite-postcheck.json`에 기록했다. 실기기와 최종 사용자 아트 승인 미검증, ART_DRAFT, 배포 없음.
+
+내장 **OpenAI imagegen**으로 `hero-webtoon.webp`의 선과 부드러운 셀 음영을 참조하고, 자체 `public/assets/draft/kite.svg`의 주황/연어색 마름모 돛·금색 살대·표정·청록색 꼬리 리본 디자인을 유지했다. 참조 이미지는 화풍 전용이며 특정 작품/작가/외부 이미지·문구를 참조하지 않았다. 대기→공격 예고→오른쪽 바람탄 공격→온전한 연이 웃으며 빛으로 풀리는 순서다. 사람/동물·무기·상처·글자·워터마크 없이 투명2×2와 빈 셀 경계를 요구했다.
+
+전체 실제 프롬프트는 `art-source/webtoon/generated/kite-m6/kite-actions-01-rejected.json`, `kite-actions-02.json`에 저장했다. 첫 후보의 공격 바람이1254px 원본의 세로 중앙 경계를 넘어 반려했다. 두 번째 프롬프트는 모든 꼬리/바람까지 셀 중앙60% 안에 넣고20% 투명 여백을 요구했다. 선택2번은1254×1254이며 바깥/중앙 가시 알파>16 경계가 모두 비고 글자가 없다. 두 후보 PNG는 도구 생성 경로와 `generated/kite-m6/`에 삭제 없이 바이트 동일 보존했다. 검사·측정·시각 확인은 최종 사용자 아트 승인과 구별한다.
+
+`scripts/pack-kite-actions.py`가 **완전한627px 셀 전체**를512px로 균일 축소해4×1으로 재배열한다. 덧칠·실루엣 크롭 없이2048×512 PNG와 동일 RGBA 무손실 WebP를 저장했다. `kite-actions.json`은 실제 가시 경계/baseline과 수동 측정한 살대 중심+비행 타깃 오프셋을 담으며,512px 셀 기준 중심은 **(286,291), (262,319), (321,253), (255,236)**이다. 이 JSON을 게임에 복사하고 좌우 반전 시 X원점을 보정하여 기존 비행 타깃 위치를 유지한다. 정지 자세의 전체 가시 높이를128월드px로 맞춘다. 별도 `kite-actions` 시트는 S10/S33에서만 로드한다. 런타임1024×256/4셀256px, **33,784바이트**. 파일 누락 시 원래SVG를 쓴다. AI·바람탄 속도/타이밍·날개 공격·안정 보상 ID·일시정지·연출 줄이기는 기존 규칙을 유지하며 **ART_DRAFT**다.

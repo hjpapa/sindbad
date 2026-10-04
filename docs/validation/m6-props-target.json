@@ -1,0 +1,183 @@
+{
+  "config": {
+    "configFile": "C:\\code\\code10(sindbad)\\playwright.config.ts",
+    "rootDir": "C:/code/code10(sindbad)/tests/e2e",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": "C:\\code\\code10(sindbad)\\tests\\e2e\\server.setup.ts",
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "C:/code/code10(sindbad)/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "C:/code/code10(sindbad)/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 240000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.55.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "world-props.spec.ts",
+      "file": "world-props.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "world props retain dimensions, real reward/healing, retry and reload on phone/tablet",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 360000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 48685,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 128
+                    }
+                  ],
+                  "startTime": "2026-10-04T01:54:56.933Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "619b05eff6248c0d7fe5-892e4ce350e7a123c07b",
+          "file": "world-props.spec.ts",
+          "line": 179,
+          "column": 1
+        },
+        {
+          "title": "missing world props use preserved SVGs and retain real interactions",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1634,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 4\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"prop-chest\",\u001b[39m\n\u001b[31m+   \"prop-heart\",\u001b[39m\n\u001b[31m+ ]\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 4\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"prop-chest\",\u001b[39m\n\u001b[31m+   \"prop-heart\",\u001b[39m\n\u001b[31m+ ]\u001b[39m\n    at verify (C:\\code\\code10(sindbad)\\tests\\e2e\\world-props.spec.ts:32:78)\n    at C:\\code\\code10(sindbad)\\tests\\e2e\\world-props.spec.ts:71:119",
+                    "location": {
+                      "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\world-props.spec.ts",
+                      "column": 78,
+                      "line": 32
+                    },
+                    "snippet": "  30 |     for(const [device,viewport] of Object.entries(fallback?{phone:{width:844,height:390}}:{phone:{width:844,height:390},tablet:{width:1180,height:820}})){\n  31 |         await page.setViewportSize(viewport);await load(page,fixture());\n> 32 |         const start=await read(page);expect(start.propArt.cachedKeys.sort()).toEqual(fallback?[]:['prop-chest','prop-heart']);\n     |                                                                              ^\n  33 |         const chest=start.propArt.chests[0];expect(chest.texture).toBe(fallback?'chest':'prop-chest');\n  34 |         expect(chest.width).toBeCloseTo(65.28);expect(chest.height).toBeCloseTo(87.04);\n  35 |         const heart=start.propArt.hearts[0];expect(heart.texture).toBe(fallback?'heart':'prop-heart');"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\world-props.spec.ts",
+                        "column": 78,
+                        "line": 32
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 4\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"prop-chest\",\u001b[39m\n\u001b[31m+   \"prop-heart\",\u001b[39m\n\u001b[31m+ ]\u001b[39m\n\n  30 |     for(const [device,viewport] of Object.entries(fallback?{phone:{width:844,height:390}}:{phone:{width:844,height:390},tablet:{width:1180,height:820}})){\n  31 |         await page.setViewportSize(viewport);await load(page,fixture());\n> 32 |         const start=await read(page);expect(start.propArt.cachedKeys.sort()).toEqual(fallback?[]:['prop-chest','prop-heart']);\n     |                                                                              ^\n  33 |         const chest=start.propArt.chests[0];expect(chest.texture).toBe(fallback?'chest':'prop-chest');\n  34 |         expect(chest.width).toBeCloseTo(65.28);expect(chest.height).toBeCloseTo(87.04);\n  35 |         const heart=start.propArt.hearts[0];expect(heart.texture).toBe(fallback?'heart':'prop-heart');\n    at verify (C:\\code\\code10(sindbad)\\tests\\e2e\\world-props.spec.ts:32:78)\n    at C:\\code\\code10(sindbad)\\tests\\e2e\\world-props.spec.ts:71:119"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-04T01:55:46.448Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\code\\code10(sindbad)\\test-results\\world-props-missing-world--88821-nd-retain-real-interactions\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\code\\code10(sindbad)\\test-results\\world-props-missing-world--88821-nd-retain-real-interactions\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\world-props.spec.ts",
+                    "column": 78,
+                    "line": 32
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "619b05eff6248c0d7fe5-de8a11353525d2cc4d77",
+          "file": "world-props.spec.ts",
+          "line": 185,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-04T01:54:52.467Z",
+    "duration": 56141.264,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

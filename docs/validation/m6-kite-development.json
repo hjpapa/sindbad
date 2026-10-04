@@ -1,0 +1,18 @@
+{
+  "artStatus": "ART_DRAFT",
+  "generatedCandidates": 2,
+  "rejected": "Candidate 01 attack wind crosses native vertical seam at x626..627, y829..1003; original PNG and prompt retained.",
+  "accepted": "Candidate 02 has transparent cell seams, outer borders and no visible lettering; complete 627px cells uniformly resized to 512px and repacked 4x1.",
+  "firstBrowserRun": "Started and failed before test discovery: new test JSON import lacked type:json attribute; raw log preserved.",
+  "firstRecheck": "6 tests ran: 4 passed, 2 failed. New normal phone/tablet tests incorrectly asserted fixed size during the existing 1.25x release tween. SVG fallback phone/tablet and original flight tests passed. Failed PNGs/context, JSON and log preserved.",
+  "correction": "Living kite dimensions remain exact. Defeated pose allows only the existing 1.0..1.25 release scale, and capture is taken immediately when touch already defeats the enemy. Renderer/AI/reward logic unchanged for this test repair.",
+  "patchAttempts": "One exact source patch failed its precondition before modifying files; re-read actual spacing and applied smaller patches. One glob read failed to match the shortened Playwright result directory; exact actual path read next.",
+  "sourcePreservation": "m6-kite-before contains 281 files; 38 prior source/atlas/SVG files byte-identical. Flight map change is only addition of actionArt:kite to existing 11 stable enemies.",
+  "mobileMeasurements": "Original smoke runs exit0: movement, slide, jump, defeat, captain talk and errors[] recorded. Two-thumb horizontal displacement was phone7/tablet0 in run1 and phone0/tablet0 in run2; these are retained as inconclusive for simultaneous horizontal movement, not passed assertions.",
+  "supplementalTouchDiagnostic": "Actual CDP touch on phone/tablet at fresh open space and after walk/slide with a before screenshot/frame interval: both devices dx57 and dx37.1667 respectively, dy-110 in all4, vx300, vy-265, errors[]. No game/input changes. Full snapshots and8PNG retained. Diagnostic confirms two fingers in those timing conditions; no physical device claim.",
+  "fullRun": "60 passed, 1 failed in 50.1 minutes. Failed weapon-art test completed all28 weapon/hand/direction/icon and console assertions; only its final writeFileSync to old docs/validation/a6-weapon-art.json failed with Windows UNKNOWN open. Report Attributes:Archive, old report preserved. No rendering or gameplay assertion failed there. Full JSON/log/failed PNG/context retained.",
+  "fullRunFreeze": "944 actual source/runtime/build/scripts/tests/original files unchanged before/after full run. Fresh campaign all36 stages in833seconds, all7 weapons/7treasures/ending/errors[].",
+  "recordRepair": "Only2 weapon test report destinations changed to the run evidence root, preserving old flat reports. The existing assertions are unchanged. Isolated weapon2 recheck passed, exit0, in2.2minutes, and is separate from the full60pass+1writeFailure run; do not label that full run all61passed.",
+  "postprocess": "First postcheck Python read used the Windows default cp949 and failed on a UTF8 Korean report. Explicit UTF8 decoding repaired the docs-only collector; no game/test/source changes. Final collector decoded69 primary+42 repair screenshots, compared both944-file freezes and confirmed only the weapon test changed between runs.",
+  "cleanup": "Own dev/test servers and log monitors closed. Node net127.0.0.1 ports5174/5175 bothECONNREFUSED. CtrlC exit1 is cleanup; full run exit1 is separately the one write failure. git diff --check exit0. No commit, push or deployment."
+}

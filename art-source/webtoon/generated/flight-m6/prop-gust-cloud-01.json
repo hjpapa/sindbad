@@ -1,0 +1,26 @@
+{
+  "key": "prop-gust-cloud",
+  "legacy": "stormCloud",
+  "subject": "A compact friendly-looking wind hazard cloud: rounded slate teal and cream storm cloud billows, three short curling wind streamers to the right and a small warm gold lightning-shaped decorative glint below; no face, no rain, no scenery. Broad clear cel shaded silhouettes legible at 91x122 pixels. All billows and wind curls fully inside canvas with at least 8% transparent margin.",
+  "prompt": "Use case: illustration-story. Asset type: original child-friendly 2D side-scrolling Sinbad flight game prop. Image 1 is only the project's own hero-webtoon style reference: use clean ink contours, crisp cel shading, warm teal and gold palette, upper-left light; do not depict the hero. Primary subject: A compact friendly-looking wind hazard cloud: rounded slate teal and cream storm cloud billows, three short curling wind streamers to the right and a small warm gold lightning-shaped decorative glint below; no face, no rain, no scenery. Broad clear cel shaded silhouettes legible at 91x122 pixels. All billows and wind curls fully inside canvas with at least 8% transparent margin. Composition: one single isolated centered object in a portrait 3:4 canvas, target canvas 1024x1365 or closest supported 3:4 portrait. Genuine RGBA transparent background, no cast backdrop, no text, letters, numerals, logo, watermark, signature, frame or grid. No blood or wounds. Do not mimic external artists, copyrighted characters or existing games. Original project design. Keep the outer margin transparent, no clipping.",
+  "nativePath": "C:/Users/tbose/.codex/generated_images/01a10013-499c-7b11-9c12-3ae8826e542a/exec-05a7dd4f-c537-484e-870f-11c069822b7f.png",
+  "path": "art-source/webtoon/generated/flight-m6/prop-gust-cloud-01.png",
+  "selected": true,
+  "status": "generated",
+  "tool": "OpenAI built-in imagegen",
+  "references": [
+    "art-source/webtoon/hero-webtoon.webp"
+  ],
+  "visualReview": "No visible text, wounds or cropped silhouette. Transparent exterior; ring center empty. Final user art approval pending.",
+  "sha256": "e91daaa38922e7f29c75b806fd8be909ebb47e96dfa309b30edf7e6d3dd4d6ab",
+  "nativeSize": [
+    1086,
+    1448
+  ],
+  "alphaBounds": [
+    55,
+    336,
+    1037,
+    1113
+  ]
+}

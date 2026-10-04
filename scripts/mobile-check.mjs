@@ -3,8 +3,11 @@
 // Saves screenshots to docs/screenshots/mobile-*.png and prints a JSON report.
 import {chromium} from '@playwright/test';
 import {mkdirSync} from 'node:fs';
+import {join} from 'node:path';
 const base=process.argv[2]??'http://127.0.0.1:5173';
-mkdirSync('docs/screenshots',{recursive:true});
+// Optional evidence folder preserves previous runs when validating new art.
+const output=process.argv[3]??'docs/screenshots';
+mkdirSync(output,{recursive:true});
 const browser=await chromium.launch({channel:'msedge',headless:true});
 const report={};
 const devices={phone:{width:844,height:390,scale:3},tablet:{width:1180,height:820,scale:2}};
@@ -27,7 +30,7 @@ for(const [name,d] of Object.entries(devices)){
   const r={};
   r.visibleButtons=await page.locator('#touch button:visible').evaluateAll(list=>list.map(b=>b.dataset.action));
   r.touchMode=await page.evaluate(()=>document.getElementById('app').classList.contains('touch-mode'));
-  await page.screenshot({path:`docs/screenshots/mobile-${name}-start.png`});
+  await page.screenshot({path:join(output,`mobile-${name}-start.png`)});
   let s=await state();const x0=s.player.x;
   await hold('right',900);s=await state();r.walkRight=Math.round(s.player.x-x0);
   // Slide the same finger from ▶ to ◀ without lifting it.
@@ -44,7 +47,7 @@ for(const [name,d] of Object.entries(devices)){
   for(let i=0;i<30;i++){s=await state();const e=s.enemies.find(x=>x.state!=='defeated');if(!e||Math.abs(e.x-s.player.x)<120)break;await (i%2?hop:hold)(e.x>s.player.x?'right':'left',260);}
   const primary=await center('primary');
   await touch('touchStart',[{...primary,id:5}]);await touch('touchEnd',[]);await page.waitForTimeout(130);
-  await page.screenshot({path:`docs/screenshots/mobile-${name}-swing.png`});
+  await page.screenshot({path:join(output,`mobile-${name}-swing.png`)});
   for(let i=0;i<14;i++){s=await state();const e=s.enemies.find(x=>x.id==='S01.enemy.skeleton.01');if(e.state==='defeated')break;const dx=e.x-s.player.x;if(Math.abs(dx)>100||s.player.y<500)await hold(dx>0?'right':'left',140);await touch('touchStart',[{...primary,id:6}]);await touch('touchEnd',[]);await page.waitForTimeout(400);}
   s=await state();r.firstSkeleton=s.enemies.find(x=>x.id==='S01.enemy.skeleton.01').state;
   // Back to the captain: the action button should switch to "대화" and open the speech box.
@@ -55,7 +58,7 @@ for(const [name,d] of Object.entries(devices)){
   r.actionKind=await page.locator('[data-action="primary"]').getAttribute('data-kind');
   await touch('touchStart',[{...primary,id:7}]);await touch('touchEnd',[]);await page.waitForTimeout(300);
   r.dialogue=await page.getByTestId('dialogue-text').textContent().catch(()=>null);
-  await page.screenshot({path:`docs/screenshots/mobile-${name}-dialogue.png`});
+  await page.screenshot({path:join(output,`mobile-${name}-dialogue.png`)});
   r.errors=errors;
   report[name]=r;
   await context.close();

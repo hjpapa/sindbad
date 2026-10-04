@@ -1,0 +1,58 @@
+[
+  {
+    "command": "python scripts/optimize-webtoon.py",
+    "started": "2026-10-04T06:31:48.199182+00:00",
+    "exitCode": 0,
+    "seconds": 15.75,
+    "output": "docs/validation/m6-flight-final-check-1.txt"
+  },
+  {
+    "command": "python scripts/audit-webtoon.py",
+    "started": "2026-10-04T06:32:03.955751+00:00",
+    "exitCode": 0,
+    "seconds": 15.53,
+    "output": "docs/validation/m6-flight-final-check-2.txt"
+  },
+  {
+    "command": "npm run typecheck",
+    "started": "2026-10-04T06:32:19.484494+00:00",
+    "exitCode": 0,
+    "seconds": 3.66,
+    "output": "docs/validation/m6-flight-final-check-3.txt"
+  },
+  {
+    "command": "npm run lint",
+    "started": "2026-10-04T06:32:23.147558+00:00",
+    "exitCode": 0,
+    "seconds": 3.91,
+    "output": "docs/validation/m6-flight-final-check-4.txt"
+  },
+  {
+    "command": "npm run test",
+    "started": "2026-10-04T06:32:27.061868+00:00",
+    "exitCode": 0,
+    "seconds": 4.42,
+    "output": "docs/validation/m6-flight-final-check-5.txt"
+  },
+  {
+    "command": "npm run validate:content",
+    "started": "2026-10-04T06:32:31.481707+00:00",
+    "exitCode": 0,
+    "seconds": 2.06,
+    "output": "docs/validation/m6-flight-final-check-6.txt"
+  },
+  {
+    "command": "npm run build",
+    "started": "2026-10-04T06:32:33.546712+00:00",
+    "exitCode": 0,
+    "seconds": 19.3,
+    "output": "docs/validation/m6-flight-final-check-7.txt"
+  },
+  {
+    "command": "npx tsx scripts/check-art-budget.ts",
+    "started": "2026-10-04T06:32:52.835708+00:00",
+    "exitCode": 0,
+    "seconds": 3.56,
+    "output": "docs/validation/m6-flight-final-check-8.txt"
+  }
+]

@@ -70,6 +70,9 @@ meter.low{animation:low-hp 1s ease-in-out infinite}
 #touch [data-action=cycle]{right:calc(var(--edge-r) + var(--big) + 22px);bottom:calc(var(--edge-b) + var(--mid) + 14px);width:var(--small);height:var(--small)}
 #touch [data-action=cycle] .caption{font-size:10px;margin-top:0}
 #touch [data-action=cycle] img{max-width:66%;max-height:56%}
+/* UI artwork stays upright; weapon thumbnails retain their own rotation. */
+#touch .icon-frame{display:flex;align-items:center;justify-content:center;width:74%;height:62%;flex-shrink:0;pointer-events:none}
+#touch button img.touch-icon{width:100%;height:100%;max-width:100%;max-height:100%;object-fit:contain;transform:none}
 
 /* Small phones in landscape (iPhone SE/mini, compact Android). */
 @media(max-height:420px){#touch{--pad:66px;--big:84px;--mid:68px;--small:52px}#touch .pad{gap:10px;padding:6px}}

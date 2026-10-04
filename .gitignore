@@ -9,5 +9,13 @@ SINBAD_CODEX_PACKAGE.zip
 __pycache__/
 *.py[cod]
 
+# Local validation archives and repeated browser captures stay on disk.
+# Curated final screenshots/reports are explicitly staged from their manifests.
+docs/validation/*/
+docs/screenshots/*-before/
+docs/screenshots/art-a7/
+docs/screenshots/art-a8/
+docs/screenshots/m6-*/
+
 .vercel
 .env*

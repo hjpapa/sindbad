@@ -1,0 +1,40 @@
+{
+  "method": "byte-identical captures from final full E2E fresh game campaign, no seed/save injection",
+  "captures": [
+    {
+      "source": "test-results/complete-journey-new-game--139b0-ntrols-and-no-injected-save/S05-route.png",
+      "path": "docs/screenshots/art-a7/campaign-S05-route.png",
+      "sha256": "615d19c3c7079e30ae13146ae5c9cd25088a249640b144b386b66b39eaaca41d"
+    },
+    {
+      "source": "test-results/complete-journey-new-game--139b0-ntrols-and-no-injected-save/S10-route.png",
+      "path": "docs/screenshots/art-a7/campaign-S10-route.png",
+      "sha256": "a0dd3ac60236d6cc9ac02fc18b1c5b92515f7865227d2f79ead55b3ac0b540f7"
+    },
+    {
+      "source": "test-results/complete-journey-new-game--139b0-ntrols-and-no-injected-save/S15-route.png",
+      "path": "docs/screenshots/art-a7/campaign-S15-route.png",
+      "sha256": "3934a04efd01d9b9f60f81f44f893215ad3ae143b3e223777bdd4501fbc00fd6"
+    },
+    {
+      "source": "test-results/complete-journey-new-game--139b0-ntrols-and-no-injected-save/S19-route.png",
+      "path": "docs/screenshots/art-a7/campaign-S19-route.png",
+      "sha256": "d90f2c697864f3e252efbf2633d2dbc7888d75b518865786e477e7d0ef95457d"
+    },
+    {
+      "source": "test-results/complete-journey-new-game--139b0-ntrols-and-no-injected-save/S25-route.png",
+      "path": "docs/screenshots/art-a7/campaign-S25-route.png",
+      "sha256": "ee698b38b33fd9d81ed5d626f3a887a2950e8540b0b4652d85c15e7857f670a8"
+    },
+    {
+      "source": "test-results/complete-journey-new-game--139b0-ntrols-and-no-injected-save/S29-route.png",
+      "path": "docs/screenshots/art-a7/campaign-S29-route.png",
+      "sha256": "5f4bf713cf9f02c1f01d295a1c5a5a1942ea361961fb9b8bdfefc6bb64491a96"
+    },
+    {
+      "source": "test-results/complete-journey-new-game--139b0-ntrols-and-no-injected-save/S36-route.png",
+      "path": "docs/screenshots/art-a7/campaign-S36-route.png",
+      "sha256": "83aafdb34122cee181cae0e17532fce6bd992087a884c11f9764ff25c87e438a"
+    }
+  ]
+}

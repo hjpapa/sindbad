@@ -1,0 +1,21 @@
+{
+  "key": "prop-shell",
+  "legacy": "shell",
+  "subject": "A fan-shaped ivory clam shell with coral-pink ribs and a small teal striker bead attached at its bottom. Closed front silhouette, no animal face. It is a musical shell switch, not a pearl treasure.",
+  "status": "generated",
+  "prompt": "Create ONE original world interaction sprite for a bright child-friendly Korean adventure webtoon game. Attached project hero is STYLE reference ONLY: confident navy ink outlines, warm teal/gold palette, clean 2-3 flat cel shade levels, top-left lighting. Do not draw the hero. PORTRAIT 3:4 canvas requested 768x1024, true transparent RGBA background. Subject: A fan-shaped ivory clam shell with coral-pink ribs and a small teal striker bead attached at its bottom. Closed front silhouette, no animal face. It is a musical shell switch, not a pearl treasure. Front-facing readable silhouette at only 65x87 game pixels. Entire object centered, occupies roughly x=10%-90%, y=14%-86%, with fully transparent padding on every side. Keep the complete silhouette and all parts inside canvas. No scene, floor, cast shadow, circular backing, characters, hands, extra objects, labels, letters, numbers, logos, signature, watermark, blood, wounds or scary faces. Original project design only. Use clean limited broad color shapes rather than tiny decorative detail.",
+  "nativePath": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-5cc83a00-db21-4427-8ce5-d45746f0e3ef.png",
+  "path": "art-source/webtoon/generated/props-m6/prop-shell-01.png",
+  "sha256": "c603327b307010957b541e78a5052d4cb794b2e72bfdd985706fce204391abf7",
+  "nativeSize": [
+    1086,
+    1448
+  ],
+  "alphaBounds": [
+    58,
+    191,
+    1027,
+    1275
+  ],
+  "selected": true
+}

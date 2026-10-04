@@ -1,0 +1,21 @@
+{
+  "key": "prop-journal",
+  "legacy": "journal",
+  "subject": "One closed upright cream-and-brown travel journal, navy binding, blank cover, small teal bookmark ribbon. Simple raised bands rather than writing, no letters or readable marks.",
+  "status": "generated",
+  "prompt": "Create ONE original world interaction sprite for a bright child-friendly Korean adventure webtoon game. Attached project hero is STYLE reference ONLY: confident navy ink outlines, warm teal/gold palette, clean 2-3 flat cel shade levels, top-left lighting. Do not draw the hero. PORTRAIT 3:4 canvas requested 768x1024, true transparent RGBA background. Subject: One closed upright cream-and-brown travel journal, navy binding, blank cover, small teal bookmark ribbon. Simple raised bands rather than writing, no letters or readable marks. Front-facing readable silhouette at only 65x87 game pixels. Entire object centered, occupies roughly x=10%-90%, y=14%-86%, with fully transparent padding on every side. Keep the complete silhouette and all parts inside canvas. No scene, floor, cast shadow, circular backing, characters, hands, extra objects, labels, letters, numbers, logos, signature, watermark, blood, wounds or scary faces. Original project design only. Use clean limited broad color shapes rather than tiny decorative detail.",
+  "nativePath": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-be9b5bb1-945f-4112-b6f1-9aa787c87c1e.png",
+  "path": "art-source/webtoon/generated/props-m6/prop-journal-01.png",
+  "sha256": "337432a18490aee9019f07c4983e48b6f7cf8fe81869c6acfb8934991a12b206",
+  "nativeSize": [
+    1086,
+    1448
+  ],
+  "alphaBounds": [
+    149,
+    184,
+    958,
+    1255
+  ],
+  "selected": true
+}

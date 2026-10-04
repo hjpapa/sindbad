@@ -1,0 +1,625 @@
+[
+  {
+    "key": "projectile-siren-wave",
+    "nativeSize": [
+      1254,
+      1254
+    ],
+    "sourceSize": [
+      1024,
+      1024
+    ],
+    "columns": 2,
+    "rows": 2,
+    "frames": 4,
+    "sourceFrame": 512,
+    "runtimeFrame": 64,
+    "innerFrame": 480,
+    "padding": 16,
+    "nativeSha256": "29e99cce09b0744cdcb30653709e5043e02da4e344882efd8a74808dbf756bba",
+    "bounds": [
+      {
+        "native": [
+          199,
+          200,
+          474,
+          491
+        ],
+        "source": [
+          152,
+          153,
+          363,
+          376
+        ]
+      },
+      {
+        "native": [
+          137,
+          175,
+          495,
+          520
+        ],
+        "source": [
+          105,
+          134,
+          379,
+          398
+        ]
+      },
+      {
+        "native": [
+          146,
+          100,
+          573,
+          479
+        ],
+        "source": [
+          112,
+          77,
+          439,
+          367
+        ]
+      },
+      {
+        "native": [
+          169,
+          147,
+          467,
+          441
+        ],
+        "source": [
+          130,
+          112,
+          357,
+          338
+        ]
+      }
+    ]
+  },
+  {
+    "key": "projectile-siren-note",
+    "nativeSize": [
+      1254,
+      1254
+    ],
+    "sourceSize": [
+      1024,
+      1024
+    ],
+    "columns": 2,
+    "rows": 2,
+    "frames": 4,
+    "sourceFrame": 512,
+    "runtimeFrame": 64,
+    "innerFrame": 480,
+    "padding": 16,
+    "nativeSha256": "79638e552d1e0f61b74eaf7aa5a5e84fb89739730ac22b69b2773816b9cd6e61",
+    "bounds": [
+      {
+        "native": [
+          181,
+          107,
+          519,
+          544
+        ],
+        "source": [
+          139,
+          82,
+          397,
+          416
+        ]
+      },
+      {
+        "native": [
+          127,
+          109,
+          480,
+          544
+        ],
+        "source": [
+          97,
+          83,
+          368,
+          417
+        ]
+      },
+      {
+        "native": [
+          160,
+          76,
+          519,
+          512
+        ],
+        "source": [
+          122,
+          58,
+          397,
+          392
+        ]
+      },
+      {
+        "native": [
+          146,
+          75,
+          481,
+          511
+        ],
+        "source": [
+          112,
+          57,
+          368,
+          391
+        ]
+      }
+    ]
+  },
+  {
+    "key": "projectile-kite-wind",
+    "nativeSize": [
+      1254,
+      1254
+    ],
+    "sourceSize": [
+      1024,
+      1024
+    ],
+    "columns": 2,
+    "rows": 2,
+    "frames": 4,
+    "sourceFrame": 512,
+    "runtimeFrame": 64,
+    "innerFrame": 480,
+    "padding": 16,
+    "nativeSha256": "b02e8f1ed1f754d1cf8c14ac01074a5fe6c37d99736bbf0072e258d5295c02b6",
+    "bounds": [
+      {
+        "native": [
+          105,
+          179,
+          589,
+          515
+        ],
+        "source": [
+          80,
+          137,
+          451,
+          394
+        ]
+      },
+      {
+        "native": [
+          91,
+          184,
+          546,
+          510
+        ],
+        "source": [
+          70,
+          141,
+          418,
+          390
+        ]
+      },
+      {
+        "native": [
+          100,
+          137,
+          585,
+          462
+        ],
+        "source": [
+          76,
+          105,
+          448,
+          354
+        ]
+      },
+      {
+        "native": [
+          71,
+          142,
+          558,
+          477
+        ],
+        "source": [
+          54,
+          108,
+          427,
+          365
+        ]
+      }
+    ]
+  },
+  {
+    "key": "projectile-kuura-orb",
+    "nativeSize": [
+      1254,
+      1254
+    ],
+    "sourceSize": [
+      1024,
+      1024
+    ],
+    "columns": 2,
+    "rows": 2,
+    "frames": 4,
+    "sourceFrame": 512,
+    "runtimeFrame": 64,
+    "innerFrame": 480,
+    "padding": 16,
+    "nativeSha256": "b47f6d3221d5fcc0f54bce3f0ca26a076c2fa00280d04cd2491c6fc3f5dfac4c",
+    "bounds": [
+      {
+        "native": [
+          112,
+          136,
+          528,
+          481
+        ],
+        "source": [
+          86,
+          104,
+          404,
+          368
+        ]
+      },
+      {
+        "native": [
+          110,
+          128,
+          515,
+          512
+        ],
+        "source": [
+          84,
+          98,
+          394,
+          392
+        ]
+      },
+      {
+        "native": [
+          151,
+          132,
+          534,
+          479
+        ],
+        "source": [
+          115,
+          101,
+          409,
+          367
+        ]
+      },
+      {
+        "native": [
+          126,
+          115,
+          521,
+          463
+        ],
+        "source": [
+          96,
+          88,
+          399,
+          354
+        ]
+      }
+    ]
+  },
+  {
+    "key": "effect-hit-spark",
+    "nativeSize": [
+      1536,
+      1024
+    ],
+    "sourceSize": [
+      1536,
+      1024
+    ],
+    "columns": 3,
+    "rows": 2,
+    "frames": 6,
+    "sourceFrame": 512,
+    "runtimeFrame": 128,
+    "innerFrame": 480,
+    "padding": 16,
+    "nativeSha256": "ec22b69baef5829dd02b342b38daea822860ac1e1ba07c8ff556074eabe1b2b5",
+    "bounds": [
+      {
+        "native": [
+          185,
+          178,
+          325,
+          324
+        ],
+        "source": [
+          173,
+          167,
+          304,
+          304
+        ]
+      },
+      {
+        "native": [
+          112,
+          91,
+          395,
+          397
+        ],
+        "source": [
+          105,
+          85,
+          370,
+          372
+        ]
+      },
+      {
+        "native": [
+          93,
+          67,
+          428,
+          415
+        ],
+        "source": [
+          87,
+          63,
+          401,
+          389
+        ]
+      },
+      {
+        "native": [
+          89,
+          81,
+          400,
+          383
+        ],
+        "source": [
+          84,
+          76,
+          375,
+          359
+        ]
+      },
+      {
+        "native": [
+          140,
+          132,
+          368,
+          346
+        ],
+        "source": [
+          131,
+          124,
+          345,
+          325
+        ]
+      },
+      {
+        "native": [
+          205,
+          183,
+          336,
+          309
+        ],
+        "source": [
+          193,
+          172,
+          315,
+          289
+        ]
+      }
+    ]
+  },
+  {
+    "key": "effect-purify-light",
+    "nativeSize": [
+      1536,
+      1024
+    ],
+    "sourceSize": [
+      1536,
+      1024
+    ],
+    "columns": 3,
+    "rows": 2,
+    "frames": 6,
+    "sourceFrame": 512,
+    "runtimeFrame": 128,
+    "innerFrame": 480,
+    "padding": 16,
+    "nativeSha256": "13797b0c7bece5cd538af2bd5483c54c46ccf0f24750d72a2ee16002cfdef90e",
+    "bounds": [
+      {
+        "native": [
+          169,
+          211,
+          343,
+          314
+        ],
+        "source": [
+          159,
+          198,
+          322,
+          294
+        ]
+      },
+      {
+        "native": [
+          143,
+          84,
+          366,
+          436
+        ],
+        "source": [
+          134,
+          78,
+          343,
+          409
+        ]
+      },
+      {
+        "native": [
+          97,
+          105,
+          408,
+          416
+        ],
+        "source": [
+          91,
+          98,
+          383,
+          390
+        ]
+      },
+      {
+        "native": [
+          129,
+          86,
+          401,
+          368
+        ],
+        "source": [
+          121,
+          80,
+          376,
+          345
+        ]
+      },
+      {
+        "native": [
+          197,
+          80,
+          338,
+          396
+        ],
+        "source": [
+          185,
+          75,
+          316,
+          371
+        ]
+      },
+      {
+        "native": [
+          212,
+          195,
+          286,
+          287
+        ],
+        "source": [
+          199,
+          183,
+          268,
+          269
+        ]
+      }
+    ]
+  },
+  {
+    "key": "effect-surrender-flag",
+    "nativeSize": [
+      1536,
+      1024
+    ],
+    "sourceSize": [
+      1536,
+      1024
+    ],
+    "columns": 3,
+    "rows": 2,
+    "frames": 6,
+    "sourceFrame": 512,
+    "runtimeFrame": 128,
+    "innerFrame": 480,
+    "padding": 16,
+    "nativeSha256": "0f3f2f47e330d1eefa541376afaf8547bc38def3ebebc79ff00d148b8618deed",
+    "bounds": [
+      {
+        "native": [
+          154,
+          58,
+          303,
+          458
+        ],
+        "source": [
+          144,
+          54,
+          284,
+          429
+        ]
+      },
+      {
+        "native": [
+          127,
+          59,
+          387,
+          458
+        ],
+        "source": [
+          119,
+          55,
+          363,
+          429
+        ]
+      },
+      {
+        "native": [
+          88,
+          58,
+          438,
+          458
+        ],
+        "source": [
+          82,
+          54,
+          411,
+          429
+        ]
+      },
+      {
+        "native": [
+          147,
+          55,
+          464,
+          456
+        ],
+        "source": [
+          138,
+          51,
+          435,
+          428
+        ]
+      },
+      {
+        "native": [
+          123,
+          53,
+          437,
+          455
+        ],
+        "source": [
+          115,
+          49,
+          409,
+          427
+        ]
+      },
+      {
+        "native": [
+          95,
+          54,
+          433,
+          456
+        ],
+        "source": [
+          89,
+          51,
+          406,
+          428
+        ]
+      }
+    ]
+  }
+]

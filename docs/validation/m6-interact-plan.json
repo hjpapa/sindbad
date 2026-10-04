@@ -1,0 +1,175 @@
+{
+  "status": "implemented; actual map/fallback and gameplay regression verified; ART_DRAFT",
+  "date": "2026-10-04",
+  "items": [
+    {
+      "key": "prop-shell",
+      "legacy": "shell",
+      "subject": "A fan-shaped ivory clam shell with coral-pink ribs and a small teal striker bead attached at its bottom. Closed front silhouette, no animal face. It is a musical shell switch, not a pearl treasure.",
+      "status": "implemented; runtime mapping verified; ART_DRAFT"
+    },
+    {
+      "key": "prop-bell",
+      "legacy": "bell",
+      "subject": "A golden brass ship departure bell, front view, small suspension loop at top, broad flared lip and visible clapper at bottom. No support pole.",
+      "targets": [
+        "S01.exit"
+      ],
+      "status": "implemented; runtime mapping verified; ART_DRAFT"
+    },
+    {
+      "key": "prop-golden",
+      "legacy": "golden",
+      "subject": "A friendly heart SYMBOL made of polished warm gold, two rounded lobes and a pointed bottom, thick navy outline, cream highlight and three small contained gleam marks. Clearly distinct from a coral-red healing heart. No anatomy.",
+      "status": "implemented; runtime mapping verified; ART_DRAFT"
+    },
+    {
+      "key": "prop-key",
+      "legacy": "key",
+      "subject": "A large golden coral gate key, diagonally from upper left to lower right, circular bow handle, solid shaft and two broad teeth. Clearly readable key silhouette.",
+      "status": "implemented; runtime mapping verified; ART_DRAFT"
+    },
+    {
+      "key": "prop-lifevest",
+      "legacy": "gear",
+      "subject": "One orange and warm-gold sleeveless life jacket, two buoyant front panels with a teal belt and simple navy buckle. Empty jacket, no body, face, arms or text.",
+      "targets": [
+        "S04.gear.1"
+      ],
+      "status": "implemented; runtime mapping verified; ART_DRAFT"
+    },
+    {
+      "key": "prop-rescue-rope",
+      "legacy": "gear",
+      "subject": "One neatly coiled thick cream maritime rescue rope with a short tied tail. Broad simple loop shape, visible twist shading, no hands or anchor.",
+      "targets": [
+        "S04.gear.2"
+      ],
+      "status": "implemented; runtime mapping verified; ART_DRAFT"
+    },
+    {
+      "key": "prop-lifering",
+      "legacy": "gear",
+      "subject": "One round orange and cream life ring with four broad cream sections and a dark teal center opening. Small integral rope attachments, no ocean or people.",
+      "targets": [
+        "S04.gear.3"
+      ],
+      "status": "implemented; runtime mapping verified; ART_DRAFT"
+    },
+    {
+      "key": "prop-lightning-rod",
+      "legacy": "rod",
+      "subject": "One safe fantasy lightning protection device: upright teal-metal mast, horizontal upper crossbar, sturdy small flat base, central golden lightning bolt emblem. Not an electrical hazard, no lightning arcs outside object.",
+      "targets": [
+        "S03.rod.1",
+        "S03.rod.2"
+      ],
+      "status": "implemented; runtime mapping verified; ART_DRAFT"
+    },
+    {
+      "key": "prop-damaged-mast",
+      "legacy": "rod",
+      "subject": "One short wooden ship mast with a slightly bent spar, thick rope bindings and one mild structural crack, warm honey wood and teal metal fittings. No people, splinters flying or dangerous damage.",
+      "targets": [
+        "S03.crisis"
+      ],
+      "status": "implemented; runtime mapping verified; ART_DRAFT"
+    },
+    {
+      "key": "prop-coral-gate",
+      "legacy": "gate",
+      "subject": "One small upright arch gate in coral-pink stone, navy opening with two teal bars and a centered gold diamond lock. Whole arch and footings inside canvas.",
+      "status": "implemented; runtime mapping verified; ART_DRAFT"
+    },
+    {
+      "key": "prop-vine",
+      "legacy": "vine",
+      "subject": "One upright intertwined green vine with four broad friendly rounded leaves, forming a loose S shape. Thick readable stems, no thorns or flowers.",
+      "status": "implemented; runtime mapping verified; ART_DRAFT"
+    },
+    {
+      "key": "prop-torch",
+      "legacy": "torch",
+      "subject": "One upright short wooden torch, cloth wrapping at top and a contained warm orange flame with cream inner core. Entire flame and handle inside canvas, no sparks outside.",
+      "status": "implemented; runtime mapping verified; ART_DRAFT"
+    },
+    {
+      "key": "prop-furnace",
+      "legacy": "furnace",
+      "subject": "One friendly squat stone fantasy furnace, navy-purple body, wide rectangular fire opening, gold-bronze upper rim and small warm orange contained inner flame. No chimney smoke.",
+      "status": "implemented; runtime mapping verified; ART_DRAFT"
+    },
+    {
+      "key": "prop-wave-rope",
+      "legacy": "rope",
+      "subject": "One upright hanging cream maritime rope with a large loop knot at its lower end, clear three horizontal twist bands. Entire rope and loop inside canvas.",
+      "status": "implemented; runtime mapping verified; ART_DRAFT"
+    },
+    {
+      "key": "prop-mirror",
+      "legacy": "mirror",
+      "subject": "One upright hexagonal pale-blue crystal mirror with a lavender-and-gold frame and one simple UP ARROW symbol engraved in cream at its center. Arrow only, no letters or numbers. Preserve clear arrow direction for rotation puzzle.",
+      "status": "implemented; runtime mapping verified; ART_DRAFT"
+    },
+    {
+      "key": "prop-journal",
+      "legacy": "journal",
+      "subject": "One closed upright cream-and-brown travel journal, navy binding, blank cover, small teal bookmark ribbon. Simple raised bands rather than writing, no letters or readable marks.",
+      "status": "implemented; runtime mapping verified; ART_DRAFT"
+    },
+    {
+      "key": "prop-star-map",
+      "legacy": "starMap",
+      "subject": "One unfolded upright cream and lavender travel map with two fold lines, a large golden five-point star and a simple teal triangle route. Symbols only, no labels, letters, coordinates or numbers.",
+      "status": "implemented; runtime mapping verified; ART_DRAFT"
+    },
+    {
+      "key": "prop-lantern",
+      "legacy": "lantern",
+      "subject": "One upright friendly teal and brass lantern with a small loop handle, warm gold glass panes and a cream inner flame. Short broad foot, no light rays or glow outside silhouette.",
+      "status": "implemented; runtime mapping verified; ART_DRAFT"
+    },
+    {
+      "key": "prop-star-device",
+      "legacy": "starDevice",
+      "subject": "One upright small fantasy compass puzzle device on a gold pedestal: navy circular dial inside lavender rim, large four-point gold compass star with teal center gem. No letters, numerals or tick labels.",
+      "status": "implemented; runtime mapping verified; ART_DRAFT"
+    },
+    {
+      "key": "prop-cargo",
+      "legacy": "cargo",
+      "subject": "One sturdy honey-brown wooden delivery crate with diagonal reinforcing planks and broad brass bands, simple gold diamond plate without text. Subtle top and right side, no tools or contents outside.",
+      "status": "implemented; runtime mapping verified; ART_DRAFT"
+    },
+    {
+      "key": "prop-gift",
+      "legacy": "gift",
+      "subject": "One teal square reward gift box with gold ribbon, coral-red bow on top, thick navy outline. No letters, tags or additional gifts.",
+      "status": "implemented; runtime mapping verified; ART_DRAFT"
+    },
+    {
+      "key": "prop-treasure-altar",
+      "legacy": "treasureAltar",
+      "subject": "One small friendly fantasy treasure pedestal with navy stone stepped base, gold trim and a large teal diamond-shaped crystal floating immediately above it. Simple cream center glow contained inside crystal, no deity or person.",
+      "status": "implemented; runtime mapping verified; ART_DRAFT"
+    },
+    {
+      "key": "prop-moon-rock",
+      "legacy": "moonRock",
+      "subject": "One small faceted lavender moon rock with broad cream fracture seams and a small gold four-point sparkle engraved on its face. Stable whole rock, no fragments flying, no face.",
+      "status": "implemented; runtime mapping verified; ART_DRAFT"
+    },
+    {
+      "key": "prop-lotus-shrine",
+      "legacy": "lotusShrine",
+      "subject": "One peaceful original decorative lotus pedestal: a large rounded pink lotus blossom on a low gold stone base, tiny teal center. Pure floral decoration, no person, deity or religious figure.",
+      "status": "implemented; runtime mapping verified; ART_DRAFT"
+    },
+    {
+      "key": "prop-ending",
+      "legacy": "ending",
+      "subject": "One celebratory gold bell on a short upright gold stand, coral clapper, cream engraved wave band. Three small gold gleams stay within canvas. No people, letters or confetti outside.",
+      "status": "implemented; runtime mapping verified; ART_DRAFT"
+    }
+  ]
+}

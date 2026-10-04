@@ -1,0 +1,295 @@
+{
+  "artStatus": "ART_DRAFT",
+  "candidates": [
+    {
+      "key": "ui-jump",
+      "candidate": 1,
+      "prompt": "Use case: stylized-concept. Asset type: one game touch UI icon, NOT a button or a screenshot. Primary request: a single original Korean webtoon style bitmap icon for Sindbad's child-friendly adventure. Input image: project original hero-webtoon, STYLE REFERENCE ONLY, do not copy its character. Style: very thick dark navy outer contour, clean cel shading, warm teal/gold/ivory palette, light from upper left, simplified bold forms readable at 32-48 pixels within a 72px touch button. Composition: square 1024x1024 transparent RGBA canvas, one centered icon occupying about 80% of canvas, generous entirely transparent margin on all four sides, no cropping, no background/plate/frame/drop shadow. Text: none. No letters, labels, digits, logos, watermark, checkerboard painting, blood, injuries, frightening imagery or external franchise references. Subject: Jump action: a single ivory travel boot lifting upward with a large thick teal upward arrow beside it, clearly readable upward movement silhouette. No human body.",
+      "tool": "OpenAI built-in imagegen",
+      "references": [
+        "art-source/webtoon/hero-webtoon.webp"
+      ],
+      "toolPath": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-c6cc1fb5-0c77-4fce-a0d0-fc91b54e4ef7.png",
+      "path": "art-source/webtoon/generated/touch/ui-jump-01.png",
+      "selected": false,
+      "reason": "Upward and downward arrows make jump direction ambiguous; regenerate with a single upward arrow.",
+      "sha256": "9d008f21ec3fb69ff2a80e3b832bf866aeb7dfbef1c61be731e5157f3c335604",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "visibleBounds": [
+        73,
+        92,
+        1227,
+        1184
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "visibleBoundaryEmpty": true
+    },
+    {
+      "key": "ui-talk",
+      "candidate": 1,
+      "prompt": "Use case: stylized-concept. Asset type: one game touch UI icon, NOT a button or a screenshot. Primary request: a single original Korean webtoon style bitmap icon for Sindbad's child-friendly adventure. Input image: project original hero-webtoon, STYLE REFERENCE ONLY, do not copy its character. Style: very thick dark navy outer contour, clean cel shading, warm teal/gold/ivory palette, light from upper left, simplified bold forms readable at 32-48 pixels within a 72px touch button. Composition: square 1024x1024 transparent RGBA canvas, one centered icon occupying about 80% of canvas, generous entirely transparent margin on all four sides, no cropping, no background/plate/frame/drop shadow. Text: none. No letters, labels, digits, logos, watermark, checkerboard painting, blood, injuries, frightening imagery or external franchise references. Subject: Dialogue action: a single cream speech bubble with a thick teal outline and exactly three large gold circular dots inside, a small rounded tail. No written text.",
+      "tool": "OpenAI built-in imagegen",
+      "references": [
+        "art-source/webtoon/hero-webtoon.webp"
+      ],
+      "toolPath": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-5fe06910-87c8-4ab2-9608-73773c0febd9.png",
+      "path": "art-source/webtoon/generated/touch/ui-talk-01.png",
+      "selected": true,
+      "reason": "Selected after visual inspection; visible alpha boundary empty.",
+      "sha256": "e1f4b3f0c740c746c2bc41551209597282bcba27160b7c66c83a647b6ec98d94",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "visibleBounds": [
+        111,
+        171,
+        1143,
+        1081
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "visibleBoundaryEmpty": true
+    },
+    {
+      "key": "ui-inspect",
+      "candidate": 1,
+      "prompt": "Use case: stylized-concept. Asset type: one game touch UI icon, NOT a button or a screenshot. Primary request: a single original Korean webtoon style bitmap icon for Sindbad's child-friendly adventure. Input image: project original hero-webtoon, STYLE REFERENCE ONLY, do not copy its character. Style: very thick dark navy outer contour, clean cel shading, warm teal/gold/ivory palette, light from upper left, simplified bold forms readable at 32-48 pixels within a 72px touch button. Composition: square 1024x1024 transparent RGBA canvas, one centered icon occupying about 80% of canvas, generous entirely transparent margin on all four sides, no cropping, no background/plate/frame/drop shadow. Text: none. No letters, labels, digits, logos, watermark, checkerboard painting, blood, injuries, frightening imagery or external franchise references. Subject: Inspect/use action: a friendly open raised hand in a brown sailor glove with one small gold sparkle, fingers clearly separated and bold. No arm beyond wrist.",
+      "tool": "OpenAI built-in imagegen",
+      "references": [
+        "art-source/webtoon/hero-webtoon.webp"
+      ],
+      "toolPath": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-2c5566d0-eb0a-4582-9ff7-7971c8996155.png",
+      "path": "art-source/webtoon/generated/touch/ui-inspect-01.png",
+      "selected": true,
+      "reason": "Selected after visual inspection; visible alpha boundary empty.",
+      "sha256": "c623958ca25c34a564cd925b3398c9c4d5a23402741ce117df65ff9fe777bfb3",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "visibleBounds": [
+        175,
+        87,
+        1086,
+        1168
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "visibleBoundaryEmpty": true
+    },
+    {
+      "key": "ui-depart",
+      "candidate": 1,
+      "prompt": "Use case: stylized-concept. Asset type: one game touch UI icon, NOT a button or a screenshot. Primary request: a single original Korean webtoon style bitmap icon for Sindbad's child-friendly adventure. Input image: project original hero-webtoon, STYLE REFERENCE ONLY, do not copy its character. Style: very thick dark navy outer contour, clean cel shading, warm teal/gold/ivory palette, light from upper left, simplified bold forms readable at 32-48 pixels within a 72px touch button. Composition: square 1024x1024 transparent RGBA canvas, one centered icon occupying about 80% of canvas, generous entirely transparent margin on all four sides, no cropping, no background/plate/frame/drop shadow. Text: none. No letters, labels, digits, logos, watermark, checkerboard painting, blood, injuries, frightening imagery or external franchise references. Subject: Depart/travel action: a simple teal wooden sailboat with one ivory triangular sail, a small gold pennant and a short curved water line below, side view pointing right. No lettering.",
+      "tool": "OpenAI built-in imagegen",
+      "references": [
+        "art-source/webtoon/hero-webtoon.webp"
+      ],
+      "toolPath": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-c0344774-6218-46ac-b5d1-785c91f8c7c3.png",
+      "path": "art-source/webtoon/generated/touch/ui-depart-01.png",
+      "selected": true,
+      "reason": "Selected after visual inspection; visible alpha boundary empty.",
+      "sha256": "5d2157327174fbde08fb971790ed1b4a5793022c859b8451a916537e23bd9508",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "visibleBounds": [
+        111,
+        59,
+        1160,
+        1185
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "visibleBoundaryEmpty": true
+    },
+    {
+      "key": "ui-wing",
+      "candidate": 1,
+      "prompt": "Use case: stylized-concept. Asset type: one game touch UI icon, NOT a button or a screenshot. Primary request: a single original Korean webtoon style bitmap icon for Sindbad's child-friendly adventure. Input image: project original hero-webtoon, STYLE REFERENCE ONLY, do not copy its character. Style: very thick dark navy outer contour, clean cel shading, warm teal/gold/ivory palette, light from upper left, simplified bold forms readable at 32-48 pixels within a 72px touch button. Composition: square 1024x1024 transparent RGBA canvas, one centered icon occupying about 80% of canvas, generous entirely transparent margin on all four sides, no cropping, no background/plate/frame/drop shadow. Text: none. No letters, labels, digits, logos, watermark, checkerboard painting, blood, injuries, frightening imagery or external franchise references. Subject: Flying attack action: a single curved ivory and teal roc wing sweeping diagonally upward, a short gold swoosh emphasizing a wing strike. No bird head or claws.",
+      "tool": "OpenAI built-in imagegen",
+      "references": [
+        "art-source/webtoon/hero-webtoon.webp"
+      ],
+      "toolPath": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-806ccac0-7a8b-42c5-9833-c174465ea145.png",
+      "path": "art-source/webtoon/generated/touch/ui-wing-01.png",
+      "selected": true,
+      "reason": "Selected after visual inspection; visible alpha boundary empty.",
+      "sha256": "9695acf0a3744d27c0dd23173b1694f743752df2b702668deab92570d58c210b",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "visibleBounds": [
+        87,
+        47,
+        1218,
+        1212
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "visibleBoundaryEmpty": true
+    },
+    {
+      "key": "ui-flame",
+      "candidate": 1,
+      "prompt": "Use case: stylized-concept. Asset type: one game touch UI icon, NOT a button or a screenshot. Primary request: a single original Korean webtoon style bitmap icon for Sindbad's child-friendly adventure. Input image: project original hero-webtoon, STYLE REFERENCE ONLY, do not copy its character. Style: very thick dark navy outer contour, clean cel shading, warm teal/gold/ivory palette, light from upper left, simplified bold forms readable at 32-48 pixels within a 72px touch button. Composition: square 1024x1024 transparent RGBA canvas, one centered icon occupying about 80% of canvas, generous entirely transparent margin on all four sides, no cropping, no background/plate/frame/drop shadow. Text: none. No letters, labels, digits, logos, watermark, checkerboard painting, blood, injuries, frightening imagery or external franchise references. Subject: Flame treasure ability: one bold amber and orange flame with an ivory core, a small teal curved pulse underneath, warm and friendly.",
+      "tool": "OpenAI built-in imagegen",
+      "references": [
+        "art-source/webtoon/hero-webtoon.webp"
+      ],
+      "toolPath": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-0a1263ed-4228-466c-b5a5-01ee43d990c0.png",
+      "path": "art-source/webtoon/generated/touch/ui-flame-01.png",
+      "selected": true,
+      "reason": "Selected after visual inspection; visible alpha boundary empty.",
+      "sha256": "373f89314394a2fb0619702ce21539c122690f941a6d1bb58268ee488e37498e",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "visibleBounds": [
+        144,
+        75,
+        1146,
+        1186
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "visibleBoundaryEmpty": true
+    },
+    {
+      "key": "ui-bridge",
+      "candidate": 1,
+      "prompt": "Use case: stylized-concept. Asset type: one game touch UI icon, NOT a button or a screenshot. Primary request: a single original Korean webtoon style bitmap icon for Sindbad's child-friendly adventure. Input image: project original hero-webtoon, STYLE REFERENCE ONLY, do not copy its character. Style: very thick dark navy outer contour, clean cel shading, warm teal/gold/ivory palette, light from upper left, simplified bold forms readable at 32-48 pixels within a 72px touch button. Composition: square 1024x1024 transparent RGBA canvas, one centered icon occupying about 80% of canvas, generous entirely transparent margin on all four sides, no cropping, no background/plate/frame/drop shadow. Text: none. No letters, labels, digits, logos, watermark, checkerboard painting, blood, injuries, frightening imagery or external franchise references. Subject: Magic bridge treasure ability: a short rounded lavender and teal arched bridge, two clear supports and a single gold sparkle above, a large uncluttered silhouette.",
+      "tool": "OpenAI built-in imagegen",
+      "references": [
+        "art-source/webtoon/hero-webtoon.webp"
+      ],
+      "toolPath": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-7fd2b93a-e1d2-41a9-9c36-b146e2f9c6ce.png",
+      "path": "art-source/webtoon/generated/touch/ui-bridge-01.png",
+      "selected": true,
+      "reason": "Selected after visual inspection; visible alpha boundary empty.",
+      "sha256": "996c21381cf1c439a51bf3dff6e00b4a513db6b6d4e8a7ef73289811d0058c99",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "visibleBounds": [
+        40,
+        129,
+        1216,
+        1136
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "visibleBoundaryEmpty": true
+    },
+    {
+      "key": "ui-shield",
+      "candidate": 1,
+      "prompt": "Use case: stylized-concept. Asset type: one game touch UI icon, NOT a button or a screenshot. Primary request: a single original Korean webtoon style bitmap icon for Sindbad's child-friendly adventure. Input image: project original hero-webtoon, STYLE REFERENCE ONLY, do not copy its character. Style: very thick dark navy outer contour, clean cel shading, warm teal/gold/ivory palette, light from upper left, simplified bold forms readable at 32-48 pixels within a 72px touch button. Composition: square 1024x1024 transparent RGBA canvas, one centered icon occupying about 80% of canvas, generous entirely transparent margin on all four sides, no cropping, no background/plate/frame/drop shadow. Text: none. No letters, labels, digits, logos, watermark, checkerboard painting, blood, injuries, frightening imagery or external franchise references. Subject: Lotus shield treasure ability: a bold teal protective shield with a single ivory-and-gold lotus motif at its center, friendly rounded shield profile, no coat of arms.",
+      "tool": "OpenAI built-in imagegen",
+      "references": [
+        "art-source/webtoon/hero-webtoon.webp"
+      ],
+      "toolPath": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-efc30fa6-1676-4df6-bff5-9012e21e35ce.png",
+      "path": "art-source/webtoon/generated/touch/ui-shield-01.png",
+      "selected": true,
+      "reason": "Selected after visual inspection; visible alpha boundary empty.",
+      "sha256": "06e6dd1a6821b5665517da7881df724992fa38715fbcfef5d3f88de53378723e",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "visibleBounds": [
+        128,
+        56,
+        1126,
+        1184
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "visibleBoundaryEmpty": true
+    },
+    {
+      "key": "ui-dawn",
+      "candidate": 1,
+      "prompt": "Use case: stylized-concept. Asset type: one game touch UI icon, NOT a button or a screenshot. Primary request: a single original Korean webtoon style bitmap icon for Sindbad's child-friendly adventure. Input image: project original hero-webtoon, STYLE REFERENCE ONLY, do not copy its character. Style: very thick dark navy outer contour, clean cel shading, warm teal/gold/ivory palette, light from upper left, simplified bold forms readable at 32-48 pixels within a 72px touch button. Composition: square 1024x1024 transparent RGBA canvas, one centered icon occupying about 80% of canvas, generous entirely transparent margin on all four sides, no cropping, no background/plate/frame/drop shadow. Text: none. No letters, labels, digits, logos, watermark, checkerboard painting, blood, injuries, frightening imagery or external franchise references. Subject: Dawn purification treasure ability: a simple gold rising sun with five broad rays over a teal curved horizon, warm ivory center, a single lavender glint. No compass letters.",
+      "tool": "OpenAI built-in imagegen",
+      "references": [
+        "art-source/webtoon/hero-webtoon.webp"
+      ],
+      "toolPath": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-ba7c4b7f-cce0-463a-ad26-edbe423fac15.png",
+      "path": "art-source/webtoon/generated/touch/ui-dawn-01.png",
+      "selected": true,
+      "reason": "Selected after visual inspection; visible alpha boundary empty.",
+      "sha256": "148935387583a6b94eb2270e3df1a8cd36ea58d2a4a691ecb3107f0f551bca12",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "visibleBounds": [
+        47,
+        84,
+        1206,
+        1034
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "visibleBoundaryEmpty": true
+    },
+    {
+      "key": "ui-jump",
+      "candidate": 2,
+      "prompt": "Use case: stylized-concept. Asset type: one game touch UI icon, NOT a button or a screenshot. Primary request: a single original Korean webtoon style bitmap icon for Sindbad's child-friendly adventure. Input image: project original hero-webtoon, STYLE REFERENCE ONLY, do not copy its character. Style: very thick dark navy outer contour, clean cel shading, warm teal/gold/ivory palette, light from upper left, simplified bold forms readable at 32-48 pixels within a 72px touch button. Composition: square 1024x1024 transparent RGBA canvas, one centered icon occupying about 80% of canvas, generous entirely transparent margin on all four sides, no cropping, no background/plate/frame/drop shadow. Text: none. No letters, labels, digits, logos, watermark, checkerboard painting, blood, injuries, frightening imagery or external franchise references. Subject: Jump action: exactly ONE small ivory sailor boot with a simple brown cuff and exactly ONE large straight teal arrow pointing UP vertically. Keep the boot extremely simple, no scarf, no jewelry, no ornate clothing or complex folds. The arrow is straight, not curved. No downward arrow, no other arrows, no motion swooshes or decorative streaks. Clear upward movement silhouette, two bold shapes only, readable at 28px. No human body.",
+      "tool": "OpenAI built-in imagegen",
+      "references": [
+        "art-source/webtoon/hero-webtoon.webp"
+      ],
+      "toolPath": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-d2909d63-ed90-4da2-8b38-b9a0e11acf9a.png",
+      "path": "art-source/webtoon/generated/touch/ui-jump-02.png",
+      "selected": true,
+      "reason": "Selected after visual inspection; visible alpha boundary empty.",
+      "sha256": "3152d0cd93f3cb0dcd08ec40b2bb04843bc1da2cf22efc93784ba1a1dface90c",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "visibleBounds": [
+        238,
+        172,
+        1046,
+        1091
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "visibleBoundaryEmpty": true
+    }
+  ]
+}

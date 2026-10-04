@@ -1,0 +1,21 @@
+{
+  "key": "prop-vine",
+  "legacy": "vine",
+  "subject": "One upright intertwined green vine with four broad friendly rounded leaves, forming a loose S shape. Thick readable stems, no thorns or flowers.",
+  "status": "generated",
+  "prompt": "Create ONE original world interaction sprite for a bright child-friendly Korean adventure webtoon game. Attached project hero is STYLE reference ONLY: confident navy ink outlines, warm teal/gold palette, clean 2-3 flat cel shade levels, top-left lighting. Do not draw the hero. PORTRAIT 3:4 canvas requested 768x1024, true transparent RGBA background. Subject: One upright intertwined green vine with four broad friendly rounded leaves, forming a loose S shape. Thick readable stems, no thorns or flowers. Front-facing readable silhouette at only 65x87 game pixels. Entire object centered, occupies roughly x=10%-90%, y=14%-86%, with fully transparent padding on every side. Keep the complete silhouette and all parts inside canvas. No scene, floor, cast shadow, circular backing, characters, hands, extra objects, labels, letters, numbers, logos, signature, watermark, blood, wounds or scary faces. Original project design only. Use clean limited broad color shapes rather than tiny decorative detail.",
+  "nativePath": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-f544aece-7ec6-4390-86ba-ba6af36c7b40.png",
+  "path": "art-source/webtoon/generated/props-m6/prop-vine-01.png",
+  "sha256": "a38bd07db2e5757148d3d6602751988f870bab8294aafe9a8cbe658e7be4f221",
+  "nativeSize": [
+    1086,
+    1448
+  ],
+  "alphaBounds": [
+    160,
+    89,
+    937,
+    1366
+  ],
+  "selected": true
+}

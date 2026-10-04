@@ -8,7 +8,7 @@ ROOT=Path(__file__).resolve().parents[1]
 phase,name=sys.argv[1:3]
 out=ROOT/f'docs/validation/{name}-runtime-hashes.json'
 def snapshot():
-    files=[p for folder in ('src','public','dist','scripts','tests','art-source/weapons')
+    files=[p for folder in ('src','public','dist','scripts','tests','art-source')
         for p in (ROOT/folder).rglob('*') if p.is_file() and '__pycache__' not in p.parts]
     files += [ROOT/f for f in ('package.json','package-lock.json','index.html','vite.config.ts','playwright.config.ts','tsconfig.json')]
     return {p.relative_to(ROOT).as_posix():sha256(p.read_bytes()).hexdigest() for p in sorted(files)}

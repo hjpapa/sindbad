@@ -1,0 +1,145 @@
+
+> sinbad-seven-treasures@0.1.0 test:e2e
+> playwright test --reporter=list,json,html
+
+
+Running 57 tests using 1 worker
+
+(node:1488) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:1488) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  1 tests\e2e\adventure.spec.ts:83:1 › new game → S01 → S02 → S03 with real keyboard inputs and checkpoint reload (1.5m)
+  ok  2 tests\e2e\adventure.spec.ts:199:1 › pause freezes world; export/import and real touch pointer combination (9.0s)
+  ok  3 tests\e2e\adventure.spec.ts:269:1 › missing sprite fallback loads; corrupt and future saves stay untouched (2.8s)
+  ok  4 tests\e2e\audio.spec.ts:2:1 › browser music starts with play, stops in menus, resumes, and respects mute (5.4s)
+  ok  5 tests\e2e\controls-ui.spec.ts:4:1 › simple controls jump, smart action attacks, monster fades, and phone UI fits (8.8s)
+  ok  6 tests\e2e\crystal.spec.ts:37:1 › S07 save → mirror reset and safe puzzle → T02 reload, illusion and optional journal (50.1s)
+  ok  7 tests\e2e\effects-art.spec.ts:145:1 › four looping projectiles, directions, paused clock and reduced-motion boss cleanup on phone/tablet (1.5m)
+  ok  8 tests\e2e\effects-art.spec.ts:227:1 › six impact and safe defeat frames expire after real hits on phone/tablet (38.6s)
+  ok  9 tests\e2e\effects-art.spec.ts:302:1 › missing seven sheets retain legacy projectiles, damage, safe defeat and saved rewards (32.9s)
+ART phone skeleton: poses / direction / magic / reload passed
+ART phone bandit: poses / direction / human / reload passed
+ART phone guard: poses / direction / human / reload passed
+ART phone pirate: poses / direction / human / reload passed
+ART phone snake: poses / direction / animal / reload passed
+ART phone tiger: poses / direction / animal / reload passed
+ART phone dragon: poses / direction / animal / reload passed
+ART phone crab: poses / direction / animal / reload passed
+ART phone stone: poses / direction / magic / reload passed
+ART phone kuura: poses / direction / magic / reload passed
+ART tablet skeleton: poses / direction / magic / reload passed
+ART tablet bandit: poses / direction / human / reload passed
+ART tablet guard: poses / direction / human / reload passed
+ART tablet pirate: poses / direction / human / reload passed
+ART tablet snake: poses / direction / animal / reload passed
+ART tablet tiger: poses / direction / animal / reload passed
+ART tablet dragon: poses / direction / animal / reload passed
+ART tablet crab: poses / direction / animal / reload passed
+ART tablet stone: poses / direction / magic / reload passed
+ART tablet kuura: poses / direction / magic / reload passed
+  ok 10 tests\e2e\enemy-actions.spec.ts:44:1 › 40 enemy poses, mirrored direction, safe defeat and save reload on phone/tablet (3.9m)
+  ok 11 tests\e2e\enemy-actions.spec.ts:175:1 › missing action atlas retains a playable fallback and magical skeleton defeat (5.8s)
+  ok 12 tests\e2e\fall.spec.ts:4:1 › fall recovery resets physics onto a safe platform instead of inside the floor (5.2s)
+  ok 13 tests\e2e\final-campaign.spec.ts:66:1 › S28 peaceful balance grants lotus shield and persists (13.1s)
+  ok 14 tests\e2e\final-campaign.spec.ts:120:1 › S36 museum route reaches ending and remains revisit-able (12.6s)
+  ok 15 tests\e2e\final-campaign.spec.ts:144:1 › S09-S36 all boot as browser-playable scenes without console errors (33.3s)
+  ok 16 tests\e2e\flame-waves.spec.ts:82:1 › S06 furnaces and first treasure → S07 waves, blessing and cave save (2.0m)
+  ok 17 tests\e2e\flame-waves.spec.ts:159:1 › flame MP/cooldown pause, free ignition and W03 lingering damage (14.5s)
+  ok 18 tests\e2e\flame-waves.spec.ts:200:1 › missed wave deals limited damage, preserves treasure and allows another attempt (15.1s)
+  ok 19 tests\e2e\flight-art.spec.ts:42:41 › phone flight art webtoon preserves rings, hazards and resume (46.6s)
+  ok 20 tests\e2e\flight-art.spec.ts:42:41 › phone flight art missing SVG recovery preserves rings, hazards and resume (47.1s)
+  ok 21 tests\e2e\flight-art.spec.ts:42:41 › tablet flight art webtoon preserves rings, hazards and resume (47.1s)
+  ok 22 tests\e2e\flight-art.spec.ts:42:41 › tablet flight art missing SVG recovery preserves rings, hazards and resume (47.6s)
+  ok 23 tests\e2e\flight-rings.spec.ts:18:1 › flight rings collect through movement once, persist, and never gate landing (22.1s)
+  ok 24 tests\e2e\flight-rings.spec.ts:92:1 › S33 return flight has five moving debris routes and does not require combat (9.8s)
+  ok 25 tests\e2e\interaction-props.spec.ts:50:39 › interaction props retain actual map textures, IDs and dimensions (22.3s)
+  ok 26 tests\e2e\interaction-props.spec.ts:50:39 › interaction props retain actual map textures, IDs and dimensions with all artwork missing (21.1s)
+  ok 27 tests\e2e\interaction-props.spec.ts:122:39 › rescue equipment and golden heart retain real pickup, retry and reload (52.1s)
+  ok 28 tests\e2e\interaction-props.spec.ts:122:39 › rescue equipment and golden heart retain real pickup, retry and reload when artwork is missing (49.3s)
+  ok 29 tests\e2e\m2.spec.ts:71:1 › existing M1 save → whale rescue, moving deck, G01 → coral rescue, G02 and blessing (58.7s)
+  ok 30 tests\e2e\m2.spec.ts:160:1 › coral gate rejects missing crown; guardian blocks frontal attacks and exposes recovery (15.3s)
+  ok 31 tests\e2e\m3-opening.spec.ts:61:1 › S09-S12 continuous route grants flight, W04 and R03 with save-safe bosses (1.1m)
+  ok 32 tests\e2e\mobile-abilities.spec.ts:16:1 › phone can descend, cast its selected treasure, and open S26 bridge using action (11.9s)
+A4 phone: nine NPCs / all 27 expressions / mixed speakers / rewards / reload passed
+A4 tablet: nine NPCs / all 27 expressions / mixed speakers / rewards / reload passed
+  ok 33 tests\e2e\npc-faces.spec.ts:47:1 › nine NPCs, three real dialogue expressions, mixed speakers and reward reload on phone/tablet (3.0m)
+  ok 34 tests\e2e\npc-faces.spec.ts:212:1 › missing expression sheet keeps the captain portrait, dialogue and save playable (5.9s)
+  ok 35 tests\e2e\npc-faces.spec.ts:244:1 › read-only observations stay safe while real scene transitions dispose textures (15.1s)
+  ok 36 tests\e2e\safety.spec.ts:5:1 › actual damage and heart recovery (10.0s)
+  ok 37 tests\e2e\safety.spec.ts:37:1 › natural lightning death restores checkpoint and retains rewards; immunity on restart (32.6s)
+  ok 38 tests\e2e\safety.spec.ts:82:1 › boss victory reload keeps exit open without duplicating XP (6.0s)
+  ok 39 tests\e2e\safety.spec.ts:115:1 › storage denied warns but movement and export work (9.9s)
+A5 phone: 17 styles / 34 image tiles / actual map transitions / moving-platform alignment passed
+A5 tablet: 17 styles / 34 image tiles / actual map transitions / moving-platform alignment passed
+  ok 40 tests\e2e\terrain-art.spec.ts:16:1 › 17 real terrain styles load only their pair and preserve platform geometry on phone/tablet (1.9m)
+  ok 41 tests\e2e\terrain-art.spec.ts:139:48 › missing terrain fill keeps the loaded half and a playable generated fallback (11.9s)
+  ok 42 tests\e2e\terrain-art.spec.ts:139:48 › missing terrain top keeps the loaded half and a playable generated fallback (12.8s)
+  ok 43 tests\e2e\terrain-art.spec.ts:139:48 › missing terrain both keeps the loaded half and a playable generated fallback (10.7s)
+  ok 44 tests\e2e\touch-icons.spec.ts:327:1 › nine upright icons, 72px previews and real touch jump/dialogue/use/departure/wing/four abilities on phone/tablet (1.8m)
+  ok 45 tests\e2e\touch-icons.spec.ts:342:1 › all nine missing icon files restore legacy glyphs while actual actions and saved progress work (48.2s)
+  ok 46 tests\e2e\weapon-art.spec.ts:99:1 › seven raster weapons and icons stay attached to JSON fists on phone and tablet (1.3m)
+  ok 47 tests\e2e\weapon-art.spec.ts:146:1 › all seven missing rasters retain SVG weapons and icons, combat rewards and reload (48.6s)
+  ok 48 tests\e2e\world-props.spec.ts:180:1 › world props retain dimensions, real reward/healing, retry and reload on phone/tablet (51.5s)
+  ok 49 tests\e2e\world-props.spec.ts:186:1 › missing world props use preserved SVGs and retain real interactions (29.2s)
+  ok 50 tests\e2e\world-props.spec.ts:192:1 › map revisit releases unused props and reloads them when returning (4.9s)
+(node:54372) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:54372) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+JOURNEY S01 cleared; 1/36
+JOURNEY S02 cleared; 2/36
+JOURNEY S03 cleared; 3/36
+JOURNEY S04 cleared; 4/36
+JOURNEY S05 cleared; 5/36
+JOURNEY S06 cleared; 6/36
+JOURNEY S07 cleared; 7/36
+JOURNEY S08 cleared; 8/36
+JOURNEY S09 cleared; 9/36
+JOURNEY S10 cleared; 10/36
+JOURNEY S11 cleared; 11/36
+JOURNEY S12 cleared; 12/36
+JOURNEY S13 cleared; 13/36
+JOURNEY S14 cleared; 14/36
+JOURNEY S15 cleared; 15/36
+JOURNEY S16 cleared; 16/36
+JOURNEY S17 cleared; 17/36
+JOURNEY S18 cleared; 18/36
+JOURNEY S19 cleared; 19/36
+JOURNEY S20 cleared; 20/36
+JOURNEY S21 cleared; 21/36
+JOURNEY S22 cleared; 22/36
+JOURNEY S23 cleared; 23/36
+JOURNEY S24 cleared; 24/36
+JOURNEY S25 cleared; 25/36
+JOURNEY S26 cleared; 26/36
+JOURNEY S27 cleared; 27/36
+JOURNEY S28 cleared; 28/36
+JOURNEY S29 cleared; 29/36
+JOURNEY S30 cleared; 30/36
+JOURNEY S31 cleared; 31/36
+JOURNEY S32 cleared; 32/36
+JOURNEY S33 cleared; 33/36
+JOURNEY S34 cleared; 34/36
+JOURNEY S35 cleared; 35/36
+JOURNEY S36 cleared; 36/36
+  ok 51 tests\e2e\complete-journey.spec.ts:12:1 › new game completes all 36 stages using real controls and no injected save (14.1m)
+(node:45152) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:45152) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 52 tests\e2e\story-devices.spec.ts:43:1 › S16 protected entrance earns pearl before actual swim practice and survives reload (25.2s)
+  ok 53 tests\e2e\story-devices.spec.ts:68:1 › carried wood resets safely on reload and only delivery grants progress (12.2s)
+  ok 54 tests\e2e\story-devices.spec.ts:92:1 › S25 bridge requires real crossing and standing extends its lifetime (37.9s)
+  ok 55 tests\e2e\story-devices.spec.ts:119:1 › S15 kitchen rescues sailors and saves the earned boots checkpoint (20.4s)
+  ok 56 tests\e2e\story-devices.spec.ts:138:1 › W06 breaks optional moon rock with one real attack and never duplicates its reward (30.1s)
+  ok 57 tests\e2e\story-devices.spec.ts:172:1 › Kuura shield requires two seals, final combat opens the saved reward (43.4s)
+
+  Slow test file: tests\e2e\complete-journey.spec.ts (14.1m)
+  Consider running tests from slow files in parallel. See: https://playwright.dev/docs/test-parallel
+  57 passed (52.4m)
+
+To open last HTML report run:
+[36m[39m
+[36m  npx playwright show-report[39m
+[36m[39m

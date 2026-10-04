@@ -1,0 +1,58 @@
+[
+  {
+    "command": "python scripts/optimize-webtoon.py",
+    "started": "2026-10-04T08:28:29.672022+00:00",
+    "exitCode": 0,
+    "seconds": 13.09,
+    "output": "docs/validation/m6-kite-first-check-1.txt"
+  },
+  {
+    "command": "python scripts/audit-webtoon.py",
+    "started": "2026-10-04T08:28:42.772676+00:00",
+    "exitCode": 0,
+    "seconds": 16.14,
+    "output": "docs/validation/m6-kite-first-check-2.txt"
+  },
+  {
+    "command": "npm run typecheck",
+    "started": "2026-10-04T08:28:58.912006+00:00",
+    "exitCode": 0,
+    "seconds": 3.59,
+    "output": "docs/validation/m6-kite-first-check-3.txt"
+  },
+  {
+    "command": "npm run lint",
+    "started": "2026-10-04T08:29:02.505820+00:00",
+    "exitCode": 0,
+    "seconds": 3.99,
+    "output": "docs/validation/m6-kite-first-check-4.txt"
+  },
+  {
+    "command": "npm run test",
+    "started": "2026-10-04T08:29:06.483105+00:00",
+    "exitCode": 0,
+    "seconds": 4.55,
+    "output": "docs/validation/m6-kite-first-check-5.txt"
+  },
+  {
+    "command": "npm run validate:content",
+    "started": "2026-10-04T08:29:11.033715+00:00",
+    "exitCode": 0,
+    "seconds": 1.58,
+    "output": "docs/validation/m6-kite-first-check-6.txt"
+  },
+  {
+    "command": "npm run build",
+    "started": "2026-10-04T08:29:12.611260+00:00",
+    "exitCode": 0,
+    "seconds": 12.5,
+    "output": "docs/validation/m6-kite-first-check-7.txt"
+  },
+  {
+    "command": "npx tsx scripts/check-art-budget.ts",
+    "started": "2026-10-04T08:29:25.116828+00:00",
+    "exitCode": 0,
+    "seconds": 3.75,
+    "output": "docs/validation/m6-kite-first-check-8.txt"
+  }
+]

@@ -1,0 +1,305 @@
+{
+  "config": {
+    "configFile": "C:\\code\\code10(sindbad)\\playwright.config.ts",
+    "rootDir": "C:/code/code10(sindbad)/tests/e2e",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": "C:\\code\\code10(sindbad)\\tests\\e2e\\server.setup.ts",
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ],
+      [
+        "html"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "C:/code/code10(sindbad)/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "C:/code/code10(sindbad)/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 240000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.55.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "touch-icons.spec.ts",
+      "file": "touch-icons.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "nine upright icons, 72px previews and real touch jump/dialogue/use/departure/wing/four abilities on phone/tablet",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 480000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 50577,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: < \u001b[32m22\u001b[39m\nReceived:   \u001b[31m22\u001b[39m\n\nCall Log:\n- Timeout 10000ms exceeded while waiting on the predicate",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: < \u001b[32m22\u001b[39m\nReceived:   \u001b[31m22\u001b[39m\n\nCall Log:\n- Timeout 10000ms exceeded while waiting on the predicate\n    at run (C:\\code\\code10(sindbad)\\tests\\e2e\\touch-icons.spec.ts:127:9)\n    at C:\\code\\code10(sindbad)\\tests\\e2e\\touch-icons.spec.ts:144:104",
+                    "location": {
+                      "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\touch-icons.spec.ts",
+                      "column": 9,
+                      "line": 127
+                    },
+                    "snippet": "  125 |         await capture('primary','ui-wing','터치 행동');const hp=(await read(page)).enemies.find(e=>e.id===kite.id)!.hp;\n  126 |         await touch(page,cdp,'primary',130);\n> 127 |         await expect.poll(async()=>(await read(page)).enemies.find(e=>e.id===kite.id)!.hp).toBeLessThan(hp);\n      |         ^\n  128 |         const wing=(await read(page)).enemies.find(e=>e.id===kite.id)!;\n  129 |         if(!fallback){\n  130 |             const gallery=await context.newPage();await gallery.goto('/');"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\touch-icons.spec.ts",
+                        "column": 9,
+                        "line": 127
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: < \u001b[32m22\u001b[39m\nReceived:   \u001b[31m22\u001b[39m\n\nCall Log:\n- Timeout 10000ms exceeded while waiting on the predicate\n\n  125 |         await capture('primary','ui-wing','터치 행동');const hp=(await read(page)).enemies.find(e=>e.id===kite.id)!.hp;\n  126 |         await touch(page,cdp,'primary',130);\n> 127 |         await expect.poll(async()=>(await read(page)).enemies.find(e=>e.id===kite.id)!.hp).toBeLessThan(hp);\n      |         ^\n  128 |         const wing=(await read(page)).enemies.find(e=>e.id===kite.id)!;\n  129 |         if(!fallback){\n  130 |             const gallery=await context.newPage();await gallery.goto('/');\n    at run (C:\\code\\code10(sindbad)\\tests\\e2e\\touch-icons.spec.ts:127:9)\n    at C:\\code\\code10(sindbad)\\tests\\e2e\\touch-icons.spec.ts:144:104"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toEqual\"",
+                      "duration": 27
+                    },
+                    {
+                      "title": "Expect \"poll toEqual\"",
+                      "duration": 22
+                    },
+                    {
+                      "title": "Expect \"poll toEqual\"",
+                      "duration": 10
+                    },
+                    {
+                      "title": "Expect \"poll toEqual\"",
+                      "duration": 11
+                    },
+                    {
+                      "title": "Expect \"poll toEqual\"",
+                      "duration": 10
+                    },
+                    {
+                      "title": "Expect \"poll toEqual\"",
+                      "duration": 8
+                    },
+                    {
+                      "title": "Expect \"poll toContain\"",
+                      "duration": 6
+                    },
+                    {
+                      "title": "Expect \"poll toEqual\"",
+                      "duration": 9
+                    },
+                    {
+                      "title": "Expect \"poll toContain\"",
+                      "duration": 6
+                    },
+                    {
+                      "title": "Expect \"poll toContain\"",
+                      "duration": 10
+                    },
+                    {
+                      "title": "Expect \"poll toEqual\"",
+                      "duration": 7
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 130
+                    },
+                    {
+                      "title": "Expect \"poll toEqual\"",
+                      "duration": 10
+                    },
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 9017,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: < \u001b[32m22\u001b[39m\nReceived:   \u001b[31m22\u001b[39m\n\nCall Log:\n- Timeout 10000ms exceeded while waiting on the predicate",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: < \u001b[32m22\u001b[39m\nReceived:   \u001b[31m22\u001b[39m\n\nCall Log:\n- Timeout 10000ms exceeded while waiting on the predicate\n    at run (C:\\code\\code10(sindbad)\\tests\\e2e\\touch-icons.spec.ts:127:9)\n    at C:\\code\\code10(sindbad)\\tests\\e2e\\touch-icons.spec.ts:144:104",
+                        "location": {
+                          "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\touch-icons.spec.ts",
+                          "column": 9,
+                          "line": 127
+                        },
+                        "snippet": "  125 |         await capture('primary','ui-wing','터치 행동');const hp=(await read(page)).enemies.find(e=>e.id===kite.id)!.hp;\n  126 |         await touch(page,cdp,'primary',130);\n> 127 |         await expect.poll(async()=>(await read(page)).enemies.find(e=>e.id===kite.id)!.hp).toBeLessThan(hp);\n      |         ^\n  128 |         const wing=(await read(page)).enemies.find(e=>e.id===kite.id)!;\n  129 |         if(!fallback){\n  130 |             const gallery=await context.newPage();await gallery.goto('/');"
+                      }
+                    }
+                  ],
+                  "startTime": "2026-10-04T00:21:07.973Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\code\\code10(sindbad)\\test-results\\touch-icons-nine-upright-i-c71b7-r-abilities-on-phone-tablet\\test-failed-1.png"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\touch-icons.spec.ts",
+                    "column": 9,
+                    "line": 127
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "7b0e2e153d0585b0972b-60b14712eb6fb2634a4a",
+          "file": "touch-icons.spec.ts",
+          "line": 326,
+          "column": 1
+        },
+        {
+          "title": "all nine missing icon files restore legacy glyphs while actual actions and saved progress work",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 300000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 45342,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: < \u001b[32m22\u001b[39m\nReceived:   \u001b[31m22\u001b[39m\n\nCall Log:\n- Timeout 10000ms exceeded while waiting on the predicate",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: < \u001b[32m22\u001b[39m\nReceived:   \u001b[31m22\u001b[39m\n\nCall Log:\n- Timeout 10000ms exceeded while waiting on the predicate\n    at run (C:\\code\\code10(sindbad)\\tests\\e2e\\touch-icons.spec.ts:127:9)\n    at C:\\code\\code10(sindbad)\\tests\\e2e\\touch-icons.spec.ts:149:18",
+                    "location": {
+                      "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\touch-icons.spec.ts",
+                      "column": 9,
+                      "line": 127
+                    },
+                    "snippet": "  125 |         await capture('primary','ui-wing','터치 행동');const hp=(await read(page)).enemies.find(e=>e.id===kite.id)!.hp;\n  126 |         await touch(page,cdp,'primary',130);\n> 127 |         await expect.poll(async()=>(await read(page)).enemies.find(e=>e.id===kite.id)!.hp).toBeLessThan(hp);\n      |         ^\n  128 |         const wing=(await read(page)).enemies.find(e=>e.id===kite.id)!;\n  129 |         if(!fallback){\n  130 |             const gallery=await context.newPage();await gallery.goto('/');"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\touch-icons.spec.ts",
+                        "column": 9,
+                        "line": 127
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: < \u001b[32m22\u001b[39m\nReceived:   \u001b[31m22\u001b[39m\n\nCall Log:\n- Timeout 10000ms exceeded while waiting on the predicate\n\n  125 |         await capture('primary','ui-wing','터치 행동');const hp=(await read(page)).enemies.find(e=>e.id===kite.id)!.hp;\n  126 |         await touch(page,cdp,'primary',130);\n> 127 |         await expect.poll(async()=>(await read(page)).enemies.find(e=>e.id===kite.id)!.hp).toBeLessThan(hp);\n      |         ^\n  128 |         const wing=(await read(page)).enemies.find(e=>e.id===kite.id)!;\n  129 |         if(!fallback){\n  130 |             const gallery=await context.newPage();await gallery.goto('/');\n    at run (C:\\code\\code10(sindbad)\\tests\\e2e\\touch-icons.spec.ts:127:9)\n    at C:\\code\\code10(sindbad)\\tests\\e2e\\touch-icons.spec.ts:149:18"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toContain\"",
+                      "duration": 8
+                    },
+                    {
+                      "title": "Expect \"poll toContain\"",
+                      "duration": 5
+                    },
+                    {
+                      "title": "Expect \"poll toContain\"",
+                      "duration": 12
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 125
+                    },
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 9002,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: < \u001b[32m22\u001b[39m\nReceived:   \u001b[31m22\u001b[39m\n\nCall Log:\n- Timeout 10000ms exceeded while waiting on the predicate",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: < \u001b[32m22\u001b[39m\nReceived:   \u001b[31m22\u001b[39m\n\nCall Log:\n- Timeout 10000ms exceeded while waiting on the predicate\n    at run (C:\\code\\code10(sindbad)\\tests\\e2e\\touch-icons.spec.ts:127:9)\n    at C:\\code\\code10(sindbad)\\tests\\e2e\\touch-icons.spec.ts:149:18",
+                        "location": {
+                          "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\touch-icons.spec.ts",
+                          "column": 9,
+                          "line": 127
+                        },
+                        "snippet": "  125 |         await capture('primary','ui-wing','터치 행동');const hp=(await read(page)).enemies.find(e=>e.id===kite.id)!.hp;\n  126 |         await touch(page,cdp,'primary',130);\n> 127 |         await expect.poll(async()=>(await read(page)).enemies.find(e=>e.id===kite.id)!.hp).toBeLessThan(hp);\n      |         ^\n  128 |         const wing=(await read(page)).enemies.find(e=>e.id===kite.id)!;\n  129 |         if(!fallback){\n  130 |             const gallery=await context.newPage();await gallery.goto('/');"
+                      }
+                    }
+                  ],
+                  "startTime": "2026-10-04T00:22:01.186Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\code\\code10(sindbad)\\test-results\\touch-icons-all-nine-missi-648db-ons-and-saved-progress-work\\test-failed-1.png"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\touch-icons.spec.ts",
+                    "column": 9,
+                    "line": 127
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "7b0e2e153d0585b0972b-138ccf7ed5f2a9336c5a",
+          "file": "touch-icons.spec.ts",
+          "line": 341,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-04T00:21:04.973Z",
+    "duration": 102900.702,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 2,
+    "flaky": 0
+  }
+}

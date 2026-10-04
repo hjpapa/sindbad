@@ -1,0 +1,214 @@
+{
+  "config": {
+    "configFile": "C:\\code\\code10(sindbad)\\playwright.config.ts",
+    "rootDir": "C:/code/code10(sindbad)/tests/e2e",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": "C:\\code\\code10(sindbad)\\tests\\e2e\\server.setup.ts",
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ],
+      [
+        "html"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "C:/code/code10(sindbad)/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "C:/code/code10(sindbad)/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 240000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.55.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "interaction-props.spec.ts",
+      "file": "interaction-props.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "interaction props load only for their maps with stable IDs and preserved fallback artwork",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 480000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 21781,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeCloseTo\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: \u001b[32m65.28\u001b[39m\nReceived: \u001b[31m96\u001b[39m\n\nExpected precision:    2\nExpected difference: < \u001b[32m0.005\u001b[39m\nReceived difference:   \u001b[31m30.72\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeCloseTo\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: \u001b[32m65.28\u001b[39m\nReceived: \u001b[31m96\u001b[39m\n\nExpected precision:    2\nExpected difference: < \u001b[32m0.005\u001b[39m\nReceived difference:   \u001b[31m30.72\u001b[39m\n    at C:\\code\\code10(sindbad)\\tests\\e2e\\interaction-props.spec.ts:46:65",
+                    "location": {
+                      "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\interaction-props.spec.ts",
+                      "column": 65,
+                      "line": 46
+                    },
+                    "snippet": "  44 |             const key=illustratedWorldProp(objectTexture(def,map.id),def.id);if(!key)continue;\n  45 |             const shown=state.propArt.objects.find((object:{id:string})=>object.id===def.id);\n> 46 |             expect(shown.texture).toBe(key);expect(shown.width).toBeCloseTo(65.28);expect(shown.height).toBeCloseTo(87.04);\n     |                                                                 ^\n  47 |             objects.push(shown);uncovered.delete(key);\n  48 |         }\n  49 |         const path=evidencePath(`m6-interact/${map.id}-scene-start.png`);await page.screenshot({path});"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\interaction-props.spec.ts",
+                        "column": 65,
+                        "line": 46
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeCloseTo\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: \u001b[32m65.28\u001b[39m\nReceived: \u001b[31m96\u001b[39m\n\nExpected precision:    2\nExpected difference: < \u001b[32m0.005\u001b[39m\nReceived difference:   \u001b[31m30.72\u001b[39m\n\n  44 |             const key=illustratedWorldProp(objectTexture(def,map.id),def.id);if(!key)continue;\n  45 |             const shown=state.propArt.objects.find((object:{id:string})=>object.id===def.id);\n> 46 |             expect(shown.texture).toBe(key);expect(shown.width).toBeCloseTo(65.28);expect(shown.height).toBeCloseTo(87.04);\n     |                                                                 ^\n  47 |             objects.push(shown);uncovered.delete(key);\n  48 |         }\n  49 |         const path=evidencePath(`m6-interact/${map.id}-scene-start.png`);await page.screenshot({path});\n    at C:\\code\\code10(sindbad)\\tests\\e2e\\interaction-props.spec.ts:46:65"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-04T03:41:28.329Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\code\\code10(sindbad)\\test-results\\interaction-props-interact-71c61--preserved-fallback-artwork\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\code\\code10(sindbad)\\test-results\\interaction-props-interact-71c61--preserved-fallback-artwork\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\interaction-props.spec.ts",
+                    "column": 65,
+                    "line": 46
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "81bfed80b3117b49c5cd-38706d8753dea0ee62d4",
+          "file": "interaction-props.spec.ts",
+          "line": 50,
+          "column": 1
+        },
+        {
+          "title": "rescue equipment and golden heart retain real pickup, retry and reload",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 300000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 54555,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-04T03:41:52.727Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "81bfed80b3117b49c5cd-4f3928e3f92192c0e445",
+          "file": "interaction-props.spec.ts",
+          "line": 106,
+          "column": 39
+        },
+        {
+          "title": "rescue equipment and golden heart retain real pickup, retry and reload when artwork is missing",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 300000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 49868,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-04T03:42:48.178Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "81bfed80b3117b49c5cd-358524f01664122f14a7",
+          "file": "interaction-props.spec.ts",
+          "line": 106,
+          "column": 39
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-04T03:41:25.614Z",
+    "duration": 133000.74000000002,
+    "expected": 2,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

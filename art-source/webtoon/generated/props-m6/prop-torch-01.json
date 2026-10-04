@@ -1,0 +1,21 @@
+{
+  "key": "prop-torch",
+  "legacy": "torch",
+  "subject": "One upright short wooden torch, cloth wrapping at top and a contained warm orange flame with cream inner core. Entire flame and handle inside canvas, no sparks outside.",
+  "status": "generated",
+  "prompt": "Create ONE original world interaction sprite for a bright child-friendly Korean adventure webtoon game. Attached project hero is STYLE reference ONLY: confident navy ink outlines, warm teal/gold palette, clean 2-3 flat cel shade levels, top-left lighting. Do not draw the hero. PORTRAIT 3:4 canvas requested 768x1024, true transparent RGBA background. Subject: One upright short wooden torch, cloth wrapping at top and a contained warm orange flame with cream inner core. Entire flame and handle inside canvas, no sparks outside. Front-facing readable silhouette at only 65x87 game pixels. Entire object centered, occupies roughly x=10%-90%, y=14%-86%, with fully transparent padding on every side. Keep the complete silhouette and all parts inside canvas. No scene, floor, cast shadow, circular backing, characters, hands, extra objects, labels, letters, numbers, logos, signature, watermark, blood, wounds or scary faces. Original project design only. Use clean limited broad color shapes rather than tiny decorative detail.",
+  "nativePath": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-d5015d67-341b-4036-b260-a8fa520294d7.png",
+  "path": "art-source/webtoon/generated/props-m6/prop-torch-01.png",
+  "sha256": "c4f1dc01a3aabee3241e1d1032542ec28af51bcf50aba560852631aeccd9b534",
+  "nativeSize": [
+    1086,
+    1448
+  ],
+  "alphaBounds": [
+    349,
+    23,
+    751,
+    1363
+  ],
+  "selected": true
+}

@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-03T13:30:23.183Z",
+  "date": "2026-10-04T08:51:49.991Z",
   "method": "stage/item save fixtures; real keyboard movement/combat; read-only snapshots; Edge phone/tablet viewport emulation",
   "pass": true,
   "checks": [
@@ -11,10 +11,10 @@
       "captures": [
         {
           "state": "idle",
-          "path": "docs/screenshots/art-a3/phone-skeleton-idle.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/phone-skeleton-idle.png",
           "observed": {
             "id": "S01.enemy.skeleton.01",
-            "x": 934.0336000000027,
+            "x": 935.5412500000024,
             "y": 560,
             "hp": 24,
             "state": "idle",
@@ -24,6 +24,7 @@
             "texture": "enemy-actions",
             "frame": 0,
             "flipX": true,
+            "originX": 0.5,
             "originY": 0.6234975961538461,
             "displayHeight": 145.64551422319474,
             "footOffset": 50,
@@ -32,10 +33,10 @@
         },
         {
           "state": "telegraph",
-          "path": "docs/screenshots/art-a3/phone-skeleton-telegraph.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/phone-skeleton-telegraph.png",
           "observed": {
             "id": "S01.enemy.skeleton.01",
-            "x": 909.284950000004,
+            "x": 912.2771500000035,
             "y": 560,
             "hp": 24,
             "state": "telegraph",
@@ -45,6 +46,7 @@
             "texture": "enemy-actions",
             "frame": 1,
             "flipX": true,
+            "originX": 0.5,
             "originY": 0.6137319711538461,
             "displayHeight": 145.64551422319474,
             "footOffset": 50,
@@ -53,10 +55,10 @@
         },
         {
           "state": "attack",
-          "path": "docs/screenshots/art-a3/phone-skeleton-attack.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/phone-skeleton-attack.png",
           "observed": {
             "id": "S01.enemy.skeleton.01",
-            "x": 909.284950000004,
+            "x": 912.2771500000035,
             "y": 560,
             "hp": 24,
             "state": "attack",
@@ -66,6 +68,7 @@
             "texture": "enemy-actions",
             "frame": 2,
             "flipX": true,
+            "originX": 0.5,
             "originY": 0.46724759615384615,
             "displayHeight": 145.64551422319474,
             "footOffset": 50,
@@ -74,10 +77,10 @@
         },
         {
           "state": "recover",
-          "path": "docs/screenshots/art-a3/phone-skeleton-recover.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/phone-skeleton-recover.png",
           "observed": {
             "id": "S01.enemy.skeleton.01",
-            "x": 909.284950000004,
+            "x": 912.2771500000035,
             "y": 560,
             "hp": 24,
             "state": "recover",
@@ -87,6 +90,7 @@
             "texture": "enemy-actions",
             "frame": 0,
             "flipX": true,
+            "originX": 0.5,
             "originY": 0.6234975961538461,
             "displayHeight": 145.64551422319474,
             "footOffset": 50,
@@ -95,10 +99,10 @@
         },
         {
           "state": "defeated",
-          "path": "docs/screenshots/art-a3/phone-skeleton-defeated.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/phone-skeleton-defeated.png",
           "observed": {
             "id": "S01.enemy.skeleton.01",
-            "x": 909.284950000004,
+            "x": 912.2771500000035,
             "y": 560,
             "hp": 0,
             "state": "defeated",
@@ -108,6 +112,7 @@
             "texture": "enemy-actions",
             "frame": 3,
             "flipX": false,
+            "originX": 0.5,
             "originY": 0.5844350961538461,
             "displayHeight": 145.64551422319474,
             "footOffset": 50,
@@ -115,7 +120,7 @@
           }
         }
       ],
-      "rightPath": "docs/screenshots/art-a3/phone-skeleton-right.png",
+      "rightPath": "docs/screenshots/m6-kite/final/art-a3/phone-skeleton-right.png",
       "defeat": "magic",
       "reloadRewardsUnchanged": true
     },
@@ -127,10 +132,10 @@
       "captures": [
         {
           "state": "idle",
-          "path": "docs/screenshots/art-a3/phone-bandit-idle.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/phone-bandit-idle.png",
           "observed": {
             "id": "S11.enemy.1",
-            "x": 766.3083500000005,
+            "x": 768.5538500000002,
             "y": 550,
             "hp": 36,
             "state": "idle",
@@ -140,6 +145,7 @@
             "texture": "enemy-actions",
             "frame": 4,
             "flipX": true,
+            "originX": 0.5,
             "originY": 0.5844350961538461,
             "displayHeight": 238.5663082437276,
             "footOffset": 60,
@@ -148,10 +154,10 @@
         },
         {
           "state": "telegraph",
-          "path": "docs/screenshots/art-a3/phone-bandit-telegraph.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/phone-bandit-telegraph.png",
           "observed": {
             "id": "S11.enemy.1",
-            "x": 741.5907500000009,
+            "x": 742.3470500000004,
             "y": 550,
             "hp": 36,
             "state": "telegraph",
@@ -161,6 +167,7 @@
             "texture": "enemy-actions",
             "frame": 5,
             "flipX": true,
+            "originX": 0.5,
             "originY": 0.5883413461538461,
             "displayHeight": 238.5663082437276,
             "footOffset": 60,
@@ -169,10 +176,10 @@
         },
         {
           "state": "attack",
-          "path": "docs/screenshots/art-a3/phone-bandit-attack.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/phone-bandit-attack.png",
           "observed": {
             "id": "S11.enemy.1",
-            "x": 741.5907500000009,
+            "x": 742.3470500000004,
             "y": 550,
             "hp": 36,
             "state": "attack",
@@ -182,6 +189,7 @@
             "texture": "enemy-actions",
             "frame": 6,
             "flipX": true,
+            "originX": 0.5,
             "originY": 0.47506009615384615,
             "displayHeight": 238.5663082437276,
             "footOffset": 60,
@@ -190,10 +198,10 @@
         },
         {
           "state": "recover",
-          "path": "docs/screenshots/art-a3/phone-bandit-recover.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/phone-bandit-recover.png",
           "observed": {
             "id": "S11.enemy.1",
-            "x": 741.5907500000009,
+            "x": 742.3470500000004,
             "y": 550,
             "hp": 36,
             "state": "recover",
@@ -203,6 +211,7 @@
             "texture": "enemy-actions",
             "frame": 4,
             "flipX": true,
+            "originX": 0.5,
             "originY": 0.5844350961538461,
             "displayHeight": 238.5663082437276,
             "footOffset": 60,
@@ -211,19 +220,20 @@
         },
         {
           "state": "defeated",
-          "path": "docs/screenshots/art-a3/phone-bandit-defeated.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/phone-bandit-defeated.png",
           "observed": {
             "id": "S11.enemy.1",
-            "x": 741.5907500000009,
+            "x": 742.3470500000004,
             "y": 550,
             "hp": 0,
             "state": "defeated",
             "visible": true,
-            "alpha": 0.9746153846153847,
+            "alpha": 0.9738461538461538,
             "art": "bandit",
             "texture": "enemy-actions",
             "frame": 7,
             "flipX": false,
+            "originX": 0.5,
             "originY": 0.5004507211538461,
             "displayHeight": 238.5663082437276,
             "footOffset": 60,
@@ -231,7 +241,7 @@
           }
         }
       ],
-      "rightPath": "docs/screenshots/art-a3/phone-bandit-right.png",
+      "rightPath": "docs/screenshots/m6-kite/final/art-a3/phone-bandit-right.png",
       "defeat": "human",
       "reloadRewardsUnchanged": true
     },
@@ -243,10 +253,10 @@
       "captures": [
         {
           "state": "idle",
-          "path": "docs/screenshots/art-a3/phone-guard-idle.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/phone-guard-idle.png",
           "observed": {
             "id": "S05.enemy.guardian.1",
-            "x": 409.80490000001333,
+            "x": 410.0059659999999,
             "y": 558,
             "hp": 32,
             "state": "idle",
@@ -256,6 +266,7 @@
             "texture": "enemy-actions",
             "frame": 8,
             "flipX": true,
+            "originX": 0.5,
             "originY": 0.609375,
             "displayHeight": 138.66666666666666,
             "footOffset": 52,
@@ -264,10 +275,10 @@
         },
         {
           "state": "telegraph",
-          "path": "docs/screenshots/art-a3/phone-guard-telegraph.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/phone-guard-telegraph.png",
           "observed": {
             "id": "S05.enemy.guardian.1",
-            "x": 375.370450000013,
+            "x": 377.0808159999999,
             "y": 558,
             "hp": 32,
             "state": "telegraph",
@@ -277,6 +288,7 @@
             "texture": "enemy-actions",
             "frame": 9,
             "flipX": true,
+            "originX": 0.5,
             "originY": 0.607421875,
             "displayHeight": 138.66666666666666,
             "footOffset": 52,
@@ -285,10 +297,10 @@
         },
         {
           "state": "attack",
-          "path": "docs/screenshots/art-a3/phone-guard-attack.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/phone-guard-attack.png",
           "observed": {
             "id": "S05.enemy.guardian.1",
-            "x": 375.370450000013,
+            "x": 377.0808159999999,
             "y": 558,
             "hp": 32,
             "state": "attack",
@@ -298,6 +310,7 @@
             "texture": "enemy-actions",
             "frame": 10,
             "flipX": true,
+            "originX": 0.5,
             "originY": 0.544921875,
             "displayHeight": 138.66666666666666,
             "footOffset": 52,
@@ -306,10 +319,10 @@
         },
         {
           "state": "recover",
-          "path": "docs/screenshots/art-a3/phone-guard-recover.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/phone-guard-recover.png",
           "observed": {
             "id": "S05.enemy.guardian.1",
-            "x": 375.370450000013,
+            "x": 377.0808159999999,
             "y": 558,
             "hp": 32,
             "state": "recover",
@@ -319,6 +332,7 @@
             "texture": "enemy-actions",
             "frame": 8,
             "flipX": true,
+            "originX": 0.5,
             "originY": 0.609375,
             "displayHeight": 138.66666666666666,
             "footOffset": 52,
@@ -327,19 +341,20 @@
         },
         {
           "state": "defeated",
-          "path": "docs/screenshots/art-a3/phone-guard-defeated.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/phone-guard-defeated.png",
           "observed": {
             "id": "S05.enemy.guardian.1",
-            "x": 375.370450000013,
+            "x": 377.0808159999999,
             "y": 558,
             "hp": 0,
             "state": "defeated",
             "visible": true,
-            "alpha": 0.9746153846153847,
+            "alpha": 0.9615384615384616,
             "art": "guard",
             "texture": "enemy-actions",
             "frame": 11,
             "flipX": false,
+            "originX": 0.5,
             "originY": 0.5625,
             "displayHeight": 138.66666666666666,
             "footOffset": 52,
@@ -347,7 +362,7 @@
           }
         }
       ],
-      "rightPath": "docs/screenshots/art-a3/phone-guard-right.png",
+      "rightPath": "docs/screenshots/m6-kite/final/art-a3/phone-guard-right.png",
       "defeat": "human",
       "reloadRewardsUnchanged": true
     },
@@ -359,10 +374,10 @@
       "captures": [
         {
           "state": "idle",
-          "path": "docs/screenshots/art-a3/phone-pirate-idle.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/phone-pirate-idle.png",
           "observed": {
             "id": "S18.enemy.3",
-            "x": 2269.3061000000007,
+            "x": 2267.812700000001,
             "y": 550,
             "hp": 128,
             "state": "idle",
@@ -372,6 +387,7 @@
             "texture": "enemy-actions",
             "frame": 12,
             "flipX": true,
+            "originX": 0.5,
             "originY": 0.653343023255814,
             "displayHeight": 283.1639871382637,
             "footOffset": 60,
@@ -380,10 +396,10 @@
         },
         {
           "state": "telegraph",
-          "path": "docs/screenshots/art-a3/phone-pirate-telegraph.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/phone-pirate-telegraph.png",
           "observed": {
             "id": "S18.enemy.3",
-            "x": 2240.825300000003,
+            "x": 2241.677750000003,
             "y": 550,
             "hp": 128,
             "state": "telegraph",
@@ -393,6 +409,7 @@
             "texture": "enemy-actions",
             "frame": 13,
             "flipX": true,
+            "originX": 0.5,
             "originY": 0.651389898255814,
             "displayHeight": 283.1639871382637,
             "footOffset": 60,
@@ -401,10 +418,10 @@
         },
         {
           "state": "attack",
-          "path": "docs/screenshots/art-a3/phone-pirate-attack.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/phone-pirate-attack.png",
           "observed": {
             "id": "S18.enemy.3",
-            "x": 2240.825300000003,
+            "x": 2241.677750000003,
             "y": 550,
             "hp": 128,
             "state": "attack",
@@ -414,6 +431,7 @@
             "texture": "enemy-actions",
             "frame": 14,
             "flipX": true,
+            "originX": 0.5,
             "originY": 0.602561773255814,
             "displayHeight": 283.1639871382637,
             "footOffset": 60,
@@ -422,10 +440,10 @@
         },
         {
           "state": "recover",
-          "path": "docs/screenshots/art-a3/phone-pirate-recover.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/phone-pirate-recover.png",
           "observed": {
             "id": "S18.enemy.3",
-            "x": 2240.825300000003,
+            "x": 2241.677750000003,
             "y": 550,
             "hp": 128,
             "state": "recover",
@@ -435,6 +453,7 @@
             "texture": "enemy-actions",
             "frame": 12,
             "flipX": true,
+            "originX": 0.5,
             "originY": 0.653343023255814,
             "displayHeight": 283.1639871382637,
             "footOffset": 60,
@@ -443,10 +462,10 @@
         },
         {
           "state": "defeated",
-          "path": "docs/screenshots/art-a3/phone-pirate-defeated.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/phone-pirate-defeated.png",
           "observed": {
             "id": "S18.enemy.3",
-            "x": 2240.825300000003,
+            "x": 2241.677750000003,
             "y": 550,
             "hp": 0,
             "state": "defeated",
@@ -456,6 +475,7 @@
             "texture": "enemy-actions",
             "frame": 15,
             "flipX": false,
+            "originX": 0.5,
             "originY": 0.602561773255814,
             "displayHeight": 283.1639871382637,
             "footOffset": 60,
@@ -463,7 +483,7 @@
           }
         }
       ],
-      "rightPath": "docs/screenshots/art-a3/phone-pirate-right.png",
+      "rightPath": "docs/screenshots/m6-kite/final/art-a3/phone-pirate-right.png",
       "defeat": "human",
       "reloadRewardsUnchanged": true
     },
@@ -475,10 +495,10 @@
       "captures": [
         {
           "state": "idle",
-          "path": "docs/screenshots/art-a3/phone-snake-idle.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/phone-snake-idle.png",
           "observed": {
             "id": "S20.enemy.1",
-            "x": 768.551150000001,
+            "x": 767.8119500000009,
             "y": 550,
             "hp": 43,
             "state": "idle",
@@ -488,6 +508,7 @@
             "texture": "enemy-actions",
             "frame": 16,
             "flipX": true,
+            "originX": 0.5,
             "originY": 0.5880408653846154,
             "displayHeight": 298.47533632286996,
             "footOffset": 60,
@@ -496,10 +517,10 @@
         },
         {
           "state": "telegraph",
-          "path": "docs/screenshots/art-a3/phone-snake-telegraph.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/phone-snake-telegraph.png",
           "observed": {
             "id": "S20.enemy.1",
-            "x": 738.5906000000015,
+            "x": 741.7289000000011,
             "y": 550,
             "hp": 43,
             "state": "telegraph",
@@ -509,6 +530,7 @@
             "texture": "enemy-actions",
             "frame": 17,
             "flipX": true,
+            "originX": 0.5,
             "originY": 0.5880408653846154,
             "displayHeight": 298.47533632286996,
             "footOffset": 60,
@@ -517,10 +539,10 @@
         },
         {
           "state": "attack",
-          "path": "docs/screenshots/art-a3/phone-snake-attack.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/phone-snake-attack.png",
           "observed": {
             "id": "S20.enemy.1",
-            "x": 738.5906000000015,
+            "x": 741.7289000000011,
             "y": 550,
             "hp": 43,
             "state": "attack",
@@ -530,6 +552,7 @@
             "texture": "enemy-actions",
             "frame": 18,
             "flipX": true,
+            "originX": 0.5,
             "originY": 0.4981971153846154,
             "displayHeight": 298.47533632286996,
             "footOffset": 60,
@@ -538,10 +561,10 @@
         },
         {
           "state": "recover",
-          "path": "docs/screenshots/art-a3/phone-snake-recover.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/phone-snake-recover.png",
           "observed": {
             "id": "S20.enemy.1",
-            "x": 738.5906000000015,
+            "x": 741.7289000000011,
             "y": 550,
             "hp": 43,
             "state": "recover",
@@ -551,6 +574,7 @@
             "texture": "enemy-actions",
             "frame": 16,
             "flipX": true,
+            "originX": 0.5,
             "originY": 0.5880408653846154,
             "displayHeight": 298.47533632286996,
             "footOffset": 60,
@@ -559,10 +583,10 @@
         },
         {
           "state": "defeated",
-          "path": "docs/screenshots/art-a3/phone-snake-defeated.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/phone-snake-defeated.png",
           "observed": {
             "id": "S20.enemy.1",
-            "x": 738.5906000000015,
+            "x": 741.7289000000011,
             "y": 550,
             "hp": 0,
             "state": "defeated",
@@ -572,6 +596,7 @@
             "texture": "enemy-actions",
             "frame": 19,
             "flipX": false,
+            "originX": 0.5,
             "originY": 0.4981971153846154,
             "displayHeight": 298.47533632286996,
             "footOffset": 60,
@@ -579,7 +604,7 @@
           }
         }
       ],
-      "rightPath": "docs/screenshots/art-a3/phone-snake-right.png",
+      "rightPath": "docs/screenshots/m6-kite/final/art-a3/phone-snake-right.png",
       "defeat": "animal",
       "reloadRewardsUnchanged": true
     },
@@ -591,10 +616,10 @@
       "captures": [
         {
           "state": "idle",
-          "path": "docs/screenshots/art-a3/phone-tiger-idle.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/phone-tiger-idle.png",
           "observed": {
             "id": "S22.enemy.3",
-            "x": 2266.315850000001,
+            "x": 2267.9316500000014,
             "y": 550,
             "hp": 128,
             "state": "idle",
@@ -604,6 +629,7 @@
             "texture": "enemy-actions",
             "frame": 20,
             "flipX": true,
+            "originX": 0.5,
             "originY": 0.6544331395348837,
             "displayHeight": 379.58620689655174,
             "footOffset": 60,
@@ -612,10 +638,10 @@
         },
         {
           "state": "telegraph",
-          "path": "docs/screenshots/art-a3/phone-tiger-telegraph.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/phone-tiger-telegraph.png",
           "observed": {
             "id": "S22.enemy.3",
-            "x": 2240.8338500000045,
+            "x": 2241.869300000003,
             "y": 550,
             "hp": 128,
             "state": "telegraph",
@@ -625,6 +651,7 @@
             "texture": "enemy-actions",
             "frame": 21,
             "flipX": true,
+            "originX": 0.5,
             "originY": 0.6583393895348837,
             "displayHeight": 379.58620689655174,
             "footOffset": 60,
@@ -633,10 +660,10 @@
         },
         {
           "state": "attack",
-          "path": "docs/screenshots/art-a3/phone-tiger-attack.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/phone-tiger-attack.png",
           "observed": {
             "id": "S22.enemy.3",
-            "x": 2240.8338500000045,
+            "x": 2241.869300000003,
             "y": 550,
             "hp": 128,
             "state": "attack",
@@ -646,6 +673,7 @@
             "texture": "enemy-actions",
             "frame": 22,
             "flipX": true,
+            "originX": 0.5,
             "originY": 0.5587300145348837,
             "displayHeight": 379.58620689655174,
             "footOffset": 60,
@@ -654,10 +682,10 @@
         },
         {
           "state": "recover",
-          "path": "docs/screenshots/art-a3/phone-tiger-recover.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/phone-tiger-recover.png",
           "observed": {
             "id": "S22.enemy.3",
-            "x": 2240.8338500000045,
+            "x": 2241.869300000003,
             "y": 550,
             "hp": 128,
             "state": "recover",
@@ -667,6 +695,7 @@
             "texture": "enemy-actions",
             "frame": 20,
             "flipX": true,
+            "originX": 0.5,
             "originY": 0.6544331395348837,
             "displayHeight": 379.58620689655174,
             "footOffset": 60,
@@ -675,10 +704,10 @@
         },
         {
           "state": "defeated",
-          "path": "docs/screenshots/art-a3/phone-tiger-defeated.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/phone-tiger-defeated.png",
           "observed": {
             "id": "S22.enemy.3",
-            "x": 2240.8338500000045,
+            "x": 2241.869300000003,
             "y": 550,
             "hp": 0,
             "state": "defeated",
@@ -688,6 +717,7 @@
             "texture": "enemy-actions",
             "frame": 23,
             "flipX": false,
+            "originX": 0.5,
             "originY": 0.5880268895348837,
             "displayHeight": 379.58620689655174,
             "footOffset": 60,
@@ -695,7 +725,7 @@
           }
         }
       ],
-      "rightPath": "docs/screenshots/art-a3/phone-tiger-right.png",
+      "rightPath": "docs/screenshots/m6-kite/final/art-a3/phone-tiger-right.png",
       "defeat": "animal",
       "reloadRewardsUnchanged": true
     },
@@ -707,10 +737,10 @@
       "captures": [
         {
           "state": "idle",
-          "path": "docs/screenshots/art-a3/phone-dragon-idle.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/phone-dragon-idle.png",
           "observed": {
             "id": "S12.enemy.3",
-            "x": 2267.8254499999966,
+            "x": 2267.820200000001,
             "y": 550,
             "hp": 128,
             "state": "idle",
@@ -720,6 +750,7 @@
             "texture": "enemy-actions",
             "frame": 24,
             "flipX": true,
+            "originX": 0.5,
             "originY": 0.6837300145348837,
             "displayHeight": 243.94459833795014,
             "footOffset": 60,
@@ -728,10 +759,10 @@
         },
         {
           "state": "telegraph",
-          "path": "docs/screenshots/art-a3/phone-dragon-telegraph.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/phone-dragon-telegraph.png",
           "observed": {
             "id": "S12.enemy.3",
-            "x": 2240.84405,
+            "x": 2242.334000000004,
             "y": 550,
             "hp": 128,
             "state": "telegraph",
@@ -741,6 +772,7 @@
             "texture": "enemy-actions",
             "frame": 25,
             "flipX": true,
+            "originX": 0.5,
             "originY": 0.6856831395348837,
             "displayHeight": 243.94459833795014,
             "footOffset": 60,
@@ -749,10 +781,10 @@
         },
         {
           "state": "attack",
-          "path": "docs/screenshots/art-a3/phone-dragon-attack.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/phone-dragon-attack.png",
           "observed": {
             "id": "S12.enemy.3",
-            "x": 2240.84405,
+            "x": 2242.334000000004,
             "y": 550,
             "hp": 128,
             "state": "attack",
@@ -762,6 +794,7 @@
             "texture": "enemy-actions",
             "frame": 26,
             "flipX": true,
+            "originX": 0.5,
             "originY": 0.5958393895348837,
             "displayHeight": 243.94459833795014,
             "footOffset": 60,
@@ -770,10 +803,10 @@
         },
         {
           "state": "recover",
-          "path": "docs/screenshots/art-a3/phone-dragon-recover.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/phone-dragon-recover.png",
           "observed": {
             "id": "S12.enemy.3",
-            "x": 2240.84405,
+            "x": 2242.334000000004,
             "y": 550,
             "hp": 128,
             "state": "recover",
@@ -783,6 +816,7 @@
             "texture": "enemy-actions",
             "frame": 24,
             "flipX": true,
+            "originX": 0.5,
             "originY": 0.6837300145348837,
             "displayHeight": 243.94459833795014,
             "footOffset": 60,
@@ -791,10 +825,10 @@
         },
         {
           "state": "defeated",
-          "path": "docs/screenshots/art-a3/phone-dragon-defeated.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/phone-dragon-defeated.png",
           "observed": {
             "id": "S12.enemy.3",
-            "x": 2240.84405,
+            "x": 2242.334000000004,
             "y": 550,
             "hp": 0,
             "state": "defeated",
@@ -804,6 +838,7 @@
             "texture": "enemy-actions",
             "frame": 27,
             "flipX": false,
+            "originX": 0.5,
             "originY": 0.5860737645348837,
             "displayHeight": 243.94459833795014,
             "footOffset": 60,
@@ -811,7 +846,7 @@
           }
         }
       ],
-      "rightPath": "docs/screenshots/art-a3/phone-dragon-right.png",
+      "rightPath": "docs/screenshots/m6-kite/final/art-a3/phone-dragon-right.png",
       "defeat": "animal",
       "reloadRewardsUnchanged": true
     },
@@ -823,10 +858,10 @@
       "captures": [
         {
           "state": "idle",
-          "path": "docs/screenshots/art-a3/phone-crab-idle.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/phone-crab-idle.png",
           "observed": {
             "id": "S04.enemy.crab.1",
-            "x": 493.87531,
+            "x": 496.11456399999986,
             "y": 565,
             "hp": 26,
             "state": "idle",
@@ -836,6 +871,7 @@
             "texture": "enemy-actions",
             "frame": 28,
             "flipX": true,
+            "originX": 0.5,
             "originY": 0.6714324951171875,
             "displayHeight": 370.2598870056497,
             "footOffset": 45,
@@ -844,10 +880,10 @@
         },
         {
           "state": "telegraph",
-          "path": "docs/screenshots/art-a3/phone-crab-telegraph.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/phone-crab-telegraph.png",
           "observed": {
             "id": "S04.enemy.crab.1",
-            "x": 466.93231000000026,
+            "x": 468.4764639999996,
             "y": 565,
             "hp": 26,
             "state": "telegraph",
@@ -857,6 +893,7 @@
             "texture": "enemy-actions",
             "frame": 29,
             "flipX": true,
+            "originX": 0.5,
             "originY": 0.6792449951171875,
             "displayHeight": 370.2598870056497,
             "footOffset": 45,
@@ -865,10 +902,10 @@
         },
         {
           "state": "attack",
-          "path": "docs/screenshots/art-a3/phone-crab-attack.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/phone-crab-attack.png",
           "observed": {
             "id": "S04.enemy.crab.1",
-            "x": 466.93231000000026,
+            "x": 468.4764639999996,
             "y": 565,
             "hp": 26,
             "state": "attack",
@@ -878,6 +915,7 @@
             "texture": "enemy-actions",
             "frame": 30,
             "flipX": true,
+            "originX": 0.5,
             "originY": 0.5093231201171875,
             "displayHeight": 370.2598870056497,
             "footOffset": 45,
@@ -886,10 +924,10 @@
         },
         {
           "state": "recover",
-          "path": "docs/screenshots/art-a3/phone-crab-recover.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/phone-crab-recover.png",
           "observed": {
             "id": "S04.enemy.crab.1",
-            "x": 466.93231000000026,
+            "x": 468.4764639999996,
             "y": 565,
             "hp": 26,
             "state": "recover",
@@ -899,6 +937,7 @@
             "texture": "enemy-actions",
             "frame": 28,
             "flipX": true,
+            "originX": 0.5,
             "originY": 0.6714324951171875,
             "displayHeight": 370.2598870056497,
             "footOffset": 45,
@@ -907,10 +946,10 @@
         },
         {
           "state": "defeated",
-          "path": "docs/screenshots/art-a3/phone-crab-defeated.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/phone-crab-defeated.png",
           "observed": {
             "id": "S04.enemy.crab.1",
-            "x": 466.93231000000026,
+            "x": 468.4764639999996,
             "y": 565,
             "hp": 0,
             "state": "defeated",
@@ -920,6 +959,7 @@
             "texture": "enemy-actions",
             "frame": 31,
             "flipX": false,
+            "originX": 0.5,
             "originY": 0.5171356201171875,
             "displayHeight": 370.2598870056497,
             "footOffset": 45,
@@ -927,7 +967,7 @@
           }
         }
       ],
-      "rightPath": "docs/screenshots/art-a3/phone-crab-right.png",
+      "rightPath": "docs/screenshots/m6-kite/final/art-a3/phone-crab-right.png",
       "defeat": "animal",
       "reloadRewardsUnchanged": true
     },
@@ -939,10 +979,10 @@
       "captures": [
         {
           "state": "idle",
-          "path": "docs/screenshots/art-a3/phone-stone-idle.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/phone-stone-idle.png",
           "observed": {
             "id": "S24.enemy.3",
-            "x": 2267.8052000000034,
+            "x": 2267.8225999999995,
             "y": 550,
             "hp": 128,
             "state": "idle",
@@ -952,6 +992,7 @@
             "texture": "enemy-actions",
             "frame": 32,
             "flipX": true,
+            "originX": 0.5,
             "originY": 0.5917060319767442,
             "displayHeight": 403.9633027522936,
             "footOffset": 60,
@@ -960,10 +1001,10 @@
         },
         {
           "state": "telegraph",
-          "path": "docs/screenshots/art-a3/phone-stone-telegraph.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/phone-stone-telegraph.png",
           "observed": {
             "id": "S24.enemy.3",
-            "x": 2240.068100000007,
+            "x": 2241.593450000001,
             "y": 550,
             "hp": 128,
             "state": "telegraph",
@@ -973,6 +1014,7 @@
             "texture": "enemy-actions",
             "frame": 33,
             "flipX": true,
+            "originX": 0.5,
             "originY": 0.5956122819767442,
             "displayHeight": 403.9633027522936,
             "footOffset": 60,
@@ -981,10 +1023,10 @@
         },
         {
           "state": "attack",
-          "path": "docs/screenshots/art-a3/phone-stone-attack.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/phone-stone-attack.png",
           "observed": {
             "id": "S24.enemy.3",
-            "x": 2240.068100000007,
+            "x": 2241.593450000001,
             "y": 550,
             "hp": 128,
             "state": "attack",
@@ -994,6 +1036,7 @@
             "texture": "enemy-actions",
             "frame": 34,
             "flipX": true,
+            "originX": 0.5,
             "originY": 0.5702216569767442,
             "displayHeight": 403.9633027522936,
             "footOffset": 60,
@@ -1002,10 +1045,10 @@
         },
         {
           "state": "recover",
-          "path": "docs/screenshots/art-a3/phone-stone-recover.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/phone-stone-recover.png",
           "observed": {
             "id": "S24.enemy.3",
-            "x": 2240.068100000007,
+            "x": 2241.593450000001,
             "y": 550,
             "hp": 128,
             "state": "recover",
@@ -1015,6 +1058,7 @@
             "texture": "enemy-actions",
             "frame": 32,
             "flipX": true,
+            "originX": 0.5,
             "originY": 0.5917060319767442,
             "displayHeight": 403.9633027522936,
             "footOffset": 60,
@@ -1023,10 +1067,10 @@
         },
         {
           "state": "defeated",
-          "path": "docs/screenshots/art-a3/phone-stone-defeated.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/phone-stone-defeated.png",
           "observed": {
             "id": "S24.enemy.3",
-            "x": 2240.068100000007,
+            "x": 2241.593450000001,
             "y": 550,
             "hp": 0,
             "state": "defeated",
@@ -1036,6 +1080,7 @@
             "texture": "enemy-actions",
             "frame": 35,
             "flipX": false,
+            "originX": 0.5,
             "originY": 0.5721747819767442,
             "displayHeight": 403.9633027522936,
             "footOffset": 60,
@@ -1043,7 +1088,7 @@
           }
         }
       ],
-      "rightPath": "docs/screenshots/art-a3/phone-stone-right.png",
+      "rightPath": "docs/screenshots/m6-kite/final/art-a3/phone-stone-right.png",
       "defeat": "magic",
       "reloadRewardsUnchanged": true
     },
@@ -1055,10 +1100,10 @@
       "captures": [
         {
           "state": "idle",
-          "path": "docs/screenshots/art-a3/phone-kuura-idle.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/phone-kuura-idle.png",
           "observed": {
             "id": "S19.enemy.3",
-            "x": 2267.0651,
+            "x": 2268.564200000002,
             "y": 550,
             "hp": 128,
             "state": "idle",
@@ -1068,6 +1113,7 @@
             "texture": "enemy-actions",
             "frame": 36,
             "flipX": true,
+            "originX": 0.5,
             "originY": 0.6787790697674418,
             "displayHeight": 305.77777777777777,
             "footOffset": 60,
@@ -1076,10 +1122,10 @@
         },
         {
           "state": "telegraph",
-          "path": "docs/screenshots/art-a3/phone-kuura-telegraph.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/phone-kuura-telegraph.png",
           "observed": {
             "id": "S19.enemy.3",
-            "x": 2240.0811500000036,
+            "x": 2240.8434500000035,
             "y": 550,
             "hp": 128,
             "state": "telegraph",
@@ -1089,6 +1135,7 @@
             "texture": "enemy-actions",
             "frame": 37,
             "flipX": true,
+            "originX": 0.5,
             "originY": 0.6748728197674418,
             "displayHeight": 305.77777777777777,
             "footOffset": 60,
@@ -1097,10 +1144,10 @@
         },
         {
           "state": "attack",
-          "path": "docs/screenshots/art-a3/phone-kuura-attack.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/phone-kuura-attack.png",
           "observed": {
             "id": "S19.enemy.3",
-            "x": 2240.0811500000036,
+            "x": 2240.8434500000035,
             "y": 550,
             "hp": 128,
             "state": "attack",
@@ -1110,6 +1157,7 @@
             "texture": "enemy-actions",
             "frame": 38,
             "flipX": true,
+            "originX": 0.5,
             "originY": 0.5713571947674418,
             "displayHeight": 305.77777777777777,
             "footOffset": 60,
@@ -1118,10 +1166,10 @@
         },
         {
           "state": "recover",
-          "path": "docs/screenshots/art-a3/phone-kuura-recover.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/phone-kuura-recover.png",
           "observed": {
             "id": "S19.enemy.3",
-            "x": 2240.0811500000036,
+            "x": 2240.8434500000035,
             "y": 550,
             "hp": 128,
             "state": "recover",
@@ -1131,6 +1179,7 @@
             "texture": "enemy-actions",
             "frame": 36,
             "flipX": true,
+            "originX": 0.5,
             "originY": 0.6787790697674418,
             "displayHeight": 305.77777777777777,
             "footOffset": 60,
@@ -1139,10 +1188,10 @@
         },
         {
           "state": "defeated",
-          "path": "docs/screenshots/art-a3/phone-kuura-defeated.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/phone-kuura-defeated.png",
           "observed": {
             "id": "S19.enemy.3",
-            "x": 2240.0811500000036,
+            "x": 2240.8434500000035,
             "y": 550,
             "hp": 0,
             "state": "defeated",
@@ -1152,6 +1201,7 @@
             "texture": "enemy-actions",
             "frame": 39,
             "flipX": false,
+            "originX": 0.5,
             "originY": 0.5908884447674418,
             "displayHeight": 305.77777777777777,
             "footOffset": 60,
@@ -1159,7 +1209,7 @@
           }
         }
       ],
-      "rightPath": "docs/screenshots/art-a3/phone-kuura-right.png",
+      "rightPath": "docs/screenshots/m6-kite/final/art-a3/phone-kuura-right.png",
       "defeat": "magic",
       "reloadRewardsUnchanged": true
     },
@@ -1171,10 +1221,10 @@
       "captures": [
         {
           "state": "idle",
-          "path": "docs/screenshots/art-a3/tablet-skeleton-idle.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/tablet-skeleton-idle.png",
           "observed": {
             "id": "S01.enemy.skeleton.01",
-            "x": 932.5325500000025,
+            "x": 934.8032500000022,
             "y": 560,
             "hp": 24,
             "state": "idle",
@@ -1184,6 +1234,7 @@
             "texture": "enemy-actions",
             "frame": 0,
             "flipX": true,
+            "originX": 0.5,
             "originY": 0.6234975961538461,
             "displayHeight": 145.64551422319474,
             "footOffset": 50,
@@ -1192,10 +1243,10 @@
         },
         {
           "state": "telegraph",
-          "path": "docs/screenshots/art-a3/tablet-skeleton-telegraph.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/tablet-skeleton-telegraph.png",
           "observed": {
             "id": "S01.enemy.skeleton.01",
-            "x": 909.2828500000037,
+            "x": 909.3022000000035,
             "y": 560,
             "hp": 24,
             "state": "telegraph",
@@ -1205,6 +1256,7 @@
             "texture": "enemy-actions",
             "frame": 1,
             "flipX": true,
+            "originX": 0.5,
             "originY": 0.6137319711538461,
             "displayHeight": 145.64551422319474,
             "footOffset": 50,
@@ -1213,10 +1265,10 @@
         },
         {
           "state": "attack",
-          "path": "docs/screenshots/art-a3/tablet-skeleton-attack.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/tablet-skeleton-attack.png",
           "observed": {
             "id": "S01.enemy.skeleton.01",
-            "x": 909.2828500000037,
+            "x": 909.3022000000035,
             "y": 560,
             "hp": 24,
             "state": "attack",
@@ -1226,6 +1278,7 @@
             "texture": "enemy-actions",
             "frame": 2,
             "flipX": true,
+            "originX": 0.5,
             "originY": 0.46724759615384615,
             "displayHeight": 145.64551422319474,
             "footOffset": 50,
@@ -1234,10 +1287,10 @@
         },
         {
           "state": "recover",
-          "path": "docs/screenshots/art-a3/tablet-skeleton-recover.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/tablet-skeleton-recover.png",
           "observed": {
             "id": "S01.enemy.skeleton.01",
-            "x": 909.2828500000037,
+            "x": 909.3022000000035,
             "y": 560,
             "hp": 24,
             "state": "recover",
@@ -1247,18 +1300,19 @@
             "texture": "enemy-actions",
             "frame": 0,
             "flipX": true,
+            "originX": 0.5,
             "originY": 0.6234975961538461,
             "displayHeight": 145.64551422319474,
             "footOffset": 50,
-            "label": "빈틈 · J 공격"
+            "label": "✦"
           }
         },
         {
           "state": "defeated",
-          "path": "docs/screenshots/art-a3/tablet-skeleton-defeated.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/tablet-skeleton-defeated.png",
           "observed": {
             "id": "S01.enemy.skeleton.01",
-            "x": 909.2828500000037,
+            "x": 909.3022000000035,
             "y": 560,
             "hp": 0,
             "state": "defeated",
@@ -1268,6 +1322,7 @@
             "texture": "enemy-actions",
             "frame": 3,
             "flipX": false,
+            "originX": 0.5,
             "originY": 0.5844350961538461,
             "displayHeight": 145.64551422319474,
             "footOffset": 50,
@@ -1275,7 +1330,7 @@
           }
         }
       ],
-      "rightPath": "docs/screenshots/art-a3/tablet-skeleton-right.png",
+      "rightPath": "docs/screenshots/m6-kite/final/art-a3/tablet-skeleton-right.png",
       "defeat": "magic",
       "reloadRewardsUnchanged": true
     },
@@ -1287,10 +1342,10 @@
       "captures": [
         {
           "state": "idle",
-          "path": "docs/screenshots/art-a3/tablet-bandit-idle.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/tablet-bandit-idle.png",
           "observed": {
             "id": "S11.enemy.1",
-            "x": 767.0603000000006,
+            "x": 766.3230499999997,
             "y": 550,
             "hp": 36,
             "state": "idle",
@@ -1300,6 +1355,7 @@
             "texture": "enemy-actions",
             "frame": 4,
             "flipX": true,
+            "originX": 0.5,
             "originY": 0.5844350961538461,
             "displayHeight": 238.5663082437276,
             "footOffset": 60,
@@ -1308,10 +1364,10 @@
         },
         {
           "state": "telegraph",
-          "path": "docs/screenshots/art-a3/tablet-bandit-telegraph.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/tablet-bandit-telegraph.png",
           "observed": {
             "id": "S11.enemy.1",
-            "x": 735.600200000001,
+            "x": 737.8496,
             "y": 550,
             "hp": 36,
             "state": "telegraph",
@@ -1321,6 +1377,7 @@
             "texture": "enemy-actions",
             "frame": 5,
             "flipX": true,
+            "originX": 0.5,
             "originY": 0.5883413461538461,
             "displayHeight": 238.5663082437276,
             "footOffset": 60,
@@ -1329,10 +1386,10 @@
         },
         {
           "state": "attack",
-          "path": "docs/screenshots/art-a3/tablet-bandit-attack.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/tablet-bandit-attack.png",
           "observed": {
             "id": "S11.enemy.1",
-            "x": 735.600200000001,
+            "x": 737.8496,
             "y": 550,
             "hp": 36,
             "state": "attack",
@@ -1342,6 +1399,7 @@
             "texture": "enemy-actions",
             "frame": 6,
             "flipX": true,
+            "originX": 0.5,
             "originY": 0.47506009615384615,
             "displayHeight": 238.5663082437276,
             "footOffset": 60,
@@ -1350,10 +1408,10 @@
         },
         {
           "state": "recover",
-          "path": "docs/screenshots/art-a3/tablet-bandit-recover.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/tablet-bandit-recover.png",
           "observed": {
             "id": "S11.enemy.1",
-            "x": 735.600200000001,
+            "x": 737.8496,
             "y": 550,
             "hp": 36,
             "state": "recover",
@@ -1363,18 +1421,19 @@
             "texture": "enemy-actions",
             "frame": 4,
             "flipX": true,
+            "originX": 0.5,
             "originY": 0.5844350961538461,
             "displayHeight": 238.5663082437276,
             "footOffset": 60,
-            "label": "빈틈 · J 공격"
+            "label": "✦"
           }
         },
         {
           "state": "defeated",
-          "path": "docs/screenshots/art-a3/tablet-bandit-defeated.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/tablet-bandit-defeated.png",
           "observed": {
             "id": "S11.enemy.1",
-            "x": 735.600200000001,
+            "x": 737.8496,
             "y": 550,
             "hp": 0,
             "state": "defeated",
@@ -1384,6 +1443,7 @@
             "texture": "enemy-actions",
             "frame": 7,
             "flipX": false,
+            "originX": 0.5,
             "originY": 0.5004507211538461,
             "displayHeight": 238.5663082437276,
             "footOffset": 60,
@@ -1391,7 +1451,7 @@
           }
         }
       ],
-      "rightPath": "docs/screenshots/art-a3/tablet-bandit-right.png",
+      "rightPath": "docs/screenshots/m6-kite/final/art-a3/tablet-bandit-right.png",
       "defeat": "human",
       "reloadRewardsUnchanged": true
     },
@@ -1403,10 +1463,10 @@
       "captures": [
         {
           "state": "idle",
-          "path": "docs/screenshots/art-a3/tablet-guard-idle.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/tablet-guard-idle.png",
           "observed": {
             "id": "S05.enemy.guardian.1",
-            "x": 408.5196999999998,
+            "x": 409.8714999998926,
             "y": 558,
             "hp": 32,
             "state": "idle",
@@ -1416,6 +1476,7 @@
             "texture": "enemy-actions",
             "frame": 8,
             "flipX": true,
+            "originX": 0.5,
             "originY": 0.609375,
             "displayHeight": 138.66666666666666,
             "footOffset": 52,
@@ -1424,10 +1485,10 @@
         },
         {
           "state": "telegraph",
-          "path": "docs/screenshots/art-a3/tablet-guard-telegraph.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/tablet-guard-telegraph.png",
           "observed": {
             "id": "S05.enemy.guardian.1",
-            "x": 369.5894499999994,
+            "x": 372.4803999998922,
             "y": 558,
             "hp": 32,
             "state": "telegraph",
@@ -1437,6 +1498,7 @@
             "texture": "enemy-actions",
             "frame": 9,
             "flipX": true,
+            "originX": 0.5,
             "originY": 0.607421875,
             "displayHeight": 138.66666666666666,
             "footOffset": 52,
@@ -1445,10 +1507,10 @@
         },
         {
           "state": "attack",
-          "path": "docs/screenshots/art-a3/tablet-guard-attack.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/tablet-guard-attack.png",
           "observed": {
             "id": "S05.enemy.guardian.1",
-            "x": 369.5894499999994,
+            "x": 372.4803999998922,
             "y": 558,
             "hp": 32,
             "state": "attack",
@@ -1458,6 +1520,7 @@
             "texture": "enemy-actions",
             "frame": 10,
             "flipX": true,
+            "originX": 0.5,
             "originY": 0.544921875,
             "displayHeight": 138.66666666666666,
             "footOffset": 52,
@@ -1466,10 +1529,10 @@
         },
         {
           "state": "recover",
-          "path": "docs/screenshots/art-a3/tablet-guard-recover.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/tablet-guard-recover.png",
           "observed": {
             "id": "S05.enemy.guardian.1",
-            "x": 369.5894499999994,
+            "x": 372.4803999998922,
             "y": 558,
             "hp": 32,
             "state": "recover",
@@ -1479,6 +1542,7 @@
             "texture": "enemy-actions",
             "frame": 8,
             "flipX": true,
+            "originX": 0.5,
             "originY": 0.609375,
             "displayHeight": 138.66666666666666,
             "footOffset": 52,
@@ -1487,19 +1551,20 @@
         },
         {
           "state": "defeated",
-          "path": "docs/screenshots/art-a3/tablet-guard-defeated.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/tablet-guard-defeated.png",
           "observed": {
             "id": "S05.enemy.guardian.1",
-            "x": 369.5894499999994,
+            "x": 372.4803999998922,
             "y": 558,
             "hp": 0,
             "state": "defeated",
             "visible": true,
-            "alpha": 0.9615384615384616,
+            "alpha": 0.9746153846153847,
             "art": "guard",
             "texture": "enemy-actions",
             "frame": 11,
             "flipX": false,
+            "originX": 0.5,
             "originY": 0.5625,
             "displayHeight": 138.66666666666666,
             "footOffset": 52,
@@ -1507,7 +1572,7 @@
           }
         }
       ],
-      "rightPath": "docs/screenshots/art-a3/tablet-guard-right.png",
+      "rightPath": "docs/screenshots/m6-kite/final/art-a3/tablet-guard-right.png",
       "defeat": "human",
       "reloadRewardsUnchanged": true
     },
@@ -1519,10 +1584,10 @@
       "captures": [
         {
           "state": "idle",
-          "path": "docs/screenshots/art-a3/tablet-pirate-idle.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/tablet-pirate-idle.png",
           "observed": {
             "id": "S18.enemy.3",
-            "x": 2267.071850000003,
+            "x": 2267.0741000000025,
             "y": 550,
             "hp": 128,
             "state": "idle",
@@ -1532,6 +1597,7 @@
             "texture": "enemy-actions",
             "frame": 12,
             "flipX": true,
+            "originX": 0.5,
             "originY": 0.653343023255814,
             "displayHeight": 283.1639871382637,
             "footOffset": 60,
@@ -1540,10 +1606,10 @@
         },
         {
           "state": "telegraph",
-          "path": "docs/screenshots/art-a3/tablet-pirate-telegraph.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/tablet-pirate-telegraph.png",
           "observed": {
             "id": "S18.enemy.3",
-            "x": 2235.5913500000065,
+            "x": 2237.848700000006,
             "y": 550,
             "hp": 128,
             "state": "telegraph",
@@ -1553,6 +1619,7 @@
             "texture": "enemy-actions",
             "frame": 13,
             "flipX": true,
+            "originX": 0.5,
             "originY": 0.651389898255814,
             "displayHeight": 283.1639871382637,
             "footOffset": 60,
@@ -1561,10 +1628,10 @@
         },
         {
           "state": "attack",
-          "path": "docs/screenshots/art-a3/tablet-pirate-attack.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/tablet-pirate-attack.png",
           "observed": {
             "id": "S18.enemy.3",
-            "x": 2235.5913500000065,
+            "x": 2237.848700000006,
             "y": 550,
             "hp": 128,
             "state": "attack",
@@ -1574,6 +1641,7 @@
             "texture": "enemy-actions",
             "frame": 14,
             "flipX": true,
+            "originX": 0.5,
             "originY": 0.602561773255814,
             "displayHeight": 283.1639871382637,
             "footOffset": 60,
@@ -1582,10 +1650,10 @@
         },
         {
           "state": "recover",
-          "path": "docs/screenshots/art-a3/tablet-pirate-recover.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/tablet-pirate-recover.png",
           "observed": {
             "id": "S18.enemy.3",
-            "x": 2235.5913500000065,
+            "x": 2237.848700000006,
             "y": 550,
             "hp": 128,
             "state": "recover",
@@ -1595,6 +1663,7 @@
             "texture": "enemy-actions",
             "frame": 12,
             "flipX": true,
+            "originX": 0.5,
             "originY": 0.653343023255814,
             "displayHeight": 283.1639871382637,
             "footOffset": 60,
@@ -1603,19 +1672,20 @@
         },
         {
           "state": "defeated",
-          "path": "docs/screenshots/art-a3/tablet-pirate-defeated.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/tablet-pirate-defeated.png",
           "observed": {
             "id": "S18.enemy.3",
-            "x": 2235.5913500000065,
+            "x": 2237.848700000006,
             "y": 550,
             "hp": 0,
             "state": "defeated",
             "visible": true,
-            "alpha": 0.9738461538461538,
+            "alpha": 0.9730769230769231,
             "art": "pirate",
             "texture": "enemy-actions",
             "frame": 15,
             "flipX": false,
+            "originX": 0.5,
             "originY": 0.602561773255814,
             "displayHeight": 283.1639871382637,
             "footOffset": 60,
@@ -1623,7 +1693,7 @@
           }
         }
       ],
-      "rightPath": "docs/screenshots/art-a3/tablet-pirate-right.png",
+      "rightPath": "docs/screenshots/m6-kite/final/art-a3/tablet-pirate-right.png",
       "defeat": "human",
       "reloadRewardsUnchanged": true
     },
@@ -1635,10 +1705,10 @@
       "captures": [
         {
           "state": "idle",
-          "path": "docs/screenshots/art-a3/tablet-snake-idle.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/tablet-snake-idle.png",
           "observed": {
             "id": "S20.enemy.1",
-            "x": 765.5628500000001,
+            "x": 767.0579000000002,
             "y": 550,
             "hp": 43,
             "state": "idle",
@@ -1648,6 +1718,7 @@
             "texture": "enemy-actions",
             "frame": 16,
             "flipX": true,
+            "originX": 0.5,
             "originY": 0.5880408653846154,
             "displayHeight": 298.47533632286996,
             "footOffset": 60,
@@ -1656,10 +1727,10 @@
         },
         {
           "state": "telegraph",
-          "path": "docs/screenshots/art-a3/tablet-snake-telegraph.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/tablet-snake-telegraph.png",
           "observed": {
             "id": "S20.enemy.1",
-            "x": 735.5987000000006,
+            "x": 735.5991500000008,
             "y": 550,
             "hp": 43,
             "state": "telegraph",
@@ -1669,6 +1740,7 @@
             "texture": "enemy-actions",
             "frame": 17,
             "flipX": true,
+            "originX": 0.5,
             "originY": 0.5880408653846154,
             "displayHeight": 298.47533632286996,
             "footOffset": 60,
@@ -1677,10 +1749,10 @@
         },
         {
           "state": "attack",
-          "path": "docs/screenshots/art-a3/tablet-snake-attack.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/tablet-snake-attack.png",
           "observed": {
             "id": "S20.enemy.1",
-            "x": 735.5987000000006,
+            "x": 735.5991500000008,
             "y": 550,
             "hp": 43,
             "state": "attack",
@@ -1690,6 +1762,7 @@
             "texture": "enemy-actions",
             "frame": 18,
             "flipX": true,
+            "originX": 0.5,
             "originY": 0.4981971153846154,
             "displayHeight": 298.47533632286996,
             "footOffset": 60,
@@ -1698,10 +1771,10 @@
         },
         {
           "state": "recover",
-          "path": "docs/screenshots/art-a3/tablet-snake-recover.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/tablet-snake-recover.png",
           "observed": {
             "id": "S20.enemy.1",
-            "x": 735.5987000000006,
+            "x": 735.5991500000008,
             "y": 550,
             "hp": 43,
             "state": "recover",
@@ -1711,6 +1784,7 @@
             "texture": "enemy-actions",
             "frame": 16,
             "flipX": true,
+            "originX": 0.5,
             "originY": 0.5880408653846154,
             "displayHeight": 298.47533632286996,
             "footOffset": 60,
@@ -1719,10 +1793,10 @@
         },
         {
           "state": "defeated",
-          "path": "docs/screenshots/art-a3/tablet-snake-defeated.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/tablet-snake-defeated.png",
           "observed": {
             "id": "S20.enemy.1",
-            "x": 735.5987000000006,
+            "x": 735.5991500000008,
             "y": 550,
             "hp": 0,
             "state": "defeated",
@@ -1732,6 +1806,7 @@
             "texture": "enemy-actions",
             "frame": 19,
             "flipX": false,
+            "originX": 0.5,
             "originY": 0.4981971153846154,
             "displayHeight": 298.47533632286996,
             "footOffset": 60,
@@ -1739,7 +1814,7 @@
           }
         }
       ],
-      "rightPath": "docs/screenshots/art-a3/tablet-snake-right.png",
+      "rightPath": "docs/screenshots/m6-kite/final/art-a3/tablet-snake-right.png",
       "defeat": "animal",
       "reloadRewardsUnchanged": true
     },
@@ -1751,10 +1826,10 @@
       "captures": [
         {
           "state": "idle",
-          "path": "docs/screenshots/art-a3/tablet-tiger-idle.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/tablet-tiger-idle.png",
           "observed": {
             "id": "S22.enemy.3",
-            "x": 2266.3199000000036,
+            "x": 2267.179400000002,
             "y": 550,
             "hp": 128,
             "state": "idle",
@@ -1764,6 +1839,7 @@
             "texture": "enemy-actions",
             "frame": 20,
             "flipX": true,
+            "originX": 0.5,
             "originY": 0.6544331395348837,
             "displayHeight": 379.58620689655174,
             "footOffset": 60,
@@ -1772,10 +1848,10 @@
         },
         {
           "state": "telegraph",
-          "path": "docs/screenshots/art-a3/tablet-tiger-telegraph.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/tablet-tiger-telegraph.png",
           "observed": {
             "id": "S22.enemy.3",
-            "x": 2235.590450000008,
+            "x": 2237.201000000005,
             "y": 550,
             "hp": 128,
             "state": "telegraph",
@@ -1785,6 +1861,7 @@
             "texture": "enemy-actions",
             "frame": 21,
             "flipX": true,
+            "originX": 0.5,
             "originY": 0.6583393895348837,
             "displayHeight": 379.58620689655174,
             "footOffset": 60,
@@ -1793,10 +1870,10 @@
         },
         {
           "state": "attack",
-          "path": "docs/screenshots/art-a3/tablet-tiger-attack.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/tablet-tiger-attack.png",
           "observed": {
             "id": "S22.enemy.3",
-            "x": 2235.590450000008,
+            "x": 2237.201000000005,
             "y": 550,
             "hp": 128,
             "state": "attack",
@@ -1806,6 +1883,7 @@
             "texture": "enemy-actions",
             "frame": 22,
             "flipX": true,
+            "originX": 0.5,
             "originY": 0.5587300145348837,
             "displayHeight": 379.58620689655174,
             "footOffset": 60,
@@ -1814,10 +1892,10 @@
         },
         {
           "state": "recover",
-          "path": "docs/screenshots/art-a3/tablet-tiger-recover.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/tablet-tiger-recover.png",
           "observed": {
             "id": "S22.enemy.3",
-            "x": 2235.590450000008,
+            "x": 2237.201000000005,
             "y": 550,
             "hp": 128,
             "state": "recover",
@@ -1827,6 +1905,7 @@
             "texture": "enemy-actions",
             "frame": 20,
             "flipX": true,
+            "originX": 0.5,
             "originY": 0.6544331395348837,
             "displayHeight": 379.58620689655174,
             "footOffset": 60,
@@ -1835,10 +1914,10 @@
         },
         {
           "state": "defeated",
-          "path": "docs/screenshots/art-a3/tablet-tiger-defeated.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/tablet-tiger-defeated.png",
           "observed": {
             "id": "S22.enemy.3",
-            "x": 2235.590450000008,
+            "x": 2237.201000000005,
             "y": 550,
             "hp": 0,
             "state": "defeated",
@@ -1848,6 +1927,7 @@
             "texture": "enemy-actions",
             "frame": 23,
             "flipX": false,
+            "originX": 0.5,
             "originY": 0.5880268895348837,
             "displayHeight": 379.58620689655174,
             "footOffset": 60,
@@ -1855,7 +1935,7 @@
           }
         }
       ],
-      "rightPath": "docs/screenshots/art-a3/tablet-tiger-right.png",
+      "rightPath": "docs/screenshots/m6-kite/final/art-a3/tablet-tiger-right.png",
       "defeat": "animal",
       "reloadRewardsUnchanged": true
     },
@@ -1867,10 +1947,10 @@
       "captures": [
         {
           "state": "idle",
-          "path": "docs/screenshots/art-a3/tablet-dragon-idle.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/tablet-dragon-idle.png",
           "observed": {
             "id": "S12.enemy.3",
-            "x": 2266.2977000000024,
+            "x": 2267.8178000000016,
             "y": 550,
             "hp": 128,
             "state": "idle",
@@ -1880,6 +1960,7 @@
             "texture": "enemy-actions",
             "frame": 24,
             "flipX": true,
+            "originX": 0.5,
             "originY": 0.6837300145348837,
             "displayHeight": 243.94459833795014,
             "footOffset": 60,
@@ -1888,10 +1969,10 @@
         },
         {
           "state": "telegraph",
-          "path": "docs/screenshots/art-a3/tablet-dragon-telegraph.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/tablet-dragon-telegraph.png",
           "observed": {
             "id": "S12.enemy.3",
-            "x": 2235.5630000000056,
+            "x": 2238.578600000005,
             "y": 550,
             "hp": 128,
             "state": "telegraph",
@@ -1901,6 +1982,7 @@
             "texture": "enemy-actions",
             "frame": 25,
             "flipX": true,
+            "originX": 0.5,
             "originY": 0.6856831395348837,
             "displayHeight": 243.94459833795014,
             "footOffset": 60,
@@ -1909,10 +1991,10 @@
         },
         {
           "state": "attack",
-          "path": "docs/screenshots/art-a3/tablet-dragon-attack.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/tablet-dragon-attack.png",
           "observed": {
             "id": "S12.enemy.3",
-            "x": 2235.5630000000056,
+            "x": 2238.578600000005,
             "y": 550,
             "hp": 128,
             "state": "attack",
@@ -1922,6 +2004,7 @@
             "texture": "enemy-actions",
             "frame": 26,
             "flipX": true,
+            "originX": 0.5,
             "originY": 0.5958393895348837,
             "displayHeight": 243.94459833795014,
             "footOffset": 60,
@@ -1930,10 +2013,10 @@
         },
         {
           "state": "recover",
-          "path": "docs/screenshots/art-a3/tablet-dragon-recover.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/tablet-dragon-recover.png",
           "observed": {
             "id": "S12.enemy.3",
-            "x": 2235.5630000000056,
+            "x": 2238.578600000005,
             "y": 550,
             "hp": 128,
             "state": "recover",
@@ -1943,6 +2026,7 @@
             "texture": "enemy-actions",
             "frame": 24,
             "flipX": true,
+            "originX": 0.5,
             "originY": 0.6837300145348837,
             "displayHeight": 243.94459833795014,
             "footOffset": 60,
@@ -1951,10 +2035,10 @@
         },
         {
           "state": "defeated",
-          "path": "docs/screenshots/art-a3/tablet-dragon-defeated.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/tablet-dragon-defeated.png",
           "observed": {
             "id": "S12.enemy.3",
-            "x": 2235.5630000000056,
+            "x": 2238.578600000005,
             "y": 550,
             "hp": 0,
             "state": "defeated",
@@ -1964,6 +2048,7 @@
             "texture": "enemy-actions",
             "frame": 27,
             "flipX": false,
+            "originX": 0.5,
             "originY": 0.5860737645348837,
             "displayHeight": 243.94459833795014,
             "footOffset": 60,
@@ -1971,7 +2056,7 @@
           }
         }
       ],
-      "rightPath": "docs/screenshots/art-a3/tablet-dragon-right.png",
+      "rightPath": "docs/screenshots/m6-kite/final/art-a3/tablet-dragon-right.png",
       "defeat": "animal",
       "reloadRewardsUnchanged": true
     },
@@ -1983,10 +2068,10 @@
       "captures": [
         {
           "state": "idle",
-          "path": "docs/screenshots/art-a3/tablet-crab-idle.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/tablet-crab-idle.png",
           "observed": {
             "id": "S04.enemy.crab.1",
-            "x": 493.9309000000001,
+            "x": 494.77502799999985,
             "y": 565,
             "hp": 26,
             "state": "idle",
@@ -1996,6 +2081,7 @@
             "texture": "enemy-actions",
             "frame": 28,
             "flipX": true,
+            "originX": 0.5,
             "originY": 0.6714324951171875,
             "displayHeight": 370.2598870056497,
             "footOffset": 45,
@@ -2004,10 +2090,10 @@
         },
         {
           "state": "telegraph",
-          "path": "docs/screenshots/art-a3/tablet-crab-telegraph.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/tablet-crab-telegraph.png",
           "observed": {
             "id": "S04.enemy.crab.1",
-            "x": 460.23459999999994,
+            "x": 462.59012799999994,
             "y": 565,
             "hp": 26,
             "state": "telegraph",
@@ -2017,6 +2103,7 @@
             "texture": "enemy-actions",
             "frame": 29,
             "flipX": true,
+            "originX": 0.5,
             "originY": 0.6792449951171875,
             "displayHeight": 370.2598870056497,
             "footOffset": 45,
@@ -2025,10 +2112,10 @@
         },
         {
           "state": "attack",
-          "path": "docs/screenshots/art-a3/tablet-crab-attack.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/tablet-crab-attack.png",
           "observed": {
             "id": "S04.enemy.crab.1",
-            "x": 460.23459999999994,
+            "x": 462.59012799999994,
             "y": 565,
             "hp": 26,
             "state": "attack",
@@ -2038,6 +2125,7 @@
             "texture": "enemy-actions",
             "frame": 30,
             "flipX": true,
+            "originX": 0.5,
             "originY": 0.5093231201171875,
             "displayHeight": 370.2598870056497,
             "footOffset": 45,
@@ -2046,10 +2134,10 @@
         },
         {
           "state": "recover",
-          "path": "docs/screenshots/art-a3/tablet-crab-recover.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/tablet-crab-recover.png",
           "observed": {
             "id": "S04.enemy.crab.1",
-            "x": 460.23459999999994,
+            "x": 462.59012799999994,
             "y": 565,
             "hp": 26,
             "state": "recover",
@@ -2059,6 +2147,7 @@
             "texture": "enemy-actions",
             "frame": 28,
             "flipX": true,
+            "originX": 0.5,
             "originY": 0.6714324951171875,
             "displayHeight": 370.2598870056497,
             "footOffset": 45,
@@ -2067,10 +2156,10 @@
         },
         {
           "state": "defeated",
-          "path": "docs/screenshots/art-a3/tablet-crab-defeated.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/tablet-crab-defeated.png",
           "observed": {
             "id": "S04.enemy.crab.1",
-            "x": 460.23459999999994,
+            "x": 462.59012799999994,
             "y": 565,
             "hp": 0,
             "state": "defeated",
@@ -2080,6 +2169,7 @@
             "texture": "enemy-actions",
             "frame": 31,
             "flipX": false,
+            "originX": 0.5,
             "originY": 0.5171356201171875,
             "displayHeight": 370.2598870056497,
             "footOffset": 45,
@@ -2087,7 +2177,7 @@
           }
         }
       ],
-      "rightPath": "docs/screenshots/art-a3/tablet-crab-right.png",
+      "rightPath": "docs/screenshots/m6-kite/final/art-a3/tablet-crab-right.png",
       "defeat": "animal",
       "reloadRewardsUnchanged": true
     },
@@ -2099,10 +2189,10 @@
       "captures": [
         {
           "state": "idle",
-          "path": "docs/screenshots/art-a3/tablet-stone-idle.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/tablet-stone-idle.png",
           "observed": {
             "id": "S24.enemy.3",
-            "x": 2264.806400000001,
+            "x": 2266.3088000000016,
             "y": 550,
             "hp": 128,
             "state": "idle",
@@ -2112,6 +2202,7 @@
             "texture": "enemy-actions",
             "frame": 32,
             "flipX": true,
+            "originX": 0.5,
             "originY": 0.5917060319767442,
             "displayHeight": 403.9633027522936,
             "footOffset": 60,
@@ -2120,10 +2211,10 @@
         },
         {
           "state": "telegraph",
-          "path": "docs/screenshots/art-a3/tablet-stone-telegraph.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/tablet-stone-telegraph.png",
           "observed": {
             "id": "S24.enemy.3",
-            "x": 2234.815850000005,
+            "x": 2236.322000000006,
             "y": 550,
             "hp": 128,
             "state": "telegraph",
@@ -2133,6 +2224,7 @@
             "texture": "enemy-actions",
             "frame": 33,
             "flipX": true,
+            "originX": 0.5,
             "originY": 0.5956122819767442,
             "displayHeight": 403.9633027522936,
             "footOffset": 60,
@@ -2141,10 +2233,10 @@
         },
         {
           "state": "attack",
-          "path": "docs/screenshots/art-a3/tablet-stone-attack.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/tablet-stone-attack.png",
           "observed": {
             "id": "S24.enemy.3",
-            "x": 2234.815850000005,
+            "x": 2236.322000000006,
             "y": 550,
             "hp": 128,
             "state": "attack",
@@ -2154,6 +2246,7 @@
             "texture": "enemy-actions",
             "frame": 34,
             "flipX": true,
+            "originX": 0.5,
             "originY": 0.5702216569767442,
             "displayHeight": 403.9633027522936,
             "footOffset": 60,
@@ -2162,10 +2255,10 @@
         },
         {
           "state": "recover",
-          "path": "docs/screenshots/art-a3/tablet-stone-recover.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/tablet-stone-recover.png",
           "observed": {
             "id": "S24.enemy.3",
-            "x": 2234.815850000005,
+            "x": 2236.322000000006,
             "y": 550,
             "hp": 128,
             "state": "recover",
@@ -2175,6 +2268,7 @@
             "texture": "enemy-actions",
             "frame": 32,
             "flipX": true,
+            "originX": 0.5,
             "originY": 0.5917060319767442,
             "displayHeight": 403.9633027522936,
             "footOffset": 60,
@@ -2183,10 +2277,10 @@
         },
         {
           "state": "defeated",
-          "path": "docs/screenshots/art-a3/tablet-stone-defeated.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/tablet-stone-defeated.png",
           "observed": {
             "id": "S24.enemy.3",
-            "x": 2234.815850000005,
+            "x": 2236.322000000006,
             "y": 550,
             "hp": 0,
             "state": "defeated",
@@ -2196,6 +2290,7 @@
             "texture": "enemy-actions",
             "frame": 35,
             "flipX": false,
+            "originX": 0.5,
             "originY": 0.5721747819767442,
             "displayHeight": 403.9633027522936,
             "footOffset": 60,
@@ -2203,7 +2298,7 @@
           }
         }
       ],
-      "rightPath": "docs/screenshots/art-a3/tablet-stone-right.png",
+      "rightPath": "docs/screenshots/m6-kite/final/art-a3/tablet-stone-right.png",
       "defeat": "magic",
       "reloadRewardsUnchanged": true
     },
@@ -2215,10 +2310,10 @@
       "captures": [
         {
           "state": "idle",
-          "path": "docs/screenshots/art-a3/tablet-kuura-idle.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/tablet-kuura-idle.png",
           "observed": {
             "id": "S19.enemy.3",
-            "x": 2268.5584999999996,
+            "x": 2267.136200000002,
             "y": 550,
             "hp": 128,
             "state": "idle",
@@ -2228,6 +2323,7 @@
             "texture": "enemy-actions",
             "frame": 36,
             "flipX": true,
+            "originX": 0.5,
             "originY": 0.6787790697674418,
             "displayHeight": 305.77777777777777,
             "footOffset": 60,
@@ -2236,10 +2332,10 @@
         },
         {
           "state": "telegraph",
-          "path": "docs/screenshots/art-a3/tablet-kuura-telegraph.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/tablet-kuura-telegraph.png",
           "observed": {
             "id": "S19.enemy.3",
-            "x": 2234.075900000004,
+            "x": 2237.1576500000065,
             "y": 550,
             "hp": 128,
             "state": "telegraph",
@@ -2249,6 +2345,7 @@
             "texture": "enemy-actions",
             "frame": 37,
             "flipX": true,
+            "originX": 0.5,
             "originY": 0.6748728197674418,
             "displayHeight": 305.77777777777777,
             "footOffset": 60,
@@ -2257,10 +2354,10 @@
         },
         {
           "state": "attack",
-          "path": "docs/screenshots/art-a3/tablet-kuura-attack.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/tablet-kuura-attack.png",
           "observed": {
             "id": "S19.enemy.3",
-            "x": 2234.075900000004,
+            "x": 2237.1576500000065,
             "y": 550,
             "hp": 128,
             "state": "attack",
@@ -2270,6 +2367,7 @@
             "texture": "enemy-actions",
             "frame": 38,
             "flipX": true,
+            "originX": 0.5,
             "originY": 0.5713571947674418,
             "displayHeight": 305.77777777777777,
             "footOffset": 60,
@@ -2278,10 +2376,10 @@
         },
         {
           "state": "recover",
-          "path": "docs/screenshots/art-a3/tablet-kuura-recover.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/tablet-kuura-recover.png",
           "observed": {
             "id": "S19.enemy.3",
-            "x": 2234.075900000004,
+            "x": 2237.1576500000065,
             "y": 550,
             "hp": 128,
             "state": "recover",
@@ -2291,6 +2389,7 @@
             "texture": "enemy-actions",
             "frame": 36,
             "flipX": true,
+            "originX": 0.5,
             "originY": 0.6787790697674418,
             "displayHeight": 305.77777777777777,
             "footOffset": 60,
@@ -2299,10 +2398,10 @@
         },
         {
           "state": "defeated",
-          "path": "docs/screenshots/art-a3/tablet-kuura-defeated.png",
+          "path": "docs/screenshots/m6-kite/final/art-a3/tablet-kuura-defeated.png",
           "observed": {
             "id": "S19.enemy.3",
-            "x": 2234.075900000004,
+            "x": 2237.1576500000065,
             "y": 550,
             "hp": 0,
             "state": "defeated",
@@ -2312,6 +2411,7 @@
             "texture": "enemy-actions",
             "frame": 39,
             "flipX": false,
+            "originX": 0.5,
             "originY": 0.5908884447674418,
             "displayHeight": 305.77777777777777,
             "footOffset": 60,
@@ -2319,7 +2419,7 @@
           }
         }
       ],
-      "rightPath": "docs/screenshots/art-a3/tablet-kuura-right.png",
+      "rightPath": "docs/screenshots/m6-kite/final/art-a3/tablet-kuura-right.png",
       "defeat": "magic",
       "reloadRewardsUnchanged": true
     }

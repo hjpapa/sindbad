@@ -1,0 +1,21 @@
+{
+  "key": "prop-lantern",
+  "legacy": "lantern",
+  "subject": "One upright friendly teal and brass lantern with a small loop handle, warm gold glass panes and a cream inner flame. Short broad foot, no light rays or glow outside silhouette.",
+  "status": "generated",
+  "prompt": "Create ONE original world interaction sprite for a bright child-friendly Korean adventure webtoon game. Attached project hero is STYLE reference ONLY: confident navy ink outlines, warm teal/gold palette, clean 2-3 flat cel shade levels, top-left lighting. Do not draw the hero. PORTRAIT 3:4 canvas requested 768x1024, true transparent RGBA background. Subject: One upright friendly teal and brass lantern with a small loop handle, warm gold glass panes and a cream inner flame. Short broad foot, no light rays or glow outside silhouette. Front-facing readable silhouette at only 65x87 game pixels. Entire object centered, occupies roughly x=10%-90%, y=14%-86%, with fully transparent padding on every side. Keep the complete silhouette and all parts inside canvas. No scene, floor, cast shadow, circular backing, characters, hands, extra objects, labels, letters, numbers, logos, signature, watermark, blood, wounds or scary faces. Original project design only. Use clean limited broad color shapes rather than tiny decorative detail.",
+  "nativePath": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-cef50d8f-fa8d-4540-b2bd-c7afdbbc1309.png",
+  "path": "art-source/webtoon/generated/props-m6/prop-lantern-01.png",
+  "sha256": "cc1e6d45b6fc63763be6f3a90145ba3482be3f8b13098f2efe86c01cdc33fa22",
+  "nativeSize": [
+    1086,
+    1448
+  ],
+  "alphaBounds": [
+    197,
+    53,
+    887,
+    1341
+  ],
+  "selected": true
+}

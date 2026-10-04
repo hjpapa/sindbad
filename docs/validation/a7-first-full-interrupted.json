@@ -1,0 +1,190 @@
+{
+  "date": "2026-10-03T19:50:50.227739+00:00",
+  "method": "observed Playwright console completions before manually interrupting; not a completed full report",
+  "scheduled": 44,
+  "completedPassed": 8,
+  "completedFailed": 1,
+  "notCompleted": 35,
+  "interrupted": true,
+  "commandExitCode": 1,
+  "rawPlaywrightReportProduced": false,
+  "failure": "new projectile artwork test on tablet; failure context shows S31 waiting after retreat; no new tablet orb capture",
+  "diagnosis": "inference from failure context and inspected movement/emitter timing: the strict first-300ms observer can miss the shot during retreat; game logic unchanged",
+  "sourceHashes": "docs/validation/a7-runtime-hashes.json",
+  "captures": [
+    {
+      "path": "docs/screenshots/art-a7/first-full-interrupted/mobile-phone-dialogue.png",
+      "original": "docs/screenshots/art-a7/mobile-phone-dialogue.png",
+      "capturedMtimeUTC": "2026-10-03T19:39:05.688784+00:00",
+      "sha256": "6331bb93c7c748c464a9c9e992804da4eed912e71dbc9e5b8fd77dc03645db99"
+    },
+    {
+      "path": "docs/screenshots/art-a7/first-full-interrupted/mobile-phone-start.png",
+      "original": "docs/screenshots/art-a7/mobile-phone-start.png",
+      "capturedMtimeUTC": "2026-10-03T19:38:54.286778+00:00",
+      "sha256": "320bb3e437b42f02d8c772af237b446c667c865ae92ae18e0cf4c2016be66478"
+    },
+    {
+      "path": "docs/screenshots/art-a7/first-full-interrupted/mobile-phone-swing.png",
+      "original": "docs/screenshots/art-a7/mobile-phone-swing.png",
+      "capturedMtimeUTC": "2026-10-03T19:39:00.121046+00:00",
+      "sha256": "d3166f0014f9461eab5f0e26569d66dcbe661496867903e461a2591db3f552e5"
+    },
+    {
+      "path": "docs/screenshots/art-a7/first-full-interrupted/mobile-tablet-dialogue.png",
+      "original": "docs/screenshots/art-a7/mobile-tablet-dialogue.png",
+      "capturedMtimeUTC": "2026-10-03T19:39:22.138578+00:00",
+      "sha256": "9ea970c6aeeb4455050448e7c52b5f78e7d7a49e260c87b5f9f15c27127d378a"
+    },
+    {
+      "path": "docs/screenshots/art-a7/first-full-interrupted/mobile-tablet-start.png",
+      "original": "docs/screenshots/art-a7/mobile-tablet-start.png",
+      "capturedMtimeUTC": "2026-10-03T19:39:10.379680+00:00",
+      "sha256": "911ee3497f45affd8ce67486e9a2876fdc27ab1a459f37ac011f8f833f10ef5d"
+    },
+    {
+      "path": "docs/screenshots/art-a7/first-full-interrupted/mobile-tablet-swing.png",
+      "original": "docs/screenshots/art-a7/mobile-tablet-swing.png",
+      "capturedMtimeUTC": "2026-10-03T19:39:16.218422+00:00",
+      "sha256": "c0647a89336e489b7350bbeb0ff79159cac95149123436903d46624e8ff0440f"
+    },
+    {
+      "path": "docs/screenshots/art-a7/first-full-interrupted/phone-projectile-kite-wind.png",
+      "original": "docs/screenshots/art-a7/phone-projectile-kite-wind.png",
+      "capturedMtimeUTC": "2026-10-03T19:46:02.314478+00:00",
+      "sha256": "bb8cb9483333ec2cf33e606cb2bd54bd1be107f77a3be929ba7c9ef19eadac29"
+    },
+    {
+      "path": "docs/screenshots/art-a7/first-full-interrupted/phone-projectile-kuura-orb.png",
+      "original": "docs/screenshots/art-a7/phone-projectile-kuura-orb.png",
+      "capturedMtimeUTC": "2026-10-03T19:46:08.081471+00:00",
+      "sha256": "0ca70893abd1c97558378738921765bd771c881c385d599833eebccc32edc719"
+    },
+    {
+      "path": "docs/screenshots/art-a7/first-full-interrupted/phone-projectile-siren-note.png",
+      "original": "docs/screenshots/art-a7/phone-projectile-siren-note.png",
+      "capturedMtimeUTC": "2026-10-03T19:45:47.040291+00:00",
+      "sha256": "00242eaccfd2ada394ffbd5c0c0436c182b61a0624e60a9eaf8ef1eec17852be"
+    },
+    {
+      "path": "docs/screenshots/art-a7/first-full-interrupted/phone-projectile-siren-wave-right.png",
+      "original": "docs/screenshots/art-a7/phone-projectile-siren-wave-right.png",
+      "capturedMtimeUTC": "2026-10-03T19:45:57.913143+00:00",
+      "sha256": "93921efec17d283a75afd8077097dab4ce8ddfa7046a5713936caf51e33a6a6b"
+    },
+    {
+      "path": "docs/screenshots/art-a7/first-full-interrupted/phone-projectile-siren-wave.png",
+      "original": "docs/screenshots/art-a7/phone-projectile-siren-wave.png",
+      "capturedMtimeUTC": "2026-10-03T19:45:43.060519+00:00",
+      "sha256": "2c370d534bb33ac023d3c00ac4d78e60d172e63765d9123c63c619e08f290e52"
+    },
+    {
+      "path": "docs/screenshots/art-a7/first-full-interrupted/phone-reduced-projectile-siren-wave.png",
+      "original": "docs/screenshots/art-a7/phone-reduced-projectile-siren-wave.png",
+      "capturedMtimeUTC": "2026-10-03T19:46:11.744762+00:00",
+      "sha256": "687c73eef27935f994d14a5dde4fac6f25e12dcd5f33b3e07363ab27f6440094"
+    },
+    {
+      "path": "docs/screenshots/art-a7/first-full-interrupted/phone-S01-fallback-defeat.png",
+      "original": "docs/screenshots/art-a7/phone-S01-fallback-defeat.png",
+      "capturedMtimeUTC": "2026-10-03T19:47:54.187106+00:00",
+      "sha256": "ce54a1acaae8186ca7832e0276f393f6df2656c3aee6679548c8ae3f0df61d67"
+    },
+    {
+      "path": "docs/screenshots/art-a7/first-full-interrupted/phone-S01-skeleton-defeat.png",
+      "original": "docs/screenshots/art-a7/phone-S01-skeleton-defeat.png",
+      "capturedMtimeUTC": "2026-10-03T19:47:09.179746+00:00",
+      "sha256": "dd6cfdc1627bdbddb450e923214ec907f89dafc9572b9d463668e1c5586c68ff"
+    },
+    {
+      "path": "docs/screenshots/art-a7/first-full-interrupted/phone-S02-missing-sheets.png",
+      "original": "docs/screenshots/art-a7/phone-S02-missing-sheets.png",
+      "capturedMtimeUTC": "2026-10-03T19:47:38.487391+00:00",
+      "sha256": "f258ac2d05b75ffc700026b614e2fa2c88aa88380a670f6072df93671d6db1df"
+    },
+    {
+      "path": "docs/screenshots/art-a7/first-full-interrupted/phone-S04-crab-defeat.png",
+      "original": "docs/screenshots/art-a7/phone-S04-crab-defeat.png",
+      "capturedMtimeUTC": "2026-10-03T19:47:18.379371+00:00",
+      "sha256": "5843a0183ac5a0fe394eeeb733cb573ab1cbf97a62ceee18bad367500318a5c1"
+    },
+    {
+      "path": "docs/screenshots/art-a7/first-full-interrupted/phone-S10-missing-sheets.png",
+      "original": "docs/screenshots/art-a7/phone-S10-missing-sheets.png",
+      "capturedMtimeUTC": "2026-10-03T19:47:43.963143+00:00",
+      "sha256": "c747870c92b0bfa05f1963b8436d08108a701feb7eb14b8ea1e1ba642cb8e7de"
+    },
+    {
+      "path": "docs/screenshots/art-a7/first-full-interrupted/phone-S11-bandit-defeat.png",
+      "original": "docs/screenshots/art-a7/phone-S11-bandit-defeat.png",
+      "capturedMtimeUTC": "2026-10-03T19:47:14.247780+00:00",
+      "sha256": "ef370abee9abe21fe2c3692689bfc4e34822d93684ce9b636657bc75bb5d51bd"
+    },
+    {
+      "path": "docs/screenshots/art-a7/first-full-interrupted/phone-S11-fallback-defeat.png",
+      "original": "docs/screenshots/art-a7/phone-S11-fallback-defeat.png",
+      "capturedMtimeUTC": "2026-10-03T19:47:59.350046+00:00",
+      "sha256": "a6111e6ef16d8d9264dfae3032d3d92dad0ed8c2e65c9b99aa9f0034c7622255"
+    },
+    {
+      "path": "docs/screenshots/art-a7/first-full-interrupted/phone-S31-missing-sheets.png",
+      "original": "docs/screenshots/art-a7/phone-S31-missing-sheets.png",
+      "capturedMtimeUTC": "2026-10-03T19:47:49.014961+00:00",
+      "sha256": "6d9c10068c0c2b49e8f0d036256e9357f9f81134f7e775168bdd00cc40e833b1"
+    },
+    {
+      "path": "docs/screenshots/art-a7/first-full-interrupted/tablet-projectile-kite-wind.png",
+      "original": "docs/screenshots/art-a7/tablet-projectile-kite-wind.png",
+      "capturedMtimeUTC": "2026-10-03T19:46:40.124095+00:00",
+      "sha256": "937cde3e9c7c861bf8110602b2ee16d38e27d18fa773a1421a48fac1a5e3ab4e"
+    },
+    {
+      "path": "docs/screenshots/art-a7/first-full-interrupted/tablet-projectile-kuura-orb.png",
+      "original": "docs/screenshots/art-a7/tablet-projectile-kuura-orb.png",
+      "capturedMtimeUTC": "2026-10-03T19:38:55.032526+00:00",
+      "sha256": "908b3b61cab003b6c289194067b43997b770344bf32876caa9e18ee706298261"
+    },
+    {
+      "path": "docs/screenshots/art-a7/first-full-interrupted/tablet-projectile-siren-note.png",
+      "original": "docs/screenshots/art-a7/tablet-projectile-siren-note.png",
+      "capturedMtimeUTC": "2026-10-03T19:46:24.644974+00:00",
+      "sha256": "9d408cf6447edacd0b0102aaacbd7d5e228e2636a210e94a25340fc0cb7f1f29"
+    },
+    {
+      "path": "docs/screenshots/art-a7/first-full-interrupted/tablet-projectile-siren-wave-right.png",
+      "original": "docs/screenshots/art-a7/tablet-projectile-siren-wave-right.png",
+      "capturedMtimeUTC": "2026-10-03T19:46:35.577427+00:00",
+      "sha256": "de5e8d6e85a320d3ee115db10d2ba57688b4ca114db3ab1cf53d5f7f4c0f43e2"
+    },
+    {
+      "path": "docs/screenshots/art-a7/first-full-interrupted/tablet-projectile-siren-wave.png",
+      "original": "docs/screenshots/art-a7/tablet-projectile-siren-wave.png",
+      "capturedMtimeUTC": "2026-10-03T19:46:20.696463+00:00",
+      "sha256": "ddefe18753b59477f40f3b8e9201ce61ae910246ffbbe62ba9e4b4efc6a133a1"
+    },
+    {
+      "path": "docs/screenshots/art-a7/first-full-interrupted/tablet-reduced-projectile-siren-wave.png",
+      "original": "docs/screenshots/art-a7/tablet-reduced-projectile-siren-wave.png",
+      "capturedMtimeUTC": "2026-10-03T19:38:58.607329+00:00",
+      "sha256": "af2ee383f280849ae10f25469748a74d649fb87310e5e72bb81daa6ec22a62a3"
+    },
+    {
+      "path": "docs/screenshots/art-a7/first-full-interrupted/tablet-S01-skeleton-defeat.png",
+      "original": "docs/screenshots/art-a7/tablet-S01-skeleton-defeat.png",
+      "capturedMtimeUTC": "2026-10-03T19:47:24.537711+00:00",
+      "sha256": "eb4e92704640579876dec3b14e84d6bbb1f7e321bea9c10a511583bb24fcfef3"
+    },
+    {
+      "path": "docs/screenshots/art-a7/first-full-interrupted/tablet-S04-crab-defeat.png",
+      "original": "docs/screenshots/art-a7/tablet-S04-crab-defeat.png",
+      "capturedMtimeUTC": "2026-10-03T19:47:33.806052+00:00",
+      "sha256": "87cb7f7f3eec67971e5228f8dadcdce19d6e97ff9277592ae5d4586632c2200d"
+    },
+    {
+      "path": "docs/screenshots/art-a7/first-full-interrupted/tablet-S11-bandit-defeat.png",
+      "original": "docs/screenshots/art-a7/tablet-S11-bandit-defeat.png",
+      "capturedMtimeUTC": "2026-10-03T19:47:29.583318+00:00",
+      "sha256": "e1664acd0f41c23e3107817372f7146c560de56a3f25aa2d7a2f45862f76e31a"
+    }
+  ]
+}

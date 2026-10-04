@@ -9,7 +9,7 @@ from PIL import Image
 
 root = Path(__file__).resolve().parents[1]
 files = []
-for path in sorted([*(root / 'art-source' / 'webtoon').glob('*.webp'), *(root / 'public' / 'assets' / 'webtoon').glob('*.webp')]):
+for path in sorted([*(root / 'art-source' / 'webtoon').glob('*.webp'), *(root / 'public' / 'assets' / 'webtoon').glob('*.webp'), *(root / 'public' / 'assets' / 'webtoon').glob('ui-*.png')]):
     with Image.open(path) as illustration:
         illustration.load()
         files.append({
@@ -22,7 +22,7 @@ for path in sorted([*(root / 'art-source' / 'webtoon').glob('*.webp'), *(root / 
             'role': 'original' if 'art-source' in path.parts else 'runtime',
             'artStatus': 'ART_DRAFT',
         })
-assert len(files) == 76, f'Expected 38 originals + 38 runtime copies, got {len(files)}'
+assert len(files) == 170, f'Expected 85 originals + 85 runtime copies, got {len(files)}'
 face_measurements = json.loads((root / 'art-source/webtoon/npc-faces.measurements.json').read_text(encoding='utf-8'))
 assert len(face_measurements) == 9
 for measurement in face_measurements:
@@ -88,7 +88,7 @@ output = root / 'docs' / 'validation' / 'illustrations.json'
 output.parent.mkdir(parents=True, exist_ok=True)
 output.write_text(json.dumps({
     'date': datetime.now(timezone.utc).isoformat(),
-    'method': 'decode real WebP files with Pillow, record dimensions and SHA256; not animation or visual approval',
+    'method': 'decode real WebP illustrations and A8 PNG runtime icons with Pillow, record dimensions and SHA256; not animation or visual approval',
     'files': files,
 }, ensure_ascii=False, indent=2), encoding='utf-8')
 print(f'PASS: decoded {len(files)} real illustrations; {sum(item["bytes"] for item in files):,} bytes.')
@@ -98,3 +98,8 @@ import subprocess
 import sys
 subprocess.run([sys.executable,str(root/'scripts/audit-terrain.py')],check=True)
 subprocess.run([sys.executable,str(root/'scripts/audit-weapons.py')],check=True)
+subprocess.run([sys.executable,str(root/'scripts/audit-effects.py')],check=True)
+subprocess.run([sys.executable,str(root/'scripts/audit-touch-icons.py')],check=True)
+
+subprocess.run([sys.executable,str(root/'scripts/audit-world-props.py')],check=True)
+subprocess.run([sys.executable,str(root/'scripts/audit-kite-actions.py')],check=True)

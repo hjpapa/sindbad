@@ -1,0 +1,527 @@
+{
+  "screens": [
+    {
+      "path": "docs/screenshots/m6-kite/final/m6-kite/campaign-S05-route.png",
+      "width": 1280,
+      "height": 720,
+      "sha256": "7f3831c16eca2e5d9fc32f6a7be86a732d6c851552c63f91f8403cbd1d59c173"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/final/m6-kite/campaign-S10-route.png",
+      "width": 1280,
+      "height": 720,
+      "sha256": "c0fe59591979e78be54928fb40057fb8cc4b60e00de2f941197faa142b8f9fc2"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/final/m6-kite/campaign-S15-route.png",
+      "width": 1280,
+      "height": 720,
+      "sha256": "a94bdf3655fa91689291582db98a064f8263a057a12bfc6cb22eca738c37b0ac"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/final/m6-kite/campaign-S19-route.png",
+      "width": 1280,
+      "height": 720,
+      "sha256": "61e072eccc6a5231c7e6a5146e8640165482e25ca991228de9fb0e95c58ce479"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/final/m6-kite/campaign-S25-route.png",
+      "width": 1280,
+      "height": 720,
+      "sha256": "6c0ede75212da952ca37fb5017986a0772911215372a6abf15f736bfa39f3989"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/final/m6-kite/campaign-S29-route.png",
+      "width": 1280,
+      "height": 720,
+      "sha256": "958cddcd45e7bf32753232362b91c5f6fd81a9e80c716287288d5d2a1f668a07"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/final/m6-kite/campaign-S36-route.png",
+      "width": 1280,
+      "height": 720,
+      "sha256": "8e9ecafb5395b9ba6fdeea2cc62ff8670ffdfb2187304b09e972ab286dde7310"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/final/m6-kite/mobile-phone-dialogue.png",
+      "width": 2532,
+      "height": 1170,
+      "sha256": "6331bb93c7c748c464a9c9e992804da4eed912e71dbc9e5b8fd77dc03645db99"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/final/m6-kite/mobile-phone-start.png",
+      "width": 2532,
+      "height": 1170,
+      "sha256": "ae3b984cb6057ea3ca8a6c27b5ab7ff471809ebb321fee0ad8143fd48efe3e24"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/final/m6-kite/mobile-phone-swing.png",
+      "width": 2532,
+      "height": 1170,
+      "sha256": "a1f46a7698dd257bb043cfa50ac82aa8bf7619313ca28280557d041b5b0c78b4"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/final/m6-kite/mobile-tablet-dialogue.png",
+      "width": 2360,
+      "height": 1640,
+      "sha256": "158bc50090a6da3c41a2b113f81944673d56994cc4dc039109f875a228106e3a"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/final/m6-kite/mobile-tablet-start.png",
+      "width": 2360,
+      "height": 1640,
+      "sha256": "0650c09bc4b13f122f35530e0597193f75f21cab0cc038348fed10898c30e174"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/final/m6-kite/mobile-tablet-swing.png",
+      "width": 2360,
+      "height": 1640,
+      "sha256": "b9cc208f75aabfd5d98bf1c3ceaaa5cc7f782f0a7d4372e68835b506532b55ab"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/final/m6-kite/phone-fallback-S10-attack.png",
+      "width": 844,
+      "height": 390,
+      "sha256": "da36f1bd75c22b985ea6284b3ec774a94f7ec3d75a91bf8f1f88658b318b4e75"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/final/m6-kite/phone-fallback-S10-defeated.png",
+      "width": 844,
+      "height": 390,
+      "sha256": "81712ceeac963181460939a97a7b6de9cc8210b463a1e867040a3cc6360f5925"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/final/m6-kite/phone-fallback-S10-idle.png",
+      "width": 844,
+      "height": 390,
+      "sha256": "a1a0a20c18c7b24ef88977cf469215c177dba89e61f859e7c37a780a7e6bb7a2"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/final/m6-kite/phone-fallback-S10-recover.png",
+      "width": 844,
+      "height": 390,
+      "sha256": "4e0a373071cda4418c895eee4ccf9775de5a7a7ba642bec28668ccf9a751d0f5"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/final/m6-kite/phone-fallback-S10-right.png",
+      "width": 844,
+      "height": 390,
+      "sha256": "e35f3056046bf45d72050fad3437c5c06b74163d6e18f3908e2a03aad4d29161"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/final/m6-kite/phone-fallback-S10-telegraph.png",
+      "width": 844,
+      "height": 390,
+      "sha256": "3511b57c17402f8c7f778041d6460e0d9f61b74bbafa1ab011587ef49a9b5c90"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/final/m6-kite/phone-fallback-S33-attack.png",
+      "width": 844,
+      "height": 390,
+      "sha256": "078733e73e32ea79b72278e0f6577419643408c8afda3f459f06aa0b1f69d298"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/final/m6-kite/phone-fallback-S33-defeated.png",
+      "width": 844,
+      "height": 390,
+      "sha256": "9fb4002410ccf63fba0f3fe26524719db8cdc1b6472aa0e574864da846a886cf"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/final/m6-kite/phone-fallback-S33-idle.png",
+      "width": 844,
+      "height": 390,
+      "sha256": "9cf27fd35b014c97284df482f2f19730a124460c15687da295d2c147412b653d"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/final/m6-kite/phone-fallback-S33-recover.png",
+      "width": 844,
+      "height": 390,
+      "sha256": "b5a1c86b92a612e7cac793b063b7abd36d40b344ff19be5992c3fcfa18493491"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/final/m6-kite/phone-fallback-S33-right.png",
+      "width": 844,
+      "height": 390,
+      "sha256": "c29e3250cb7b53735efab916cbe1e6750ac69c46b862526bddb20910206ed5d2"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/final/m6-kite/phone-fallback-S33-telegraph.png",
+      "width": 844,
+      "height": 390,
+      "sha256": "991a43595367e60b277ed33362c468ffd2702531c8f6219ae8faaa14463dcd57"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/final/m6-kite/phone-normal-S10-attack.png",
+      "width": 844,
+      "height": 390,
+      "sha256": "e78395a67673645636046c5634f0f2374c25fa3bd8db4144e70c771175440897"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/final/m6-kite/phone-normal-S10-defeated.png",
+      "width": 844,
+      "height": 390,
+      "sha256": "5aef09d26fcb74d26d4a86cb5a3a736ba6cb13c4440d147def92719962b69766"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/final/m6-kite/phone-normal-S10-idle.png",
+      "width": 844,
+      "height": 390,
+      "sha256": "08a593ebcbaf3d457408fbe7b78cd51add116a9ca807e39c732661b5af4064cd"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/final/m6-kite/phone-normal-S10-recover.png",
+      "width": 844,
+      "height": 390,
+      "sha256": "a55111c4c02ac58b25eb427285ec8e34fc420763b664810422b6ac2075f661f8"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/final/m6-kite/phone-normal-S10-right.png",
+      "width": 844,
+      "height": 390,
+      "sha256": "1ca501d66ffc1201c8df4c256ab32acc8dc8b11610abde36ced4938df9861d40"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/final/m6-kite/phone-normal-S10-telegraph.png",
+      "width": 844,
+      "height": 390,
+      "sha256": "725e9239435f916fc5eee16707190c043935226eb2d44af920257765477a1962"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/final/m6-kite/phone-normal-S33-attack.png",
+      "width": 844,
+      "height": 390,
+      "sha256": "341f0fdc830ccae5205a504c930a9e91ed03e8ced097d312a8e5b9592acbfb60"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/final/m6-kite/phone-normal-S33-defeated.png",
+      "width": 844,
+      "height": 390,
+      "sha256": "df56d233c4512769a5185ab0578644f879f2d0f7e64a070fa143596141cf24c5"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/final/m6-kite/phone-normal-S33-idle.png",
+      "width": 844,
+      "height": 390,
+      "sha256": "03215467bd80b7ced18269085dbc49d8aee0996ad9b6a466b8c5f599fd9c496d"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/final/m6-kite/phone-normal-S33-recover.png",
+      "width": 844,
+      "height": 390,
+      "sha256": "08683c7ad76d59a0403446a785e892d7219ce19a7ff2513db236337e19f46ff6"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/final/m6-kite/phone-normal-S33-right.png",
+      "width": 844,
+      "height": 390,
+      "sha256": "03e9047db2399ead0f34c5d468a6354d22452f61505decbcd571103c11c6e673"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/final/m6-kite/phone-normal-S33-telegraph.png",
+      "width": 844,
+      "height": 390,
+      "sha256": "02c6cc8d4c2290cd997291c8fe6e21245d0556313d1cfabad4e39144f3741668"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/final/m6-kite/tablet-fallback-S10-attack.png",
+      "width": 1180,
+      "height": 820,
+      "sha256": "0ccb775b6b1ccfab93683e6a5ff770489588a418cb80a3dd0b940271e9b842ff"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/final/m6-kite/tablet-fallback-S10-defeated.png",
+      "width": 1180,
+      "height": 820,
+      "sha256": "6daa4159c0de55e8d0b6e71520a0075a2ae52dd6bc749153ec70ce80db8d42e1"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/final/m6-kite/tablet-fallback-S10-idle.png",
+      "width": 1180,
+      "height": 820,
+      "sha256": "be64e62b04816137a6b2581d22080bfe8827a1bba1784a6b9fa2a74c58fecd2f"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/final/m6-kite/tablet-fallback-S10-recover.png",
+      "width": 1180,
+      "height": 820,
+      "sha256": "e7e2bd8ff41dfa2a4cccfac6a64f00def6eea9a0344890fba64220388d83d17f"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/final/m6-kite/tablet-fallback-S10-right.png",
+      "width": 1180,
+      "height": 820,
+      "sha256": "fbd7a79179e2b53f377af80a1817e6b876bc13213e743f4fac86f21b5b0cf42a"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/final/m6-kite/tablet-fallback-S10-telegraph.png",
+      "width": 1180,
+      "height": 820,
+      "sha256": "a2f8e900c47fa51b602ebc5e3074e252b2ffa248f517adb78d3417c077e13e82"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/final/m6-kite/tablet-fallback-S33-attack.png",
+      "width": 1180,
+      "height": 820,
+      "sha256": "6960e98519286d9d3ac670f26a8977edd29949878db409becfcbe41722c69f65"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/final/m6-kite/tablet-fallback-S33-defeated.png",
+      "width": 1180,
+      "height": 820,
+      "sha256": "72c8fb77602f142923176778988c568ad827b105b93af4a098bb5f2561a0e4dd"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/final/m6-kite/tablet-fallback-S33-idle.png",
+      "width": 1180,
+      "height": 820,
+      "sha256": "15260ab9656c91ac7335d6e55fbe61f91235d098982f78ad3e810bb0791e3a12"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/final/m6-kite/tablet-fallback-S33-recover.png",
+      "width": 1180,
+      "height": 820,
+      "sha256": "a823774a232492e8dce0a2a5bf95752aa3d9f99995c8fc84a2324e4195df3036"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/final/m6-kite/tablet-fallback-S33-right.png",
+      "width": 1180,
+      "height": 820,
+      "sha256": "5b8fe6bb3560c57fd9f2a993a6ba6f09f178b93e7d49410265009e9fb600c23a"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/final/m6-kite/tablet-fallback-S33-telegraph.png",
+      "width": 1180,
+      "height": 820,
+      "sha256": "6ae6b3bc2e1134d70a775fa0976125239e97d5feecf6e3035150512a515a1a63"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/final/m6-kite/tablet-normal-S10-attack.png",
+      "width": 1180,
+      "height": 820,
+      "sha256": "d6da0ae84f85c45e3ee18655b3f54c8e49d949fa64e58551fefd1c0bd16e8a14"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/final/m6-kite/tablet-normal-S10-defeated.png",
+      "width": 1180,
+      "height": 820,
+      "sha256": "c4a75515fbafb07654d668ae82d0aebae9c2c985a6e2b3d10b5d39db061c2302"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/final/m6-kite/tablet-normal-S10-idle.png",
+      "width": 1180,
+      "height": 820,
+      "sha256": "0f30b399680aec5d02970f7ee1026c8edddc2edacd83cf37c4502601e82a5291"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/final/m6-kite/tablet-normal-S10-recover.png",
+      "width": 1180,
+      "height": 820,
+      "sha256": "56d1673840e57f179655a086e7232a9f2e7b689d4ed1a82d2ec526570f7609e6"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/final/m6-kite/tablet-normal-S10-right.png",
+      "width": 1180,
+      "height": 820,
+      "sha256": "64c3012d3016f2d77ffc84149b2cc8e08923f6073d9818fed4775dd5716a079c"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/final/m6-kite/tablet-normal-S10-telegraph.png",
+      "width": 1180,
+      "height": 820,
+      "sha256": "a9a40788ed4be6b3c94c08c6de6d56f5ce4609e3cbd6e758a55c1cdb697976bf"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/final/m6-kite/tablet-normal-S33-attack.png",
+      "width": 1180,
+      "height": 820,
+      "sha256": "eae9264971ed739e1882544a7563e7a94513d66fb21f1b477b91043a94996782"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/final/m6-kite/tablet-normal-S33-defeated.png",
+      "width": 1180,
+      "height": 820,
+      "sha256": "11591d1d57bbd7d00b6e0ee4eb5ffb65901ccc7267f904a8a7c3ddcf16851b0c"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/final/m6-kite/tablet-normal-S33-idle.png",
+      "width": 1180,
+      "height": 820,
+      "sha256": "3677f45568a7c90d29700f6bca2ebc7e48b9c1dc353fdc5318101e98e61e18ad"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/final/m6-kite/tablet-normal-S33-recover.png",
+      "width": 1180,
+      "height": 820,
+      "sha256": "88c2388ce60a9b3faace1c44178f52dacebfaec8889312576e787b2ac0d03e59"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/final/m6-kite/tablet-normal-S33-right.png",
+      "width": 1180,
+      "height": 820,
+      "sha256": "0bb947fd50ba1d3376676613b9df78924163411e3d29c8fdf30bc2a4b643b642"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/final/m6-kite/tablet-normal-S33-telegraph.png",
+      "width": 1180,
+      "height": 820,
+      "sha256": "87a7f89963a977162d9345566dd3228afe64056636fce8790453255b3a90974b"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/final/m6-kite/touch-phone-after-walk-slide-air.png",
+      "width": 2532,
+      "height": 1170,
+      "sha256": "279200fe1786cae093edae528e6c0760d42a3bf529756c39ddd7e131786232ca"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/final/m6-kite/touch-phone-after-walk-slide-before.png",
+      "width": 2532,
+      "height": 1170,
+      "sha256": "8c973291989fc8c5b2f04cf115352f4fbab5a06b6095667c2d93f587ac3af545"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/final/m6-kite/touch-phone-open-space-air.png",
+      "width": 2532,
+      "height": 1170,
+      "sha256": "096c2c904170c9f88079b9db9c8c51f262048ff069279576d866c2c188da3de9"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/final/m6-kite/touch-phone-open-space-before.png",
+      "width": 2532,
+      "height": 1170,
+      "sha256": "ae3b984cb6057ea3ca8a6c27b5ab7ff471809ebb321fee0ad8143fd48efe3e24"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/final/m6-kite/touch-tablet-after-walk-slide-air.png",
+      "width": 2360,
+      "height": 1640,
+      "sha256": "da40473e40e3e81f7479c174e7944901f97e24dda9f12143369ba478713d2c85"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/final/m6-kite/touch-tablet-after-walk-slide-before.png",
+      "width": 2360,
+      "height": 1640,
+      "sha256": "a9de99519475f5f7899831edd2bb8a183b3f072fd90fa7a291c290878dec6694"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/final/m6-kite/touch-tablet-open-space-air.png",
+      "width": 2360,
+      "height": 1640,
+      "sha256": "8aabd1a726ec66ae4a7d3226663772e99142a8932ed36cfe9098edb58ed989e0"
+    },
+    {
+      "path": "docs/screenshots/m6-kite/final/m6-kite/touch-tablet-open-space-before.png",
+      "width": 2360,
+      "height": 1640,
+      "sha256": "0650c09bc4b13f122f35530e0597193f75f21cab0cc038348fed10898c30e174"
+    }
+  ],
+  "copies": [
+    {
+      "source": "docs/screenshots/m6-kite/mobile2/mobile-phone-dialogue.png",
+      "target": "docs/screenshots/m6-kite/final/m6-kite/mobile-phone-dialogue.png",
+      "byteIdentical": true
+    },
+    {
+      "source": "docs/screenshots/m6-kite/mobile2/mobile-phone-start.png",
+      "target": "docs/screenshots/m6-kite/final/m6-kite/mobile-phone-start.png",
+      "byteIdentical": true
+    },
+    {
+      "source": "docs/screenshots/m6-kite/mobile2/mobile-phone-swing.png",
+      "target": "docs/screenshots/m6-kite/final/m6-kite/mobile-phone-swing.png",
+      "byteIdentical": true
+    },
+    {
+      "source": "docs/screenshots/m6-kite/mobile2/mobile-tablet-dialogue.png",
+      "target": "docs/screenshots/m6-kite/final/m6-kite/mobile-tablet-dialogue.png",
+      "byteIdentical": true
+    },
+    {
+      "source": "docs/screenshots/m6-kite/mobile2/mobile-tablet-start.png",
+      "target": "docs/screenshots/m6-kite/final/m6-kite/mobile-tablet-start.png",
+      "byteIdentical": true
+    },
+    {
+      "source": "docs/screenshots/m6-kite/mobile2/mobile-tablet-swing.png",
+      "target": "docs/screenshots/m6-kite/final/m6-kite/mobile-tablet-swing.png",
+      "byteIdentical": true
+    },
+    {
+      "source": "docs/screenshots/m6-kite/touch-diagnostic/phone-after-walk-slide-air.png",
+      "target": "docs/screenshots/m6-kite/final/m6-kite/touch-phone-after-walk-slide-air.png",
+      "byteIdentical": true
+    },
+    {
+      "source": "docs/screenshots/m6-kite/touch-diagnostic/phone-after-walk-slide-before.png",
+      "target": "docs/screenshots/m6-kite/final/m6-kite/touch-phone-after-walk-slide-before.png",
+      "byteIdentical": true
+    },
+    {
+      "source": "docs/screenshots/m6-kite/touch-diagnostic/phone-open-space-air.png",
+      "target": "docs/screenshots/m6-kite/final/m6-kite/touch-phone-open-space-air.png",
+      "byteIdentical": true
+    },
+    {
+      "source": "docs/screenshots/m6-kite/touch-diagnostic/phone-open-space-before.png",
+      "target": "docs/screenshots/m6-kite/final/m6-kite/touch-phone-open-space-before.png",
+      "byteIdentical": true
+    },
+    {
+      "source": "docs/screenshots/m6-kite/touch-diagnostic/tablet-after-walk-slide-air.png",
+      "target": "docs/screenshots/m6-kite/final/m6-kite/touch-tablet-after-walk-slide-air.png",
+      "byteIdentical": true
+    },
+    {
+      "source": "docs/screenshots/m6-kite/touch-diagnostic/tablet-after-walk-slide-before.png",
+      "target": "docs/screenshots/m6-kite/final/m6-kite/touch-tablet-after-walk-slide-before.png",
+      "byteIdentical": true
+    },
+    {
+      "source": "docs/screenshots/m6-kite/touch-diagnostic/tablet-open-space-air.png",
+      "target": "docs/screenshots/m6-kite/final/m6-kite/touch-tablet-open-space-air.png",
+      "byteIdentical": true
+    },
+    {
+      "source": "docs/screenshots/m6-kite/touch-diagnostic/tablet-open-space-before.png",
+      "target": "docs/screenshots/m6-kite/final/m6-kite/touch-tablet-open-space-before.png",
+      "byteIdentical": true
+    },
+    {
+      "source": "test-results/complete-journey-new-game--139b0-ntrols-and-no-injected-save/S05-route.png",
+      "target": "docs/screenshots/m6-kite/final/m6-kite/campaign-S05-route.png",
+      "byteIdentical": true
+    },
+    {
+      "source": "test-results/complete-journey-new-game--139b0-ntrols-and-no-injected-save/S10-route.png",
+      "target": "docs/screenshots/m6-kite/final/m6-kite/campaign-S10-route.png",
+      "byteIdentical": true
+    },
+    {
+      "source": "test-results/complete-journey-new-game--139b0-ntrols-and-no-injected-save/S15-route.png",
+      "target": "docs/screenshots/m6-kite/final/m6-kite/campaign-S15-route.png",
+      "byteIdentical": true
+    },
+    {
+      "source": "test-results/complete-journey-new-game--139b0-ntrols-and-no-injected-save/S19-route.png",
+      "target": "docs/screenshots/m6-kite/final/m6-kite/campaign-S19-route.png",
+      "byteIdentical": true
+    },
+    {
+      "source": "test-results/complete-journey-new-game--139b0-ntrols-and-no-injected-save/S25-route.png",
+      "target": "docs/screenshots/m6-kite/final/m6-kite/campaign-S25-route.png",
+      "byteIdentical": true
+    },
+    {
+      "source": "test-results/complete-journey-new-game--139b0-ntrols-and-no-injected-save/S29-route.png",
+      "target": "docs/screenshots/m6-kite/final/m6-kite/campaign-S29-route.png",
+      "byteIdentical": true
+    },
+    {
+      "source": "test-results/complete-journey-new-game--139b0-ntrols-and-no-injected-save/S36-route.png",
+      "target": "docs/screenshots/m6-kite/final/m6-kite/campaign-S36-route.png",
+      "byteIdentical": true
+    }
+  ],
+  "count": 69,
+  "artStatus": "ART_DRAFT"
+}

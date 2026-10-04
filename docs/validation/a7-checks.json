@@ -1,0 +1,167 @@
+{
+  "date": "2026-10-03T20:34:01.861398+00:00",
+  "artStatus": "ART_DRAFT",
+  "method": "observed command exit codes and actual report data; this summary is not a substitute for the raw E2E reports",
+  "checks": [
+    {
+      "command": "python scripts/pack-effects.py",
+      "result": "passed",
+      "exitCode": 0,
+      "detail": "7 native PNG SHA256 values preserved; exact lossless RGBA canonical sources"
+    },
+    {
+      "command": "python scripts/optimize-webtoon.py",
+      "result": "passed",
+      "exitCode": 0,
+      "detail": "45 webtoon sheets/images, 34 terrain images, 7 weapon rasters; new A7 runtime 93582 bytes"
+    },
+    {
+      "command": "python scripts/audit-webtoon.py",
+      "result": "passed",
+      "exitCode": 0,
+      "detail": "90 webtoon, 68 terrain and 14 weapon files; included effects audit: 14 source/runtime decodes, 34 frames per role, transparent visible boundaries",
+      "report": "docs/validation/effects.json"
+    },
+    {
+      "command": "npm run typecheck",
+      "result": "passed",
+      "exitCode": 0,
+      "detail": "rerun after final E2E observation correction"
+    },
+    {
+      "command": "npm run lint",
+      "result": "passed",
+      "exitCode": 0,
+      "detail": "rerun after final E2E observation correction"
+    },
+    {
+      "command": "npm run test",
+      "result": "passed",
+      "exitCode": 0,
+      "files": 18,
+      "tests": 101
+    },
+    {
+      "command": "npm run validate:content",
+      "result": "passed",
+      "exitCode": 0,
+      "detail": "36 stages / 24 original child scenes / 7 weapons / 7 treasures / 8 golden hearts"
+    },
+    {
+      "command": "npm run build",
+      "result": "passed",
+      "exitCode": 0,
+      "detail": "existing Phaser chunk-size warning remains"
+    },
+    {
+      "command": "npx tsx scripts/check-art-budget.ts",
+      "result": "passed",
+      "exitCode": 0,
+      "totalBytes": 2880137,
+      "budgetBytes": 8000000,
+      "report": "docs/validation/art-budget.json",
+      "limitation": "raw production files plus S01 assets; excludes HTTP overhead and device/network performance"
+    },
+    {
+      "command": "npm run dev -- --host 127.0.0.1 --port 5175",
+      "result": "ran",
+      "detail": "owned Vite server started for mobile verification, then stopped with Ctrl+C after verification"
+    },
+    {
+      "command": "node scripts/mobile-check.mjs http://127.0.0.1:5175",
+      "result": "passed",
+      "exitCode": 0,
+      "report": "docs/validation/a7-mobile.json",
+      "limitation": "both devices: runJump dx=0, dy=-110 at crate; jump was verified, simultaneous forward displacement was not"
+    },
+    {
+      "command": "npm run test:e2e -- --reporter=list,json,html",
+      "result": "passed",
+      "exitCode": 0,
+      "tests": 44,
+      "stats": {
+        "startTime": "2026-10-03T19:54:16.001Z",
+        "duration": 2304388.826,
+        "expected": 44,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      },
+      "report": "docs/validation/a7-e2e-full.json",
+      "html": "docs/validation/a7-final-full-report/index.html"
+    },
+    {
+      "command": "git diff --check",
+      "result": "passed",
+      "exitCode": 0,
+      "detail": "CRLF conversion warnings only; no whitespace errors"
+    },
+    {
+      "command": "python scripts/snapshot-art-validation.py finish a7-final",
+      "result": "passed",
+      "exitCode": 0,
+      "files": 684,
+      "unchanged": true,
+      "report": "docs/validation/a7-final-runtime-hashes.json"
+    }
+  ],
+  "earlierRuns": [
+    {
+      "report": "docs/validation/a7-first-target.json",
+      "result": "3 passed",
+      "exitCode": 0
+    },
+    {
+      "report": "docs/validation/a7-first-full-interrupted.json",
+      "result": "8 completed passes, 1 failure, 35 not completed; interrupted; no raw full Playwright JSON produced",
+      "exitCode": 1,
+      "diagnosis": "inference from failure context and projectile/caster timing; test-only change waits actual Kuura position and fresh telegraph"
+    },
+    {
+      "report": "docs/validation/a7-second-target.json",
+      "result": "3 passed after observation correction",
+      "exitCode": 0
+    }
+  ],
+  "freshCampaign": {
+    "stages": 36,
+    "elapsedSeconds": 805,
+    "weapons": 7,
+    "treasures": 7,
+    "ending": true,
+    "errors": [],
+    "saveInjection": false,
+    "S16S32ReloadRewardIdsUnchanged": true,
+    "S01RevisitPassed": true,
+    "report": "docs/validation/a7-complete-journey.json",
+    "screenshots": "docs/validation/a7-campaign-screenshots.json"
+  },
+  "screenshots": "docs/validation/a7-final-screenshots.json",
+  "notVerified": [
+    {
+      "check": "physical phones/tablets and iOS Safari",
+      "reason": "verification used Windows Edge with emulated viewports/touch; no physical or iOS session"
+    },
+    {
+      "check": "child usability",
+      "reason": "no child play session"
+    },
+    {
+      "check": "long-term temperature/FPS and real speaker mix",
+      "reason": "no sustained device benchmark or physical speaker session"
+    },
+    {
+      "check": "final art/animation approval",
+      "reason": "user visual approval has not been given; ART_DRAFT retained"
+    }
+  ],
+  "committed": false,
+  "pushed": false,
+  "deployed": false,
+  "nextTask": "A8 touch UI icons",
+  "preservedPreviousEvidence": {
+    "files": 380,
+    "hashesRechecked": true,
+    "manifest": "docs/validation/a7-before/manifest.json"
+  }
+}

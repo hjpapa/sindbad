@@ -1,0 +1,314 @@
+{
+  "config": {
+    "configFile": "C:\\code\\code10(sindbad)\\playwright.config.ts",
+    "rootDir": "C:/code/code10(sindbad)/tests/e2e",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": "C:\\code\\code10(sindbad)\\tests\\e2e\\server.setup.ts",
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ],
+      [
+        "html"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "C:/code/code10(sindbad)/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "C:/code/code10(sindbad)/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 240000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.55.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "enemy-actions.spec.ts",
+      "file": "enemy-actions.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "40 enemy poses, mirrored direction, safe defeat and save reload on phone/tablet",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 720000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 131125,
+                  "error": {
+                    "message": "Error: UNKNOWN: unknown error, open 'C:\\code\\code10(sindbad)\\docs\\screenshots\\art-a3\\tablet-bandit-defeated.png'",
+                    "stack": "Error: UNKNOWN: unknown error, open 'C:\\code\\code10(sindbad)\\docs\\screenshots\\art-a3\\tablet-bandit-defeated.png'\n    at capture (C:\\code\\code10(sindbad)\\tests\\e2e\\enemy-actions.spec.ts:54:17)\n    at C:\\code\\code10(sindbad)\\tests\\e2e\\enemy-actions.spec.ts:71:13",
+                    "location": {
+                      "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\enemy-actions.spec.ts",
+                      "column": 17,
+                      "line": 54
+                    },
+                    "snippet": "  52 |                 expect(feet).toBeCloseTo(observed.footOffset,5);\n  53 |                 const path=`docs/screenshots/art-a3/${device}-${key}-${state}.png`;\n> 54 |                 await page.screenshot({path});captures.push({state,path,observed});\n     |                 ^\n  55 |             };\n  56 |             // S01's optional crate top is 126px above the enemy centre; the\n  57 |             // inspection can stand there before stepping down on its right."
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\enemy-actions.spec.ts",
+                        "column": 17,
+                        "line": 54
+                      },
+                      "message": "Error: UNKNOWN: unknown error, open 'C:\\code\\code10(sindbad)\\docs\\screenshots\\art-a3\\tablet-bandit-defeated.png'\n\n  52 |                 expect(feet).toBeCloseTo(observed.footOffset,5);\n  53 |                 const path=`docs/screenshots/art-a3/${device}-${key}-${state}.png`;\n> 54 |                 await page.screenshot({path});captures.push({state,path,observed});\n     |                 ^\n  55 |             };\n  56 |             // S01's optional crate top is 126px above the enemy centre; the\n  57 |             // inspection can stand there before stepping down on its right.\n    at capture (C:\\code\\code10(sindbad)\\tests\\e2e\\enemy-actions.spec.ts:54:17)\n    at C:\\code\\code10(sindbad)\\tests\\e2e\\enemy-actions.spec.ts:71:13"
+                    }
+                  ],
+                  "stdout": [
+                    {
+                      "text": "ART phone skeleton: poses / direction / magic / reload passed\n"
+                    },
+                    {
+                      "text": "ART phone bandit: poses / direction / human / reload passed\n"
+                    },
+                    {
+                      "text": "ART phone guard: poses / direction / human / reload passed\n"
+                    },
+                    {
+                      "text": "ART phone pirate: poses / direction / human / reload passed\n"
+                    },
+                    {
+                      "text": "ART phone snake: poses / direction / animal / reload passed\n"
+                    },
+                    {
+                      "text": "ART phone tiger: poses / direction / animal / reload passed\n"
+                    },
+                    {
+                      "text": "ART phone dragon: poses / direction / animal / reload passed\n"
+                    },
+                    {
+                      "text": "ART phone crab: poses / direction / animal / reload passed\n"
+                    },
+                    {
+                      "text": "ART phone stone: poses / direction / magic / reload passed\n"
+                    },
+                    {
+                      "text": "ART phone kuura: poses / direction / magic / reload passed\n"
+                    },
+                    {
+                      "text": "ART tablet skeleton: poses / direction / magic / reload passed\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 8
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 13
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 4
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 123
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 5
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 12
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 4
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 22
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 8
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 8
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 5
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 180
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 4
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 35
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 6
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 24
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 3
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 7
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 5
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 16
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 4
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 4
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 5
+                    }
+                  ],
+                  "startTime": "2026-10-04T00:35:42.975Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\code\\code10(sindbad)\\test-results\\enemy-actions-40-enemy-pos-18980-save-reload-on-phone-tablet\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\code\\code10(sindbad)\\test-results\\enemy-actions-40-enemy-pos-18980-save-reload-on-phone-tablet\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\enemy-actions.spec.ts",
+                    "column": 17,
+                    "line": 54
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "4050b6d89f0074ea899f-d76ee6d2b566c6f1f991",
+          "file": "enemy-actions.spec.ts",
+          "line": 43,
+          "column": 1
+        },
+        {
+          "title": "missing action atlas retains a playable fallback and magical skeleton defeat",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6516,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 5
+                    }
+                  ],
+                  "startTime": "2026-10-04T00:37:56.549Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "4050b6d89f0074ea899f-933cb68d8165ee7920e2",
+          "file": "enemy-actions.spec.ts",
+          "line": 174,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-04T00:35:40.469Z",
+    "duration": 143908.152,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

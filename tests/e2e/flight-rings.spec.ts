@@ -1,3 +1,4 @@
+import {evidencePath} from './art-evidence';
 import {test,expect,type Page} from '@playwright/test';
 import {freshSave} from '../../src/core/state';
 import {SAVE_KEY} from '../../src/core/save';
@@ -30,7 +31,7 @@ test('flight rings collect through movement once, persist, and never gate landin
   for(let hit=0;hit<3;hit++){await page.keyboard.press('Space');await page.waitForTimeout(480);}
   await expect.poll(async()=>((await read(page)).enemies.find((enemy:{id:string})=>enemy.id==='S10.enemy.1')?.state)).toBe('defeated');
   await expect.poll(async()=>((await read(page)).enemies.find((enemy:{id:string})=>enemy.id==='S10.enemy.1')?.visible)).toBe(false);
-  await page.screenshot({path:'docs/screenshots/flight-rings.png'});
+  await page.screenshot({path:evidencePath('flight-rings.png')});
   await page.reload();await page.getByRole('button',{name:'이어하기 · S10'}).click();
   await expect.poll(async()=>!!(await read(page)).player).toBe(true);
   expect((await read(page)).save.completedObjectiveIds).toContain('S10.quest.1');

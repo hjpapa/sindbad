@@ -1,0 +1,108 @@
+{
+  "date": "2026-10-04",
+  "status": "ART_DRAFT",
+  "functionalVerification": "pass",
+  "checks": [
+    {
+      "command": "python scripts/optimize-webtoon.py",
+      "exitCode": 0,
+      "seconds": 17.14,
+      "output": "docs/validation/m6-props-check-1.txt"
+    },
+    {
+      "command": "python scripts/audit-webtoon.py",
+      "exitCode": 0,
+      "seconds": 15.3,
+      "output": "docs/validation/m6-props-check-2.txt"
+    },
+    {
+      "command": "npm run typecheck",
+      "exitCode": 0,
+      "seconds": 4.1,
+      "output": "docs/validation/m6-props-check-3.txt"
+    },
+    {
+      "command": "npm run lint",
+      "exitCode": 0,
+      "seconds": 4.0,
+      "output": "docs/validation/m6-props-check-4.txt"
+    },
+    {
+      "command": "npm run test",
+      "exitCode": 0,
+      "seconds": 4.3,
+      "output": "docs/validation/m6-props-check-5.txt"
+    },
+    {
+      "command": "npm run validate:content",
+      "exitCode": 0,
+      "seconds": 1.51,
+      "output": "docs/validation/m6-props-check-6.txt"
+    },
+    {
+      "command": "npm run build",
+      "exitCode": 0,
+      "seconds": 11.67,
+      "output": "docs/validation/m6-props-check-7.txt"
+    },
+    {
+      "command": "npx tsx scripts/check-art-budget.ts",
+      "exitCode": 0,
+      "seconds": 3.35,
+      "output": "docs/validation/m6-props-check-8.txt"
+    }
+  ],
+  "e2e": {
+    "exitCode": 0,
+    "stats": {
+      "startTime": "2026-10-04T02:01:10.752Z",
+      "duration": 2500564.736,
+      "expected": 49,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "report": "docs/validation/m6-props-e2e-final.json"
+  },
+  "finalScreenshots": {
+    "count": 24,
+    "record": "docs/validation/m6-props-final-screenshots.json"
+  },
+  "development": [
+    {
+      "check": "first props E2E",
+      "pass": 1,
+      "fail": 1,
+      "reason": "generic missing-image fallback generated a sailor under prop keys; exclude prop- and use preserved SVG",
+      "recheckPass": 2
+    },
+    {
+      "check": "capture collection",
+      "reason": "assumed old campaign screenshot path raised FileNotFoundError; actual info.outputPath found and 7 native captures preserved byte-identically"
+    },
+    {
+      "check": "diff",
+      "reason": "trailing blank line; normalized trailing bytes; audit and final diff exit0"
+    },
+    {
+      "check": "postcheck proof",
+      "reason": "single-LF suffix assumption failed; reconstructed original frozen hash with LF+CRLF and proved trailing-only change"
+    }
+  ],
+  "playtestBackup": {
+    "path": "docs/validation/m6-props-playtest-before.md",
+    "sha256": "f79716351d4df94a9db37e62055c5c5d3275e6b37ad5633ce4be336bdd3d01fe"
+  },
+  "limitations": [
+    "physical devices/iOS Safari",
+    "child play",
+    "long thermal/FPS/audio checks",
+    "final art approval",
+    "exact +60 large-heart healing not independently browser-measured"
+  ],
+  "actions": {
+    "commit": false,
+    "push": false,
+    "deploy": false
+  }
+}

@@ -1,0 +1,37 @@
+[
+  {
+    "command": "python scripts/optimize-webtoon.py",
+    "started": "2026-10-04T06:29:12.232277+00:00",
+    "exitCode": 0,
+    "seconds": 15.99,
+    "output": "docs/validation/m6-flight-check-1.txt"
+  },
+  {
+    "command": "python scripts/audit-webtoon.py",
+    "started": "2026-10-04T06:29:28.213482+00:00",
+    "exitCode": 0,
+    "seconds": 16.58,
+    "output": "docs/validation/m6-flight-check-2.txt"
+  },
+  {
+    "command": "npm run typecheck",
+    "started": "2026-10-04T06:29:44.788527+00:00",
+    "exitCode": 0,
+    "seconds": 9.19,
+    "output": "docs/validation/m6-flight-check-3.txt"
+  },
+  {
+    "command": "npm run lint",
+    "started": "2026-10-04T06:29:53.983133+00:00",
+    "exitCode": 0,
+    "seconds": 17.53,
+    "output": "docs/validation/m6-flight-check-4.txt"
+  },
+  {
+    "command": "npm run test",
+    "started": "2026-10-04T06:30:11.514789+00:00",
+    "exitCode": 1,
+    "seconds": 8.92,
+    "output": "docs/validation/m6-flight-check-5.txt"
+  }
+]

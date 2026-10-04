@@ -1,0 +1,485 @@
+{
+  "pass": true,
+  "method": "intentional seven raster request aborts, SVG recovery, real keys/combat and save reload",
+  "shots": [
+    {
+      "id": "W01",
+      "direction": 1,
+      "hand": {
+        "x": 403.37499999999994,
+        "y": 529.84375
+      },
+      "observed": {
+        "visible": true,
+        "x": 403.37499999999994,
+        "y": 529.84375,
+        "texture": "weapon-fallback-W01",
+        "angle": 55
+      },
+      "hero": {
+        "texture": "hero-action",
+        "frame": 5,
+        "x": 435.99999999999994,
+        "y": 610,
+        "flipX": false,
+        "originY": 0.95703125
+      },
+      "path": "docs/screenshots/m6-kite/record-fix/art-a6/phone-fallback-W01-right.png"
+    },
+    {
+      "id": "W02",
+      "direction": 1,
+      "hand": {
+        "x": 403.37499999999994,
+        "y": 529.84375
+      },
+      "observed": {
+        "visible": true,
+        "x": 403.37499999999994,
+        "y": 529.84375,
+        "texture": "weapon-fallback-W02",
+        "angle": 20
+      },
+      "hero": {
+        "texture": "hero-action",
+        "frame": 5,
+        "x": 435.99999999999994,
+        "y": 610,
+        "flipX": false,
+        "originY": 0.95703125
+      },
+      "path": "docs/screenshots/m6-kite/record-fix/art-a6/phone-fallback-W02-right.png"
+    },
+    {
+      "id": "W03",
+      "direction": 1,
+      "hand": {
+        "x": 403.37499999999994,
+        "y": 529.84375
+      },
+      "observed": {
+        "visible": true,
+        "x": 403.37499999999994,
+        "y": 529.84375,
+        "texture": "weapon-fallback-W03",
+        "angle": 60
+      },
+      "hero": {
+        "texture": "hero-action",
+        "frame": 5,
+        "x": 435.99999999999994,
+        "y": 610,
+        "flipX": false,
+        "originY": 0.95703125
+      },
+      "path": "docs/screenshots/m6-kite/record-fix/art-a6/phone-fallback-W03-right.png"
+    },
+    {
+      "id": "W04",
+      "direction": 1,
+      "hand": {
+        "x": 403.37499999999994,
+        "y": 529.84375
+      },
+      "observed": {
+        "visible": true,
+        "x": 403.37499999999994,
+        "y": 529.84375,
+        "texture": "weapon-fallback-W04",
+        "angle": -6
+      },
+      "hero": {
+        "texture": "hero-action",
+        "frame": 5,
+        "x": 435.99999999999994,
+        "y": 610,
+        "flipX": false,
+        "originY": 0.95703125
+      },
+      "path": "docs/screenshots/m6-kite/record-fix/art-a6/phone-fallback-W04-right.png"
+    },
+    {
+      "id": "W05",
+      "direction": 1,
+      "hand": {
+        "x": 403.37499999999994,
+        "y": 529.84375
+      },
+      "observed": {
+        "visible": true,
+        "x": 403.37499999999994,
+        "y": 529.84375,
+        "texture": "weapon-fallback-W05",
+        "angle": 0
+      },
+      "hero": {
+        "texture": "hero-action",
+        "frame": 5,
+        "x": 435.99999999999994,
+        "y": 610,
+        "flipX": false,
+        "originY": 0.95703125
+      },
+      "path": "docs/screenshots/m6-kite/record-fix/art-a6/phone-fallback-W05-right.png"
+    },
+    {
+      "id": "W06",
+      "direction": 1,
+      "hand": {
+        "x": 403.37499999999994,
+        "y": 529.84375
+      },
+      "observed": {
+        "visible": true,
+        "x": 403.37499999999994,
+        "y": 529.84375,
+        "texture": "weapon-fallback-W06",
+        "angle": 35
+      },
+      "hero": {
+        "texture": "hero-action",
+        "frame": 5,
+        "x": 435.99999999999994,
+        "y": 610,
+        "flipX": false,
+        "originY": 0.95703125
+      },
+      "path": "docs/screenshots/m6-kite/record-fix/art-a6/phone-fallback-W06-right.png"
+    },
+    {
+      "id": "W07",
+      "direction": 1,
+      "hand": {
+        "x": 403.37499999999994,
+        "y": 529.84375
+      },
+      "observed": {
+        "visible": true,
+        "x": 403.37499999999994,
+        "y": 529.84375,
+        "texture": "weapon-fallback-W07",
+        "angle": 60
+      },
+      "hero": {
+        "texture": "hero-action",
+        "frame": 5,
+        "x": 435.99999999999994,
+        "y": 610,
+        "flipX": false,
+        "originY": 0.95703125
+      },
+      "path": "docs/screenshots/m6-kite/record-fix/art-a6/phone-fallback-W07-right.png"
+    },
+    {
+      "id": "W01",
+      "direction": -1,
+      "hand": {
+        "x": 454.4583333333333,
+        "y": 529.84375
+      },
+      "observed": {
+        "visible": true,
+        "x": 454.4583333333333,
+        "y": 529.84375,
+        "texture": "weapon-fallback-W01",
+        "angle": -55.00000000000006
+      },
+      "hero": {
+        "texture": "hero-action",
+        "frame": 5,
+        "x": 421.8333333333333,
+        "y": 610,
+        "flipX": true,
+        "originY": 0.95703125
+      },
+      "path": "docs/screenshots/m6-kite/record-fix/art-a6/phone-fallback-W01-left.png"
+    },
+    {
+      "id": "W02",
+      "direction": -1,
+      "hand": {
+        "x": 454.4583333333333,
+        "y": 529.84375
+      },
+      "observed": {
+        "visible": true,
+        "x": 454.4583333333333,
+        "y": 529.84375,
+        "texture": "weapon-fallback-W02",
+        "angle": -20
+      },
+      "hero": {
+        "texture": "hero-action",
+        "frame": 5,
+        "x": 421.8333333333333,
+        "y": 610,
+        "flipX": true,
+        "originY": 0.95703125
+      },
+      "path": "docs/screenshots/m6-kite/record-fix/art-a6/phone-fallback-W02-left.png"
+    },
+    {
+      "id": "W03",
+      "direction": -1,
+      "hand": {
+        "x": 454.4583333333333,
+        "y": 529.84375
+      },
+      "observed": {
+        "visible": true,
+        "x": 454.4583333333333,
+        "y": 529.84375,
+        "texture": "weapon-fallback-W03",
+        "angle": -59.99999999999994
+      },
+      "hero": {
+        "texture": "hero-action",
+        "frame": 5,
+        "x": 421.8333333333333,
+        "y": 610,
+        "flipX": true,
+        "originY": 0.95703125
+      },
+      "path": "docs/screenshots/m6-kite/record-fix/art-a6/phone-fallback-W03-left.png"
+    },
+    {
+      "id": "W04",
+      "direction": -1,
+      "hand": {
+        "x": 454.4583333333333,
+        "y": 529.84375
+      },
+      "observed": {
+        "visible": true,
+        "x": 454.4583333333333,
+        "y": 529.84375,
+        "texture": "weapon-fallback-W04",
+        "angle": 6
+      },
+      "hero": {
+        "texture": "hero-action",
+        "frame": 5,
+        "x": 421.8333333333333,
+        "y": 610,
+        "flipX": true,
+        "originY": 0.95703125
+      },
+      "path": "docs/screenshots/m6-kite/record-fix/art-a6/phone-fallback-W04-left.png"
+    },
+    {
+      "id": "W05",
+      "direction": -1,
+      "hand": {
+        "x": 454.4583333333333,
+        "y": 529.84375
+      },
+      "observed": {
+        "visible": true,
+        "x": 454.4583333333333,
+        "y": 529.84375,
+        "texture": "weapon-fallback-W05",
+        "angle": 0
+      },
+      "hero": {
+        "texture": "hero-action",
+        "frame": 5,
+        "x": 421.8333333333333,
+        "y": 610,
+        "flipX": true,
+        "originY": 0.95703125
+      },
+      "path": "docs/screenshots/m6-kite/record-fix/art-a6/phone-fallback-W05-left.png"
+    },
+    {
+      "id": "W06",
+      "direction": -1,
+      "hand": {
+        "x": 454.4583333333333,
+        "y": 529.84375
+      },
+      "observed": {
+        "visible": true,
+        "x": 454.4583333333333,
+        "y": 529.84375,
+        "texture": "weapon-fallback-W06",
+        "angle": -35.00000000000006
+      },
+      "hero": {
+        "texture": "hero-action",
+        "frame": 5,
+        "x": 421.8333333333333,
+        "y": 610,
+        "flipX": true,
+        "originY": 0.95703125
+      },
+      "path": "docs/screenshots/m6-kite/record-fix/art-a6/phone-fallback-W06-left.png"
+    },
+    {
+      "id": "W07",
+      "direction": -1,
+      "hand": {
+        "x": 454.4583333333333,
+        "y": 529.84375
+      },
+      "observed": {
+        "visible": true,
+        "x": 454.4583333333333,
+        "y": 529.84375,
+        "texture": "weapon-fallback-W07",
+        "angle": -59.99999999999994
+      },
+      "hero": {
+        "texture": "hero-action",
+        "frame": 5,
+        "x": 421.8333333333333,
+        "y": 610,
+        "flipX": true,
+        "originY": 0.95703125
+      },
+      "path": "docs/screenshots/m6-kite/record-fix/art-a6/phone-fallback-W07-left.png"
+    }
+  ],
+  "expectedAbortedRequests": [
+    "http://127.0.0.1:5174/assets/weapons/W01.webp",
+    "http://127.0.0.1:5174/assets/weapons/W02.webp",
+    "http://127.0.0.1:5174/assets/weapons/W03.webp",
+    "http://127.0.0.1:5174/assets/weapons/W04.webp",
+    "http://127.0.0.1:5174/assets/weapons/W05.webp",
+    "http://127.0.0.1:5174/assets/weapons/W06.webp",
+    "http://127.0.0.1:5174/assets/weapons/W07.webp",
+    "http://127.0.0.1:5174/assets/weapons/W01.webp",
+    "http://127.0.0.1:5174/assets/weapons/W02.webp",
+    "http://127.0.0.1:5174/assets/weapons/W03.webp",
+    "http://127.0.0.1:5174/assets/weapons/W04.webp",
+    "http://127.0.0.1:5174/assets/weapons/W05.webp",
+    "http://127.0.0.1:5174/assets/weapons/W06.webp",
+    "http://127.0.0.1:5174/assets/weapons/W07.webp",
+    "http://127.0.0.1:5174/assets/weapons/W01.webp",
+    "http://127.0.0.1:5174/assets/weapons/W02.webp",
+    "http://127.0.0.1:5174/assets/weapons/W03.webp",
+    "http://127.0.0.1:5174/assets/weapons/W04.webp",
+    "http://127.0.0.1:5174/assets/weapons/W05.webp",
+    "http://127.0.0.1:5174/assets/weapons/W06.webp",
+    "http://127.0.0.1:5174/assets/weapons/W07.webp",
+    "http://127.0.0.1:5174/assets/weapons/W01.webp",
+    "http://127.0.0.1:5174/assets/weapons/W02.webp",
+    "http://127.0.0.1:5174/assets/weapons/W01.webp",
+    "http://127.0.0.1:5174/assets/weapons/W03.webp",
+    "http://127.0.0.1:5174/assets/weapons/W04.webp",
+    "http://127.0.0.1:5174/assets/weapons/W05.webp",
+    "http://127.0.0.1:5174/assets/weapons/W06.webp",
+    "http://127.0.0.1:5174/assets/weapons/W07.webp",
+    "http://127.0.0.1:5174/assets/weapons/W01.webp",
+    "http://127.0.0.1:5174/assets/weapons/W02.webp",
+    "http://127.0.0.1:5174/assets/weapons/W03.webp",
+    "http://127.0.0.1:5174/assets/weapons/W04.webp",
+    "http://127.0.0.1:5174/assets/weapons/W05.webp",
+    "http://127.0.0.1:5174/assets/weapons/W06.webp",
+    "http://127.0.0.1:5174/assets/weapons/W07.webp",
+    "http://127.0.0.1:5174/assets/weapons/W01.webp",
+    "http://127.0.0.1:5174/assets/weapons/W02.webp",
+    "http://127.0.0.1:5174/assets/weapons/W03.webp",
+    "http://127.0.0.1:5174/assets/weapons/W04.webp",
+    "http://127.0.0.1:5174/assets/weapons/W05.webp",
+    "http://127.0.0.1:5174/assets/weapons/W06.webp",
+    "http://127.0.0.1:5174/assets/weapons/W07.webp",
+    "http://127.0.0.1:5174/assets/weapons/W01.webp",
+    "http://127.0.0.1:5174/assets/weapons/W02.webp",
+    "http://127.0.0.1:5174/assets/weapons/W03.webp",
+    "http://127.0.0.1:5174/assets/weapons/W04.webp",
+    "http://127.0.0.1:5174/assets/weapons/W05.webp",
+    "http://127.0.0.1:5174/assets/weapons/W06.webp",
+    "http://127.0.0.1:5174/assets/weapons/W07.webp",
+    "http://127.0.0.1:5174/assets/weapons/W07.webp",
+    "http://127.0.0.1:5174/assets/weapons/W01.webp"
+  ],
+  "earned": {
+    "schemaVersion": 1,
+    "buildVersion": "0.1.0",
+    "writtenAt": "2026-10-04T09:37:28.651Z",
+    "checkpoint": {
+      "stageId": "S01",
+      "checkpointId": "start"
+    },
+    "totalXp": 14,
+    "coins": 6,
+    "weapons": [
+      "W01",
+      "W02",
+      "W03",
+      "W04",
+      "W05",
+      "W06",
+      "W07"
+    ],
+    "equippedWeapon": "W07",
+    "upgrades": {},
+    "treasures": [],
+    "relics": [],
+    "goldenHearts": [],
+    "equippedSkill": null,
+    "clearedStageIds": [],
+    "claimedRewardIds": [
+      "S01.reward.start",
+      "S01.enemy.skeleton.01",
+      "S01.heart.01",
+      "S01.enemy.skeleton.02"
+    ],
+    "completedObjectiveIds": [],
+    "flags": [],
+    "journalPageIds": [],
+    "settings": {
+      "difficulty": "relaxed",
+      "musicVolume": 0.18,
+      "sfxVolume": 0.3,
+      "reducedMotion": true,
+      "largeText": false,
+      "aimAssist": false
+    }
+  },
+  "resumed": {
+    "schemaVersion": 1,
+    "buildVersion": "0.1.0",
+    "writtenAt": "2026-10-04T09:38:10.578Z",
+    "checkpoint": {
+      "stageId": "S01",
+      "checkpointId": "start"
+    },
+    "totalXp": 14,
+    "coins": 6,
+    "weapons": [
+      "W01",
+      "W02",
+      "W03",
+      "W04",
+      "W05",
+      "W06",
+      "W07"
+    ],
+    "equippedWeapon": "W07",
+    "upgrades": {},
+    "treasures": [],
+    "relics": [],
+    "goldenHearts": [],
+    "equippedSkill": null,
+    "clearedStageIds": [],
+    "claimedRewardIds": [
+      "S01.reward.start",
+      "S01.enemy.skeleton.01",
+      "S01.heart.01",
+      "S01.enemy.skeleton.02"
+    ],
+    "completedObjectiveIds": [],
+    "flags": [],
+    "journalPageIds": [],
+    "settings": {
+      "difficulty": "relaxed",
+      "musicVolume": 0.18,
+      "sfxVolume": 0.3,
+      "reducedMotion": true,
+      "largeText": false,
+      "aimAssist": false
+    }
+  },
+  "errors": []
+}

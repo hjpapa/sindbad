@@ -9,12 +9,12 @@
           "id": "W01",
           "direction": 1,
           "hand": {
-            "x": 403.37499999999994,
+            "x": 419.54166666666663,
             "y": 529.84375
           },
           "observed": {
             "visible": true,
-            "x": 403.37499999999994,
+            "x": 419.54166666666663,
             "y": 529.84375,
             "texture": "weapon-W01",
             "angle": 55
@@ -22,23 +22,23 @@
           "hero": {
             "texture": "hero-action",
             "frame": 5,
-            "x": 435.99999999999994,
+            "x": 452.16666666666663,
             "y": 610,
             "flipX": false,
             "originY": 0.95703125
           },
-          "path": "docs/screenshots/art-a6/phone-W01-right.png"
+          "path": "docs/screenshots/m6-flight/final/art-a6/phone-W01-right.png"
         },
         {
           "id": "W02",
           "direction": 1,
           "hand": {
-            "x": 403.37499999999994,
+            "x": 419.54166666666663,
             "y": 529.84375
           },
           "observed": {
             "visible": true,
-            "x": 403.37499999999994,
+            "x": 419.54166666666663,
             "y": 529.84375,
             "texture": "weapon-W02",
             "angle": 20
@@ -46,23 +46,23 @@
           "hero": {
             "texture": "hero-action",
             "frame": 5,
-            "x": 435.99999999999994,
+            "x": 452.16666666666663,
             "y": 610,
             "flipX": false,
             "originY": 0.95703125
           },
-          "path": "docs/screenshots/art-a6/phone-W02-right.png"
+          "path": "docs/screenshots/m6-flight/final/art-a6/phone-W02-right.png"
         },
         {
           "id": "W03",
           "direction": 1,
           "hand": {
-            "x": 403.37499999999994,
+            "x": 419.54166666666663,
             "y": 529.84375
           },
           "observed": {
             "visible": true,
-            "x": 403.37499999999994,
+            "x": 419.54166666666663,
             "y": 529.84375,
             "texture": "weapon-W03",
             "angle": 60
@@ -70,23 +70,23 @@
           "hero": {
             "texture": "hero-action",
             "frame": 5,
-            "x": 435.99999999999994,
+            "x": 452.16666666666663,
             "y": 610,
             "flipX": false,
             "originY": 0.95703125
           },
-          "path": "docs/screenshots/art-a6/phone-W03-right.png"
+          "path": "docs/screenshots/m6-flight/final/art-a6/phone-W03-right.png"
         },
         {
           "id": "W04",
           "direction": 1,
           "hand": {
-            "x": 403.37499999999994,
+            "x": 419.54166666666663,
             "y": 529.84375
           },
           "observed": {
             "visible": true,
-            "x": 403.37499999999994,
+            "x": 419.54166666666663,
             "y": 529.84375,
             "texture": "weapon-W04",
             "angle": -6
@@ -94,23 +94,23 @@
           "hero": {
             "texture": "hero-action",
             "frame": 5,
-            "x": 435.99999999999994,
+            "x": 452.16666666666663,
             "y": 610,
             "flipX": false,
             "originY": 0.95703125
           },
-          "path": "docs/screenshots/art-a6/phone-W04-right.png"
+          "path": "docs/screenshots/m6-flight/final/art-a6/phone-W04-right.png"
         },
         {
           "id": "W05",
           "direction": 1,
           "hand": {
-            "x": 403.37499999999994,
+            "x": 419.54166666666663,
             "y": 529.84375
           },
           "observed": {
             "visible": true,
-            "x": 403.37499999999994,
+            "x": 419.54166666666663,
             "y": 529.84375,
             "texture": "weapon-W05",
             "angle": 0
@@ -118,23 +118,23 @@
           "hero": {
             "texture": "hero-action",
             "frame": 5,
-            "x": 435.99999999999994,
+            "x": 452.16666666666663,
             "y": 610,
             "flipX": false,
             "originY": 0.95703125
           },
-          "path": "docs/screenshots/art-a6/phone-W05-right.png"
+          "path": "docs/screenshots/m6-flight/final/art-a6/phone-W05-right.png"
         },
         {
           "id": "W06",
           "direction": 1,
           "hand": {
-            "x": 403.37499999999994,
+            "x": 419.54166666666663,
             "y": 529.84375
           },
           "observed": {
             "visible": true,
-            "x": 403.37499999999994,
+            "x": 419.54166666666663,
             "y": 529.84375,
             "texture": "weapon-W06",
             "angle": 35
@@ -142,23 +142,23 @@
           "hero": {
             "texture": "hero-action",
             "frame": 5,
-            "x": 435.99999999999994,
+            "x": 452.16666666666663,
             "y": 610,
             "flipX": false,
             "originY": 0.95703125
           },
-          "path": "docs/screenshots/art-a6/phone-W06-right.png"
+          "path": "docs/screenshots/m6-flight/final/art-a6/phone-W06-right.png"
         },
         {
           "id": "W07",
           "direction": 1,
           "hand": {
-            "x": 403.37499999999994,
+            "x": 419.54166666666663,
             "y": 529.84375
           },
           "observed": {
             "visible": true,
-            "x": 403.37499999999994,
+            "x": 419.54166666666663,
             "y": 529.84375,
             "texture": "weapon-W07",
             "angle": 60
@@ -166,23 +166,23 @@
           "hero": {
             "texture": "hero-action",
             "frame": 5,
-            "x": 435.99999999999994,
+            "x": 452.16666666666663,
             "y": 610,
             "flipX": false,
             "originY": 0.95703125
           },
-          "path": "docs/screenshots/art-a6/phone-W07-right.png"
+          "path": "docs/screenshots/m6-flight/final/art-a6/phone-W07-right.png"
         },
         {
           "id": "W01",
           "direction": -1,
           "hand": {
-            "x": 459.51388888888886,
+            "x": 475.68055555555554,
             "y": 529.84375
           },
           "observed": {
             "visible": true,
-            "x": 459.51388888888886,
+            "x": 475.68055555555554,
             "y": 529.84375,
             "texture": "weapon-W01",
             "angle": -55.00000000000006
@@ -190,23 +190,23 @@
           "hero": {
             "texture": "hero-action",
             "frame": 5,
-            "x": 426.88888888888886,
+            "x": 443.05555555555554,
             "y": 610,
             "flipX": true,
             "originY": 0.95703125
           },
-          "path": "docs/screenshots/art-a6/phone-W01-left.png"
+          "path": "docs/screenshots/m6-flight/final/art-a6/phone-W01-left.png"
         },
         {
           "id": "W02",
           "direction": -1,
           "hand": {
-            "x": 459.51388888888886,
+            "x": 475.68055555555554,
             "y": 529.84375
           },
           "observed": {
             "visible": true,
-            "x": 459.51388888888886,
+            "x": 475.68055555555554,
             "y": 529.84375,
             "texture": "weapon-W02",
             "angle": -20
@@ -214,23 +214,23 @@
           "hero": {
             "texture": "hero-action",
             "frame": 5,
-            "x": 426.88888888888886,
+            "x": 443.05555555555554,
             "y": 610,
             "flipX": true,
             "originY": 0.95703125
           },
-          "path": "docs/screenshots/art-a6/phone-W02-left.png"
+          "path": "docs/screenshots/m6-flight/final/art-a6/phone-W02-left.png"
         },
         {
           "id": "W03",
           "direction": -1,
           "hand": {
-            "x": 459.51388888888886,
+            "x": 475.68055555555554,
             "y": 529.84375
           },
           "observed": {
             "visible": true,
-            "x": 459.51388888888886,
+            "x": 475.68055555555554,
             "y": 529.84375,
             "texture": "weapon-W03",
             "angle": -59.99999999999994
@@ -238,23 +238,23 @@
           "hero": {
             "texture": "hero-action",
             "frame": 5,
-            "x": 426.88888888888886,
+            "x": 443.05555555555554,
             "y": 610,
             "flipX": true,
             "originY": 0.95703125
           },
-          "path": "docs/screenshots/art-a6/phone-W03-left.png"
+          "path": "docs/screenshots/m6-flight/final/art-a6/phone-W03-left.png"
         },
         {
           "id": "W04",
           "direction": -1,
           "hand": {
-            "x": 459.51388888888886,
+            "x": 475.68055555555554,
             "y": 529.84375
           },
           "observed": {
             "visible": true,
-            "x": 459.51388888888886,
+            "x": 475.68055555555554,
             "y": 529.84375,
             "texture": "weapon-W04",
             "angle": 6
@@ -262,23 +262,23 @@
           "hero": {
             "texture": "hero-action",
             "frame": 5,
-            "x": 426.88888888888886,
+            "x": 443.05555555555554,
             "y": 610,
             "flipX": true,
             "originY": 0.95703125
           },
-          "path": "docs/screenshots/art-a6/phone-W04-left.png"
+          "path": "docs/screenshots/m6-flight/final/art-a6/phone-W04-left.png"
         },
         {
           "id": "W05",
           "direction": -1,
           "hand": {
-            "x": 459.51388888888886,
+            "x": 475.68055555555554,
             "y": 529.84375
           },
           "observed": {
             "visible": true,
-            "x": 459.51388888888886,
+            "x": 475.68055555555554,
             "y": 529.84375,
             "texture": "weapon-W05",
             "angle": 0
@@ -286,23 +286,23 @@
           "hero": {
             "texture": "hero-action",
             "frame": 5,
-            "x": 426.88888888888886,
+            "x": 443.05555555555554,
             "y": 610,
             "flipX": true,
             "originY": 0.95703125
           },
-          "path": "docs/screenshots/art-a6/phone-W05-left.png"
+          "path": "docs/screenshots/m6-flight/final/art-a6/phone-W05-left.png"
         },
         {
           "id": "W06",
           "direction": -1,
           "hand": {
-            "x": 459.51388888888886,
+            "x": 475.68055555555554,
             "y": 529.84375
           },
           "observed": {
             "visible": true,
-            "x": 459.51388888888886,
+            "x": 475.68055555555554,
             "y": 529.84375,
             "texture": "weapon-W06",
             "angle": -35.00000000000006
@@ -310,23 +310,23 @@
           "hero": {
             "texture": "hero-action",
             "frame": 5,
-            "x": 426.88888888888886,
+            "x": 443.05555555555554,
             "y": 610,
             "flipX": true,
             "originY": 0.95703125
           },
-          "path": "docs/screenshots/art-a6/phone-W06-left.png"
+          "path": "docs/screenshots/m6-flight/final/art-a6/phone-W06-left.png"
         },
         {
           "id": "W07",
           "direction": -1,
           "hand": {
-            "x": 459.51388888888886,
+            "x": 475.68055555555554,
             "y": 529.84375
           },
           "observed": {
             "visible": true,
-            "x": 459.51388888888886,
+            "x": 475.68055555555554,
             "y": 529.84375,
             "texture": "weapon-W07",
             "angle": -59.99999999999994
@@ -334,12 +334,12 @@
           "hero": {
             "texture": "hero-action",
             "frame": 5,
-            "x": 426.88888888888886,
+            "x": 443.05555555555554,
             "y": 610,
             "flipX": true,
             "originY": 0.95703125
           },
-          "path": "docs/screenshots/art-a6/phone-W07-left.png"
+          "path": "docs/screenshots/m6-flight/final/art-a6/phone-W07-left.png"
         }
       ]
     },
@@ -368,7 +368,7 @@
             "flipX": false,
             "originY": 0.95703125
           },
-          "path": "docs/screenshots/art-a6/tablet-W01-right.png"
+          "path": "docs/screenshots/m6-flight/final/art-a6/tablet-W01-right.png"
         },
         {
           "id": "W02",
@@ -392,7 +392,7 @@
             "flipX": false,
             "originY": 0.95703125
           },
-          "path": "docs/screenshots/art-a6/tablet-W02-right.png"
+          "path": "docs/screenshots/m6-flight/final/art-a6/tablet-W02-right.png"
         },
         {
           "id": "W03",
@@ -416,7 +416,7 @@
             "flipX": false,
             "originY": 0.95703125
           },
-          "path": "docs/screenshots/art-a6/tablet-W03-right.png"
+          "path": "docs/screenshots/m6-flight/final/art-a6/tablet-W03-right.png"
         },
         {
           "id": "W04",
@@ -440,7 +440,7 @@
             "flipX": false,
             "originY": 0.95703125
           },
-          "path": "docs/screenshots/art-a6/tablet-W04-right.png"
+          "path": "docs/screenshots/m6-flight/final/art-a6/tablet-W04-right.png"
         },
         {
           "id": "W05",
@@ -464,7 +464,7 @@
             "flipX": false,
             "originY": 0.95703125
           },
-          "path": "docs/screenshots/art-a6/tablet-W05-right.png"
+          "path": "docs/screenshots/m6-flight/final/art-a6/tablet-W05-right.png"
         },
         {
           "id": "W06",
@@ -488,7 +488,7 @@
             "flipX": false,
             "originY": 0.95703125
           },
-          "path": "docs/screenshots/art-a6/tablet-W06-right.png"
+          "path": "docs/screenshots/m6-flight/final/art-a6/tablet-W06-right.png"
         },
         {
           "id": "W07",
@@ -512,7 +512,7 @@
             "flipX": false,
             "originY": 0.95703125
           },
-          "path": "docs/screenshots/art-a6/tablet-W07-right.png"
+          "path": "docs/screenshots/m6-flight/final/art-a6/tablet-W07-right.png"
         },
         {
           "id": "W01",
@@ -536,7 +536,7 @@
             "flipX": true,
             "originY": 0.95703125
           },
-          "path": "docs/screenshots/art-a6/tablet-W01-left.png"
+          "path": "docs/screenshots/m6-flight/final/art-a6/tablet-W01-left.png"
         },
         {
           "id": "W02",
@@ -560,7 +560,7 @@
             "flipX": true,
             "originY": 0.95703125
           },
-          "path": "docs/screenshots/art-a6/tablet-W02-left.png"
+          "path": "docs/screenshots/m6-flight/final/art-a6/tablet-W02-left.png"
         },
         {
           "id": "W03",
@@ -584,7 +584,7 @@
             "flipX": true,
             "originY": 0.95703125
           },
-          "path": "docs/screenshots/art-a6/tablet-W03-left.png"
+          "path": "docs/screenshots/m6-flight/final/art-a6/tablet-W03-left.png"
         },
         {
           "id": "W04",
@@ -608,7 +608,7 @@
             "flipX": true,
             "originY": 0.95703125
           },
-          "path": "docs/screenshots/art-a6/tablet-W04-left.png"
+          "path": "docs/screenshots/m6-flight/final/art-a6/tablet-W04-left.png"
         },
         {
           "id": "W05",
@@ -632,7 +632,7 @@
             "flipX": true,
             "originY": 0.95703125
           },
-          "path": "docs/screenshots/art-a6/tablet-W05-left.png"
+          "path": "docs/screenshots/m6-flight/final/art-a6/tablet-W05-left.png"
         },
         {
           "id": "W06",
@@ -656,7 +656,7 @@
             "flipX": true,
             "originY": 0.95703125
           },
-          "path": "docs/screenshots/art-a6/tablet-W06-left.png"
+          "path": "docs/screenshots/m6-flight/final/art-a6/tablet-W06-left.png"
         },
         {
           "id": "W07",
@@ -680,7 +680,7 @@
             "flipX": true,
             "originY": 0.95703125
           },
-          "path": "docs/screenshots/art-a6/tablet-W07-left.png"
+          "path": "docs/screenshots/m6-flight/final/art-a6/tablet-W07-left.png"
         }
       ]
     }

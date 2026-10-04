@@ -1,0 +1,58 @@
+[
+  {
+    "command": "python scripts/optimize-webtoon.py",
+    "started": "2026-10-04T08:34:11.443502+00:00",
+    "exitCode": 0,
+    "seconds": 14.28,
+    "output": "docs/validation/m6-kite-final-check-1.txt"
+  },
+  {
+    "command": "python scripts/audit-webtoon.py",
+    "started": "2026-10-04T08:34:25.728747+00:00",
+    "exitCode": 0,
+    "seconds": 18.59,
+    "output": "docs/validation/m6-kite-final-check-2.txt"
+  },
+  {
+    "command": "npm run typecheck",
+    "started": "2026-10-04T08:34:44.318568+00:00",
+    "exitCode": 0,
+    "seconds": 4.12,
+    "output": "docs/validation/m6-kite-final-check-3.txt"
+  },
+  {
+    "command": "npm run lint",
+    "started": "2026-10-04T08:34:48.441450+00:00",
+    "exitCode": 0,
+    "seconds": 4.36,
+    "output": "docs/validation/m6-kite-final-check-4.txt"
+  },
+  {
+    "command": "npm run test",
+    "started": "2026-10-04T08:34:52.803122+00:00",
+    "exitCode": 0,
+    "seconds": 5.56,
+    "output": "docs/validation/m6-kite-final-check-5.txt"
+  },
+  {
+    "command": "npm run validate:content",
+    "started": "2026-10-04T08:34:58.364622+00:00",
+    "exitCode": 0,
+    "seconds": 2.34,
+    "output": "docs/validation/m6-kite-final-check-6.txt"
+  },
+  {
+    "command": "npm run build",
+    "started": "2026-10-04T08:35:00.703315+00:00",
+    "exitCode": 0,
+    "seconds": 15.23,
+    "output": "docs/validation/m6-kite-final-check-7.txt"
+  },
+  {
+    "command": "npx tsx scripts/check-art-budget.ts",
+    "started": "2026-10-04T08:35:15.948275+00:00",
+    "exitCode": 0,
+    "seconds": 6.53,
+    "output": "docs/validation/m6-kite-final-check-8.txt"
+  }
+]

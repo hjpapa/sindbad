@@ -1,6 +1,7 @@
 import Phaser from 'phaser';
 import { maps, type FlightHazard, type MapDef, type ObjectDef, type Spawn } from '../content/maps';
 import { assets } from '../content/assets.manifest';
+import {objectTexture,sceneWorldPropKeys,worldPropTexture} from '../content/worldProps';
 import { type WeaponId } from '../content/items';
 import { Combat } from '../core/combat';
 import { maxHp, maxMp, type Reward, type Save } from '../core/state';
@@ -17,7 +18,8 @@ import {swingPose,weaponLooks,availableWeaponTexture} from './weapons';
 import {ensureTerrainTextures,terrainStyleFor} from './terrain';
 import {terrainAssetKeys} from '../content/terrainStyles';
 import {actionFrame,actionHand,heroActionCells,heroDisplaySize} from './heroArt';
-import {actionDefeatKind,enemyActionLayout,type EnemyActionKey} from '../content/enemyActions';
+import {actionDefeatKind,enemyActionLayout,enemyActionTexture,type EnemyActionKey} from '../content/enemyActions';
+import {projectileArtFor,sceneEffectKeys,projectileFrame,effectFrame,effectDuration,type EffectArtKey} from '../content/effects';
 const FONT='"Malgun Gothic","Apple SD Gothic Neo","Noto Sans KR",sans-serif';
 // What the touch action button would do right now, so its icon can match.
 export type ActionContext={kind:'attack'|'talk'|'use'|'exit';label:string};
@@ -62,8 +64,9 @@ interface Enemy {
     pattern: number;
 }
 interface Projectile {
-    sprite: Phaser.GameObjects.Arc;
-    glyph: Phaser.GameObjects.Text;
+    sprite: Phaser.GameObjects.Sprite | Phaser.GameObjects.Arc;
+    glyph?: Phaser.GameObjects.Text;
+    start: number;
     vx: number;
     vy: number;
     until: number;
@@ -130,6 +133,7 @@ export class Stage extends Phaser.Scene {
         sprite: Phaser.GameObjects.Image;
     }[] = [];
     private projectiles: Projectile[] = [];
+    private effects: {sprite:Phaser.GameObjects.Sprite;start:number;duration:number}[] = [];
     private combat = new Combat();
     private sim = 0;
     private direction = 1;
@@ -177,13 +181,15 @@ export class Stage extends Phaser.Scene {
     private sceneAssets(){
         const id=this.host.save.checkpoint.stageId;
         const chapter=campaign.find(stage=>stage.id===id)?.chapter??1;
-        const characters=['hero-webtoon',...(maps[id].mode!=='flight'?['hero-run','hero-action']:[]),...(maps[id].spawns.some(spawn=>spawn.actionArt)?['enemy-actions']:[]),...(maps[id].spawns.some(spawn=>!spawn.actionArt&&(spawn.texture==='enemy-atlas'||['skeleton','archer','captain','bandit','beast'].includes(spawn.kind)))?['enemy-atlas']:[]),...maps[id].objects.map(object=>object.texture),...(['S09','S10','S33'].includes(id)?['roc-webtoon']:[]),...(['S05','S07','S16'].includes(id)?['naira-webtoon']:[]),...(id==='S08'?['genie-webtoon']:[]),...(['S32','S33','S34','S35','S36'].includes(id)?['ariana-webtoon']:[]),...(['S19','S31'].includes(id)?['kuura-webtoon']:[])];
+        const characters=['hero-webtoon',...(maps[id].mode!=='flight'?['hero-run','hero-action']:[]),...maps[id].spawns.flatMap(spawn=>spawn.actionArt?[enemyActionTexture(spawn.actionArt)]:[]),...(maps[id].spawns.some(spawn=>!spawn.actionArt&&(spawn.texture==='enemy-atlas'||['skeleton','archer','captain','bandit','beast'].includes(spawn.kind)))?['enemy-atlas']:[]),...maps[id].objects.map(object=>object.texture),...(['S09','S10','S33'].includes(id)?['roc-webtoon']:[]),...(['S05','S07','S16'].includes(id)?['naira-webtoon']:[]),...(id==='S08'?['genie-webtoon']:[]),...(['S32','S33','S34','S35','S36'].includes(id)?['ariana-webtoon']:[]),...(['S19','S31'].includes(id)?['kuura-webtoon']:[])];
         if(id==='S04')characters.push('whale-webtoon');
         if(id==='S15')characters.push('chef-webtoon');
         if(id==='S02')characters.push('siren-webtoon');
         if(id==='S06')characters.push('rah-webtoon');
         if(maps[id].spawns.some(spawn=>spawn.kind==='crab'&&!spawn.actionArt))characters.push('crab-webtoon');
         characters.push(...terrainAssetKeys(terrainStyleFor(maps[id])));
+        characters.push(...sceneEffectKeys(maps[id].spawns.map(spawn=>spawn.kind),id));
+        characters.push(...sceneWorldPropKeys(maps[id]));
         return assets.filter(asset=>asset.kind==='svg'||asset.key.startsWith('weapon-')||asset.key===`chapter-${chapter}`||characters.includes(asset.key));
     }
     preload() {
@@ -213,6 +219,7 @@ export class Stage extends Phaser.Scene {
         this.objects = [];
         this.hearts = [];
         this.projectiles = [];
+        this.effects = [];
         this.attack = null;
         this.boom = null;
         this.combat.reset();
@@ -228,7 +235,7 @@ export class Stage extends Phaser.Scene {
         this.host.input.clear();
         // Missing files fall back to a real, generated sailor-shaped texture, never an absent URL.
         for (const asset of this.sceneAssets())
-            if (!this.textures.exists(asset.key)&&!asset.key.startsWith('chapter-')&&!asset.key.startsWith('terrain-')&&!asset.key.startsWith('weapon-')&&asset.kind!=='sheet') {
+            if (!this.textures.exists(asset.key)&&!asset.key.startsWith('chapter-')&&!asset.key.startsWith('terrain-')&&!asset.key.startsWith('weapon-')&&!asset.key.startsWith('prop-')&&asset.kind!=='sheet') {
                 const g = this.make.graphics({ x: 0, y: 0 });
                 g.fillStyle(0xeac28b).fillCircle(48, 24, 18);
                 g.fillStyle(0x285069).fillRect(27, 43, 42, 43);
@@ -290,8 +297,8 @@ export class Stage extends Phaser.Scene {
             let texture=def.texture==='roc'?'roc-webtoon':def.texture??fallbackTexture;let frame=def.frame;
             if(!def.texture&&['siren','crab'].includes(def.kind))texture=`${def.kind}-webtoon`;
             if(!def.texture&&['skeleton','archer','captain','bandit','beast'].includes(def.kind)&&this.textures.exists('enemy-atlas')){texture='enemy-atlas';frame=def.kind==='bandit'?4:def.kind==='beast'?0:5;}
-            const art = def.actionArt && this.textures.exists('enemy-actions') ? def.actionArt : undefined;
-            if(art){texture='enemy-actions';frame=enemyActionLayout(art,'idle',130,65).frame;}
+            const art = def.actionArt && this.textures.exists(enemyActionTexture(def.actionArt)) ? def.actionArt : undefined;
+            if(art){texture=enemyActionTexture(art);frame=enemyActionLayout(art,'idle',130,65).frame;}
             if(!this.textures.exists(texture)){texture=fallbackTexture;frame=undefined;}
             const sprite = this.add.image(def.x, def.y, texture,frame).setDisplaySize(texture==='roc-webtoon'?220:texture==='enemy-atlas'?(def.kind==='boss'?172:130):def.kind==='boss'?124:96,texture==='roc-webtoon'?145:texture==='enemy-atlas'?(def.kind==='boss'?172:130):def.kind==='boss'?156:128).setOrigin(.5,def.kind==='boss'?.65:.5).setDepth(5);
             if(texture.endsWith('-webtoon')&&texture!=='roc-webtoon'&&def.kind!=='crab'){const source=this.textures.get(texture).getSourceImage();sprite.setDisplaySize(sprite.displayHeight*source.width/source.height,sprite.displayHeight);}
@@ -303,25 +310,27 @@ export class Stage extends Phaser.Scene {
             const label = this.txt(def.x, def.y - (def.kind==='boss'?125:87), '', { fontSize: '19px', color: '#fff5cf', backgroundColor: '#173746', padding:{x:6,y:3} }).setOrigin(0.5).setDepth(6);
             const enemy:Enemy = { def, sprite, label, hp, maxHp: hp, state: 'idle', until: 0, target: def.x, targetY:def.y, pattern: 0, art };
             if(art){
-                enemy.bodyHeight=def.kind==='boss'?172:def.kind==='captain'?150:def.kind==='crab'?128:130;
+                enemy.bodyHeight=def.kind==='kite'?128:def.kind==='boss'?172:def.kind==='captain'?150:def.kind==='crab'?128:130;
                 const support=this.mapDef.platforms.filter(p=>!p.oneWay&&!p.motion&&def.x>=p.x&&def.x<=p.x+p.w&&p.y>=def.y).sort((a,b)=>a.y-b.y)[0];
-                enemy.footOffset=support?support.y-def.y+2:def.kind==='boss'?172*.35:enemy.bodyHeight*.5;
+                enemy.footOffset=def.kind==='kite'?0:support?support.y-def.y+2:def.kind==='boss'?172*.35:enemy.bodyHeight*.5;
                 this.setEnemyPose(enemy);
             }
             this.enemies.push(enemy);
         }
         for(const def of this.mapDef.flightHazards??[]){
-            const sprite=this.add.image(def.x,def.y,def.kind==='gust'?'stormCloud':'debris').setDepth(7).setScale(def.kind==='gust'?.95:.7);
+            const texture=worldPropTexture(def.kind==='gust'?'stormCloud':'debris',key=>this.textures.exists(key));
+            const sprite=this.add.image(def.x,def.y,texture).setDepth(7).setScale(def.kind==='gust'?.95:.7);
             const label=this.txt(def.x,def.y-def.radius-35,def.kind==='gust'?'돌풍 · 위아래로 피하기':'낙하 파편 · 피하기',{fontSize:'17px',color:'#fff2cb',backgroundColor:'#28485a',padding:{x:7,y:4}}).setOrigin(.5).setDepth(8);
             this.flightHazards.push({def,sprite,label});
         }
         for (const original of this.mapDef.objects) {
             const def={...original};
-            const texture = def.texture??(def.flightRing?'flightRing':def.kind==='truthGift'?'genie':def.kind==='mirror'?'mirror':def.kind==='vision'?'starMap':def.kind==='journal'?'journal':def.kind==='flameGift'?'rah':['torch','furnace','vine','rope','quest','gift','bridge','ending'].includes(def.kind)?def.kind:['gear','key','gate','golden'].includes(def.kind)?def.kind:def.kind==='rescue'?'naira':def.kind === 'chest' ? 'chest' : def.kind === 'npc' ? (this.mapDef.id==='S08'?'genie':this.mapDef.id==='S06'?'rah':this.mapDef.id === 'S05'||this.mapDef.id==='S07'?'naira':this.mapDef.id === 'S02' ? 'siren' : 'player') : def.kind === 'shell' || def.kind === 'remote' ? 'shell' : def.kind === 'rod' || def.kind === 'crisis' ? 'rod' : 'bell');
+            const texture=objectTexture(def,this.mapDef.id);
             const scale=def.flightRing ? 1.35 : ['npc','rescue','truthGift'].includes(def.kind)?1:def.kind === 'checkpoint' ? 0.42 : 0.68;
             const portraitTexture=texture==='roc'?'roc-webtoon':texture==='naira'?'naira-webtoon':texture==='genie'?'genie-webtoon':texture==='player'?'hero-webtoon':texture;
             const displayTexture=texture==='siren'?'siren-webtoon':texture==='rah'?'rah-webtoon':portraitTexture;
-            const shownTexture=this.textures.exists(displayTexture)?displayTexture:texture;
+            const propTexture=worldPropTexture(displayTexture,key=>this.textures.exists(key),def.id);
+            const shownTexture=this.textures.exists(propTexture)?propTexture:texture;
             const sprite = this.add.image(def.x, def.y, shownTexture).setDisplaySize(96*scale,128*scale).setDepth(4);
             // Painted characters keep their own proportions instead of being squeezed into 3:4.
             if(shownTexture.endsWith('-webtoon')){const source=this.textures.get(shownTexture).getSourceImage();sprite.setDisplaySize(128*scale*source.width/source.height,128*scale);}
@@ -333,7 +342,7 @@ export class Stage extends Phaser.Scene {
             this.objects.push({ def, sprite, label });
         }
         for (const h of this.mapDef.hearts)
-            this.hearts.push({ id: h.id, large: !!h.large, sprite: this.add.image(h.x, h.y, 'heart').setScale(h.large ? 0.5 : 0.36).setDepth(5) });
+            this.hearts.push({ id: h.id, large: !!h.large, sprite: this.add.image(h.x, h.y, worldPropTexture('heart',key=>this.textures.exists(key))).setScale(h.large ? 0.5 : 0.36).setDepth(5) });
         this.slash = this.add.graphics().setDepth(12);
         this.storyFx=this.add.graphics().setDepth(8);
         this.crystalArt=this.add.graphics().setDepth(6);
@@ -349,7 +358,7 @@ export class Stage extends Phaser.Scene {
         this.hint.setVisible(this.host.controlMode==='keyboard');
         this.hpBars=this.add.graphics().setDepth(6);
         this.actionKey='';
-        this.events.once(Phaser.Scenes.Events.SHUTDOWN, () => { this.host.input.clear(); this.projectiles = []; this.attack = null; });
+        this.events.once(Phaser.Scenes.Events.SHUTDOWN, () => { this.host.input.clear(); this.projectiles = []; this.effects = []; this.attack = null; });
         this.host.changed();
         this.host.ready();
         const stageInfo=campaign.find(info=>info.id===this.mapDef.id);
@@ -491,19 +500,36 @@ export class Stage extends Phaser.Scene {
     }
     else
         this.physics.resume(); }
+    private artSnapshot(){
+        return {
+            projectileArt:this.projectiles.map(p=>({x:p.sprite.x,y:p.sprite.y,vx:p.vx,vy:p.vy,wave:p.wave,start:p.start,remaining:p.until-this.sim,
+                type:p.sprite.type,texture:p.sprite instanceof Phaser.GameObjects.Sprite?p.sprite.texture.key:'legacy-arc',
+                frame:p.sprite instanceof Phaser.GameObjects.Sprite?Number(p.sprite.frame.name):null,
+                flipX:p.sprite instanceof Phaser.GameObjects.Sprite?p.sprite.flipX:false,rotation:p.sprite.rotation,
+                displayWidth:p.sprite.displayWidth,displayHeight:p.sprite.displayHeight,glyph:p.glyph?.text??null})),
+            effectArt:this.effects.map(e=>({x:e.sprite.x,y:e.sprite.y,texture:e.sprite.texture.key,frame:Number(e.sprite.frame.name),start:e.start,remaining:e.duration-(this.sim-e.start),displayWidth:e.sprite.displayWidth,displayHeight:e.sprite.displayHeight})),
+            cachedEffectKeys:this.textures.getTextureKeys().filter(key=>key.startsWith('projectile-')||key.startsWith('effect-')),
+            cachedActionKeys:this.textures.getTextureKeys().filter(key=>key==='enemy-actions'||key==='kite-actions'),
+        };
+    }
     snapshot() {
         // Scene restart disposes old frames before preload/create rebuild them.
         // Keep the read-only observer from dereferencing disposed textures.
         if (!this.sys.isActive() || !this.player?.active || !this.player.body)
             return {stage:null,player:null,save:structuredClone(this.host.save),paused:true,loading:true,sim:this.sim,enemies:[],storyDevices:[],freeMovement:false};
         const style = terrainStyleFor(this.mapDef);
+        const propArt={cachedKeys:this.textures.getTextureKeys().filter(key=>key.startsWith('prop-')),
+            objects:this.objects.map(object=>({id:object.def.id,kind:object.def.kind,texture:object.sprite.texture.key,x:object.sprite.x,y:object.sprite.y,width:object.sprite.displayWidth,height:object.sprite.displayHeight,visible:object.sprite.visible,done:this.done(object.def.id)})),
+            chests:this.objects.filter(object=>object.def.kind==='chest').map(object=>({id:object.def.id,texture:object.sprite.texture.key,x:object.sprite.x,y:object.sprite.y,width:object.sprite.displayWidth,height:object.sprite.displayHeight,done:this.done(object.def.id)})),
+            hearts:this.hearts.map(heart=>({id:heart.id,large:heart.large,active:heart.sprite.active,
+                ...(heart.sprite.active?{texture:heart.sprite.texture.key,x:heart.sprite.x,y:heart.sprite.y,width:heart.sprite.displayWidth,height:heart.sprite.displayHeight}:{})}))};
         const terrain = {style, cachedKeys:this.textures.getTextureKeys().filter(key=>key.startsWith('terrain-')),
             textures:terrainAssetKeys(style).map(key=>{const image=this.textures.get(key).getSourceImage() as HTMLImageElement|HTMLCanvasElement;return {key,width:image.width,height:image.height,source:image instanceof HTMLImageElement?image.currentSrc:'generated'};}),
             // TileSprite.texture is its private render canvas; displayTexture is
             // the original fill pattern in the pinned Phaser 3.90 runtime.
             platforms:[...this.skins].map(([rect,skin])=>({x:rect.x,y:rect.y,width:rect.width,height:rect.height,texture:(Reflect.get(skin,'displayTexture') as Phaser.Textures.Texture).key,visible:skin.visible,skinX:skin.x,skinY:skin.y,skinWidth:skin.width,skinHeight:skin.height})),
             tops:this.children.list.filter(child=>child instanceof Phaser.GameObjects.TileSprite&&(Reflect.get(child,'displayTexture') as Phaser.Textures.Texture).key===`terrain-${style}-top`).map(child=>{const top=child as Phaser.GameObjects.TileSprite;return {x:top.x,y:top.y,width:top.width,height:top.height,texture:(Reflect.get(top,'displayTexture') as Phaser.Textures.Texture).key};})};
-        return { terrain, heroArt:this.heroArt?{texture:this.heroArt.texture.key,frame:Number(this.heroArt.frame.name),x:this.heroArt.x,y:this.heroArt.y,flipX:this.heroArt.flipX,originY:this.heroArt.originY}:null, weaponArt:this.weaponArt?{visible:this.weaponArt.visible,x:this.weaponArt.x,y:this.weaponArt.y,texture:this.weaponArt.texture.key,angle:this.weaponArt.angle}:null, storyDevices:this.objects.filter(o=>o.def.mechanic).map(o=>({id:o.def.id,x:o.def.x,y:o.def.y,mechanic:o.def.mechanic,done:this.done(o.def.id),state:this.deviceStates.get(o.def.id)})), freeMovement:this.freeMovement(), stage: this.mapDef?.id, player: this.player ? { x: this.player.x, y: this.player.y, grounded: ((this.player.body as Phaser.Physics.Arcade.Body)?.blocked.down||(this.player.body as Phaser.Physics.Arcade.Body)?.touching.down), vx: this.player.body?.velocity.x, vy: this.player.body?.velocity.y, hp: this.host.hp, maxHp: maxHp(this.host.save), bodyWidth: this.player.body?.width, bodyHeight: this.player.body?.height } : null, save: structuredClone(this.host.save), sim: this.sim, paused: this.stopped, enemies: this.enemies.map(e => ({ id: e.def.id, x: e.sprite.x, y: e.sprite.y, hp: e.hp, state: e.state, visible:e.sprite.visible, alpha:e.sprite.alpha, burn:e.burn, art:e.def.actionArt, texture:e.sprite.texture.key, frame:Number(e.sprite.frame.name), flipX:e.sprite.flipX, originY:e.sprite.originY, displayHeight:e.sprite.displayHeight, footOffset:e.footOffset, label:e.label.text })), flightHazards:this.flightHazards.map(h=>({id:h.def.id,x:h.sprite.x,y:h.sprite.y,kind:h.def.kind})), projectiles: this.projectiles.length, boomerang: !!this.boom, attack: this.attack?.id ?? null, air: this.air, submerged:this.submerged, bubbleProtected: canBreatheUnderwater(this.host.save), movingPlatforms: this.moving.map(p=>({x:p.rect.x,y:p.rect.y-p.def.h/2,w:p.def.w})), mp:this.host.mp, flameReady:this.flameReady, pulse:!!this.pulse, wave:this.wave?{id:this.wave.def.id,at:this.wave.at}:null, grip:this.grip?.id??null, mirrors:[...this.mirrorDirections], connectedMirrors:connectedMirrors(this.mirrorDirections), puzzleSafe:this.mapDef?.id==='S08'&&!!this.player&&this.player.x>=crystalSafeStart, frameMs: this.lastFrame }; }
+        return { ...this.artSnapshot(), terrain, propArt, heroArt:this.heroArt?{texture:this.heroArt.texture.key,frame:Number(this.heroArt.frame.name),x:this.heroArt.x,y:this.heroArt.y,flipX:this.heroArt.flipX,originY:this.heroArt.originY}:null, weaponArt:this.weaponArt?{visible:this.weaponArt.visible,x:this.weaponArt.x,y:this.weaponArt.y,texture:this.weaponArt.texture.key,angle:this.weaponArt.angle}:null, storyDevices:this.objects.filter(o=>o.def.mechanic).map(o=>({id:o.def.id,x:o.def.x,y:o.def.y,mechanic:o.def.mechanic,done:this.done(o.def.id),state:this.deviceStates.get(o.def.id)})), freeMovement:this.freeMovement(), stage: this.mapDef?.id, player: this.player ? { x: this.player.x, y: this.player.y, grounded: ((this.player.body as Phaser.Physics.Arcade.Body)?.blocked.down||(this.player.body as Phaser.Physics.Arcade.Body)?.touching.down), vx: this.player.body?.velocity.x, vy: this.player.body?.velocity.y, hp: this.host.hp, maxHp: maxHp(this.host.save), bodyWidth: this.player.body?.width, bodyHeight: this.player.body?.height } : null, save: structuredClone(this.host.save), sim: this.sim, paused: this.stopped, enemies: this.enemies.map(e => ({ id: e.def.id, x: e.sprite.x, y: e.sprite.y, hp: e.hp, state: e.state, visible:e.sprite.visible, alpha:e.sprite.alpha, burn:e.burn, art:e.def.actionArt, texture:e.sprite.texture.key, frame:Number(e.sprite.frame.name), flipX:e.sprite.flipX, originX:e.sprite.originX, originY:e.sprite.originY, displayHeight:e.sprite.displayHeight, footOffset:e.footOffset, label:e.label.text })), flightHazards:this.flightHazards.map(h=>({id:h.def.id,x:h.sprite.x,y:h.sprite.y,kind:h.def.kind,radius:h.def.radius,texture:h.sprite.texture.key,width:h.sprite.displayWidth,height:h.sprite.displayHeight,rotation:h.sprite.rotation,scale:h.sprite.scaleX})), projectiles: this.projectiles.length, boomerang: !!this.boom, attack: this.attack?.id ?? null, air: this.air, submerged:this.submerged, bubbleProtected: canBreatheUnderwater(this.host.save), movingPlatforms: this.moving.map(p=>({x:p.rect.x,y:p.rect.y-p.def.h/2,w:p.def.w})), mp:this.host.mp, flameReady:this.flameReady, pulse:!!this.pulse, wave:this.wave?{id:this.wave.def.id,at:this.wave.at}:null, grip:this.grip?.id??null, mirrors:[...this.mirrorDirections], connectedMirrors:connectedMirrors(this.mirrorDirections), puzzleSafe:this.mapDef?.id==='S08'&&!!this.player&&this.player.x>=crystalSafeStart, frameMs: this.lastFrame }; }
     update(_time: number, delta: number) {
         if (this.stopped || !this.player)
             return;
@@ -606,6 +632,7 @@ export class Stage extends Phaser.Scene {
         this.updateFlame(dt);
         this.updateEnemies(dt);
         this.updateProjectiles(dt);
+        this.updateEffects();
         this.updateLightning();
         for (const h of this.hearts) {
             if (!h.sprite.active)
@@ -998,10 +1025,10 @@ export class Stage extends Phaser.Scene {
         e.hp=Math.max(0,e.hp-damage);e.sprite.setTintFill(0xfff4d6);this.time.delayedCall(70,()=>{if(e.state!=='defeated'&&e.sprite.active)e.sprite.setTint(0xffefb0);});this.hitPop(e,damage);
         if(e.hp===0){e.state='defeated';const defeat=e.def.actionArt?actionDefeatKind(e.def.actionArt):undefined;const human=defeat?defeat==='human':['bandit','captain','archer'].includes(e.def.kind)||(this.mapDef.id==='S18'&&e.def.kind==='boss');const animal=defeat?defeat==='animal':['siren','crab','bat','beast'].includes(e.def.kind)||['S09','S12','S21','S22'].includes(this.mapDef.id);e.label.setText(human?'항복했어요':animal?'저주가 풀렸어!':'빛으로 돌아갔어요');this.defeatEffect(e,human,animal);
             const boss=['captain','siren','boss'].includes(e.def.kind);
-            if(boss){this.projectiles.forEach(p=>{p.sprite.destroy();p.glyph.destroy();});this.projectiles=[];}
+            if(boss){this.projectiles.forEach(p=>{p.sprite.destroy();p.glyph?.destroy();});this.projectiles=[];}
             const bossCheckpoint=this.mapDef.checkpoints.some(checkpoint=>checkpoint.id==='boss')?'boss':this.mapDef.checkpoints.at(-1)!.id;
             this.host.reward({id:e.def.id,xp:e.def.kind==='captain'?30:e.def.kind==='siren'?50:6,coins:3,objectives:boss||this.mapDef.id==='S06'?[e.def.id]:[],checkpoint:boss?{stageId:this.mapDef.id,checkpointId:bossCheckpoint}:undefined});
-            if(e.def.kind==='siren'){this.projectiles.forEach(p=>{p.sprite.destroy();p.glyph.destroy();});this.projectiles=[];this.host.dialogue('freed',()=>{});}
+            if(e.def.kind==='siren'){this.projectiles.forEach(p=>{p.sprite.destroy();p.glyph?.destroy();});this.projectiles=[];this.host.dialogue('freed',()=>{});}
         }
         this.host.changed();
     }
@@ -1011,23 +1038,46 @@ export class Stage extends Phaser.Scene {
         const number=this.txt(e.sprite.x,top,`${damage}`,{fontSize:'26px',fontStyle:'bold',color:'#ffe27a',stroke:'#3a2318',strokeThickness:5}).setOrigin(.5).setDepth(15);
         this.tweens.add({targets:number,y:top-46,alpha:0,duration:650,ease:'Quad.easeOut',onComplete:()=>number.destroy()});
         if(this.host.save.settings.reducedMotion)return;
-        const spark=this.add.star(e.sprite.x-Math.sign(e.sprite.x-this.player.x)*24,e.sprite.y-10,6,8,26,0xfff1b8).setDepth(14).setAlpha(.95);
-        this.tweens.add({targets:spark,scale:1.6,alpha:0,angle:45,duration:180,onComplete:()=>spark.destroy()});
+        const x=e.sprite.x-Math.sign(e.sprite.x-this.player.x)*24,y=e.sprite.y-10;
+        if(!this.playEffect('effect-hit-spark',x,y)){
+            const spark=this.add.star(x,y,6,8,26,0xfff1b8).setDepth(14).setAlpha(.95);
+            this.tweens.add({targets:spark,scale:1.6,alpha:0,angle:45,duration:180,onComplete:()=>spark.destroy()});
+        }
         this.cameras.main.shake(60,.0018);
+    }
+    private playEffect(key:EffectArtKey,x:number,y:number){
+        if(this.host.save.settings.reducedMotion||!this.textures.exists(key))return false;
+        // Bound only the visual pool; no combat or reward state depends on it.
+        if(this.effects.length>=24)this.effects.shift()!.sprite.destroy();
+        const sprite=this.add.sprite(x,y,key,0).setDisplaySize(128,128).setDepth(14);
+        this.effects.push({sprite,start:this.sim,duration:effectDuration[key]});
+        return true;
+    }
+    private updateEffects(){
+        if(this.host.save.settings.reducedMotion){this.effects.forEach(effect=>effect.sprite.destroy());this.effects=[];return;}
+        for(const effect of this.effects){
+            const age=this.sim-effect.start;
+            if(age>=effect.duration)effect.sprite.destroy();
+            else effect.sprite.setFrame(effectFrame(age,effect.duration));
+        }
+        this.effects=this.effects.filter(effect=>effect.sprite.active);
     }
     private setEnemyPose(e:Enemy){
         if(!e.art)return;
         const layout=enemyActionLayout(e.art,e.state,e.bodyHeight!,e.footOffset!);
-        e.sprite.setFrame(layout.frame).setDisplaySize(layout.displaySize,layout.displaySize).setOrigin(.5,layout.originY);
+        // Phaser mirrors frame coordinates: mirror the measured origin too so
+        // the sail stays on the unchanged flight target when facing left.
+        const originX=e.sprite.flipX?1-layout.originX:layout.originX;
+        e.sprite.setFrame(layout.frame).setDisplaySize(layout.displaySize,layout.displaySize).setOrigin(originX,layout.originY);
         e.bodyWidth=layout.bodyWidth;
     }
     private defeatEffect(e:Enemy,human:boolean,animal:boolean){
         this.tweens.killTweensOf(e.sprite);
         this.setEnemyPose(e);
         e.sprite.clearTint();
-        if(human){this.tweens.add({targets:e.sprite,alpha:.8,duration:this.host.save.settings.reducedMotion?0:260});return;}
+        if(human){this.playEffect('effect-surrender-flag',e.sprite.x,e.sprite.y-48);this.tweens.add({targets:e.sprite,alpha:.8,duration:this.host.save.settings.reducedMotion?0:260});return;}
         const color=e.def.kind==='boss'?0xffe5a4:0x9eeadd;
-        if(!this.host.save.settings.reducedMotion)for(let i=0;i<9;i++){const mote=this.add.circle(e.sprite.x,e.sprite.y,3+(i%3),color,.9).setDepth(8);this.tweens.add({targets:mote,x:e.sprite.x+Math.cos(i*.7)*55,y:e.sprite.y-30-Math.sin(i*.8)*50,alpha:0,scale:1.8,duration:500+i*45,onComplete:()=>mote.destroy()});}
+        if(!this.playEffect('effect-purify-light',e.sprite.x,e.sprite.y-24)&&!this.host.save.settings.reducedMotion)for(let i=0;i<9;i++){const mote=this.add.circle(e.sprite.x,e.sprite.y,3+(i%3),color,.9).setDepth(8);this.tweens.add({targets:mote,x:e.sprite.x+Math.cos(i*.7)*55,y:e.sprite.y-30-Math.sin(i*.8)*50,alpha:0,scale:1.8,duration:500+i*45,onComplete:()=>mote.destroy()});}
         const hold=e.art?(animal?900:300):0;
         this.tweens.add({targets:e.sprite,alpha:0,scaleX:e.sprite.scaleX*1.25,scaleY:e.sprite.scaleY*1.25,y:e.sprite.y-25,delay:hold,duration:this.host.save.settings.reducedMotion?0:520,onComplete:()=>e.sprite.setVisible(false)});
         this.tweens.add({targets:e.label,alpha:0,delay:hold+650,duration:350,onComplete:()=>e.label.setVisible(false)});
@@ -1167,20 +1217,20 @@ export class Stage extends Phaser.Scene {
                     if(!['archer','siren','kite'].includes(e.def.kind)&&!this.host.save.settings.reducedMotion)this.tweens.add({targets:e.sprite,x:e.sprite.x+Math.sign(this.player.x-e.sprite.x)*20,duration:110,yoyo:true,ease:'Quad.easeOut'});
                     if (e.def.kind === 'siren') {
                         if (e.pattern++ % 2 === 0)
-                            this.projectile(e.sprite.x, e.sprite.y + 35, Math.sign(e.target - e.sprite.x) * 230, 0, true);
+                            this.projectile(e.sprite.x, e.sprite.y + 35, Math.sign(e.target - e.sprite.x) * 230, 0, true,e.def.kind);
                         else
                             for (const vy of [-140, -55, 35])
-                                this.projectile(e.sprite.x, e.sprite.y, Math.sign(e.target - e.sprite.x) * 190, vy, false);
+                                this.projectile(e.sprite.x, e.sprite.y, Math.sign(e.target - e.sprite.x) * 190, vy, false,e.def.kind);
                     }
                     else if (e.def.kind === 'kite'){
                         const angle=Phaser.Math.Angle.Between(e.sprite.x,e.sprite.y,e.target,e.targetY);
-                        this.projectile(e.sprite.x,e.sprite.y,Math.cos(angle)*220,Math.sin(angle)*220,true);
+                        this.projectile(e.sprite.x,e.sprite.y,Math.cos(angle)*220,Math.sin(angle)*220,true,e.def.kind);
                     }
                     else if (e.def.kind === 'archer')
-                        this.projectile(e.sprite.x, e.sprite.y, Math.sign(e.target - e.sprite.x) * 250, 0, false);
+                        this.projectile(e.sprite.x, e.sprite.y, Math.sign(e.target - e.sprite.x) * 250, 0, false,e.def.kind);
                     else if(e.def.kind==='boss'&&this.mapDef.id==='S31'){
                         const phase=e.hp/e.maxHp>.65?1:e.hp/e.maxHp>.3?2:3;
-                        for(const vy of phase===2?[-95,0,95]:[0])this.projectile(e.sprite.x,e.sprite.y,Math.sign(e.target-e.sprite.x)*(phase===3?135:210),vy,phase===3);
+                        for(const vy of phase===2?[-95,0,95]:[0])this.projectile(e.sprite.x,e.sprite.y,Math.sign(e.target-e.sprite.x)*(phase===3?135:210),vy,phase===3,e.def.kind);
                         e.pattern++;
                     }
                 }
@@ -1202,30 +1252,40 @@ export class Stage extends Phaser.Scene {
             // Calm enemies show a small health bar instead of a "24 / 24" caption.
             if (e.state === 'idle')
                 e.label.setVisible(false);
+            e.sprite.setFlipX((e.def.kind==='guardian'?e.target:this.player.x) < e.sprite.x);
             this.setEnemyPose(e);
             const barY=e.sprite.y-(e.bodyHeight??e.sprite.displayHeight)*(e.def.kind==='boss'?.62:.5)-10;
             if(distance<620&&e.sprite.visible){const w=e.def.kind==='boss'?110:64,ratio=e.hp/e.maxHp;this.hpBars.fillStyle(0x10212c,.75).fillRoundedRect(e.sprite.x-w/2-2,barY-2,w+4,11,4).fillStyle(ratio>.5?0x8be38f:ratio>.25?0xffd36e:0xff8f7a).fillRoundedRect(e.sprite.x-w/2,barY,Math.max(3,w*ratio),7,3);}
             e.label.setPosition(e.sprite.x, barY-24);
-            e.sprite.setFlipX((e.def.kind==='guardian'?e.target:this.player.x) < e.sprite.x);
         }
         this.bossText.setText(boss).setVisible(!!boss);
     }
-    private projectile(x: number, y: number, vx: number, vy: number, wave: boolean) {
-        const sprite = this.add.circle(x, y, wave ? 18 : 11, wave ? 0x85ece0 : 0xe7b9f3).setStrokeStyle(3, 0x244f64).setDepth(8);
-        const glyph = this.txt(x, y, wave ? '≋' : '♪', {fontSize:'23px',color:'#183948',fontFamily:'sans-serif'}).setOrigin(0.5).setDepth(9);
-        this.projectiles.push({ sprite, glyph, vx, vy, until: this.sim + 4000, wave });
+    private projectile(x: number, y: number, vx: number, vy: number, wave: boolean,kind:string) {
+        const key=projectileArtFor(kind,wave);
+        let sprite:Phaser.GameObjects.Sprite|Phaser.GameObjects.Arc;
+        let glyph:Phaser.GameObjects.Text|undefined;
+        if(this.textures.exists(key)){
+            sprite=this.add.sprite(x,y,key,0).setDisplaySize(64,64).setDepth(8);
+            if(kind==='kite')sprite.setRotation(Math.atan2(vy,vx));
+            else if(key==='projectile-siren-wave')sprite.setFlipX(vx<0);
+        }else{
+            sprite=this.add.circle(x, y, wave ? 18 : 11, wave ? 0x85ece0 : 0xe7b9f3).setStrokeStyle(3, 0x244f64).setDepth(8);
+            glyph=this.txt(x, y, wave ? '≋' : '♪', {fontSize:'23px',color:'#183948',fontFamily:'sans-serif'}).setOrigin(0.5).setDepth(9);
+        }
+        this.projectiles.push({ sprite, glyph, vx, vy, start:this.sim, until: this.sim + 4000, wave });
     }
     private updateProjectiles(dt: number) { for (const p of this.projectiles) {
         p.sprite.x += p.vx * dt / 1000;
     p.sprite.y += p.vy * dt / 1000;
-    p.glyph.setPosition(p.sprite.x, p.sprite.y);
+    p.glyph?.setPosition(p.sprite.x, p.sprite.y);
+    if(p.sprite instanceof Phaser.GameObjects.Sprite)p.sprite.setFrame(projectileFrame(this.sim-p.start,this.host.save.settings.reducedMotion));
         if (Math.abs(p.sprite.x - this.player.x) < 34 && Math.abs(p.sprite.y - this.player.y) < (p.wave ? 42 : 48)) {
             this.hurt(14);
             p.until = 0;
         }
     if (this.sim >= p.until) {
         p.sprite.destroy();
-        p.glyph.destroy();
+        p.glyph?.destroy();
     }
     } this.projectiles = this.projectiles.filter(p => p.sprite.active); }
     private updateLightning() {

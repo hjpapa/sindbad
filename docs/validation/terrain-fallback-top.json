@@ -12,7 +12,7 @@
         "key": "terrain-dock-fill",
         "width": 128,
         "height": 128,
-        "source": "blob:http://127.0.0.1:5174/64f93c46-c885-4831-a7f1-e6fec5e027d0"
+        "source": "blob:http://127.0.0.1:5174/30767930-fc9b-47ba-bf34-16fe76b58ec7"
       },
       {
         "key": "terrain-dock-top",
@@ -167,6 +167,6 @@
     "http://127.0.0.1:5174/assets/terrain/terrain-dock-top.webp",
     "http://127.0.0.1:5174/assets/terrain/terrain-dock-top.webp"
   ],
-  "path": "docs/screenshots/art-a5/phone-missing-top.png",
+  "path": "docs/screenshots/m6-kite/final/art-a5/phone-missing-top.png",
   "errors": []
 }

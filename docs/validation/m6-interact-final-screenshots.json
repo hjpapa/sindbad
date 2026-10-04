@@ -1,0 +1,785 @@
+{
+  "date": "2026-10-04T04:43:06.760656+00:00",
+  "pass": true,
+  "stats": {
+    "startTime": "2026-10-04T03:54:55.806Z",
+    "duration": 2846418.555,
+    "expected": 53,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "runtimeFilesUnchanged": 911,
+  "screenshots": [
+    {
+      "path": "docs/screenshots/m6-interact/final/m6-interact/campaign-S05-route.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "be6c8fe14f6989101850fa073095c50bd8b5474892e0d7ae4404363e12a77c80",
+      "bytes": 1102236
+    },
+    {
+      "path": "docs/screenshots/m6-interact/final/m6-interact/campaign-S10-route.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "830263abe786c08b16db109b4df34ba05db3da68e4fa5660a44d0841ce397d14",
+      "bytes": 1059489
+    },
+    {
+      "path": "docs/screenshots/m6-interact/final/m6-interact/campaign-S15-route.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "19e80a047d3181997c45a82e3dc4997650f0b55aab7f99fc670dfdbb2058777c",
+      "bytes": 1247342
+    },
+    {
+      "path": "docs/screenshots/m6-interact/final/m6-interact/campaign-S19-route.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "779617a8b093978911b33012b59ee933384faed5e64241aca78eba89b1fb267b",
+      "bytes": 849778
+    },
+    {
+      "path": "docs/screenshots/m6-interact/final/m6-interact/campaign-S25-route.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "3b4fe37b8d1b76ada8e971481446dbf71d8d7e1440076f2a0e4b99531049e563",
+      "bytes": 1062562
+    },
+    {
+      "path": "docs/screenshots/m6-interact/final/m6-interact/campaign-S29-route.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "b18060fe7317f0394e367851296b29a928b949a5079963b9857cbf81f964f8ae",
+      "bytes": 1186027
+    },
+    {
+      "path": "docs/screenshots/m6-interact/final/m6-interact/campaign-S36-route.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "c30eb89ed7eae72a85c64462751660886259b80309e703d50c140eaf7f5e875f",
+      "bytes": 1004478
+    },
+    {
+      "path": "docs/screenshots/m6-interact/final/m6-interact/fallback-golden-before.png",
+      "size": [
+        1180,
+        820
+      ],
+      "sha256": "a7304ad633aaf3b7ded721095d9c69ce1f49d6df964bf9ecdc842767dfc43eb3",
+      "bytes": 1095860
+    },
+    {
+      "path": "docs/screenshots/m6-interact/final/m6-interact/fallback-prop-lifering.png",
+      "size": [
+        1180,
+        820
+      ],
+      "sha256": "f45265bf89b8264e2793f23ee0f83695718b647074367e2a611403de60d6c8eb",
+      "bytes": 1084637
+    },
+    {
+      "path": "docs/screenshots/m6-interact/final/m6-interact/fallback-prop-lifevest.png",
+      "size": [
+        1180,
+        820
+      ],
+      "sha256": "0851b96c643ee44370b282ebccd95dc2b72e742caf92788b1df3c3a8d44111bd",
+      "bytes": 1077502
+    },
+    {
+      "path": "docs/screenshots/m6-interact/final/m6-interact/fallback-prop-rescue-rope.png",
+      "size": [
+        1180,
+        820
+      ],
+      "sha256": "00c31a7f4f2ca4824c64a0e095ee3823e0cde1a514238ed7487583f42a7f3f5a",
+      "bytes": 1104139
+    },
+    {
+      "path": "docs/screenshots/m6-interact/final/m6-interact/fallback-S01-scene-start.png",
+      "size": [
+        844,
+        390
+      ],
+      "sha256": "ed33317dd8c7b5fe0ca0b616c0c969584a8714bf26b6dc2a502079d184aa2a57",
+      "bytes": 455731
+    },
+    {
+      "path": "docs/screenshots/m6-interact/final/m6-interact/fallback-S02-scene-start.png",
+      "size": [
+        844,
+        390
+      ],
+      "sha256": "0a1fd6a9891ed77e93c8989b79528a4799555e5d1d4e993ee5783ed813ced8ce",
+      "bytes": 484920
+    },
+    {
+      "path": "docs/screenshots/m6-interact/final/m6-interact/fallback-S03-scene-start.png",
+      "size": [
+        844,
+        390
+      ],
+      "sha256": "0d805dce6a88265ac63b021d26c8192e33afbadf39cf8ff5b5f98b64adb45c8b",
+      "bytes": 452118
+    },
+    {
+      "path": "docs/screenshots/m6-interact/final/m6-interact/fallback-S04-scene-start.png",
+      "size": [
+        1180,
+        820
+      ],
+      "sha256": "d109bdf76e460005713b972c985966c0463b944c19b9aad4ff605a32e59deb40",
+      "bytes": 1076117
+    },
+    {
+      "path": "docs/screenshots/m6-interact/final/m6-interact/fallback-S05-scene-start.png",
+      "size": [
+        844,
+        390
+      ],
+      "sha256": "ce54654ad4152454cf839fc8cb5a5bfeb2c8557a27f159fc013aaa0150d2f84b",
+      "bytes": 490475
+    },
+    {
+      "path": "docs/screenshots/m6-interact/final/m6-interact/fallback-S06-scene-start.png",
+      "size": [
+        844,
+        390
+      ],
+      "sha256": "86d520f23b33f1dc47867ffc6acb556975665acff503513b596fe370eb275b02",
+      "bytes": 445745
+    },
+    {
+      "path": "docs/screenshots/m6-interact/final/m6-interact/fallback-S07-scene-start.png",
+      "size": [
+        844,
+        390
+      ],
+      "sha256": "83de47d4e32a6c4011d8e81957243e2eae2e86d153b645c4901db21844618130",
+      "bytes": 435583
+    },
+    {
+      "path": "docs/screenshots/m6-interact/final/m6-interact/fallback-S08-scene-start.png",
+      "size": [
+        844,
+        390
+      ],
+      "sha256": "51349af0af9fcb18cde27fcbc36b71decd17902453d5eb936d7f4f333ac30b83",
+      "bytes": 453235
+    },
+    {
+      "path": "docs/screenshots/m6-interact/final/m6-interact/fallback-S09-scene-start.png",
+      "size": [
+        844,
+        390
+      ],
+      "sha256": "ff5c1983fbf9e3f1cd0f7aa610af28701e7a2421fde4f167b59edc8172c08de4",
+      "bytes": 449013
+    },
+    {
+      "path": "docs/screenshots/m6-interact/final/m6-interact/fallback-S11-scene-start.png",
+      "size": [
+        844,
+        390
+      ],
+      "sha256": "cb3052fea161e2f8992434b9e77911293b0b6b2c4e7b6b36ce9ea5d0f43df394",
+      "bytes": 489128
+    },
+    {
+      "path": "docs/screenshots/m6-interact/final/m6-interact/fallback-S13-scene-start.png",
+      "size": [
+        844,
+        390
+      ],
+      "sha256": "827d65496fd930fb3847efba4c0f3dd77367a60478b44d7a8c7102549ae581a6",
+      "bytes": 511399
+    },
+    {
+      "path": "docs/screenshots/m6-interact/final/m6-interact/fallback-S19-scene-start.png",
+      "size": [
+        844,
+        390
+      ],
+      "sha256": "51d5e7b2c6153aef415fe148779b8268e997a199c9c73bcbd73808c1f06bf23e",
+      "bytes": 383711
+    },
+    {
+      "path": "docs/screenshots/m6-interact/final/m6-interact/fallback-S25-scene-start.png",
+      "size": [
+        844,
+        390
+      ],
+      "sha256": "e50740b8f2edae05840396dd0029f0fe5e8ce5a35d3cb227b683d9aac6532400",
+      "bytes": 464807
+    },
+    {
+      "path": "docs/screenshots/m6-interact/final/m6-interact/fallback-S28-scene-start.png",
+      "size": [
+        844,
+        390
+      ],
+      "sha256": "f019bbb11f533e6a4c5b3245ecd827ce4a60c861bc6e86ec1168898620fb228e",
+      "bytes": 471143
+    },
+    {
+      "path": "docs/screenshots/m6-interact/final/m6-interact/fallback-S36-scene-start.png",
+      "size": [
+        844,
+        390
+      ],
+      "sha256": "f97c1386848b0faaaf169a3b14bc9ac20a8a90c5d1fac0d7d14d039cdba074b8",
+      "bytes": 425692
+    },
+    {
+      "path": "docs/screenshots/m6-interact/final/m6-interact/golden-before.png",
+      "size": [
+        1180,
+        820
+      ],
+      "sha256": "f3e8a9c5e15ca2865c6ecee9427808e48853eb2bbf1c697e9fbe2e11610a7b61",
+      "bytes": 1097755
+    },
+    {
+      "path": "docs/screenshots/m6-interact/final/m6-interact/mobile-mobile-phone-dialogue.png",
+      "size": [
+        2532,
+        1170
+      ],
+      "sha256": "6331bb93c7c748c464a9c9e992804da4eed912e71dbc9e5b8fd77dc03645db99",
+      "bytes": 1675598
+    },
+    {
+      "path": "docs/screenshots/m6-interact/final/m6-interact/mobile-mobile-phone-start.png",
+      "size": [
+        2532,
+        1170
+      ],
+      "sha256": "ae3b984cb6057ea3ca8a6c27b5ab7ff471809ebb321fee0ad8143fd48efe3e24",
+      "bytes": 2681083
+    },
+    {
+      "path": "docs/screenshots/m6-interact/final/m6-interact/mobile-mobile-phone-swing.png",
+      "size": [
+        2532,
+        1170
+      ],
+      "sha256": "165863c38aafd8a70a7de11af7199a6aac168a1edfeaeb7c4a90f2b9584b5d65",
+      "bytes": 2654388
+    },
+    {
+      "path": "docs/screenshots/m6-interact/final/m6-interact/mobile-mobile-tablet-dialogue.png",
+      "size": [
+        2360,
+        1640
+      ],
+      "sha256": "122afc9e57845e944d6d67079c4edb38670704d77912653084c00f76256dece6",
+      "bytes": 2970309
+    },
+    {
+      "path": "docs/screenshots/m6-interact/final/m6-interact/mobile-mobile-tablet-start.png",
+      "size": [
+        2360,
+        1640
+      ],
+      "sha256": "0650c09bc4b13f122f35530e0597193f75f21cab0cc038348fed10898c30e174",
+      "bytes": 2940648
+    },
+    {
+      "path": "docs/screenshots/m6-interact/final/m6-interact/mobile-mobile-tablet-swing.png",
+      "size": [
+        2360,
+        1640
+      ],
+      "sha256": "9c364b71bc9e5b99f284011050d214fc735c35b75097ce7319e693b4524d9c70",
+      "bytes": 2911977
+    },
+    {
+      "path": "docs/screenshots/m6-interact/final/m6-interact/play-S01-boss-cleared.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "085ad3dfc4a3b3f03cd86739bab9df1a927f7f35b0608f12c582243e2897ca56",
+      "bytes": 1065022
+    },
+    {
+      "path": "docs/screenshots/m6-interact/final/m6-interact/play-S02-boomerang.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "ac8bd52737b7fa162ff27f8b326c2643f08264231a1a143794dabc7f8fe51955",
+      "bytes": 1085195
+    },
+    {
+      "path": "docs/screenshots/m6-interact/final/m6-interact/play-S03-storm-crystal.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "eb2e1d26bda815434e29027ef44bc780ed489da87b4ad068552e8ee873057259",
+      "bytes": 1076103
+    },
+    {
+      "path": "docs/screenshots/m6-interact/final/m6-interact/play-S04-moving-whale.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "acb7cede484e1286e21db4d192496ead46430e33dcdd2cbe64be8a7810afa56b",
+      "bytes": 1173540
+    },
+    {
+      "path": "docs/screenshots/m6-interact/final/m6-interact/play-S04-whale-face.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "0b289d11b6879ee055e093f21c0521dfb5353725a3d3e47e9a620e2f4e247bea",
+      "bytes": 1193281
+    },
+    {
+      "path": "docs/screenshots/m6-interact/final/m6-interact/play-S05-bubble-golden.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "a3af10df8a29c3397bf5ef92a80d21bde4b617bb3b9588538529562c7738ea83",
+      "bytes": 1085224
+    },
+    {
+      "path": "docs/screenshots/m6-interact/final/m6-interact/play-S06-first-flame.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "f5391186ec844c3020f0d402360433d16810d4d45ee12b4d1156626cbe16c21b",
+      "bytes": 1023979
+    },
+    {
+      "path": "docs/screenshots/m6-interact/final/m6-interact/play-S07-boat.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "1a4f260fbf9ebb4d2c7564fdd7cd8d36a1e68b7ef735223b9ac3ed9cc65f3a34",
+      "bytes": 1033887
+    },
+    {
+      "path": "docs/screenshots/m6-interact/final/m6-interact/play-S07-cave-resume.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "4f6a0790cf317330625e2f72bceb6043e7607f5b4650c2f6112a6e4b32a50f00",
+      "bytes": 1053538
+    },
+    {
+      "path": "docs/screenshots/m6-interact/final/m6-interact/play-S07-wave-warning.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "00ec791a2bc322b0fef73cb05dfc74b883e020a2982b55dc71001b1db6b3d049",
+      "bytes": 1053740
+    },
+    {
+      "path": "docs/screenshots/m6-interact/final/m6-interact/play-S08-hidden-journal.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "42cea88777bafd7f17bbb5a44f6e182ca31073cb32dfed099b2347599d87e44e",
+      "bytes": 1033835
+    },
+    {
+      "path": "docs/screenshots/m6-interact/final/m6-interact/play-S08-mirrors.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "53625408000362bc718d25c9eabbd4a9159f8593fa88aaabff8b8f64d85a1504",
+      "bytes": 1034982
+    },
+    {
+      "path": "docs/screenshots/m6-interact/final/m6-interact/prop-lifering.png",
+      "size": [
+        1180,
+        820
+      ],
+      "sha256": "004ac88bf73ad9fc66dd7992bd7e8c0f932c9904230b55a50e9587ec1d842f29",
+      "bytes": 1087602
+    },
+    {
+      "path": "docs/screenshots/m6-interact/final/m6-interact/prop-lifevest.png",
+      "size": [
+        1180,
+        820
+      ],
+      "sha256": "1162fab5dca7640f30cdab8cf070259e47f9125fb17565ed049f68a2748d187c",
+      "bytes": 1082110
+    },
+    {
+      "path": "docs/screenshots/m6-interact/final/m6-interact/prop-rescue-rope.png",
+      "size": [
+        1180,
+        820
+      ],
+      "sha256": "1870594eb7e336af5775956af48f0ee88208b759febeef03807cd1010b92d6bb",
+      "bytes": 1107672
+    },
+    {
+      "path": "docs/screenshots/m6-interact/final/m6-interact/S01-scene-start.png",
+      "size": [
+        844,
+        390
+      ],
+      "sha256": "15008e18c3a5b53ccea6b4cb3f0daa2773871ae63aeaacde92f3a6bb86b7f792",
+      "bytes": 456803
+    },
+    {
+      "path": "docs/screenshots/m6-interact/final/m6-interact/S02-scene-start.png",
+      "size": [
+        844,
+        390
+      ],
+      "sha256": "96b3bbf314ba55756d41e0ffdc499ac0dec441103797877355f63f289bdf4b9e",
+      "bytes": 485373
+    },
+    {
+      "path": "docs/screenshots/m6-interact/final/m6-interact/S03-scene-start.png",
+      "size": [
+        844,
+        390
+      ],
+      "sha256": "14141113e10b1f3c1c7095174d3233aae07efd16f4268834859ed6c4c10fc917",
+      "bytes": 452641
+    },
+    {
+      "path": "docs/screenshots/m6-interact/final/m6-interact/S04-scene-start.png",
+      "size": [
+        1180,
+        820
+      ],
+      "sha256": "3873a68d7f0258d9fd81135679d28cc63a417faa2161636a8f654f7e9cb3e689",
+      "bytes": 1080337
+    },
+    {
+      "path": "docs/screenshots/m6-interact/final/m6-interact/S05-scene-start.png",
+      "size": [
+        844,
+        390
+      ],
+      "sha256": "1ca8218b43561fd3efa1dcbe3f5ba2491a5aa6be58e5ddd32c588fe9de6b7b5a",
+      "bytes": 491061
+    },
+    {
+      "path": "docs/screenshots/m6-interact/final/m6-interact/S06-scene-start.png",
+      "size": [
+        844,
+        390
+      ],
+      "sha256": "fe205278499e91afb99469d2de7a5532cc267301a7fe3ce6b74ef5ad92482f5b",
+      "bytes": 448427
+    },
+    {
+      "path": "docs/screenshots/m6-interact/final/m6-interact/S07-scene-start.png",
+      "size": [
+        844,
+        390
+      ],
+      "sha256": "e200d51d51a3bbea2f17eb45afa389515ef7d7eeed3b393539fdd8a2fbd8b89a",
+      "bytes": 436195
+    },
+    {
+      "path": "docs/screenshots/m6-interact/final/m6-interact/S08-scene-start.png",
+      "size": [
+        844,
+        390
+      ],
+      "sha256": "70c67a1cb880f957a28de0abddacc379a5e4cc73d2db1fdb33be5a35bd6aa8ee",
+      "bytes": 453307
+    },
+    {
+      "path": "docs/screenshots/m6-interact/final/m6-interact/S09-scene-start.png",
+      "size": [
+        844,
+        390
+      ],
+      "sha256": "113627a26628ddbd47a3442d8a1cc3f9491e4afc2d238f21b9d1c811c708b2a1",
+      "bytes": 449553
+    },
+    {
+      "path": "docs/screenshots/m6-interact/final/m6-interact/S11-scene-start.png",
+      "size": [
+        844,
+        390
+      ],
+      "sha256": "e2440664a0db667319ba4acb561b945acb8f8558f22e9561b9e9eb066341b9d6",
+      "bytes": 489609
+    },
+    {
+      "path": "docs/screenshots/m6-interact/final/m6-interact/S13-scene-start.png",
+      "size": [
+        844,
+        390
+      ],
+      "sha256": "8dfbad26dcbf4e1fd6c75886047048ec345146b7689e19ec7fa65a50d4069c60",
+      "bytes": 511986
+    },
+    {
+      "path": "docs/screenshots/m6-interact/final/m6-interact/S19-scene-start.png",
+      "size": [
+        844,
+        390
+      ],
+      "sha256": "a15fe216ca6e1cc46c4e8f53d57e065dc15b93fe4c41334dcd867fca56661785",
+      "bytes": 387911
+    },
+    {
+      "path": "docs/screenshots/m6-interact/final/m6-interact/S25-scene-start.png",
+      "size": [
+        844,
+        390
+      ],
+      "sha256": "c5c6850c4ea79f5532fd58906d1a89aeef9ff172222363c0c45fdf57c355fcf7",
+      "bytes": 465639
+    },
+    {
+      "path": "docs/screenshots/m6-interact/final/m6-interact/S28-scene-start.png",
+      "size": [
+        844,
+        390
+      ],
+      "sha256": "7d89717c87681e169ca336088a14426c7d9ab4704ac44951c11728c9425cc4e1",
+      "bytes": 473671
+    },
+    {
+      "path": "docs/screenshots/m6-interact/final/m6-interact/S36-scene-start.png",
+      "size": [
+        844,
+        390
+      ],
+      "sha256": "20c544fad0370d60181ebfbd40153b6c86f1559c16dfb2697c1787f88c2a0bae",
+      "bytes": 427985
+    },
+    {
+      "path": "docs/screenshots/m6-interact/final/m6-props/actual-healing.png",
+      "size": [
+        1180,
+        820
+      ],
+      "sha256": "5d24f6d5b05e5f6686103a2c444576df0467d947ee5551fd7feaa8bfe6648102",
+      "bytes": 983807
+    },
+    {
+      "path": "docs/screenshots/m6-interact/final/m6-props/fallback-actual-healing.png",
+      "size": [
+        844,
+        390
+      ],
+      "sha256": "6f3f47bdfd85aa0f6d6079c3e6225122061a10ac183719eafbe40504d9952bac",
+      "bytes": 460216
+    },
+    {
+      "path": "docs/screenshots/m6-interact/final/m6-props/phone-chest.png",
+      "size": [
+        844,
+        390
+      ],
+      "sha256": "74d5d9820749b724f5169ab0eddbbcfba25c6d31be236d90c3bf1ad6459e3611",
+      "bytes": 464991
+    },
+    {
+      "path": "docs/screenshots/m6-interact/final/m6-props/phone-fallback-chest.png",
+      "size": [
+        844,
+        390
+      ],
+      "sha256": "f283537851b609efa4986051aa55380e6f3c46df6b7396ce3be0486173e9438a",
+      "bytes": 463924
+    },
+    {
+      "path": "docs/screenshots/m6-interact/final/m6-props/phone-fallback-large-heart.png",
+      "size": [
+        844,
+        390
+      ],
+      "sha256": "b40ff3cfed1ba01f6c151eb4a0743fad61b9e9227bde1ccebb3931dfbe377d1a",
+      "bytes": 443366
+    },
+    {
+      "path": "docs/screenshots/m6-interact/final/m6-props/phone-fallback-normal-heart.png",
+      "size": [
+        844,
+        390
+      ],
+      "sha256": "01a579226c1416a2827389267d23ee51239acded548f70cf667b6ae9b1f4399c",
+      "bytes": 458657
+    },
+    {
+      "path": "docs/screenshots/m6-interact/final/m6-props/phone-large-heart.png",
+      "size": [
+        844,
+        390
+      ],
+      "sha256": "29eae24cf7c15dff217bfd93eef327bb758733630819801b2dd5749d85aa1707",
+      "bytes": 443598
+    },
+    {
+      "path": "docs/screenshots/m6-interact/final/m6-props/phone-normal-heart.png",
+      "size": [
+        844,
+        390
+      ],
+      "sha256": "2b61174f39d8993f628fea412f84966bd9b1031ecd83bc4b22f1a0bdf4de1610",
+      "bytes": 458960
+    },
+    {
+      "path": "docs/screenshots/m6-interact/final/m6-props/tablet-chest.png",
+      "size": [
+        1180,
+        820
+      ],
+      "sha256": "2efc61d198607bb79d95f7b477bb2272b81729741e098fbe47cbe1429b37fd30",
+      "bytes": 978167
+    },
+    {
+      "path": "docs/screenshots/m6-interact/final/m6-props/tablet-large-heart.png",
+      "size": [
+        1180,
+        820
+      ],
+      "sha256": "599b4fddc950ce632a05a4822cba12e60e3882ad3eb5b20ece1ea309a84a4fb8",
+      "bytes": 923710
+    },
+    {
+      "path": "docs/screenshots/m6-interact/final/m6-props/tablet-normal-heart.png",
+      "size": [
+        1180,
+        820
+      ],
+      "sha256": "47a4ef05dbfa68fb17392bbf7f1ca272d2bf42340704224af66e8bccab1cbbac",
+      "bytes": 974972
+    }
+  ],
+  "copied": [
+    {
+      "source": "docs/screenshots/m6-interact/mobile/mobile-phone-dialogue.png",
+      "path": "docs/screenshots/m6-interact/final/m6-interact/mobile-mobile-phone-dialogue.png"
+    },
+    {
+      "source": "docs/screenshots/m6-interact/mobile/mobile-phone-start.png",
+      "path": "docs/screenshots/m6-interact/final/m6-interact/mobile-mobile-phone-start.png"
+    },
+    {
+      "source": "docs/screenshots/m6-interact/mobile/mobile-phone-swing.png",
+      "path": "docs/screenshots/m6-interact/final/m6-interact/mobile-mobile-phone-swing.png"
+    },
+    {
+      "source": "docs/screenshots/m6-interact/mobile/mobile-tablet-dialogue.png",
+      "path": "docs/screenshots/m6-interact/final/m6-interact/mobile-mobile-tablet-dialogue.png"
+    },
+    {
+      "source": "docs/screenshots/m6-interact/mobile/mobile-tablet-start.png",
+      "path": "docs/screenshots/m6-interact/final/m6-interact/mobile-mobile-tablet-start.png"
+    },
+    {
+      "source": "docs/screenshots/m6-interact/mobile/mobile-tablet-swing.png",
+      "path": "docs/screenshots/m6-interact/final/m6-interact/mobile-mobile-tablet-swing.png"
+    },
+    {
+      "source": "test-results/complete-journey-new-game--139b0-ntrols-and-no-injected-save/S05-route.png",
+      "path": "docs/screenshots/m6-interact/final/m6-interact/campaign-S05-route.png"
+    },
+    {
+      "source": "test-results/complete-journey-new-game--139b0-ntrols-and-no-injected-save/S10-route.png",
+      "path": "docs/screenshots/m6-interact/final/m6-interact/campaign-S10-route.png"
+    },
+    {
+      "source": "test-results/complete-journey-new-game--139b0-ntrols-and-no-injected-save/S15-route.png",
+      "path": "docs/screenshots/m6-interact/final/m6-interact/campaign-S15-route.png"
+    },
+    {
+      "source": "test-results/complete-journey-new-game--139b0-ntrols-and-no-injected-save/S19-route.png",
+      "path": "docs/screenshots/m6-interact/final/m6-interact/campaign-S19-route.png"
+    },
+    {
+      "source": "test-results/complete-journey-new-game--139b0-ntrols-and-no-injected-save/S25-route.png",
+      "path": "docs/screenshots/m6-interact/final/m6-interact/campaign-S25-route.png"
+    },
+    {
+      "source": "test-results/complete-journey-new-game--139b0-ntrols-and-no-injected-save/S29-route.png",
+      "path": "docs/screenshots/m6-interact/final/m6-interact/campaign-S29-route.png"
+    },
+    {
+      "source": "test-results/complete-journey-new-game--139b0-ntrols-and-no-injected-save/S36-route.png",
+      "path": "docs/screenshots/m6-interact/final/m6-interact/campaign-S36-route.png"
+    },
+    {
+      "source": "test-results/adventure-new-game-\u2192-S01-\u2192-43a43-nputs-and-checkpoint-reload/S01-boss-cleared.png",
+      "path": "docs/screenshots/m6-interact/final/m6-interact/play-S01-boss-cleared.png"
+    },
+    {
+      "source": "test-results/adventure-new-game-\u2192-S01-\u2192-43a43-nputs-and-checkpoint-reload/S02-boomerang.png",
+      "path": "docs/screenshots/m6-interact/final/m6-interact/play-S02-boomerang.png"
+    },
+    {
+      "source": "test-results/adventure-new-game-\u2192-S01-\u2192-43a43-nputs-and-checkpoint-reload/S03-storm-crystal.png",
+      "path": "docs/screenshots/m6-interact/final/m6-interact/play-S03-storm-crystal.png"
+    },
+    {
+      "source": "test-results/m2-existing-M1-save-\u2192-whal-7140c-ral-rescue-G02-and-blessing/S04-moving-whale.png",
+      "path": "docs/screenshots/m6-interact/final/m6-interact/play-S04-moving-whale.png"
+    },
+    {
+      "source": "test-results/m2-existing-M1-save-\u2192-whal-7140c-ral-rescue-G02-and-blessing/S04-whale-face.png",
+      "path": "docs/screenshots/m6-interact/final/m6-interact/play-S04-whale-face.png"
+    },
+    {
+      "source": "test-results/m2-existing-M1-save-\u2192-whal-7140c-ral-rescue-G02-and-blessing/S05-bubble-golden.png",
+      "path": "docs/screenshots/m6-interact/final/m6-interact/play-S05-bubble-golden.png"
+    },
+    {
+      "source": "test-results/flame-waves-S06-furnaces-a-19dc8-aves-blessing-and-cave-save/S06-first-flame.png",
+      "path": "docs/screenshots/m6-interact/final/m6-interact/play-S06-first-flame.png"
+    },
+    {
+      "source": "test-results/flame-waves-S06-furnaces-a-19dc8-aves-blessing-and-cave-save/S07-boat.png",
+      "path": "docs/screenshots/m6-interact/final/m6-interact/play-S07-boat.png"
+    },
+    {
+      "source": "test-results/flame-waves-S06-furnaces-a-19dc8-aves-blessing-and-cave-save/S07-cave-resume.png",
+      "path": "docs/screenshots/m6-interact/final/m6-interact/play-S07-cave-resume.png"
+    },
+    {
+      "source": "test-results/flame-waves-missed-wave-de-ee46f--and-allows-another-attempt/S07-wave-warning.png",
+      "path": "docs/screenshots/m6-interact/final/m6-interact/play-S07-wave-warning.png"
+    },
+    {
+      "source": "test-results/crystal-S07-save-\u2192-mirror--15733-lusion-and-optional-journal/S08-mirrors.png",
+      "path": "docs/screenshots/m6-interact/final/m6-interact/play-S08-mirrors.png"
+    },
+    {
+      "source": "test-results/crystal-S07-save-\u2192-mirror--15733-lusion-and-optional-journal/S08-hidden-journal.png",
+      "path": "docs/screenshots/m6-interact/final/m6-interact/play-S08-hidden-journal.png"
+    }
+  ],
+  "method": "fresh complete journey and PNGs from final run; byte-identical copy; actual PNG decoding and SHA256; screenshots of map starts only show their viewport",
+  "artStatus": "ART_DRAFT"
+}

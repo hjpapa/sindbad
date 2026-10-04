@@ -1,0 +1,21 @@
+{
+  "key": "prop-wave-rope",
+  "legacy": "rope",
+  "subject": "One upright hanging cream maritime rope with a large loop knot at its lower end, clear three horizontal twist bands. Entire rope and loop inside canvas.",
+  "status": "generated",
+  "prompt": "Create ONE original world interaction sprite for a bright child-friendly Korean adventure webtoon game. Attached project hero is STYLE reference ONLY: confident navy ink outlines, warm teal/gold palette, clean 2-3 flat cel shade levels, top-left lighting. Do not draw the hero. PORTRAIT 3:4 canvas requested 768x1024, true transparent RGBA background. Subject: One upright hanging cream maritime rope with a large loop knot at its lower end, clear three horizontal twist bands. Entire rope and loop inside canvas. Front-facing readable silhouette at only 65x87 game pixels. Entire object centered, occupies roughly x=10%-90%, y=14%-86%, with fully transparent padding on every side. Keep the complete silhouette and all parts inside canvas. No scene, floor, cast shadow, circular backing, characters, hands, extra objects, labels, letters, numbers, logos, signature, watermark, blood, wounds or scary faces. Original project design only. Use clean limited broad color shapes rather than tiny decorative detail.",
+  "nativePath": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-3edcfa7d-dc8e-4932-9719-21afe38affab.png",
+  "path": "art-source/webtoon/generated/props-m6/prop-wave-rope-01.png",
+  "sha256": "cafac53794f378291a5da5e9018ff52ad9990098be202fe7b410bd1fdae59b25",
+  "nativeSize": [
+    1086,
+    1448
+  ],
+  "alphaBounds": [
+    293,
+    37,
+    797,
+    1398
+  ],
+  "selected": true
+}

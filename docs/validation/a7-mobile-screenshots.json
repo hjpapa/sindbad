@@ -1,0 +1,32 @@
+[
+  {
+    "source": "docs/screenshots/mobile-phone-start.png",
+    "path": "docs/screenshots/art-a7/mobile-phone-start.png",
+    "sha256": "320bb3e437b42f02d8c772af237b446c667c865ae92ae18e0cf4c2016be66478"
+  },
+  {
+    "source": "docs/screenshots/mobile-phone-swing.png",
+    "path": "docs/screenshots/art-a7/mobile-phone-swing.png",
+    "sha256": "d3166f0014f9461eab5f0e26569d66dcbe661496867903e461a2591db3f552e5"
+  },
+  {
+    "source": "docs/screenshots/mobile-phone-dialogue.png",
+    "path": "docs/screenshots/art-a7/mobile-phone-dialogue.png",
+    "sha256": "6331bb93c7c748c464a9c9e992804da4eed912e71dbc9e5b8fd77dc03645db99"
+  },
+  {
+    "source": "docs/screenshots/mobile-tablet-start.png",
+    "path": "docs/screenshots/art-a7/mobile-tablet-start.png",
+    "sha256": "911ee3497f45affd8ce67486e9a2876fdc27ab1a459f37ac011f8f833f10ef5d"
+  },
+  {
+    "source": "docs/screenshots/mobile-tablet-swing.png",
+    "path": "docs/screenshots/art-a7/mobile-tablet-swing.png",
+    "sha256": "c0647a89336e489b7350bbeb0ff79159cac95149123436903d46624e8ff0440f"
+  },
+  {
+    "source": "docs/screenshots/mobile-tablet-dialogue.png",
+    "path": "docs/screenshots/art-a7/mobile-tablet-dialogue.png",
+    "sha256": "9ea970c6aeeb4455050448e7c52b5f78e7d7a49e260c87b5f9f15c27127d378a"
+  }
+]

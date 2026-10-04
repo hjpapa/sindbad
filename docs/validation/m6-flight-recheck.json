@@ -1,0 +1,269 @@
+{
+  "config": {
+    "configFile": "C:\\code\\code10(sindbad)\\playwright.config.ts",
+    "rootDir": "C:/code/code10(sindbad)/tests/e2e",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": "C:\\code\\code10(sindbad)\\tests\\e2e\\server.setup.ts",
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ],
+      [
+        "html"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "C:/code/code10(sindbad)/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "C:/code/code10(sindbad)/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 240000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.55.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "flight-art.spec.ts",
+      "file": "flight-art.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "phone flight art webtoon preserves rings, hazards and resume",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 67813,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toContain\"",
+                      "duration": 30
+                    },
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 401
+                    },
+                    {
+                      "title": "Expect \"poll toContain\"",
+                      "duration": 12
+                    }
+                  ],
+                  "startTime": "2026-10-04T06:37:48.547Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "dbbdb9258d65a16065e7-cbbeed0a80614db37763",
+          "file": "flight-art.spec.ts",
+          "line": 40,
+          "column": 41
+        },
+        {
+          "title": "phone flight art missing SVG recovery preserves rings, hazards and resume",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 35261,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toContain\"",
+                      "duration": 20
+                    },
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 138
+                    },
+                    {
+                      "title": "Expect \"poll toContain\"",
+                      "duration": 24
+                    }
+                  ],
+                  "startTime": "2026-10-04T06:38:59.378Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "dbbdb9258d65a16065e7-8870a92e61bc30c8cc0d",
+          "file": "flight-art.spec.ts",
+          "line": 40,
+          "column": 41
+        },
+        {
+          "title": "tablet flight art webtoon preserves rings, hazards and resume",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 34315,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toContain\"",
+                      "duration": 10
+                    },
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 8
+                    },
+                    {
+                      "title": "Expect \"poll toContain\"",
+                      "duration": 9
+                    }
+                  ],
+                  "startTime": "2026-10-04T06:39:34.662Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "dbbdb9258d65a16065e7-94a516b5af8066b4e821",
+          "file": "flight-art.spec.ts",
+          "line": 40,
+          "column": 41
+        },
+        {
+          "title": "tablet flight art missing SVG recovery preserves rings, hazards and resume",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 36535,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toContain\"",
+                      "duration": 7
+                    },
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 10
+                    },
+                    {
+                      "title": "Expect \"poll toContain\"",
+                      "duration": 22
+                    }
+                  ],
+                  "startTime": "2026-10-04T06:40:09.005Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "dbbdb9258d65a16065e7-9b5aa28426ff76b87e31",
+          "file": "flight-art.spec.ts",
+          "line": 40,
+          "column": 41
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-04T06:37:38.570Z",
+    "duration": 188991.755,
+    "expected": 4,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

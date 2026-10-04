@@ -1,0 +1,25 @@
+{
+  "fullStats": {
+    "startTime": "2026-10-04T08:42:57.440Z",
+    "duration": 3003530.548,
+    "expected": 60,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  },
+  "recordRepairStats": {
+    "startTime": "2026-10-04T09:35:58.903Z",
+    "duration": 133238.61500000002,
+    "expected": 2,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "fullFrozenFiles": 944,
+  "repairFrozenFiles": 944,
+  "betweenRunsChanged": [
+    "tests/e2e/weapon-art.spec.ts"
+  ],
+  "primaryScreenshots": 69
+}
+Repair screenshots 42 decoded

@@ -1,0 +1,374 @@
+{
+  "config": {
+    "configFile": "C:\\code\\code10(sindbad)\\playwright.config.ts",
+    "rootDir": "C:/code/code10(sindbad)/tests/e2e",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": "C:\\code\\code10(sindbad)\\tests\\e2e\\server.setup.ts",
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ],
+      [
+        "html"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "C:/code/code10(sindbad)/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "C:/code/code10(sindbad)/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 240000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.55.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "enemy-actions.spec.ts",
+      "file": "enemy-actions.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "40 enemy poses, mirrored direction, safe defeat and save reload on phone/tablet",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 720000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 266493,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "ART phone skeleton: poses / direction / magic / reload passed\n"
+                    },
+                    {
+                      "text": "ART phone bandit: poses / direction / human / reload passed\n"
+                    },
+                    {
+                      "text": "ART phone guard: poses / direction / human / reload passed\n"
+                    },
+                    {
+                      "text": "ART phone pirate: poses / direction / human / reload passed\n"
+                    },
+                    {
+                      "text": "ART phone snake: poses / direction / animal / reload passed\n"
+                    },
+                    {
+                      "text": "ART phone tiger: poses / direction / animal / reload passed\n"
+                    },
+                    {
+                      "text": "ART phone dragon: poses / direction / animal / reload passed\n"
+                    },
+                    {
+                      "text": "ART phone crab: poses / direction / animal / reload passed\n"
+                    },
+                    {
+                      "text": "ART phone stone: poses / direction / magic / reload passed\n"
+                    },
+                    {
+                      "text": "ART phone kuura: poses / direction / magic / reload passed\n"
+                    },
+                    {
+                      "text": "ART tablet skeleton: poses / direction / magic / reload passed\n"
+                    },
+                    {
+                      "text": "ART tablet bandit: poses / direction / human / reload passed\n"
+                    },
+                    {
+                      "text": "ART tablet guard: poses / direction / human / reload passed\n"
+                    },
+                    {
+                      "text": "ART tablet pirate: poses / direction / human / reload passed\n"
+                    },
+                    {
+                      "text": "ART tablet snake: poses / direction / animal / reload passed\n"
+                    },
+                    {
+                      "text": "ART tablet tiger: poses / direction / animal / reload passed\n"
+                    },
+                    {
+                      "text": "ART tablet dragon: poses / direction / animal / reload passed\n"
+                    },
+                    {
+                      "text": "ART tablet crab: poses / direction / animal / reload passed\n"
+                    },
+                    {
+                      "text": "ART tablet stone: poses / direction / magic / reload passed\n"
+                    },
+                    {
+                      "text": "ART tablet kuura: poses / direction / magic / reload passed\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 12
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 193
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 25
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 188
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 8
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 183
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 5
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 17
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 6
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 199
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 10
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 114
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 4
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 130
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 8
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 93
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 21
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 103
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 5
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 274
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 13
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 14
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 6
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 335
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 16
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 95
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 14
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 139
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 23
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 420
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 5
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 262
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 11
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 267
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 6
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 115
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 10
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 397
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 15
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 58
+                    }
+                  ],
+                  "startTime": "2026-10-04T00:40:00.148Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "4050b6d89f0074ea899f-d76ee6d2b566c6f1f991",
+          "file": "enemy-actions.spec.ts",
+          "line": 44,
+          "column": 1
+        },
+        {
+          "title": "missing action atlas retains a playable fallback and magical skeleton defeat",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7552,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 13
+                    }
+                  ],
+                  "startTime": "2026-10-04T00:44:27.576Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "4050b6d89f0074ea899f-933cb68d8165ee7920e2",
+          "file": "enemy-actions.spec.ts",
+          "line": 175,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-04T00:39:57.434Z",
+    "duration": 280330.626,
+    "expected": 2,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

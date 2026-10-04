@@ -168,7 +168,7 @@ function renderHud() {
     hudCache = html;
     hud.innerHTML = html;
     touchControls.setMode(free);
-    touchControls.setSkill(!flight && skill ? skill.short : null, skill?.name ?? '보물 능력');
+    touchControls.setSkill(!flight && skill ? skill.short : null, skill?.name ?? '보물 능력', s.equippedSkill);
     touchControls.setWeapons(weaponIcon(s.equippedWeapon), !flight && list.length > 1 ? weaponIcon(next) : null, weapons[s.equippedWeapon].name);
     if (def.id === 'S08') el('reset-mirrors').onclick = () => { stage.resetMirrors(); canvas.focus(); };
     el('bag').onclick = mapMenu;

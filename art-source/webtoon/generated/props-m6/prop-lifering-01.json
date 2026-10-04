@@ -1,0 +1,24 @@
+{
+  "key": "prop-lifering",
+  "legacy": "gear",
+  "subject": "One round orange and cream life ring with four broad cream sections and a dark teal center opening. Small integral rope attachments, no ocean or people.",
+  "targets": [
+    "S04.gear.3"
+  ],
+  "status": "generated",
+  "prompt": "Create ONE original world interaction sprite for a bright child-friendly Korean adventure webtoon game. Attached project hero is STYLE reference ONLY: confident navy ink outlines, warm teal/gold palette, clean 2-3 flat cel shade levels, top-left lighting. Do not draw the hero. PORTRAIT 3:4 canvas requested 768x1024, true transparent RGBA background. Subject: One round orange and cream life ring with four broad cream sections and a dark teal center opening. Small integral rope attachments, no ocean or people. Front-facing readable silhouette at only 65x87 game pixels. Entire object centered, occupies roughly x=10%-90%, y=14%-86%, with fully transparent padding on every side. Keep the complete silhouette and all parts inside canvas. No scene, floor, cast shadow, circular backing, characters, hands, extra objects, labels, letters, numbers, logos, signature, watermark, blood, wounds or scary faces. Original project design only. Use clean limited broad color shapes rather than tiny decorative detail.",
+  "nativePath": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-30dce87d-e81e-47ba-bb4a-c6f6c77868d3.png",
+  "path": "art-source/webtoon/generated/props-m6/prop-lifering-01.png",
+  "sha256": "21647234ced660aa2a2cf4160b55fccaa957bf6b39cd7ad87dea0bcfa1c35244",
+  "nativeSize": [
+    1086,
+    1448
+  ],
+  "alphaBounds": [
+    51,
+    236,
+    1033,
+    1227
+  ],
+  "selected": true
+}

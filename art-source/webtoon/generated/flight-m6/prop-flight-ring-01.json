@@ -1,0 +1,26 @@
+{
+  "key": "prop-flight-ring",
+  "legacy": "flightRing",
+  "subject": "A single vertical oval magical wind ring, luminous warm gold and teal with a clean thick outlined rim, subtle small teal wind curls around the rim; wide completely transparent empty oval center. Front view, clearly pass-through aerial hoop, no physical base or platform. The entire ring and all curls must fit the canvas with at least 8% outer transparent margin.",
+  "prompt": "Use case: illustration-story. Asset type: original child-friendly 2D side-scrolling Sinbad flight game prop. Image 1 is only the project's own hero-webtoon style reference: use clean ink contours, crisp cel shading, warm teal and gold palette, upper-left light; do not depict the hero. Primary subject: A single vertical oval magical wind ring, luminous warm gold and teal with a clean thick outlined rim, subtle small teal wind curls around the rim; wide completely transparent empty oval center. Front view, clearly pass-through aerial hoop, no physical base or platform. The entire ring and all curls must fit the canvas with at least 8% outer transparent margin. Composition: one single isolated centered object in a portrait 3:4 canvas, target canvas 1024x1365 or closest supported 3:4 portrait. Genuine RGBA transparent background, no cast backdrop, no text, letters, numerals, logo, watermark, signature, frame or grid. No blood or wounds. Do not mimic external artists, copyrighted characters or existing games. Original project design. Keep the outer margin transparent, no clipping.",
+  "nativePath": "C:/Users/tbose/.codex/generated_images/01a10013-499c-7b11-9c12-3ae8826e542a/exec-e6125b38-2390-4411-a0d4-b3795c3b10cd.png",
+  "path": "art-source/webtoon/generated/flight-m6/prop-flight-ring-01.png",
+  "selected": true,
+  "status": "generated",
+  "tool": "OpenAI built-in imagegen",
+  "references": [
+    "art-source/webtoon/hero-webtoon.webp"
+  ],
+  "visualReview": "No visible text, wounds or cropped silhouette. Transparent exterior; ring center empty. Final user art approval pending.",
+  "sha256": "749f93eb58e24a69816a3e245203e59f649d6f5d632cf5b4fa7cceac66897de0",
+  "nativeSize": [
+    1086,
+    1448
+  ],
+  "alphaBounds": [
+    77,
+    35,
+    1011,
+    1392
+  ]
+}

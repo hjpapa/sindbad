@@ -1,0 +1,30 @@
+
+> sinbad-seven-treasures@0.1.0 test:e2e
+> playwright test tests/e2e/kite-actions.spec.ts --reporter=list,json,html
+
+
+Running 4 tests using 1 worker
+
+(node:21568) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:21568) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+KITE phone S10 webtoon: poses / both directions / pause / touch attack / release / reward reload passed
+KITE phone S33 webtoon: poses / both directions / pause / touch attack / release / reward reload passed
+  ok 1 tests\e2e\kite-actions.spec.ts:49:41 › phone kite four actions keeps flight combat, release and stable rewards (45.3s)
+KITE phone S10 fallback: poses / both directions / pause / touch attack / release / reward reload passed
+KITE phone S33 fallback: poses / both directions / pause / touch attack / release / reward reload passed
+  ok 2 tests\e2e\kite-actions.spec.ts:49:41 › phone kite missing-sheet recovery keeps flight combat, release and stable rewards (36.0s)
+KITE tablet S10 webtoon: poses / both directions / pause / touch attack / release / reward reload passed
+KITE tablet S33 webtoon: poses / both directions / pause / touch attack / release / reward reload passed
+  ok 3 tests\e2e\kite-actions.spec.ts:49:41 › tablet kite four actions keeps flight combat, release and stable rewards (38.3s)
+KITE tablet S10 fallback: poses / both directions / pause / touch attack / release / reward reload passed
+KITE tablet S33 fallback: poses / both directions / pause / touch attack / release / reward reload passed
+  ok 4 tests\e2e\kite-actions.spec.ts:49:41 › tablet kite missing-sheet recovery keeps flight combat, release and stable rewards (37.7s)
+
+  4 passed (2.7m)
+
+To open last HTML report run:
+[36m[39m
+[36m  npx playwright show-report[39m
+[36m[39m

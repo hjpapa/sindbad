@@ -1,0 +1,3115 @@
+{
+  "pass": true,
+  "method": "explicit level/gear fixtures, actual one-hit combat, rAF read-only sampling of all six frames; safe surrender/curse/light defeat and visual cleanup",
+  "checks": [
+    {
+      "device": "phone",
+      "stage": "S01",
+      "kind": "skeleton",
+      "path": "docs/screenshots/m6-kite/final/art-a7/phone-S01-skeleton-defeat.png",
+      "samples": [
+        {
+          "x": 980.5781500000014,
+          "y": 550,
+          "texture": "effect-hit-spark",
+          "frame": 0,
+          "start": 3423.8853333333345,
+          "remaining": 180,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 956.5781500000014,
+          "y": 536,
+          "texture": "effect-purify-light",
+          "frame": 0,
+          "start": 3423.8853333333345,
+          "remaining": 650,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 980.5781500000014,
+          "y": 550,
+          "texture": "effect-hit-spark",
+          "frame": 0,
+          "start": 3423.8853333333345,
+          "remaining": 163.32999999999993,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 956.5781500000014,
+          "y": 536,
+          "texture": "effect-purify-light",
+          "frame": 0,
+          "start": 3423.8853333333345,
+          "remaining": 633.3299999999999,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 980.5781500000014,
+          "y": 550,
+          "texture": "effect-hit-spark",
+          "frame": 1,
+          "start": 3423.8853333333345,
+          "remaining": 146.67999999999984,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 956.5781500000014,
+          "y": 536,
+          "texture": "effect-purify-light",
+          "frame": 0,
+          "start": 3423.8853333333345,
+          "remaining": 616.6799999999998,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 980.5781500000014,
+          "y": 550,
+          "texture": "effect-hit-spark",
+          "frame": 1,
+          "start": 3423.8853333333345,
+          "remaining": 130.01999999999998,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 956.5781500000014,
+          "y": 536,
+          "texture": "effect-purify-light",
+          "frame": 0,
+          "start": 3423.8853333333345,
+          "remaining": 600.02,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 980.5781500000014,
+          "y": 550,
+          "texture": "effect-hit-spark",
+          "frame": 2,
+          "start": 3423.8853333333345,
+          "remaining": 113.34999999999991,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 956.5781500000014,
+          "y": 536,
+          "texture": "effect-purify-light",
+          "frame": 0,
+          "start": 3423.8853333333345,
+          "remaining": 583.3499999999999,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 980.5781500000014,
+          "y": 550,
+          "texture": "effect-hit-spark",
+          "frame": 2,
+          "start": 3423.8853333333345,
+          "remaining": 96.67999999999984,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 956.5781500000014,
+          "y": 536,
+          "texture": "effect-purify-light",
+          "frame": 0,
+          "start": 3423.8853333333345,
+          "remaining": 566.6799999999998,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 980.5781500000014,
+          "y": 550,
+          "texture": "effect-hit-spark",
+          "frame": 3,
+          "start": 3423.8853333333345,
+          "remaining": 80.00999999999976,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 956.5781500000014,
+          "y": 536,
+          "texture": "effect-purify-light",
+          "frame": 0,
+          "start": 3423.8853333333345,
+          "remaining": 550.0099999999998,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 980.5781500000014,
+          "y": 550,
+          "texture": "effect-hit-spark",
+          "frame": 3,
+          "start": 3423.8853333333345,
+          "remaining": 63.33999999999969,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 956.5781500000014,
+          "y": 536,
+          "texture": "effect-purify-light",
+          "frame": 1,
+          "start": 3423.8853333333345,
+          "remaining": 533.3399999999997,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 980.5781500000014,
+          "y": 550,
+          "texture": "effect-hit-spark",
+          "frame": 4,
+          "start": 3423.8853333333345,
+          "remaining": 46.66999999999962,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 956.5781500000014,
+          "y": 536,
+          "texture": "effect-purify-light",
+          "frame": 1,
+          "start": 3423.8853333333345,
+          "remaining": 516.6699999999996,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 980.5781500000014,
+          "y": 550,
+          "texture": "effect-hit-spark",
+          "frame": 4,
+          "start": 3423.8853333333345,
+          "remaining": 30.009999999999764,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 956.5781500000014,
+          "y": 536,
+          "texture": "effect-purify-light",
+          "frame": 1,
+          "start": 3423.8853333333345,
+          "remaining": 500.00999999999976,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 980.5781500000014,
+          "y": 550,
+          "texture": "effect-hit-spark",
+          "frame": 5,
+          "start": 3423.8853333333345,
+          "remaining": 13.329999999999927,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 956.5781500000014,
+          "y": 536,
+          "texture": "effect-purify-light",
+          "frame": 1,
+          "start": 3423.8853333333345,
+          "remaining": 483.3299999999999,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 956.5781500000014,
+          "y": 536,
+          "texture": "effect-purify-light",
+          "frame": 1,
+          "start": 3423.8853333333345,
+          "remaining": 466.6500000000001,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 956.5781500000014,
+          "y": 536,
+          "texture": "effect-purify-light",
+          "frame": 1,
+          "start": 3423.8853333333345,
+          "remaining": 449.97000000000025,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 956.5781500000014,
+          "y": 536,
+          "texture": "effect-purify-light",
+          "frame": 2,
+          "start": 3423.8853333333345,
+          "remaining": 433.3000000000002,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 956.5781500000014,
+          "y": 536,
+          "texture": "effect-purify-light",
+          "frame": 2,
+          "start": 3423.8853333333345,
+          "remaining": 416.6400000000003,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 956.5781500000014,
+          "y": 536,
+          "texture": "effect-purify-light",
+          "frame": 2,
+          "start": 3423.8853333333345,
+          "remaining": 399.9800000000005,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 956.5781500000014,
+          "y": 536,
+          "texture": "effect-purify-light",
+          "frame": 2,
+          "start": 3423.8853333333345,
+          "remaining": 383.3100000000004,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 956.5781500000014,
+          "y": 536,
+          "texture": "effect-purify-light",
+          "frame": 2,
+          "start": 3423.8853333333345,
+          "remaining": 366.6400000000003,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 956.5781500000014,
+          "y": 536,
+          "texture": "effect-purify-light",
+          "frame": 2,
+          "start": 3423.8853333333345,
+          "remaining": 349.9600000000005,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 956.5781500000014,
+          "y": 536,
+          "texture": "effect-purify-light",
+          "frame": 2,
+          "start": 3423.8853333333345,
+          "remaining": 333.28000000000065,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 956.5781500000014,
+          "y": 536,
+          "texture": "effect-purify-light",
+          "frame": 3,
+          "start": 3423.8853333333345,
+          "remaining": 316.6200000000008,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 956.5781500000014,
+          "y": 536,
+          "texture": "effect-purify-light",
+          "frame": 3,
+          "start": 3423.8853333333345,
+          "remaining": 299.96000000000095,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 956.5781500000014,
+          "y": 536,
+          "texture": "effect-purify-light",
+          "frame": 3,
+          "start": 3423.8853333333345,
+          "remaining": 283.2900000000009,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 956.5781500000014,
+          "y": 536,
+          "texture": "effect-purify-light",
+          "frame": 3,
+          "start": 3423.8853333333345,
+          "remaining": 266.6200000000008,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 956.5781500000014,
+          "y": 536,
+          "texture": "effect-purify-light",
+          "frame": 3,
+          "start": 3423.8853333333345,
+          "remaining": 249.95000000000073,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 956.5781500000014,
+          "y": 536,
+          "texture": "effect-purify-light",
+          "frame": 3,
+          "start": 3423.8853333333345,
+          "remaining": 233.28000000000065,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 956.5781500000014,
+          "y": 536,
+          "texture": "effect-purify-light",
+          "frame": 4,
+          "start": 3423.8853333333345,
+          "remaining": 216.61000000000058,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 956.5781500000014,
+          "y": 536,
+          "texture": "effect-purify-light",
+          "frame": 4,
+          "start": 3423.8853333333345,
+          "remaining": 199.93000000000075,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 956.5781500000014,
+          "y": 536,
+          "texture": "effect-purify-light",
+          "frame": 4,
+          "start": 3423.8853333333345,
+          "remaining": 183.2700000000009,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 956.5781500000014,
+          "y": 536,
+          "texture": "effect-purify-light",
+          "frame": 4,
+          "start": 3423.8853333333345,
+          "remaining": 166.61000000000104,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 956.5781500000014,
+          "y": 536,
+          "texture": "effect-purify-light",
+          "frame": 4,
+          "start": 3423.8853333333345,
+          "remaining": 149.94000000000096,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 956.5781500000014,
+          "y": 536,
+          "texture": "effect-purify-light",
+          "frame": 4,
+          "start": 3423.8853333333345,
+          "remaining": 133.2800000000011,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 956.5781500000014,
+          "y": 536,
+          "texture": "effect-purify-light",
+          "frame": 4,
+          "start": 3423.8853333333345,
+          "remaining": 116.62000000000126,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 956.5781500000014,
+          "y": 536,
+          "texture": "effect-purify-light",
+          "frame": 5,
+          "start": 3423.8853333333345,
+          "remaining": 99.95000000000118,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 956.5781500000014,
+          "y": 536,
+          "texture": "effect-purify-light",
+          "frame": 5,
+          "start": 3423.8853333333345,
+          "remaining": 83.29000000000133,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 956.5781500000014,
+          "y": 536,
+          "texture": "effect-purify-light",
+          "frame": 5,
+          "start": 3423.8853333333345,
+          "remaining": 66.62000000000126,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 956.5781500000014,
+          "y": 536,
+          "texture": "effect-purify-light",
+          "frame": 5,
+          "start": 3423.8853333333345,
+          "remaining": 49.58000000000129,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 956.5781500000014,
+          "y": 536,
+          "texture": "effect-purify-light",
+          "frame": 5,
+          "start": 3423.8853333333345,
+          "remaining": 32.92000000000144,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 956.5781500000014,
+          "y": 536,
+          "texture": "effect-purify-light",
+          "frame": 5,
+          "start": 3423.8853333333345,
+          "remaining": 16.260000000001583,
+          "displayWidth": 128,
+          "displayHeight": 128
+        }
+      ],
+      "earned": [
+        "S01.reward.start",
+        "S01.enemy.skeleton.01"
+      ],
+      "label": "빛으로 돌아갔어요"
+    },
+    {
+      "device": "phone",
+      "stage": "S11",
+      "kind": "bandit",
+      "path": "docs/screenshots/m6-kite/final/art-a7/phone-S11-bandit-defeat.png",
+      "samples": [
+        {
+          "x": 732.577850000001,
+          "y": 540,
+          "texture": "effect-hit-spark",
+          "frame": 0,
+          "start": 2461.149999999999,
+          "remaining": 180,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 756.577850000001,
+          "y": 502,
+          "texture": "effect-surrender-flag",
+          "frame": 0,
+          "start": 2461.149999999999,
+          "remaining": 650,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 732.577850000001,
+          "y": 540,
+          "texture": "effect-hit-spark",
+          "frame": 0,
+          "start": 2461.149999999999,
+          "remaining": 163.34000000000015,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 756.577850000001,
+          "y": 502,
+          "texture": "effect-surrender-flag",
+          "frame": 0,
+          "start": 2461.149999999999,
+          "remaining": 633.3400000000001,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 732.577850000001,
+          "y": 540,
+          "texture": "effect-hit-spark",
+          "frame": 1,
+          "start": 2461.149999999999,
+          "remaining": 146.6800000000003,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 756.577850000001,
+          "y": 502,
+          "texture": "effect-surrender-flag",
+          "frame": 0,
+          "start": 2461.149999999999,
+          "remaining": 616.6800000000003,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 732.577850000001,
+          "y": 540,
+          "texture": "effect-hit-spark",
+          "frame": 1,
+          "start": 2461.149999999999,
+          "remaining": 130.02000000000044,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 756.577850000001,
+          "y": 502,
+          "texture": "effect-surrender-flag",
+          "frame": 0,
+          "start": 2461.149999999999,
+          "remaining": 600.0200000000004,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 732.577850000001,
+          "y": 540,
+          "texture": "effect-hit-spark",
+          "frame": 2,
+          "start": 2461.149999999999,
+          "remaining": 113.36000000000058,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 756.577850000001,
+          "y": 502,
+          "texture": "effect-surrender-flag",
+          "frame": 0,
+          "start": 2461.149999999999,
+          "remaining": 583.3600000000006,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 732.577850000001,
+          "y": 540,
+          "texture": "effect-hit-spark",
+          "frame": 2,
+          "start": 2461.149999999999,
+          "remaining": 96.69000000000051,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 756.577850000001,
+          "y": 502,
+          "texture": "effect-surrender-flag",
+          "frame": 0,
+          "start": 2461.149999999999,
+          "remaining": 566.6900000000005,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 732.577850000001,
+          "y": 540,
+          "texture": "effect-hit-spark",
+          "frame": 3,
+          "start": 2461.149999999999,
+          "remaining": 80.02000000000044,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 756.577850000001,
+          "y": 502,
+          "texture": "effect-surrender-flag",
+          "frame": 0,
+          "start": 2461.149999999999,
+          "remaining": 550.0200000000004,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 732.577850000001,
+          "y": 540,
+          "texture": "effect-hit-spark",
+          "frame": 3,
+          "start": 2461.149999999999,
+          "remaining": 63.3400000000006,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 756.577850000001,
+          "y": 502,
+          "texture": "effect-surrender-flag",
+          "frame": 1,
+          "start": 2461.149999999999,
+          "remaining": 533.3400000000006,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 732.577850000001,
+          "y": 540,
+          "texture": "effect-hit-spark",
+          "frame": 4,
+          "start": 2461.149999999999,
+          "remaining": 46.680000000000746,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 756.577850000001,
+          "y": 502,
+          "texture": "effect-surrender-flag",
+          "frame": 1,
+          "start": 2461.149999999999,
+          "remaining": 516.6800000000007,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 732.577850000001,
+          "y": 540,
+          "texture": "effect-hit-spark",
+          "frame": 4,
+          "start": 2461.149999999999,
+          "remaining": 30.010000000000673,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 756.577850000001,
+          "y": 502,
+          "texture": "effect-surrender-flag",
+          "frame": 1,
+          "start": 2461.149999999999,
+          "remaining": 500.0100000000007,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 732.577850000001,
+          "y": 540,
+          "texture": "effect-hit-spark",
+          "frame": 5,
+          "start": 2461.149999999999,
+          "remaining": 13.3400000000006,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 756.577850000001,
+          "y": 502,
+          "texture": "effect-surrender-flag",
+          "frame": 1,
+          "start": 2461.149999999999,
+          "remaining": 483.3400000000006,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 756.577850000001,
+          "y": 502,
+          "texture": "effect-surrender-flag",
+          "frame": 1,
+          "start": 2461.149999999999,
+          "remaining": 466.66000000000076,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 756.577850000001,
+          "y": 502,
+          "texture": "effect-surrender-flag",
+          "frame": 1,
+          "start": 2461.149999999999,
+          "remaining": 449.9900000000007,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 756.577850000001,
+          "y": 502,
+          "texture": "effect-surrender-flag",
+          "frame": 2,
+          "start": 2461.149999999999,
+          "remaining": 433.31000000000085,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 756.577850000001,
+          "y": 502,
+          "texture": "effect-surrender-flag",
+          "frame": 2,
+          "start": 2461.149999999999,
+          "remaining": 416.630000000001,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 756.577850000001,
+          "y": 502,
+          "texture": "effect-surrender-flag",
+          "frame": 2,
+          "start": 2461.149999999999,
+          "remaining": 399.97000000000116,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 756.577850000001,
+          "y": 502,
+          "texture": "effect-surrender-flag",
+          "frame": 2,
+          "start": 2461.149999999999,
+          "remaining": 383.3200000000011,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 756.577850000001,
+          "y": 502,
+          "texture": "effect-surrender-flag",
+          "frame": 2,
+          "start": 2461.149999999999,
+          "remaining": 366.670000000001,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 756.577850000001,
+          "y": 502,
+          "texture": "effect-surrender-flag",
+          "frame": 2,
+          "start": 2461.149999999999,
+          "remaining": 349.99000000000115,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 756.577850000001,
+          "y": 502,
+          "texture": "effect-surrender-flag",
+          "frame": 2,
+          "start": 2461.149999999999,
+          "remaining": 333.3100000000013,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 756.577850000001,
+          "y": 502,
+          "texture": "effect-surrender-flag",
+          "frame": 3,
+          "start": 2461.149999999999,
+          "remaining": 316.64000000000124,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 756.577850000001,
+          "y": 502,
+          "texture": "effect-surrender-flag",
+          "frame": 3,
+          "start": 2461.149999999999,
+          "remaining": 299.99000000000115,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 756.577850000001,
+          "y": 502,
+          "texture": "effect-surrender-flag",
+          "frame": 3,
+          "start": 2461.149999999999,
+          "remaining": 283.3300000000013,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 756.577850000001,
+          "y": 502,
+          "texture": "effect-surrender-flag",
+          "frame": 3,
+          "start": 2461.149999999999,
+          "remaining": 266.67000000000144,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 756.577850000001,
+          "y": 502,
+          "texture": "effect-surrender-flag",
+          "frame": 3,
+          "start": 2461.149999999999,
+          "remaining": 250.02000000000135,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 756.577850000001,
+          "y": 502,
+          "texture": "effect-surrender-flag",
+          "frame": 3,
+          "start": 2461.149999999999,
+          "remaining": 233.35000000000127,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 756.577850000001,
+          "y": 502,
+          "texture": "effect-surrender-flag",
+          "frame": 3,
+          "start": 2461.149999999999,
+          "remaining": 216.67000000000144,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 756.577850000001,
+          "y": 502,
+          "texture": "effect-surrender-flag",
+          "frame": 4,
+          "start": 2461.149999999999,
+          "remaining": 200.00000000000136,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 756.577850000001,
+          "y": 502,
+          "texture": "effect-surrender-flag",
+          "frame": 4,
+          "start": 2461.149999999999,
+          "remaining": 183.3400000000015,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 756.577850000001,
+          "y": 502,
+          "texture": "effect-surrender-flag",
+          "frame": 4,
+          "start": 2461.149999999999,
+          "remaining": 166.69000000000142,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 756.577850000001,
+          "y": 502,
+          "texture": "effect-surrender-flag",
+          "frame": 4,
+          "start": 2461.149999999999,
+          "remaining": 150.03000000000156,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 756.577850000001,
+          "y": 502,
+          "texture": "effect-surrender-flag",
+          "frame": 4,
+          "start": 2461.149999999999,
+          "remaining": 133.35000000000173,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 756.577850000001,
+          "y": 502,
+          "texture": "effect-surrender-flag",
+          "frame": 4,
+          "start": 2461.149999999999,
+          "remaining": 116.68000000000166,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 756.577850000001,
+          "y": 502,
+          "texture": "effect-surrender-flag",
+          "frame": 5,
+          "start": 2461.149999999999,
+          "remaining": 100.01000000000158,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 756.577850000001,
+          "y": 502,
+          "texture": "effect-surrender-flag",
+          "frame": 5,
+          "start": 2461.149999999999,
+          "remaining": 83.34000000000151,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 756.577850000001,
+          "y": 502,
+          "texture": "effect-surrender-flag",
+          "frame": 5,
+          "start": 2461.149999999999,
+          "remaining": 66.67000000000144,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 756.577850000001,
+          "y": 502,
+          "texture": "effect-surrender-flag",
+          "frame": 5,
+          "start": 2461.149999999999,
+          "remaining": 50.000000000001364,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 756.577850000001,
+          "y": 502,
+          "texture": "effect-surrender-flag",
+          "frame": 5,
+          "start": 2461.149999999999,
+          "remaining": 33.33000000000129,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 756.577850000001,
+          "y": 502,
+          "texture": "effect-surrender-flag",
+          "frame": 5,
+          "start": 2461.149999999999,
+          "remaining": 16.670000000001437,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 756.577850000001,
+          "y": 502,
+          "texture": "effect-surrender-flag",
+          "frame": 5,
+          "start": 2461.149999999999,
+          "remaining": 0.01000000000158252,
+          "displayWidth": 128,
+          "displayHeight": 128
+        }
+      ],
+      "earned": [
+        "S01.reward.start",
+        "S11.enemy.1"
+      ],
+      "label": "항복했어요"
+    },
+    {
+      "device": "phone",
+      "stage": "S04",
+      "kind": "crab",
+      "path": "docs/screenshots/m6-kite/final/art-a7/phone-S04-crab-defeat.png",
+      "samples": [
+        {
+          "x": 460.89425800000026,
+          "y": 555,
+          "texture": "effect-hit-spark",
+          "frame": 0,
+          "start": 1561.847599999998,
+          "remaining": 180,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 484.89425800000026,
+          "y": 541,
+          "texture": "effect-purify-light",
+          "frame": 0,
+          "start": 1561.847599999998,
+          "remaining": 650,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 460.89425800000026,
+          "y": 555,
+          "texture": "effect-hit-spark",
+          "frame": 0,
+          "start": 1561.847599999998,
+          "remaining": 163.37333333333345,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 484.89425800000026,
+          "y": 541,
+          "texture": "effect-purify-light",
+          "frame": 0,
+          "start": 1561.847599999998,
+          "remaining": 633.3733333333334,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 460.89425800000026,
+          "y": 555,
+          "texture": "effect-hit-spark",
+          "frame": 1,
+          "start": 1561.847599999998,
+          "remaining": 146.74000000000024,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 484.89425800000026,
+          "y": 541,
+          "texture": "effect-purify-light",
+          "frame": 0,
+          "start": 1561.847599999998,
+          "remaining": 616.7400000000002,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 460.89425800000026,
+          "y": 555,
+          "texture": "effect-hit-spark",
+          "frame": 1,
+          "start": 1561.847599999998,
+          "remaining": 130.10666666666702,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 484.89425800000026,
+          "y": 541,
+          "texture": "effect-purify-light",
+          "frame": 0,
+          "start": 1561.847599999998,
+          "remaining": 600.106666666667,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 460.89425800000026,
+          "y": 555,
+          "texture": "effect-hit-spark",
+          "frame": 2,
+          "start": 1561.847599999998,
+          "remaining": 113.47333333333381,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 484.89425800000026,
+          "y": 541,
+          "texture": "effect-purify-light",
+          "frame": 0,
+          "start": 1561.847599999998,
+          "remaining": 583.4733333333338,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 460.89425800000026,
+          "y": 555,
+          "texture": "effect-hit-spark",
+          "frame": 2,
+          "start": 1561.847599999998,
+          "remaining": 96.83333333333394,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 484.89425800000026,
+          "y": 541,
+          "texture": "effect-purify-light",
+          "frame": 0,
+          "start": 1561.847599999998,
+          "remaining": 566.8333333333339,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 460.89425800000026,
+          "y": 555,
+          "texture": "effect-hit-spark",
+          "frame": 3,
+          "start": 1561.847599999998,
+          "remaining": 80.20000000000073,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 484.89425800000026,
+          "y": 541,
+          "texture": "effect-purify-light",
+          "frame": 0,
+          "start": 1561.847599999998,
+          "remaining": 550.2000000000007,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 460.89425800000026,
+          "y": 555,
+          "texture": "effect-hit-spark",
+          "frame": 3,
+          "start": 1561.847599999998,
+          "remaining": 63.566666666667516,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 484.89425800000026,
+          "y": 541,
+          "texture": "effect-purify-light",
+          "frame": 1,
+          "start": 1561.847599999998,
+          "remaining": 533.5666666666675,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 460.89425800000026,
+          "y": 555,
+          "texture": "effect-hit-spark",
+          "frame": 4,
+          "start": 1561.847599999998,
+          "remaining": 46.92666666666764,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 484.89425800000026,
+          "y": 541,
+          "texture": "effect-purify-light",
+          "frame": 1,
+          "start": 1561.847599999998,
+          "remaining": 516.9266666666676,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 460.89425800000026,
+          "y": 555,
+          "texture": "effect-hit-spark",
+          "frame": 4,
+          "start": 1561.847599999998,
+          "remaining": 30.28666666666777,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 484.89425800000026,
+          "y": 541,
+          "texture": "effect-purify-light",
+          "frame": 1,
+          "start": 1561.847599999998,
+          "remaining": 500.28666666666777,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 460.89425800000026,
+          "y": 555,
+          "texture": "effect-hit-spark",
+          "frame": 5,
+          "start": 1561.847599999998,
+          "remaining": 13.653333333334558,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 484.89425800000026,
+          "y": 541,
+          "texture": "effect-purify-light",
+          "frame": 1,
+          "start": 1561.847599999998,
+          "remaining": 483.65333333333456,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 484.89425800000026,
+          "y": 541,
+          "texture": "effect-purify-light",
+          "frame": 1,
+          "start": 1561.847599999998,
+          "remaining": 467.0133333333347,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 484.89425800000026,
+          "y": 541,
+          "texture": "effect-purify-light",
+          "frame": 1,
+          "start": 1561.847599999998,
+          "remaining": 450.38000000000125,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 484.89425800000026,
+          "y": 541,
+          "texture": "effect-purify-light",
+          "frame": 1,
+          "start": 1561.847599999998,
+          "remaining": 433.7466666666678,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 484.89425800000026,
+          "y": 541,
+          "texture": "effect-purify-light",
+          "frame": 2,
+          "start": 1561.847599999998,
+          "remaining": 417.1066666666677,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 484.89425800000026,
+          "y": 541,
+          "texture": "effect-purify-light",
+          "frame": 2,
+          "start": 1561.847599999998,
+          "remaining": 400.4666666666676,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 484.89425800000026,
+          "y": 541,
+          "texture": "effect-purify-light",
+          "frame": 2,
+          "start": 1561.847599999998,
+          "remaining": 383.82000000000085,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 484.89425800000026,
+          "y": 541,
+          "texture": "effect-purify-light",
+          "frame": 2,
+          "start": 1561.847599999998,
+          "remaining": 367.1733333333341,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 484.89425800000026,
+          "y": 541,
+          "texture": "effect-purify-light",
+          "frame": 2,
+          "start": 1561.847599999998,
+          "remaining": 350.523333333334,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 484.89425800000026,
+          "y": 541,
+          "texture": "effect-purify-light",
+          "frame": 2,
+          "start": 1561.847599999998,
+          "remaining": 333.88000000000056,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 484.89425800000026,
+          "y": 541,
+          "texture": "effect-purify-light",
+          "frame": 3,
+          "start": 1561.847599999998,
+          "remaining": 317.22666666666714,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 484.89425800000026,
+          "y": 541,
+          "texture": "effect-purify-light",
+          "frame": 3,
+          "start": 1561.847599999998,
+          "remaining": 300.5700000000004,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 484.89425800000026,
+          "y": 541,
+          "texture": "effect-purify-light",
+          "frame": 3,
+          "start": 1561.847599999998,
+          "remaining": 283.91333333333364,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 484.89425800000026,
+          "y": 541,
+          "texture": "effect-purify-light",
+          "frame": 3,
+          "start": 1561.847599999998,
+          "remaining": 267.25333333333356,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 484.89425800000026,
+          "y": 541,
+          "texture": "effect-purify-light",
+          "frame": 3,
+          "start": 1561.847599999998,
+          "remaining": 250.58000000000015,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 484.89425800000026,
+          "y": 541,
+          "texture": "effect-purify-light",
+          "frame": 3,
+          "start": 1561.847599999998,
+          "remaining": 233.9133333333334,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 484.89425800000026,
+          "y": 541,
+          "texture": "effect-purify-light",
+          "frame": 3,
+          "start": 1561.847599999998,
+          "remaining": 217.25333333333333,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 484.89425800000026,
+          "y": 541,
+          "texture": "effect-purify-light",
+          "frame": 4,
+          "start": 1561.847599999998,
+          "remaining": 200.58333333333326,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 484.89425800000026,
+          "y": 541,
+          "texture": "effect-purify-light",
+          "frame": 4,
+          "start": 1561.847599999998,
+          "remaining": 183.91333333333318,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 484.89425800000026,
+          "y": 541,
+          "texture": "effect-purify-light",
+          "frame": 4,
+          "start": 1561.847599999998,
+          "remaining": 167.23333333333312,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 484.89425800000026,
+          "y": 541,
+          "texture": "effect-purify-light",
+          "frame": 4,
+          "start": 1561.847599999998,
+          "remaining": 150.56333333333328,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 484.89425800000026,
+          "y": 541,
+          "texture": "effect-purify-light",
+          "frame": 4,
+          "start": 1561.847599999998,
+          "remaining": 133.8933333333332,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 484.89425800000026,
+          "y": 541,
+          "texture": "effect-purify-light",
+          "frame": 4,
+          "start": 1561.847599999998,
+          "remaining": 117.22333333333313,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 484.89425800000026,
+          "y": 541,
+          "texture": "effect-purify-light",
+          "frame": 5,
+          "start": 1561.847599999998,
+          "remaining": 100.55333333333306,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 484.89425800000026,
+          "y": 541,
+          "texture": "effect-purify-light",
+          "frame": 5,
+          "start": 1561.847599999998,
+          "remaining": 83.8933333333332,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 484.89425800000026,
+          "y": 541,
+          "texture": "effect-purify-light",
+          "frame": 5,
+          "start": 1561.847599999998,
+          "remaining": 67.23333333333335,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 484.89425800000026,
+          "y": 541,
+          "texture": "effect-purify-light",
+          "frame": 5,
+          "start": 1561.847599999998,
+          "remaining": 50.563333333333276,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 484.89425800000026,
+          "y": 541,
+          "texture": "effect-purify-light",
+          "frame": 5,
+          "start": 1561.847599999998,
+          "remaining": 33.90333333333342,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 484.89425800000026,
+          "y": 541,
+          "texture": "effect-purify-light",
+          "frame": 5,
+          "start": 1561.847599999998,
+          "remaining": 17.243333333333567,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 484.89425800000026,
+          "y": 541,
+          "texture": "effect-purify-light",
+          "frame": 5,
+          "start": 1561.847599999998,
+          "remaining": 0.5833333333337123,
+          "displayWidth": 128,
+          "displayHeight": 128
+        }
+      ],
+      "earned": [
+        "S01.reward.start",
+        "S04.enemy.crab.1"
+      ],
+      "label": "저주가 풀렸어!"
+    },
+    {
+      "device": "tablet",
+      "stage": "S01",
+      "kind": "skeleton",
+      "path": "docs/screenshots/m6-kite/final/art-a7/tablet-S01-skeleton-defeat.png",
+      "samples": [
+        {
+          "x": 980.7233500000011,
+          "y": 550,
+          "texture": "effect-hit-spark",
+          "frame": 0,
+          "start": 3407.3509333333313,
+          "remaining": 180,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 956.7233500000011,
+          "y": 536,
+          "texture": "effect-purify-light",
+          "frame": 0,
+          "start": 3407.3509333333313,
+          "remaining": 650,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 980.7233500000011,
+          "y": 550,
+          "texture": "effect-hit-spark",
+          "frame": 0,
+          "start": 3407.3509333333313,
+          "remaining": 163.32000000000016,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 956.7233500000011,
+          "y": 536,
+          "texture": "effect-purify-light",
+          "frame": 0,
+          "start": 3407.3509333333313,
+          "remaining": 633.3200000000002,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 980.7233500000011,
+          "y": 550,
+          "texture": "effect-hit-spark",
+          "frame": 1,
+          "start": 3407.3509333333313,
+          "remaining": 146.6500000000001,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 956.7233500000011,
+          "y": 536,
+          "texture": "effect-purify-light",
+          "frame": 0,
+          "start": 3407.3509333333313,
+          "remaining": 616.6500000000001,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 980.7233500000011,
+          "y": 550,
+          "texture": "effect-hit-spark",
+          "frame": 1,
+          "start": 3407.3509333333313,
+          "remaining": 129.98000000000002,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 956.7233500000011,
+          "y": 536,
+          "texture": "effect-purify-light",
+          "frame": 0,
+          "start": 3407.3509333333313,
+          "remaining": 599.98,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 980.7233500000011,
+          "y": 550,
+          "texture": "effect-hit-spark",
+          "frame": 2,
+          "start": 3407.3509333333313,
+          "remaining": 113.30999999999995,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 956.7233500000011,
+          "y": 536,
+          "texture": "effect-purify-light",
+          "frame": 0,
+          "start": 3407.3509333333313,
+          "remaining": 583.31,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 980.7233500000011,
+          "y": 550,
+          "texture": "effect-hit-spark",
+          "frame": 2,
+          "start": 3407.3509333333313,
+          "remaining": 96.65000000000009,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 956.7233500000011,
+          "y": 536,
+          "texture": "effect-purify-light",
+          "frame": 0,
+          "start": 3407.3509333333313,
+          "remaining": 566.6500000000001,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 980.7233500000011,
+          "y": 550,
+          "texture": "effect-hit-spark",
+          "frame": 3,
+          "start": 3407.3509333333313,
+          "remaining": 79.99000000000024,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 956.7233500000011,
+          "y": 536,
+          "texture": "effect-purify-light",
+          "frame": 0,
+          "start": 3407.3509333333313,
+          "remaining": 549.9900000000002,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 980.7233500000011,
+          "y": 550,
+          "texture": "effect-hit-spark",
+          "frame": 3,
+          "start": 3407.3509333333313,
+          "remaining": 63.3100000000004,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 956.7233500000011,
+          "y": 536,
+          "texture": "effect-purify-light",
+          "frame": 1,
+          "start": 3407.3509333333313,
+          "remaining": 533.3100000000004,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 980.7233500000011,
+          "y": 550,
+          "texture": "effect-hit-spark",
+          "frame": 4,
+          "start": 3407.3509333333313,
+          "remaining": 46.650000000000546,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 956.7233500000011,
+          "y": 536,
+          "texture": "effect-purify-light",
+          "frame": 1,
+          "start": 3407.3509333333313,
+          "remaining": 516.6500000000005,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 980.7233500000011,
+          "y": 550,
+          "texture": "effect-hit-spark",
+          "frame": 5,
+          "start": 3407.3509333333313,
+          "remaining": 29.99000000000069,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 956.7233500000011,
+          "y": 536,
+          "texture": "effect-purify-light",
+          "frame": 1,
+          "start": 3407.3509333333313,
+          "remaining": 499.9900000000007,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 980.7233500000011,
+          "y": 550,
+          "texture": "effect-hit-spark",
+          "frame": 5,
+          "start": 3407.3509333333313,
+          "remaining": 13.3400000000006,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 956.7233500000011,
+          "y": 536,
+          "texture": "effect-purify-light",
+          "frame": 1,
+          "start": 3407.3509333333313,
+          "remaining": 483.3400000000006,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 956.7233500000011,
+          "y": 536,
+          "texture": "effect-purify-light",
+          "frame": 1,
+          "start": 3407.3509333333313,
+          "remaining": 466.6700000000005,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 956.7233500000011,
+          "y": 536,
+          "texture": "effect-purify-light",
+          "frame": 1,
+          "start": 3407.3509333333313,
+          "remaining": 450.00000000000045,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 956.7233500000011,
+          "y": 536,
+          "texture": "effect-purify-light",
+          "frame": 1,
+          "start": 3407.3509333333313,
+          "remaining": 433.3400000000006,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 956.7233500000011,
+          "y": 536,
+          "texture": "effect-purify-light",
+          "frame": 2,
+          "start": 3407.3509333333313,
+          "remaining": 416.68000000000075,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 956.7233500000011,
+          "y": 536,
+          "texture": "effect-purify-light",
+          "frame": 2,
+          "start": 3407.3509333333313,
+          "remaining": 400.0100000000007,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 956.7233500000011,
+          "y": 536,
+          "texture": "effect-purify-light",
+          "frame": 2,
+          "start": 3407.3509333333313,
+          "remaining": 383.3400000000006,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 956.7233500000011,
+          "y": 536,
+          "texture": "effect-purify-light",
+          "frame": 2,
+          "start": 3407.3509333333313,
+          "remaining": 366.6700000000005,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 956.7233500000011,
+          "y": 536,
+          "texture": "effect-purify-light",
+          "frame": 2,
+          "start": 3407.3509333333313,
+          "remaining": 350.00000000000045,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 956.7233500000011,
+          "y": 536,
+          "texture": "effect-purify-light",
+          "frame": 2,
+          "start": 3407.3509333333313,
+          "remaining": 333.3400000000006,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 956.7233500000011,
+          "y": 536,
+          "texture": "effect-purify-light",
+          "frame": 3,
+          "start": 3407.3509333333313,
+          "remaining": 316.6700000000005,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 956.7233500000011,
+          "y": 536,
+          "texture": "effect-purify-light",
+          "frame": 3,
+          "start": 3407.3509333333313,
+          "remaining": 300.0100000000007,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 956.7233500000011,
+          "y": 536,
+          "texture": "effect-purify-light",
+          "frame": 3,
+          "start": 3407.3509333333313,
+          "remaining": 283.3400000000006,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 956.7233500000011,
+          "y": 536,
+          "texture": "effect-purify-light",
+          "frame": 3,
+          "start": 3407.3509333333313,
+          "remaining": 266.6700000000005,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 956.7233500000011,
+          "y": 536,
+          "texture": "effect-purify-light",
+          "frame": 3,
+          "start": 3407.3509333333313,
+          "remaining": 250.01000000000067,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 956.7233500000011,
+          "y": 536,
+          "texture": "effect-purify-light",
+          "frame": 3,
+          "start": 3407.3509333333313,
+          "remaining": 233.3400000000006,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 956.7233500000011,
+          "y": 536,
+          "texture": "effect-purify-light",
+          "frame": 3,
+          "start": 3407.3509333333313,
+          "remaining": 216.67000000000053,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 956.7233500000011,
+          "y": 536,
+          "texture": "effect-purify-light",
+          "frame": 4,
+          "start": 3407.3509333333313,
+          "remaining": 200.01000000000067,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 956.7233500000011,
+          "y": 536,
+          "texture": "effect-purify-light",
+          "frame": 4,
+          "start": 3407.3509333333313,
+          "remaining": 183.35000000000082,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 956.7233500000011,
+          "y": 536,
+          "texture": "effect-purify-light",
+          "frame": 4,
+          "start": 3407.3509333333313,
+          "remaining": 166.67000000000098,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 956.7233500000011,
+          "y": 536,
+          "texture": "effect-purify-light",
+          "frame": 4,
+          "start": 3407.3509333333313,
+          "remaining": 150.0000000000009,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 956.7233500000011,
+          "y": 536,
+          "texture": "effect-purify-light",
+          "frame": 4,
+          "start": 3407.3509333333313,
+          "remaining": 133.33000000000084,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 956.7233500000011,
+          "y": 536,
+          "texture": "effect-purify-light",
+          "frame": 4,
+          "start": 3407.3509333333313,
+          "remaining": 116.66000000000076,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 956.7233500000011,
+          "y": 536,
+          "texture": "effect-purify-light",
+          "frame": 5,
+          "start": 3407.3509333333313,
+          "remaining": 99.99000000000069,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 956.7233500000011,
+          "y": 536,
+          "texture": "effect-purify-light",
+          "frame": 5,
+          "start": 3407.3509333333313,
+          "remaining": 83.32000000000062,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 956.7233500000011,
+          "y": 536,
+          "texture": "effect-purify-light",
+          "frame": 5,
+          "start": 3407.3509333333313,
+          "remaining": 66.65000000000055,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 956.7233500000011,
+          "y": 536,
+          "texture": "effect-purify-light",
+          "frame": 5,
+          "start": 3407.3509333333313,
+          "remaining": 49.98000000000047,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 956.7233500000011,
+          "y": 536,
+          "texture": "effect-purify-light",
+          "frame": 5,
+          "start": 3407.3509333333313,
+          "remaining": 33.3100000000004,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 956.7233500000011,
+          "y": 536,
+          "texture": "effect-purify-light",
+          "frame": 5,
+          "start": 3407.3509333333313,
+          "remaining": 16.640000000000327,
+          "displayWidth": 128,
+          "displayHeight": 128
+        }
+      ],
+      "earned": [
+        "S01.reward.start",
+        "S01.enemy.skeleton.01"
+      ],
+      "label": "빛으로 돌아갔어요"
+    },
+    {
+      "device": "tablet",
+      "stage": "S11",
+      "kind": "bandit",
+      "path": "docs/screenshots/m6-kite/final/art-a7/tablet-S11-bandit-defeat.png",
+      "samples": [
+        {
+          "x": 780.5939000000013,
+          "y": 540,
+          "texture": "effect-hit-spark",
+          "frame": 0,
+          "start": 2544.395333333332,
+          "remaining": 180,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 756.5939000000013,
+          "y": 502,
+          "texture": "effect-surrender-flag",
+          "frame": 0,
+          "start": 2544.395333333332,
+          "remaining": 650,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 780.5939000000013,
+          "y": 540,
+          "texture": "effect-hit-spark",
+          "frame": 0,
+          "start": 2544.395333333332,
+          "remaining": 163.34000000000015,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 756.5939000000013,
+          "y": 502,
+          "texture": "effect-surrender-flag",
+          "frame": 0,
+          "start": 2544.395333333332,
+          "remaining": 633.3400000000001,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 780.5939000000013,
+          "y": 540,
+          "texture": "effect-hit-spark",
+          "frame": 1,
+          "start": 2544.395333333332,
+          "remaining": 146.67000000000007,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 756.5939000000013,
+          "y": 502,
+          "texture": "effect-surrender-flag",
+          "frame": 0,
+          "start": 2544.395333333332,
+          "remaining": 616.6700000000001,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 780.5939000000013,
+          "y": 540,
+          "texture": "effect-hit-spark",
+          "frame": 1,
+          "start": 2544.395333333332,
+          "remaining": 130.01000000000022,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 756.5939000000013,
+          "y": 502,
+          "texture": "effect-surrender-flag",
+          "frame": 0,
+          "start": 2544.395333333332,
+          "remaining": 600.0100000000002,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 780.5939000000013,
+          "y": 540,
+          "texture": "effect-hit-spark",
+          "frame": 2,
+          "start": 2544.395333333332,
+          "remaining": 113.35000000000036,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 756.5939000000013,
+          "y": 502,
+          "texture": "effect-surrender-flag",
+          "frame": 0,
+          "start": 2544.395333333332,
+          "remaining": 583.3500000000004,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 780.5939000000013,
+          "y": 540,
+          "texture": "effect-hit-spark",
+          "frame": 2,
+          "start": 2544.395333333332,
+          "remaining": 96.69000000000051,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 756.5939000000013,
+          "y": 502,
+          "texture": "effect-surrender-flag",
+          "frame": 0,
+          "start": 2544.395333333332,
+          "remaining": 566.6900000000005,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 780.5939000000013,
+          "y": 540,
+          "texture": "effect-hit-spark",
+          "frame": 3,
+          "start": 2544.395333333332,
+          "remaining": 80.02000000000044,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 756.5939000000013,
+          "y": 502,
+          "texture": "effect-surrender-flag",
+          "frame": 0,
+          "start": 2544.395333333332,
+          "remaining": 550.0200000000004,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 780.5939000000013,
+          "y": 540,
+          "texture": "effect-hit-spark",
+          "frame": 3,
+          "start": 2544.395333333332,
+          "remaining": 63.350000000000364,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 756.5939000000013,
+          "y": 502,
+          "texture": "effect-surrender-flag",
+          "frame": 1,
+          "start": 2544.395333333332,
+          "remaining": 533.3500000000004,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 780.5939000000013,
+          "y": 540,
+          "texture": "effect-hit-spark",
+          "frame": 4,
+          "start": 2544.395333333332,
+          "remaining": 46.69000000000051,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 756.5939000000013,
+          "y": 502,
+          "texture": "effect-surrender-flag",
+          "frame": 1,
+          "start": 2544.395333333332,
+          "remaining": 516.6900000000005,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 780.5939000000013,
+          "y": 540,
+          "texture": "effect-hit-spark",
+          "frame": 4,
+          "start": 2544.395333333332,
+          "remaining": 30.030000000000655,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 756.5939000000013,
+          "y": 502,
+          "texture": "effect-surrender-flag",
+          "frame": 1,
+          "start": 2544.395333333332,
+          "remaining": 500.03000000000065,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 780.5939000000013,
+          "y": 540,
+          "texture": "effect-hit-spark",
+          "frame": 5,
+          "start": 2544.395333333332,
+          "remaining": 13.360000000000582,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 756.5939000000013,
+          "y": 502,
+          "texture": "effect-surrender-flag",
+          "frame": 1,
+          "start": 2544.395333333332,
+          "remaining": 483.3600000000006,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 756.5939000000013,
+          "y": 502,
+          "texture": "effect-surrender-flag",
+          "frame": 1,
+          "start": 2544.395333333332,
+          "remaining": 466.68000000000075,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 756.5939000000013,
+          "y": 502,
+          "texture": "effect-surrender-flag",
+          "frame": 1,
+          "start": 2544.395333333332,
+          "remaining": 450.0200000000009,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 756.5939000000013,
+          "y": 502,
+          "texture": "effect-surrender-flag",
+          "frame": 1,
+          "start": 2544.395333333332,
+          "remaining": 433.36000000000104,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 756.5939000000013,
+          "y": 502,
+          "texture": "effect-surrender-flag",
+          "frame": 2,
+          "start": 2544.395333333332,
+          "remaining": 416.71000000000095,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 756.5939000000013,
+          "y": 502,
+          "texture": "effect-surrender-flag",
+          "frame": 2,
+          "start": 2544.395333333332,
+          "remaining": 400.0400000000009,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 756.5939000000013,
+          "y": 502,
+          "texture": "effect-surrender-flag",
+          "frame": 2,
+          "start": 2544.395333333332,
+          "remaining": 383.3700000000008,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 756.5939000000013,
+          "y": 502,
+          "texture": "effect-surrender-flag",
+          "frame": 2,
+          "start": 2544.395333333332,
+          "remaining": 366.7000000000007,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 756.5939000000013,
+          "y": 502,
+          "texture": "effect-surrender-flag",
+          "frame": 2,
+          "start": 2544.395333333332,
+          "remaining": 350.0200000000009,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 756.5939000000013,
+          "y": 502,
+          "texture": "effect-surrender-flag",
+          "frame": 2,
+          "start": 2544.395333333332,
+          "remaining": 333.34000000000106,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 756.5939000000013,
+          "y": 502,
+          "texture": "effect-surrender-flag",
+          "frame": 3,
+          "start": 2544.395333333332,
+          "remaining": 316.670000000001,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 756.5939000000013,
+          "y": 502,
+          "texture": "effect-surrender-flag",
+          "frame": 3,
+          "start": 2544.395333333332,
+          "remaining": 300.0100000000011,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 756.5939000000013,
+          "y": 502,
+          "texture": "effect-surrender-flag",
+          "frame": 3,
+          "start": 2544.395333333332,
+          "remaining": 283.34000000000106,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 756.5939000000013,
+          "y": 502,
+          "texture": "effect-surrender-flag",
+          "frame": 3,
+          "start": 2544.395333333332,
+          "remaining": 266.6600000000012,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 756.5939000000013,
+          "y": 502,
+          "texture": "effect-surrender-flag",
+          "frame": 3,
+          "start": 2544.395333333332,
+          "remaining": 249.98000000000138,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 756.5939000000013,
+          "y": 502,
+          "texture": "effect-surrender-flag",
+          "frame": 3,
+          "start": 2544.395333333332,
+          "remaining": 233.30000000000155,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 756.5939000000013,
+          "y": 502,
+          "texture": "effect-surrender-flag",
+          "frame": 4,
+          "start": 2544.395333333332,
+          "remaining": 216.63000000000147,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 756.5939000000013,
+          "y": 502,
+          "texture": "effect-surrender-flag",
+          "frame": 4,
+          "start": 2544.395333333332,
+          "remaining": 199.9600000000014,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 756.5939000000013,
+          "y": 502,
+          "texture": "effect-surrender-flag",
+          "frame": 4,
+          "start": 2544.395333333332,
+          "remaining": 183.30000000000155,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 756.5939000000013,
+          "y": 502,
+          "texture": "effect-surrender-flag",
+          "frame": 4,
+          "start": 2544.395333333332,
+          "remaining": 166.6400000000017,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 756.5939000000013,
+          "y": 502,
+          "texture": "effect-surrender-flag",
+          "frame": 4,
+          "start": 2544.395333333332,
+          "remaining": 149.97000000000162,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 756.5939000000013,
+          "y": 502,
+          "texture": "effect-surrender-flag",
+          "frame": 4,
+          "start": 2544.395333333332,
+          "remaining": 133.30000000000155,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 756.5939000000013,
+          "y": 502,
+          "texture": "effect-surrender-flag",
+          "frame": 4,
+          "start": 2544.395333333332,
+          "remaining": 116.64000000000169,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 756.5939000000013,
+          "y": 502,
+          "texture": "effect-surrender-flag",
+          "frame": 5,
+          "start": 2544.395333333332,
+          "remaining": 99.98000000000184,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 756.5939000000013,
+          "y": 502,
+          "texture": "effect-surrender-flag",
+          "frame": 5,
+          "start": 2544.395333333332,
+          "remaining": 83.31000000000176,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 756.5939000000013,
+          "y": 502,
+          "texture": "effect-surrender-flag",
+          "frame": 5,
+          "start": 2544.395333333332,
+          "remaining": 66.64000000000169,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 756.5939000000013,
+          "y": 502,
+          "texture": "effect-surrender-flag",
+          "frame": 5,
+          "start": 2544.395333333332,
+          "remaining": 49.98000000000184,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 756.5939000000013,
+          "y": 502,
+          "texture": "effect-surrender-flag",
+          "frame": 5,
+          "start": 2544.395333333332,
+          "remaining": 33.32000000000198,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 756.5939000000013,
+          "y": 502,
+          "texture": "effect-surrender-flag",
+          "frame": 5,
+          "start": 2544.395333333332,
+          "remaining": 16.640000000002146,
+          "displayWidth": 128,
+          "displayHeight": 128
+        }
+      ],
+      "earned": [
+        "S01.reward.start",
+        "S11.enemy.1"
+      ],
+      "label": "항복했어요"
+    },
+    {
+      "device": "tablet",
+      "stage": "S04",
+      "kind": "crab",
+      "path": "docs/screenshots/m6-kite/final/art-a7/tablet-S04-crab-defeat.png",
+      "samples": [
+        {
+          "x": 508.9020999999999,
+          "y": 555,
+          "texture": "effect-hit-spark",
+          "frame": 0,
+          "start": 1554.2533333333333,
+          "remaining": 180,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 484.9020999999999,
+          "y": 541,
+          "texture": "effect-purify-light",
+          "frame": 0,
+          "start": 1554.2533333333333,
+          "remaining": 650,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 508.9020999999999,
+          "y": 555,
+          "texture": "effect-hit-spark",
+          "frame": 0,
+          "start": 1554.2533333333333,
+          "remaining": 163.3599999999999,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 484.9020999999999,
+          "y": 541,
+          "texture": "effect-purify-light",
+          "frame": 0,
+          "start": 1554.2533333333333,
+          "remaining": 633.3599999999999,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 508.9020999999999,
+          "y": 555,
+          "texture": "effect-hit-spark",
+          "frame": 1,
+          "start": 1554.2533333333333,
+          "remaining": 146.72666666666646,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 484.9020999999999,
+          "y": 541,
+          "texture": "effect-purify-light",
+          "frame": 0,
+          "start": 1554.2533333333333,
+          "remaining": 616.7266666666665,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 508.9020999999999,
+          "y": 555,
+          "texture": "effect-hit-spark",
+          "frame": 1,
+          "start": 1554.2533333333333,
+          "remaining": 130.09333333333302,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 484.9020999999999,
+          "y": 541,
+          "texture": "effect-purify-light",
+          "frame": 0,
+          "start": 1554.2533333333333,
+          "remaining": 600.093333333333,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 508.9020999999999,
+          "y": 555,
+          "texture": "effect-hit-spark",
+          "frame": 2,
+          "start": 1554.2533333333333,
+          "remaining": 113.45333333333292,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 484.9020999999999,
+          "y": 541,
+          "texture": "effect-purify-light",
+          "frame": 0,
+          "start": 1554.2533333333333,
+          "remaining": 583.4533333333329,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 508.9020999999999,
+          "y": 555,
+          "texture": "effect-hit-spark",
+          "frame": 2,
+          "start": 1554.2533333333333,
+          "remaining": 96.81999999999948,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 484.9020999999999,
+          "y": 541,
+          "texture": "effect-purify-light",
+          "frame": 0,
+          "start": 1554.2533333333333,
+          "remaining": 566.8199999999995,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 508.9020999999999,
+          "y": 555,
+          "texture": "effect-hit-spark",
+          "frame": 3,
+          "start": 1554.2533333333333,
+          "remaining": 80.17999999999961,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 484.9020999999999,
+          "y": 541,
+          "texture": "effect-purify-light",
+          "frame": 0,
+          "start": 1554.2533333333333,
+          "remaining": 550.1799999999996,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 508.9020999999999,
+          "y": 555,
+          "texture": "effect-hit-spark",
+          "frame": 3,
+          "start": 1554.2533333333333,
+          "remaining": 63.539999999999736,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 484.9020999999999,
+          "y": 541,
+          "texture": "effect-purify-light",
+          "frame": 1,
+          "start": 1554.2533333333333,
+          "remaining": 533.5399999999997,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 508.9020999999999,
+          "y": 555,
+          "texture": "effect-hit-spark",
+          "frame": 4,
+          "start": 1554.2533333333333,
+          "remaining": 46.899999999999864,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 484.9020999999999,
+          "y": 541,
+          "texture": "effect-purify-light",
+          "frame": 1,
+          "start": 1554.2533333333333,
+          "remaining": 516.8999999999999,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 508.9020999999999,
+          "y": 555,
+          "texture": "effect-hit-spark",
+          "frame": 4,
+          "start": 1554.2533333333333,
+          "remaining": 30.25999999999999,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 484.9020999999999,
+          "y": 541,
+          "texture": "effect-purify-light",
+          "frame": 1,
+          "start": 1554.2533333333333,
+          "remaining": 500.26,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 508.9020999999999,
+          "y": 555,
+          "texture": "effect-hit-spark",
+          "frame": 5,
+          "start": 1554.2533333333333,
+          "remaining": 13.613333333333458,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 484.9020999999999,
+          "y": 541,
+          "texture": "effect-purify-light",
+          "frame": 1,
+          "start": 1554.2533333333333,
+          "remaining": 483.61333333333346,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 484.9020999999999,
+          "y": 541,
+          "texture": "effect-purify-light",
+          "frame": 1,
+          "start": 1554.2533333333333,
+          "remaining": 466.9666666666669,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 484.9020999999999,
+          "y": 541,
+          "texture": "effect-purify-light",
+          "frame": 1,
+          "start": 1554.2533333333333,
+          "remaining": 450.3200000000004,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 484.9020999999999,
+          "y": 541,
+          "texture": "effect-purify-light",
+          "frame": 1,
+          "start": 1554.2533333333333,
+          "remaining": 433.67333333333386,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 484.9020999999999,
+          "y": 541,
+          "texture": "effect-purify-light",
+          "frame": 2,
+          "start": 1554.2533333333333,
+          "remaining": 417.033333333334,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 484.9020999999999,
+          "y": 541,
+          "texture": "effect-purify-light",
+          "frame": 2,
+          "start": 1554.2533333333333,
+          "remaining": 400.38666666666745,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 484.9020999999999,
+          "y": 541,
+          "texture": "effect-purify-light",
+          "frame": 2,
+          "start": 1554.2533333333333,
+          "remaining": 383.7466666666676,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 484.9020999999999,
+          "y": 541,
+          "texture": "effect-purify-light",
+          "frame": 2,
+          "start": 1554.2533333333333,
+          "remaining": 367.10333333333415,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 484.9020999999999,
+          "y": 541,
+          "texture": "effect-purify-light",
+          "frame": 2,
+          "start": 1554.2533333333333,
+          "remaining": 350.4566666666676,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 484.9020999999999,
+          "y": 541,
+          "texture": "effect-purify-light",
+          "frame": 2,
+          "start": 1554.2533333333333,
+          "remaining": 333.80000000000086,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 484.9020999999999,
+          "y": 541,
+          "texture": "effect-purify-light",
+          "frame": 3,
+          "start": 1554.2533333333333,
+          "remaining": 317.1500000000008,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 484.9020999999999,
+          "y": 541,
+          "texture": "effect-purify-light",
+          "frame": 3,
+          "start": 1554.2533333333333,
+          "remaining": 300.50666666666734,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 484.9020999999999,
+          "y": 541,
+          "texture": "effect-purify-light",
+          "frame": 3,
+          "start": 1554.2533333333333,
+          "remaining": 283.8533333333339,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 484.9020999999999,
+          "y": 541,
+          "texture": "effect-purify-light",
+          "frame": 3,
+          "start": 1554.2533333333333,
+          "remaining": 267.19666666666717,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 484.9020999999999,
+          "y": 541,
+          "texture": "effect-purify-light",
+          "frame": 3,
+          "start": 1554.2533333333333,
+          "remaining": 250.53000000000043,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 484.9020999999999,
+          "y": 541,
+          "texture": "effect-purify-light",
+          "frame": 3,
+          "start": 1554.2533333333333,
+          "remaining": 233.87000000000035,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 484.9020999999999,
+          "y": 541,
+          "texture": "effect-purify-light",
+          "frame": 3,
+          "start": 1554.2533333333333,
+          "remaining": 217.21000000000026,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 484.9020999999999,
+          "y": 541,
+          "texture": "effect-purify-light",
+          "frame": 4,
+          "start": 1554.2533333333333,
+          "remaining": 200.55000000000018,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 484.9020999999999,
+          "y": 541,
+          "texture": "effect-purify-light",
+          "frame": 4,
+          "start": 1554.2533333333333,
+          "remaining": 183.8900000000001,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 484.9020999999999,
+          "y": 541,
+          "texture": "effect-purify-light",
+          "frame": 4,
+          "start": 1554.2533333333333,
+          "remaining": 167.24,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 484.9020999999999,
+          "y": 541,
+          "texture": "effect-purify-light",
+          "frame": 4,
+          "start": 1554.2533333333333,
+          "remaining": 150.58000000000015,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 484.9020999999999,
+          "y": 541,
+          "texture": "effect-purify-light",
+          "frame": 4,
+          "start": 1554.2533333333333,
+          "remaining": 133.91000000000008,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 484.9020999999999,
+          "y": 541,
+          "texture": "effect-purify-light",
+          "frame": 4,
+          "start": 1554.2533333333333,
+          "remaining": 117.24000000000001,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 484.9020999999999,
+          "y": 541,
+          "texture": "effect-purify-light",
+          "frame": 5,
+          "start": 1554.2533333333333,
+          "remaining": 100.56999999999994,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 484.9020999999999,
+          "y": 541,
+          "texture": "effect-purify-light",
+          "frame": 5,
+          "start": 1554.2533333333333,
+          "remaining": 83.91000000000008,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 484.9020999999999,
+          "y": 541,
+          "texture": "effect-purify-light",
+          "frame": 5,
+          "start": 1554.2533333333333,
+          "remaining": 67.24000000000001,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 484.9020999999999,
+          "y": 541,
+          "texture": "effect-purify-light",
+          "frame": 5,
+          "start": 1554.2533333333333,
+          "remaining": 50.569999999999936,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 484.9020999999999,
+          "y": 541,
+          "texture": "effect-purify-light",
+          "frame": 5,
+          "start": 1554.2533333333333,
+          "remaining": 33.899999999999864,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 484.9020999999999,
+          "y": 541,
+          "texture": "effect-purify-light",
+          "frame": 5,
+          "start": 1554.2533333333333,
+          "remaining": 17.22999999999979,
+          "displayWidth": 128,
+          "displayHeight": 128
+        },
+        {
+          "x": 484.9020999999999,
+          "y": 541,
+          "texture": "effect-purify-light",
+          "frame": 5,
+          "start": 1554.2533333333333,
+          "remaining": 0.5499999999999545,
+          "displayWidth": 128,
+          "displayHeight": 128
+        }
+      ],
+      "earned": [
+        "S01.reward.start",
+        "S04.enemy.crab.1"
+      ],
+      "label": "저주가 풀렸어!"
+    }
+  ],
+  "errors": []
+}

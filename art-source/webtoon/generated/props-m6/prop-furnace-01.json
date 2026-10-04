@@ -1,0 +1,21 @@
+{
+  "key": "prop-furnace",
+  "legacy": "furnace",
+  "subject": "One friendly squat stone fantasy furnace, navy-purple body, wide rectangular fire opening, gold-bronze upper rim and small warm orange contained inner flame. No chimney smoke.",
+  "status": "generated",
+  "prompt": "Create ONE original world interaction sprite for a bright child-friendly Korean adventure webtoon game. Attached project hero is STYLE reference ONLY: confident navy ink outlines, warm teal/gold palette, clean 2-3 flat cel shade levels, top-left lighting. Do not draw the hero. PORTRAIT 3:4 canvas requested 768x1024, true transparent RGBA background. Subject: One friendly squat stone fantasy furnace, navy-purple body, wide rectangular fire opening, gold-bronze upper rim and small warm orange contained inner flame. No chimney smoke. Front-facing readable silhouette at only 65x87 game pixels. Entire object centered, occupies roughly x=10%-90%, y=14%-86%, with fully transparent padding on every side. Keep the complete silhouette and all parts inside canvas. No scene, floor, cast shadow, circular backing, characters, hands, extra objects, labels, letters, numbers, logos, signature, watermark, blood, wounds or scary faces. Original project design only. Use clean limited broad color shapes rather than tiny decorative detail.",
+  "nativePath": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-d8203688-3e41-40da-832f-cfaff252ed43.png",
+  "path": "art-source/webtoon/generated/props-m6/prop-furnace-01.png",
+  "sha256": "4aa484c27bd3bab4e721a6cba097c682f654f2a667ef592d7864f1dc14b5110d",
+  "nativeSize": [
+    1086,
+    1448
+  ],
+  "alphaBounds": [
+    62,
+    270,
+    1024,
+    1239
+  ],
+  "selected": true
+}

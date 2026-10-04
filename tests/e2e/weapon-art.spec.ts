@@ -1,3 +1,4 @@
+import {evidencePath} from './art-evidence';
 import {test,expect,type Page} from '@playwright/test';
 import {mkdirSync,writeFileSync} from 'node:fs';
 import {freshSave,type Save} from '../../src/core/state';
@@ -44,7 +45,7 @@ async function inspect(page:Page,fallback:boolean,device:string){
             const hand={x:hero.x+direction*(cell.hand[0]-256)*144/512,y:hero.y+(cell.hand[1]-cell.baseline)*144/512};
             expect(art.x).toBeCloseTo(hand.x,4);expect(art.y).toBeCloseTo(hand.y,4);
             expect(art.angle).toBeCloseTo(direction*swingPose(weaponLooks[id],1).angle,4);
-            const path=`docs/screenshots/art-a6/${device}-${fallback?'fallback-':''}${id}-${direction>0?'right':'left'}.png`;
+            const path=evidencePath(`art-a6/${device}-${fallback?'fallback-':''}${id}-${direction>0?'right':'left'}.png`);
             await page.screenshot({path});
             await page.keyboard.up('j');
             shots.push({id,direction,hand,observed:art,hero,path});
@@ -60,14 +61,16 @@ test('seven raster weapons and icons stay attached to JSON fists on phone and ta
     page.on('pageerror',e=>errors.push(e.message));page.on('console',m=>{if(m.type()==='error')errors.push(m.text());});
     page.on('response',r=>{if(r.status()>=400)errors.push(`${r.status()} ${r.url()}`);});
     page.on('request',r=>{if(/\/assets\/weapons\/W0[1-7]\.webp$/.test(r.url()))requests.push(r.url());});
-    mkdirSync('docs/screenshots/art-a6',{recursive:true});
+    mkdirSync(evidencePath('art-a6'),{recursive:true});
     for(const [device,viewport] of Object.entries({phone:{width:844,height:390},tablet:{width:1180,height:820}})){
         await page.setViewportSize(viewport);await load(page);
         checks.push({device,shots:await inspect(page,false,device)});
         for(const id of ids)expect(requests.some(url=>url.endsWith(`/${id}.webp`))).toBe(true);
     }
     expect(errors).toEqual([]);
-    writeFileSync('docs/validation/a6-weapon-art.json',JSON.stringify({pass:true,method:'unlocked-weapon fixture, real keys, 28 mirrored poses and icons; not campaign completion',checks,requests,errors},null,2));
+    // Keep the report with this run's screenshots; a prior report may be open
+    // in a Windows preview and cannot safely be overwritten.
+    writeFileSync(evidencePath('art-a6/weapon-art.json'),JSON.stringify({pass:true,method:'unlocked-weapon fixture, real keys, 28 mirrored poses and icons; not campaign completion',checks,requests,errors},null,2));
 });
 test('all seven missing rasters retain SVG weapons and icons, combat rewards and reload',async({page})=>{
     test.setTimeout(4*60*1000);
@@ -75,7 +78,7 @@ test('all seven missing rasters retain SVG weapons and icons, combat rewards and
     page.on('pageerror',e=>errors.push(e.message));
     page.on('requestfailed',r=>failures.push(r.url()));
     await page.route('**/assets/weapons/*.webp',route=>route.abort());
-    mkdirSync('docs/screenshots/art-a6',{recursive:true});
+    mkdirSync(evidencePath('art-a6'),{recursive:true});
     await page.setViewportSize({width:844,height:390});await load(page);
     const shots=await inspect(page,true,'phone');
     const before=await readJourney(page);
@@ -91,5 +94,5 @@ test('all seven missing rasters retain SVG weapons and icons, combat rewards and
     const resumed=await readJourney(page);
     expect(resumed.save.claimedRewardIds).toEqual(earned.save.claimedRewardIds);expect(resumed.save.totalXp).toBe(earned.save.totalXp);
     expect(errors).toEqual([]);expect(failures.filter(url=>url.includes('/assets/weapons/')).length).toBeGreaterThanOrEqual(7);
-    writeFileSync('docs/validation/a6-weapon-fallback.json',JSON.stringify({pass:true,method:'intentional seven raster request aborts, SVG recovery, real keys/combat and save reload',shots,expectedAbortedRequests:failures,earned:earned.save,resumed:resumed.save,errors},null,2));
+    writeFileSync(evidencePath('art-a6/weapon-fallback.json'),JSON.stringify({pass:true,method:'intentional seven raster request aborts, SVG recovery, real keys/combat and save reload',shots,expectedAbortedRequests:failures,earned:earned.save,resumed:resumed.save,errors},null,2));
 });

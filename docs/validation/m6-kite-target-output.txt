@@ -1,0 +1,11 @@
+
+> sinbad-seven-treasures@0.1.0 test:e2e
+> playwright test tests/e2e/kite-actions.spec.ts tests/e2e/flight-rings.spec.ts --reporter=list,json,html
+
+TypeError: Module "file:///C:/code/code10(sindbad)/src/content/kite-actions.generated.json" needs an import attribute of "type: json"
+
+
+To open last HTML report run:
+[36m[39m
+[36m  npx playwright show-report[39m
+[36m[39m

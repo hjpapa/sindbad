@@ -1,0 +1,21 @@
+{
+  "key": "prop-treasure-altar",
+  "legacy": "treasureAltar",
+  "subject": "One small friendly fantasy treasure pedestal with navy stone stepped base, gold trim and a large teal diamond-shaped crystal floating immediately above it. Simple cream center glow contained inside crystal, no deity or person.",
+  "status": "generated",
+  "prompt": "Create ONE original world interaction sprite for a bright child-friendly Korean adventure webtoon game. Attached project hero is STYLE reference ONLY: confident navy ink outlines, warm teal/gold palette, clean 2-3 flat cel shade levels, top-left lighting. Do not draw the hero. PORTRAIT 3:4 canvas requested 768x1024, true transparent RGBA background. Subject: One small friendly fantasy treasure pedestal with navy stone stepped base, gold trim and a large teal diamond-shaped crystal floating immediately above it. Simple cream center glow contained inside crystal, no deity or person. Front-facing readable silhouette at only 65x87 game pixels. Entire object centered, occupies roughly x=10%-90%, y=14%-86%, with fully transparent padding on every side. Keep the complete silhouette and all parts inside canvas. No scene, floor, cast shadow, circular backing, characters, hands, extra objects, labels, letters, numbers, logos, signature, watermark, blood, wounds or scary faces. Original project design only. Use clean limited broad color shapes rather than tiny decorative detail.",
+  "nativePath": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-6c8c7cc5-1536-4537-914e-27bda40f6458.png",
+  "path": "art-source/webtoon/generated/props-m6/prop-treasure-altar-01.png",
+  "sha256": "feafea46c01b2705a9a3a5454e180997f628932c1f861ae6766a9a42bc6b4dbe",
+  "nativeSize": [
+    1086,
+    1448
+  ],
+  "alphaBounds": [
+    119,
+    118,
+    967,
+    1308
+  ],
+  "selected": true
+}

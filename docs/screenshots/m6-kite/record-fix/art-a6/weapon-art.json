@@ -1,0 +1,719 @@
+{
+  "pass": true,
+  "method": "unlocked-weapon fixture, real keys, 28 mirrored poses and icons; not campaign completion",
+  "checks": [
+    {
+      "device": "phone",
+      "shots": [
+        {
+          "id": "W01",
+          "direction": 1,
+          "hand": {
+            "x": 403.37499999999994,
+            "y": 529.84375
+          },
+          "observed": {
+            "visible": true,
+            "x": 403.37499999999994,
+            "y": 529.84375,
+            "texture": "weapon-W01",
+            "angle": 55
+          },
+          "hero": {
+            "texture": "hero-action",
+            "frame": 5,
+            "x": 435.99999999999994,
+            "y": 610,
+            "flipX": false,
+            "originY": 0.95703125
+          },
+          "path": "docs/screenshots/m6-kite/record-fix/art-a6/phone-W01-right.png"
+        },
+        {
+          "id": "W02",
+          "direction": 1,
+          "hand": {
+            "x": 403.37499999999994,
+            "y": 529.84375
+          },
+          "observed": {
+            "visible": true,
+            "x": 403.37499999999994,
+            "y": 529.84375,
+            "texture": "weapon-W02",
+            "angle": 20
+          },
+          "hero": {
+            "texture": "hero-action",
+            "frame": 5,
+            "x": 435.99999999999994,
+            "y": 610,
+            "flipX": false,
+            "originY": 0.95703125
+          },
+          "path": "docs/screenshots/m6-kite/record-fix/art-a6/phone-W02-right.png"
+        },
+        {
+          "id": "W03",
+          "direction": 1,
+          "hand": {
+            "x": 403.37499999999994,
+            "y": 529.84375
+          },
+          "observed": {
+            "visible": true,
+            "x": 403.37499999999994,
+            "y": 529.84375,
+            "texture": "weapon-W03",
+            "angle": 60
+          },
+          "hero": {
+            "texture": "hero-action",
+            "frame": 5,
+            "x": 435.99999999999994,
+            "y": 610,
+            "flipX": false,
+            "originY": 0.95703125
+          },
+          "path": "docs/screenshots/m6-kite/record-fix/art-a6/phone-W03-right.png"
+        },
+        {
+          "id": "W04",
+          "direction": 1,
+          "hand": {
+            "x": 403.37499999999994,
+            "y": 529.84375
+          },
+          "observed": {
+            "visible": true,
+            "x": 403.37499999999994,
+            "y": 529.84375,
+            "texture": "weapon-W04",
+            "angle": -6
+          },
+          "hero": {
+            "texture": "hero-action",
+            "frame": 5,
+            "x": 435.99999999999994,
+            "y": 610,
+            "flipX": false,
+            "originY": 0.95703125
+          },
+          "path": "docs/screenshots/m6-kite/record-fix/art-a6/phone-W04-right.png"
+        },
+        {
+          "id": "W05",
+          "direction": 1,
+          "hand": {
+            "x": 403.37499999999994,
+            "y": 529.84375
+          },
+          "observed": {
+            "visible": true,
+            "x": 403.37499999999994,
+            "y": 529.84375,
+            "texture": "weapon-W05",
+            "angle": 0
+          },
+          "hero": {
+            "texture": "hero-action",
+            "frame": 5,
+            "x": 435.99999999999994,
+            "y": 610,
+            "flipX": false,
+            "originY": 0.95703125
+          },
+          "path": "docs/screenshots/m6-kite/record-fix/art-a6/phone-W05-right.png"
+        },
+        {
+          "id": "W06",
+          "direction": 1,
+          "hand": {
+            "x": 403.37499999999994,
+            "y": 529.84375
+          },
+          "observed": {
+            "visible": true,
+            "x": 403.37499999999994,
+            "y": 529.84375,
+            "texture": "weapon-W06",
+            "angle": 35
+          },
+          "hero": {
+            "texture": "hero-action",
+            "frame": 5,
+            "x": 435.99999999999994,
+            "y": 610,
+            "flipX": false,
+            "originY": 0.95703125
+          },
+          "path": "docs/screenshots/m6-kite/record-fix/art-a6/phone-W06-right.png"
+        },
+        {
+          "id": "W07",
+          "direction": 1,
+          "hand": {
+            "x": 403.37499999999994,
+            "y": 529.84375
+          },
+          "observed": {
+            "visible": true,
+            "x": 403.37499999999994,
+            "y": 529.84375,
+            "texture": "weapon-W07",
+            "angle": 60
+          },
+          "hero": {
+            "texture": "hero-action",
+            "frame": 5,
+            "x": 435.99999999999994,
+            "y": 610,
+            "flipX": false,
+            "originY": 0.95703125
+          },
+          "path": "docs/screenshots/m6-kite/record-fix/art-a6/phone-W07-right.png"
+        },
+        {
+          "id": "W01",
+          "direction": -1,
+          "hand": {
+            "x": 454.4583333333333,
+            "y": 529.84375
+          },
+          "observed": {
+            "visible": true,
+            "x": 454.4583333333333,
+            "y": 529.84375,
+            "texture": "weapon-W01",
+            "angle": -55.00000000000006
+          },
+          "hero": {
+            "texture": "hero-action",
+            "frame": 5,
+            "x": 421.8333333333333,
+            "y": 610,
+            "flipX": true,
+            "originY": 0.95703125
+          },
+          "path": "docs/screenshots/m6-kite/record-fix/art-a6/phone-W01-left.png"
+        },
+        {
+          "id": "W02",
+          "direction": -1,
+          "hand": {
+            "x": 454.4583333333333,
+            "y": 529.84375
+          },
+          "observed": {
+            "visible": true,
+            "x": 454.4583333333333,
+            "y": 529.84375,
+            "texture": "weapon-W02",
+            "angle": -20
+          },
+          "hero": {
+            "texture": "hero-action",
+            "frame": 5,
+            "x": 421.8333333333333,
+            "y": 610,
+            "flipX": true,
+            "originY": 0.95703125
+          },
+          "path": "docs/screenshots/m6-kite/record-fix/art-a6/phone-W02-left.png"
+        },
+        {
+          "id": "W03",
+          "direction": -1,
+          "hand": {
+            "x": 454.4583333333333,
+            "y": 529.84375
+          },
+          "observed": {
+            "visible": true,
+            "x": 454.4583333333333,
+            "y": 529.84375,
+            "texture": "weapon-W03",
+            "angle": -59.99999999999994
+          },
+          "hero": {
+            "texture": "hero-action",
+            "frame": 5,
+            "x": 421.8333333333333,
+            "y": 610,
+            "flipX": true,
+            "originY": 0.95703125
+          },
+          "path": "docs/screenshots/m6-kite/record-fix/art-a6/phone-W03-left.png"
+        },
+        {
+          "id": "W04",
+          "direction": -1,
+          "hand": {
+            "x": 454.4583333333333,
+            "y": 529.84375
+          },
+          "observed": {
+            "visible": true,
+            "x": 454.4583333333333,
+            "y": 529.84375,
+            "texture": "weapon-W04",
+            "angle": 6
+          },
+          "hero": {
+            "texture": "hero-action",
+            "frame": 5,
+            "x": 421.8333333333333,
+            "y": 610,
+            "flipX": true,
+            "originY": 0.95703125
+          },
+          "path": "docs/screenshots/m6-kite/record-fix/art-a6/phone-W04-left.png"
+        },
+        {
+          "id": "W05",
+          "direction": -1,
+          "hand": {
+            "x": 454.4583333333333,
+            "y": 529.84375
+          },
+          "observed": {
+            "visible": true,
+            "x": 454.4583333333333,
+            "y": 529.84375,
+            "texture": "weapon-W05",
+            "angle": 0
+          },
+          "hero": {
+            "texture": "hero-action",
+            "frame": 5,
+            "x": 421.8333333333333,
+            "y": 610,
+            "flipX": true,
+            "originY": 0.95703125
+          },
+          "path": "docs/screenshots/m6-kite/record-fix/art-a6/phone-W05-left.png"
+        },
+        {
+          "id": "W06",
+          "direction": -1,
+          "hand": {
+            "x": 454.4583333333333,
+            "y": 529.84375
+          },
+          "observed": {
+            "visible": true,
+            "x": 454.4583333333333,
+            "y": 529.84375,
+            "texture": "weapon-W06",
+            "angle": -35.00000000000006
+          },
+          "hero": {
+            "texture": "hero-action",
+            "frame": 5,
+            "x": 421.8333333333333,
+            "y": 610,
+            "flipX": true,
+            "originY": 0.95703125
+          },
+          "path": "docs/screenshots/m6-kite/record-fix/art-a6/phone-W06-left.png"
+        },
+        {
+          "id": "W07",
+          "direction": -1,
+          "hand": {
+            "x": 454.4583333333333,
+            "y": 529.84375
+          },
+          "observed": {
+            "visible": true,
+            "x": 454.4583333333333,
+            "y": 529.84375,
+            "texture": "weapon-W07",
+            "angle": -59.99999999999994
+          },
+          "hero": {
+            "texture": "hero-action",
+            "frame": 5,
+            "x": 421.8333333333333,
+            "y": 610,
+            "flipX": true,
+            "originY": 0.95703125
+          },
+          "path": "docs/screenshots/m6-kite/record-fix/art-a6/phone-W07-left.png"
+        }
+      ]
+    },
+    {
+      "device": "tablet",
+      "shots": [
+        {
+          "id": "W01",
+          "direction": 1,
+          "hand": {
+            "x": 398.3194444444444,
+            "y": 529.84375
+          },
+          "observed": {
+            "visible": true,
+            "x": 398.3194444444444,
+            "y": 529.84375,
+            "texture": "weapon-W01",
+            "angle": 55
+          },
+          "hero": {
+            "texture": "hero-action",
+            "frame": 5,
+            "x": 430.9444444444444,
+            "y": 610,
+            "flipX": false,
+            "originY": 0.95703125
+          },
+          "path": "docs/screenshots/m6-kite/record-fix/art-a6/tablet-W01-right.png"
+        },
+        {
+          "id": "W02",
+          "direction": 1,
+          "hand": {
+            "x": 398.3194444444444,
+            "y": 529.84375
+          },
+          "observed": {
+            "visible": true,
+            "x": 398.3194444444444,
+            "y": 529.84375,
+            "texture": "weapon-W02",
+            "angle": 20
+          },
+          "hero": {
+            "texture": "hero-action",
+            "frame": 5,
+            "x": 430.9444444444444,
+            "y": 610,
+            "flipX": false,
+            "originY": 0.95703125
+          },
+          "path": "docs/screenshots/m6-kite/record-fix/art-a6/tablet-W02-right.png"
+        },
+        {
+          "id": "W03",
+          "direction": 1,
+          "hand": {
+            "x": 398.3194444444444,
+            "y": 529.84375
+          },
+          "observed": {
+            "visible": true,
+            "x": 398.3194444444444,
+            "y": 529.84375,
+            "texture": "weapon-W03",
+            "angle": 60
+          },
+          "hero": {
+            "texture": "hero-action",
+            "frame": 5,
+            "x": 430.9444444444444,
+            "y": 610,
+            "flipX": false,
+            "originY": 0.95703125
+          },
+          "path": "docs/screenshots/m6-kite/record-fix/art-a6/tablet-W03-right.png"
+        },
+        {
+          "id": "W04",
+          "direction": 1,
+          "hand": {
+            "x": 398.3194444444444,
+            "y": 529.84375
+          },
+          "observed": {
+            "visible": true,
+            "x": 398.3194444444444,
+            "y": 529.84375,
+            "texture": "weapon-W04",
+            "angle": -6
+          },
+          "hero": {
+            "texture": "hero-action",
+            "frame": 5,
+            "x": 430.9444444444444,
+            "y": 610,
+            "flipX": false,
+            "originY": 0.95703125
+          },
+          "path": "docs/screenshots/m6-kite/record-fix/art-a6/tablet-W04-right.png"
+        },
+        {
+          "id": "W05",
+          "direction": 1,
+          "hand": {
+            "x": 398.3194444444444,
+            "y": 529.84375
+          },
+          "observed": {
+            "visible": true,
+            "x": 398.3194444444444,
+            "y": 529.84375,
+            "texture": "weapon-W05",
+            "angle": 0
+          },
+          "hero": {
+            "texture": "hero-action",
+            "frame": 5,
+            "x": 430.9444444444444,
+            "y": 610,
+            "flipX": false,
+            "originY": 0.95703125
+          },
+          "path": "docs/screenshots/m6-kite/record-fix/art-a6/tablet-W05-right.png"
+        },
+        {
+          "id": "W06",
+          "direction": 1,
+          "hand": {
+            "x": 398.3194444444444,
+            "y": 529.84375
+          },
+          "observed": {
+            "visible": true,
+            "x": 398.3194444444444,
+            "y": 529.84375,
+            "texture": "weapon-W06",
+            "angle": 35
+          },
+          "hero": {
+            "texture": "hero-action",
+            "frame": 5,
+            "x": 430.9444444444444,
+            "y": 610,
+            "flipX": false,
+            "originY": 0.95703125
+          },
+          "path": "docs/screenshots/m6-kite/record-fix/art-a6/tablet-W06-right.png"
+        },
+        {
+          "id": "W07",
+          "direction": 1,
+          "hand": {
+            "x": 398.3194444444444,
+            "y": 529.84375
+          },
+          "observed": {
+            "visible": true,
+            "x": 398.3194444444444,
+            "y": 529.84375,
+            "texture": "weapon-W07",
+            "angle": 60
+          },
+          "hero": {
+            "texture": "hero-action",
+            "frame": 5,
+            "x": 430.9444444444444,
+            "y": 610,
+            "flipX": false,
+            "originY": 0.95703125
+          },
+          "path": "docs/screenshots/m6-kite/record-fix/art-a6/tablet-W07-right.png"
+        },
+        {
+          "id": "W01",
+          "direction": -1,
+          "hand": {
+            "x": 449.40277777777777,
+            "y": 529.84375
+          },
+          "observed": {
+            "visible": true,
+            "x": 449.40277777777777,
+            "y": 529.84375,
+            "texture": "weapon-W01",
+            "angle": -55.00000000000006
+          },
+          "hero": {
+            "texture": "hero-action",
+            "frame": 5,
+            "x": 416.77777777777777,
+            "y": 610,
+            "flipX": true,
+            "originY": 0.95703125
+          },
+          "path": "docs/screenshots/m6-kite/record-fix/art-a6/tablet-W01-left.png"
+        },
+        {
+          "id": "W02",
+          "direction": -1,
+          "hand": {
+            "x": 449.40277777777777,
+            "y": 529.84375
+          },
+          "observed": {
+            "visible": true,
+            "x": 449.40277777777777,
+            "y": 529.84375,
+            "texture": "weapon-W02",
+            "angle": -20
+          },
+          "hero": {
+            "texture": "hero-action",
+            "frame": 5,
+            "x": 416.77777777777777,
+            "y": 610,
+            "flipX": true,
+            "originY": 0.95703125
+          },
+          "path": "docs/screenshots/m6-kite/record-fix/art-a6/tablet-W02-left.png"
+        },
+        {
+          "id": "W03",
+          "direction": -1,
+          "hand": {
+            "x": 449.40277777777777,
+            "y": 529.84375
+          },
+          "observed": {
+            "visible": true,
+            "x": 449.40277777777777,
+            "y": 529.84375,
+            "texture": "weapon-W03",
+            "angle": -59.99999999999994
+          },
+          "hero": {
+            "texture": "hero-action",
+            "frame": 5,
+            "x": 416.77777777777777,
+            "y": 610,
+            "flipX": true,
+            "originY": 0.95703125
+          },
+          "path": "docs/screenshots/m6-kite/record-fix/art-a6/tablet-W03-left.png"
+        },
+        {
+          "id": "W04",
+          "direction": -1,
+          "hand": {
+            "x": 449.40277777777777,
+            "y": 529.84375
+          },
+          "observed": {
+            "visible": true,
+            "x": 449.40277777777777,
+            "y": 529.84375,
+            "texture": "weapon-W04",
+            "angle": 6
+          },
+          "hero": {
+            "texture": "hero-action",
+            "frame": 5,
+            "x": 416.77777777777777,
+            "y": 610,
+            "flipX": true,
+            "originY": 0.95703125
+          },
+          "path": "docs/screenshots/m6-kite/record-fix/art-a6/tablet-W04-left.png"
+        },
+        {
+          "id": "W05",
+          "direction": -1,
+          "hand": {
+            "x": 449.40277777777777,
+            "y": 529.84375
+          },
+          "observed": {
+            "visible": true,
+            "x": 449.40277777777777,
+            "y": 529.84375,
+            "texture": "weapon-W05",
+            "angle": 0
+          },
+          "hero": {
+            "texture": "hero-action",
+            "frame": 5,
+            "x": 416.77777777777777,
+            "y": 610,
+            "flipX": true,
+            "originY": 0.95703125
+          },
+          "path": "docs/screenshots/m6-kite/record-fix/art-a6/tablet-W05-left.png"
+        },
+        {
+          "id": "W06",
+          "direction": -1,
+          "hand": {
+            "x": 449.40277777777777,
+            "y": 529.84375
+          },
+          "observed": {
+            "visible": true,
+            "x": 449.40277777777777,
+            "y": 529.84375,
+            "texture": "weapon-W06",
+            "angle": -35.00000000000006
+          },
+          "hero": {
+            "texture": "hero-action",
+            "frame": 5,
+            "x": 416.77777777777777,
+            "y": 610,
+            "flipX": true,
+            "originY": 0.95703125
+          },
+          "path": "docs/screenshots/m6-kite/record-fix/art-a6/tablet-W06-left.png"
+        },
+        {
+          "id": "W07",
+          "direction": -1,
+          "hand": {
+            "x": 449.40277777777777,
+            "y": 529.84375
+          },
+          "observed": {
+            "visible": true,
+            "x": 449.40277777777777,
+            "y": 529.84375,
+            "texture": "weapon-W07",
+            "angle": -59.99999999999994
+          },
+          "hero": {
+            "texture": "hero-action",
+            "frame": 5,
+            "x": 416.77777777777777,
+            "y": 610,
+            "flipX": true,
+            "originY": 0.95703125
+          },
+          "path": "docs/screenshots/m6-kite/record-fix/art-a6/tablet-W07-left.png"
+        }
+      ]
+    }
+  ],
+  "requests": [
+    "http://127.0.0.1:5174/assets/weapons/W01.webp",
+    "http://127.0.0.1:5174/assets/weapons/W02.webp",
+    "http://127.0.0.1:5174/assets/weapons/W03.webp",
+    "http://127.0.0.1:5174/assets/weapons/W04.webp",
+    "http://127.0.0.1:5174/assets/weapons/W05.webp",
+    "http://127.0.0.1:5174/assets/weapons/W06.webp",
+    "http://127.0.0.1:5174/assets/weapons/W07.webp",
+    "http://127.0.0.1:5174/assets/weapons/W01.webp",
+    "http://127.0.0.1:5174/assets/weapons/W02.webp",
+    "http://127.0.0.1:5174/assets/weapons/W03.webp",
+    "http://127.0.0.1:5174/assets/weapons/W04.webp",
+    "http://127.0.0.1:5174/assets/weapons/W05.webp",
+    "http://127.0.0.1:5174/assets/weapons/W06.webp",
+    "http://127.0.0.1:5174/assets/weapons/W07.webp",
+    "http://127.0.0.1:5174/assets/weapons/W01.webp",
+    "http://127.0.0.1:5174/assets/weapons/W02.webp",
+    "http://127.0.0.1:5174/assets/weapons/W03.webp",
+    "http://127.0.0.1:5174/assets/weapons/W04.webp",
+    "http://127.0.0.1:5174/assets/weapons/W05.webp",
+    "http://127.0.0.1:5174/assets/weapons/W06.webp",
+    "http://127.0.0.1:5174/assets/weapons/W07.webp",
+    "http://127.0.0.1:5174/assets/weapons/W01.webp",
+    "http://127.0.0.1:5174/assets/weapons/W02.webp",
+    "http://127.0.0.1:5174/assets/weapons/W03.webp",
+    "http://127.0.0.1:5174/assets/weapons/W04.webp",
+    "http://127.0.0.1:5174/assets/weapons/W05.webp",
+    "http://127.0.0.1:5174/assets/weapons/W06.webp",
+    "http://127.0.0.1:5174/assets/weapons/W07.webp"
+  ],
+  "errors": []
+}

@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-03T13:41:54.661Z",
+  "date": "2026-10-04T09:10:59.098Z",
   "pass": true,
   "method": "explicit unlocked-stage/item save fixture; real map buttons and keyboard move/jump; phone/tablet viewport emulation; read-only texture and platform observations, not fresh campaign",
   "checks": [
@@ -18,13 +18,13 @@
             "key": "terrain-dock-fill",
             "width": 128,
             "height": 128,
-            "source": "blob:http://127.0.0.1:5174/964e017b-a4a8-455b-9321-8abecb96074c"
+            "source": "blob:http://127.0.0.1:5174/2596bf8f-7394-4423-a945-f982de3ea856"
           },
           {
             "key": "terrain-dock-top",
             "width": 128,
             "height": 34,
-            "source": "blob:http://127.0.0.1:5174/49c9b4c0-2594-4d05-8f88-95510ba3dfc1"
+            "source": "blob:http://127.0.0.1:5174/aac237bd-d16b-4033-9749-3719a6dbae57"
           }
         ],
         "platforms": [
@@ -165,7 +165,7 @@
           }
         ]
       },
-      "path": "docs/screenshots/art-a5/phone-S01-dock.png"
+      "path": "docs/screenshots/m6-kite/final/art-a5/phone-S01-dock.png"
     },
     {
       "device": "phone",
@@ -182,13 +182,13 @@
             "key": "terrain-deck-fill",
             "width": 128,
             "height": 128,
-            "source": "blob:http://127.0.0.1:5174/f95c251d-aafd-40de-833f-49e2679ec84f"
+            "source": "blob:http://127.0.0.1:5174/82ffc95b-38be-4b77-a40e-db2f5795088d"
           },
           {
             "key": "terrain-deck-top",
             "width": 128,
             "height": 34,
-            "source": "blob:http://127.0.0.1:5174/757435d0-6a17-43a4-b730-8b22614ad5fa"
+            "source": "blob:http://127.0.0.1:5174/6802ada2-959a-4d8a-a2ba-af55f7eabf61"
           }
         ],
         "platforms": [
@@ -348,7 +348,7 @@
           }
         ]
       },
-      "path": "docs/screenshots/art-a5/phone-S03-deck.png"
+      "path": "docs/screenshots/m6-kite/final/art-a5/phone-S03-deck.png"
     },
     {
       "device": "phone",
@@ -365,13 +365,13 @@
             "key": "terrain-reef-fill",
             "width": 128,
             "height": 128,
-            "source": "blob:http://127.0.0.1:5174/e7cd802f-590a-4b0c-936f-b32d8c9dc776"
+            "source": "blob:http://127.0.0.1:5174/537270c8-a735-4c46-b9b9-690a7c24f7f7"
           },
           {
             "key": "terrain-reef-top",
             "width": 128,
             "height": 34,
-            "source": "blob:http://127.0.0.1:5174/b5065a8a-2ae1-41b3-ade6-6a3d9e5c7a93"
+            "source": "blob:http://127.0.0.1:5174/a3151d26-e3ce-4950-89ca-b8531279aa09"
           }
         ],
         "platforms": [
@@ -493,7 +493,7 @@
           }
         ]
       },
-      "path": "docs/screenshots/art-a5/phone-S02-reef.png"
+      "path": "docs/screenshots/m6-kite/final/art-a5/phone-S02-reef.png"
     },
     {
       "device": "phone",
@@ -510,13 +510,13 @@
             "key": "terrain-coral-fill",
             "width": 128,
             "height": 128,
-            "source": "blob:http://127.0.0.1:5174/f0716b92-88b2-4bc4-bb3c-e8c6680ecf6a"
+            "source": "blob:http://127.0.0.1:5174/5c726a33-a101-474e-a31e-c4d73f4a3df1"
           },
           {
             "key": "terrain-coral-top",
             "width": 128,
             "height": 34,
-            "source": "blob:http://127.0.0.1:5174/17c8648c-466c-4b26-baad-378633c16122"
+            "source": "blob:http://127.0.0.1:5174/804dd9d1-733e-419f-a14a-8c2089d1e452"
           }
         ],
         "platforms": [
@@ -638,7 +638,7 @@
           }
         ]
       },
-      "path": "docs/screenshots/art-a5/phone-S05-coral.png"
+      "path": "docs/screenshots/m6-kite/final/art-a5/phone-S05-coral.png"
     },
     {
       "device": "phone",
@@ -655,13 +655,13 @@
             "key": "terrain-whale-fill",
             "width": 128,
             "height": 128,
-            "source": "blob:http://127.0.0.1:5174/5d8ee4fc-32df-469b-8a46-6a3df6b7d81f"
+            "source": "blob:http://127.0.0.1:5174/289383b1-ee6f-4730-9720-fffb2fbe2e19"
           },
           {
             "key": "terrain-whale-top",
             "width": 128,
             "height": 34,
-            "source": "blob:http://127.0.0.1:5174/d658fe10-7577-4d82-9072-b9859b4a1765"
+            "source": "blob:http://127.0.0.1:5174/61b61530-612e-43e9-b5f0-2d37c43ff32b"
           }
         ],
         "platforms": [
@@ -821,7 +821,7 @@
           }
         ]
       },
-      "path": "docs/screenshots/art-a5/phone-S04-whale.png"
+      "path": "docs/screenshots/m6-kite/final/art-a5/phone-S04-whale.png"
     },
     {
       "device": "phone",
@@ -838,13 +838,13 @@
             "key": "terrain-basalt-fill",
             "width": 128,
             "height": 128,
-            "source": "blob:http://127.0.0.1:5174/a9153737-81c4-4ed4-b89e-bbde5d87bf01"
+            "source": "blob:http://127.0.0.1:5174/915556fb-1eea-41c7-8100-b80deb087314"
           },
           {
             "key": "terrain-basalt-top",
             "width": 128,
             "height": 34,
-            "source": "blob:http://127.0.0.1:5174/cac27efc-4102-4ac6-9ab0-6b802e408257"
+            "source": "blob:http://127.0.0.1:5174/6383c10a-f9c0-4de7-8528-1579d8c70c5a"
           }
         ],
         "platforms": [
@@ -947,7 +947,7 @@
           }
         ]
       },
-      "path": "docs/screenshots/art-a5/phone-S06-basalt.png"
+      "path": "docs/screenshots/m6-kite/final/art-a5/phone-S06-basalt.png"
     },
     {
       "device": "phone",
@@ -964,13 +964,13 @@
             "key": "terrain-crystal-fill",
             "width": 128,
             "height": 128,
-            "source": "blob:http://127.0.0.1:5174/06fe295c-3b3c-46af-9940-1a0cb57a400c"
+            "source": "blob:http://127.0.0.1:5174/fffd12f2-9ce3-4c81-a157-6125b0651487"
           },
           {
             "key": "terrain-crystal-top",
             "width": 128,
             "height": 34,
-            "source": "blob:http://127.0.0.1:5174/16dcfe6f-8053-4506-8c62-fb9de31fd632"
+            "source": "blob:http://127.0.0.1:5174/597fcf6a-76ed-4008-830f-9f2f17b70c5b"
           }
         ],
         "platforms": [
@@ -1035,7 +1035,7 @@
           }
         ]
       },
-      "path": "docs/screenshots/art-a5/phone-S08-crystal.png"
+      "path": "docs/screenshots/m6-kite/final/art-a5/phone-S08-crystal.png"
     },
     {
       "device": "phone",
@@ -1052,13 +1052,13 @@
             "key": "terrain-cloud-fill",
             "width": 128,
             "height": 128,
-            "source": "blob:http://127.0.0.1:5174/70f84813-d605-46fe-880c-14fe3045e994"
+            "source": "blob:http://127.0.0.1:5174/398de5a4-1b8c-4029-89cd-1ac1b465a03d"
           },
           {
             "key": "terrain-cloud-top",
             "width": 128,
             "height": 34,
-            "source": "blob:http://127.0.0.1:5174/c4adfd89-3eb2-4a64-81f1-2e7dab4b52d5"
+            "source": "blob:http://127.0.0.1:5174/263c5157-0167-4f26-ab36-5c3f76ee1a56"
           }
         ],
         "platforms": [
@@ -1123,7 +1123,7 @@
           }
         ]
       },
-      "path": "docs/screenshots/art-a5/phone-S09-cloud.png"
+      "path": "docs/screenshots/m6-kite/final/art-a5/phone-S09-cloud.png"
     },
     {
       "device": "phone",
@@ -1140,13 +1140,13 @@
             "key": "terrain-village-fill",
             "width": 128,
             "height": 128,
-            "source": "blob:http://127.0.0.1:5174/46085ae5-90ef-4ea7-8653-11872ff312ae"
+            "source": "blob:http://127.0.0.1:5174/2e886996-2130-48b7-b539-79edf31b88a0"
           },
           {
             "key": "terrain-village-top",
             "width": 128,
             "height": 34,
-            "source": "blob:http://127.0.0.1:5174/52b7460a-0741-464f-a9b1-33526d73962e"
+            "source": "blob:http://127.0.0.1:5174/e654ef67-bb8a-4ed3-baed-202bf43776f9"
           }
         ],
         "platforms": [
@@ -1211,7 +1211,7 @@
           }
         ]
       },
-      "path": "docs/screenshots/art-a5/phone-S13-village.png"
+      "path": "docs/screenshots/m6-kite/final/art-a5/phone-S13-village.png"
     },
     {
       "device": "phone",
@@ -1228,13 +1228,13 @@
             "key": "terrain-warehouse-fill",
             "width": 128,
             "height": 128,
-            "source": "blob:http://127.0.0.1:5174/e10e8df0-ce22-4af6-90d8-b552758d59c2"
+            "source": "blob:http://127.0.0.1:5174/797f8faf-8c1b-4654-8483-95dfce780757"
           },
           {
             "key": "terrain-warehouse-top",
             "width": 128,
             "height": 34,
-            "source": "blob:http://127.0.0.1:5174/7680ea66-2811-49f8-8c79-bccf2b92cc56"
+            "source": "blob:http://127.0.0.1:5174/96a8f5bd-daa1-4ba3-bf3b-f3892625e438"
           }
         ],
         "platforms": [
@@ -1318,7 +1318,7 @@
           }
         ]
       },
-      "path": "docs/screenshots/art-a5/phone-S15-warehouse.png"
+      "path": "docs/screenshots/m6-kite/final/art-a5/phone-S15-warehouse.png"
     },
     {
       "device": "phone",
@@ -1335,13 +1335,13 @@
             "key": "terrain-sand-fill",
             "width": 128,
             "height": 128,
-            "source": "blob:http://127.0.0.1:5174/4dc0ff6e-3a01-443e-b09c-89b6e9260865"
+            "source": "blob:http://127.0.0.1:5174/05d13831-f68e-4a35-b5af-c6b78c98038e"
           },
           {
             "key": "terrain-sand-top",
             "width": 128,
             "height": 34,
-            "source": "blob:http://127.0.0.1:5174/67fabbb3-62e6-42ba-a9e2-388cab2bfab3"
+            "source": "blob:http://127.0.0.1:5174/0ace7632-b2fa-4ac4-87f1-eaf4715c3b0f"
           }
         ],
         "platforms": [
@@ -1406,7 +1406,7 @@
           }
         ]
       },
-      "path": "docs/screenshots/art-a5/phone-S16-sand.png"
+      "path": "docs/screenshots/m6-kite/final/art-a5/phone-S16-sand.png"
     },
     {
       "device": "phone",
@@ -1423,13 +1423,13 @@
             "key": "terrain-shadow-fill",
             "width": 128,
             "height": 128,
-            "source": "blob:http://127.0.0.1:5174/576f3c8a-9d7e-467a-ba6f-b856dce448bc"
+            "source": "blob:http://127.0.0.1:5174/d07138c0-09ec-48ec-9607-29672d084022"
           },
           {
             "key": "terrain-shadow-top",
             "width": 128,
             "height": 34,
-            "source": "blob:http://127.0.0.1:5174/61212c84-1936-43e5-b2e8-e9a6257c8bf1"
+            "source": "blob:http://127.0.0.1:5174/7292edc7-e037-499a-96d7-324786cff06b"
           }
         ],
         "platforms": [
@@ -1513,7 +1513,7 @@
           }
         ]
       },
-      "path": "docs/screenshots/art-a5/phone-S11-shadow.png"
+      "path": "docs/screenshots/m6-kite/final/art-a5/phone-S11-shadow.png"
     },
     {
       "device": "phone",
@@ -1530,13 +1530,13 @@
             "key": "terrain-jungle-fill",
             "width": 128,
             "height": 128,
-            "source": "blob:http://127.0.0.1:5174/8eb8e525-66c4-46b1-be52-b802cc31e9b1"
+            "source": "blob:http://127.0.0.1:5174/d19eaa44-2927-47e8-879f-8a8fc352e09e"
           },
           {
             "key": "terrain-jungle-top",
             "width": 128,
             "height": 34,
-            "source": "blob:http://127.0.0.1:5174/62931216-77cb-435b-a29e-6e6e27bad112"
+            "source": "blob:http://127.0.0.1:5174/ab780234-3159-46dd-b741-7360756e2e65"
           }
         ],
         "platforms": [
@@ -1601,7 +1601,7 @@
           }
         ]
       },
-      "path": "docs/screenshots/art-a5/phone-S12-jungle.png"
+      "path": "docs/screenshots/m6-kite/final/art-a5/phone-S12-jungle.png"
     },
     {
       "device": "phone",
@@ -1618,13 +1618,13 @@
             "key": "terrain-temple-fill",
             "width": 128,
             "height": 128,
-            "source": "blob:http://127.0.0.1:5174/f66a5abe-d245-46e2-b1a8-bda6976fc0d9"
+            "source": "blob:http://127.0.0.1:5174/9d8d7a84-8634-49cb-b163-cf79a0aa8678"
           },
           {
             "key": "terrain-temple-top",
             "width": 128,
             "height": 34,
-            "source": "blob:http://127.0.0.1:5174/cbcd7f55-eb93-47c1-b69a-980777441e5f"
+            "source": "blob:http://127.0.0.1:5174/8a70c513-f419-4617-9b2a-7cce4d2961bf"
           }
         ],
         "platforms": [
@@ -1689,7 +1689,7 @@
           }
         ]
       },
-      "path": "docs/screenshots/art-a5/phone-S23-temple.png"
+      "path": "docs/screenshots/m6-kite/final/art-a5/phone-S23-temple.png"
     },
     {
       "device": "phone",
@@ -1706,13 +1706,13 @@
             "key": "terrain-garden-fill",
             "width": 128,
             "height": 128,
-            "source": "blob:http://127.0.0.1:5174/06f3370c-3946-4881-8f40-7785b3a83b39"
+            "source": "blob:http://127.0.0.1:5174/39cf4b03-a622-4ed1-bbd9-3e980a25cd83"
           },
           {
             "key": "terrain-garden-top",
             "width": 128,
             "height": 34,
-            "source": "blob:http://127.0.0.1:5174/39004307-fbfc-4625-924a-48cdcc78e7c1"
+            "source": "blob:http://127.0.0.1:5174/d6f96293-7864-40f4-8c74-f19fc7f9d9c9"
           }
         ],
         "platforms": [
@@ -1777,7 +1777,7 @@
           }
         ]
       },
-      "path": "docs/screenshots/art-a5/phone-S28-garden.png"
+      "path": "docs/screenshots/m6-kite/final/art-a5/phone-S28-garden.png"
     },
     {
       "device": "phone",
@@ -1794,13 +1794,13 @@
             "key": "terrain-tower-fill",
             "width": 128,
             "height": 128,
-            "source": "blob:http://127.0.0.1:5174/6b721544-8fa3-41de-99e5-3deaba8c6036"
+            "source": "blob:http://127.0.0.1:5174/b259d363-1b35-4c51-99f7-8a37e414450b"
           },
           {
             "key": "terrain-tower-top",
             "width": 128,
             "height": 34,
-            "source": "blob:http://127.0.0.1:5174/09e6753f-0294-4210-a2be-d4a054ca74f8"
+            "source": "blob:http://127.0.0.1:5174/ab5dad93-5c03-4b7a-a54b-b7190b248d2c"
           }
         ],
         "platforms": [
@@ -1865,7 +1865,7 @@
           }
         ]
       },
-      "path": "docs/screenshots/art-a5/phone-S30-tower.png"
+      "path": "docs/screenshots/m6-kite/final/art-a5/phone-S30-tower.png"
     },
     {
       "device": "phone",
@@ -1882,13 +1882,13 @@
             "key": "terrain-kingdom-fill",
             "width": 128,
             "height": 128,
-            "source": "blob:http://127.0.0.1:5174/cf4c6d82-22da-4894-aa26-23396034b5dc"
+            "source": "blob:http://127.0.0.1:5174/d5a361c7-187f-40df-a85f-045fa86d6607"
           },
           {
             "key": "terrain-kingdom-top",
             "width": 128,
             "height": 34,
-            "source": "blob:http://127.0.0.1:5174/c1039cb3-2cf3-4f72-9ddf-acc822725107"
+            "source": "blob:http://127.0.0.1:5174/35508d82-92e9-439f-934e-370359b7c842"
           }
         ],
         "platforms": [
@@ -1934,7 +1934,7 @@
           }
         ]
       },
-      "path": "docs/screenshots/art-a5/phone-S34-kingdom.png"
+      "path": "docs/screenshots/m6-kite/final/art-a5/phone-S34-kingdom.png"
     },
     {
       "device": "tablet",
@@ -1951,13 +1951,13 @@
             "key": "terrain-dock-fill",
             "width": 128,
             "height": 128,
-            "source": "blob:http://127.0.0.1:5174/5f6424b0-4643-4bb3-9f02-135d2792d7c9"
+            "source": "blob:http://127.0.0.1:5174/fd06d0b3-0aa7-4185-a5c1-b023e364ffe2"
           },
           {
             "key": "terrain-dock-top",
             "width": 128,
             "height": 34,
-            "source": "blob:http://127.0.0.1:5174/3efd8814-c5a3-48e2-8f26-66d5ef3e3e10"
+            "source": "blob:http://127.0.0.1:5174/e499233e-21cb-4879-99d7-1ad512688f86"
           }
         ],
         "platforms": [
@@ -2098,7 +2098,7 @@
           }
         ]
       },
-      "path": "docs/screenshots/art-a5/tablet-S01-dock.png"
+      "path": "docs/screenshots/m6-kite/final/art-a5/tablet-S01-dock.png"
     },
     {
       "device": "tablet",
@@ -2115,13 +2115,13 @@
             "key": "terrain-deck-fill",
             "width": 128,
             "height": 128,
-            "source": "blob:http://127.0.0.1:5174/dcaea7b4-0a03-42eb-a013-f0047601990f"
+            "source": "blob:http://127.0.0.1:5174/424fa91a-cd06-46f6-9bab-f0383ea47596"
           },
           {
             "key": "terrain-deck-top",
             "width": 128,
             "height": 34,
-            "source": "blob:http://127.0.0.1:5174/b89da3c5-bd4d-454a-a0c3-609ff6f70b2b"
+            "source": "blob:http://127.0.0.1:5174/495df93a-7ffb-4872-87f3-5da6bb59009b"
           }
         ],
         "platforms": [
@@ -2281,7 +2281,7 @@
           }
         ]
       },
-      "path": "docs/screenshots/art-a5/tablet-S03-deck.png"
+      "path": "docs/screenshots/m6-kite/final/art-a5/tablet-S03-deck.png"
     },
     {
       "device": "tablet",
@@ -2298,13 +2298,13 @@
             "key": "terrain-reef-fill",
             "width": 128,
             "height": 128,
-            "source": "blob:http://127.0.0.1:5174/1439e13a-9f64-440e-b708-17d48d13de83"
+            "source": "blob:http://127.0.0.1:5174/ae414b84-e452-434b-9969-9b2b71d5670b"
           },
           {
             "key": "terrain-reef-top",
             "width": 128,
             "height": 34,
-            "source": "blob:http://127.0.0.1:5174/5ac99486-d023-483d-8ae4-600cceae880b"
+            "source": "blob:http://127.0.0.1:5174/4cfbff74-2c84-4444-b834-502493872647"
           }
         ],
         "platforms": [
@@ -2426,7 +2426,7 @@
           }
         ]
       },
-      "path": "docs/screenshots/art-a5/tablet-S02-reef.png"
+      "path": "docs/screenshots/m6-kite/final/art-a5/tablet-S02-reef.png"
     },
     {
       "device": "tablet",
@@ -2443,13 +2443,13 @@
             "key": "terrain-coral-fill",
             "width": 128,
             "height": 128,
-            "source": "blob:http://127.0.0.1:5174/8bf29012-6e51-41a4-86ff-691229e296a9"
+            "source": "blob:http://127.0.0.1:5174/93a6079b-4655-478f-8571-315027786be6"
           },
           {
             "key": "terrain-coral-top",
             "width": 128,
             "height": 34,
-            "source": "blob:http://127.0.0.1:5174/e286d76d-4e53-4437-9e7a-161e24b229f7"
+            "source": "blob:http://127.0.0.1:5174/c3cc1f80-2779-45ac-955c-433ff927f040"
           }
         ],
         "platforms": [
@@ -2571,7 +2571,7 @@
           }
         ]
       },
-      "path": "docs/screenshots/art-a5/tablet-S05-coral.png"
+      "path": "docs/screenshots/m6-kite/final/art-a5/tablet-S05-coral.png"
     },
     {
       "device": "tablet",
@@ -2588,13 +2588,13 @@
             "key": "terrain-whale-fill",
             "width": 128,
             "height": 128,
-            "source": "blob:http://127.0.0.1:5174/e5808329-96db-4620-85b7-2ba3d0b57954"
+            "source": "blob:http://127.0.0.1:5174/d7493248-cc41-4a66-8519-64e22320eb79"
           },
           {
             "key": "terrain-whale-top",
             "width": 128,
             "height": 34,
-            "source": "blob:http://127.0.0.1:5174/d309bc80-52e6-4ff9-984c-111a5eda3c7e"
+            "source": "blob:http://127.0.0.1:5174/5f6422bb-d409-4117-bc14-0e052cc3a00e"
           }
         ],
         "platforms": [
@@ -2754,7 +2754,7 @@
           }
         ]
       },
-      "path": "docs/screenshots/art-a5/tablet-S04-whale.png"
+      "path": "docs/screenshots/m6-kite/final/art-a5/tablet-S04-whale.png"
     },
     {
       "device": "tablet",
@@ -2771,13 +2771,13 @@
             "key": "terrain-basalt-fill",
             "width": 128,
             "height": 128,
-            "source": "blob:http://127.0.0.1:5174/519ee3b7-dd9d-44d5-ac29-57445eb2ba28"
+            "source": "blob:http://127.0.0.1:5174/5c438923-7652-4d3c-8331-7923f6726d8a"
           },
           {
             "key": "terrain-basalt-top",
             "width": 128,
             "height": 34,
-            "source": "blob:http://127.0.0.1:5174/34253df6-69ea-4630-9965-93be7d88d746"
+            "source": "blob:http://127.0.0.1:5174/bd572d89-bf12-45d0-a993-07ec661b4eb0"
           }
         ],
         "platforms": [
@@ -2880,7 +2880,7 @@
           }
         ]
       },
-      "path": "docs/screenshots/art-a5/tablet-S06-basalt.png"
+      "path": "docs/screenshots/m6-kite/final/art-a5/tablet-S06-basalt.png"
     },
     {
       "device": "tablet",
@@ -2897,13 +2897,13 @@
             "key": "terrain-crystal-fill",
             "width": 128,
             "height": 128,
-            "source": "blob:http://127.0.0.1:5174/30c4e17e-ad88-4ae7-8c24-91c90f04d3d5"
+            "source": "blob:http://127.0.0.1:5174/3f5c1f4c-2710-4fac-a229-7fa790ad4b64"
           },
           {
             "key": "terrain-crystal-top",
             "width": 128,
             "height": 34,
-            "source": "blob:http://127.0.0.1:5174/9814b296-e8db-47fe-8e2d-e6124f4e201e"
+            "source": "blob:http://127.0.0.1:5174/126237ec-12c6-48b0-9291-7ce09e9399c0"
           }
         ],
         "platforms": [
@@ -2968,7 +2968,7 @@
           }
         ]
       },
-      "path": "docs/screenshots/art-a5/tablet-S08-crystal.png"
+      "path": "docs/screenshots/m6-kite/final/art-a5/tablet-S08-crystal.png"
     },
     {
       "device": "tablet",
@@ -2985,13 +2985,13 @@
             "key": "terrain-cloud-fill",
             "width": 128,
             "height": 128,
-            "source": "blob:http://127.0.0.1:5174/9ec8e36d-4938-4d8b-b1ee-4582937a2fbd"
+            "source": "blob:http://127.0.0.1:5174/a74f2dda-4bb7-4fee-9de0-7debe0d20079"
           },
           {
             "key": "terrain-cloud-top",
             "width": 128,
             "height": 34,
-            "source": "blob:http://127.0.0.1:5174/f0067437-292b-461e-a389-2f67cb17ee7f"
+            "source": "blob:http://127.0.0.1:5174/c052fc03-0e65-479f-9fd3-76d865a56192"
           }
         ],
         "platforms": [
@@ -3056,7 +3056,7 @@
           }
         ]
       },
-      "path": "docs/screenshots/art-a5/tablet-S09-cloud.png"
+      "path": "docs/screenshots/m6-kite/final/art-a5/tablet-S09-cloud.png"
     },
     {
       "device": "tablet",
@@ -3073,13 +3073,13 @@
             "key": "terrain-village-fill",
             "width": 128,
             "height": 128,
-            "source": "blob:http://127.0.0.1:5174/7ba1c938-e83c-4c47-9597-b529b3e60217"
+            "source": "blob:http://127.0.0.1:5174/1434c190-efc5-4c82-964e-73881b42bfc9"
           },
           {
             "key": "terrain-village-top",
             "width": 128,
             "height": 34,
-            "source": "blob:http://127.0.0.1:5174/b7adc867-6143-4ffe-87ca-3c9400435c07"
+            "source": "blob:http://127.0.0.1:5174/5e343475-c3c4-4ec2-b692-e925a20f7a63"
           }
         ],
         "platforms": [
@@ -3144,7 +3144,7 @@
           }
         ]
       },
-      "path": "docs/screenshots/art-a5/tablet-S13-village.png"
+      "path": "docs/screenshots/m6-kite/final/art-a5/tablet-S13-village.png"
     },
     {
       "device": "tablet",
@@ -3161,13 +3161,13 @@
             "key": "terrain-warehouse-fill",
             "width": 128,
             "height": 128,
-            "source": "blob:http://127.0.0.1:5174/1187ba80-7d25-4a23-9cb9-90553365170b"
+            "source": "blob:http://127.0.0.1:5174/f2cbdb6f-ab26-4130-bf9a-a72846f0372f"
           },
           {
             "key": "terrain-warehouse-top",
             "width": 128,
             "height": 34,
-            "source": "blob:http://127.0.0.1:5174/1d9b67d1-e7a4-4039-b220-966067245a9d"
+            "source": "blob:http://127.0.0.1:5174/884263d0-eaeb-4ee1-ba70-213e97216230"
           }
         ],
         "platforms": [
@@ -3251,7 +3251,7 @@
           }
         ]
       },
-      "path": "docs/screenshots/art-a5/tablet-S15-warehouse.png"
+      "path": "docs/screenshots/m6-kite/final/art-a5/tablet-S15-warehouse.png"
     },
     {
       "device": "tablet",
@@ -3268,13 +3268,13 @@
             "key": "terrain-sand-fill",
             "width": 128,
             "height": 128,
-            "source": "blob:http://127.0.0.1:5174/03f69391-2db2-4931-9222-d6eaf30e44d8"
+            "source": "blob:http://127.0.0.1:5174/c9d7c344-012f-4e53-9f8e-199ab2ad0077"
           },
           {
             "key": "terrain-sand-top",
             "width": 128,
             "height": 34,
-            "source": "blob:http://127.0.0.1:5174/c34193a1-3943-45c3-be92-c745a15c7846"
+            "source": "blob:http://127.0.0.1:5174/19d5c27f-91f7-4a4e-bef7-a69c109e37e9"
           }
         ],
         "platforms": [
@@ -3339,7 +3339,7 @@
           }
         ]
       },
-      "path": "docs/screenshots/art-a5/tablet-S16-sand.png"
+      "path": "docs/screenshots/m6-kite/final/art-a5/tablet-S16-sand.png"
     },
     {
       "device": "tablet",
@@ -3356,13 +3356,13 @@
             "key": "terrain-shadow-fill",
             "width": 128,
             "height": 128,
-            "source": "blob:http://127.0.0.1:5174/cb53aea1-f7e6-446e-a131-60873978e23c"
+            "source": "blob:http://127.0.0.1:5174/cd2ccb60-1d1a-4a0e-b977-51926c8cccff"
           },
           {
             "key": "terrain-shadow-top",
             "width": 128,
             "height": 34,
-            "source": "blob:http://127.0.0.1:5174/22aa4fc4-931c-4d72-a043-6acdf3ee75b7"
+            "source": "blob:http://127.0.0.1:5174/4dff9496-046b-4b7f-b331-ae4093f05838"
           }
         ],
         "platforms": [
@@ -3446,7 +3446,7 @@
           }
         ]
       },
-      "path": "docs/screenshots/art-a5/tablet-S11-shadow.png"
+      "path": "docs/screenshots/m6-kite/final/art-a5/tablet-S11-shadow.png"
     },
     {
       "device": "tablet",
@@ -3463,13 +3463,13 @@
             "key": "terrain-jungle-fill",
             "width": 128,
             "height": 128,
-            "source": "blob:http://127.0.0.1:5174/71089ab1-8a68-4921-80ff-c3c353f0acae"
+            "source": "blob:http://127.0.0.1:5174/7f92cbb7-1162-49f2-ba80-1b133787f5c3"
           },
           {
             "key": "terrain-jungle-top",
             "width": 128,
             "height": 34,
-            "source": "blob:http://127.0.0.1:5174/0041aedd-bdfc-4c0d-9fdf-fd88e52d1e67"
+            "source": "blob:http://127.0.0.1:5174/2eca734d-b1d7-4567-8469-79bf16cee10f"
           }
         ],
         "platforms": [
@@ -3534,7 +3534,7 @@
           }
         ]
       },
-      "path": "docs/screenshots/art-a5/tablet-S12-jungle.png"
+      "path": "docs/screenshots/m6-kite/final/art-a5/tablet-S12-jungle.png"
     },
     {
       "device": "tablet",
@@ -3551,13 +3551,13 @@
             "key": "terrain-temple-fill",
             "width": 128,
             "height": 128,
-            "source": "blob:http://127.0.0.1:5174/d23df60f-0e89-4a02-a5d6-a45b03115865"
+            "source": "blob:http://127.0.0.1:5174/396013cd-be4d-4319-84ae-8604870a0e6f"
           },
           {
             "key": "terrain-temple-top",
             "width": 128,
             "height": 34,
-            "source": "blob:http://127.0.0.1:5174/a4fb636f-2e56-4610-9bdb-4a71d64e3e22"
+            "source": "blob:http://127.0.0.1:5174/7128e611-3d1b-4673-ad49-93e82370112c"
           }
         ],
         "platforms": [
@@ -3622,7 +3622,7 @@
           }
         ]
       },
-      "path": "docs/screenshots/art-a5/tablet-S23-temple.png"
+      "path": "docs/screenshots/m6-kite/final/art-a5/tablet-S23-temple.png"
     },
     {
       "device": "tablet",
@@ -3639,13 +3639,13 @@
             "key": "terrain-garden-fill",
             "width": 128,
             "height": 128,
-            "source": "blob:http://127.0.0.1:5174/d7b670db-7658-4bca-bd09-7a12e7ddc902"
+            "source": "blob:http://127.0.0.1:5174/58e6d144-1b69-41f2-8aca-e3de586d478e"
           },
           {
             "key": "terrain-garden-top",
             "width": 128,
             "height": 34,
-            "source": "blob:http://127.0.0.1:5174/a9cadc12-bca4-4c3f-b57c-57353e24f1d4"
+            "source": "blob:http://127.0.0.1:5174/bd38ba47-b9ff-4f0d-8e15-b92137b64849"
           }
         ],
         "platforms": [
@@ -3710,7 +3710,7 @@
           }
         ]
       },
-      "path": "docs/screenshots/art-a5/tablet-S28-garden.png"
+      "path": "docs/screenshots/m6-kite/final/art-a5/tablet-S28-garden.png"
     },
     {
       "device": "tablet",
@@ -3727,13 +3727,13 @@
             "key": "terrain-tower-fill",
             "width": 128,
             "height": 128,
-            "source": "blob:http://127.0.0.1:5174/03e2a13e-8602-4139-8031-aa2831a41158"
+            "source": "blob:http://127.0.0.1:5174/bcca7433-b1ed-4d12-9ae4-4589b3295793"
           },
           {
             "key": "terrain-tower-top",
             "width": 128,
             "height": 34,
-            "source": "blob:http://127.0.0.1:5174/86f763ef-4064-4250-b01a-bf5e460a7029"
+            "source": "blob:http://127.0.0.1:5174/f93efdef-c0c8-4686-86d0-0654d659e6af"
           }
         ],
         "platforms": [
@@ -3798,7 +3798,7 @@
           }
         ]
       },
-      "path": "docs/screenshots/art-a5/tablet-S30-tower.png"
+      "path": "docs/screenshots/m6-kite/final/art-a5/tablet-S30-tower.png"
     },
     {
       "device": "tablet",
@@ -3815,13 +3815,13 @@
             "key": "terrain-kingdom-fill",
             "width": 128,
             "height": 128,
-            "source": "blob:http://127.0.0.1:5174/c8817220-ff88-402c-ae9b-98d2ace624af"
+            "source": "blob:http://127.0.0.1:5174/a698e430-7bad-4115-8dc6-06dee00aec81"
           },
           {
             "key": "terrain-kingdom-top",
             "width": 128,
             "height": 34,
-            "source": "blob:http://127.0.0.1:5174/77cbef9b-15d8-4ac4-84dc-7d3003332317"
+            "source": "blob:http://127.0.0.1:5174/b55b8460-d1f1-4418-bfc7-706b222fbacc"
           }
         ],
         "platforms": [
@@ -3867,7 +3867,7 @@
           }
         ]
       },
-      "path": "docs/screenshots/art-a5/tablet-S34-kingdom.png"
+      "path": "docs/screenshots/m6-kite/final/art-a5/tablet-S34-kingdom.png"
     }
   ],
   "requests": [

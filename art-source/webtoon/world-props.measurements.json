@@ -1,0 +1,1100 @@
+[
+  {
+    "key": "prop-chest",
+    "nativeSize": [
+      1086,
+      1448
+    ],
+    "sourceSize": [
+      384,
+      512
+    ],
+    "runtimeSize": [
+      96,
+      128
+    ],
+    "sourceBounds": [
+      16,
+      133,
+      369,
+      383
+    ],
+    "method": "uniform whole-canvas contain with transparent padding; generated alpha preserved; no crop/repainting",
+    "transform": {
+      "resizedSize": [
+        384,
+        512
+      ],
+      "offset": [
+        0,
+        0
+      ]
+    },
+    "displaySize": [
+      65.28,
+      87.04
+    ]
+  },
+  {
+    "key": "prop-heart",
+    "nativeSize": [
+      1086,
+      1448
+    ],
+    "sourceSize": [
+      384,
+      512
+    ],
+    "runtimeSize": [
+      96,
+      128
+    ],
+    "sourceBounds": [
+      21,
+      126,
+      363,
+      418
+    ],
+    "method": "uniform whole-canvas contain with transparent padding; generated alpha preserved; no crop/repainting",
+    "transform": {
+      "resizedSize": [
+        384,
+        512
+      ],
+      "offset": [
+        0,
+        0
+      ]
+    },
+    "displaySize": {
+      "normal": [
+        34.56,
+        46.08
+      ],
+      "large": [
+        48,
+        64
+      ]
+    }
+  },
+  {
+    "key": "prop-shell",
+    "nativeSize": [
+      1086,
+      1448
+    ],
+    "sourceSize": [
+      384,
+      512
+    ],
+    "runtimeSize": [
+      96,
+      128
+    ],
+    "sourceBounds": [
+      20,
+      67,
+      363,
+      451
+    ],
+    "method": "uniform whole-canvas contain with transparent padding; generated alpha preserved; no crop/repainting",
+    "transform": {
+      "resizedSize": [
+        384,
+        512
+      ],
+      "offset": [
+        0,
+        0
+      ]
+    },
+    "displaySize": [
+      65.28,
+      87.04
+    ]
+  },
+  {
+    "key": "prop-bell",
+    "nativeSize": [
+      1086,
+      1448
+    ],
+    "sourceSize": [
+      384,
+      512
+    ],
+    "runtimeSize": [
+      96,
+      128
+    ],
+    "sourceBounds": [
+      15,
+      39,
+      369,
+      456
+    ],
+    "method": "uniform whole-canvas contain with transparent padding; generated alpha preserved; no crop/repainting",
+    "transform": {
+      "resizedSize": [
+        384,
+        512
+      ],
+      "offset": [
+        0,
+        0
+      ]
+    },
+    "displaySize": [
+      65.28,
+      87.04
+    ]
+  },
+  {
+    "key": "prop-golden",
+    "nativeSize": [
+      1087,
+      1447
+    ],
+    "sourceSize": [
+      384,
+      512
+    ],
+    "runtimeSize": [
+      96,
+      128
+    ],
+    "sourceBounds": [
+      21,
+      100,
+      363,
+      412
+    ],
+    "method": "uniform whole-canvas contain with transparent padding; generated alpha preserved; no crop/repainting",
+    "transform": {
+      "resizedSize": [
+        384,
+        511
+      ],
+      "offset": [
+        0,
+        0
+      ]
+    },
+    "displaySize": [
+      65.28,
+      87.04
+    ]
+  },
+  {
+    "key": "prop-key",
+    "nativeSize": [
+      1086,
+      1448
+    ],
+    "sourceSize": [
+      384,
+      512
+    ],
+    "runtimeSize": [
+      96,
+      128
+    ],
+    "sourceBounds": [
+      22,
+      39,
+      363,
+      459
+    ],
+    "method": "uniform whole-canvas contain with transparent padding; generated alpha preserved; no crop/repainting",
+    "transform": {
+      "resizedSize": [
+        384,
+        512
+      ],
+      "offset": [
+        0,
+        0
+      ]
+    },
+    "displaySize": [
+      65.28,
+      87.04
+    ]
+  },
+  {
+    "key": "prop-lifevest",
+    "nativeSize": [
+      1086,
+      1448
+    ],
+    "sourceSize": [
+      384,
+      512
+    ],
+    "runtimeSize": [
+      96,
+      128
+    ],
+    "sourceBounds": [
+      29,
+      71,
+      355,
+      443
+    ],
+    "method": "uniform whole-canvas contain with transparent padding; generated alpha preserved; no crop/repainting",
+    "transform": {
+      "resizedSize": [
+        384,
+        512
+      ],
+      "offset": [
+        0,
+        0
+      ]
+    },
+    "displaySize": [
+      65.28,
+      87.04
+    ]
+  },
+  {
+    "key": "prop-rescue-rope",
+    "nativeSize": [
+      1086,
+      1448
+    ],
+    "sourceSize": [
+      384,
+      512
+    ],
+    "runtimeSize": [
+      96,
+      128
+    ],
+    "sourceBounds": [
+      17,
+      99,
+      375,
+      425
+    ],
+    "method": "uniform whole-canvas contain with transparent padding; generated alpha preserved; no crop/repainting",
+    "transform": {
+      "resizedSize": [
+        384,
+        512
+      ],
+      "offset": [
+        0,
+        0
+      ]
+    },
+    "displaySize": [
+      65.28,
+      87.04
+    ]
+  },
+  {
+    "key": "prop-lifering",
+    "nativeSize": [
+      1086,
+      1448
+    ],
+    "sourceSize": [
+      384,
+      512
+    ],
+    "runtimeSize": [
+      96,
+      128
+    ],
+    "sourceBounds": [
+      18,
+      83,
+      366,
+      434
+    ],
+    "method": "uniform whole-canvas contain with transparent padding; generated alpha preserved; no crop/repainting",
+    "transform": {
+      "resizedSize": [
+        384,
+        512
+      ],
+      "offset": [
+        0,
+        0
+      ]
+    },
+    "displaySize": [
+      65.28,
+      87.04
+    ]
+  },
+  {
+    "key": "prop-lightning-rod",
+    "nativeSize": [
+      1086,
+      1448
+    ],
+    "sourceSize": [
+      384,
+      512
+    ],
+    "runtimeSize": [
+      96,
+      128
+    ],
+    "sourceBounds": [
+      47,
+      7,
+      337,
+      478
+    ],
+    "method": "uniform whole-canvas contain with transparent padding; generated alpha preserved; no crop/repainting",
+    "transform": {
+      "resizedSize": [
+        384,
+        512
+      ],
+      "offset": [
+        0,
+        0
+      ]
+    },
+    "displaySize": [
+      65.28,
+      87.04
+    ]
+  },
+  {
+    "key": "prop-damaged-mast",
+    "nativeSize": [
+      1086,
+      1448
+    ],
+    "sourceSize": [
+      384,
+      512
+    ],
+    "runtimeSize": [
+      96,
+      128
+    ],
+    "sourceBounds": [
+      16,
+      25,
+      369,
+      478
+    ],
+    "method": "uniform whole-canvas contain with transparent padding; generated alpha preserved; no crop/repainting",
+    "transform": {
+      "resizedSize": [
+        384,
+        512
+      ],
+      "offset": [
+        0,
+        0
+      ]
+    },
+    "displaySize": [
+      65.28,
+      87.04
+    ]
+  },
+  {
+    "key": "prop-coral-gate",
+    "nativeSize": [
+      1086,
+      1448
+    ],
+    "sourceSize": [
+      384,
+      512
+    ],
+    "runtimeSize": [
+      96,
+      128
+    ],
+    "sourceBounds": [
+      21,
+      68,
+      364,
+      443
+    ],
+    "method": "uniform whole-canvas contain with transparent padding; generated alpha preserved; no crop/repainting",
+    "transform": {
+      "resizedSize": [
+        384,
+        512
+      ],
+      "offset": [
+        0,
+        0
+      ]
+    },
+    "displaySize": [
+      65.28,
+      87.04
+    ]
+  },
+  {
+    "key": "prop-vine",
+    "nativeSize": [
+      1086,
+      1448
+    ],
+    "sourceSize": [
+      384,
+      512
+    ],
+    "runtimeSize": [
+      96,
+      128
+    ],
+    "sourceBounds": [
+      56,
+      31,
+      331,
+      483
+    ],
+    "method": "uniform whole-canvas contain with transparent padding; generated alpha preserved; no crop/repainting",
+    "transform": {
+      "resizedSize": [
+        384,
+        512
+      ],
+      "offset": [
+        0,
+        0
+      ]
+    },
+    "displaySize": [
+      65.28,
+      87.04
+    ]
+  },
+  {
+    "key": "prop-torch",
+    "nativeSize": [
+      1086,
+      1448
+    ],
+    "sourceSize": [
+      384,
+      512
+    ],
+    "runtimeSize": [
+      96,
+      128
+    ],
+    "sourceBounds": [
+      123,
+      8,
+      266,
+      482
+    ],
+    "method": "uniform whole-canvas contain with transparent padding; generated alpha preserved; no crop/repainting",
+    "transform": {
+      "resizedSize": [
+        384,
+        512
+      ],
+      "offset": [
+        0,
+        0
+      ]
+    },
+    "displaySize": [
+      65.28,
+      87.04
+    ]
+  },
+  {
+    "key": "prop-furnace",
+    "nativeSize": [
+      1086,
+      1448
+    ],
+    "sourceSize": [
+      384,
+      512
+    ],
+    "runtimeSize": [
+      96,
+      128
+    ],
+    "sourceBounds": [
+      22,
+      95,
+      362,
+      439
+    ],
+    "method": "uniform whole-canvas contain with transparent padding; generated alpha preserved; no crop/repainting",
+    "transform": {
+      "resizedSize": [
+        384,
+        512
+      ],
+      "offset": [
+        0,
+        0
+      ]
+    },
+    "displaySize": [
+      65.28,
+      87.04
+    ]
+  },
+  {
+    "key": "prop-wave-rope",
+    "nativeSize": [
+      1086,
+      1448
+    ],
+    "sourceSize": [
+      384,
+      512
+    ],
+    "runtimeSize": [
+      96,
+      128
+    ],
+    "sourceBounds": [
+      103,
+      13,
+      282,
+      495
+    ],
+    "method": "uniform whole-canvas contain with transparent padding; generated alpha preserved; no crop/repainting",
+    "transform": {
+      "resizedSize": [
+        384,
+        512
+      ],
+      "offset": [
+        0,
+        0
+      ]
+    },
+    "displaySize": [
+      65.28,
+      87.04
+    ]
+  },
+  {
+    "key": "prop-mirror",
+    "nativeSize": [
+      1086,
+      1448
+    ],
+    "sourceSize": [
+      384,
+      512
+    ],
+    "runtimeSize": [
+      96,
+      128
+    ],
+    "sourceBounds": [
+      33,
+      35,
+      351,
+      474
+    ],
+    "method": "uniform whole-canvas contain with transparent padding; generated alpha preserved; no crop/repainting",
+    "transform": {
+      "resizedSize": [
+        384,
+        512
+      ],
+      "offset": [
+        0,
+        0
+      ]
+    },
+    "displaySize": [
+      65.28,
+      87.04
+    ]
+  },
+  {
+    "key": "prop-journal",
+    "nativeSize": [
+      1086,
+      1448
+    ],
+    "sourceSize": [
+      384,
+      512
+    ],
+    "runtimeSize": [
+      96,
+      128
+    ],
+    "sourceBounds": [
+      53,
+      65,
+      339,
+      444
+    ],
+    "method": "uniform whole-canvas contain with transparent padding; generated alpha preserved; no crop/repainting",
+    "transform": {
+      "resizedSize": [
+        384,
+        512
+      ],
+      "offset": [
+        0,
+        0
+      ]
+    },
+    "displaySize": [
+      65.28,
+      87.04
+    ]
+  },
+  {
+    "key": "prop-star-map",
+    "nativeSize": [
+      1086,
+      1448
+    ],
+    "sourceSize": [
+      384,
+      512
+    ],
+    "runtimeSize": [
+      96,
+      128
+    ],
+    "sourceBounds": [
+      6,
+      94,
+      380,
+      418
+    ],
+    "method": "uniform whole-canvas contain with transparent padding; generated alpha preserved; no crop/repainting",
+    "transform": {
+      "resizedSize": [
+        384,
+        512
+      ],
+      "offset": [
+        0,
+        0
+      ]
+    },
+    "displaySize": [
+      65.28,
+      87.04
+    ]
+  },
+  {
+    "key": "prop-lantern",
+    "nativeSize": [
+      1086,
+      1448
+    ],
+    "sourceSize": [
+      384,
+      512
+    ],
+    "runtimeSize": [
+      96,
+      128
+    ],
+    "sourceBounds": [
+      69,
+      18,
+      314,
+      475
+    ],
+    "method": "uniform whole-canvas contain with transparent padding; generated alpha preserved; no crop/repainting",
+    "transform": {
+      "resizedSize": [
+        384,
+        512
+      ],
+      "offset": [
+        0,
+        0
+      ]
+    },
+    "displaySize": [
+      65.28,
+      87.04
+    ]
+  },
+  {
+    "key": "prop-star-device",
+    "nativeSize": [
+      1086,
+      1448
+    ],
+    "sourceSize": [
+      384,
+      512
+    ],
+    "runtimeSize": [
+      96,
+      128
+    ],
+    "sourceBounds": [
+      33,
+      31,
+      351,
+      460
+    ],
+    "method": "uniform whole-canvas contain with transparent padding; generated alpha preserved; no crop/repainting",
+    "transform": {
+      "resizedSize": [
+        384,
+        512
+      ],
+      "offset": [
+        0,
+        0
+      ]
+    },
+    "displaySize": [
+      65.28,
+      87.04
+    ]
+  },
+  {
+    "key": "prop-cargo",
+    "nativeSize": [
+      1086,
+      1448
+    ],
+    "sourceSize": [
+      384,
+      512
+    ],
+    "runtimeSize": [
+      96,
+      128
+    ],
+    "sourceBounds": [
+      23,
+      76,
+      362,
+      414
+    ],
+    "method": "uniform whole-canvas contain with transparent padding; generated alpha preserved; no crop/repainting",
+    "transform": {
+      "resizedSize": [
+        384,
+        512
+      ],
+      "offset": [
+        0,
+        0
+      ]
+    },
+    "displaySize": [
+      65.28,
+      87.04
+    ]
+  },
+  {
+    "key": "prop-gift",
+    "nativeSize": [
+      1086,
+      1448
+    ],
+    "sourceSize": [
+      384,
+      512
+    ],
+    "runtimeSize": [
+      96,
+      128
+    ],
+    "sourceBounds": [
+      18,
+      70,
+      366,
+      449
+    ],
+    "method": "uniform whole-canvas contain with transparent padding; generated alpha preserved; no crop/repainting",
+    "transform": {
+      "resizedSize": [
+        384,
+        512
+      ],
+      "offset": [
+        0,
+        0
+      ]
+    },
+    "displaySize": [
+      65.28,
+      87.04
+    ]
+  },
+  {
+    "key": "prop-treasure-altar",
+    "nativeSize": [
+      1086,
+      1448
+    ],
+    "sourceSize": [
+      384,
+      512
+    ],
+    "runtimeSize": [
+      96,
+      128
+    ],
+    "sourceBounds": [
+      42,
+      42,
+      342,
+      463
+    ],
+    "method": "uniform whole-canvas contain with transparent padding; generated alpha preserved; no crop/repainting",
+    "transform": {
+      "resizedSize": [
+        384,
+        512
+      ],
+      "offset": [
+        0,
+        0
+      ]
+    },
+    "displaySize": [
+      65.28,
+      87.04
+    ]
+  },
+  {
+    "key": "prop-moon-rock",
+    "nativeSize": [
+      1086,
+      1448
+    ],
+    "sourceSize": [
+      384,
+      512
+    ],
+    "runtimeSize": [
+      96,
+      128
+    ],
+    "sourceBounds": [
+      34,
+      84,
+      350,
+      433
+    ],
+    "method": "uniform whole-canvas contain with transparent padding; generated alpha preserved; no crop/repainting",
+    "transform": {
+      "resizedSize": [
+        384,
+        512
+      ],
+      "offset": [
+        0,
+        0
+      ]
+    },
+    "displaySize": [
+      65.28,
+      87.04
+    ]
+  },
+  {
+    "key": "prop-lotus-shrine",
+    "nativeSize": [
+      1086,
+      1448
+    ],
+    "sourceSize": [
+      384,
+      512
+    ],
+    "runtimeSize": [
+      96,
+      128
+    ],
+    "sourceBounds": [
+      7,
+      76,
+      379,
+      444
+    ],
+    "method": "uniform whole-canvas contain with transparent padding; generated alpha preserved; no crop/repainting",
+    "transform": {
+      "resizedSize": [
+        384,
+        512
+      ],
+      "offset": [
+        0,
+        0
+      ]
+    },
+    "displaySize": [
+      65.28,
+      87.04
+    ]
+  },
+  {
+    "key": "prop-ending",
+    "nativeSize": [
+      1086,
+      1448
+    ],
+    "sourceSize": [
+      384,
+      512
+    ],
+    "runtimeSize": [
+      96,
+      128
+    ],
+    "sourceBounds": [
+      34,
+      25,
+      350,
+      490
+    ],
+    "method": "uniform whole-canvas contain with transparent padding; generated alpha preserved; no crop/repainting",
+    "transform": {
+      "resizedSize": [
+        384,
+        512
+      ],
+      "offset": [
+        0,
+        0
+      ]
+    },
+    "displaySize": [
+      65.28,
+      87.04
+    ]
+  },
+  {
+    "key": "prop-flight-ring",
+    "nativeSize": [
+      1086,
+      1448
+    ],
+    "sourceSize": [
+      384,
+      512
+    ],
+    "runtimeSize": [
+      96,
+      128
+    ],
+    "sourceBounds": [
+      27,
+      12,
+      357,
+      492
+    ],
+    "method": "uniform whole-canvas contain with transparent padding; generated alpha preserved; no crop/repainting",
+    "transform": {
+      "resizedSize": [
+        384,
+        512
+      ],
+      "offset": [
+        0,
+        0
+      ]
+    },
+    "displaySize": [
+      129.6,
+      172.8
+    ]
+  },
+  {
+    "key": "prop-gust-cloud",
+    "nativeSize": [
+      1086,
+      1448
+    ],
+    "sourceSize": [
+      384,
+      512
+    ],
+    "runtimeSize": [
+      96,
+      128
+    ],
+    "sourceBounds": [
+      19,
+      119,
+      367,
+      393
+    ],
+    "method": "uniform whole-canvas contain with transparent padding; generated alpha preserved; no crop/repainting",
+    "transform": {
+      "resizedSize": [
+        384,
+        512
+      ],
+      "offset": [
+        0,
+        0
+      ]
+    },
+    "displaySize": {
+      "base": [
+        91.2,
+        121.6
+      ],
+      "pulseFactor": [
+        0.96,
+        1.04
+      ]
+    }
+  },
+  {
+    "key": "prop-falling-debris",
+    "nativeSize": [
+      1086,
+      1448
+    ],
+    "sourceSize": [
+      384,
+      512
+    ],
+    "runtimeSize": [
+      96,
+      128
+    ],
+    "sourceBounds": [
+      70,
+      73,
+      351,
+      428
+    ],
+    "method": "uniform whole-canvas contain with transparent padding; generated alpha preserved; no crop/repainting",
+    "transform": {
+      "resizedSize": [
+        384,
+        512
+      ],
+      "offset": [
+        0,
+        0
+      ]
+    },
+    "displaySize": {
+      "base": [
+        67.2,
+        89.6
+      ],
+      "pulseFactor": [
+        0.96,
+        1.04
+      ]
+    }
+  }
+]

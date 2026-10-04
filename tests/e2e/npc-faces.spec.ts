@@ -1,3 +1,4 @@
+import {evidencePath} from './art-evidence';
 import {test, expect, type Page} from '@playwright/test';
 import {mkdirSync, writeFileSync} from 'node:fs';
 import {freshSave, type Save} from '../../src/core/state';
@@ -29,7 +30,7 @@ test('nine NPCs, three real dialogue expressions, mixed speakers and reward relo
     const errors:string[]=[]; page.on('pageerror',error=>errors.push(error.message));
     page.on('console',message=>{if(message.type()==='error')errors.push(message.text());});
     page.on('response',response=>{if(response.status()>=400)errors.push(`${response.status()} ${response.url()}`);});
-    mkdirSync('docs/screenshots/art-a4',{recursive:true}); await page.goto('/');
+    mkdirSync(evidencePath('art-a4'),{recursive:true}); await page.goto('/');
     const checks:unknown[]=[];
     for(const [device,viewport] of Object.entries({phone:{width:844,height:390},tablet:{width:1180,height:820}})){
         await page.setViewportSize(viewport);
@@ -58,7 +59,7 @@ test('nine NPCs, three real dialogue expressions, mixed speakers and reward relo
                     expect(observed.expression).toBe(expected.expression);expect(observed.left).toBe(`${-expected.frame*100}%`);
                     seen.get(expected.character)!.add(expected.expression);
                 }
-                const path=`docs/screenshots/art-a4/${device}-${id.replace('.','-')}-${index}-${expected.character??'static'}-${observed.expression}.png`;
+                const path=evidencePath(`art-a4/${device}-${id.replace('.','-')}-${index}-${expected.character??'static'}-${observed.expression}.png`);
                 await page.screenshot({path});checks.push({device,id,index,text:expected.text,observed,path});
                 const frozen=await page.evaluate(()=>Reflect.get(window,'__SINBAD_TEST__').sim);
                 await page.keyboard.down('d');await page.waitForTimeout(120);await page.keyboard.up('d');
@@ -111,10 +112,10 @@ test('missing expression sheet keeps the captain portrait, dialogue and save pla
     await expect(image).toHaveAttribute('src','/assets/webtoon/captain-webtoon.webp');
     await expect.poll(()=>image.evaluate((image:HTMLImageElement)=>image.complete&&image.naturalWidth>0)).toBe(true);
     await expect(page.getByTestId('dialogue-text')).toHaveText('바닷길에 검은 마법이 드리웠구나. 먼저 이 항구를 안전하게 만들자.');
-    await page.screenshot({path:'docs/screenshots/art-a4/phone-captain-fallback.png'});
+    await page.screenshot({path:evidencePath('art-a4/phone-captain-fallback.png')});
     await page.locator('#skip').click();expect((await readJourney(page)).save.completedObjectiveIds).toContain('S01.captainTalk');
     expect(failures.some(url=>url.endsWith('/captain-faces.webp'))).toBe(true);
-    writeFileSync('docs/validation/npc-faces-fallback.json',JSON.stringify({pass:true,expectedAbortedRequests:failures,screenshot:'docs/screenshots/art-a4/phone-captain-fallback.png'},null,2));
+    writeFileSync('docs/validation/npc-faces-fallback.json',JSON.stringify({pass:true,expectedAbortedRequests:failures,screenshot:evidencePath('art-a4/phone-captain-fallback.png')},null,2));
 });
 
 test('read-only observations stay safe while real scene transitions dispose textures',async({page})=>{

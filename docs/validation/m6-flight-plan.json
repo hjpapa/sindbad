@@ -1,0 +1,18 @@
+{
+  "status": "implemented and browser verified",
+  "artStatus": "ART_DRAFT",
+  "items": [
+    {
+      "key": "prop-flight-ring",
+      "legacy": "flightRing"
+    },
+    {
+      "key": "prop-gust-cloud",
+      "legacy": "stormCloud"
+    },
+    {
+      "key": "prop-falling-debris",
+      "legacy": "debris"
+    }
+  ]
+}

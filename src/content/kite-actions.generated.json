@@ -1,0 +1,76 @@
+{
+  "key": "kite",
+  "texture": "kite-actions",
+  "cellSize": 512,
+  "columns": 4,
+  "rows": 1,
+  "idleHeight": 286,
+  "flightBodyWidth": 96,
+  "flightBodyHeight": 128,
+  "frames": [
+    {
+      "pose": "idle",
+      "frame": 0,
+      "bounds": [
+        198,
+        164,
+        367,
+        450
+      ],
+      "baseline": 449,
+      "centre": [
+        286,
+        291
+      ]
+    },
+    {
+      "pose": "telegraph",
+      "frame": 1,
+      "bounds": [
+        152,
+        188,
+        341,
+        427
+      ],
+      "baseline": 426,
+      "centre": [
+        262,
+        319
+      ]
+    },
+    {
+      "pose": "attack",
+      "frame": 2,
+      "bounds": [
+        158,
+        132,
+        433,
+        328
+      ],
+      "baseline": 327,
+      "centre": [
+        321,
+        253
+      ]
+    },
+    {
+      "pose": "defeated",
+      "frame": 3,
+      "bounds": [
+        145,
+        119,
+        335,
+        377
+      ],
+      "baseline": 376,
+      "centre": [
+        255,
+        236
+      ]
+    }
+  ],
+  "artStatus": "ART_DRAFT",
+  "source": "art-source/webtoon/generated/kite-m6/kite-actions-02.png",
+  "sourceSha256": "357076866a438e4e75ca68bdcef8fd4bbe93e4f149632a444ad97ff6f11ee2ea",
+  "method": "Each complete native 627px cell uniformly resized to 512px; repacked 4x1; exact lossless WebP. Centre manually measured at sail spar + flight target offset; alpha bounds measured >16."
+}

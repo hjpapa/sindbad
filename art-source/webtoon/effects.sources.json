@@ -1,0 +1,147 @@
+{
+  "date": "2026-10-04",
+  "tool": "OpenAI built-in imagegen",
+  "artStatus": "ART_DRAFT",
+  "candidates": [
+    {
+      "key": "projectile-siren-wave",
+      "columns": 2,
+      "rows": 2,
+      "frames": 4,
+      "runtimeFrame": 64,
+      "sourceGenerated": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-98b00d55-3763-49e5-8b41-6de8e3632993.png",
+      "path": "art-source/webtoon/generated/effects/projectile-siren-wave-01.png",
+      "selected": true,
+      "prompt": "Use case: stylized-concept. Asset type: original game animation sprite sheet, projectile-siren-wave. The attached project hero is STYLE REFERENCE ONLY: crisp dark navy outlines, simple cel shading, warm teal/gold palette, light from upper left. Draw ONLY a friendly teal sound-wave projectile: three curved concentric cyan arcs opening toward the RIGHT with a small pearl-white core and subtle gold accents. Exactly FOUR chronological animation frames, reading left-to-right then top-to-bottom, in an invisible perfectly aligned 2 columns x 2 rows grid on a SQUARE transparent RGBA canvas. Each square cell has the same centered projectile, consistent scale and center; arcs breathe and ripple slightly across four frames, frame 4 loops naturally to frame 1. Each complete silhouette and every glow/spark stays strictly within the central 70% of its cell with generous transparent margins on ALL sides. Strong graphic silhouette readable at 64x64 game pixels. No characters, background, scenery, decorative frame, grid lines, labels, typography, letters, numbers, watermark or signature. Do not copy the hero or draw a weapon. Actual transparent background, preserve alpha. Target original grid 1024x1024, 512 square cells. The output must contain exactly 4 separate complete projectiles, not one large composition.",
+      "references": [
+        "art-source/webtoon/hero-webtoon.webp"
+      ],
+      "sha256": "29e99cce09b0744cdcb30653709e5043e02da4e344882efd8a74808dbf756bba",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "nativeVisibleBoundariesEmpty": true
+    },
+    {
+      "key": "projectile-siren-note",
+      "columns": 2,
+      "rows": 2,
+      "frames": 4,
+      "runtimeFrame": 64,
+      "sourceGenerated": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-6c0db6f5-67f9-42c9-a76a-2119b36cabc4.png",
+      "path": "art-source/webtoon/generated/effects/projectile-siren-note-01.png",
+      "selected": true,
+      "prompt": "Use case: stylized-concept. Asset type: original game animation sprite sheet, projectile-siren-note. Attached project hero is STYLE REFERENCE ONLY: crisp dark navy outlines, cel shading, warm jewel palette, upper-left light. ONLY one friendly magical MUSICAL NOTE projectile per frame: a large clearly readable lavender eighth-note shaped illustrated object with a curved stem, pearly highlights, tiny warm gold sparkle. It is a drawn musical symbol object, with NO written labels or typography. Exactly FOUR chronological animation frames in an invisible perfectly aligned 2 columns x 2 rows grid on a SQUARE transparent RGBA canvas. Read order top-left, top-right, bottom-left, bottom-right. Same central anchor, same size, stem toward upper right; only glint and light ribbon gently pulse through 4 phases that loop. Every complete silhouette, ribbon and sparkle strictly inside central 68% of each square cell, generous clear transparent margins. Readable at 64x64 pixels. NO characters, instruments, scenery, background, grid lines, labels, letters, numbers, logos, signature or watermark. No motion trails crossing between cells. Actual transparent background. Target original grid 1024x1024 with 512 square cells.",
+      "references": [
+        "art-source/webtoon/hero-webtoon.webp"
+      ],
+      "sha256": "79638e552d1e0f61b74eaf7aa5a5e84fb89739730ac22b69b2773816b9cd6e61",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "nativeVisibleBoundariesEmpty": true
+    },
+    {
+      "key": "projectile-kite-wind",
+      "columns": 2,
+      "rows": 2,
+      "frames": 4,
+      "runtimeFrame": 64,
+      "sourceGenerated": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-0afabcda-b7c8-492f-8435-d57f21410861.png",
+      "path": "art-source/webtoon/generated/effects/projectile-kite-wind-01.png",
+      "selected": true,
+      "prompt": "Use case: stylized-concept. Asset type: original game animation sprite sheet, projectile-kite-wind. Attached hero is STYLE REFERENCE ONLY, not a subject: clear dark navy outlines, readable cel shading, teal and warm gold, upper-left light. Draw ONLY a compact spiraling WIND PROJECTILE from a friendly fantasy flying kite: mint/aqua coiled airflow with a round white core and TWO short curved trailing wisps to the LEFT, nose points RIGHT. Exactly FOUR chronological looping frames in an invisible precise 2 columns x 2 rows grid on a SQUARE transparent RGBA canvas. Each square cell contains one whole centered wind orb, identical center and scale. Spiral ribbons rotate modestly in 4 phases; last returns naturally to first. Read order top-left, top-right, bottom-left, bottom-right. All glows and wisps stay inside central 68% of EACH cell, with generously empty transparent margins. Bold simple outline readable at64x64. No actual kite, person, weapon, scene, background, grid lines, cell borders, text, letters, numbers, labels, logo, signature or watermark. Not a white cloud rectangle. Target sheet1024x1024 with512px square cells. Truly transparent background.",
+      "references": [
+        "art-source/webtoon/hero-webtoon.webp"
+      ],
+      "sha256": "b02e8f1ed1f754d1cf8c14ac01074a5fe6c37d99736bbf0072e258d5295c02b6",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "nativeVisibleBoundariesEmpty": true
+    },
+    {
+      "key": "projectile-kuura-orb",
+      "columns": 2,
+      "rows": 2,
+      "frames": 4,
+      "runtimeFrame": 64,
+      "sourceGenerated": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-d06cc2b1-43a2-40ee-9d19-18ad11423da2.png",
+      "path": "art-source/webtoon/generated/effects/projectile-kuura-orb-01.png",
+      "selected": true,
+      "prompt": "Use case: stylized-concept. Asset type: original game animation sprite sheet, projectile-kuura-orb. Attached hero is STYLE REFERENCE ONLY: sharp dark outlines, 2-3 tone cel shading, clean magical adventure art, upper-left light. Draw ONLY a compact readable violet MAGIC ORB: spherical amethyst energy core, indigo shadow, lavender curved orbit ribbon and a small warm gold glint. Friendly child-safe fantasy danger, no horror, skull, face, writing or occult symbols. Exactly FOUR chronological repeating frames in an invisible precise 2 columns x 2 rows grid, SQUARE transparent RGBA canvas, read top-left top-right bottom-left bottom-right. Same centered orb and same size every cell. Ribbon rotates/pulses through 4 modest phases, frame4 loops smoothly to frame1. Entire orb, ribbon and sparkle inside central 68% of every square cell; large fully transparent margins all around, nothing crosses cells. Bold silhouette readable at64x64. Do NOT draw the character, background, grid lines, borders, typography, labels, letters, numbers, logo, watermark or signature. Actual transparent background. Target1024x1024, each cell512x512.",
+      "references": [
+        "art-source/webtoon/hero-webtoon.webp"
+      ],
+      "sha256": "b47f6d3221d5fcc0f54bce3f0ca26a076c2fa00280d04cd2491c6fc3f5dfac4c",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "nativeVisibleBoundariesEmpty": true
+    },
+    {
+      "key": "effect-hit-spark",
+      "columns": 3,
+      "rows": 2,
+      "frames": 6,
+      "runtimeFrame": 128,
+      "sourceGenerated": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-bee33d49-42c1-4ee9-a298-3510f7e3f06d.png",
+      "path": "art-source/webtoon/generated/effects/effect-hit-spark-01.png",
+      "selected": true,
+      "prompt": "Use case: stylized-concept. Asset type: original child-safe combat visual effect animation sheet, effect-hit-spark. Attached hero is STYLE REFERENCE ONLY: crisp navy outlines, simple cel shading, warm golden light and upper-left highlights. Draw exactly SIX chronological frames of a small friendly GOLDEN IMPACT SPARK, no actual fire damage or violence: 0 small star-like glint; 1 growing amber/cream pointed flash; 2 full compact gold/white star burst with a few short orange rays; 3 burst softens into gold sparks; 4 three smaller fading glints; 5 tiny fading star traces. Precisely aligned invisible 3 columns x 2 rows grid on a landscape canvas, aspect ratio3:2, read left-to-right top row then bottom row. Each cell SQUARE, centered at identical local center, fixed camera and canvas scale. All of each complete spark and ray strictly inside central65% of its cell, generous transparent padding and clean separation, no rays crossing cells. Strong outlined illustrated shapes readable at128x128. Fully transparent RGBA background, no character, enemy, weapon, blood, injury, scary face, scenery, text, letters, numbers, labels, grid lines, panel borders, logos, watermark or signature. Target sheet1536x1024 with512 square cells. This is ONE six-frame sheet, not a scene or six labels.",
+      "references": [
+        "art-source/webtoon/hero-webtoon.webp"
+      ],
+      "sha256": "ec22b69baef5829dd02b342b38daea822860ac1e1ba07c8ff556074eabe1b2b5",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "nativeVisibleBoundariesEmpty": true
+    },
+    {
+      "key": "effect-purify-light",
+      "columns": 3,
+      "rows": 2,
+      "frames": 6,
+      "runtimeFrame": 128,
+      "sourceGenerated": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-36e619e1-ad35-403a-9a97-cdc874ccb522.png",
+      "path": "art-source/webtoon/generated/effects/effect-purify-light-01.png",
+      "selected": true,
+      "prompt": "Use case: stylized-concept. Asset type: original peaceful curse-cleansing visual effect animation sheet, effect-purify-light. Attached hero is STYLE REFERENCE ONLY: crisp navy outlines, simple illustrated cel shading, mint teal and warm gold, upper-left light. Exactly SIX chronological frames of gentle cleansing light, not fire: 0 small pearl light between two tiny mint sparkles; 1 a curved mint ribbon rising; 2 compact open teal/gold halo with a bright soft pearl center; 3 halo opens into several small star-shaped glints; 4 glints drift upward and fade; 5 two tiny remaining glints. Fixed central anchor, NO person/animal/monster/body/cage/cross/face/religious symbol. Invisible precise3 columns x2 rows grid on a landscape3:2 transparent RGBA canvas, SQUARE cells, read top-left across then bottom-left across. Every complete ribbon, halo and particle contained inside central65% of its own square cell, generous fully transparent blank margins and no overlapping/crossing cells. Smooth small-size readable drawn shapes, no large bloom fog spread or filled backplates. Target1536x1024,512px cells, runtime128px each. Actual transparent background. No scenery, text, typography, letters, numbers, labels, grid lines, borders, watermark, signature or logos. Calm child-safe magical transition, not flashing lightning.",
+      "references": [
+        "art-source/webtoon/hero-webtoon.webp"
+      ],
+      "sha256": "13797b0c7bece5cd538af2bd5483c54c46ccf0f24750d72a2ee16002cfdef90e",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "nativeVisibleBoundariesEmpty": true
+    },
+    {
+      "key": "effect-surrender-flag",
+      "columns": 3,
+      "rows": 2,
+      "frames": 6,
+      "runtimeFrame": 128,
+      "sourceGenerated": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-4d843d65-5aba-4618-a580-0b6a3a8aa115.png",
+      "path": "art-source/webtoon/generated/effects/effect-surrender-flag-01.png",
+      "selected": true,
+      "prompt": "Use case: stylized-concept. Asset type: original peaceful surrender effect six-frame animation sheet, effect-surrender-flag. Attached project hero is STYLE REFERENCE ONLY: clear dark navy outlines, simple cel shading, warm gold, ivory and teal accents, upper-left light. Draw ONLY a small friendly plain WHITE SURRENDER FLAG on a short wooden pole, gently waving with modest gold sparkle: six chronological phases, same central anchor and same scale; frame0 a folded small flag with a tiny glint; frame1 unfurls; frame2 open flag with two gold star glints; frame3 cloth curves calmly; frame4 sparkle diminishes; frame5 softly fading flag and one tiny gold glint. Flag always readable, no emblem or drawing on cloth. Exactly6 complete isolated frame objects in invisible3 columns x2 rows grid on landscape3:2 RGBA transparent canvas, square cells512px target1536x1024. Same center, no motion between cells. Every flag, pole and sparkle fully inside central65% of each cell with generous wholly transparent margins, no border crossings. Readable at128x128. No people, fists, weapons, blood, injury, scenery, background, fog, broad halo, shadows on ground, writing, letters, numbers, labels, typography, grid lines, cell borders, logo, watermark or signature. Actual transparent background.",
+      "references": [
+        "art-source/webtoon/hero-webtoon.webp"
+      ],
+      "sha256": "0f3f2f47e330d1eefa541376afaf8547bc38def3ebebc79ff00d148b8618deed",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "nativeVisibleBoundariesEmpty": true
+    }
+  ]
+}

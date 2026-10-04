@@ -1,0 +1,22 @@
+{
+  "key": "prop-golden",
+  "legacy": "golden",
+  "subject": "A friendly heart SYMBOL made of polished warm gold, two rounded lobes and a pointed bottom, thick navy outline, cream highlight and three small contained gleam marks. Clearly distinct from a coral-red healing heart. No anatomy.",
+  "status": "generated",
+  "prompt": "Create ONE original world interaction sprite for a bright child-friendly Korean adventure webtoon game. Attached project hero is STYLE reference ONLY: confident navy ink outlines, warm teal/gold palette, clean 2-3 flat cel shade levels, top-left lighting. Do not draw the hero. PORTRAIT 3:4 canvas requested 768x1024, true transparent RGBA background. Subject: A friendly heart SYMBOL made of polished warm gold, two rounded lobes and a pointed bottom, thick navy outline, cream highlight and three small contained gleam marks. Clearly distinct from a coral-red healing heart. No anatomy. Front-facing readable silhouette at only 65x87 game pixels. Entire object centered, occupies roughly x=10%-90%, y=14%-86%, with fully transparent padding on every side. Keep the complete silhouette and all parts inside canvas. No scene, floor, cast shadow, circular backing, characters, hands, extra objects, labels, letters, numbers, logos, signature, watermark, blood, wounds or scary faces. Original project design only. Use clean limited broad color shapes rather than tiny decorative detail.",
+  "nativePath": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-602a7ef1-3936-45d7-acb4-4af862b9ff63.png",
+  "path": "art-source/webtoon/generated/props-m6/prop-golden-01.png",
+  "sha256": "796455dd97422e6bddad67298a86d7d0f28644aee46fa3b59f0ce0b0da18ea6d",
+  "nativeSize": [
+    1087,
+    1447
+  ],
+  "alphaBounds": [
+    59,
+    285,
+    1028,
+    1166
+  ],
+  "selected": true,
+  "normalizationNote": "Native ratio differs by one pixel; uniformly contain entire canvas with transparent padding, do not crop/repaint"
+}

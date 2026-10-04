@@ -85,7 +85,7 @@ const makeMap=(b:Blueprint,index:number):MapDef=>{
  if(b.id==='S25')needs.splice(0,needs.length,stepObjects[2].id);
  const flightEnemyCount=b.id==='S10'?6:b.id==='S33'?5:0;
  const spawns:Spawn[]=flightEnemyCount
-  ? Array.from({length:flightEnemyCount},(_,i)=>({id:`${b.id}.enemy.${i+1}`,x:900+i*((width-1450)/(flightEnemyCount-1)),y:[300,440,220,370,250,420][i],kind:'kite' as const,hp:26+Math.floor(index/5)}))
+  ? Array.from({length:flightEnemyCount},(_,i)=>({id:`${b.id}.enemy.${i+1}`,x:900+i*((width-1450)/(flightEnemyCount-1)),y:[300,440,220,370,250,420][i],kind:'kite' as const,actionArt:'kite' as const,hp:26+Math.floor(index/5)}))
   : b.mode==='peace'?[]:[0,1,2].map(i=>({id:`${b.id}.enemy.${i+1}`,x:800+i*(width-1500)/2,y:550,kind:i===2&&b.boss?'boss':b.visual==='jungle'?'beast':'bandit',hp:i===2&&b.boss?150:40+index}));
  if(b.id==='S16')spawns.splice(0); // Protected palace, no boss before swimming.
  if(b.boss&&spawns.length)needs.push(spawns.at(-1)!.id);

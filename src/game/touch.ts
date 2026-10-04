@@ -1,5 +1,7 @@
 import type { Action, Input } from './input';
 import type { ActionContext } from './stage';
+import type {ActiveSkillId} from '../core/skills';
+import {skillIcons,touchIconPath,type TouchIconKey} from '../content/touchIcons';
 
 // On-screen controls for phones and tablets.
 // Left thumb: a direction pad that follows the finger, so sliding from ◀ to ▶
@@ -17,8 +19,8 @@ const specs: ButtonSpec[] = [
     { key: 'cycle', action: 'cycle', label: '무기', aria: '터치 무기 바꾸기', group: 'act' },
     { key: 'primary', action: 'primary', label: '행동', aria: '터치 행동', group: 'act' },
 ];
-const contextIcon: Record<ActionContext['kind'], [string, string]> = {
-    attack: ['', '공격'], talk: ['💬', '대화'], use: ['✋', '살펴보기'], exit: ['⛵', '출발'],
+const contextIcon: Record<ActionContext['kind'], [TouchIconKey|null, string, string]> = {
+    attack: [null, '공격', '⚔'], talk: ['ui-talk', '대화', '💬'], use: ['ui-inspect', '살펴보기', '✋'], exit: ['ui-depart', '출발', '⛵'],
 };
 
 export class TouchControls {
@@ -39,6 +41,7 @@ export class TouchControls {
             b.dataset.action = spec.key;
             b.setAttribute('aria-label', spec.aria);
             b.innerHTML = `<span class="glyph">${spec.label}</span>`;
+            if(spec.key==='jump')this.renderIcon(b,'ui-jump','▲');
             (spec.group === 'pad' ? this.pad : act).append(b);
             this.buttons.set(spec.key, b);
             if (spec.group === 'act') this.bindButton(b, spec.action);
@@ -46,6 +49,21 @@ export class TouchControls {
         this.bindPad();
         root.append(this.pad, act);
         root.addEventListener('contextmenu', e => e.preventDefault());
+    }
+
+    // Keep the button and pointer handlers stable. A failed image only restores
+    // its old glyph; captions, accessible names and actual actions stay intact.
+    private renderIcon(button:HTMLButtonElement,key:TouchIconKey,fallback:string,caption?:string){
+        if(button.dataset.icon!==key){
+            const frame=document.createElement('span');frame.className='icon-frame';frame.setAttribute('aria-hidden','true');
+            const image=document.createElement('img');image.className='touch-icon';image.alt='';image.width=128;image.height=128;
+            const glyph=document.createElement('span');glyph.className='glyph';glyph.textContent=fallback;glyph.hidden=true;
+            image.addEventListener('error',()=>{image.hidden=true;glyph.hidden=false;frame.dataset.fallback='true';},{once:true});
+            image.src=`/${touchIconPath(key)}`;
+            frame.append(image,glyph);button.replaceChildren(frame);button.dataset.icon=key;
+            if(caption!==undefined){const label=document.createElement('span');label.className='caption';button.append(label);}
+        }
+        const label=button.querySelector('.caption');if(label&&caption!==undefined)label.textContent=caption;
     }
 
     private source(pointerId: number) { return `touch-${pointerId}`; }
@@ -121,10 +139,10 @@ export class TouchControls {
         this.buttons.get('jump')!.dataset.caption = free ? '위로' : '점프';
     }
 
-    setSkill(label: string | null, name: string) {
+    setSkill(label: string | null, name: string, skill:ActiveSkillId|null) {
         const b = this.buttons.get('skill')!;
         b.hidden = !label;
-        b.innerHTML = `<span class="glyph">✦</span><span class="caption">${label ?? '능력'}</span>`;
+        if(label&&skill)this.renderIcon(b,skillIcons[skill],'✦',label);
         b.setAttribute('aria-label', `터치 ${name}`);
     }
 
@@ -140,10 +158,11 @@ export class TouchControls {
     setContext(context: ActionContext, flight: boolean) {
         this.context = { action: context, flight };
         const b = this.buttons.get('primary')!;
-        const [icon, caption] = contextIcon[context.kind];
+        const [icon, caption, fallback] = contextIcon[context.kind];
         b.dataset.kind = context.kind;
-        const art = context.kind === 'attack' ? (flight ? '<span class="glyph">🪶</span>' : this.weaponIcon ? `<img src="${this.weaponIcon}" alt="">` : '<span class="glyph">⚔</span>') : `<span class="glyph">${icon}</span>`;
-        b.innerHTML = `${art}<span class="caption">${caption}</span>`;
+        if(context.kind==='attack'&&flight)this.renderIcon(b,'ui-wing','🪶',caption);
+        else if(icon)this.renderIcon(b,icon,fallback,caption);
+        else {delete b.dataset.icon;b.innerHTML=`${this.weaponIcon ? `<img src="${this.weaponIcon}" alt="">` : '<span class="glyph">⚔</span>'}<span class="caption">${caption}</span>`;}
         b.title = context.label;
     }
 }

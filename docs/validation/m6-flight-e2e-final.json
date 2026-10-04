@@ -1,0 +1,4343 @@
+{
+  "config": {
+    "configFile": "C:\\code\\code10(sindbad)\\playwright.config.ts",
+    "rootDir": "C:/code/code10(sindbad)/tests/e2e",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": "C:\\code\\code10(sindbad)\\tests\\e2e\\server.setup.ts",
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ],
+      [
+        "html"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "C:/code/code10(sindbad)/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "C:/code/code10(sindbad)/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 240000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.55.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "adventure.spec.ts",
+      "file": "adventure.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "new game → S01 → S02 → S03 with real keyboard inputs and checkpoint reload",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 91452,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 1101
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 514
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 121
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 122
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 132
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 136
+                    }
+                  ],
+                  "startTime": "2026-10-04T06:43:56.529Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0e432c2735e1cb75ffbd-30790cd4a30e9dda58c9",
+          "file": "adventure.spec.ts",
+          "line": 83,
+          "column": 1
+        },
+        {
+          "title": "pause freezes world; export/import and real touch pointer combination",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8972,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 501
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 119
+                    }
+                  ],
+                  "startTime": "2026-10-04T06:45:30.178Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0e432c2735e1cb75ffbd-047524d450f7834b27b9",
+          "file": "adventure.spec.ts",
+          "line": 199,
+          "column": 1
+        },
+        {
+          "title": "missing sprite fallback loads; corrupt and future saves stay untouched",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2779,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 1062
+                    }
+                  ],
+                  "startTime": "2026-10-04T06:45:39.164Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0e432c2735e1cb75ffbd-02a70e1a2016e9480fc1",
+          "file": "adventure.spec.ts",
+          "line": 269,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "audio.spec.ts",
+      "file": "audio.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "browser music starts with play, stops in menus, resumes, and respects mute",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5358,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBeGreaterThan\"",
+                      "duration": 573
+                    },
+                    {
+                      "title": "Expect \"poll toBeGreaterThan\"",
+                      "duration": 5
+                    }
+                  ],
+                  "startTime": "2026-10-04T06:45:42.010Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "87be2dcdb54c25970a35-fd38b3839854aae9de97",
+          "file": "audio.spec.ts",
+          "line": 2,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "complete-journey.spec.ts",
+      "file": "complete-journey.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "new game completes all 36 stages using real controls and no injected save",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 2100000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 848480,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "JOURNEY S01 cleared; 1/36\n"
+                    },
+                    {
+                      "text": "JOURNEY S02 cleared; 2/36\n"
+                    },
+                    {
+                      "text": "JOURNEY S03 cleared; 3/36\n"
+                    },
+                    {
+                      "text": "JOURNEY S04 cleared; 4/36\n"
+                    },
+                    {
+                      "text": "JOURNEY S05 cleared; 5/36\n"
+                    },
+                    {
+                      "text": "JOURNEY S06 cleared; 6/36\n"
+                    },
+                    {
+                      "text": "JOURNEY S07 cleared; 7/36\n"
+                    },
+                    {
+                      "text": "JOURNEY S08 cleared; 8/36\n"
+                    },
+                    {
+                      "text": "JOURNEY S09 cleared; 9/36\n"
+                    },
+                    {
+                      "text": "JOURNEY S10 cleared; 10/36\n"
+                    },
+                    {
+                      "text": "JOURNEY S11 cleared; 11/36\n"
+                    },
+                    {
+                      "text": "JOURNEY S12 cleared; 12/36\n"
+                    },
+                    {
+                      "text": "JOURNEY S13 cleared; 13/36\n"
+                    },
+                    {
+                      "text": "JOURNEY S14 cleared; 14/36\n"
+                    },
+                    {
+                      "text": "JOURNEY S15 cleared; 15/36\n"
+                    },
+                    {
+                      "text": "JOURNEY S16 cleared; 16/36\n"
+                    },
+                    {
+                      "text": "JOURNEY S17 cleared; 17/36\n"
+                    },
+                    {
+                      "text": "JOURNEY S18 cleared; 18/36\n"
+                    },
+                    {
+                      "text": "JOURNEY S19 cleared; 19/36\n"
+                    },
+                    {
+                      "text": "JOURNEY S20 cleared; 20/36\n"
+                    },
+                    {
+                      "text": "JOURNEY S21 cleared; 21/36\n"
+                    },
+                    {
+                      "text": "JOURNEY S22 cleared; 22/36\n"
+                    },
+                    {
+                      "text": "JOURNEY S23 cleared; 23/36\n"
+                    },
+                    {
+                      "text": "JOURNEY S24 cleared; 24/36\n"
+                    },
+                    {
+                      "text": "JOURNEY S25 cleared; 25/36\n"
+                    },
+                    {
+                      "text": "JOURNEY S26 cleared; 26/36\n"
+                    },
+                    {
+                      "text": "JOURNEY S27 cleared; 27/36\n"
+                    },
+                    {
+                      "text": "JOURNEY S28 cleared; 28/36\n"
+                    },
+                    {
+                      "text": "JOURNEY S29 cleared; 29/36\n"
+                    },
+                    {
+                      "text": "JOURNEY S30 cleared; 30/36\n"
+                    },
+                    {
+                      "text": "JOURNEY S31 cleared; 31/36\n"
+                    },
+                    {
+                      "text": "JOURNEY S32 cleared; 32/36\n"
+                    },
+                    {
+                      "text": "JOURNEY S33 cleared; 33/36\n"
+                    },
+                    {
+                      "text": "JOURNEY S34 cleared; 34/36\n"
+                    },
+                    {
+                      "text": "JOURNEY S35 cleared; 35/36\n"
+                    },
+                    {
+                      "text": "JOURNEY S36 cleared; 36/36\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 1020
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 30
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 18
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 133
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 25
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 39
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 161
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 17
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 143
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 198
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 11
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 128
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 127
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 8
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 126
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 127
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 5
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 126
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 130
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 8
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 124
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 124
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 6
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 6
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 125
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 125
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 5
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 120
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 119
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 7
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 9
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 149
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 12
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 123
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 123
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 6
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 8
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 126
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 5
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 10
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 128
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 6
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 122
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 131
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 7
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 122
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 122
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 6
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 122
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 123
+                    },
+                    {
+                      "title": "Expect \"poll toEqual\"",
+                      "duration": 89
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 524
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 121
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 122
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 6
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 6
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 132
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 8
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 120
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 117
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 9
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 14
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 118
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 7
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 123
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 127
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 8
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 121
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 122
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 8
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 122
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 125
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 8
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 123
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 125
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 9
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 121
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 123
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 9
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 122
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 123
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 10
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 17
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 125
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 5
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 123
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 129
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 11
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 13
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 127
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 10
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 10
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 129
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 10
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 9
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 118
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 10
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 8
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 129
+                    },
+                    {
+                      "title": "Expect \"poll toEqual\"",
+                      "duration": 91
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 230
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 11
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 129
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 8
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 116
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 125
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 6
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 130
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 129
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 8
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 17
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 130
+                    }
+                  ],
+                  "startTime": "2026-10-04T07:18:40.967Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9f5dc3fa1c7e47e906d0-d329268f44050fec9815",
+          "file": "complete-journey.spec.ts",
+          "line": 12,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "controls-ui.spec.ts",
+      "file": "controls-ui.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "simple controls jump, smart action attacks, monster fades, and phone UI fits",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8763,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 964
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 6
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 896
+                    }
+                  ],
+                  "startTime": "2026-10-04T06:45:47.462Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "eae6f4a989ac581067bf-dd46a1e7dba071f17c11",
+          "file": "controls-ui.spec.ts",
+          "line": 4,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "crystal.spec.ts",
+      "file": "crystal.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "S07 save → mirror reset and safe puzzle → T02 reload, illusion and optional journal",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 50062,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 130
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 905
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 901
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 895
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 900
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 9
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 8
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 936
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 7
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 130
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 520
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 901
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 68
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 5
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 900
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 913
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 9
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 202
+                    }
+                  ],
+                  "startTime": "2026-10-04T06:45:56.271Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "beb5428c18893246ae58-48aee1924af12ac5b48b",
+          "file": "crystal.spec.ts",
+          "line": 37,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "effects-art.spec.ts",
+      "file": "effects-art.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "four looping projectiles, directions, paused clock and reduced-motion boss cleanup on phone/tablet",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 420000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 91179,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-04T06:46:46.514Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a8a0bff5fe20f07b5083-b1abbd171aefa34ff186",
+          "file": "effects-art.spec.ts",
+          "line": 145,
+          "column": 1
+        },
+        {
+          "title": "six impact and safe defeat frames expire after real hits on phone/tablet",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 300000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 38584,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-04T06:48:17.714Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a8a0bff5fe20f07b5083-f05e92e1514a3788a2d3",
+          "file": "effects-art.spec.ts",
+          "line": 227,
+          "column": 1
+        },
+        {
+          "title": "missing seven sheets retain legacy projectiles, damage, safe defeat and saved rewards",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 300000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 32898,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 1917
+                    }
+                  ],
+                  "startTime": "2026-10-04T06:48:56.335Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a8a0bff5fe20f07b5083-a78e49fe716aeecd8e87",
+          "file": "effects-art.spec.ts",
+          "line": 302,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "enemy-actions.spec.ts",
+      "file": "enemy-actions.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "40 enemy poses, mirrored direction, safe defeat and save reload on phone/tablet",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 720000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 231746,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "ART phone skeleton: poses / direction / magic / reload passed\n"
+                    },
+                    {
+                      "text": "ART phone bandit: poses / direction / human / reload passed\n"
+                    },
+                    {
+                      "text": "ART phone guard: poses / direction / human / reload passed\n"
+                    },
+                    {
+                      "text": "ART phone pirate: poses / direction / human / reload passed\n"
+                    },
+                    {
+                      "text": "ART phone snake: poses / direction / animal / reload passed\n"
+                    },
+                    {
+                      "text": "ART phone tiger: poses / direction / animal / reload passed\n"
+                    },
+                    {
+                      "text": "ART phone dragon: poses / direction / animal / reload passed\n"
+                    },
+                    {
+                      "text": "ART phone crab: poses / direction / animal / reload passed\n"
+                    },
+                    {
+                      "text": "ART phone stone: poses / direction / magic / reload passed\n"
+                    },
+                    {
+                      "text": "ART phone kuura: poses / direction / magic / reload passed\n"
+                    },
+                    {
+                      "text": "ART tablet skeleton: poses / direction / magic / reload passed\n"
+                    },
+                    {
+                      "text": "ART tablet bandit: poses / direction / human / reload passed\n"
+                    },
+                    {
+                      "text": "ART tablet guard: poses / direction / human / reload passed\n"
+                    },
+                    {
+                      "text": "ART tablet pirate: poses / direction / human / reload passed\n"
+                    },
+                    {
+                      "text": "ART tablet snake: poses / direction / animal / reload passed\n"
+                    },
+                    {
+                      "text": "ART tablet tiger: poses / direction / animal / reload passed\n"
+                    },
+                    {
+                      "text": "ART tablet dragon: poses / direction / animal / reload passed\n"
+                    },
+                    {
+                      "text": "ART tablet crab: poses / direction / animal / reload passed\n"
+                    },
+                    {
+                      "text": "ART tablet stone: poses / direction / magic / reload passed\n"
+                    },
+                    {
+                      "text": "ART tablet kuura: poses / direction / magic / reload passed\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 32
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 18
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 8
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 12
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 9
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 45
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 9
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 47
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 29
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 311
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 8
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 10
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 7
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 8
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 8
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 55
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 5
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 31
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 6
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 65
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 9
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 127
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 7
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 135
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 8
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 20
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 8
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 151
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 5
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 9
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 6
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 140
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 7
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 118
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 7
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 129
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 5
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 147
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 6
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 195
+                    }
+                  ],
+                  "startTime": "2026-10-04T06:49:29.348Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "4050b6d89f0074ea899f-d76ee6d2b566c6f1f991",
+          "file": "enemy-actions.spec.ts",
+          "line": 44,
+          "column": 1
+        },
+        {
+          "title": "missing action atlas retains a playable fallback and magical skeleton defeat",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5843,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 5
+                    }
+                  ],
+                  "startTime": "2026-10-04T06:53:21.114Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "4050b6d89f0074ea899f-933cb68d8165ee7920e2",
+          "file": "enemy-actions.spec.ts",
+          "line": 175,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "fall.spec.ts",
+      "file": "fall.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "fall recovery resets physics onto a safe platform instead of inside the floor",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5241,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 475
+                    }
+                  ],
+                  "startTime": "2026-10-04T06:53:27.001Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7f2bf54a6199b4c9ca57-c0e8ac8f237356f1b3a8",
+          "file": "fall.spec.ts",
+          "line": 4,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "final-campaign.spec.ts",
+      "file": "final-campaign.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "S28 peaceful balance grants lotus shield and persists",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 13083,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 7
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 5
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 5
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 6
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 125
+                    }
+                  ],
+                  "startTime": "2026-10-04T06:53:32.290Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6ba644845acf138b3fa2-5c4ddb48212e6d3a2c82",
+          "file": "final-campaign.spec.ts",
+          "line": 66,
+          "column": 1
+        },
+        {
+          "title": "S36 museum route reaches ending and remains revisit-able",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 12623,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 5
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 6
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 5
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 6
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 5
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 5
+                    }
+                  ],
+                  "startTime": "2026-10-04T06:53:45.385Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6ba644845acf138b3fa2-ab6a1fddb1b1e97f0c16",
+          "file": "final-campaign.spec.ts",
+          "line": 120,
+          "column": 1
+        },
+        {
+          "title": "S09-S36 all boot as browser-playable scenes without console errors",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 33325,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 477
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 525
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 994
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 501
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 635
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 597
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 514
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 658
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 593
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 729
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 613
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 789
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 678
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 732
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 659
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 731
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 632
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 637
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 674
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 670
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 658
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 739
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 664
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 647
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 728
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 1074
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 694
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 598
+                    }
+                  ],
+                  "startTime": "2026-10-04T06:53:58.021Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6ba644845acf138b3fa2-d0358559355a261f76eb",
+          "file": "final-campaign.spec.ts",
+          "line": 144,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "flame-waves.spec.ts",
+      "file": "flame-waves.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "S06 furnaces and first treasure → S07 waves, blessing and cave save",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 117337,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 483
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 8
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 7
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 380
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 6
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 7
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 6
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 116
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 8
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 8
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 383
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 5
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 374
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 5
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 7
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 133
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 9
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 1927
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 9
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 8
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 1917
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 6
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 1929
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 8
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 513
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 394
+                    }
+                  ],
+                  "startTime": "2026-10-04T06:54:31.386Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "55e929e2bfa773e6f830-742526089d192d735607",
+          "file": "flame-waves.spec.ts",
+          "line": 82,
+          "column": 1
+        },
+        {
+          "title": "flame MP/cooldown pause, free ignition and W03 lingering damage",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 14473,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 460
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 6
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 119
+                    }
+                  ],
+                  "startTime": "2026-10-04T06:56:28.736Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "55e929e2bfa773e6f830-8270e7946ab494b0b046",
+          "file": "flame-waves.spec.ts",
+          "line": 159,
+          "column": 1
+        },
+        {
+          "title": "missed wave deals limited damage, preserves treasure and allows another attempt",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 15129,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 453
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 6
+                    },
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 906
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 8
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 1905
+                    },
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 379
+                    }
+                  ],
+                  "startTime": "2026-10-04T06:56:43.221Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "55e929e2bfa773e6f830-913492d7240e5b2a603c",
+          "file": "flame-waves.spec.ts",
+          "line": 200,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "flight-art.spec.ts",
+      "file": "flight-art.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "phone flight art webtoon preserves rings, hazards and resume",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 46623,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toContain\"",
+                      "duration": 15
+                    },
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 6
+                    },
+                    {
+                      "title": "Expect \"poll toContain\"",
+                      "duration": 6
+                    }
+                  ],
+                  "startTime": "2026-10-04T06:56:58.404Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "dbbdb9258d65a16065e7-cbbeed0a80614db37763",
+          "file": "flight-art.spec.ts",
+          "line": 42,
+          "column": 41
+        },
+        {
+          "title": "phone flight art missing SVG recovery preserves rings, hazards and resume",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 47087,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toContain\"",
+                      "duration": 5
+                    },
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 6
+                    },
+                    {
+                      "title": "Expect \"poll toContain\"",
+                      "duration": 6
+                    }
+                  ],
+                  "startTime": "2026-10-04T06:57:45.038Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "dbbdb9258d65a16065e7-8870a92e61bc30c8cc0d",
+          "file": "flight-art.spec.ts",
+          "line": 42,
+          "column": 41
+        },
+        {
+          "title": "tablet flight art webtoon preserves rings, hazards and resume",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 47082,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toContain\"",
+                      "duration": 6
+                    },
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 7
+                    },
+                    {
+                      "title": "Expect \"poll toContain\"",
+                      "duration": 6
+                    }
+                  ],
+                  "startTime": "2026-10-04T06:58:32.137Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "dbbdb9258d65a16065e7-94a516b5af8066b4e821",
+          "file": "flight-art.spec.ts",
+          "line": 42,
+          "column": 41
+        },
+        {
+          "title": "tablet flight art missing SVG recovery preserves rings, hazards and resume",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 47630,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toContain\"",
+                      "duration": 6
+                    },
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 8
+                    },
+                    {
+                      "title": "Expect \"poll toContain\"",
+                      "duration": 5
+                    }
+                  ],
+                  "startTime": "2026-10-04T06:59:19.232Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "dbbdb9258d65a16065e7-9b5aa28426ff76b87e31",
+          "file": "flight-art.spec.ts",
+          "line": 42,
+          "column": 41
+        }
+      ]
+    },
+    {
+      "title": "flight-rings.spec.ts",
+      "file": "flight-rings.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "flight rings collect through movement once, persist, and never gate landing",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 22125,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 518
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 6
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 6
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 497
+                    }
+                  ],
+                  "startTime": "2026-10-04T07:00:06.900Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a905626241707dd069b7-8ae447fbfeb56cc21fd7",
+          "file": "flight-rings.spec.ts",
+          "line": 18,
+          "column": 1
+        },
+        {
+          "title": "S33 return flight has five moving debris routes and does not require combat",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 9760,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 498
+                    }
+                  ],
+                  "startTime": "2026-10-04T07:00:29.033Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a905626241707dd069b7-7655a01e206347e28a4d",
+          "file": "flight-rings.spec.ts",
+          "line": 92,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "interaction-props.spec.ts",
+      "file": "interaction-props.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "interaction props retain actual map textures, IDs and dimensions",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 480000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 22286,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-04T07:00:38.838Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "81bfed80b3117b49c5cd-ecad7df67a4881795f41",
+          "file": "interaction-props.spec.ts",
+          "line": 50,
+          "column": 39
+        },
+        {
+          "title": "interaction props retain actual map textures, IDs and dimensions with all artwork missing",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 480000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 21099,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-04T07:01:01.135Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "81bfed80b3117b49c5cd-52e6ea54b299b3be569b",
+          "file": "interaction-props.spec.ts",
+          "line": 50,
+          "column": 39
+        },
+        {
+          "title": "rescue equipment and golden heart retain real pickup, retry and reload",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 300000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 52102,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-04T07:01:22.246Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "81bfed80b3117b49c5cd-4f3928e3f92192c0e445",
+          "file": "interaction-props.spec.ts",
+          "line": 122,
+          "column": 39
+        },
+        {
+          "title": "rescue equipment and golden heart retain real pickup, retry and reload when artwork is missing",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 300000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 49261,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-04T07:02:14.362Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "81bfed80b3117b49c5cd-358524f01664122f14a7",
+          "file": "interaction-props.spec.ts",
+          "line": 122,
+          "column": 39
+        }
+      ]
+    },
+    {
+      "title": "m2.spec.ts",
+      "file": "m2.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "existing M1 save → whale rescue, moving deck, G01 → coral rescue, G02 and blessing",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 58708,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 141
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 7
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 397
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 6
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 8
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 7
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 395
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 128
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 6
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 129
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 6
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 5
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 476
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 8
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 129
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 6
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 6
+                    }
+                  ],
+                  "startTime": "2026-10-04T07:03:03.668Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "01f49e799d3ea91d35fe-8bcd68816aa09d866619",
+          "file": "m2.spec.ts",
+          "line": 71,
+          "column": 1
+        },
+        {
+          "title": "coral gate rejects missing crown; guardian blocks frontal attacks and exposes recovery",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 15281,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 533
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 904
+                    },
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 123
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 6
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 382
+                    }
+                  ],
+                  "startTime": "2026-10-04T07:04:02.386Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "01f49e799d3ea91d35fe-c21469181bbcfba43273",
+          "file": "m2.spec.ts",
+          "line": 160,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "m3-opening.spec.ts",
+      "file": "m3-opening.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "S09-S12 continuous route grants flight, W04 and R03 with save-safe bosses",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 68422,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 130
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 160
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 153
+                    }
+                  ],
+                  "startTime": "2026-10-04T07:04:17.712Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "15dcf8d7e1fc08c587ec-a3fcce383178bc4237f1",
+          "file": "m3-opening.spec.ts",
+          "line": 61,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "mobile-abilities.spec.ts",
+      "file": "mobile-abilities.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "phone can descend, cast its selected treasure, and open S26 bridge using action",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 11888,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 937
+                    },
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 18
+                    },
+                    {
+                      "title": "Expect \"poll toContain\"",
+                      "duration": 13
+                    },
+                    {
+                      "title": "Expect \"poll toContain\"",
+                      "duration": 267
+                    }
+                  ],
+                  "startTime": "2026-10-04T07:05:26.228Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b4297d717614c5dd9451-7ebf96441d1d77e7c641",
+          "file": "mobile-abilities.spec.ts",
+          "line": 16,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "npc-faces.spec.ts",
+      "file": "npc-faces.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "nine NPCs, three real dialogue expressions, mixed speakers and reward reload on phone/tablet",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 600000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 178731,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "A4 phone: nine NPCs / all 27 expressions / mixed speakers / rewards / reload passed\n"
+                    },
+                    {
+                      "text": "A4 tablet: nine NPCs / all 27 expressions / mixed speakers / rewards / reload passed\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 48
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 22
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 24
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 8
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 10
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 8
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 19
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 86
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 25
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 100
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 6
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 9
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 21
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 7
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 6
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 29
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 37
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 12
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 10
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 10
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 11
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 31
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 31
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 32
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 12
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 32
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 7
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 12
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 24
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 21
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 22
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 32
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 23
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 27
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 30
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 32
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 30
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 19
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 35
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 29
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 31
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 78
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 28
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 36
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 26
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 89
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 11
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 63
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 34
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 8
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 19
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 31
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 13
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 19
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 30
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 82
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 23
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 32
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 40
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 28
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 34
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 17
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 25
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 42
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 31
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 30
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 27
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 25
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 33
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 30
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 52
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 20
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 33
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 51
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 31
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 29
+                    }
+                  ],
+                  "startTime": "2026-10-04T07:05:38.267Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f0729cdae41803cf974f-536f055d2e923c7721de",
+          "file": "npc-faces.spec.ts",
+          "line": 47,
+          "column": 1
+        },
+        {
+          "title": "missing expression sheet keeps the captain portrait, dialogue and save playable",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5905,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 47
+                    }
+                  ],
+                  "startTime": "2026-10-04T07:08:37.021Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f0729cdae41803cf974f-cc3ba6810194276f1587",
+          "file": "npc-faces.spec.ts",
+          "line": 212,
+          "column": 1
+        },
+        {
+          "title": "read-only observations stay safe while real scene transitions dispose textures",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 15113,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 19
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 22
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 28
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 31
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 29
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 18
+                    }
+                  ],
+                  "startTime": "2026-10-04T07:08:43.004Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f0729cdae41803cf974f-cfeec547283250d0ae83",
+          "file": "npc-faces.spec.ts",
+          "line": 244,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "safety.spec.ts",
+      "file": "safety.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "actual damage and heart recovery",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 10024,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 2084
+                    },
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 464
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 964
+                    }
+                  ],
+                  "startTime": "2026-10-04T07:08:58.198Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "373fb75b781aed161569-a48ca27621aa61ca346f",
+          "file": "safety.spec.ts",
+          "line": 5,
+          "column": 1
+        },
+        {
+          "title": "natural lightning death restores checkpoint and retains rewards; immunity on restart",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 32570,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 1115
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 4040
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 22884
+                    }
+                  ],
+                  "startTime": "2026-10-04T07:09:08.245Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "373fb75b781aed161569-4a6094cc2098ccef0e92",
+          "file": "safety.spec.ts",
+          "line": 37,
+          "column": 1
+        },
+        {
+          "title": "boss victory reload keeps exit open without duplicating XP",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5985,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 1022
+                    }
+                  ],
+                  "startTime": "2026-10-04T07:09:40.855Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "373fb75b781aed161569-50c67e1f9766936b12ee",
+          "file": "safety.spec.ts",
+          "line": 82,
+          "column": 1
+        },
+        {
+          "title": "storage denied warns but movement and export work",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 9881,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 1091
+                    }
+                  ],
+                  "startTime": "2026-10-04T07:09:46.859Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "373fb75b781aed161569-ea476845deb8c2f14627",
+          "file": "safety.spec.ts",
+          "line": 115,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "story-devices.spec.ts",
+      "file": "story-devices.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "S16 protected entrance earns pearl before actual swim practice and survives reload",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 25172,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 531
+                    },
+                    {
+                      "title": "Expect \"poll toEqual\"",
+                      "duration": 100
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 521
+                    }
+                  ],
+                  "startTime": "2026-10-04T07:32:53.305Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "76ccd901a4c460738e0a-1cefc9df790d1532835a",
+          "file": "story-devices.spec.ts",
+          "line": 43,
+          "column": 1
+        },
+        {
+          "title": "carried wood resets safely on reload and only delivery grants progress",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 12245,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 462
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 510
+                    }
+                  ],
+                  "startTime": "2026-10-04T07:33:19.412Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "76ccd901a4c460738e0a-f2291265e45c5d9c2eaa",
+          "file": "story-devices.spec.ts",
+          "line": 68,
+          "column": 1
+        },
+        {
+          "title": "S25 bridge requires real crossing and standing extends its lifetime",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 37947,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 485
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 48
+                    }
+                  ],
+                  "startTime": "2026-10-04T07:33:31.669Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "76ccd901a4c460738e0a-87cf8a6c7b9af6a55944",
+          "file": "story-devices.spec.ts",
+          "line": 92,
+          "column": 1
+        },
+        {
+          "title": "S15 kitchen rescues sailors and saves the earned boots checkpoint",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 20416,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 489
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 129
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 126
+                    }
+                  ],
+                  "startTime": "2026-10-04T07:34:09.628Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "76ccd901a4c460738e0a-c3f62449d51ad76c307e",
+          "file": "story-devices.spec.ts",
+          "line": 119,
+          "column": 1
+        },
+        {
+          "title": "W06 breaks optional moon rock with one real attack and never duplicates its reward",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 30144,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 465
+                    }
+                  ],
+                  "startTime": "2026-10-04T07:34:30.058Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "76ccd901a4c460738e0a-bcd41668ad4a82c82b88",
+          "file": "story-devices.spec.ts",
+          "line": 138,
+          "column": 1
+        },
+        {
+          "title": "Kuura shield requires two seals, final combat opens the saved reward",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 43395,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 478
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 18
+                    }
+                  ],
+                  "startTime": "2026-10-04T07:35:00.219Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "76ccd901a4c460738e0a-1b1cc31dcc2dfe4f4717",
+          "file": "story-devices.spec.ts",
+          "line": 172,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "terrain-art.spec.ts",
+      "file": "terrain-art.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "17 real terrain styles load only their pair and preserve platform geometry on phone/tablet",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 480000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 115809,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "A5 phone: 17 styles / 34 image tiles / actual map transitions / moving-platform alignment passed\n"
+                    },
+                    {
+                      "text": "A5 tablet: 17 styles / 34 image tiles / actual map transitions / moving-platform alignment passed\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-04T07:09:56.877Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c119594a44b7c72f06bb-dab6b33b336da678fa55",
+          "file": "terrain-art.spec.ts",
+          "line": 16,
+          "column": 1
+        },
+        {
+          "title": "missing terrain fill keeps the loaded half and a playable generated fallback",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 11914,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-04T07:11:52.722Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c119594a44b7c72f06bb-bf488dbb3bf483e6c390",
+          "file": "terrain-art.spec.ts",
+          "line": 139,
+          "column": 48
+        },
+        {
+          "title": "missing terrain top keeps the loaded half and a playable generated fallback",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 12836,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-04T07:12:04.678Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c119594a44b7c72f06bb-6fa12680b2654aef0afc",
+          "file": "terrain-art.spec.ts",
+          "line": 139,
+          "column": 48
+        },
+        {
+          "title": "missing terrain both keeps the loaded half and a playable generated fallback",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 10682,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-04T07:12:17.542Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c119594a44b7c72f06bb-b91c24fa5f787ee44d4e",
+          "file": "terrain-art.spec.ts",
+          "line": 139,
+          "column": 48
+        }
+      ]
+    },
+    {
+      "title": "touch-icons.spec.ts",
+      "file": "touch-icons.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "nine upright icons, 72px previews and real touch jump/dialogue/use/departure/wing/four abilities on phone/tablet",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 480000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 106490,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toEqual\"",
+                      "duration": 23
+                    },
+                    {
+                      "title": "Expect \"poll toEqual\"",
+                      "duration": 24
+                    },
+                    {
+                      "title": "Expect \"poll toEqual\"",
+                      "duration": 29
+                    },
+                    {
+                      "title": "Expect \"poll toEqual\"",
+                      "duration": 15
+                    },
+                    {
+                      "title": "Expect \"poll toEqual\"",
+                      "duration": 36
+                    },
+                    {
+                      "title": "Expect \"poll toEqual\"",
+                      "duration": 26
+                    },
+                    {
+                      "title": "Expect \"poll toContain\"",
+                      "duration": 75
+                    },
+                    {
+                      "title": "Expect \"poll toEqual\"",
+                      "duration": 44
+                    },
+                    {
+                      "title": "Expect \"poll toContain\"",
+                      "duration": 29
+                    },
+                    {
+                      "title": "Expect \"poll toContain\"",
+                      "duration": 260
+                    },
+                    {
+                      "title": "Expect \"poll toEqual\"",
+                      "duration": 35
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 171
+                    },
+                    {
+                      "title": "Expect \"poll toEqual\"",
+                      "duration": 35
+                    },
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 32
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 50
+                    },
+                    {
+                      "title": "Expect \"poll toEqual\"",
+                      "duration": 27
+                    },
+                    {
+                      "title": "Expect \"poll toEqual\"",
+                      "duration": 37
+                    },
+                    {
+                      "title": "Expect \"poll toEqual\"",
+                      "duration": 60
+                    },
+                    {
+                      "title": "Expect \"poll toEqual\"",
+                      "duration": 41
+                    },
+                    {
+                      "title": "Expect \"poll toEqual\"",
+                      "duration": 15
+                    },
+                    {
+                      "title": "Expect \"poll toEqual\"",
+                      "duration": 35
+                    },
+                    {
+                      "title": "Expect \"poll toContain\"",
+                      "duration": 68
+                    },
+                    {
+                      "title": "Expect \"poll toEqual\"",
+                      "duration": 20
+                    },
+                    {
+                      "title": "Expect \"poll toContain\"",
+                      "duration": 14
+                    },
+                    {
+                      "title": "Expect \"poll toContain\"",
+                      "duration": 62
+                    },
+                    {
+                      "title": "Expect \"poll toEqual\"",
+                      "duration": 42
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 152
+                    },
+                    {
+                      "title": "Expect \"poll toEqual\"",
+                      "duration": 38
+                    },
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 13
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 68
+                    }
+                  ],
+                  "startTime": "2026-10-04T07:12:28.355Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7b0e2e153d0585b0972b-60b14712eb6fb2634a4a",
+          "file": "touch-icons.spec.ts",
+          "line": 327,
+          "column": 1
+        },
+        {
+          "title": "all nine missing icon files restore legacy glyphs while actual actions and saved progress work",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 300000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 48165,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toContain\"",
+                      "duration": 27
+                    },
+                    {
+                      "title": "Expect \"poll toContain\"",
+                      "duration": 7
+                    },
+                    {
+                      "title": "Expect \"poll toContain\"",
+                      "duration": 36
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 130
+                    },
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 18
+                    }
+                  ],
+                  "startTime": "2026-10-04T07:14:14.891Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7b0e2e153d0585b0972b-138ccf7ed5f2a9336c5a",
+          "file": "touch-icons.spec.ts",
+          "line": 342,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "weapon-art.spec.ts",
+      "file": "weapon-art.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "seven raster weapons and icons stay attached to JSON fists on phone and tablet",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 79463,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 24
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 23
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 37
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 36
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 27
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 22
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 27
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 27
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 41
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 39
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 33
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 64
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 38
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 39
+                    }
+                  ],
+                  "startTime": "2026-10-04T07:15:03.255Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d7edcb92ee43126c0570-f5bd801115a16fa7bf39",
+          "file": "weapon-art.spec.ts",
+          "line": 99,
+          "column": 1
+        },
+        {
+          "title": "all seven missing rasters retain SVG weapons and icons, combat rewards and reload",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 48599,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 115
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 37
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 35
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 34
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 28
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 25
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 25
+                    }
+                  ],
+                  "startTime": "2026-10-04T07:16:22.736Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d7edcb92ee43126c0570-d6ef056691eb1d0fdd96",
+          "file": "weapon-art.spec.ts",
+          "line": 146,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "world-props.spec.ts",
+      "file": "world-props.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "world props retain dimensions, real reward/healing, retry and reload on phone/tablet",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 360000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 51547,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 26
+                    }
+                  ],
+                  "startTime": "2026-10-04T07:17:11.403Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "619b05eff6248c0d7fe5-892e4ce350e7a123c07b",
+          "file": "world-props.spec.ts",
+          "line": 180,
+          "column": 1
+        },
+        {
+          "title": "missing world props use preserved SVGs and retain real interactions",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 29226,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 145
+                    }
+                  ],
+                  "startTime": "2026-10-04T07:18:03.059Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "619b05eff6248c0d7fe5-de8a11353525d2cc4d77",
+          "file": "world-props.spec.ts",
+          "line": 186,
+          "column": 1
+        },
+        {
+          "title": "map revisit releases unused props and reloads them when returning",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4878,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-04T07:18:32.322Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "619b05eff6248c0d7fe5-20c9cf1921c719a720af",
+          "file": "world-props.spec.ts",
+          "line": 192,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-04T06:43:20.447Z",
+    "duration": 3143774.988,
+    "expected": 57,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

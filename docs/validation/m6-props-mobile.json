@@ -1,0 +1,46 @@
+{
+  "exitCode": 0,
+  "method": "Edge CDP actual touch; viewport emulation, not physical device; runJump dx=0 does not prove forward simultaneous input",
+  "report": {
+    "phone": {
+      "visibleButtons": [
+        "left",
+        "right",
+        "jump",
+        "primary"
+      ],
+      "touchMode": true,
+      "walkRight": 252,
+      "slideReverses": true,
+      "runJump": {
+        "dx": 0,
+        "dy": -110
+      },
+      "firstSkeleton": "defeated",
+      "walkBack": 234,
+      "actionKind": "talk",
+      "dialogue": "\ubc14\ub2f7\uae38\uc5d0 \uac80\uc740 \ub9c8\ubc95\uc774 \ub4dc\ub9ac\uc6e0\uad6c\ub098. \uba3c\uc800 \uc774 \ud56d\uad6c\ub97c \uc548\uc804\ud558\uac8c \ub9cc\ub4e4\uc790.",
+      "errors": []
+    },
+    "tablet": {
+      "visibleButtons": [
+        "left",
+        "right",
+        "jump",
+        "primary"
+      ],
+      "touchMode": true,
+      "walkRight": 252,
+      "slideReverses": true,
+      "runJump": {
+        "dx": 0,
+        "dy": -110
+      },
+      "firstSkeleton": "defeated",
+      "walkBack": 221,
+      "actionKind": "talk",
+      "dialogue": "\ubc14\ub2f7\uae38\uc5d0 \uac80\uc740 \ub9c8\ubc95\uc774 \ub4dc\ub9ac\uc6e0\uad6c\ub098. \uba3c\uc800 \uc774 \ud56d\uad6c\ub97c \uc548\uc804\ud558\uac8c \ub9cc\ub4e4\uc790.",
+      "errors": []
+    }
+  }
+}
