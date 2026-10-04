@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-04T13:26:14.214942+00:00",
+  "previousCommit": "9727657",
+  "codeCommit": "789d416526e93f9a1b89218808f1fac079aa4870",
+  "destination": "https://github.com/hjpapa/sindbad.git",
+  "branch": "main",
+  "pushExitCode": 0,
+  "pushResult": "91f0b0c..789d416 main -> main",
+  "committedFiles": 173,
+  "stagedBytes": 60134746,
+  "selectedEvidenceFiles": 99,
+  "selectedEvidenceBytes": 55503107,
+  "over100MBFiles": [],
+  "credentialFilenameCandidates": [],
+  "changesSinceVerifiedRepair": [],
+  "staleIndexLock": "empty; over one hour old; no active git process; copied before removal",
+  "deploy": false
+}

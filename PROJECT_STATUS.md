@@ -24,7 +24,7 @@
 
 자체 서버/로그 모니터는 종료했다. Node TCP검사에서5174/5175 ECONNREFUSED 확인(`m6-siren-stopped-servers.json`), 최종 `git diff --check` exit0(`m6-siren-final-diff-check.txt`). Ctrl+C exit1은 정리 결과다.
 
-**Git:** 이전 완료 작업을 `9727657`(`feat: integrate webtoon effects, touch icons, props and kite actions`)로 main에 커밋했다. 약581MB의 코드·자산·검증 자료를 `https://github.com/hjpapa/sindbad.git` main으로 올리는 푸시는 자동 승인 검토가 구체적 대상/전송 내용 승인이 부족하다는 이유로 거부했다. 푸시는 실행되지 않았으며 명시적 승인 응답을 기다린다. 이번 세이렌은 아직 별도 커밋하지 않았다.
+**Git · 2026-10-04 후속 요청 완료:** 이전 완료 작업 `9727657`과 세이렌 작업 `789d416`(`feat: add siren action sprites and verify boss rewards`)을 기존 `https://github.com/hjpapa/sindbad.git` main에 푸시했다. 실제 결과 `91f0b0c..789d416 main -> main`, exit0이다. 이전 자동 승인 거부는 대상/내용 안내 후 사용자의 재요청으로 해소됐다. 세이렌 커밋173파일/약60.1MB에는 자체 원화·런타임·코드·문서·선별한 검증 증거99파일(약55.5MB)을 포함했다. 반복 캡처·HTML·백업은 로컬에 보존했고 이전 보고서 원본은 유지했다. 비밀 파일명 후보·100MB이상 파일·검증 뒤 소스 변경은 없었다. 실행 중 Git 프로세스가 없는 오래된 빈 index.lock을 사본 보존 후 정리했다. 실제 Git 기록은 `docs/validation/m6-siren-git-update.json`이다. **배포 없음**, 다음 작업은 박쥐 행동4프레임이다.
 
 **다음 한 작업:** M6 박쥐 행동4프레임. 기존 자체 디자인으로 대기·공격 예고·공격·저주 해제 자세를 제작하고 비행 AI·안정 보상·저장·누락 복구를 유지해 연결·검증한다. 정령·로크새 행동과 실기기 검수는 별도 미완료다.
 <!-- M6_SIREN_STATUS_END -->

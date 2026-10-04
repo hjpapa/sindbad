@@ -205,7 +205,7 @@
   },
   "artStatus": "ART_DRAFT",
   "previousCommit": "9727657",
-  "push": "blocked by automatic review; explicit payload/destination approval pending",
+  "push": true,
   "deploy": false,
   "unverified": [
     "physical phone/tablet",
@@ -279,5 +279,12 @@
     },
     "fullFailure": "S07 wave objective poll timed out; exact first-run frame timing unconfirmed; movement/real rope input helper repaired",
     "documentationPatch": "One multi-file patch reported an already replaced PROJECT_STATUS line missing; inspected applied status and updated remaining docs separately"
-  }
+  },
+  "previousPushReview": "blocked by automatic review; explicit payload/destination approval pending",
+  "codeCommit": "789d416526e93f9a1b89218808f1fac079aa4870",
+  "pushDestination": "https://github.com/hjpapa/sindbad.git",
+  "pushBranch": "main",
+  "pushExitCode": 0,
+  "pushResult": "91f0b0c..789d416 main -> main",
+  "commit": true
 }
