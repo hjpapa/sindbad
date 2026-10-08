@@ -12,4 +12,3 @@ const report={date:new Date().toISOString(),method:'Node TCP loopback probes aft
 writeFileSync('docs/validation/m6-spirit-stopped-servers.json',JSON.stringify(report,null,2));
 console.log(JSON.stringify(report));
 if(ports.some(result=>result.state!=='closed'))process.exitCode=1;
-

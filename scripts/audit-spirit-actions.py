@@ -25,4 +25,3 @@ for sheet,side in ((source,512),(runtime,256)):
 assert meta['idleHeight']==313
 assert (meta['legacyCanvasWidth'],meta['legacyCanvasHeight'],meta['restingVisibleHeight'],meta['legacyGroundIndicatorOffset'])==(96,128,116,64)
 print('PASS: spirit4 native/lossless/runtime, transparent seams, measured opaque torso anchors and baselines; ART_DRAFT')
-

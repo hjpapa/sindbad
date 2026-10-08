@@ -46,4 +46,3 @@ write(V/'m6-spirit-final-screenshots.json',{'screens':screens,'verifiedCopies':c
 budget=read(V/'art-budget.json');shutil.copyfile(V/'art-budget.json',V/'m6-spirit-art-budget.json')
 write(V/'m6-spirit-postcheck.json',{'date':datetime.now(timezone.utc).isoformat(),'fullStats':full['stats'],'staticCommands':len(checks),'units':115,'frozenFiles':frozen['files'],'screenshots':len(screens),'mediaPreserved':len(media),'backupsPreserved':len(old),'budgetBytes':budget['totalBytes'],'campaign':campaign['stages'],'mobile':mobile,'artStatus':'ART_DRAFT','previousCommit':'934c421','push':'not requested this turn; local work','deploy':False,'unverified':['physical phone/tablet','iOS Safari','child usability','long-run FPS/heat','physical speaker mix','final user art approval']})
 print(json.dumps({'stats':full['stats'],'screenshots':len(screens),'copies':len(copies),'budget':budget['totalBytes'],'backups':len(old),'media':len(media)},indent=2))
-

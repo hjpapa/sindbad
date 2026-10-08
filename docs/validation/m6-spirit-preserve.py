@@ -14,4 +14,3 @@ media={p.relative_to(ROOT).as_posix():sha256(p.read_bytes()).hexdigest() for fol
 (ROOT/'docs/validation/m6-spirit-before-media.json').write_bytes((json.dumps(media,indent=2)+'\n').encode('utf-8'))
 (OUT/'git-head.txt').write_bytes(subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT))
 print(f'Preserved {len(rows)} files and recorded {len(media)} unchanged media hashes')
-

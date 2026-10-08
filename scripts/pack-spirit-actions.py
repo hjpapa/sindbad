@@ -29,4 +29,3 @@ meta={'key':'spirit','texture':'spirit-actions','cellSize':512,'columns':4,'rows
 (F/'spirit-actions.json').write_bytes((json.dumps(meta,indent=2)+'\n').encode('utf-8'))
 p=F/'generated/spirit-m6/spirit-actions-02.json';data=json.loads(p.read_text(encoding='utf-8'));data.update(status='selected; transparent outer/central seams and no text; ART_DRAFT',nativeSize=list(im.size),sha256=meta['sourceSha256']);p.write_bytes((json.dumps(data,indent=2)+'\n').encode('utf-8'))
 print(json.dumps(meta))
-

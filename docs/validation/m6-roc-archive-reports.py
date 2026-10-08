@@ -18,4 +18,3 @@ for row in records:
     rows.append({'restoredOriginal':key,'originalSha256':row['sha256'],'currentRunCopy':preserved.relative_to(ROOT).as_posix(),'currentRunSha256':digest})
 (V/'m6-roc-regression-reports.json').write_bytes((json.dumps({'method':'Legacy tests/audits write fixed report names. Current-run bytes preserved under a unique folder; exact previous report bytes restored from pre-task backup. No evidence deleted.','reports':rows},indent=2)+'\n').encode('utf-8'))
 print(f'Preserved current outputs and restored {len(rows)} prior report originals')
-
