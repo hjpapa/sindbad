@@ -44,6 +44,7 @@ export async function moveJourney(page:Page,x:number,y=550){
 }
 
 export async function fightJourney(page:Page,id:string){
+ if(id==='S09.enemy.3'){await fightRocJourney(page);return;}
  for(let attempt=0;attempt<100;attempt++){
   await skipJourneyDialogue(page);const state=await readJourney(page);
   const target=state.enemies.find(enemy=>enemy.id===id);
@@ -58,7 +59,28 @@ export async function fightJourney(page:Page,id:string){
  throw Error(`could not defeat ${id}`);
 }
 
+export async function strikeRocJourney(page:Page){
+ const initial=await readJourney(page);const enemy=initial.enemies.find(e=>e.id==='S09.enemy.3');
+ if(!enemy||enemy.hp<=0)return;
+ await moveJourney(page,enemy.x-65,550);
+ await page.waitForFunction(()=>{const s=Reflect.get(window,'__SINBAD_TEST__');return s?.rocEncounter?.coreOpen;},undefined,{timeout:15000});
+ const current=await page.evaluate(()=>Reflect.get(window,'__SINBAD_TEST__'));
+ await moveJourney(page,current.rocEncounter.core.x-65,550);
+ await page.keyboard.down('d');await page.waitForTimeout(30);await page.keyboard.up('d');
+ await page.keyboard.press('j');
+ await expect.poll(async()=>{const s=await readJourney(page);return s.enemies.find(e=>e.id==='S09.enemy.3')?.hp??0;}).toBeLessThan(enemy.hp);
+}
+export async function fightRocJourney(page:Page){
+ for(let core=0;core<3;core++){
+  const enemy=(await readJourney(page)).enemies.find(e=>e.id==='S09.enemy.3');
+  if(!enemy||enemy.hp<=0)return;
+  await strikeRocJourney(page);
+ }
+ await expect.poll(async()=>(await readJourney(page)).save.completedObjectiveIds.includes('S09.enemy.3')).toBe(true);
+}
+
 export async function useJourney(page:Page,def:ObjectDef){
+ if(def.kind==='rocCore'){await fightRocJourney(page);return;}
  for(let attempt=0;attempt<25;attempt++){
   await skipJourneyDialogue(page);const state=await readJourney(page);
   if(state.save.completedObjectiveIds.includes(def.id))return;

@@ -1,0 +1,131 @@
+
+> sinbad-seven-treasures@0.1.0 test:e2e
+> playwright test tests/e2e/roc-actions.spec.ts --reporter=list,json,html
+
+
+Running 4 tests using 1 worker
+
+(node:47120) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:47120) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x  1 tests\e2e\roc-actions.spec.ts:61:41 › phone roc six actions boss, saddle and return flight (1.1m)
+(node:4592) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:4592) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x  2 tests\e2e\roc-actions.spec.ts:61:41 › phone roc missing-sheet recovery boss, saddle and return flight (56.5s)
+(node:54708) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:54708) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x  3 tests\e2e\roc-actions.spec.ts:61:41 › tablet roc six actions boss, saddle and return flight (45.0s)
+(node:54832) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:54832) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x  4 tests\e2e\roc-actions.spec.ts:61:41 › tablet roc missing-sheet recovery boss, saddle and return flight (57.2s)
+
+
+  1) tests\e2e\roc-actions.spec.ts:61:41 › phone roc six actions boss, saddle and return flight ────
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: [32m-36[39m
+    Received: [31m-32.69444444444444[39m
+
+      89 |                     expect(mount.displayWidth).toBeCloseTo(307.2,8);expect(mount.displayHeight).toBeCloseTo(307.2,8);
+      90 |                     expect(mount.x).toBe(rider.x);expect(mount.y).toBe(rider.y);
+    > 91 |                     expect(rider.x-s.player.x).toBe(mount.flipX?-36:36);expect(rider.y-s.player.y).toBe(10);
+         |                                                ^
+      92 |                 }
+      93 |                 if(stage==='S33'){expect(passenger).not.toBeNull();expect(passenger.y-s.player.y).toBe(10);expect(Math.abs(passenger.x-s.player.x)).toBe(3);}
+      94 |                 else expect(passenger).toBeNull();
+        at inspect (C:\code\code10(sindbad)\tests\e2e\roc-actions.spec.ts:91:48)
+        at C:\code\code10(sindbad)\tests\e2e\roc-actions.spec.ts:100:130
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\roc-actions-phone-roc-six--bfb4d-ss-saddle-and-return-flight\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\roc-actions-phone-roc-six--bfb4d-ss-saddle-and-return-flight\error-context.md
+
+  2) tests\e2e\roc-actions.spec.ts:61:41 › phone roc missing-sheet recovery boss, saddle and return flight 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: [32m3[39m
+    Received: [31m0.30555555555555713[39m
+
+      91 |                     expect(rider.x-s.player.x).toBe(mount.flipX?-36:36);expect(rider.y-s.player.y).toBe(10);
+      92 |                 }
+    > 93 |                 if(stage==='S33'){expect(passenger).not.toBeNull();expect(passenger.y-s.player.y).toBe(10);expect(Math.abs(passenger.x-s.player.x)).toBe(3);}
+         |                                                                                                                                                     ^
+      94 |                 else expect(passenger).toBeNull();
+      95 |             };
+      96 |             for(const frame of fallback?[null]:device==='tablet'?[4]:[4,5]){
+        at inspect (C:\code\code10(sindbad)\tests\e2e\roc-actions.spec.ts:93:149)
+        at C:\code\code10(sindbad)\tests\e2e\roc-actions.spec.ts:100:130
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\roc-actions-phone-roc-miss-676e5-ss-saddle-and-return-flight\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\roc-actions-phone-roc-miss-676e5-ss-saddle-and-return-flight\error-context.md
+
+  3) tests\e2e\roc-actions.spec.ts:61:41 › tablet roc six actions boss, saddle and return flight ───
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: [32m-36[39m
+    Received: [31m-32.69444444444444[39m
+
+      89 |                     expect(mount.displayWidth).toBeCloseTo(307.2,8);expect(mount.displayHeight).toBeCloseTo(307.2,8);
+      90 |                     expect(mount.x).toBe(rider.x);expect(mount.y).toBe(rider.y);
+    > 91 |                     expect(rider.x-s.player.x).toBeCloseTo(mount.flipX?-36:36,8);expect(rider.y-s.player.y).toBeCloseTo(10,8);
+         |                                                ^
+      92 |                 }
+      93 |                 if(stage==='S33'){expect(passenger).not.toBeNull();expect(passenger.y-s.player.y).toBeCloseTo(10,8);expect(Math.abs(passenger.x-s.player.x)).toBeCloseTo(3,8);}
+      94 |                 else expect(passenger).toBeNull();
+        at inspect (C:\code\code10(sindbad)\tests\e2e\roc-actions.spec.ts:91:48)
+        at C:\code\code10(sindbad)\tests\e2e\roc-actions.spec.ts:100:130
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\roc-actions-tablet-roc-six-42383-ss-saddle-and-return-flight\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\roc-actions-tablet-roc-six-42383-ss-saddle-and-return-flight\error-context.md
+
+  4) tests\e2e\roc-actions.spec.ts:61:41 › tablet roc missing-sheet recovery boss, saddle and return flight 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: [32m3[39m
+    Received: [31m0.30555555555555713[39m
+
+      91 |                     expect(mount.originX).toBeCloseTo(mount.flipX?1-seat[0]/512:seat[0]/512,8);
+      92 |                     expect(mount.originY).toBeCloseTo(seat[1]/512,8);
+    > 93 |                     expect(mount.displayWidth).toBeCloseTo(307.2,8);expect(mount.displayHeight).toBeCloseTo(307.2,8);
+         |                                                                                                                      ^
+      94 |                     expect(mount.x).toBe(rider.x);expect(mount.y).toBe(rider.y);
+      95 |                     expect(rider.x-s.player.x).toBeCloseTo(mount.flipX?-36:36,8);expect(rider.y-s.player.y).toBeCloseTo(10,8);
+      96 |                 }
+        at inspect (C:\code\code10(sindbad)\tests\e2e\roc-actions.spec.ts:93:149)
+        at C:\code\code10(sindbad)\tests\e2e\roc-actions.spec.ts:100:130
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\roc-actions-tablet-roc-mis-f6fa2-ss-saddle-and-return-flight\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\roc-actions-tablet-roc-mis-f6fa2-ss-saddle-and-return-flight\error-context.md
+
+  4 failed
+    tests\e2e\roc-actions.spec.ts:61:41 › phone roc six actions boss, saddle and return flight ─────
+    tests\e2e\roc-actions.spec.ts:61:41 › phone roc missing-sheet recovery boss, saddle and return flight 
+    tests\e2e\roc-actions.spec.ts:61:41 › tablet roc six actions boss, saddle and return flight ────
+    tests\e2e\roc-actions.spec.ts:61:41 › tablet roc missing-sheet recovery boss, saddle and return flight 
+
+To open last HTML report run:
+[36m[39m
+[36m  npx playwright show-report[39m
+[36m[39m

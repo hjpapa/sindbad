@@ -1,0 +1,277 @@
+{
+  "count": 34,
+  "screens": [
+    {
+      "path": "docs/screenshots/m6-spirit/regression-repair/m6-siren/phone-fallback-attack.png",
+      "size": [
+        844,
+        390
+      ],
+      "sha256": "0c564de9578c5980e53d0af832a4dab491da5cbac18bde7ace9ca03b7d30565e"
+    },
+    {
+      "path": "docs/screenshots/m6-spirit/regression-repair/m6-siren/phone-fallback-defeated.png",
+      "size": [
+        844,
+        390
+      ],
+      "sha256": "77639ad36c817e6a2ff685f1ea9d2b0cecf6a2eea0f26094d43ae0e57a7233f7"
+    },
+    {
+      "path": "docs/screenshots/m6-spirit/regression-repair/m6-siren/phone-fallback-idle.png",
+      "size": [
+        844,
+        390
+      ],
+      "sha256": "eca04b0ea95fc1733ad1f409077bc108302d7279cdd801c2deaf980eadc28e5f"
+    },
+    {
+      "path": "docs/screenshots/m6-spirit/regression-repair/m6-siren/phone-fallback-recover.png",
+      "size": [
+        844,
+        390
+      ],
+      "sha256": "de09e16089b9f8041b8e5781847bbcc5ba0fc1210b406995354d6d4647128ff9"
+    },
+    {
+      "path": "docs/screenshots/m6-spirit/regression-repair/m6-siren/phone-fallback-right.png",
+      "size": [
+        844,
+        390
+      ],
+      "sha256": "2649dc04f2a03f688dc54ab4fadb1042c7ba3245ffd7f0fbb01ea10219169e0a"
+    },
+    {
+      "path": "docs/screenshots/m6-spirit/regression-repair/m6-siren/phone-fallback-shield.png",
+      "size": [
+        844,
+        390
+      ],
+      "sha256": "a8ef1801588db6a815b752d60a92ac5afac238cfc166ae11e1522b878a936d29"
+    },
+    {
+      "path": "docs/screenshots/m6-spirit/regression-repair/m6-siren/phone-fallback-telegraph.png",
+      "size": [
+        844,
+        390
+      ],
+      "sha256": "e2a75d511a56e843ccc6134e638e200e6819ef03be699aed2640ca8763ebc7a8"
+    },
+    {
+      "path": "docs/screenshots/m6-spirit/regression-repair/m6-siren/phone-fallback-weapon.png",
+      "size": [
+        844,
+        390
+      ],
+      "sha256": "4d0cdaa871a12f3a97d1b817cd3acf575b6f703c4b87f8b6ed3f761a0f0a3a8c"
+    },
+    {
+      "path": "docs/screenshots/m6-spirit/regression-repair/m6-siren/phone-normal-attack.png",
+      "size": [
+        844,
+        390
+      ],
+      "sha256": "11e6aef879d17e816a11251e366f945599407a6c958a18dfb20ac83a015c60d6"
+    },
+    {
+      "path": "docs/screenshots/m6-spirit/regression-repair/m6-siren/phone-normal-defeated.png",
+      "size": [
+        844,
+        390
+      ],
+      "sha256": "b3a76af2df395c1c69271eccd6c2cd6f187132c6c0389f5a5b944e43ba048b5e"
+    },
+    {
+      "path": "docs/screenshots/m6-spirit/regression-repair/m6-siren/phone-normal-idle.png",
+      "size": [
+        844,
+        390
+      ],
+      "sha256": "e3ac5f55549379dde29975b2d09646786abb32a02814d77b17bc1723c74a38e2"
+    },
+    {
+      "path": "docs/screenshots/m6-spirit/regression-repair/m6-siren/phone-normal-recover.png",
+      "size": [
+        844,
+        390
+      ],
+      "sha256": "2fd041ba54101d7aac90c31e471b01ec00b65e2553f6406381ff4463a9760b23"
+    },
+    {
+      "path": "docs/screenshots/m6-spirit/regression-repair/m6-siren/phone-normal-right.png",
+      "size": [
+        844,
+        390
+      ],
+      "sha256": "2bdb87c65ae2bb14cb4b0f25e5c9dec3f4ed9c7fd21b585d624b5bf2bea0c6e2"
+    },
+    {
+      "path": "docs/screenshots/m6-spirit/regression-repair/m6-siren/phone-normal-shield.png",
+      "size": [
+        844,
+        390
+      ],
+      "sha256": "11e790fad174da105fe3d5a4d57d2cdc7cb6c31766b70e577c609cb1235a713d"
+    },
+    {
+      "path": "docs/screenshots/m6-spirit/regression-repair/m6-siren/phone-normal-telegraph.png",
+      "size": [
+        844,
+        390
+      ],
+      "sha256": "39dc38783362599a41b5650106c11ca3d8430cbdcc403cd5e7a75f459d751051"
+    },
+    {
+      "path": "docs/screenshots/m6-spirit/regression-repair/m6-siren/phone-normal-weapon.png",
+      "size": [
+        844,
+        390
+      ],
+      "sha256": "7fe0aad8ea491bdd2d6fdc5175e1893ed9e30cf2c9b0be1b1314359ea1348019"
+    },
+    {
+      "path": "docs/screenshots/m6-spirit/regression-repair/m6-siren/tablet-fallback-attack.png",
+      "size": [
+        1180,
+        820
+      ],
+      "sha256": "24b747ad19931cf11f440cead31111e10e45687f9e53bdfd6fdc544f559c96db"
+    },
+    {
+      "path": "docs/screenshots/m6-spirit/regression-repair/m6-siren/tablet-fallback-defeated.png",
+      "size": [
+        1180,
+        820
+      ],
+      "sha256": "802e7548d6c90995aac283f685b5d3f698716e1af5b091b1608db9068c48425a"
+    },
+    {
+      "path": "docs/screenshots/m6-spirit/regression-repair/m6-siren/tablet-fallback-idle.png",
+      "size": [
+        1180,
+        820
+      ],
+      "sha256": "075bd55ad4810fa825fa4d450e8893226ed28abd1f03271823937f0df9988cc3"
+    },
+    {
+      "path": "docs/screenshots/m6-spirit/regression-repair/m6-siren/tablet-fallback-recover.png",
+      "size": [
+        1180,
+        820
+      ],
+      "sha256": "3d66eedc81a5924351b4ec0138371a749525f13d7730b45fcb881e1d07beed0b"
+    },
+    {
+      "path": "docs/screenshots/m6-spirit/regression-repair/m6-siren/tablet-fallback-right.png",
+      "size": [
+        1180,
+        820
+      ],
+      "sha256": "8819a64aaf002bbf2ccd43d78666842f507d0895a24e47f4ffd5259aad5e9cf4"
+    },
+    {
+      "path": "docs/screenshots/m6-spirit/regression-repair/m6-siren/tablet-fallback-shield.png",
+      "size": [
+        1180,
+        820
+      ],
+      "sha256": "01da0454f3d31ae60cff33659d6a5f9cce953e426346bfdee46f955e0d6322f2"
+    },
+    {
+      "path": "docs/screenshots/m6-spirit/regression-repair/m6-siren/tablet-fallback-telegraph.png",
+      "size": [
+        1180,
+        820
+      ],
+      "sha256": "d01e9ec38b80ca6d5ba04cf2b0f4d2fa61827f99ab18e0a42a4a3b2e5172c248"
+    },
+    {
+      "path": "docs/screenshots/m6-spirit/regression-repair/m6-siren/tablet-fallback-weapon.png",
+      "size": [
+        1180,
+        820
+      ],
+      "sha256": "015a9e537f8e57c0e03eff8201e9433d4657cb32373bba5ff5dc5bb64131f5a5"
+    },
+    {
+      "path": "docs/screenshots/m6-spirit/regression-repair/m6-siren/tablet-normal-attack.png",
+      "size": [
+        1180,
+        820
+      ],
+      "sha256": "234c6868f277daee0c0f6fb3fc52f086b4a9a3348142dc7ee72321ea01f026f8"
+    },
+    {
+      "path": "docs/screenshots/m6-spirit/regression-repair/m6-siren/tablet-normal-defeated.png",
+      "size": [
+        1180,
+        820
+      ],
+      "sha256": "875b0f7725b2cb6ed3d7da101d986b7784b80668184a6686f5b572fbd6291b19"
+    },
+    {
+      "path": "docs/screenshots/m6-spirit/regression-repair/m6-siren/tablet-normal-idle.png",
+      "size": [
+        1180,
+        820
+      ],
+      "sha256": "95e78ff7250e93c6033e78fabd5f0575a6957f6a5b94c73da60349df5aa462fc"
+    },
+    {
+      "path": "docs/screenshots/m6-spirit/regression-repair/m6-siren/tablet-normal-recover.png",
+      "size": [
+        1180,
+        820
+      ],
+      "sha256": "0d198b538c8b713aa114a393eda38ee43ad3627b5604cdf02c97a6c65aaea8fc"
+    },
+    {
+      "path": "docs/screenshots/m6-spirit/regression-repair/m6-siren/tablet-normal-right.png",
+      "size": [
+        1180,
+        820
+      ],
+      "sha256": "d44a6380adb11775bebe2dd01237970aeba41b8d5ba1abe8a0199c7a94466249"
+    },
+    {
+      "path": "docs/screenshots/m6-spirit/regression-repair/m6-siren/tablet-normal-shield.png",
+      "size": [
+        1180,
+        820
+      ],
+      "sha256": "55d10869d22282124cc92da92b3473fa962d0b2b0c0e8325ef2445fe62d88d8e"
+    },
+    {
+      "path": "docs/screenshots/m6-spirit/regression-repair/m6-siren/tablet-normal-telegraph.png",
+      "size": [
+        1180,
+        820
+      ],
+      "sha256": "82f4cb215414095eb86021303de97a4aa5b7fedae4ffe8a30a3d7effa4177aad"
+    },
+    {
+      "path": "docs/screenshots/m6-spirit/regression-repair/m6-siren/tablet-normal-weapon.png",
+      "size": [
+        1180,
+        820
+      ],
+      "sha256": "706f47bd60158949fc82d7d161cdc8d4b9943c4de592944cc3d7358403c26cc2"
+    },
+    {
+      "path": "docs/screenshots/m6-spirit/regression-repair/S05-frontal-shield.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "8abe4c0537da914f1ed22bbd8d58394996c3380fe373e034d1f1e7992d41105b"
+    },
+    {
+      "path": "docs/screenshots/m6-spirit/regression-repair/S05-recovery-hit.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "65af4b1ba2ab329c0166e9e3dbe76a3872c27b426d5006dcb90c63d238e19021"
+    }
+  ]
+}

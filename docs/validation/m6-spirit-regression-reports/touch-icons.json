@@ -1,0 +1,442 @@
+{
+  "date": "2026-10-06T12:35:53.244849+00:00",
+  "pass": true,
+  "artStatus": "ART_DRAFT",
+  "method": "native PNG hashes; exact whole-canvas normalization and lossless RGBA; 27 original/runtime decodes; transparent visible bounds (alpha >16); visual approval separate",
+  "nativeCount": 10,
+  "selectedCount": 9,
+  "files": [
+    {
+      "path": "art-source/webtoon/ui-talk.png",
+      "size": [
+        512,
+        512
+      ],
+      "format": "PNG",
+      "bounds": [
+        45,
+        69,
+        467,
+        441
+      ],
+      "bytes": 171424,
+      "sha256": "fcf1a1caa753aaa6b7e24f27a72510dc59c26c10d12cfa826e43b4372fa53acf"
+    },
+    {
+      "path": "art-source/webtoon/ui-talk.webp",
+      "size": [
+        512,
+        512
+      ],
+      "format": "WEBP",
+      "bounds": [
+        45,
+        69,
+        467,
+        441
+      ],
+      "bytes": 125402,
+      "sha256": "990868ff6f5285d35e0ea84c9cf06ed37a22964d8113696862250d2c7d92b934"
+    },
+    {
+      "path": "public/assets/webtoon/ui-talk.png",
+      "size": [
+        128,
+        128
+      ],
+      "format": "PNG",
+      "bounds": [
+        11,
+        17,
+        117,
+        111
+      ],
+      "bytes": 17846,
+      "sha256": "e83770e61394937a5a84250945acd7d61ad6457f7f47382ef19a1f4944fc0960"
+    },
+    {
+      "path": "art-source/webtoon/ui-inspect.png",
+      "size": [
+        512,
+        512
+      ],
+      "format": "PNG",
+      "bounds": [
+        71,
+        35,
+        444,
+        477
+      ],
+      "bytes": 178775,
+      "sha256": "e9457e1df619a2df3fa2e5bdb75225876132b41fd09de9a3f851cb3e6888ca26"
+    },
+    {
+      "path": "art-source/webtoon/ui-inspect.webp",
+      "size": [
+        512,
+        512
+      ],
+      "format": "WEBP",
+      "bounds": [
+        71,
+        35,
+        444,
+        477
+      ],
+      "bytes": 126922,
+      "sha256": "3bdcbab991092d07c1345041c2a51143f390d1784b8370b9ed98f3cd15f60558"
+    },
+    {
+      "path": "public/assets/webtoon/ui-inspect.png",
+      "size": [
+        128,
+        128
+      ],
+      "format": "PNG",
+      "bounds": [
+        17,
+        8,
+        111,
+        120
+      ],
+      "bytes": 18420,
+      "sha256": "5de2131b8bd7b1542a7036fe01a046426b00ae637575cd58714d94fe2b3f71be"
+    },
+    {
+      "path": "art-source/webtoon/ui-depart.png",
+      "size": [
+        512,
+        512
+      ],
+      "format": "PNG",
+      "bounds": [
+        45,
+        24,
+        474,
+        484
+      ],
+      "bytes": 207496,
+      "sha256": "aece575ec0318d8245d5d67d12bfe8b32c560385cfa80d081a6c5dd137c2ea94"
+    },
+    {
+      "path": "art-source/webtoon/ui-depart.webp",
+      "size": [
+        512,
+        512
+      ],
+      "format": "WEBP",
+      "bounds": [
+        45,
+        24,
+        474,
+        484
+      ],
+      "bytes": 157712,
+      "sha256": "db0750e1f8bc661cbf3d5ccae951582ef5149853daf14d03d74fdeae3a6c27a7"
+    },
+    {
+      "path": "public/assets/webtoon/ui-depart.png",
+      "size": [
+        128,
+        128
+      ],
+      "format": "PNG",
+      "bounds": [
+        11,
+        6,
+        119,
+        121
+      ],
+      "bytes": 21393,
+      "sha256": "66c6dcd8fd5e4ffc550567d596f2927f2c90947ec6977b58ef62065b848c36e4"
+    },
+    {
+      "path": "art-source/webtoon/ui-wing.png",
+      "size": [
+        512,
+        512
+      ],
+      "format": "PNG",
+      "bounds": [
+        35,
+        19,
+        497,
+        495
+      ],
+      "bytes": 244455,
+      "sha256": "11b9b64d4c4432fbfdd9e6de181a911dadba1039c6c43d618d767c0c7371d7c2"
+    },
+    {
+      "path": "art-source/webtoon/ui-wing.webp",
+      "size": [
+        512,
+        512
+      ],
+      "format": "WEBP",
+      "bounds": [
+        35,
+        19,
+        497,
+        495
+      ],
+      "bytes": 180052,
+      "sha256": "34c40c061d6ac1a3bbda4a7b83197a82c107b917fa21ade82aa97ba0274ac010"
+    },
+    {
+      "path": "public/assets/webtoon/ui-wing.png",
+      "size": [
+        128,
+        128
+      ],
+      "format": "PNG",
+      "bounds": [
+        8,
+        4,
+        125,
+        124
+      ],
+      "bytes": 25620,
+      "sha256": "deeb029b799595c2dd319c733449de8da1ceb513261b17fb1878d3ab21fa93f5"
+    },
+    {
+      "path": "art-source/webtoon/ui-flame.png",
+      "size": [
+        512,
+        512
+      ],
+      "format": "PNG",
+      "bounds": [
+        59,
+        30,
+        468,
+        485
+      ],
+      "bytes": 197687,
+      "sha256": "b1dd72512154ff44e8868b7d4234f45211668b889c6f901f616c4a07317eb11c"
+    },
+    {
+      "path": "art-source/webtoon/ui-flame.webp",
+      "size": [
+        512,
+        512
+      ],
+      "format": "WEBP",
+      "bounds": [
+        59,
+        30,
+        468,
+        485
+      ],
+      "bytes": 152680,
+      "sha256": "6e6a08f57b1bc2306bc3e8af40e59fbf55c4babdd601c3b882350694a0354cba"
+    },
+    {
+      "path": "public/assets/webtoon/ui-flame.png",
+      "size": [
+        128,
+        128
+      ],
+      "format": "PNG",
+      "bounds": [
+        14,
+        7,
+        117,
+        122
+      ],
+      "bytes": 21279,
+      "sha256": "47d87fa14ee531a5e4efac4ce77d2610fe04476d6af79dbf9e5024805b88ae5e"
+    },
+    {
+      "path": "art-source/webtoon/ui-bridge.png",
+      "size": [
+        512,
+        512
+      ],
+      "format": "PNG",
+      "bounds": [
+        16,
+        52,
+        497,
+        464
+      ],
+      "bytes": 204620,
+      "sha256": "079b14ade0eaff60791025929847525f7379366de8ca598008ee7430d542f720"
+    },
+    {
+      "path": "art-source/webtoon/ui-bridge.webp",
+      "size": [
+        512,
+        512
+      ],
+      "format": "WEBP",
+      "bounds": [
+        16,
+        52,
+        497,
+        464
+      ],
+      "bytes": 153530,
+      "sha256": "23d2a68e2a6eaf11d09e0968d0bd37ed3eba4a871b8cc18fc71dc8547b10cd41"
+    },
+    {
+      "path": "public/assets/webtoon/ui-bridge.png",
+      "size": [
+        128,
+        128
+      ],
+      "format": "PNG",
+      "bounds": [
+        4,
+        13,
+        125,
+        116
+      ],
+      "bytes": 20722,
+      "sha256": "67d449cb2e2fc89b529c7fe4ed98a09c40feb7d0225902a71bb99a8efee037d4"
+    },
+    {
+      "path": "art-source/webtoon/ui-shield.png",
+      "size": [
+        512,
+        512
+      ],
+      "format": "PNG",
+      "bounds": [
+        52,
+        22,
+        460,
+        484
+      ],
+      "bytes": 265685,
+      "sha256": "806f5ab510668c7cf1934e39e2cd8faa3df0d067051090114f891afdf5b324eb"
+    },
+    {
+      "path": "art-source/webtoon/ui-shield.webp",
+      "size": [
+        512,
+        512
+      ],
+      "format": "WEBP",
+      "bounds": [
+        52,
+        22,
+        460,
+        484
+      ],
+      "bytes": 202142,
+      "sha256": "b4251f1a1c9d8db586c56e4f05e0641f2280f576fdd2863039fd9591f7bf1dab"
+    },
+    {
+      "path": "public/assets/webtoon/ui-shield.png",
+      "size": [
+        128,
+        128
+      ],
+      "format": "PNG",
+      "bounds": [
+        13,
+        5,
+        115,
+        121
+      ],
+      "bytes": 25797,
+      "sha256": "7dc40d489ccd6799ff252b649155a9cc4f7c89f338c36dda416a6234a9eba8df"
+    },
+    {
+      "path": "art-source/webtoon/ui-dawn.png",
+      "size": [
+        512,
+        512
+      ],
+      "format": "PNG",
+      "bounds": [
+        19,
+        34,
+        493,
+        422
+      ],
+      "bytes": 164755,
+      "sha256": "884c4f730dfe4ad9cf984178ffad0983a6f5da61276a1438bf791053d5587f66"
+    },
+    {
+      "path": "art-source/webtoon/ui-dawn.webp",
+      "size": [
+        512,
+        512
+      ],
+      "format": "WEBP",
+      "bounds": [
+        19,
+        34,
+        493,
+        422
+      ],
+      "bytes": 124114,
+      "sha256": "77b472a77ab4017d8f7d2cd9c6055f6c65efb2f114bcfb4bc78a089e0247f69c"
+    },
+    {
+      "path": "public/assets/webtoon/ui-dawn.png",
+      "size": [
+        128,
+        128
+      ],
+      "format": "PNG",
+      "bounds": [
+        4,
+        8,
+        124,
+        106
+      ],
+      "bytes": 18376,
+      "sha256": "ec41af42f3f7e793dc4e2cad85c606975ab176b20161092c9812a823443df559"
+    },
+    {
+      "path": "art-source/webtoon/ui-jump.png",
+      "size": [
+        512,
+        512
+      ],
+      "format": "PNG",
+      "bounds": [
+        97,
+        70,
+        427,
+        446
+      ],
+      "bytes": 120061,
+      "sha256": "2ceff829191dd3afff7cfd09b87c04dfa2278b183538ca2626904d3e306f1f90"
+    },
+    {
+      "path": "art-source/webtoon/ui-jump.webp",
+      "size": [
+        512,
+        512
+      ],
+      "format": "WEBP",
+      "bounds": [
+        97,
+        70,
+        427,
+        446
+      ],
+      "bytes": 84446,
+      "sha256": "2201cf6d273b9975cc888efdd17cc3922bfeee7700ce9485c5486f4522479d2e"
+    },
+    {
+      "path": "public/assets/webtoon/ui-jump.png",
+      "size": [
+        128,
+        128
+      ],
+      "format": "PNG",
+      "bounds": [
+        24,
+        17,
+        107,
+        112
+      ],
+      "bytes": 13387,
+      "sha256": "cec3edf92bc5f491eda699db88d7e5a284b3a797997cdbf80e753ff5100f98ea"
+    }
+  ]
+}

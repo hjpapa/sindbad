@@ -1,0 +1,84 @@
+
+> sinbad-seven-treasures@0.1.0 test:e2e
+> playwright test tests/e2e/roc-actions.spec.ts --reporter=list,json,html
+
+
+Running 4 tests using 1 worker
+
+(node:18312) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:18312) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 tests\e2e\roc-actions.spec.ts:61:41 › phone roc six actions boss, saddle and return flight (1.5m)
+  x  2 tests\e2e\roc-actions.spec.ts:61:41 › phone roc missing-sheet recovery boss, saddle and return flight (53.3s)
+(node:49720) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:49720) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x  3 tests\e2e\roc-actions.spec.ts:61:41 › tablet roc six actions boss, saddle and return flight (56.7s)
+(node:46992) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:46992) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 4 tests\e2e\roc-actions.spec.ts:61:41 › tablet roc missing-sheet recovery boss, saddle and return flight (1.3m)
+
+
+  1) tests\e2e\roc-actions.spec.ts:61:41 › phone roc missing-sheet recovery boss, saddle and return flight › Expect "poll toBeLessThan" 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBeLessThan[2m([22m[32mexpected[39m[2m)[22m
+
+    Expected: < [32m-450[39m
+    Received:   [31m0[39m
+
+    Call Log:
+    - Timeout 10000ms exceeded while waiting on the predicate
+
+      79 |         await moveJourney(page,2600,550);await page.keyboard.press('ArrowUp');await page.waitForTimeout(240);
+      80 |         expect((await read(page)).player.grounded).toBe(false);
+    > 81 |         await page.keyboard.press('ArrowUp');await expect.poll(async()=>(await read(page)).player.vy).toBeLessThan(-450);
+         |                                              ^
+      82 |         await shot('S09-double-jump',await read(page));
+      83 |         for(const stage of ['S10','S33']){
+      84 |             await load(page,fixture(stage,device==='tablet'));
+        at C:\code\code10(sindbad)\tests\e2e\roc-actions.spec.ts:81:46
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\roc-actions-phone-roc-miss-676e5-ss-saddle-and-return-flight\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\roc-actions-phone-roc-miss-676e5-ss-saddle-and-return-flight\error-context.md
+
+  2) tests\e2e\roc-actions.spec.ts:61:41 › tablet roc six actions boss, saddle and return flight › Expect "poll toBeLessThan" 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBeLessThan[2m([22m[32mexpected[39m[2m)[22m
+
+    Expected: < [32m-450[39m
+    Received:   [31m0[39m
+
+    Call Log:
+    - Timeout 10000ms exceeded while waiting on the predicate
+
+      79 |         await moveJourney(page,2600,550);await page.keyboard.press('ArrowUp');await page.waitForTimeout(240);
+      80 |         expect((await read(page)).player.grounded).toBe(false);
+    > 81 |         await page.keyboard.press('ArrowUp');await expect.poll(async()=>(await read(page)).player.vy).toBeLessThan(-450);
+         |                                              ^
+      82 |         await shot('S09-double-jump',await read(page));
+      83 |         for(const stage of ['S10','S33']){
+      84 |             await load(page,fixture(stage,device==='tablet'));
+        at C:\code\code10(sindbad)\tests\e2e\roc-actions.spec.ts:81:46
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\roc-actions-tablet-roc-six-42383-ss-saddle-and-return-flight\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\roc-actions-tablet-roc-six-42383-ss-saddle-and-return-flight\error-context.md
+
+  2 failed
+    tests\e2e\roc-actions.spec.ts:61:41 › phone roc missing-sheet recovery boss, saddle and return flight 
+    tests\e2e\roc-actions.spec.ts:61:41 › tablet roc six actions boss, saddle and return flight ────
+  2 passed (4.7m)
+
+To open last HTML report run:
+[36m[39m
+[36m  npx playwright show-report[39m
+[36m[39m

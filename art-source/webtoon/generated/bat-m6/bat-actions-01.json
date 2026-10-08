@@ -1,0 +1,17 @@
+{
+  "prompt": "Use case: illustration-story.\nAsset type: transparent original webtoon game enemy ACTION SHEET, square canvas, TWO columns by TWO rows of equal square cells.\nInput image 1: this project's own hero, STYLE reference only for crisp navy ink outlines, soft cel shading and top-left light. Do not draw the human.\nSubject: the project's original small FRIENDLY lavender cave bat. Rounded pale lavender head and torso, two tall triangular ears, large friendly black eyes, short muzzle with tiny closed smile, small feet, broad violet scalloped membrane wings outlined in deep navy. Same bat identity and scale in all four cells. No clothing or weapon.\nDirection: three-quarter side view, face and attack point to viewer's RIGHT in EVERY cell.\nReading order:\ntop-left IDLE: calmly hovering, wings spread moderately sideways, alert closed-mouth face.\ntop-right TELEGRAPH: wings clearly raised HIGH above its ears, compact body pulling back, focused harmless expression; visibly preparing to flap forward.\nbottom-left ATTACK: wings sweep DOWN and forward, torso tilts slightly toward RIGHT, small compact curved air strokes close to wing tips, no projectile or huge effect.\nbottom-right CURSE RELEASE: still intact and floating, shoulders/wings relaxed and half-folded, eyes gently closed, happy tiny smile, three tiny warm sparkles close to its body. No falling, injury, threatening face or frightening teeth.\nSTRICT LAYOUT: Each complete bat including wing tips, ears, feet, air strokes and sparkles MUST stay within the central45% width and central45% height of its own cell. Four SMALL isolated bats, enormous empty transparent gutters and central cross. At least27% completely transparent padding on every cell edge. Wings must NEVER cross cell boundaries. Entire silhouette fully inside each cell. Plenty of empty canvas; do not enlarge figures to fill it.\nActual transparent RGBA, not a checkerboard picture. No background, floor, shadow, grid, text, labels, numbers, logos, signature, watermark, music notes, hearts, blood, wounds, torn wings, religious symbols or additional creatures. Warm, readable child-friendly webtoon art; lavender bat palette remains distinct from teal environment.",
+  "method": "OpenAI built-in imagegen",
+  "toolPath": "C:/Users/tbose/.codex/generated_images/01a10013-499c-7b11-9c12-3ae8826e542a/exec-9bad9c6b-d221-4a15-b60a-fc24307d0ddb.png",
+  "native": "bat-actions-01.png",
+  "status": "selected; transparent outer/central seams and no text; ART_DRAFT",
+  "references": [
+    "art-source/webtoon/hero-webtoon.webp"
+  ],
+  "identityReference": "public/assets/draft/bat.svg (original project design described in prompt)",
+  "artStatus": "ART_DRAFT",
+  "nativeSize": [
+    1254,
+    1254
+  ],
+  "sha256": "ffc21dea78b814dc5cf9bde14a537f7ad60090fb24a6ddde1db0bf155bc359d8"
+}

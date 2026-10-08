@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-08T10:45:14.952413+00:00",
+  "baseline": "m6-roc-regression-repair-runtime-hashes.json",
+  "unchangedPreviousSourceRuntimeFiles": 985,
+  "originalAndRuntimeAssetsUnchanged": 638,
+  "intentionalChanges": [
+    "dist/assets/index-Dk0Z0IM-.js",
+    "dist/assets/index-qB8VWJ9c.js",
+    "dist/index.html",
+    "src/content/finalStages.ts",
+    "src/content/maps.ts",
+    "src/content/storyDesign.ts",
+    "src/content/validate.ts",
+    "src/core/glide.ts",
+    "src/core/rocBoss.ts",
+    "src/core/save.ts",
+    "src/game/stage.ts",
+    "tests/e2e/journey-bot.ts",
+    "tests/e2e/m3-opening.spec.ts",
+    "tests/e2e/roc-actions.spec.ts",
+    "tests/e2e/roc-mechanics.spec.ts",
+    "tests/unit/roc-actions.test.ts",
+    "tests/unit/roc-mechanics.test.ts"
+  ],
+  "unexpectedChanges": [],
+  "lockfileAndDependenciesUnchanged": true
+}

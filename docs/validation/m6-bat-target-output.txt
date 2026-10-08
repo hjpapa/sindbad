@@ -1,0 +1,116 @@
+
+> sinbad-seven-treasures@0.1.0 test:e2e
+> playwright test tests/e2e/bat-actions.spec.ts --reporter=list,json,html
+
+
+Running 4 tests using 1 worker
+
+(node:23892) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:23892) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x  1 tests\e2e\bat-actions.spec.ts:50:41 › phone bat four actions keeps contact combat, puzzle safety and rewards (2.5m)
+(node:19632) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:19632) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x  2 tests\e2e\bat-actions.spec.ts:50:41 › phone bat missing-sheet recovery keeps contact combat, puzzle safety and rewards (25.0s)
+(node:50548) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:50548) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x  3 tests\e2e\bat-actions.spec.ts:50:41 › tablet bat four actions keeps contact combat, puzzle safety and rewards (24.1s)
+(node:35692) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:35692) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x  4 tests\e2e\bat-actions.spec.ts:50:41 › tablet bat missing-sheet recovery keeps contact combat, puzzle safety and rewards (25.4s)
+
+
+  1) tests\e2e\bat-actions.spec.ts:50:41 › phone bat four actions keeps contact combat, puzzle safety and rewards 
+
+    TimeoutError: page.waitForFunction: Timeout 10000ms exceeded.
+
+      55 |         };
+      56 |         const capture=async(state:string)=>{
+    > 57 |             const handle=await page.waitForFunction(({id,state})=>{
+         |                                     ^
+      58 |                 const e=Reflect.get(window,'__SINBAD_TEST__')?.enemies.find((e:EnemyView)=>e.id===id);return e?.state===state?e:false;
+      59 |             },{id:def.id,state});
+      60 |             const observed=await handle.jsonValue() as EnemyView;await handle.dispose();inspect(observed);await shot(state,observed);return observed;
+        at capture (C:\code\code10(sindbad)\tests\e2e\bat-actions.spec.ts:57:37)
+        at C:\code\code10(sindbad)\tests\e2e\bat-actions.spec.ts:75:15
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\bat-actions-phone-bat-four-b6a9a-t-puzzle-safety-and-rewards\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\bat-actions-phone-bat-four-b6a9a-t-puzzle-safety-and-rewards\error-context.md
+
+  2) tests\e2e\bat-actions.spec.ts:50:41 › phone bat missing-sheet recovery keeps contact combat, puzzle safety and rewards 
+
+    TimeoutError: page.waitForFunction: Timeout 10000ms exceeded.
+
+      55 |         };
+      56 |         const capture=async(state:string)=>{
+    > 57 |             const handle=await page.waitForFunction(({id,state})=>{
+         |                                     ^
+      58 |                 const e=Reflect.get(window,'__SINBAD_TEST__')?.enemies.find((e:EnemyView)=>e.id===id);return e?.state===state?e:false;
+      59 |             },{id:def.id,state});
+      60 |             const observed=await handle.jsonValue() as EnemyView;await handle.dispose();inspect(observed);await shot(state,observed);return observed;
+        at capture (C:\code\code10(sindbad)\tests\e2e\bat-actions.spec.ts:57:37)
+        at C:\code\code10(sindbad)\tests\e2e\bat-actions.spec.ts:75:15
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\bat-actions-phone-bat-miss-b6ded-t-puzzle-safety-and-rewards\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\bat-actions-phone-bat-miss-b6ded-t-puzzle-safety-and-rewards\error-context.md
+
+  3) tests\e2e\bat-actions.spec.ts:50:41 › tablet bat four actions keeps contact combat, puzzle safety and rewards 
+
+    TimeoutError: page.waitForFunction: Timeout 10000ms exceeded.
+
+      55 |         };
+      56 |         const capture=async(state:string)=>{
+    > 57 |             const handle=await page.waitForFunction(({id,state})=>{
+         |                                     ^
+      58 |                 const e=Reflect.get(window,'__SINBAD_TEST__')?.enemies.find((e:EnemyView)=>e.id===id);return e?.state===state?e:false;
+      59 |             },{id:def.id,state});
+      60 |             const observed=await handle.jsonValue() as EnemyView;await handle.dispose();inspect(observed);await shot(state,observed);return observed;
+        at capture (C:\code\code10(sindbad)\tests\e2e\bat-actions.spec.ts:57:37)
+        at C:\code\code10(sindbad)\tests\e2e\bat-actions.spec.ts:75:15
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\bat-actions-tablet-bat-fou-35895-t-puzzle-safety-and-rewards\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\bat-actions-tablet-bat-fou-35895-t-puzzle-safety-and-rewards\error-context.md
+
+  4) tests\e2e\bat-actions.spec.ts:50:41 › tablet bat missing-sheet recovery keeps contact combat, puzzle safety and rewards 
+
+    TimeoutError: page.waitForFunction: Timeout 10000ms exceeded.
+
+      55 |         };
+      56 |         const capture=async(state:string)=>{
+    > 57 |             const handle=await page.waitForFunction(({id,state})=>{
+         |                                     ^
+      58 |                 const e=Reflect.get(window,'__SINBAD_TEST__')?.enemies.find((e:EnemyView)=>e.id===id);return e?.state===state?e:false;
+      59 |             },{id:def.id,state});
+      60 |             const observed=await handle.jsonValue() as EnemyView;await handle.dispose();inspect(observed);await shot(state,observed);return observed;
+        at capture (C:\code\code10(sindbad)\tests\e2e\bat-actions.spec.ts:57:37)
+        at C:\code\code10(sindbad)\tests\e2e\bat-actions.spec.ts:75:15
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\bat-actions-tablet-bat-mis-e06c9-t-puzzle-safety-and-rewards\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\bat-actions-tablet-bat-mis-e06c9-t-puzzle-safety-and-rewards\error-context.md
+
+  4 failed
+    tests\e2e\bat-actions.spec.ts:50:41 › phone bat four actions keeps contact combat, puzzle safety and rewards 
+    tests\e2e\bat-actions.spec.ts:50:41 › phone bat missing-sheet recovery keeps contact combat, puzzle safety and rewards 
+    tests\e2e\bat-actions.spec.ts:50:41 › tablet bat four actions keeps contact combat, puzzle safety and rewards 
+    tests\e2e\bat-actions.spec.ts:50:41 › tablet bat missing-sheet recovery keeps contact combat, puzzle safety and rewards 
+
+[36m  Serving HTML report at http://localhost:9323. Press Ctrl+C to quit.[39m

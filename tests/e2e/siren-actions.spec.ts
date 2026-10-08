@@ -10,6 +10,7 @@ test.use({hasTouch:true});
 const read=(page:Page)=>page.evaluate(()=>Reflect.get(window,'__SINBAD_TEST__'));
 interface EnemyView {id:string;x:number;y:number;hp:number;state:string;visible:boolean;texture:string;frame:number;flipX:boolean;originX:number;originY:number;displayHeight:number;footOffset:number;label:string}
 interface Shot {texture:string;vx:number;vy:number;wave:boolean}
+interface Observation {sim:number;enemies:EnemyView[];projectileArt:Shot[]}
 const boss=maps.S02.spawns.find(e=>e.kind==='siren')!;
 async function resume(page:Page){
     await page.reload();await page.getByRole('button',{name:'이어하기 · S02'}).click();
@@ -42,11 +43,22 @@ for(const [device,viewport] of Object.entries({phone:{width:844,height:390},tabl
                 }
             }
         };
-        const capture=async(label:string,state?:string)=>{
-            if(state)await page.waitForFunction(({id,state})=>Reflect.get(window,'__SINBAD_TEST__')?.enemies.find((e:EnemyView)=>e.id===id)?.state===state,{id:boss.id,state});
-            const observed=await enemy();inspect(observed);
+        // Read the actor and its short-lived shots in the same simulation snapshot.
+        // Screenshot encoding can finish after the wave has already hit the player.
+        const observe=async(state?:string,shotTexture?:string,shotCount=1)=>{
+            const handle=await page.waitForFunction(({id,state,shotTexture,shotCount})=>{
+                const snapshot=Reflect.get(window,'__SINBAD_TEST__') as Observation|undefined;
+                if(!snapshot?.enemies.some(e=>e.id===id&&(!state||e.state===state)))return false;
+                if(shotTexture&&snapshot.projectileArt.filter(p=>p.texture===shotTexture).length!==shotCount)return false;
+                return snapshot;
+            },{id:boss.id,state,shotTexture,shotCount});
+            const snapshot=await handle.jsonValue() as Observation;await handle.dispose();return snapshot;
+        };
+        const capture=async(label:string,state?:string,shotTexture?:string)=>{
+            const snapshot=await observe(state,shotTexture);
+            const observed=snapshot.enemies.find(e=>e.id===boss.id)!;inspect(observed);
             const path=evidencePath(`m6-siren/${device}-${fallback?'fallback':'normal'}-${label}.png`);
-            await page.screenshot({path});screens.push(path);checks.push({label,observed,path});return observed;
+            await page.screenshot({path});screens.push(path);checks.push({label,observed,observedSim:snapshot.sim,path});return snapshot;
         };
         await moveJourney(page,boss.x-55,boss.y);await capture('shield','idle');
         const shieldHp=(await enemy()).hp;await page.keyboard.press('j');await page.waitForTimeout(550);
@@ -57,12 +69,12 @@ for(const [device,viewport] of Object.entries({phone:{width:844,height:390},tabl
         await moveJourney(page,boss.x-290,boss.y);await capture('telegraph','telegraph');
         await page.locator('#pause').click();const paused=await read(page);await page.waitForTimeout(400);
         expect((await read(page)).sim).toBe(paused.sim);expect((await read(page)).enemies).toEqual(paused.enemies);
-        await page.locator('#resume').click();await capture('attack','attack');
-        const wave=(await read(page)).projectileArt.filter((p:Shot)=>p.texture==='projectile-siren-wave');
+        await page.locator('#resume').click();const attacking=await capture('attack','attack','projectile-siren-wave');
+        const wave=attacking.projectileArt.filter(p=>p.texture==='projectile-siren-wave');
         expect(wave).toHaveLength(1);expect(wave[0].vx).toBe(-230);expect(wave[0].vy).toBe(0);
         checks.push({pattern:'wave',shots:wave});await capture('recover','recover');
-        await page.waitForFunction(()=>Reflect.get(window,'__SINBAD_TEST__')?.projectileArt.filter((p:Shot)=>p.texture==='projectile-siren-note').length===3);
-        const notes=(await read(page)).projectileArt.filter((p:Shot)=>p.texture==='projectile-siren-note');
+        const singing=await observe(undefined,'projectile-siren-note',3);
+        const notes=singing.projectileArt.filter(p=>p.texture==='projectile-siren-note');
         expect(notes.map((p:Shot)=>p.vy)).toEqual([-140,-55,35]);expect(notes.every((p:Shot)=>p.vx===-190)).toBe(true);
         checks.push({pattern:'three notes',shots:notes});
         await moveJourney(page,boss.x+160,boss.y);await expect.poll(async()=>(await enemy()).flipX).toBe(false);await capture('right');

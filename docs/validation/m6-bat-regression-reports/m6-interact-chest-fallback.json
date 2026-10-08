@@ -1,0 +1,102 @@
+{
+  "date": "2026-10-06T11:26:11.140Z",
+  "pass": true,
+  "method": "explicit checkpoint/enemy fixtures; real keyboard movement, interaction, damage, pickup, pause retry and reload; not a fresh campaign",
+  "checks": [
+    {
+      "device": "phone",
+      "fallback": true,
+      "chest": {
+        "id": "S01.medal",
+        "texture": "chest",
+        "x": 774,
+        "y": 456,
+        "width": 65.28,
+        "height": 87.04,
+        "done": false
+      },
+      "heart": {
+        "id": "S01.heart.01",
+        "large": false,
+        "active": true,
+        "texture": "heart",
+        "x": 1160,
+        "y": 567,
+        "width": 34.56,
+        "height": 46.08
+      },
+      "large": {
+        "id": "S01.heart.03",
+        "large": true,
+        "active": true,
+        "texture": "heart",
+        "x": 3930,
+        "y": 566,
+        "width": 48,
+        "height": 64
+      },
+      "paths": [
+        "docs/screenshots/m6-bat/final/m6-props/phone-fallback-chest.png",
+        "docs/screenshots/m6-bat/final/m6-props/phone-fallback-normal-heart.png",
+        "docs/screenshots/m6-bat/final/m6-props/phone-fallback-large-heart.png"
+      ],
+      "normalXp": 2,
+      "largeXp": 5,
+      "retryDuplicateXp": 0,
+      "reloadRewardIds": [
+        "S01.enemy.skeleton.01",
+        "S01.enemy.skeleton.02",
+        "S01.enemy.skeleton.03",
+        "S01.enemy.skeleton.04",
+        "S01.enemy.archer.01",
+        "S01.enemy.captain",
+        "S01.medal.reward",
+        "S01.heart.01"
+      ]
+    }
+  ],
+  "damageRecovery": {
+    "before": 94,
+    "after": 100,
+    "path": "docs/screenshots/m6-bat/final/m6-props/fallback-actual-healing.png"
+  },
+  "requested": [
+    "http://127.0.0.1:5174/assets/webtoon/prop-chest.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-heart.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-chest.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-heart.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-chest.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-heart.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-chest.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-heart.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-chest.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-heart.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-chest.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-heart.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-chest.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-heart.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-chest.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-heart.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-chest.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-heart.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-chest.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-heart.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-chest.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-heart.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-chest.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-heart.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-chest.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-heart.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-chest.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-heart.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-chest.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-heart.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-chest.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-heart.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-chest.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-heart.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-chest.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-heart.webp"
+  ],
+  "errors": []
+}

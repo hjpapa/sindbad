@@ -1,0 +1,717 @@
+{
+  "date": "2026-10-06T11:06:50.717Z",
+  "pass": true,
+  "method": "explicit stage/treasure/claimed-reward save fixtures; live respawned enemies; actual keyboard/menu movement; not a fresh campaign or physical touch test",
+  "observations": [
+    {
+      "id": "S10",
+      "sim": 2636.7166666666644,
+      "rings": [
+        {
+          "id": "S10.quest.1",
+          "kind": "quest",
+          "texture": "flightRing",
+          "x": 700,
+          "y": 360,
+          "width": 129.60000000000002,
+          "height": 172.8,
+          "visible": true,
+          "done": false
+        },
+        {
+          "id": "S10.quest.2",
+          "kind": "quest",
+          "texture": "flightRing",
+          "x": 1450,
+          "y": 210,
+          "width": 129.60000000000002,
+          "height": 172.8,
+          "visible": true,
+          "done": false
+        },
+        {
+          "id": "S10.quest.3",
+          "kind": "quest",
+          "texture": "flightRing",
+          "x": 2200,
+          "y": 390,
+          "width": 129.60000000000002,
+          "height": 172.8,
+          "visible": true,
+          "done": false
+        }
+      ],
+      "hazards": [
+        {
+          "id": "S10.gust.1",
+          "x": 1150,
+          "y": 457.39338997081023,
+          "kind": "gust",
+          "radius": 62,
+          "texture": "stormCloud",
+          "width": 94.01733824148062,
+          "height": 125.35645098864082,
+          "rotation": 0,
+          "scale": 0.9793472733487564
+        },
+        {
+          "id": "S10.gust.2",
+          "x": 1680,
+          "y": 309.6180579164962,
+          "kind": "gust",
+          "radius": 70,
+          "texture": "stormCloud",
+          "width": 87.65726320945029,
+          "height": 116.87635094593372,
+          "rotation": 0,
+          "scale": 0.9130964917651072
+        },
+        {
+          "id": "S10.gust.3",
+          "x": 2210,
+          "y": 156.09363372712184,
+          "kind": "gust",
+          "radius": 62,
+          "texture": "stormCloud",
+          "width": 92.62337699107235,
+          "height": 123.49783598809645,
+          "rotation": 0,
+          "scale": 0.9648268436570036
+        }
+      ],
+      "cachedKeys": [
+        "prop-gift",
+        "prop-heart"
+      ]
+    },
+    {
+      "id": "S10",
+      "sim": 6244.099999999997,
+      "rings": [
+        {
+          "id": "S10.quest.1",
+          "kind": "quest",
+          "texture": "flightRing",
+          "x": 700,
+          "y": 360,
+          "width": 129.60000000000002,
+          "height": 172.8,
+          "visible": false,
+          "done": true
+        },
+        {
+          "id": "S10.quest.2",
+          "kind": "quest",
+          "texture": "flightRing",
+          "x": 1450,
+          "y": 210,
+          "width": 129.60000000000002,
+          "height": 172.8,
+          "visible": true,
+          "done": false
+        },
+        {
+          "id": "S10.quest.3",
+          "kind": "quest",
+          "texture": "flightRing",
+          "x": 2200,
+          "y": 390,
+          "width": 129.60000000000002,
+          "height": 172.8,
+          "visible": true,
+          "done": false
+        }
+      ],
+      "hazards": [
+        {
+          "id": "S10.gust.1",
+          "x": 1150,
+          "y": 463.627472849479,
+          "kind": "gust",
+          "radius": 62,
+          "texture": "stormCloud",
+          "width": 90.09057196713347,
+          "height": 120.12076262284462,
+          "rotation": 0,
+          "scale": 0.9384434579909736
+        },
+        {
+          "id": "S10.gust.2",
+          "x": 1680,
+          "y": 286.0034908355246,
+          "kind": "gust",
+          "radius": 70,
+          "texture": "stormCloud",
+          "width": 89.07995498246802,
+          "height": 118.77327330995736,
+          "rotation": 0,
+          "scale": 0.9279161977340419
+        },
+        {
+          "id": "S10.gust.3",
+          "x": 2210,
+          "y": 178.12658287791217,
+          "kind": "gust",
+          "radius": 62,
+          "texture": "stormCloud",
+          "width": 94.84715740173417,
+          "height": 126.46287653564556,
+          "rotation": 0,
+          "scale": 0.987991222934731
+        }
+      ],
+      "cachedKeys": [
+        "prop-gift",
+        "prop-heart"
+      ]
+    },
+    {
+      "id": "S33",
+      "sim": 2633.5200000000004,
+      "rings": [
+        {
+          "id": "S33.quest.1",
+          "kind": "quest",
+          "texture": "flightRing",
+          "x": 700,
+          "y": 360,
+          "width": 129.60000000000002,
+          "height": 172.8,
+          "visible": true,
+          "done": false
+        },
+        {
+          "id": "S33.quest.2",
+          "kind": "quest",
+          "texture": "flightRing",
+          "x": 1075,
+          "y": 210,
+          "width": 129.60000000000002,
+          "height": 172.8,
+          "visible": true,
+          "done": false
+        },
+        {
+          "id": "S33.quest.3",
+          "kind": "quest",
+          "texture": "flightRing",
+          "x": 1450,
+          "y": 390,
+          "width": 129.60000000000002,
+          "height": 172.8,
+          "visible": true,
+          "done": false
+        },
+        {
+          "id": "S33.quest.4",
+          "kind": "quest",
+          "texture": "flightRing",
+          "x": 1825,
+          "y": 240,
+          "width": 129.60000000000002,
+          "height": 172.8,
+          "visible": true,
+          "done": false
+        },
+        {
+          "id": "S33.quest.5",
+          "kind": "quest",
+          "texture": "flightRing",
+          "x": 2200,
+          "y": 360,
+          "width": 129.60000000000002,
+          "height": 172.8,
+          "visible": true,
+          "done": false
+        }
+      ],
+      "hazards": [
+        {
+          "id": "S33.debris.1",
+          "x": 850,
+          "y": 256.8492000000001,
+          "kind": "debris",
+          "radius": 48,
+          "texture": "debris",
+          "width": 65.48342393883989,
+          "height": 87.31123191845319,
+          "rotation": 0.1095107388261436,
+          "scale": 0.6821189993629155
+        },
+        {
+          "id": "S33.debris.2",
+          "x": 1250,
+          "y": 186.8492000000001,
+          "kind": "debris",
+          "radius": 48,
+          "texture": "debris",
+          "width": 69.8618415950601,
+          "height": 93.14912212674679,
+          "rotation": -0.15678597384979476,
+          "scale": 0.7277275166152093
+        },
+        {
+          "id": "S33.debris.3",
+          "x": 1650,
+          "y": 324.8492000000001,
+          "kind": "debris",
+          "radius": 48,
+          "texture": "debris",
+          "width": 66.12006477329714,
+          "height": 88.1600863643962,
+          "rotation": 0.055207457201458254,
+          "scale": 0.6887506747218453
+        },
+        {
+          "id": "S33.debris.4",
+          "x": 2050,
+          "y": 254.8492000000001,
+          "kind": "debris",
+          "radius": 48,
+          "texture": "debris",
+          "width": 65.67273044605662,
+          "height": 87.56364059474215,
+          "rotation": 0.09878542358244147,
+          "scale": 0.6840909421464231
+        },
+        {
+          "id": "S33.debris.5",
+          "x": 2450,
+          "y": 409.8492000000001,
+          "kind": "debris",
+          "radius": 48,
+          "texture": "debris",
+          "width": 69.88447343631677,
+          "height": 93.17929791508902,
+          "rotation": -0.15899069983964154,
+          "scale": 0.727963264961633
+        }
+      ],
+      "cachedKeys": [
+        "prop-gift",
+        "prop-heart"
+      ]
+    },
+    {
+      "id": "S33",
+      "sim": 3183.92,
+      "rings": [
+        {
+          "id": "S33.quest.1",
+          "kind": "quest",
+          "texture": "flightRing",
+          "x": 700,
+          "y": 360,
+          "width": 129.60000000000002,
+          "height": 172.8,
+          "visible": true,
+          "done": false
+        },
+        {
+          "id": "S33.quest.2",
+          "kind": "quest",
+          "texture": "flightRing",
+          "x": 1075,
+          "y": 210,
+          "width": 129.60000000000002,
+          "height": 172.8,
+          "visible": true,
+          "done": false
+        },
+        {
+          "id": "S33.quest.3",
+          "kind": "quest",
+          "texture": "flightRing",
+          "x": 1450,
+          "y": 390,
+          "width": 129.60000000000002,
+          "height": 172.8,
+          "visible": true,
+          "done": false
+        },
+        {
+          "id": "S33.quest.4",
+          "kind": "quest",
+          "texture": "flightRing",
+          "x": 1825,
+          "y": 240,
+          "width": 129.60000000000002,
+          "height": 172.8,
+          "visible": true,
+          "done": false
+        },
+        {
+          "id": "S33.quest.5",
+          "kind": "quest",
+          "texture": "flightRing",
+          "x": 2200,
+          "y": 360,
+          "width": 129.60000000000002,
+          "height": 172.8,
+          "visible": true,
+          "done": false
+        }
+      ],
+      "hazards": [
+        {
+          "id": "S33.debris.1",
+          "x": 850,
+          "y": 303.6332,
+          "kind": "debris",
+          "radius": 48,
+          "texture": "debris",
+          "width": 68.73738164669912,
+          "height": 91.64984219559882,
+          "rotation": 0.15359785894134603,
+          "scale": 0.7160143921531158
+        },
+        {
+          "id": "S33.debris.2",
+          "x": 1250,
+          "y": 233.6332,
+          "kind": "debris",
+          "radius": 48,
+          "texture": "debris",
+          "width": 64.5161849539443,
+          "height": 86.02157993859241,
+          "rotation": -0.042556959763143,
+          "scale": 0.6720435932702532
+        },
+        {
+          "id": "S33.debris.3",
+          "x": 1650,
+          "y": 371.6332,
+          "kind": "debris",
+          "radius": 48,
+          "texture": "debris",
+          "width": 68.48221478787448,
+          "height": 91.30961971716597,
+          "rotation": -0.1088878286466759,
+          "scale": 0.7133564040403592
+        },
+        {
+          "id": "S33.debris.4",
+          "x": 2050,
+          "y": 301.6332,
+          "kind": "debris",
+          "radius": 48,
+          "texture": "debris",
+          "width": 68.5367295792081,
+          "height": 91.38230610561081,
+          "rotation": 0.15695371518481238,
+          "scale": 0.7139242664500844
+        },
+        {
+          "id": "S33.debris.5",
+          "x": 2450,
+          "y": 456.6332,
+          "kind": "debris",
+          "radius": 48,
+          "texture": "debris",
+          "width": 64.5134269046991,
+          "height": 86.01790253959881,
+          "rotation": -0.05600659519917528,
+          "scale": 0.6720148635906157
+        }
+      ],
+      "cachedKeys": [
+        "prop-gift",
+        "prop-heart"
+      ]
+    },
+    {
+      "id": "S10",
+      "sim": 2616.8400000000006,
+      "rings": [
+        {
+          "id": "S10.quest.1",
+          "kind": "quest",
+          "texture": "flightRing",
+          "x": 700,
+          "y": 360,
+          "width": 129.60000000000002,
+          "height": 172.8,
+          "visible": false,
+          "done": true
+        },
+        {
+          "id": "S10.quest.2",
+          "kind": "quest",
+          "texture": "flightRing",
+          "x": 1450,
+          "y": 210,
+          "width": 129.60000000000002,
+          "height": 172.8,
+          "visible": true,
+          "done": false
+        },
+        {
+          "id": "S10.quest.3",
+          "kind": "quest",
+          "texture": "flightRing",
+          "x": 2200,
+          "y": 390,
+          "width": 129.60000000000002,
+          "height": 172.8,
+          "visible": true,
+          "done": false
+        }
+      ],
+      "hazards": [
+        {
+          "id": "S10.gust.1",
+          "x": 1150,
+          "y": 456.73815208973195,
+          "kind": "gust",
+          "radius": 62,
+          "texture": "stormCloud",
+          "width": 94.25556378426211,
+          "height": 125.6740850456828,
+          "rotation": 0,
+          "scale": 0.9818287894193969
+        },
+        {
+          "id": "S10.gust.2",
+          "x": 1680,
+          "y": 310.08855779776826,
+          "kind": "gust",
+          "radius": 70,
+          "texture": "stormCloud",
+          "width": 87.77471782999531,
+          "height": 117.03295710666042,
+          "rotation": 0,
+          "scale": 0.9143199773957845
+        },
+        {
+          "id": "S10.gust.3",
+          "x": 2210,
+          "y": 156.18567537563095,
+          "kind": "gust",
+          "radius": 62,
+          "texture": "stormCloud",
+          "width": 92.24455630167773,
+          "height": 122.9927417355703,
+          "rotation": 0,
+          "scale": 0.960880794809143
+        }
+      ],
+      "cachedKeys": [
+        "prop-gift",
+        "prop-heart"
+      ]
+    }
+  ],
+  "damage": {
+    "before": 100,
+    "after": 91.6
+  },
+  "ringCoins": {
+    "before": 0,
+    "after": 25
+  },
+  "pauseSim": 5927.479999999998,
+  "saved": {
+    "schemaVersion": 1,
+    "buildVersion": "0.1.0",
+    "writtenAt": "2026-10-06T11:06:21.248Z",
+    "checkpoint": {
+      "stageId": "S33",
+      "checkpointId": "middle"
+    },
+    "totalXp": 4,
+    "coins": 25,
+    "weapons": [
+      "W01"
+    ],
+    "equippedWeapon": "W01",
+    "upgrades": {},
+    "treasures": [
+      "T01",
+      "T02",
+      "T03",
+      "T04",
+      "T05",
+      "T06",
+      "T07"
+    ],
+    "relics": [],
+    "goldenHearts": [],
+    "equippedSkill": null,
+    "clearedStageIds": [
+      "S01",
+      "S02",
+      "S03",
+      "S04",
+      "S05",
+      "S06",
+      "S07",
+      "S08",
+      "S09",
+      "S10",
+      "S11",
+      "S12",
+      "S13",
+      "S14",
+      "S15",
+      "S16",
+      "S17",
+      "S18",
+      "S19",
+      "S20",
+      "S21",
+      "S22",
+      "S23",
+      "S24",
+      "S25",
+      "S26",
+      "S27",
+      "S28",
+      "S29",
+      "S30",
+      "S31",
+      "S32"
+    ],
+    "claimedRewardIds": [
+      "S10.enemy.1",
+      "S10.enemy.2",
+      "S10.enemy.3",
+      "S10.enemy.4",
+      "S10.enemy.5",
+      "S10.enemy.6",
+      "S33.enemy.1",
+      "S33.enemy.2",
+      "S33.enemy.3",
+      "S33.enemy.4",
+      "S33.enemy.5",
+      "S10.quest.1.reward",
+      "S10.heart.1",
+      "S33.quest.1.reward",
+      "S33.heart.1"
+    ],
+    "completedObjectiveIds": [
+      "S10.enemy.1",
+      "S10.enemy.2",
+      "S10.enemy.3",
+      "S10.enemy.4",
+      "S10.enemy.5",
+      "S10.enemy.6",
+      "S33.enemy.1",
+      "S33.enemy.2",
+      "S33.enemy.3",
+      "S33.enemy.4",
+      "S33.enemy.5",
+      "S10.quest.1",
+      "S33.quest.1"
+    ],
+    "flags": [
+      "bubbleBlessing",
+      "genieCave",
+      "flightJournal",
+      "upgradeShop",
+      "mayorArrested",
+      "crewRescued",
+      "captainKey",
+      "shadowDefeated",
+      "moonBridgeKey",
+      "indiaArrival",
+      "templePermission",
+      "kuuraSealed",
+      "arianaRescued"
+    ],
+    "journalPageIds": [],
+    "settings": {
+      "difficulty": "relaxed",
+      "musicVolume": 0.18,
+      "sfxVolume": 0.3,
+      "reducedMotion": false,
+      "largeText": false,
+      "aimAssist": true
+    }
+  },
+  "requested": [
+    "http://127.0.0.1:5174/assets/webtoon/prop-flight-ring.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-gust-cloud.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-flight-ring.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-gust-cloud.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-flight-ring.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-gust-cloud.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-flight-ring.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-gust-cloud.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-flight-ring.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-gust-cloud.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-flight-ring.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-gust-cloud.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-flight-ring.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-gust-cloud.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-flight-ring.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-gust-cloud.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-flight-ring.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-gust-cloud.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-flight-ring.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-falling-debris.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-flight-ring.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-falling-debris.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-flight-ring.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-falling-debris.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-flight-ring.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-falling-debris.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-flight-ring.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-falling-debris.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-flight-ring.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-falling-debris.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-flight-ring.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-gust-cloud.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-flight-ring.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-gust-cloud.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-flight-ring.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-gust-cloud.webp"
+  ],
+  "blocked": [
+    "http://127.0.0.1:5174/assets/webtoon/prop-flight-ring.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-gust-cloud.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-flight-ring.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-gust-cloud.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-flight-ring.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-gust-cloud.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-flight-ring.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-gust-cloud.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-flight-ring.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-gust-cloud.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-flight-ring.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-gust-cloud.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-flight-ring.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-gust-cloud.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-flight-ring.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-gust-cloud.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-flight-ring.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-gust-cloud.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-flight-ring.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-falling-debris.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-flight-ring.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-falling-debris.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-flight-ring.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-falling-debris.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-flight-ring.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-falling-debris.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-flight-ring.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-falling-debris.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-flight-ring.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-falling-debris.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-flight-ring.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-gust-cloud.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-flight-ring.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-gust-cloud.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-flight-ring.webp",
+    "http://127.0.0.1:5174/assets/webtoon/prop-gust-cloud.webp"
+  ],
+  "screens": [
+    "docs/screenshots/m6-bat/final/m6-flight/tablet-fallback-S10-ring-approach.png",
+    "docs/screenshots/m6-bat/final/m6-flight/tablet-fallback-S10-ring-collected.png",
+    "docs/screenshots/m6-bat/final/m6-flight/tablet-fallback-S10-gust-contact.png",
+    "docs/screenshots/m6-bat/final/m6-flight/tablet-fallback-S33-ring-approach.png",
+    "docs/screenshots/m6-bat/final/m6-flight/tablet-fallback-S33-ring.png",
+    "docs/screenshots/m6-bat/final/m6-flight/tablet-fallback-S33-debris.png",
+    "docs/screenshots/m6-bat/final/m6-flight/tablet-fallback-S10-revisit.png"
+  ],
+  "errors": []
+}

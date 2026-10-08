@@ -1,0 +1,4 @@
+
+> sinbad-seven-treasures@0.1.0 lint
+> eslint src scripts tests
+

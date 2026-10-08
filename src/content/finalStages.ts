@@ -8,7 +8,7 @@ interface Blueprint {
 }
 
 export const finalBlueprints:Blueprint[]=[
- {id:'S09',visual:'sky',title:'로크새 둥지',steps:['둥지 봉인 ①','둥지 봉인 ②','둥지 봉인 ③'],rewards:['T03'],boss:'저주받은 로크새',npc:'어린 로크',intro:['몸이 아니라 검은 저주의 핵을 깨뜨려 주세요.','세 봉인을 풀면 로크새의 마음이 돌아올 거예요.'],outro:['하늘 깃털 T03이 바람을 기억했어요.','공중에서 ↑ 점프를 한 번 더 누르면 이단 점프를 할 수 있어요.']},
+ {id:'S09',visual:'sky',title:'로크새 둥지',steps:['목걸이 저주 핵 ①','목걸이 저주 핵 ②','목걸이 저주 핵 ③'],rewards:['T03'],boss:'저주받은 로크새',npc:'로크새의 마음',intro:['신밧드: 널 해치려는 게 아니야. 저 목걸이를 끊겠어!','수정구슬이 착지한 목걸이의 저주 핵을 드러내요. 예고를 피하고, 빛나는 핵을 한 번씩 세 번 공격하세요.','부리 찍기는 뒤로, 날개 바람은 점프로, 급강하는 표시된 자리 밖으로 피할 수 있어요.'],outro:['지니: 친구가 된 날개는 억지로 묶은 날개보다 강하지.','로크새가 스스로 곁에 머물며 로크의 깃털 T03을 건넸어요.','공중에서 ↑ 점프를 한 번 더 누르면 이단 점프, 떨어질 때 점프를 누르고 있으면 활공해요. 지정 둥지에서는 함께 비행해요.']},
  {id:'S10',visual:'sky',mode:'flight',title:'구름 고리',steps:['구름 고리 ①','구름 고리 ②','구름 고리 ③'],flags:['flightJournal'],npc:'바람 안내자',intro:['신밧드: 좋아, 이번에는 네가 선장이야!','↑로 상승, ↓로 하강해요. 선택 고리를 통과하면 금화를 얻고, 오른쪽 착륙장으로 가면 돼요.','공중 연은 피하거나 Space 날개 공격으로 저주를 풀 수 있어요.'],outro:['첫 비행 기록을 항해 일지에 남겼어요.','구름 위에서 찾은 길은 다음 귀환 항로가 되었어요.']},
  {id:'S11',visual:'volcano',title:'화산 능선',steps:['반사석 ①','반사석 ②','반사석 ③','상승 기류'],rewards:['W04'],optional:'G03',boss:'용암 수호자',npc:'불꽃 광부',intro:['반사석 세 개로 용암빛을 돌려 주세요.','상승 기류를 타면 수호자의 저주 핵에 닿을 수 있어요.'],outro:['태양 활 W04가 깨어났어요. 멀리 있는 표적을 안전하게 맞힐 수 있어요.']},
  {id:'S12',visual:'volcano',title:'독 안개의 용',steps:['독 분출구 ①','독 분출구 ②','바람 정화 장치'],rewards:['R03'],boss:'독 안개의 용',npc:'산길 약초사',intro:['분출구를 닫아 독 안개부터 걷어 주세요.','용도 저주에 사로잡혔어요. 빛으로 돌려보내요.'],outro:['독을 줄이는 바람 부적 R03을 얻었어요.']},
@@ -88,6 +88,12 @@ const makeMap=(b:Blueprint,index:number):MapDef=>{
   ? Array.from({length:flightEnemyCount},(_,i)=>({id:`${b.id}.enemy.${i+1}`,x:900+i*((width-1450)/(flightEnemyCount-1)),y:[300,440,220,370,250,420][i],kind:'kite' as const,actionArt:'kite' as const,hp:26+Math.floor(index/5)}))
   : b.mode==='peace'?[]:[0,1,2].map(i=>({id:`${b.id}.enemy.${i+1}`,x:800+i*(width-1500)/2,y:550,kind:i===2&&b.boss?'boss':b.visual==='jungle'?'beast':'bandit',hp:i===2&&b.boss?150:40+index}));
  if(b.id==='S16')spawns.splice(0); // Protected palace, no boss before swimming.
+ if(b.id==='S09'){
+   spawns.splice(0,2);spawns[0].hp=3;
+   // Keep the old objective IDs for saved prerequisites. They are now records
+   // of actual necklace strikes, never interactable channel devices.
+   stepObjects.forEach(object=>{object.kind='rocCore';object.x=spawns[0].x;object.mechanic=undefined;object.requiresItems=['T02'];object.label=object.label.replace(' · E','');});
+ }
  if(b.boss&&spawns.length)needs.push(spawns.at(-1)!.id);
  const bossTextures:Record<string,string>={S09:'roc',S12:'dragon',S18:'pirateCaptain',S19:'kuura-webtoon',S21:'snake',S22:'tiger',S24:'stoneGiant',S31:'kuura-webtoon'};
  for(const spawn of spawns)if(spawn.kind==='boss'){spawn.name=b.boss;spawn.texture=bossTextures[b.id];}

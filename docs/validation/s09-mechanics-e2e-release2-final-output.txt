@@ -1,0 +1,133 @@
+
+> sinbad-seven-treasures@0.1.0 test:e2e
+> playwright test tests/e2e/roc-mechanics.spec.ts tests/e2e/roc-actions.spec.ts tests/e2e/m3-opening.spec.ts tests/e2e/complete-journey.spec.ts tests/e2e/controls-ui.spec.ts tests/e2e/mobile-abilities.spec.ts --reporter=list,json,html
+
+
+Running 12 tests using 1 worker
+
+(node:52124) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:52124) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+JOURNEY S01 cleared; 1/36
+JOURNEY S02 cleared; 2/36
+JOURNEY S03 cleared; 3/36
+JOURNEY S04 cleared; 4/36
+JOURNEY S05 cleared; 5/36
+JOURNEY S06 cleared; 6/36
+JOURNEY S07 cleared; 7/36
+JOURNEY S08 cleared; 8/36
+JOURNEY S09 cleared; 9/36
+JOURNEY S10 cleared; 10/36
+JOURNEY S11 cleared; 11/36
+JOURNEY S12 cleared; 12/36
+JOURNEY S13 cleared; 13/36
+JOURNEY S14 cleared; 14/36
+JOURNEY S15 cleared; 15/36
+JOURNEY S16 cleared; 16/36
+JOURNEY S17 cleared; 17/36
+JOURNEY S18 cleared; 18/36
+JOURNEY S19 cleared; 19/36
+JOURNEY S20 cleared; 20/36
+JOURNEY S21 cleared; 21/36
+JOURNEY S22 cleared; 22/36
+JOURNEY S23 cleared; 23/36
+JOURNEY S24 cleared; 24/36
+JOURNEY S25 cleared; 25/36
+JOURNEY S26 cleared; 26/36
+JOURNEY S27 cleared; 27/36
+JOURNEY S28 cleared; 28/36
+JOURNEY S29 cleared; 29/36
+JOURNEY S30 cleared; 30/36
+JOURNEY S31 cleared; 31/36
+JOURNEY S32 cleared; 32/36
+JOURNEY S33 cleared; 33/36
+JOURNEY S34 cleared; 34/36
+JOURNEY S35 cleared; 35/36
+JOURNEY S36 cleared; 36/36
+  ok  1 tests\e2e\complete-journey.spec.ts:12:1 › new game completes all 36 stages using real controls and no injected save (13.7m)
+(node:3688) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:3688) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  2 tests\e2e\controls-ui.spec.ts:4:1 › simple controls jump, smart action attacks, monster fades, and phone UI fits (7.7s)
+  x   3 tests\e2e\m3-opening.spec.ts:62:1 › S09-S12 continuous route grants flight, W04 and R03 with save-safe bosses (13.5s)
+(node:52480) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:52480) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  4 tests\e2e\mobile-abilities.spec.ts:16:1 › phone can descend, cast its selected treasure, and open S26 bridge using action (7.6s)
+  ok  5 tests\e2e\roc-actions.spec.ts:61:41 › phone roc six actions boss, saddle and return flight (1.5m)
+  ok  6 tests\e2e\roc-actions.spec.ts:61:41 › phone roc missing-sheet recovery boss, saddle and return flight (1.4m)
+  ok  7 tests\e2e\roc-actions.spec.ts:61:41 › tablet roc six actions boss, saddle and return flight (1.5m)
+  ok  8 tests\e2e\roc-actions.spec.ts:61:41 › tablet roc missing-sheet recovery boss, saddle and return flight (1.4m)
+SHOT peck-warning 161ms
+SHOT core-open 167ms
+SHOT one-core-one-landing 166ms
+WIND INPUT {"x":2234.1111111111104,"y":546,"grounded":true,"vx":0,"vy":0,"hp":68,"maxHp":100,"bodyWidth":42,"bodyHeight":84}
+WIND AIR {"x":2234.1111111111104,"y":425.25,"grounded":false,"vx":0,"vy":-190,"hp":68,"maxHp":100,"bodyWidth":42,"bodyHeight":84}
+SHOT wind-jump-safe 158ms
+SHOT dive-warning 157ms
+SHOT dive-safe 155ms
+SHOT freed 165ms
+SHOT alliance-dialogue 143ms
+SHOT glide-held 165ms
+SHOT glide-release 168ms
+SHOT double-jump 179ms
+  ok  9 tests\e2e\roc-mechanics.spec.ts:112:3 › phone S09 three distinct avoidable patterns, three cores and feather glide (50.5s)
+SHOT peck-warning 259ms
+SHOT core-open 281ms
+SHOT one-core-one-landing 252ms
+WIND INPUT {"x":2229.1111111111104,"y":546,"grounded":true,"vx":0,"vy":0,"hp":68,"maxHp":100,"bodyWidth":42,"bodyHeight":84}
+WIND AIR {"x":2229.1111111111104,"y":425.25,"grounded":false,"vx":0,"vy":-190,"hp":68,"maxHp":100,"bodyWidth":42,"bodyHeight":84}
+SHOT wind-jump-safe 283ms
+SHOT dive-warning 262ms
+SHOT dive-safe 280ms
+SHOT freed 276ms
+SHOT alliance-dialogue 277ms
+SHOT glide-held 268ms
+SHOT glide-release 277ms
+SHOT double-jump 281ms
+  ok 10 tests\e2e\roc-mechanics.spec.ts:112:3 › tablet S09 three distinct avoidable patterns, three cores and feather glide (51.5s)
+SHOT core-one-saved 324ms
+SHOT death-checkpoint 276ms
+SHOT retry-alliance 280ms
+  ok 11 tests\e2e\roc-mechanics.spec.ts:250:1 › partial cores survive death and reload; legacy channels cannot bypass combat (1.3m)
+SHOT missing-orb 263ms
+SHOT no-feather-fall 283ms
+SHOT legacy-alliance 278ms
+  ok 12 tests\e2e\roc-mechanics.spec.ts:309:1 › missing orb cannot expose a core; feather is needed for glide; old victory remains valid (25.4s)
+
+
+  1) tests\e2e\m3-opening.spec.ts:62:1 › S09-S12 continuous route grants flight, W04 and R03 with save-safe bosses 
+
+    Error: objective S09.reward did not activate
+
+       9 |  for(;;){const state=await read(page);if(state.player&&Math.abs(state.player.x-x)<18)break;if(Date.now()>end)throw Error(`cannot reach ${x}: ${JSON.stringify(state)}`);if(!state.player){await page.waitForTimeout(50);continue;}const key=state.player.x<x?'d':'a';await page.keyboard.up(key==='d'?'a':'d');await page.keyboard.down(key);await page.waitForTimeout(55);}await page.keyboard.up('a');await page.keyboard.up('d');
+      10 | }
+    > 11 | async function objective(page:Page,x:number,id:string){await move(page,x);for(let attempt=0;attempt<16;attempt++){await page.keyboard.press('e');await page.waitForTimeout(250);if((await read(page)).save.completedObjectiveIds.includes(id))return;}throw Error(`objective ${id} did not activate`);}
+         |                                                                                                                                                                                                                                                             ^
+      12 | async function fight(page:Page,id:string){
+      13 |  for(let hit=0;hit<45;hit++){
+      14 |   const state=await read(page);if(state.save.completedObjectiveIds.includes(id))return;
+        at objective (C:\code\code10(sindbad)\tests\e2e\m3-opening.spec.ts:11:253)
+        at gift (C:\code\code10(sindbad)\tests\e2e\m3-opening.spec.ts:21:52)
+        at C:\code\code10(sindbad)\tests\e2e\m3-opening.spec.ts:29:30
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\m3-opening-S09-S12-continu-2fe28-d-R03-with-save-safe-bosses\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\m3-opening-S09-S12-continu-2fe28-d-R03-with-save-safe-bosses\error-context.md
+
+  Slow test file: tests\e2e\complete-journey.spec.ts (13.7m)
+  Slow test file: tests\e2e\roc-actions.spec.ts (5.8m)
+  Consider running tests from slow files in parallel. See: https://playwright.dev/docs/test-parallel
+  1 failed
+    tests\e2e\m3-opening.spec.ts:62:1 › S09-S12 continuous route grants flight, W04 and R03 with save-safe bosses 
+  11 passed (23.6m)
+
+To open last HTML report run:
+[36m[39m
+[36m  npx playwright show-report[39m
+[36m[39m

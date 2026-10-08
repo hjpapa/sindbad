@@ -1,0 +1,568 @@
+{
+  "config": {
+    "configFile": "C:\\code\\code10(sindbad)\\playwright.config.ts",
+    "rootDir": "C:/code/code10(sindbad)/tests/e2e",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": "C:\\code\\code10(sindbad)\\tests\\e2e\\server.setup.ts",
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ],
+      [
+        "html"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "C:/code/code10(sindbad)/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "C:/code/code10(sindbad)/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 240000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.55.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "spirit-actions.spec.ts",
+      "file": "spirit-actions.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "phone spirits four actions in storm, flame, waves and final tower",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 720000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 152621,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 7
+                    },
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 131
+                    },
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 122
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 904
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 8
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 6
+                    },
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 120
+                    },
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 125
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 899
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 15
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 9
+                    },
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 140
+                    },
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 155
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 938
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 8
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 18
+                    },
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 125
+                    },
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 130
+                    },
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 123
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 910
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 8
+                    }
+                  ],
+                  "startTime": "2026-10-06T12:21:26.157Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "10ee9c465ce791764b45-5c0f5cfe11f2f9474e33",
+          "file": "spirit-actions.spec.ts",
+          "line": 54,
+          "column": 41
+        },
+        {
+          "title": "phone spirits missing-sheet recovery in storm, flame, waves and final tower",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 720000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 143822,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 19
+                    },
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 133
+                    },
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 125
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 394
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 18
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 17
+                    },
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 135
+                    },
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 167
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 147
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 11
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 27
+                    },
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 142
+                    },
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 132
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 417
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 15
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 15
+                    },
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 135
+                    },
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 148
+                    },
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 133
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 430
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 33
+                    }
+                  ],
+                  "startTime": "2026-10-06T12:23:59.648Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "10ee9c465ce791764b45-f61c5c55b4dec26cd0ef",
+          "file": "spirit-actions.spec.ts",
+          "line": 54,
+          "column": 41
+        },
+        {
+          "title": "tablet spirits four actions in storm, flame, waves and final tower",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 720000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 123587,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n    at C:\\code\\code10(sindbad)\\tests\\e2e\\spirit-actions.spec.ts:70:34",
+                    "location": {
+                      "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\spirit-actions.spec.ts",
+                      "column": 34,
+                      "line": 70
+                    },
+                    "snippet": "  68 |             expect((await read(page)).sim).toBe(paused.sim);expect((await read(page)).enemies).toEqual(paused.enemies);\n  69 |             const hpBefore=(await read(page)).player.hp;await page.locator('#resume').click();const attack=await capture('attack');\n> 70 |             expect(attack.flipX).toBe(true);expect(attack.y).toBe(def.y);\n     |                                  ^\n  71 |             await capture('recover');const hpAtFirstRecovery=(await read(page)).player.hp;\n  72 |             // An earlier hit can leave the hero invulnerable for this cycle.\n  73 |             // Observe subsequent real cycles without changing the damage rule;"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\spirit-actions.spec.ts",
+                        "column": 34,
+                        "line": 70
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n\n  68 |             expect((await read(page)).sim).toBe(paused.sim);expect((await read(page)).enemies).toEqual(paused.enemies);\n  69 |             const hpBefore=(await read(page)).player.hp;await page.locator('#resume').click();const attack=await capture('attack');\n> 70 |             expect(attack.flipX).toBe(true);expect(attack.y).toBe(def.y);\n     |                                  ^\n  71 |             await capture('recover');const hpAtFirstRecovery=(await read(page)).player.hp;\n  72 |             // An earlier hit can leave the hero invulnerable for this cycle.\n  73 |             // Observe subsequent real cycles without changing the damage rule;\n    at C:\\code\\code10(sindbad)\\tests\\e2e\\spirit-actions.spec.ts:70:34"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 10
+                    },
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 134
+                    },
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 132
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 26
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 9
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 10
+                    },
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 135
+                    },
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 147
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 12
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 22
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 10
+                    },
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 152
+                    },
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 145
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 18
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 14
+                    }
+                  ],
+                  "startTime": "2026-10-06T12:26:23.524Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\code\\code10(sindbad)\\test-results\\spirit-actions-tablet-spir-4cf2f-flame-waves-and-final-tower\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\code\\code10(sindbad)\\test-results\\spirit-actions-tablet-spir-4cf2f-flame-waves-and-final-tower\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\spirit-actions.spec.ts",
+                    "column": 34,
+                    "line": 70
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "10ee9c465ce791764b45-b1d49aa47d709f8c8442",
+          "file": "spirit-actions.spec.ts",
+          "line": 54,
+          "column": 41
+        },
+        {
+          "title": "tablet spirits missing-sheet recovery in storm, flame, waves and final tower",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 720000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 144449,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 16
+                    },
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 128
+                    },
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 174
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 15
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 7
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 9
+                    },
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 129
+                    },
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 139
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 9
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 15
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 10
+                    },
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 125
+                    },
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 131
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 19
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 9
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 13
+                    },
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 145
+                    },
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 140
+                    },
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 116
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 7
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 9
+                    }
+                  ],
+                  "startTime": "2026-10-06T12:28:30.090Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "10ee9c465ce791764b45-6f3c20724e4216bfef5b",
+          "file": "spirit-actions.spec.ts",
+          "line": 54,
+          "column": 41
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-06T12:21:22.906Z",
+    "duration": 576361.252,
+    "expected": 3,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

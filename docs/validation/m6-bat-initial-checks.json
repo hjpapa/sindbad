@@ -1,0 +1,58 @@
+[
+  {
+    "command": "python scripts/optimize-webtoon.py",
+    "started": "2026-10-06T10:33:24.945490+00:00",
+    "exitCode": 0,
+    "seconds": 29.69,
+    "output": "docs/validation/m6-bat-initial-check-1.txt"
+  },
+  {
+    "command": "python scripts/audit-webtoon.py",
+    "started": "2026-10-06T10:33:54.637074+00:00",
+    "exitCode": 0,
+    "seconds": 40.56,
+    "output": "docs/validation/m6-bat-initial-check-2.txt"
+  },
+  {
+    "command": "npm run typecheck",
+    "started": "2026-10-06T10:34:35.196632+00:00",
+    "exitCode": 0,
+    "seconds": 19.91,
+    "output": "docs/validation/m6-bat-initial-check-3.txt"
+  },
+  {
+    "command": "npm run lint",
+    "started": "2026-10-06T10:34:55.114929+00:00",
+    "exitCode": 0,
+    "seconds": 43.39,
+    "output": "docs/validation/m6-bat-initial-check-4.txt"
+  },
+  {
+    "command": "npm run test",
+    "started": "2026-10-06T10:35:38.515912+00:00",
+    "exitCode": 0,
+    "seconds": 18.91,
+    "output": "docs/validation/m6-bat-initial-check-5.txt"
+  },
+  {
+    "command": "npm run validate:content",
+    "started": "2026-10-06T10:35:57.416719+00:00",
+    "exitCode": 0,
+    "seconds": 6.48,
+    "output": "docs/validation/m6-bat-initial-check-6.txt"
+  },
+  {
+    "command": "npm run build",
+    "started": "2026-10-06T10:36:03.906902+00:00",
+    "exitCode": 0,
+    "seconds": 45.56,
+    "output": "docs/validation/m6-bat-initial-check-7.txt"
+  },
+  {
+    "command": "npx tsx scripts/check-art-budget.ts",
+    "started": "2026-10-06T10:36:49.471766+00:00",
+    "exitCode": 0,
+    "seconds": 8.05,
+    "output": "docs/validation/m6-bat-initial-check-8.txt"
+  }
+]

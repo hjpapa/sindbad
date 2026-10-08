@@ -1,0 +1,115 @@
+import {test,expect,type Page} from '@playwright/test';
+import {mkdirSync,writeFileSync} from 'node:fs';
+import {freshSave,type Save} from '../../src/core/state';
+import {SAVE_KEY} from '../../src/core/save';
+import {maps} from '../../src/content/maps';
+import bat from '../../src/content/bat-actions.generated.json' with {type:'json'};
+import {evidencePath} from './art-evidence';
+import {moveJourney} from './journey-bot';
+
+test.use({hasTouch:true});
+const read=(page:Page)=>page.evaluate(()=>Reflect.get(window,'__SINBAD_TEST__'));
+interface EnemyView {id:string;x:number;y:number;hp:number;state:string;visible:boolean;texture:string;frame:number;flipX:boolean;originX:number;originY:number;displayHeight:number;footOffset?:number;label:string}
+const fixture=(reducedMotion:boolean)=>{
+    const save=freshSave();save.checkpoint={stageId:'S08',checkpointId:'start'};
+    save.clearedStageIds=Array.from({length:7},(_,i)=>`S${String(i+1).padStart(2,'0')}`);
+    save.totalXp=5000;save.treasures=['T01'];save.flags=['bubbleBlessing','genieCave'];
+    save.settings.reducedMotion=reducedMotion;save.settings.aimAssist=false;return save;
+};
+async function resume(page:Page){
+    await page.reload();await page.getByRole('button',{name:'이어하기 · S08'}).click();
+    await page.waitForFunction(()=>Reflect.get(window,'__SINBAD_TEST__')?.stage==='S08');await page.waitForTimeout(2600);
+}
+for(const [device,viewport] of Object.entries({phone:{width:844,height:390},tablet:{width:1180,height:820}})){
+    for(const fallback of [false,true])test(`${device} bat ${fallback?'missing-sheet recovery':'four actions'} keeps contact combat, puzzle safety and rewards`,async({page})=>{
+        test.setTimeout(4*60*1000);await page.setViewportSize(viewport);
+        const errors:string[]=[],requests:string[]=[],blocked:string[]=[],checks:unknown[]=[],screens:string[]=[];
+        page.on('pageerror',error=>errors.push(error.message));
+        page.on('console',message=>{if(message.type()==='error'&&!(fallback&&message.text().includes('ERR_FAILED')))errors.push(message.text());});
+        page.on('request',request=>{if(/(?:bat-actions|enemy-actions)\.webp$/.test(request.url()))requests.push(request.url());});
+        page.on('response',response=>{if(response.status()>=400)errors.push(`${response.status()} ${response.url()}`);});
+        if(fallback)await page.route('**/assets/webtoon/bat-actions.webp',route=>{blocked.push(route.request().url());return route.abort();});
+        await page.goto('/');mkdirSync(evidencePath('m6-bat'),{recursive:true});
+        // Stage/level/item fixture isolates art. Movement, timers, contact damage,
+        // touch attack, rewards and checkpoint reload use the actual game.
+        await page.evaluate(({key,save})=>localStorage.setItem(key,JSON.stringify(save)),{key:SAVE_KEY,save:fixture(device==='tablet')});
+        await resume(page);const def=maps.S08.spawns[0];
+        const enemy=async()=>(await read(page)).enemies.find((e:EnemyView)=>e.id===def.id) as EnemyView;
+        const inspect=(e:EnemyView)=>{
+            expect(e.texture).toBe(fallback?'bat':'bat-actions');
+            if(!fallback){
+                const pose=e.state==='telegraph'?1:e.state==='attack'?2:e.state==='defeated'?3:0;
+                expect(e.frame).toBe(pose);const centre=bat.frames[pose].centre;
+                expect(e.originX).toBeCloseTo(e.flipX?1-centre[0]/512:centre[0]/512,8);
+                expect(e.originY).toBeCloseTo(centre[1]/512,8);
+                const size=84*512/bat.idleHeight;
+                if(e.state==='defeated'){
+                    expect(e.displayHeight).toBeGreaterThanOrEqual(size-1e-6);expect(e.displayHeight).toBeLessThanOrEqual(size*1.25+1e-6);
+                }else expect(e.displayHeight).toBeCloseTo(size,6);
+                expect(e.footOffset).toBe(64);
+            }
+        };
+        const shot=async(label:string,observed:unknown)=>{
+            const path=evidencePath(`m6-bat/${device}-${fallback?'fallback':'normal'}-${label}.png`);
+            await page.screenshot({path});screens.push(path);checks.push({label,observed,path});
+        };
+        const capture=async(state:string)=>{
+            const handle=await page.waitForFunction(({id,state})=>{
+                const e=Reflect.get(window,'__SINBAD_TEST__')?.enemies.find((e:EnemyView)=>e.id===id);return e?.state===state?e:false;
+            },{id:def.id,state});
+            const observed=await handle.jsonValue() as EnemyView;await handle.dispose();inspect(observed);await shot(state,observed);return observed;
+        };
+        expect((await read(page)).enemies).toHaveLength(4);await capture('idle');
+        await moveJourney(page,(await enemy()).x-80,550);await capture('telegraph');
+        await page.locator('#pause').click();const paused=await read(page);await page.waitForTimeout(400);
+        expect((await read(page)).sim).toBe(paused.sim);expect((await read(page)).enemies).toEqual(paused.enemies);
+        const hpBefore=(await read(page)).player.hp;await page.locator('#resume').click();const attack=await capture('attack');
+        expect(attack.flipX).toBe(true);expect(attack.y).toBe(def.y);
+        await capture('recover');const hpAfter=(await read(page)).player.hp;
+        expect(hpAfter).toBeLessThan(hpBefore);expect((await read(page)).projectiles).toBe(0);checks.push({contactDamage:{hpBefore,hpAfter}});
+        await moveJourney(page,(await enemy()).x+160,550);
+        await expect.poll(async()=>(await enemy()).flipX).toBe(false);inspect(await enemy());await shot('right',await enemy());
+        await moveJourney(page,(await enemy()).x+55,550);
+        await page.keyboard.down('a');await page.waitForTimeout(30);await page.keyboard.up('a');
+        const before=(await read(page)).save as Save;const beforeHp=(await enemy()).hp;
+        await page.getByRole('button',{name:'터치 행동',exact:true}).tap();
+        await expect.poll(async()=>(await enemy()).hp).toBeLessThan(beforeHp);
+        if((await enemy()).hp>0){
+            await page.waitForTimeout(440);await moveJourney(page,(await enemy()).x+55,550);
+            await page.keyboard.down('a');await page.waitForTimeout(30);await page.keyboard.up('a');await page.keyboard.press('j');
+        }
+        await capture('defeated');expect((await enemy()).label).toBe('저주가 풀렸어!');
+        await expect.poll(async()=>(await enemy()).visible).toBe(false);
+        const rewarded=(await read(page)).save as Save;
+        expect(rewarded.claimedRewardIds.filter(id=>id===def.id)).toHaveLength(1);
+        expect(rewarded.totalXp-before.totalXp).toBe(6);expect(rewarded.coins-before.coins).toBe(3);
+        await resume(page);const restored=(await read(page)).save as Save;
+        expect(restored.claimedRewardIds).toEqual(rewarded.claimedRewardIds);expect(restored.totalXp).toBe(rewarded.totalXp);expect(restored.coins).toBe(rewarded.coins);
+        await moveJourney(page,(await enemy()).x+55,550);await page.keyboard.down('a');await page.waitForTimeout(30);await page.keyboard.up('a');
+        for(let hit=0;hit<3&&(await enemy()).hp>0;hit++){
+            await moveJourney(page,(await enemy()).x+55,550);await page.keyboard.down('a');await page.waitForTimeout(30);await page.keyboard.up('a');
+            await page.keyboard.press('j');await page.waitForTimeout(440);
+        }
+        expect((await enemy()).hp).toBe(0);
+        expect((await read(page)).save.coins).toBe(rewarded.coins);expect((await read(page)).save.totalXp).toBe(rewarded.totalXp);
+        expect((await read(page)).save.claimedRewardIds).toEqual(rewarded.claimedRewardIds);
+        // Checkpoints save automatically on grounded proximity, rather than
+        // becoming a completed interaction objective.
+        await moveJourney(page,1435,550);
+        await expect.poll(async()=>(await read(page)).save.checkpoint.checkpointId).toBe('puzzle');
+        const safe=await read(page);expect(safe.puzzleSafe).toBe(true);expect(safe.save.checkpoint.checkpointId).toBe('puzzle');
+        expect(safe.save.treasures).not.toContain('T02');await page.waitForTimeout(3000);const safeAfter=await read(page);
+        expect(safeAfter.player.hp).toBe(safe.player.hp);expect(safeAfter.projectiles).toBe(0);
+        for(const e of safeAfter.enemies.filter((e:EnemyView)=>e.hp>0)){expect(e.state).toBe('idle');inspect(e);}
+        await shot('safe-puzzle',safeAfter);await resume(page);const checkpoint=await read(page);
+        expect(checkpoint.player.x).toBeCloseTo(1435,0);expect(checkpoint.puzzleSafe).toBe(true);
+        expect(checkpoint.save.claimedRewardIds).toEqual(safeAfter.save.claimedRewardIds);expect(checkpoint.save.treasures).toEqual(safeAfter.save.treasures);
+        await shot('checkpoint-resume',checkpoint);checks.push({before,rewarded,restored,safe,checkpoint});
+        await page.locator('#bag').click();await page.locator('[data-stage="S01"]').click();
+        await page.waitForFunction(()=>Reflect.get(window,'__SINBAD_TEST__')?.stage==='S01');
+        expect((await read(page)).cachedActionKeys).toEqual(['enemy-actions']);
+        expect(requests.filter(url=>url.endsWith('bat-actions.webp'))).toHaveLength(3);
+        if(fallback)expect(blocked).toHaveLength(3);expect(errors).toEqual([]);
+        writeFileSync(evidencePath(`m6-bat/${device}-${fallback?'fallback':'normal'}.json`),JSON.stringify({device,viewport,fallback,fixture:true,checks,screens,requests,blocked,errors,artStatus:'ART_DRAFT'},null,2));
+    });
+}

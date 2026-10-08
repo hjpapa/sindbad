@@ -1,0 +1,138 @@
+{
+  "key": "roc",
+  "texture": "roc-actions",
+  "cellSize": 512,
+  "columns": 3,
+  "rows": 2,
+  "idleHeight": 322,
+  "flightReferenceWidth": 400,
+  "bossVisibleHeight": 145,
+  "bossBodyWidth": 220,
+  "bossFootOffset": 50.75,
+  "frames": [
+    {
+      "frame": 0,
+      "pose": "idle",
+      "bounds": [
+        68,
+        118,
+        444,
+        440
+      ],
+      "baseline": 439,
+      "centre": [
+        325,
+        312
+      ],
+      "seat": [
+        294,
+        245
+      ],
+      "seatProjected": false
+    },
+    {
+      "frame": 1,
+      "pose": "telegraph",
+      "bounds": [
+        52,
+        58,
+        453,
+        441
+      ],
+      "baseline": 439,
+      "centre": [
+        330,
+        360
+      ],
+      "seat": [
+        277,
+        298
+      ],
+      "seatProjected": true
+    },
+    {
+      "frame": 2,
+      "pose": "attack",
+      "bounds": [
+        36,
+        177,
+        462,
+        439
+      ],
+      "baseline": 343,
+      "centre": [
+        294,
+        321
+      ],
+      "seat": [
+        224,
+        240
+      ],
+      "seatProjected": false
+    },
+    {
+      "frame": 3,
+      "pose": "defeated",
+      "bounds": [
+        69,
+        96,
+        464,
+        413
+      ],
+      "baseline": 411,
+      "centre": [
+        330,
+        286
+      ],
+      "seat": [
+        294,
+        213
+      ],
+      "seatProjected": false
+    },
+    {
+      "frame": 4,
+      "pose": "fly-up",
+      "bounds": [
+        53,
+        33,
+        453,
+        410
+      ],
+      "baseline": 385,
+      "centre": [
+        325,
+        303
+      ],
+      "seat": [
+        300,
+        268
+      ],
+      "seatProjected": true
+    },
+    {
+      "frame": 5,
+      "pose": "fly-down",
+      "bounds": [
+        33,
+        147,
+        460,
+        412
+      ],
+      "baseline": 299,
+      "centre": [
+        325,
+        286
+      ],
+      "seat": [
+        258,
+        203
+      ],
+      "seatProjected": false
+    }
+  ],
+  "source": "art-source/webtoon/generated/roc-m6/roc-actions-01.png",
+  "sourceSha256": "9de059aa12536ff282043340c75292e01b454de59a849f859b0a1e80bc240832",
+  "method": "Entire native 512px cells uniformly resized448 and inset32. Exact lossless RGBA; alpha>16 bounds. Torso centres, lowest visible toe baselines and saddle seats measured manually; raised-wing seats projected from visible saddle rim. Baseline is toe height, not the lower wing/tail bound in flight. No repaint or silhouette crop. Boss legacy target/145px resting height/50.75px foot offset and 220px logical width preserved. Flight rider feet anchor the seat through frame changes and mirroring.",
+  "artStatus": "ART_DRAFT"
+}

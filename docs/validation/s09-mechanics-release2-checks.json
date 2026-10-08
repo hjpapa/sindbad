@@ -1,0 +1,23 @@
+[
+  {
+    "command": "npm run typecheck",
+    "exitCode": 0,
+    "started": "2026-10-08T10:39:29.452532+00:00",
+    "seconds": 3.422,
+    "log": "docs/validation/s09-mechanics-release2-check-1.txt"
+  },
+  {
+    "command": "npm run lint",
+    "exitCode": 0,
+    "started": "2026-10-08T10:39:32.882894+00:00",
+    "seconds": 3.547,
+    "log": "docs/validation/s09-mechanics-release2-check-2.txt"
+  },
+  {
+    "command": "npm run test",
+    "exitCode": 1,
+    "started": "2026-10-08T10:39:36.434525+00:00",
+    "seconds": 3.968,
+    "log": "docs/validation/s09-mechanics-release2-check-3.txt"
+  }
+]

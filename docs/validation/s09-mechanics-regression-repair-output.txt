@@ -1,0 +1,19 @@
+
+> sinbad-seven-treasures@0.1.0 test:e2e
+> playwright test tests/e2e/m3-opening.spec.ts --reporter=list,json,html
+
+
+Running 1 test using 1 worker
+
+(node:55540) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:55540) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 tests\e2e\m3-opening.spec.ts:62:1 › S09-S12 continuous route grants flight, W04 and R03 with save-safe bosses (1.5m)
+
+  1 passed (1.5m)
+
+To open last HTML report run:
+[36m[39m
+[36m  npx playwright show-report[39m
+[36m[39m

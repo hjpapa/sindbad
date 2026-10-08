@@ -1,0 +1,377 @@
+{
+  "config": {
+    "configFile": "C:\\code\\code10(sindbad)\\playwright.config.ts",
+    "rootDir": "C:/code/code10(sindbad)/tests/e2e",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": "C:\\code\\code10(sindbad)\\tests\\e2e\\server.setup.ts",
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ],
+      [
+        "html"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "C:/code/code10(sindbad)/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "C:/code/code10(sindbad)/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 240000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.55.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "bat-actions.spec.ts",
+      "file": "bat-actions.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "phone bat four actions keeps contact combat, puzzle safety and rewards",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 149558,
+                  "error": {
+                    "message": "TimeoutError: page.waitForFunction: Timeout 10000ms exceeded.",
+                    "stack": "TimeoutError: page.waitForFunction: Timeout 10000ms exceeded.\n    at capture (C:\\code\\code10(sindbad)\\tests\\e2e\\bat-actions.spec.ts:57:37)\n    at C:\\code\\code10(sindbad)\\tests\\e2e\\bat-actions.spec.ts:75:15",
+                    "location": {
+                      "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\bat-actions.spec.ts",
+                      "column": 37,
+                      "line": 57
+                    },
+                    "snippet": "  55 |         };\n  56 |         const capture=async(state:string)=>{\n> 57 |             const handle=await page.waitForFunction(({id,state})=>{\n     |                                     ^\n  58 |                 const e=Reflect.get(window,'__SINBAD_TEST__')?.enemies.find((e:EnemyView)=>e.id===id);return e?.state===state?e:false;\n  59 |             },{id:def.id,state});\n  60 |             const observed=await handle.jsonValue() as EnemyView;await handle.dispose();inspect(observed);await shot(state,observed);return observed;"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\bat-actions.spec.ts",
+                        "column": 37,
+                        "line": 57
+                      },
+                      "message": "TimeoutError: page.waitForFunction: Timeout 10000ms exceeded.\n\n  55 |         };\n  56 |         const capture=async(state:string)=>{\n> 57 |             const handle=await page.waitForFunction(({id,state})=>{\n     |                                     ^\n  58 |                 const e=Reflect.get(window,'__SINBAD_TEST__')?.enemies.find((e:EnemyView)=>e.id===id);return e?.state===state?e:false;\n  59 |             },{id:def.id,state});\n  60 |             const observed=await handle.jsonValue() as EnemyView;await handle.dispose();inspect(observed);await shot(state,observed);return observed;\n    at capture (C:\\code\\code10(sindbad)\\tests\\e2e\\bat-actions.spec.ts:57:37)\n    at C:\\code\\code10(sindbad)\\tests\\e2e\\bat-actions.spec.ts:75:15"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 16
+                    }
+                  ],
+                  "startTime": "2026-10-06T10:35:24.525Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\code\\code10(sindbad)\\test-results\\bat-actions-phone-bat-four-b6a9a-t-puzzle-safety-and-rewards\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\code\\code10(sindbad)\\test-results\\bat-actions-phone-bat-four-b6a9a-t-puzzle-safety-and-rewards\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\bat-actions.spec.ts",
+                    "column": 37,
+                    "line": 57
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "4d7c91cb2f778e7101af-97ce684370306ff7a59c",
+          "file": "bat-actions.spec.ts",
+          "line": 50,
+          "column": 41
+        },
+        {
+          "title": "phone bat missing-sheet recovery keeps contact combat, puzzle safety and rewards",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 25021,
+                  "error": {
+                    "message": "TimeoutError: page.waitForFunction: Timeout 10000ms exceeded.",
+                    "stack": "TimeoutError: page.waitForFunction: Timeout 10000ms exceeded.\n    at capture (C:\\code\\code10(sindbad)\\tests\\e2e\\bat-actions.spec.ts:57:37)\n    at C:\\code\\code10(sindbad)\\tests\\e2e\\bat-actions.spec.ts:75:15",
+                    "location": {
+                      "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\bat-actions.spec.ts",
+                      "column": 37,
+                      "line": 57
+                    },
+                    "snippet": "  55 |         };\n  56 |         const capture=async(state:string)=>{\n> 57 |             const handle=await page.waitForFunction(({id,state})=>{\n     |                                     ^\n  58 |                 const e=Reflect.get(window,'__SINBAD_TEST__')?.enemies.find((e:EnemyView)=>e.id===id);return e?.state===state?e:false;\n  59 |             },{id:def.id,state});\n  60 |             const observed=await handle.jsonValue() as EnemyView;await handle.dispose();inspect(observed);await shot(state,observed);return observed;"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\bat-actions.spec.ts",
+                        "column": 37,
+                        "line": 57
+                      },
+                      "message": "TimeoutError: page.waitForFunction: Timeout 10000ms exceeded.\n\n  55 |         };\n  56 |         const capture=async(state:string)=>{\n> 57 |             const handle=await page.waitForFunction(({id,state})=>{\n     |                                     ^\n  58 |                 const e=Reflect.get(window,'__SINBAD_TEST__')?.enemies.find((e:EnemyView)=>e.id===id);return e?.state===state?e:false;\n  59 |             },{id:def.id,state});\n  60 |             const observed=await handle.jsonValue() as EnemyView;await handle.dispose();inspect(observed);await shot(state,observed);return observed;\n    at capture (C:\\code\\code10(sindbad)\\tests\\e2e\\bat-actions.spec.ts:57:37)\n    at C:\\code\\code10(sindbad)\\tests\\e2e\\bat-actions.spec.ts:75:15"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 18
+                    }
+                  ],
+                  "startTime": "2026-10-06T10:38:01.666Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\code\\code10(sindbad)\\test-results\\bat-actions-phone-bat-miss-b6ded-t-puzzle-safety-and-rewards\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\code\\code10(sindbad)\\test-results\\bat-actions-phone-bat-miss-b6ded-t-puzzle-safety-and-rewards\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\bat-actions.spec.ts",
+                    "column": 37,
+                    "line": 57
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "4d7c91cb2f778e7101af-8f2829f49322bf0ed4ef",
+          "file": "bat-actions.spec.ts",
+          "line": 50,
+          "column": 41
+        },
+        {
+          "title": "tablet bat four actions keeps contact combat, puzzle safety and rewards",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 24143,
+                  "error": {
+                    "message": "TimeoutError: page.waitForFunction: Timeout 10000ms exceeded.",
+                    "stack": "TimeoutError: page.waitForFunction: Timeout 10000ms exceeded.\n    at capture (C:\\code\\code10(sindbad)\\tests\\e2e\\bat-actions.spec.ts:57:37)\n    at C:\\code\\code10(sindbad)\\tests\\e2e\\bat-actions.spec.ts:75:15",
+                    "location": {
+                      "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\bat-actions.spec.ts",
+                      "column": 37,
+                      "line": 57
+                    },
+                    "snippet": "  55 |         };\n  56 |         const capture=async(state:string)=>{\n> 57 |             const handle=await page.waitForFunction(({id,state})=>{\n     |                                     ^\n  58 |                 const e=Reflect.get(window,'__SINBAD_TEST__')?.enemies.find((e:EnemyView)=>e.id===id);return e?.state===state?e:false;\n  59 |             },{id:def.id,state});\n  60 |             const observed=await handle.jsonValue() as EnemyView;await handle.dispose();inspect(observed);await shot(state,observed);return observed;"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\bat-actions.spec.ts",
+                        "column": 37,
+                        "line": 57
+                      },
+                      "message": "TimeoutError: page.waitForFunction: Timeout 10000ms exceeded.\n\n  55 |         };\n  56 |         const capture=async(state:string)=>{\n> 57 |             const handle=await page.waitForFunction(({id,state})=>{\n     |                                     ^\n  58 |                 const e=Reflect.get(window,'__SINBAD_TEST__')?.enemies.find((e:EnemyView)=>e.id===id);return e?.state===state?e:false;\n  59 |             },{id:def.id,state});\n  60 |             const observed=await handle.jsonValue() as EnemyView;await handle.dispose();inspect(observed);await shot(state,observed);return observed;\n    at capture (C:\\code\\code10(sindbad)\\tests\\e2e\\bat-actions.spec.ts:57:37)\n    at C:\\code\\code10(sindbad)\\tests\\e2e\\bat-actions.spec.ts:75:15"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 14
+                    }
+                  ],
+                  "startTime": "2026-10-06T10:38:34.751Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\code\\code10(sindbad)\\test-results\\bat-actions-tablet-bat-fou-35895-t-puzzle-safety-and-rewards\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\code\\code10(sindbad)\\test-results\\bat-actions-tablet-bat-fou-35895-t-puzzle-safety-and-rewards\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\bat-actions.spec.ts",
+                    "column": 37,
+                    "line": 57
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "4d7c91cb2f778e7101af-b4e32ac13c3202fa542d",
+          "file": "bat-actions.spec.ts",
+          "line": 50,
+          "column": 41
+        },
+        {
+          "title": "tablet bat missing-sheet recovery keeps contact combat, puzzle safety and rewards",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 25411,
+                  "error": {
+                    "message": "TimeoutError: page.waitForFunction: Timeout 10000ms exceeded.",
+                    "stack": "TimeoutError: page.waitForFunction: Timeout 10000ms exceeded.\n    at capture (C:\\code\\code10(sindbad)\\tests\\e2e\\bat-actions.spec.ts:57:37)\n    at C:\\code\\code10(sindbad)\\tests\\e2e\\bat-actions.spec.ts:75:15",
+                    "location": {
+                      "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\bat-actions.spec.ts",
+                      "column": 37,
+                      "line": 57
+                    },
+                    "snippet": "  55 |         };\n  56 |         const capture=async(state:string)=>{\n> 57 |             const handle=await page.waitForFunction(({id,state})=>{\n     |                                     ^\n  58 |                 const e=Reflect.get(window,'__SINBAD_TEST__')?.enemies.find((e:EnemyView)=>e.id===id);return e?.state===state?e:false;\n  59 |             },{id:def.id,state});\n  60 |             const observed=await handle.jsonValue() as EnemyView;await handle.dispose();inspect(observed);await shot(state,observed);return observed;"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\bat-actions.spec.ts",
+                        "column": 37,
+                        "line": 57
+                      },
+                      "message": "TimeoutError: page.waitForFunction: Timeout 10000ms exceeded.\n\n  55 |         };\n  56 |         const capture=async(state:string)=>{\n> 57 |             const handle=await page.waitForFunction(({id,state})=>{\n     |                                     ^\n  58 |                 const e=Reflect.get(window,'__SINBAD_TEST__')?.enemies.find((e:EnemyView)=>e.id===id);return e?.state===state?e:false;\n  59 |             },{id:def.id,state});\n  60 |             const observed=await handle.jsonValue() as EnemyView;await handle.dispose();inspect(observed);await shot(state,observed);return observed;\n    at capture (C:\\code\\code10(sindbad)\\tests\\e2e\\bat-actions.spec.ts:57:37)\n    at C:\\code\\code10(sindbad)\\tests\\e2e\\bat-actions.spec.ts:75:15"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 11
+                    }
+                  ],
+                  "startTime": "2026-10-06T10:39:03.869Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\code\\code10(sindbad)\\test-results\\bat-actions-tablet-bat-mis-e06c9-t-puzzle-safety-and-rewards\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\code\\code10(sindbad)\\test-results\\bat-actions-tablet-bat-mis-e06c9-t-puzzle-safety-and-rewards\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\bat-actions.spec.ts",
+                    "column": 37,
+                    "line": 57
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "4d7c91cb2f778e7101af-6a741a6d27c819010582",
+          "file": "bat-actions.spec.ts",
+          "line": 50,
+          "column": 41
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-06T10:35:16.276Z",
+    "duration": 256620.63199999998,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 4,
+    "flaky": 0
+  }
+}

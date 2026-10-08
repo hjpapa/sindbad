@@ -33,7 +33,7 @@ export interface ObjectDef {
     id: string;
     x: number;
     y: number;
-    kind: 'npc' | 'bell' | 'shell' | 'chest' | 'exit' | 'rod' | 'crisis' | 'checkpoint' | 'remote' | 'gear' | 'key' | 'gate' | 'rescue' | 'golden' | 'torch' | 'furnace' | 'vine' | 'flameGift' | 'rope' | 'descent' | 'mirror' | 'lightGate' | 'truthGift' | 'vision' | 'journal' | 'quest' | 'gift' | 'bridge' | 'ending';
+    kind: 'npc' | 'bell' | 'shell' | 'chest' | 'exit' | 'rod' | 'crisis' | 'checkpoint' | 'remote' | 'gear' | 'key' | 'gate' | 'rescue' | 'golden' | 'torch' | 'furnace' | 'vine' | 'flameGift' | 'rope' | 'descent' | 'mirror' | 'lightGate' | 'truthGift' | 'vision' | 'journal' | 'quest' | 'rocCore' | 'gift' | 'bridge' | 'ending';
     label: string;
     flightRing?: boolean;
     needs?: string[];
@@ -141,13 +141,15 @@ export const maps: Record<string, MapDef> = {
 
 // Art identity is explicit data; stable enemy/reward IDs and combat kinds stay
 // unchanged. In S01 the archer and captain are magical skeletons, not people.
-const bossActionArt: Record<string, EnemyActionKey> = {S11:'stone',S12:'dragon',S18:'pirate',S19:'kuura',S21:'snake',S22:'tiger',S24:'stone',S31:'kuura'};
+const bossActionArt: Record<string, EnemyActionKey> = {S09:'roc',S11:'stone',S12:'dragon',S18:'pirate',S19:'kuura',S21:'snake',S22:'tiger',S24:'stone',S31:'kuura'};
 for (const map of Object.values(maps)) for (const [index, spawn] of map.spawns.entries()) {
     if (spawn.kind === 'boss') spawn.actionArt = bossActionArt[map.id];
     else if (['skeleton','archer','captain'].includes(spawn.kind)) spawn.actionArt = 'skeleton';
     else if (spawn.kind === 'guardian') spawn.actionArt = 'guard';
     else if (spawn.kind === 'crab') spawn.actionArt = 'crab';
     else if (spawn.kind === 'siren') spawn.actionArt = 'siren';
+    else if (spawn.kind === 'bat') spawn.actionArt = 'bat';
+    else if (spawn.kind === 'spirit') spawn.actionArt = 'spirit';
     else if (spawn.kind === 'bandit') spawn.actionArt = map.id === 'S14' ? 'guard' : ['S17','S18'].includes(map.id) ? 'pirate' : 'bandit';
     else if (spawn.kind === 'beast') spawn.actionArt = map.id === 'S22' || index % 2 ? 'tiger' : 'snake';
 }

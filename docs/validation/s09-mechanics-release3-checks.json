@@ -1,0 +1,51 @@
+[
+  {
+    "command": "npm run typecheck",
+    "exitCode": 0,
+    "started": "2026-10-08T10:40:47.545956+00:00",
+    "seconds": 4.562,
+    "log": "docs/validation/s09-mechanics-release3-check-1.txt"
+  },
+  {
+    "command": "npm run lint",
+    "exitCode": 0,
+    "started": "2026-10-08T10:40:52.112485+00:00",
+    "seconds": 3.625,
+    "log": "docs/validation/s09-mechanics-release3-check-2.txt"
+  },
+  {
+    "command": "npm run test",
+    "exitCode": 0,
+    "started": "2026-10-08T10:40:55.744105+00:00",
+    "seconds": 4.281,
+    "log": "docs/validation/s09-mechanics-release3-check-3.txt"
+  },
+  {
+    "command": "npm run validate:content",
+    "exitCode": 0,
+    "started": "2026-10-08T10:41:00.022808+00:00",
+    "seconds": 1.36,
+    "log": "docs/validation/s09-mechanics-release3-check-4.txt"
+  },
+  {
+    "command": "npm run build",
+    "exitCode": 0,
+    "started": "2026-10-08T10:41:01.376094+00:00",
+    "seconds": 10.968,
+    "log": "docs/validation/s09-mechanics-release3-check-5.txt"
+  },
+  {
+    "command": "python scripts/audit-webtoon.py",
+    "exitCode": 0,
+    "started": "2026-10-08T10:41:12.344732+00:00",
+    "seconds": 16.86,
+    "log": "docs/validation/s09-mechanics-release3-check-6.txt"
+  },
+  {
+    "command": "npx tsx scripts/check-art-budget.ts",
+    "exitCode": 0,
+    "started": "2026-10-08T10:41:29.212930+00:00",
+    "seconds": 2.765,
+    "log": "docs/validation/s09-mechanics-release3-check-7.txt"
+  }
+]

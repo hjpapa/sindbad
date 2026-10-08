@@ -1,0 +1,2428 @@
+{
+  "date": "2026-10-06T12:51:26.681Z",
+  "method": "stage/item save fixtures; real keyboard movement/combat; read-only snapshots; Edge phone/tablet viewport emulation",
+  "pass": true,
+  "checks": [
+    {
+      "device": "phone",
+      "key": "skeleton",
+      "stage": "S01",
+      "enemyId": "S01.enemy.skeleton.01",
+      "captures": [
+        {
+          "state": "idle",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/phone-skeleton-idle.png",
+          "observed": {
+            "id": "S01.enemy.skeleton.01",
+            "x": 909.3737500000021,
+            "y": 560,
+            "hp": 24,
+            "state": "idle",
+            "visible": true,
+            "alpha": 1,
+            "art": "skeleton",
+            "texture": "enemy-actions",
+            "frame": 0,
+            "flipX": true,
+            "originX": 0.5,
+            "originY": 0.6234975961538461,
+            "displayHeight": 145.64551422319474,
+            "footOffset": 50,
+            "label": ""
+          }
+        },
+        {
+          "state": "telegraph",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/phone-skeleton-telegraph.png",
+          "observed": {
+            "id": "S01.enemy.skeleton.01",
+            "x": 909.3737500000021,
+            "y": 560,
+            "hp": 24,
+            "state": "telegraph",
+            "visible": true,
+            "alpha": 1,
+            "art": "skeleton",
+            "texture": "enemy-actions",
+            "frame": 1,
+            "flipX": true,
+            "originX": 0.5,
+            "originY": 0.6137319711538461,
+            "displayHeight": 145.64551422319474,
+            "footOffset": 50,
+            "label": "⚠ 준비… 피하세요!"
+          }
+        },
+        {
+          "state": "attack",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/phone-skeleton-attack.png",
+          "observed": {
+            "id": "S01.enemy.skeleton.01",
+            "x": 909.3737500000021,
+            "y": 560,
+            "hp": 24,
+            "state": "attack",
+            "visible": true,
+            "alpha": 1,
+            "art": "skeleton",
+            "texture": "enemy-actions",
+            "frame": 2,
+            "flipX": true,
+            "originX": 0.5,
+            "originY": 0.46724759615384615,
+            "displayHeight": 145.64551422319474,
+            "footOffset": 50,
+            "label": "⚠ 준비… 피하세요!"
+          }
+        },
+        {
+          "state": "recover",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/phone-skeleton-recover.png",
+          "observed": {
+            "id": "S01.enemy.skeleton.01",
+            "x": 909.3737500000021,
+            "y": 560,
+            "hp": 24,
+            "state": "recover",
+            "visible": true,
+            "alpha": 1,
+            "art": "skeleton",
+            "texture": "enemy-actions",
+            "frame": 0,
+            "flipX": true,
+            "originX": 0.5,
+            "originY": 0.6234975961538461,
+            "displayHeight": 145.64551422319474,
+            "footOffset": 50,
+            "label": "✦"
+          }
+        },
+        {
+          "state": "defeated",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/phone-skeleton-defeated.png",
+          "observed": {
+            "id": "S01.enemy.skeleton.01",
+            "x": 909.3737500000021,
+            "y": 560,
+            "hp": 0,
+            "state": "defeated",
+            "visible": true,
+            "alpha": 1,
+            "art": "skeleton",
+            "texture": "enemy-actions",
+            "frame": 3,
+            "flipX": false,
+            "originX": 0.5,
+            "originY": 0.5844350961538461,
+            "displayHeight": 145.64551422319474,
+            "footOffset": 50,
+            "label": "빛으로 돌아갔어요"
+          }
+        }
+      ],
+      "rightPath": "docs/screenshots/m6-spirit/final/art-a3/phone-skeleton-right.png",
+      "defeat": "magic",
+      "reloadRewardsUnchanged": true
+    },
+    {
+      "device": "phone",
+      "key": "bandit",
+      "stage": "S11",
+      "enemyId": "S11.enemy.1",
+      "captures": [
+        {
+          "state": "idle",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/phone-bandit-idle.png",
+          "observed": {
+            "id": "S11.enemy.1",
+            "x": 767.8145000000002,
+            "y": 550,
+            "hp": 36,
+            "state": "idle",
+            "visible": true,
+            "alpha": 1,
+            "art": "bandit",
+            "texture": "enemy-actions",
+            "frame": 4,
+            "flipX": true,
+            "originX": 0.5,
+            "originY": 0.5844350961538461,
+            "displayHeight": 238.5663082437276,
+            "footOffset": 60,
+            "label": ""
+          }
+        },
+        {
+          "state": "telegraph",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/phone-bandit-telegraph.png",
+          "observed": {
+            "id": "S11.enemy.1",
+            "x": 741.5999000000008,
+            "y": 550,
+            "hp": 36,
+            "state": "telegraph",
+            "visible": true,
+            "alpha": 1,
+            "art": "bandit",
+            "texture": "enemy-actions",
+            "frame": 5,
+            "flipX": true,
+            "originX": 0.5,
+            "originY": 0.5883413461538461,
+            "displayHeight": 238.5663082437276,
+            "footOffset": 60,
+            "label": "⚠ 준비… 피하세요!"
+          }
+        },
+        {
+          "state": "attack",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/phone-bandit-attack.png",
+          "observed": {
+            "id": "S11.enemy.1",
+            "x": 741.5999000000008,
+            "y": 550,
+            "hp": 36,
+            "state": "attack",
+            "visible": true,
+            "alpha": 1,
+            "art": "bandit",
+            "texture": "enemy-actions",
+            "frame": 6,
+            "flipX": true,
+            "originX": 0.5,
+            "originY": 0.47506009615384615,
+            "displayHeight": 238.5663082437276,
+            "footOffset": 60,
+            "label": "⚠ 준비… 피하세요!"
+          }
+        },
+        {
+          "state": "recover",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/phone-bandit-recover.png",
+          "observed": {
+            "id": "S11.enemy.1",
+            "x": 741.5999000000008,
+            "y": 550,
+            "hp": 36,
+            "state": "recover",
+            "visible": true,
+            "alpha": 1,
+            "art": "bandit",
+            "texture": "enemy-actions",
+            "frame": 4,
+            "flipX": true,
+            "originX": 0.5,
+            "originY": 0.5844350961538461,
+            "displayHeight": 238.5663082437276,
+            "footOffset": 60,
+            "label": "✦"
+          }
+        },
+        {
+          "state": "defeated",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/phone-bandit-defeated.png",
+          "observed": {
+            "id": "S11.enemy.1",
+            "x": 741.5999000000008,
+            "y": 550,
+            "hp": 0,
+            "state": "defeated",
+            "visible": true,
+            "alpha": 0.9746153846153847,
+            "art": "bandit",
+            "texture": "enemy-actions",
+            "frame": 7,
+            "flipX": false,
+            "originX": 0.5,
+            "originY": 0.5004507211538461,
+            "displayHeight": 238.5663082437276,
+            "footOffset": 60,
+            "label": "항복했어요"
+          }
+        }
+      ],
+      "rightPath": "docs/screenshots/m6-spirit/final/art-a3/phone-bandit-right.png",
+      "defeat": "human",
+      "reloadRewardsUnchanged": true
+    },
+    {
+      "device": "phone",
+      "key": "guard",
+      "stage": "S05",
+      "enemyId": "S05.enemy.guardian.1",
+      "captures": [
+        {
+          "state": "idle",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/phone-guard-idle.png",
+          "observed": {
+            "id": "S05.enemy.guardian.1",
+            "x": 409.81179999999983,
+            "y": 558,
+            "hp": 32,
+            "state": "idle",
+            "visible": true,
+            "alpha": 1,
+            "art": "guard",
+            "texture": "enemy-actions",
+            "frame": 8,
+            "flipX": true,
+            "originX": 0.5,
+            "originY": 0.609375,
+            "displayHeight": 138.66666666666666,
+            "footOffset": 52,
+            "label": ""
+          }
+        },
+        {
+          "state": "telegraph",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/phone-guard-telegraph.png",
+          "observed": {
+            "id": "S05.enemy.guardian.1",
+            "x": 376.87224999999984,
+            "y": 558,
+            "hp": 32,
+            "state": "telegraph",
+            "visible": true,
+            "alpha": 1,
+            "art": "guard",
+            "texture": "enemy-actions",
+            "frame": 9,
+            "flipX": true,
+            "originX": 0.5,
+            "originY": 0.607421875,
+            "displayHeight": 138.66666666666666,
+            "footOffset": 52,
+            "label": "⚠ 준비… 피하세요!"
+          }
+        },
+        {
+          "state": "attack",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/phone-guard-attack.png",
+          "observed": {
+            "id": "S05.enemy.guardian.1",
+            "x": 376.87224999999984,
+            "y": 558,
+            "hp": 32,
+            "state": "attack",
+            "visible": true,
+            "alpha": 1,
+            "art": "guard",
+            "texture": "enemy-actions",
+            "frame": 10,
+            "flipX": true,
+            "originX": 0.5,
+            "originY": 0.544921875,
+            "displayHeight": 138.66666666666666,
+            "footOffset": 52,
+            "label": "⚠ 준비… 피하세요!"
+          }
+        },
+        {
+          "state": "recover",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/phone-guard-recover.png",
+          "observed": {
+            "id": "S05.enemy.guardian.1",
+            "x": 376.87224999999984,
+            "y": 558,
+            "hp": 32,
+            "state": "recover",
+            "visible": true,
+            "alpha": 1,
+            "art": "guard",
+            "texture": "enemy-actions",
+            "frame": 8,
+            "flipX": true,
+            "originX": 0.5,
+            "originY": 0.609375,
+            "displayHeight": 138.66666666666666,
+            "footOffset": 52,
+            "label": "✦"
+          }
+        },
+        {
+          "state": "defeated",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/phone-guard-defeated.png",
+          "observed": {
+            "id": "S05.enemy.guardian.1",
+            "x": 376.87224999999984,
+            "y": 558,
+            "hp": 0,
+            "state": "defeated",
+            "visible": true,
+            "alpha": 0.9738461538461538,
+            "art": "guard",
+            "texture": "enemy-actions",
+            "frame": 11,
+            "flipX": false,
+            "originX": 0.5,
+            "originY": 0.5625,
+            "displayHeight": 138.66666666666666,
+            "footOffset": 52,
+            "label": "항복했어요"
+          }
+        }
+      ],
+      "rightPath": "docs/screenshots/m6-spirit/final/art-a3/phone-guard-right.png",
+      "defeat": "human",
+      "reloadRewardsUnchanged": true
+    },
+    {
+      "device": "phone",
+      "key": "pirate",
+      "stage": "S18",
+      "enemyId": "S18.enemy.3",
+      "captures": [
+        {
+          "state": "idle",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/phone-pirate-idle.png",
+          "observed": {
+            "id": "S18.enemy.3",
+            "x": 2230.4369000000074,
+            "y": 550,
+            "hp": 128,
+            "state": "idle",
+            "visible": true,
+            "alpha": 1,
+            "art": "pirate",
+            "texture": "enemy-actions",
+            "frame": 12,
+            "flipX": true,
+            "originX": 0.5,
+            "originY": 0.653343023255814,
+            "displayHeight": 283.1639871382637,
+            "footOffset": 60,
+            "label": ""
+          }
+        },
+        {
+          "state": "telegraph",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/phone-pirate-telegraph.png",
+          "observed": {
+            "id": "S18.enemy.3",
+            "x": 2209.4237000000116,
+            "y": 550,
+            "hp": 128,
+            "state": "telegraph",
+            "visible": true,
+            "alpha": 1,
+            "art": "pirate",
+            "texture": "enemy-actions",
+            "frame": 13,
+            "flipX": true,
+            "originX": 0.5,
+            "originY": 0.651389898255814,
+            "displayHeight": 283.1639871382637,
+            "footOffset": 60,
+            "label": "⚠ 준비… 피하세요!"
+          }
+        },
+        {
+          "state": "attack",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/phone-pirate-attack.png",
+          "observed": {
+            "id": "S18.enemy.3",
+            "x": 2209.4237000000116,
+            "y": 550,
+            "hp": 128,
+            "state": "attack",
+            "visible": true,
+            "alpha": 1,
+            "art": "pirate",
+            "texture": "enemy-actions",
+            "frame": 14,
+            "flipX": true,
+            "originX": 0.5,
+            "originY": 0.602561773255814,
+            "displayHeight": 283.1639871382637,
+            "footOffset": 60,
+            "label": "⚠ 준비… 피하세요!"
+          }
+        },
+        {
+          "state": "recover",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/phone-pirate-recover.png",
+          "observed": {
+            "id": "S18.enemy.3",
+            "x": 2209.4237000000116,
+            "y": 550,
+            "hp": 128,
+            "state": "recover",
+            "visible": true,
+            "alpha": 1,
+            "art": "pirate",
+            "texture": "enemy-actions",
+            "frame": 12,
+            "flipX": true,
+            "originX": 0.5,
+            "originY": 0.653343023255814,
+            "displayHeight": 283.1639871382637,
+            "footOffset": 60,
+            "label": "✦"
+          }
+        },
+        {
+          "state": "defeated",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/phone-pirate-defeated.png",
+          "observed": {
+            "id": "S18.enemy.3",
+            "x": 2209.4237000000116,
+            "y": 550,
+            "hp": 0,
+            "state": "defeated",
+            "visible": true,
+            "alpha": 0.963076923076923,
+            "art": "pirate",
+            "texture": "enemy-actions",
+            "frame": 15,
+            "flipX": false,
+            "originX": 0.5,
+            "originY": 0.602561773255814,
+            "displayHeight": 283.1639871382637,
+            "footOffset": 60,
+            "label": "항복했어요"
+          }
+        }
+      ],
+      "rightPath": "docs/screenshots/m6-spirit/final/art-a3/phone-pirate-right.png",
+      "defeat": "human",
+      "reloadRewardsUnchanged": true
+    },
+    {
+      "device": "phone",
+      "key": "snake",
+      "stage": "S20",
+      "enemyId": "S20.enemy.1",
+      "captures": [
+        {
+          "state": "idle",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/phone-snake-idle.png",
+          "observed": {
+            "id": "S20.enemy.1",
+            "x": 765.6794000000006,
+            "y": 550,
+            "hp": 43,
+            "state": "idle",
+            "visible": true,
+            "alpha": 1,
+            "art": "snake",
+            "texture": "enemy-actions",
+            "frame": 16,
+            "flipX": true,
+            "originX": 0.5,
+            "originY": 0.5880408653846154,
+            "displayHeight": 298.47533632286996,
+            "footOffset": 60,
+            "label": ""
+          }
+        },
+        {
+          "state": "telegraph",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/phone-snake-telegraph.png",
+          "observed": {
+            "id": "S20.enemy.1",
+            "x": 735.698600000001,
+            "y": 550,
+            "hp": 43,
+            "state": "telegraph",
+            "visible": true,
+            "alpha": 1,
+            "art": "snake",
+            "texture": "enemy-actions",
+            "frame": 17,
+            "flipX": true,
+            "originX": 0.5,
+            "originY": 0.5880408653846154,
+            "displayHeight": 298.47533632286996,
+            "footOffset": 60,
+            "label": "⚠ 준비… 피하세요!"
+          }
+        },
+        {
+          "state": "attack",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/phone-snake-attack.png",
+          "observed": {
+            "id": "S20.enemy.1",
+            "x": 735.698600000001,
+            "y": 550,
+            "hp": 43,
+            "state": "attack",
+            "visible": true,
+            "alpha": 1,
+            "art": "snake",
+            "texture": "enemy-actions",
+            "frame": 18,
+            "flipX": true,
+            "originX": 0.5,
+            "originY": 0.4981971153846154,
+            "displayHeight": 298.47533632286996,
+            "footOffset": 60,
+            "label": "⚠ 준비… 피하세요!"
+          }
+        },
+        {
+          "state": "recover",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/phone-snake-recover.png",
+          "observed": {
+            "id": "S20.enemy.1",
+            "x": 735.698600000001,
+            "y": 550,
+            "hp": 43,
+            "state": "recover",
+            "visible": true,
+            "alpha": 1,
+            "art": "snake",
+            "texture": "enemy-actions",
+            "frame": 16,
+            "flipX": true,
+            "originX": 0.5,
+            "originY": 0.5880408653846154,
+            "displayHeight": 298.47533632286996,
+            "footOffset": 60,
+            "label": "✦"
+          }
+        },
+        {
+          "state": "defeated",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/phone-snake-defeated.png",
+          "observed": {
+            "id": "S20.enemy.1",
+            "x": 735.698600000001,
+            "y": 550,
+            "hp": 0,
+            "state": "defeated",
+            "visible": true,
+            "alpha": 1,
+            "art": "snake",
+            "texture": "enemy-actions",
+            "frame": 19,
+            "flipX": false,
+            "originX": 0.5,
+            "originY": 0.4981971153846154,
+            "displayHeight": 298.47533632286996,
+            "footOffset": 60,
+            "label": "저주가 풀렸어!"
+          }
+        }
+      ],
+      "rightPath": "docs/screenshots/m6-spirit/final/art-a3/phone-snake-right.png",
+      "defeat": "animal",
+      "reloadRewardsUnchanged": true
+    },
+    {
+      "device": "phone",
+      "key": "tiger",
+      "stage": "S22",
+      "enemyId": "S22.enemy.3",
+      "captures": [
+        {
+          "state": "idle",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/phone-tiger-idle.png",
+          "observed": {
+            "id": "S22.enemy.3",
+            "x": 2267.5811000000026,
+            "y": 550,
+            "hp": 128,
+            "state": "idle",
+            "visible": true,
+            "alpha": 1,
+            "art": "tiger",
+            "texture": "enemy-actions",
+            "frame": 20,
+            "flipX": true,
+            "originX": 0.5,
+            "originY": 0.6544331395348837,
+            "displayHeight": 379.58620689655174,
+            "footOffset": 60,
+            "label": ""
+          }
+        },
+        {
+          "state": "telegraph",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/phone-tiger-telegraph.png",
+          "observed": {
+            "id": "S22.enemy.3",
+            "x": 2238.3717500000057,
+            "y": 550,
+            "hp": 128,
+            "state": "telegraph",
+            "visible": true,
+            "alpha": 1,
+            "art": "tiger",
+            "texture": "enemy-actions",
+            "frame": 21,
+            "flipX": true,
+            "originX": 0.5,
+            "originY": 0.6583393895348837,
+            "displayHeight": 379.58620689655174,
+            "footOffset": 60,
+            "label": "⚠ 준비… 피하세요!"
+          }
+        },
+        {
+          "state": "attack",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/phone-tiger-attack.png",
+          "observed": {
+            "id": "S22.enemy.3",
+            "x": 2238.3717500000057,
+            "y": 550,
+            "hp": 128,
+            "state": "attack",
+            "visible": true,
+            "alpha": 1,
+            "art": "tiger",
+            "texture": "enemy-actions",
+            "frame": 22,
+            "flipX": true,
+            "originX": 0.5,
+            "originY": 0.5587300145348837,
+            "displayHeight": 379.58620689655174,
+            "footOffset": 60,
+            "label": "⚠ 준비… 피하세요!"
+          }
+        },
+        {
+          "state": "recover",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/phone-tiger-recover.png",
+          "observed": {
+            "id": "S22.enemy.3",
+            "x": 2238.3717500000057,
+            "y": 550,
+            "hp": 128,
+            "state": "recover",
+            "visible": true,
+            "alpha": 1,
+            "art": "tiger",
+            "texture": "enemy-actions",
+            "frame": 20,
+            "flipX": true,
+            "originX": 0.5,
+            "originY": 0.6544331395348837,
+            "displayHeight": 379.58620689655174,
+            "footOffset": 60,
+            "label": "✦"
+          }
+        },
+        {
+          "state": "defeated",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/phone-tiger-defeated.png",
+          "observed": {
+            "id": "S22.enemy.3",
+            "x": 2238.3717500000057,
+            "y": 550,
+            "hp": 0,
+            "state": "defeated",
+            "visible": true,
+            "alpha": 1,
+            "art": "tiger",
+            "texture": "enemy-actions",
+            "frame": 23,
+            "flipX": false,
+            "originX": 0.5,
+            "originY": 0.5880268895348837,
+            "displayHeight": 379.58620689655174,
+            "footOffset": 60,
+            "label": "저주가 풀렸어!"
+          }
+        }
+      ],
+      "rightPath": "docs/screenshots/m6-spirit/final/art-a3/phone-tiger-right.png",
+      "defeat": "animal",
+      "reloadRewardsUnchanged": true
+    },
+    {
+      "device": "phone",
+      "key": "dragon",
+      "stage": "S12",
+      "enemyId": "S12.enemy.3",
+      "captures": [
+        {
+          "state": "idle",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/phone-dragon-idle.png",
+          "observed": {
+            "id": "S12.enemy.3",
+            "x": 2266.9125500000014,
+            "y": 550,
+            "hp": 128,
+            "state": "idle",
+            "visible": true,
+            "alpha": 1,
+            "art": "dragon",
+            "texture": "enemy-actions",
+            "frame": 24,
+            "flipX": true,
+            "originX": 0.5,
+            "originY": 0.6837300145348837,
+            "displayHeight": 243.94459833795014,
+            "footOffset": 60,
+            "label": ""
+          }
+        },
+        {
+          "state": "telegraph",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/phone-dragon-telegraph.png",
+          "observed": {
+            "id": "S12.enemy.3",
+            "x": 2235.6881000000058,
+            "y": 550,
+            "hp": 128,
+            "state": "telegraph",
+            "visible": true,
+            "alpha": 1,
+            "art": "dragon",
+            "texture": "enemy-actions",
+            "frame": 25,
+            "flipX": true,
+            "originX": 0.5,
+            "originY": 0.6856831395348837,
+            "displayHeight": 243.94459833795014,
+            "footOffset": 60,
+            "label": "⚠ 준비… 피하세요!"
+          }
+        },
+        {
+          "state": "attack",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/phone-dragon-attack.png",
+          "observed": {
+            "id": "S12.enemy.3",
+            "x": 2235.6881000000058,
+            "y": 550,
+            "hp": 128,
+            "state": "attack",
+            "visible": true,
+            "alpha": 1,
+            "art": "dragon",
+            "texture": "enemy-actions",
+            "frame": 26,
+            "flipX": true,
+            "originX": 0.5,
+            "originY": 0.5958393895348837,
+            "displayHeight": 243.94459833795014,
+            "footOffset": 60,
+            "label": "⚠ 준비… 피하세요!"
+          }
+        },
+        {
+          "state": "recover",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/phone-dragon-recover.png",
+          "observed": {
+            "id": "S12.enemy.3",
+            "x": 2235.6881000000058,
+            "y": 550,
+            "hp": 128,
+            "state": "recover",
+            "visible": true,
+            "alpha": 1,
+            "art": "dragon",
+            "texture": "enemy-actions",
+            "frame": 24,
+            "flipX": true,
+            "originX": 0.5,
+            "originY": 0.6837300145348837,
+            "displayHeight": 243.94459833795014,
+            "footOffset": 60,
+            "label": "✦"
+          }
+        },
+        {
+          "state": "defeated",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/phone-dragon-defeated.png",
+          "observed": {
+            "id": "S12.enemy.3",
+            "x": 2235.6881000000058,
+            "y": 550,
+            "hp": 0,
+            "state": "defeated",
+            "visible": true,
+            "alpha": 1,
+            "art": "dragon",
+            "texture": "enemy-actions",
+            "frame": 27,
+            "flipX": false,
+            "originX": 0.5,
+            "originY": 0.5860737645348837,
+            "displayHeight": 243.94459833795014,
+            "footOffset": 60,
+            "label": "저주가 풀렸어!"
+          }
+        }
+      ],
+      "rightPath": "docs/screenshots/m6-spirit/final/art-a3/phone-dragon-right.png",
+      "defeat": "animal",
+      "reloadRewardsUnchanged": true
+    },
+    {
+      "device": "phone",
+      "key": "crab",
+      "stage": "S04",
+      "enemyId": "S04.enemy.crab.1",
+      "captures": [
+        {
+          "state": "idle",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/phone-crab-idle.png",
+          "observed": {
+            "id": "S04.enemy.crab.1",
+            "x": 494.86314999999985,
+            "y": 565,
+            "hp": 26,
+            "state": "idle",
+            "visible": true,
+            "alpha": 1,
+            "art": "crab",
+            "texture": "enemy-actions",
+            "frame": 28,
+            "flipX": true,
+            "originX": 0.5,
+            "originY": 0.6714324951171875,
+            "displayHeight": 370.2598870056497,
+            "footOffset": 45,
+            "label": ""
+          }
+        },
+        {
+          "state": "telegraph",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/phone-crab-telegraph.png",
+          "observed": {
+            "id": "S04.enemy.crab.1",
+            "x": 462.7413999999997,
+            "y": 565,
+            "hp": 26,
+            "state": "telegraph",
+            "visible": true,
+            "alpha": 1,
+            "art": "crab",
+            "texture": "enemy-actions",
+            "frame": 29,
+            "flipX": true,
+            "originX": 0.5,
+            "originY": 0.6792449951171875,
+            "displayHeight": 370.2598870056497,
+            "footOffset": 45,
+            "label": "⚠ 준비… 피하세요!"
+          }
+        },
+        {
+          "state": "attack",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/phone-crab-attack.png",
+          "observed": {
+            "id": "S04.enemy.crab.1",
+            "x": 462.7413999999997,
+            "y": 565,
+            "hp": 26,
+            "state": "attack",
+            "visible": true,
+            "alpha": 1,
+            "art": "crab",
+            "texture": "enemy-actions",
+            "frame": 30,
+            "flipX": true,
+            "originX": 0.5,
+            "originY": 0.5093231201171875,
+            "displayHeight": 370.2598870056497,
+            "footOffset": 45,
+            "label": "⚠ 준비… 피하세요!"
+          }
+        },
+        {
+          "state": "recover",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/phone-crab-recover.png",
+          "observed": {
+            "id": "S04.enemy.crab.1",
+            "x": 462.7413999999997,
+            "y": 565,
+            "hp": 26,
+            "state": "recover",
+            "visible": true,
+            "alpha": 1,
+            "art": "crab",
+            "texture": "enemy-actions",
+            "frame": 28,
+            "flipX": true,
+            "originX": 0.5,
+            "originY": 0.6714324951171875,
+            "displayHeight": 370.2598870056497,
+            "footOffset": 45,
+            "label": "✦"
+          }
+        },
+        {
+          "state": "defeated",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/phone-crab-defeated.png",
+          "observed": {
+            "id": "S04.enemy.crab.1",
+            "x": 462.7413999999997,
+            "y": 565,
+            "hp": 0,
+            "state": "defeated",
+            "visible": true,
+            "alpha": 1,
+            "art": "crab",
+            "texture": "enemy-actions",
+            "frame": 31,
+            "flipX": false,
+            "originX": 0.5,
+            "originY": 0.5171356201171875,
+            "displayHeight": 370.2598870056497,
+            "footOffset": 45,
+            "label": "저주가 풀렸어!"
+          }
+        }
+      ],
+      "rightPath": "docs/screenshots/m6-spirit/final/art-a3/phone-crab-right.png",
+      "defeat": "animal",
+      "reloadRewardsUnchanged": true
+    },
+    {
+      "device": "phone",
+      "key": "stone",
+      "stage": "S24",
+      "enemyId": "S24.enemy.3",
+      "captures": [
+        {
+          "state": "idle",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/phone-stone-idle.png",
+          "observed": {
+            "id": "S24.enemy.3",
+            "x": 2268.371900000001,
+            "y": 550,
+            "hp": 128,
+            "state": "idle",
+            "visible": true,
+            "alpha": 1,
+            "art": "stone",
+            "texture": "enemy-actions",
+            "frame": 32,
+            "flipX": true,
+            "originX": 0.5,
+            "originY": 0.5917060319767442,
+            "displayHeight": 403.9633027522936,
+            "footOffset": 60,
+            "label": ""
+          }
+        },
+        {
+          "state": "telegraph",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/phone-stone-telegraph.png",
+          "observed": {
+            "id": "S24.enemy.3",
+            "x": 2237.1362000000054,
+            "y": 550,
+            "hp": 128,
+            "state": "telegraph",
+            "visible": true,
+            "alpha": 1,
+            "art": "stone",
+            "texture": "enemy-actions",
+            "frame": 33,
+            "flipX": true,
+            "originX": 0.5,
+            "originY": 0.5956122819767442,
+            "displayHeight": 403.9633027522936,
+            "footOffset": 60,
+            "label": "⚠ 준비… 피하세요!"
+          }
+        },
+        {
+          "state": "attack",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/phone-stone-attack.png",
+          "observed": {
+            "id": "S24.enemy.3",
+            "x": 2237.1362000000054,
+            "y": 550,
+            "hp": 128,
+            "state": "attack",
+            "visible": true,
+            "alpha": 1,
+            "art": "stone",
+            "texture": "enemy-actions",
+            "frame": 34,
+            "flipX": true,
+            "originX": 0.5,
+            "originY": 0.5702216569767442,
+            "displayHeight": 403.9633027522936,
+            "footOffset": 60,
+            "label": "⚠ 준비… 피하세요!"
+          }
+        },
+        {
+          "state": "recover",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/phone-stone-recover.png",
+          "observed": {
+            "id": "S24.enemy.3",
+            "x": 2237.1362000000054,
+            "y": 550,
+            "hp": 128,
+            "state": "recover",
+            "visible": true,
+            "alpha": 1,
+            "art": "stone",
+            "texture": "enemy-actions",
+            "frame": 32,
+            "flipX": true,
+            "originX": 0.5,
+            "originY": 0.5917060319767442,
+            "displayHeight": 403.9633027522936,
+            "footOffset": 60,
+            "label": "✦"
+          }
+        },
+        {
+          "state": "defeated",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/phone-stone-defeated.png",
+          "observed": {
+            "id": "S24.enemy.3",
+            "x": 2237.1362000000054,
+            "y": 550,
+            "hp": 0,
+            "state": "defeated",
+            "visible": true,
+            "alpha": 1,
+            "art": "stone",
+            "texture": "enemy-actions",
+            "frame": 35,
+            "flipX": false,
+            "originX": 0.5,
+            "originY": 0.5721747819767442,
+            "displayHeight": 403.9633027522936,
+            "footOffset": 60,
+            "label": "빛으로 돌아갔어요"
+          }
+        }
+      ],
+      "rightPath": "docs/screenshots/m6-spirit/final/art-a3/phone-stone-right.png",
+      "defeat": "magic",
+      "reloadRewardsUnchanged": true
+    },
+    {
+      "device": "phone",
+      "key": "kuura",
+      "stage": "S19",
+      "enemyId": "S19.enemy.3",
+      "captures": [
+        {
+          "state": "idle",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/phone-kuura-idle.png",
+          "observed": {
+            "id": "S19.enemy.3",
+            "x": 2268.378350000003,
+            "y": 550,
+            "hp": 128,
+            "state": "idle",
+            "visible": true,
+            "alpha": 1,
+            "art": "kuura",
+            "texture": "enemy-actions",
+            "frame": 36,
+            "flipX": true,
+            "originX": 0.5,
+            "originY": 0.6787790697674418,
+            "displayHeight": 305.77777777777777,
+            "footOffset": 60,
+            "label": ""
+          }
+        },
+        {
+          "state": "telegraph",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/phone-kuura-telegraph.png",
+          "observed": {
+            "id": "S19.enemy.3",
+            "x": 2237.092400000007,
+            "y": 550,
+            "hp": 128,
+            "state": "telegraph",
+            "visible": true,
+            "alpha": 1,
+            "art": "kuura",
+            "texture": "enemy-actions",
+            "frame": 37,
+            "flipX": true,
+            "originX": 0.5,
+            "originY": 0.6748728197674418,
+            "displayHeight": 305.77777777777777,
+            "footOffset": 60,
+            "label": "⚠ 준비… 피하세요!"
+          }
+        },
+        {
+          "state": "attack",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/phone-kuura-attack.png",
+          "observed": {
+            "id": "S19.enemy.3",
+            "x": 2237.092400000007,
+            "y": 550,
+            "hp": 128,
+            "state": "attack",
+            "visible": true,
+            "alpha": 1,
+            "art": "kuura",
+            "texture": "enemy-actions",
+            "frame": 38,
+            "flipX": true,
+            "originX": 0.5,
+            "originY": 0.5713571947674418,
+            "displayHeight": 305.77777777777777,
+            "footOffset": 60,
+            "label": "⚠ 준비… 피하세요!"
+          }
+        },
+        {
+          "state": "recover",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/phone-kuura-recover.png",
+          "observed": {
+            "id": "S19.enemy.3",
+            "x": 2237.092400000007,
+            "y": 550,
+            "hp": 128,
+            "state": "recover",
+            "visible": true,
+            "alpha": 1,
+            "art": "kuura",
+            "texture": "enemy-actions",
+            "frame": 36,
+            "flipX": true,
+            "originX": 0.5,
+            "originY": 0.6787790697674418,
+            "displayHeight": 305.77777777777777,
+            "footOffset": 60,
+            "label": "✦"
+          }
+        },
+        {
+          "state": "defeated",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/phone-kuura-defeated.png",
+          "observed": {
+            "id": "S19.enemy.3",
+            "x": 2237.092400000007,
+            "y": 550,
+            "hp": 0,
+            "state": "defeated",
+            "visible": true,
+            "alpha": 1,
+            "art": "kuura",
+            "texture": "enemy-actions",
+            "frame": 39,
+            "flipX": false,
+            "originX": 0.5,
+            "originY": 0.5908884447674418,
+            "displayHeight": 305.77777777777777,
+            "footOffset": 60,
+            "label": "빛으로 돌아갔어요"
+          }
+        }
+      ],
+      "rightPath": "docs/screenshots/m6-spirit/final/art-a3/phone-kuura-right.png",
+      "defeat": "magic",
+      "reloadRewardsUnchanged": true
+    },
+    {
+      "device": "tablet",
+      "key": "skeleton",
+      "stage": "S01",
+      "enemyId": "S01.enemy.skeleton.01",
+      "captures": [
+        {
+          "state": "idle",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/tablet-skeleton-idle.png",
+          "observed": {
+            "id": "S01.enemy.skeleton.01",
+            "x": 927.4280500000026,
+            "y": 560,
+            "hp": 24,
+            "state": "idle",
+            "visible": true,
+            "alpha": 1,
+            "art": "skeleton",
+            "texture": "enemy-actions",
+            "frame": 0,
+            "flipX": true,
+            "originX": 0.5,
+            "originY": 0.6234975961538461,
+            "displayHeight": 145.64551422319474,
+            "footOffset": 50,
+            "label": ""
+          }
+        },
+        {
+          "state": "telegraph",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/tablet-skeleton-telegraph.png",
+          "observed": {
+            "id": "S01.enemy.skeleton.01",
+            "x": 909.461350000003,
+            "y": 560,
+            "hp": 24,
+            "state": "telegraph",
+            "visible": true,
+            "alpha": 1,
+            "art": "skeleton",
+            "texture": "enemy-actions",
+            "frame": 1,
+            "flipX": true,
+            "originX": 0.5,
+            "originY": 0.6137319711538461,
+            "displayHeight": 145.64551422319474,
+            "footOffset": 50,
+            "label": "⚠ 준비… 피하세요!"
+          }
+        },
+        {
+          "state": "attack",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/tablet-skeleton-attack.png",
+          "observed": {
+            "id": "S01.enemy.skeleton.01",
+            "x": 909.461350000003,
+            "y": 560,
+            "hp": 24,
+            "state": "attack",
+            "visible": true,
+            "alpha": 1,
+            "art": "skeleton",
+            "texture": "enemy-actions",
+            "frame": 2,
+            "flipX": true,
+            "originX": 0.5,
+            "originY": 0.46724759615384615,
+            "displayHeight": 145.64551422319474,
+            "footOffset": 50,
+            "label": "⚠ 준비… 피하세요!"
+          }
+        },
+        {
+          "state": "recover",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/tablet-skeleton-recover.png",
+          "observed": {
+            "id": "S01.enemy.skeleton.01",
+            "x": 909.461350000003,
+            "y": 560,
+            "hp": 24,
+            "state": "recover",
+            "visible": true,
+            "alpha": 1,
+            "art": "skeleton",
+            "texture": "enemy-actions",
+            "frame": 0,
+            "flipX": true,
+            "originX": 0.5,
+            "originY": 0.6234975961538461,
+            "displayHeight": 145.64551422319474,
+            "footOffset": 50,
+            "label": "빈틈 · J 공격"
+          }
+        },
+        {
+          "state": "defeated",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/tablet-skeleton-defeated.png",
+          "observed": {
+            "id": "S01.enemy.skeleton.01",
+            "x": 909.461350000003,
+            "y": 560,
+            "hp": 0,
+            "state": "defeated",
+            "visible": true,
+            "alpha": 1,
+            "art": "skeleton",
+            "texture": "enemy-actions",
+            "frame": 3,
+            "flipX": false,
+            "originX": 0.5,
+            "originY": 0.5844350961538461,
+            "displayHeight": 145.64551422319474,
+            "footOffset": 50,
+            "label": "빛으로 돌아갔어요"
+          }
+        }
+      ],
+      "rightPath": "docs/screenshots/m6-spirit/final/art-a3/tablet-skeleton-right.png",
+      "defeat": "magic",
+      "reloadRewardsUnchanged": true
+    },
+    {
+      "device": "tablet",
+      "key": "bandit",
+      "stage": "S11",
+      "enemyId": "S11.enemy.1",
+      "captures": [
+        {
+          "state": "idle",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/tablet-bandit-idle.png",
+          "observed": {
+            "id": "S11.enemy.1",
+            "x": 765.8486,
+            "y": 550,
+            "hp": 36,
+            "state": "idle",
+            "visible": true,
+            "alpha": 1,
+            "art": "bandit",
+            "texture": "enemy-actions",
+            "frame": 4,
+            "flipX": true,
+            "originX": 0.5,
+            "originY": 0.5844350961538461,
+            "displayHeight": 238.5663082437276,
+            "footOffset": 60,
+            "label": ""
+          }
+        },
+        {
+          "state": "telegraph",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/tablet-bandit-telegraph.png",
+          "observed": {
+            "id": "S11.enemy.1",
+            "x": 728.4726500000006,
+            "y": 550,
+            "hp": 36,
+            "state": "telegraph",
+            "visible": true,
+            "alpha": 1,
+            "art": "bandit",
+            "texture": "enemy-actions",
+            "frame": 5,
+            "flipX": true,
+            "originX": 0.5,
+            "originY": 0.5883413461538461,
+            "displayHeight": 238.5663082437276,
+            "footOffset": 60,
+            "label": "⚠ 준비… 피하세요!"
+          }
+        },
+        {
+          "state": "attack",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/tablet-bandit-attack.png",
+          "observed": {
+            "id": "S11.enemy.1",
+            "x": 728.4726500000006,
+            "y": 550,
+            "hp": 36,
+            "state": "attack",
+            "visible": true,
+            "alpha": 1,
+            "art": "bandit",
+            "texture": "enemy-actions",
+            "frame": 6,
+            "flipX": true,
+            "originX": 0.5,
+            "originY": 0.47506009615384615,
+            "displayHeight": 238.5663082437276,
+            "footOffset": 60,
+            "label": "⚠ 준비… 피하세요!"
+          }
+        },
+        {
+          "state": "recover",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/tablet-bandit-recover.png",
+          "observed": {
+            "id": "S11.enemy.1",
+            "x": 728.4726500000006,
+            "y": 550,
+            "hp": 36,
+            "state": "recover",
+            "visible": true,
+            "alpha": 1,
+            "art": "bandit",
+            "texture": "enemy-actions",
+            "frame": 4,
+            "flipX": true,
+            "originX": 0.5,
+            "originY": 0.5844350961538461,
+            "displayHeight": 238.5663082437276,
+            "footOffset": 60,
+            "label": "빈틈 · J 공격"
+          }
+        },
+        {
+          "state": "defeated",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/tablet-bandit-defeated.png",
+          "observed": {
+            "id": "S11.enemy.1",
+            "x": 728.4726500000006,
+            "y": 550,
+            "hp": 0,
+            "state": "defeated",
+            "visible": true,
+            "alpha": 0.9615384615384616,
+            "art": "bandit",
+            "texture": "enemy-actions",
+            "frame": 7,
+            "flipX": false,
+            "originX": 0.5,
+            "originY": 0.5004507211538461,
+            "displayHeight": 238.5663082437276,
+            "footOffset": 60,
+            "label": "항복했어요"
+          }
+        }
+      ],
+      "rightPath": "docs/screenshots/m6-spirit/final/art-a3/tablet-bandit-right.png",
+      "defeat": "human",
+      "reloadRewardsUnchanged": true
+    },
+    {
+      "device": "tablet",
+      "key": "guard",
+      "stage": "S05",
+      "enemyId": "S05.enemy.guardian.1",
+      "captures": [
+        {
+          "state": "idle",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/tablet-guard-idle.png",
+          "observed": {
+            "id": "S05.enemy.guardian.1",
+            "x": 406.2725499998927,
+            "y": 558,
+            "hp": 32,
+            "state": "idle",
+            "visible": true,
+            "alpha": 1,
+            "art": "guard",
+            "texture": "enemy-actions",
+            "frame": 8,
+            "flipX": true,
+            "originX": 0.5,
+            "originY": 0.609375,
+            "displayHeight": 138.66666666666666,
+            "footOffset": 52,
+            "label": ""
+          }
+        },
+        {
+          "state": "telegraph",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/tablet-guard-telegraph.png",
+          "observed": {
+            "id": "S05.enemy.guardian.1",
+            "x": 363.7604499998928,
+            "y": 558,
+            "hp": 32,
+            "state": "telegraph",
+            "visible": true,
+            "alpha": 1,
+            "art": "guard",
+            "texture": "enemy-actions",
+            "frame": 9,
+            "flipX": true,
+            "originX": 0.5,
+            "originY": 0.607421875,
+            "displayHeight": 138.66666666666666,
+            "footOffset": 52,
+            "label": "⚠ 준비… 피하세요!"
+          }
+        },
+        {
+          "state": "attack",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/tablet-guard-attack.png",
+          "observed": {
+            "id": "S05.enemy.guardian.1",
+            "x": 363.7604499998928,
+            "y": 558,
+            "hp": 32,
+            "state": "attack",
+            "visible": true,
+            "alpha": 1,
+            "art": "guard",
+            "texture": "enemy-actions",
+            "frame": 10,
+            "flipX": true,
+            "originX": 0.5,
+            "originY": 0.544921875,
+            "displayHeight": 138.66666666666666,
+            "footOffset": 52,
+            "label": "⚠ 준비… 피하세요!"
+          }
+        },
+        {
+          "state": "recover",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/tablet-guard-recover.png",
+          "observed": {
+            "id": "S05.enemy.guardian.1",
+            "x": 363.7604499998928,
+            "y": 558,
+            "hp": 32,
+            "state": "recover",
+            "visible": true,
+            "alpha": 1,
+            "art": "guard",
+            "texture": "enemy-actions",
+            "frame": 8,
+            "flipX": true,
+            "originX": 0.5,
+            "originY": 0.609375,
+            "displayHeight": 138.66666666666666,
+            "footOffset": 52,
+            "label": "빈틈 · J 공격"
+          }
+        },
+        {
+          "state": "defeated",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/tablet-guard-defeated.png",
+          "observed": {
+            "id": "S05.enemy.guardian.1",
+            "x": 363.7604499998928,
+            "y": 558,
+            "hp": 0,
+            "state": "defeated",
+            "visible": true,
+            "alpha": 0.9746153846153847,
+            "art": "guard",
+            "texture": "enemy-actions",
+            "frame": 11,
+            "flipX": false,
+            "originX": 0.5,
+            "originY": 0.5625,
+            "displayHeight": 138.66666666666666,
+            "footOffset": 52,
+            "label": "항복했어요"
+          }
+        }
+      ],
+      "rightPath": "docs/screenshots/m6-spirit/final/art-a3/tablet-guard-right.png",
+      "defeat": "human",
+      "reloadRewardsUnchanged": true
+    },
+    {
+      "device": "tablet",
+      "key": "pirate",
+      "stage": "S18",
+      "enemyId": "S18.enemy.3",
+      "captures": [
+        {
+          "state": "idle",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/tablet-pirate-idle.png",
+          "observed": {
+            "id": "S18.enemy.3",
+            "x": 2267.1021499999997,
+            "y": 550,
+            "hp": 128,
+            "state": "idle",
+            "visible": true,
+            "alpha": 1,
+            "art": "pirate",
+            "texture": "enemy-actions",
+            "frame": 12,
+            "flipX": true,
+            "originX": 0.5,
+            "originY": 0.653343023255814,
+            "displayHeight": 283.1639871382637,
+            "footOffset": 60,
+            "label": ""
+          }
+        },
+        {
+          "state": "telegraph",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/tablet-pirate-telegraph.png",
+          "observed": {
+            "id": "S18.enemy.3",
+            "x": 2237.1312500000035,
+            "y": 550,
+            "hp": 128,
+            "state": "telegraph",
+            "visible": true,
+            "alpha": 1,
+            "art": "pirate",
+            "texture": "enemy-actions",
+            "frame": 13,
+            "flipX": true,
+            "originX": 0.5,
+            "originY": 0.651389898255814,
+            "displayHeight": 283.1639871382637,
+            "footOffset": 60,
+            "label": "⚠ 준비… 피하세요!"
+          }
+        },
+        {
+          "state": "attack",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/tablet-pirate-attack.png",
+          "observed": {
+            "id": "S18.enemy.3",
+            "x": 2237.1312500000035,
+            "y": 550,
+            "hp": 128,
+            "state": "attack",
+            "visible": true,
+            "alpha": 1,
+            "art": "pirate",
+            "texture": "enemy-actions",
+            "frame": 14,
+            "flipX": true,
+            "originX": 0.5,
+            "originY": 0.602561773255814,
+            "displayHeight": 283.1639871382637,
+            "footOffset": 60,
+            "label": "⚠ 준비… 피하세요!"
+          }
+        },
+        {
+          "state": "recover",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/tablet-pirate-recover.png",
+          "observed": {
+            "id": "S18.enemy.3",
+            "x": 2237.1312500000035,
+            "y": 550,
+            "hp": 128,
+            "state": "recover",
+            "visible": true,
+            "alpha": 1,
+            "art": "pirate",
+            "texture": "enemy-actions",
+            "frame": 12,
+            "flipX": true,
+            "originX": 0.5,
+            "originY": 0.653343023255814,
+            "displayHeight": 283.1639871382637,
+            "footOffset": 60,
+            "label": "빈틈 · J 공격"
+          }
+        },
+        {
+          "state": "defeated",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/tablet-pirate-defeated.png",
+          "observed": {
+            "id": "S18.enemy.3",
+            "x": 2237.1312500000035,
+            "y": 550,
+            "hp": 0,
+            "state": "defeated",
+            "visible": true,
+            "alpha": 0.9738461538461538,
+            "art": "pirate",
+            "texture": "enemy-actions",
+            "frame": 15,
+            "flipX": false,
+            "originX": 0.5,
+            "originY": 0.602561773255814,
+            "displayHeight": 283.1639871382637,
+            "footOffset": 60,
+            "label": "항복했어요"
+          }
+        }
+      ],
+      "rightPath": "docs/screenshots/m6-spirit/final/art-a3/tablet-pirate-right.png",
+      "defeat": "human",
+      "reloadRewardsUnchanged": true
+    },
+    {
+      "device": "tablet",
+      "key": "snake",
+      "stage": "S20",
+      "enemyId": "S20.enemy.1",
+      "captures": [
+        {
+          "state": "idle",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/tablet-snake-idle.png",
+          "observed": {
+            "id": "S20.enemy.1",
+            "x": 764.8247000000011,
+            "y": 550,
+            "hp": 43,
+            "state": "idle",
+            "visible": true,
+            "alpha": 1,
+            "art": "snake",
+            "texture": "enemy-actions",
+            "frame": 16,
+            "flipX": true,
+            "originX": 0.5,
+            "originY": 0.5880408653846154,
+            "displayHeight": 298.47533632286996,
+            "footOffset": 60,
+            "label": ""
+          }
+        },
+        {
+          "state": "telegraph",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/tablet-snake-telegraph.png",
+          "observed": {
+            "id": "S20.enemy.1",
+            "x": 737.1111500000018,
+            "y": 550,
+            "hp": 43,
+            "state": "telegraph",
+            "visible": true,
+            "alpha": 1,
+            "art": "snake",
+            "texture": "enemy-actions",
+            "frame": 17,
+            "flipX": true,
+            "originX": 0.5,
+            "originY": 0.5880408653846154,
+            "displayHeight": 298.47533632286996,
+            "footOffset": 60,
+            "label": "⚠ 준비… 피하세요!"
+          }
+        },
+        {
+          "state": "attack",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/tablet-snake-attack.png",
+          "observed": {
+            "id": "S20.enemy.1",
+            "x": 737.1111500000018,
+            "y": 550,
+            "hp": 43,
+            "state": "attack",
+            "visible": true,
+            "alpha": 1,
+            "art": "snake",
+            "texture": "enemy-actions",
+            "frame": 18,
+            "flipX": true,
+            "originX": 0.5,
+            "originY": 0.4981971153846154,
+            "displayHeight": 298.47533632286996,
+            "footOffset": 60,
+            "label": "⚠ 준비… 피하세요!"
+          }
+        },
+        {
+          "state": "recover",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/tablet-snake-recover.png",
+          "observed": {
+            "id": "S20.enemy.1",
+            "x": 737.1111500000018,
+            "y": 550,
+            "hp": 43,
+            "state": "recover",
+            "visible": true,
+            "alpha": 1,
+            "art": "snake",
+            "texture": "enemy-actions",
+            "frame": 16,
+            "flipX": true,
+            "originX": 0.5,
+            "originY": 0.5880408653846154,
+            "displayHeight": 298.47533632286996,
+            "footOffset": 60,
+            "label": "✦"
+          }
+        },
+        {
+          "state": "defeated",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/tablet-snake-defeated.png",
+          "observed": {
+            "id": "S20.enemy.1",
+            "x": 737.1111500000018,
+            "y": 550,
+            "hp": 0,
+            "state": "defeated",
+            "visible": true,
+            "alpha": 1,
+            "art": "snake",
+            "texture": "enemy-actions",
+            "frame": 19,
+            "flipX": false,
+            "originX": 0.5,
+            "originY": 0.4981971153846154,
+            "displayHeight": 298.47533632286996,
+            "footOffset": 60,
+            "label": "저주가 풀렸어!"
+          }
+        }
+      ],
+      "rightPath": "docs/screenshots/m6-spirit/final/art-a3/tablet-snake-right.png",
+      "defeat": "animal",
+      "reloadRewardsUnchanged": true
+    },
+    {
+      "device": "tablet",
+      "key": "tiger",
+      "stage": "S22",
+      "enemyId": "S22.enemy.3",
+      "captures": [
+        {
+          "state": "idle",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/tablet-tiger-idle.png",
+          "observed": {
+            "id": "S22.enemy.3",
+            "x": 2267.0880500000003,
+            "y": 550,
+            "hp": 128,
+            "state": "idle",
+            "visible": true,
+            "alpha": 1,
+            "art": "tiger",
+            "texture": "enemy-actions",
+            "frame": 20,
+            "flipX": true,
+            "originX": 0.5,
+            "originY": 0.6544331395348837,
+            "displayHeight": 379.58620689655174,
+            "footOffset": 60,
+            "label": ""
+          }
+        },
+        {
+          "state": "telegraph",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/tablet-tiger-telegraph.png",
+          "observed": {
+            "id": "S22.enemy.3",
+            "x": 2237.099000000003,
+            "y": 550,
+            "hp": 128,
+            "state": "telegraph",
+            "visible": true,
+            "alpha": 1,
+            "art": "tiger",
+            "texture": "enemy-actions",
+            "frame": 21,
+            "flipX": true,
+            "originX": 0.5,
+            "originY": 0.6583393895348837,
+            "displayHeight": 379.58620689655174,
+            "footOffset": 60,
+            "label": "⚠ 준비… 피하세요!"
+          }
+        },
+        {
+          "state": "attack",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/tablet-tiger-attack.png",
+          "observed": {
+            "id": "S22.enemy.3",
+            "x": 2237.099000000003,
+            "y": 550,
+            "hp": 128,
+            "state": "attack",
+            "visible": true,
+            "alpha": 1,
+            "art": "tiger",
+            "texture": "enemy-actions",
+            "frame": 22,
+            "flipX": true,
+            "originX": 0.5,
+            "originY": 0.5587300145348837,
+            "displayHeight": 379.58620689655174,
+            "footOffset": 60,
+            "label": "⚠ 준비… 피하세요!"
+          }
+        },
+        {
+          "state": "recover",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/tablet-tiger-recover.png",
+          "observed": {
+            "id": "S22.enemy.3",
+            "x": 2237.099000000003,
+            "y": 550,
+            "hp": 128,
+            "state": "recover",
+            "visible": true,
+            "alpha": 1,
+            "art": "tiger",
+            "texture": "enemy-actions",
+            "frame": 20,
+            "flipX": true,
+            "originX": 0.5,
+            "originY": 0.6544331395348837,
+            "displayHeight": 379.58620689655174,
+            "footOffset": 60,
+            "label": "✦"
+          }
+        },
+        {
+          "state": "defeated",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/tablet-tiger-defeated.png",
+          "observed": {
+            "id": "S22.enemy.3",
+            "x": 2237.099000000003,
+            "y": 550,
+            "hp": 0,
+            "state": "defeated",
+            "visible": true,
+            "alpha": 1,
+            "art": "tiger",
+            "texture": "enemy-actions",
+            "frame": 23,
+            "flipX": false,
+            "originX": 0.5,
+            "originY": 0.5880268895348837,
+            "displayHeight": 379.58620689655174,
+            "footOffset": 60,
+            "label": "저주가 풀렸어!"
+          }
+        }
+      ],
+      "rightPath": "docs/screenshots/m6-spirit/final/art-a3/tablet-tiger-right.png",
+      "defeat": "animal",
+      "reloadRewardsUnchanged": true
+    },
+    {
+      "device": "tablet",
+      "key": "dragon",
+      "stage": "S12",
+      "enemyId": "S12.enemy.3",
+      "captures": [
+        {
+          "state": "idle",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/tablet-dragon-idle.png",
+          "observed": {
+            "id": "S12.enemy.3",
+            "x": 2266.309550000002,
+            "y": 550,
+            "hp": 128,
+            "state": "idle",
+            "visible": true,
+            "alpha": 1,
+            "art": "dragon",
+            "texture": "enemy-actions",
+            "frame": 24,
+            "flipX": true,
+            "originX": 0.5,
+            "originY": 0.6837300145348837,
+            "displayHeight": 243.94459833795014,
+            "footOffset": 60,
+            "label": ""
+          }
+        },
+        {
+          "state": "telegraph",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/tablet-dragon-telegraph.png",
+          "observed": {
+            "id": "S12.enemy.3",
+            "x": 2236.3322000000067,
+            "y": 550,
+            "hp": 128,
+            "state": "telegraph",
+            "visible": true,
+            "alpha": 1,
+            "art": "dragon",
+            "texture": "enemy-actions",
+            "frame": 25,
+            "flipX": true,
+            "originX": 0.5,
+            "originY": 0.6856831395348837,
+            "displayHeight": 243.94459833795014,
+            "footOffset": 60,
+            "label": "⚠ 준비… 피하세요!"
+          }
+        },
+        {
+          "state": "attack",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/tablet-dragon-attack.png",
+          "observed": {
+            "id": "S12.enemy.3",
+            "x": 2236.3322000000067,
+            "y": 550,
+            "hp": 128,
+            "state": "attack",
+            "visible": true,
+            "alpha": 1,
+            "art": "dragon",
+            "texture": "enemy-actions",
+            "frame": 26,
+            "flipX": true,
+            "originX": 0.5,
+            "originY": 0.5958393895348837,
+            "displayHeight": 243.94459833795014,
+            "footOffset": 60,
+            "label": "⚠ 준비… 피하세요!"
+          }
+        },
+        {
+          "state": "recover",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/tablet-dragon-recover.png",
+          "observed": {
+            "id": "S12.enemy.3",
+            "x": 2236.3322000000067,
+            "y": 550,
+            "hp": 128,
+            "state": "recover",
+            "visible": true,
+            "alpha": 1,
+            "art": "dragon",
+            "texture": "enemy-actions",
+            "frame": 24,
+            "flipX": true,
+            "originX": 0.5,
+            "originY": 0.6837300145348837,
+            "displayHeight": 243.94459833795014,
+            "footOffset": 60,
+            "label": "빈틈 · J 공격"
+          }
+        },
+        {
+          "state": "defeated",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/tablet-dragon-defeated.png",
+          "observed": {
+            "id": "S12.enemy.3",
+            "x": 2236.3322000000067,
+            "y": 550,
+            "hp": 0,
+            "state": "defeated",
+            "visible": true,
+            "alpha": 1,
+            "art": "dragon",
+            "texture": "enemy-actions",
+            "frame": 27,
+            "flipX": false,
+            "originX": 0.5,
+            "originY": 0.5860737645348837,
+            "displayHeight": 243.94459833795014,
+            "footOffset": 60,
+            "label": "저주가 풀렸어!"
+          }
+        }
+      ],
+      "rightPath": "docs/screenshots/m6-spirit/final/art-a3/tablet-dragon-right.png",
+      "defeat": "animal",
+      "reloadRewardsUnchanged": true
+    },
+    {
+      "device": "tablet",
+      "key": "crab",
+      "stage": "S04",
+      "enemyId": "S04.enemy.crab.1",
+      "captures": [
+        {
+          "state": "idle",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/tablet-crab-idle.png",
+          "observed": {
+            "id": "S04.enemy.crab.1",
+            "x": 493.0210000000003,
+            "y": 565,
+            "hp": 26,
+            "state": "idle",
+            "visible": true,
+            "alpha": 1,
+            "art": "crab",
+            "texture": "enemy-actions",
+            "frame": 28,
+            "flipX": true,
+            "originX": 0.5,
+            "originY": 0.6714324951171875,
+            "displayHeight": 370.2598870056497,
+            "footOffset": 45,
+            "label": ""
+          }
+        },
+        {
+          "state": "telegraph",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/tablet-crab-telegraph.png",
+          "observed": {
+            "id": "S04.enemy.crab.1",
+            "x": 458.21455000000043,
+            "y": 565,
+            "hp": 26,
+            "state": "telegraph",
+            "visible": true,
+            "alpha": 1,
+            "art": "crab",
+            "texture": "enemy-actions",
+            "frame": 29,
+            "flipX": true,
+            "originX": 0.5,
+            "originY": 0.6792449951171875,
+            "displayHeight": 370.2598870056497,
+            "footOffset": 45,
+            "label": "⚠ 준비… 피하세요!"
+          }
+        },
+        {
+          "state": "attack",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/tablet-crab-attack.png",
+          "observed": {
+            "id": "S04.enemy.crab.1",
+            "x": 458.21455000000043,
+            "y": 565,
+            "hp": 26,
+            "state": "attack",
+            "visible": true,
+            "alpha": 1,
+            "art": "crab",
+            "texture": "enemy-actions",
+            "frame": 30,
+            "flipX": true,
+            "originX": 0.5,
+            "originY": 0.5093231201171875,
+            "displayHeight": 370.2598870056497,
+            "footOffset": 45,
+            "label": "⚠ 준비… 피하세요!"
+          }
+        },
+        {
+          "state": "recover",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/tablet-crab-recover.png",
+          "observed": {
+            "id": "S04.enemy.crab.1",
+            "x": 458.21455000000043,
+            "y": 565,
+            "hp": 26,
+            "state": "recover",
+            "visible": true,
+            "alpha": 1,
+            "art": "crab",
+            "texture": "enemy-actions",
+            "frame": 28,
+            "flipX": true,
+            "originX": 0.5,
+            "originY": 0.6714324951171875,
+            "displayHeight": 370.2598870056497,
+            "footOffset": 45,
+            "label": "빈틈 · J 공격"
+          }
+        },
+        {
+          "state": "defeated",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/tablet-crab-defeated.png",
+          "observed": {
+            "id": "S04.enemy.crab.1",
+            "x": 458.21455000000043,
+            "y": 565,
+            "hp": 0,
+            "state": "defeated",
+            "visible": true,
+            "alpha": 1,
+            "art": "crab",
+            "texture": "enemy-actions",
+            "frame": 31,
+            "flipX": false,
+            "originX": 0.5,
+            "originY": 0.5171356201171875,
+            "displayHeight": 370.2598870056497,
+            "footOffset": 45,
+            "label": "저주가 풀렸어!"
+          }
+        }
+      ],
+      "rightPath": "docs/screenshots/m6-spirit/final/art-a3/tablet-crab-right.png",
+      "defeat": "animal",
+      "reloadRewardsUnchanged": true
+    },
+    {
+      "device": "tablet",
+      "key": "stone",
+      "stage": "S24",
+      "enemyId": "S24.enemy.3",
+      "captures": [
+        {
+          "state": "idle",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/tablet-stone-idle.png",
+          "observed": {
+            "id": "S24.enemy.3",
+            "x": 2266.5921499999995,
+            "y": 550,
+            "hp": 128,
+            "state": "idle",
+            "visible": true,
+            "alpha": 1,
+            "art": "stone",
+            "texture": "enemy-actions",
+            "frame": 32,
+            "flipX": true,
+            "originX": 0.5,
+            "originY": 0.5917060319767442,
+            "displayHeight": 403.9633027522936,
+            "footOffset": 60,
+            "label": ""
+          }
+        },
+        {
+          "state": "telegraph",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/tablet-stone-telegraph.png",
+          "observed": {
+            "id": "S24.enemy.3",
+            "x": 2230.6532000000043,
+            "y": 550,
+            "hp": 128,
+            "state": "telegraph",
+            "visible": true,
+            "alpha": 1,
+            "art": "stone",
+            "texture": "enemy-actions",
+            "frame": 33,
+            "flipX": true,
+            "originX": 0.5,
+            "originY": 0.5956122819767442,
+            "displayHeight": 403.9633027522936,
+            "footOffset": 60,
+            "label": "⚠ 준비… 피하세요!"
+          }
+        },
+        {
+          "state": "attack",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/tablet-stone-attack.png",
+          "observed": {
+            "id": "S24.enemy.3",
+            "x": 2230.6532000000043,
+            "y": 550,
+            "hp": 128,
+            "state": "attack",
+            "visible": true,
+            "alpha": 1,
+            "art": "stone",
+            "texture": "enemy-actions",
+            "frame": 34,
+            "flipX": true,
+            "originX": 0.5,
+            "originY": 0.5702216569767442,
+            "displayHeight": 403.9633027522936,
+            "footOffset": 60,
+            "label": "⚠ 준비… 피하세요!"
+          }
+        },
+        {
+          "state": "recover",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/tablet-stone-recover.png",
+          "observed": {
+            "id": "S24.enemy.3",
+            "x": 2230.6532000000043,
+            "y": 550,
+            "hp": 128,
+            "state": "recover",
+            "visible": true,
+            "alpha": 1,
+            "art": "stone",
+            "texture": "enemy-actions",
+            "frame": 32,
+            "flipX": true,
+            "originX": 0.5,
+            "originY": 0.5917060319767442,
+            "displayHeight": 403.9633027522936,
+            "footOffset": 60,
+            "label": "빈틈 · J 공격"
+          }
+        },
+        {
+          "state": "defeated",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/tablet-stone-defeated.png",
+          "observed": {
+            "id": "S24.enemy.3",
+            "x": 2230.6532000000043,
+            "y": 550,
+            "hp": 0,
+            "state": "defeated",
+            "visible": true,
+            "alpha": 1,
+            "art": "stone",
+            "texture": "enemy-actions",
+            "frame": 35,
+            "flipX": false,
+            "originX": 0.5,
+            "originY": 0.5721747819767442,
+            "displayHeight": 403.9633027522936,
+            "footOffset": 60,
+            "label": "빛으로 돌아갔어요"
+          }
+        }
+      ],
+      "rightPath": "docs/screenshots/m6-spirit/final/art-a3/tablet-stone-right.png",
+      "defeat": "magic",
+      "reloadRewardsUnchanged": true
+    },
+    {
+      "device": "tablet",
+      "key": "kuura",
+      "stage": "S19",
+      "enemyId": "S19.enemy.3",
+      "captures": [
+        {
+          "state": "idle",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/tablet-kuura-idle.png",
+          "observed": {
+            "id": "S19.enemy.3",
+            "x": 2267.3643500000026,
+            "y": 550,
+            "hp": 128,
+            "state": "idle",
+            "visible": true,
+            "alpha": 1,
+            "art": "kuura",
+            "texture": "enemy-actions",
+            "frame": 36,
+            "flipX": true,
+            "originX": 0.5,
+            "originY": 0.6787790697674418,
+            "displayHeight": 305.77777777777777,
+            "footOffset": 60,
+            "label": ""
+          }
+        },
+        {
+          "state": "telegraph",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/tablet-kuura-telegraph.png",
+          "observed": {
+            "id": "S19.enemy.3",
+            "x": 2229.8567000000075,
+            "y": 550,
+            "hp": 128,
+            "state": "telegraph",
+            "visible": true,
+            "alpha": 1,
+            "art": "kuura",
+            "texture": "enemy-actions",
+            "frame": 37,
+            "flipX": true,
+            "originX": 0.5,
+            "originY": 0.6748728197674418,
+            "displayHeight": 305.77777777777777,
+            "footOffset": 60,
+            "label": "⚠ 준비… 피하세요!"
+          }
+        },
+        {
+          "state": "attack",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/tablet-kuura-attack.png",
+          "observed": {
+            "id": "S19.enemy.3",
+            "x": 2229.8567000000075,
+            "y": 550,
+            "hp": 128,
+            "state": "attack",
+            "visible": true,
+            "alpha": 1,
+            "art": "kuura",
+            "texture": "enemy-actions",
+            "frame": 38,
+            "flipX": true,
+            "originX": 0.5,
+            "originY": 0.5713571947674418,
+            "displayHeight": 305.77777777777777,
+            "footOffset": 60,
+            "label": "⚠ 준비… 피하세요!"
+          }
+        },
+        {
+          "state": "recover",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/tablet-kuura-recover.png",
+          "observed": {
+            "id": "S19.enemy.3",
+            "x": 2229.8567000000075,
+            "y": 550,
+            "hp": 128,
+            "state": "recover",
+            "visible": true,
+            "alpha": 1,
+            "art": "kuura",
+            "texture": "enemy-actions",
+            "frame": 36,
+            "flipX": true,
+            "originX": 0.5,
+            "originY": 0.6787790697674418,
+            "displayHeight": 305.77777777777777,
+            "footOffset": 60,
+            "label": "빈틈 · J 공격"
+          }
+        },
+        {
+          "state": "defeated",
+          "path": "docs/screenshots/m6-spirit/final/art-a3/tablet-kuura-defeated.png",
+          "observed": {
+            "id": "S19.enemy.3",
+            "x": 2229.8567000000075,
+            "y": 550,
+            "hp": 0,
+            "state": "defeated",
+            "visible": true,
+            "alpha": 1,
+            "art": "kuura",
+            "texture": "enemy-actions",
+            "frame": 39,
+            "flipX": false,
+            "originX": 0.5,
+            "originY": 0.5908884447674418,
+            "displayHeight": 305.77777777777777,
+            "footOffset": 60,
+            "label": "빛으로 돌아갔어요"
+          }
+        }
+      ],
+      "rightPath": "docs/screenshots/m6-spirit/final/art-a3/tablet-kuura-right.png",
+      "defeat": "magic",
+      "reloadRewardsUnchanged": true
+    }
+  ],
+  "errors": []
+}

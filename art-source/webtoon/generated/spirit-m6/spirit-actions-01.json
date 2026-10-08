@@ -1,0 +1,14 @@
+{
+  "tool": "OpenAI built-in imagegen",
+  "date": "2026-10-06",
+  "toolPath": "C:/Users/tbose/.codex/generated_images/01a10013-499c-7b11-9c12-3ae8826e542a/exec-110bc2ff-862a-4057-b3f2-191ce1626295.png",
+  "reference": "art-source/webtoon/hero-webtoon.webp (project original style only)",
+  "prompt": "Use case: illustration-story. Asset type: original game enemy four-pose sprite sheet, genuinely transparent RGBA, square canvas divided into exactly two equal columns and two equal rows, no grid lines.\nReference image 1 is ONLY the project's own hero-webtoon.webp STYLE reference: clean dark navy outlines, warm teal/gold palette, cel shading, upper-left light. Do not depict the human hero or copy his clothing.\nCreate one consistent original friendly elemental wisp, inspired by our existing own placeholder design: a pale cyan/teal upright teardrop-shaped flame/cloud body, small subtle eyes looking RIGHT, little gold lightning-shaped geometric energy core on its torso, soft split smoky tail instead of feet. Not a dead human ghost, deity or religious figure. Small readable silhouette suitable for a children's adventure. Gentle expressions, no scary face.\nFour poses in reading order: top-left idle gently upright, top-right telegraph compressing and leaning slightly back with small raised side wisps and brighter torso core (silhouette clearly prepares an attack), bottom-left contact attack leaning/lunging toward RIGHT with its forward side wisp extended and a very short contained swoosh, bottom-right peacefully calmed eyes closed, body gently dissolving into soft light and smoke with a few tiny golden motes still forming a readable right-facing torso. This last pose is magic returning to light, NOT surrender, injury or dead body.\nAll four point RIGHT, same design and scale. Keep each COMPLETE subject including every glow/swoosh/smoke/mote inside the central 65 percent of its own quadrant, with generous completely transparent margins along ALL outer edges and both central seams. No part touching/crossing a cell boundary, no background scenery, ground/shadow rectangle, weapon, labels, letters, numbers, punctuation, symbols resembling writing, logo, signature or watermark. The lightning is a simple geometric torso shape, no text. No blood, wounds or fear. Only four isolated game sprites, NOT a comic page.",
+  "status": "rejected: attack effect crosses central vertical cell boundary; original preserved",
+  "sha256": "126c1c8b04196d201f810f3ad72f65271d934904b51b75f04544806a1c78f4d1",
+  "nativeSize": [
+    1254,
+    1254
+  ],
+  "artStatus": "ART_DRAFT"
+}

@@ -1,0 +1,51 @@
+[
+  {
+    "command": "npm run typecheck",
+    "exitCode": 0,
+    "started": "2026-10-08T10:26:55.766400+00:00",
+    "seconds": 3.5,
+    "log": "docs/validation/s09-mechanics-check-1.txt"
+  },
+  {
+    "command": "npm run lint",
+    "exitCode": 0,
+    "started": "2026-10-08T10:26:59.274599+00:00",
+    "seconds": 5.563,
+    "log": "docs/validation/s09-mechanics-check-2.txt"
+  },
+  {
+    "command": "npm run test",
+    "exitCode": 0,
+    "started": "2026-10-08T10:27:04.838697+00:00",
+    "seconds": 4.265,
+    "log": "docs/validation/s09-mechanics-check-3.txt"
+  },
+  {
+    "command": "npm run validate:content",
+    "exitCode": 0,
+    "started": "2026-10-08T10:27:09.108186+00:00",
+    "seconds": 1.875,
+    "log": "docs/validation/s09-mechanics-check-4.txt"
+  },
+  {
+    "command": "npm run build",
+    "exitCode": 0,
+    "started": "2026-10-08T10:27:10.999248+00:00",
+    "seconds": 17.734,
+    "log": "docs/validation/s09-mechanics-check-5.txt"
+  },
+  {
+    "command": "python scripts/audit-webtoon.py",
+    "exitCode": 0,
+    "started": "2026-10-08T10:27:28.740039+00:00",
+    "seconds": 18.859,
+    "log": "docs/validation/s09-mechanics-check-6.txt"
+  },
+  {
+    "command": "npx tsx scripts/check-art-budget.ts",
+    "exitCode": 0,
+    "started": "2026-10-08T10:27:47.601629+00:00",
+    "seconds": 3.641,
+    "log": "docs/validation/s09-mechanics-check-7.txt"
+  }
+]

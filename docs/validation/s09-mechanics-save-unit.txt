@@ -1,0 +1,14 @@
+
+> sinbad-seven-treasures@0.1.0 test
+> vitest run tests/unit/roc-mechanics.test.ts
+
+
+ RUN  v3.2.4 C:/code/code10(sindbad)
+
+ ✓ tests/unit/roc-mechanics.test.ts (3 tests) 8ms
+
+ Test Files  1 passed (1)
+      Tests  3 passed (3)
+   Start at  19:28:20
+   Duration  795ms (transform 121ms, setup 0ms, collect 257ms, tests 8ms, environment 0ms, prepare 222ms)
+

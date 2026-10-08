@@ -1,0 +1,464 @@
+{
+  "screens": [
+    {
+      "path": "docs/screenshots/m6-bat/final/m6-bat/campaign-S05-route.png",
+      "size": [
+        1280,
+        720
+      ],
+      "bytes": 1102236,
+      "sha256": "be6c8fe14f6989101850fa073095c50bd8b5474892e0d7ae4404363e12a77c80"
+    },
+    {
+      "path": "docs/screenshots/m6-bat/final/m6-bat/campaign-S10-route.png",
+      "size": [
+        1280,
+        720
+      ],
+      "bytes": 1073380,
+      "sha256": "beaeaf5dc4bdb0d6f49fa6eec7d586bc1cc1ea26b418d9520ae4b4429f1ba67c"
+    },
+    {
+      "path": "docs/screenshots/m6-bat/final/m6-bat/campaign-S15-route.png",
+      "size": [
+        1280,
+        720
+      ],
+      "bytes": 1250694,
+      "sha256": "7431879d6ae7a4847cbe843056a967be2bc545f5369b873176a87274366d33b6"
+    },
+    {
+      "path": "docs/screenshots/m6-bat/final/m6-bat/campaign-S19-route.png",
+      "size": [
+        1280,
+        720
+      ],
+      "bytes": 849914,
+      "sha256": "d2a2f0180dabe087e13dc39dd39130cb01900efc3d75b0e9cf655b91db4719d5"
+    },
+    {
+      "path": "docs/screenshots/m6-bat/final/m6-bat/campaign-S25-route.png",
+      "size": [
+        1280,
+        720
+      ],
+      "bytes": 1061885,
+      "sha256": "d1f2b3cb82f0bdb1ffe577cfde28016eed359928eb65f77737295b42612c3ba5"
+    },
+    {
+      "path": "docs/screenshots/m6-bat/final/m6-bat/campaign-S29-route.png",
+      "size": [
+        1280,
+        720
+      ],
+      "bytes": 1191912,
+      "sha256": "ee9d89abcc85d2d7bb7d953ad06a4be66bda483b9f0f0b8321da75805e08f007"
+    },
+    {
+      "path": "docs/screenshots/m6-bat/final/m6-bat/campaign-S36-route.png",
+      "size": [
+        1280,
+        720
+      ],
+      "bytes": 1003974,
+      "sha256": "d8076f09040d7ba9edcb719454ebcebd5e77b9d74daf086bd74d944d6a2c4d8c"
+    },
+    {
+      "path": "docs/screenshots/m6-bat/final/m6-bat/mobile-phone-dialogue.png",
+      "size": [
+        2532,
+        1170
+      ],
+      "bytes": 1675598,
+      "sha256": "6331bb93c7c748c464a9c9e992804da4eed912e71dbc9e5b8fd77dc03645db99"
+    },
+    {
+      "path": "docs/screenshots/m6-bat/final/m6-bat/mobile-phone-start.png",
+      "size": [
+        2532,
+        1170
+      ],
+      "bytes": 2681083,
+      "sha256": "ae3b984cb6057ea3ca8a6c27b5ab7ff471809ebb321fee0ad8143fd48efe3e24"
+    },
+    {
+      "path": "docs/screenshots/m6-bat/final/m6-bat/mobile-phone-swing.png",
+      "size": [
+        2532,
+        1170
+      ],
+      "bytes": 2653191,
+      "sha256": "27c429a1201122cf863fd91eb1fc30a1be420aa67dc175901146ed6f820c12e5"
+    },
+    {
+      "path": "docs/screenshots/m6-bat/final/m6-bat/mobile-tablet-dialogue.png",
+      "size": [
+        2360,
+        1640
+      ],
+      "bytes": 2971068,
+      "sha256": "5d78d33c65e8dba87c165e299508ce31fd991fca421dcc267b7cefaa6f7e5bd4"
+    },
+    {
+      "path": "docs/screenshots/m6-bat/final/m6-bat/mobile-tablet-start.png",
+      "size": [
+        2360,
+        1640
+      ],
+      "bytes": 2940648,
+      "sha256": "0650c09bc4b13f122f35530e0597193f75f21cab0cc038348fed10898c30e174"
+    },
+    {
+      "path": "docs/screenshots/m6-bat/final/m6-bat/mobile-tablet-swing.png",
+      "size": [
+        2360,
+        1640
+      ],
+      "bytes": 2917530,
+      "sha256": "4e3946e4f81bf8499688854f554d541bd37e0f81d4dffd72bde9c7ff0b78de36"
+    },
+    {
+      "path": "docs/screenshots/m6-bat/final/m6-bat/phone-fallback-attack.png",
+      "size": [
+        844,
+        390
+      ],
+      "bytes": 465431,
+      "sha256": "eb9a3b79b013f860de3304b222aa64e5c93ac0283c150765f136105365a778c3"
+    },
+    {
+      "path": "docs/screenshots/m6-bat/final/m6-bat/phone-fallback-checkpoint-resume.png",
+      "size": [
+        844,
+        390
+      ],
+      "bytes": 459571,
+      "sha256": "502486a6ed192a00d7f80290076e977a875138aa2f267c26af810b6ed8f28e37"
+    },
+    {
+      "path": "docs/screenshots/m6-bat/final/m6-bat/phone-fallback-defeated.png",
+      "size": [
+        844,
+        390
+      ],
+      "bytes": 465195,
+      "sha256": "b9c5ca4eb21b67130326a74ebb8b6b1a70c249380750d3a04fa160e50278bd40"
+    },
+    {
+      "path": "docs/screenshots/m6-bat/final/m6-bat/phone-fallback-idle.png",
+      "size": [
+        844,
+        390
+      ],
+      "bytes": 464844,
+      "sha256": "2cc682b6bcf3582b3d08436bd4ceef94a1896ccc0f3ab968bf9738a8d9821100"
+    },
+    {
+      "path": "docs/screenshots/m6-bat/final/m6-bat/phone-fallback-recover.png",
+      "size": [
+        844,
+        390
+      ],
+      "bytes": 464244,
+      "sha256": "37f5ef64487261a3f371f3a2f35c1d3afdf9880aa2a00c816ddd6dde82bb0802"
+    },
+    {
+      "path": "docs/screenshots/m6-bat/final/m6-bat/phone-fallback-right.png",
+      "size": [
+        844,
+        390
+      ],
+      "bytes": 464082,
+      "sha256": "8fefde6e42f8f9558c06614a31ece15538ef9a4bdb538f6bee3c5ed903a616dc"
+    },
+    {
+      "path": "docs/screenshots/m6-bat/final/m6-bat/phone-fallback-safe-puzzle.png",
+      "size": [
+        844,
+        390
+      ],
+      "bytes": 453106,
+      "sha256": "3d5b7558603b41c5f0fb3107086f06c92f0fa4480d0ba75466b221ff1f56b9cc"
+    },
+    {
+      "path": "docs/screenshots/m6-bat/final/m6-bat/phone-fallback-telegraph.png",
+      "size": [
+        844,
+        390
+      ],
+      "bytes": 465555,
+      "sha256": "06bdd3b752870ecf0500b55ce558db06bfcdba33808f11190564ca06aafc0d54"
+    },
+    {
+      "path": "docs/screenshots/m6-bat/final/m6-bat/phone-normal-attack.png",
+      "size": [
+        844,
+        390
+      ],
+      "bytes": 469907,
+      "sha256": "ffe7e505a811fd2a019cf81d12b40925a17dc6ed262f28fb16c594dd186ad0bc"
+    },
+    {
+      "path": "docs/screenshots/m6-bat/final/m6-bat/phone-normal-checkpoint-resume.png",
+      "size": [
+        844,
+        390
+      ],
+      "bytes": 463180,
+      "sha256": "659a829b0f6cb14804af704e5d0a340b50d2157a9ab0917fa000f8a88bf9d9dd"
+    },
+    {
+      "path": "docs/screenshots/m6-bat/final/m6-bat/phone-normal-defeated.png",
+      "size": [
+        844,
+        390
+      ],
+      "bytes": 470292,
+      "sha256": "042678afde6114ad28b085000ef4ce0178a5e7e43d36322ff659905e8324e1ac"
+    },
+    {
+      "path": "docs/screenshots/m6-bat/final/m6-bat/phone-normal-idle.png",
+      "size": [
+        844,
+        390
+      ],
+      "bytes": 469495,
+      "sha256": "54232e31a703113d931247a7e93b7734945c61555747eab4087d13b162bb5c4d"
+    },
+    {
+      "path": "docs/screenshots/m6-bat/final/m6-bat/phone-normal-recover.png",
+      "size": [
+        844,
+        390
+      ],
+      "bytes": 469152,
+      "sha256": "3598df8d2548fba621ea1a4749b8545986980d8cc61b018789073e82a940236e"
+    },
+    {
+      "path": "docs/screenshots/m6-bat/final/m6-bat/phone-normal-right.png",
+      "size": [
+        844,
+        390
+      ],
+      "bytes": 468399,
+      "sha256": "3701d2cf59e1aa201e1c3ba713fc0610910ea66b7c3c8151b9d3934ac9e2c1df"
+    },
+    {
+      "path": "docs/screenshots/m6-bat/final/m6-bat/phone-normal-safe-puzzle.png",
+      "size": [
+        844,
+        390
+      ],
+      "bytes": 456095,
+      "sha256": "eb7a24cb7cf5de620562e13cde5ed3d43eb38b47202bac8620e24eb9363aa51b"
+    },
+    {
+      "path": "docs/screenshots/m6-bat/final/m6-bat/phone-normal-telegraph.png",
+      "size": [
+        844,
+        390
+      ],
+      "bytes": 470474,
+      "sha256": "4838578de162f6a1faa13b85bac2cbdae0418a687d0fb0b8aeb7ad6e1f9db7ae"
+    },
+    {
+      "path": "docs/screenshots/m6-bat/final/m6-bat/tablet-fallback-attack.png",
+      "size": [
+        1180,
+        820
+      ],
+      "bytes": 931358,
+      "sha256": "d71514aece389f9d88ab0d624fa3b2422e340fd9f56dc8802247e663d58b5b69"
+    },
+    {
+      "path": "docs/screenshots/m6-bat/final/m6-bat/tablet-fallback-checkpoint-resume.png",
+      "size": [
+        1180,
+        820
+      ],
+      "bytes": 951657,
+      "sha256": "ddc8770a70e0cf6b87f28fb390f7d0c70f0e7e8c2fe8a4b72e050649f1146e99"
+    },
+    {
+      "path": "docs/screenshots/m6-bat/final/m6-bat/tablet-fallback-defeated.png",
+      "size": [
+        1180,
+        820
+      ],
+      "bytes": 934543,
+      "sha256": "ce58f07fac31035be1dcffe02fab609e767a82e3c619f1a1067f45a11fa9dbbe"
+    },
+    {
+      "path": "docs/screenshots/m6-bat/final/m6-bat/tablet-fallback-idle.png",
+      "size": [
+        1180,
+        820
+      ],
+      "bytes": 955866,
+      "sha256": "25a581e773f2448e2572d33a0917e085baea457be66bb9c8504dac6f792dacfd"
+    },
+    {
+      "path": "docs/screenshots/m6-bat/final/m6-bat/tablet-fallback-recover.png",
+      "size": [
+        1180,
+        820
+      ],
+      "bytes": 930948,
+      "sha256": "dc5d2856c31d71b8f1bb05776360bb6fb62e65cafd612184f543dbe738f2d168"
+    },
+    {
+      "path": "docs/screenshots/m6-bat/final/m6-bat/tablet-fallback-right.png",
+      "size": [
+        1180,
+        820
+      ],
+      "bytes": 941152,
+      "sha256": "6919c8262d0e62d7c512bfe74f2109052903128bf9ec24977587ee2d91f60fd9"
+    },
+    {
+      "path": "docs/screenshots/m6-bat/final/m6-bat/tablet-fallback-safe-puzzle.png",
+      "size": [
+        1180,
+        820
+      ],
+      "bytes": 933550,
+      "sha256": "6714fc195ee563b4621b82adca62583ef877b7c706749543076874d8c2e2c9e3"
+    },
+    {
+      "path": "docs/screenshots/m6-bat/final/m6-bat/tablet-fallback-telegraph.png",
+      "size": [
+        1180,
+        820
+      ],
+      "bytes": 936674,
+      "sha256": "275e49a83c5e7f43b01e7b1cb6176d5142db75c10dbf759750460d160756e31c"
+    },
+    {
+      "path": "docs/screenshots/m6-bat/final/m6-bat/tablet-normal-attack.png",
+      "size": [
+        1180,
+        820
+      ],
+      "bytes": 944590,
+      "sha256": "ed3518baafa81d52f8bb51ca19ed7931921fe29259436572c749af2b26d75a97"
+    },
+    {
+      "path": "docs/screenshots/m6-bat/final/m6-bat/tablet-normal-checkpoint-resume.png",
+      "size": [
+        1180,
+        820
+      ],
+      "bytes": 960997,
+      "sha256": "fc17c17667412f4e2abc25cf3e9c5e8a139ecb09b1419c2f9178ba1a901d1699"
+    },
+    {
+      "path": "docs/screenshots/m6-bat/final/m6-bat/tablet-normal-defeated.png",
+      "size": [
+        1180,
+        820
+      ],
+      "bytes": 946318,
+      "sha256": "fe0ed55c4a5111e50b71ada0d629dbc2f69f2788dc9a70f86a1507d81f5bb72f"
+    },
+    {
+      "path": "docs/screenshots/m6-bat/final/m6-bat/tablet-normal-idle.png",
+      "size": [
+        1180,
+        820
+      ],
+      "bytes": 971237,
+      "sha256": "b14b66f28610f277e91f6bc780a681f628614648172d476632c63850574e2f2b"
+    },
+    {
+      "path": "docs/screenshots/m6-bat/final/m6-bat/tablet-normal-recover.png",
+      "size": [
+        1180,
+        820
+      ],
+      "bytes": 944764,
+      "sha256": "fa8e4c032ece7b3bdee8363f9be4ad5c73dd78806d9468e1c7f65895cacf0e2b"
+    },
+    {
+      "path": "docs/screenshots/m6-bat/final/m6-bat/tablet-normal-right.png",
+      "size": [
+        1180,
+        820
+      ],
+      "bytes": 954816,
+      "sha256": "8ba70da7ce7ef10e911cb5aef8cf0663fc5013af19c3536c4b1a89956016ea31"
+    },
+    {
+      "path": "docs/screenshots/m6-bat/final/m6-bat/tablet-normal-safe-puzzle.png",
+      "size": [
+        1180,
+        820
+      ],
+      "bytes": 941020,
+      "sha256": "0cdba8d54e1cc25c479545b4cbc7c415fb29741a50bc6061b0ac92c8ec95ae7e"
+    },
+    {
+      "path": "docs/screenshots/m6-bat/final/m6-bat/tablet-normal-telegraph.png",
+      "size": [
+        1180,
+        820
+      ],
+      "bytes": 950747,
+      "sha256": "a63f3be75648845123e4e49d568ce85fa2893cb737044f16acd824a89dd813e5"
+    }
+  ],
+  "verifiedCopies": [
+    {
+      "source": "docs/screenshots/m6-bat/mobile/mobile-phone-start.png",
+      "preserved": "docs/screenshots/m6-bat/final/m6-bat/mobile-phone-start.png"
+    },
+    {
+      "source": "docs/screenshots/m6-bat/mobile/mobile-phone-swing.png",
+      "preserved": "docs/screenshots/m6-bat/final/m6-bat/mobile-phone-swing.png"
+    },
+    {
+      "source": "docs/screenshots/m6-bat/mobile/mobile-phone-dialogue.png",
+      "preserved": "docs/screenshots/m6-bat/final/m6-bat/mobile-phone-dialogue.png"
+    },
+    {
+      "source": "docs/screenshots/m6-bat/mobile/mobile-tablet-start.png",
+      "preserved": "docs/screenshots/m6-bat/final/m6-bat/mobile-tablet-start.png"
+    },
+    {
+      "source": "docs/screenshots/m6-bat/mobile/mobile-tablet-swing.png",
+      "preserved": "docs/screenshots/m6-bat/final/m6-bat/mobile-tablet-swing.png"
+    },
+    {
+      "source": "docs/screenshots/m6-bat/mobile/mobile-tablet-dialogue.png",
+      "preserved": "docs/screenshots/m6-bat/final/m6-bat/mobile-tablet-dialogue.png"
+    },
+    {
+      "source": "test-results/complete-journey-new-game--139b0-ntrols-and-no-injected-save/S05-route.png",
+      "preserved": "docs/screenshots/m6-bat/final/m6-bat/campaign-S05-route.png"
+    },
+    {
+      "source": "test-results/complete-journey-new-game--139b0-ntrols-and-no-injected-save/S10-route.png",
+      "preserved": "docs/screenshots/m6-bat/final/m6-bat/campaign-S10-route.png"
+    },
+    {
+      "source": "test-results/complete-journey-new-game--139b0-ntrols-and-no-injected-save/S15-route.png",
+      "preserved": "docs/screenshots/m6-bat/final/m6-bat/campaign-S15-route.png"
+    },
+    {
+      "source": "test-results/complete-journey-new-game--139b0-ntrols-and-no-injected-save/S19-route.png",
+      "preserved": "docs/screenshots/m6-bat/final/m6-bat/campaign-S19-route.png"
+    },
+    {
+      "source": "test-results/complete-journey-new-game--139b0-ntrols-and-no-injected-save/S25-route.png",
+      "preserved": "docs/screenshots/m6-bat/final/m6-bat/campaign-S25-route.png"
+    },
+    {
+      "source": "test-results/complete-journey-new-game--139b0-ntrols-and-no-injected-save/S29-route.png",
+      "preserved": "docs/screenshots/m6-bat/final/m6-bat/campaign-S29-route.png"
+    },
+    {
+      "source": "test-results/complete-journey-new-game--139b0-ntrols-and-no-injected-save/S36-route.png",
+      "preserved": "docs/screenshots/m6-bat/final/m6-bat/campaign-S36-route.png"
+    }
+  ],
+  "count": 45
+}

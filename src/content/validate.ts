@@ -92,6 +92,8 @@ export function validateContent() {
     check(campaign[4].rewardFlags.includes('bubbleBlessing') && !campaign[4].mandatoryItems.includes('T04'), 'S05 bubble must not grant swimming');
     check(campaign[15].entryFlags.includes('bubbleBlessing') && !campaign[15].entryItems.includes('T04') && campaign[15].mandatoryItems.includes('T04'), 'S16 protected entrance');
     check(campaign[3].optionalItems.includes('G01') && !campaign.slice(0, 3).some(s => s.optionalItems.includes('G01')), 'G01 remains S04');
+    check(maps.S09.spawns.length===1&&maps.S09.spawns[0].id==='S09.enemy.3'&&maps.S09.spawns[0].hp===3,'S09: one roc with three necklace cores');
+    check([1,2,3].every(n=>maps.S09.objects.some(o=>o.id===`S09.quest.${n}`&&o.kind==='rocCore'&&!o.mechanic&&o.requiresItems?.includes('T02'))),'S09: orb-revealed cores, no channel shortcut');
     unique(assets.map(a => a.key), 'asset');
     return errors;
 }

@@ -1,0 +1,17 @@
+[
+  {
+    "currentRun": "docs/validation/s09-mechanics-regression-reports/art-budget.json",
+    "sha256": "af35953e078eedb7cf7d35b1ab21ba23df2d4a4ff326aeac45298724b9bf8ab6",
+    "restored": "docs/validation/art-budget.json"
+  },
+  {
+    "currentRun": "docs/validation/s09-mechanics-regression-reports/complete-journey.json",
+    "sha256": "2ca680085b064a7deae9be97a0c412cb6c8b9f113a81b9ccce7a947ca365f551",
+    "restored": "docs/validation/complete-journey.json"
+  },
+  {
+    "currentRun": "docs/validation/s09-mechanics-regression-reports/illustrations.json",
+    "sha256": "36d84bb48738248218787dc150065ab80d0ec36d5a295a16b306c4acd700423e",
+    "restored": "docs/validation/illustrations.json"
+  }
+]

@@ -1,0 +1,63 @@
+
+> sinbad-seven-treasures@0.1.0 test
+> vitest run
+
+
+ RUN  v3.2.4 C:/code/code10(sindbad)
+
+ ✓ tests/unit/audio.test.ts (3 tests) 22ms
+ ✓ tests/unit/campaign-complete.test.ts (3 tests) 13ms
+ ✓ tests/unit/controlText.test.ts (3 tests) 9ms
+ ✓ tests/unit/crystal.test.ts (5 tests) 12ms
+ ✓ tests/unit/world-props.test.ts (4 tests) 8ms
+ ✓ tests/unit/recovery.test.ts (5 tests) 12ms
+ ✓ tests/unit/story-mechanics.test.ts (6 tests) 13ms
+ ✓ tests/unit/reachability.test.ts (6 tests) 10ms
+ ✓ tests/unit/flame.test.ts (6 tests) 41ms
+ ✓ tests/unit/adventure.test.ts (6 tests) 43ms
+ ✓ tests/unit/effects-art.test.ts (5 tests) 7ms
+ ✓ tests/unit/weapons-art.test.ts (2 tests) 12ms
+ ✓ tests/unit/terrain.test.ts (5 tests) 9ms
+ ✓ tests/unit/core.test.ts (32 tests) 35ms
+ ✓ tests/unit/siren-actions.test.ts (2 tests) 9ms
+ ❯ tests/unit/enemy-actions.test.ts (2 tests | 1 failed) 19ms
+   ✓ enemy action artwork preserves combat and safe defeat semantics > covers all 40 distinct frames and preserves the resting foot position through every pose 5ms
+   × enemy action artwork preserves combat and safe defeat semantics > skeleton archers/captains are magical; human guards/pirates surrender and beasts are cleansed 12ms
+     → expected 'roc' to be undefined
+ ✓ tests/unit/dialogueArt.test.ts (5 tests) 8ms
+ ✓ tests/unit/bat-actions.test.ts (2 tests) 6ms
+ ✓ tests/unit/skills.test.ts (3 tests) 10ms
+ ✓ tests/unit/kite-actions.test.ts (2 tests) 8ms
+ ✓ tests/unit/spirit-actions.test.ts (2 tests) 10ms
+ ✓ tests/unit/touch-icons.test.ts (2 tests) 8ms
+ ✓ tests/unit/passives.test.ts (2 tests) 8ms
+ ✓ tests/unit/hero-art.test.ts (2 tests) 6ms
+ ✓ tests/unit/roc-actions.test.ts (2 tests) 6ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/unit/enemy-actions.test.ts > enemy action artwork preserves combat and safe defeat semantics > skeleton archers/captains are magical; human guards/pirates surrender and beasts are cleansed
+AssertionError: expected 'roc' to be undefined
+
+- Expected: 
+undefined
+
++ Received: 
+"roc"
+
+ ❯ tests/unit/enemy-actions.test.ts:26:51
+     24|         expect(actionDefeatKind('pirate')).toBe('human');
+     25|         expect(actionDefeatKind('kuura')).toBe('magic');
+     26|         expect(maps.S09.spawns.at(-1)?.actionArt).toBeUndefined();
+       |                                                   ^
+     27|         expect(maps.S10.spawns.every(spawn=>spawn.actionArt==='kite'))…
+     28|     });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed | 24 passed (25)
+      Tests  1 failed | 116 passed (117)
+   Start at  20:18:16
+   Duration  3.56s (transform 3.03s, setup 0ms, collect 9.80s, tests 345ms, environment 6ms, prepare 14.36s)
+

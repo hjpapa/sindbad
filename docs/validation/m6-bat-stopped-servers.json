@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-06T11:43:31.011Z",
+  "method": "Node TCP loopback probes after stopping owned dev/test/report servers",
+  "ports": [
+    {
+      "port": 5174,
+      "state": "closed",
+      "code": "ECONNREFUSED"
+    },
+    {
+      "port": 5175,
+      "state": "closed",
+      "code": "ECONNREFUSED"
+    },
+    {
+      "port": 9323,
+      "state": "closed",
+      "code": "ECONNREFUSED"
+    }
+  ]
+}

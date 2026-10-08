@@ -1,0 +1,1756 @@
+{
+  "date": "2026-10-06T11:16:13.920Z",
+  "pass": true,
+  "method": "explicit stage/item save fixtures; real keyboard/menu/dialogue/gift/boss inputs; read-only state; Edge phone/tablet viewport emulation",
+  "checks": [
+    {
+      "device": "phone",
+      "id": "captain",
+      "index": 0,
+      "text": "바닷길에 검은 마법이 드리웠구나. 먼저 이 항구를 안전하게 만들자.",
+      "observed": {
+        "character": "captain",
+        "expression": "worried",
+        "frame": "2",
+        "src": "/assets/webtoon/captain-faces.webp",
+        "naturalWidth": 768,
+        "naturalHeight": 384,
+        "left": "-200%",
+        "overflow": "hidden",
+        "box": {
+          "x": 33,
+          "y": 175,
+          "width": 92,
+          "height": 138
+        }
+      },
+      "path": "docs/screenshots/m6-bat/final/art-a4/phone-captain-0-captain-worried.png"
+    },
+    {
+      "device": "phone",
+      "id": "captain",
+      "index": 1,
+      "text": "A·D 또는 ←→로 움직이고 ↑로 뛰어 보렴. Space는 검과 대화, L은 회피야. 적이 검을 들면 공격 예고란다.",
+      "observed": {
+        "character": "captain",
+        "expression": "neutral",
+        "frame": "0",
+        "src": "/assets/webtoon/captain-faces.webp",
+        "naturalWidth": 768,
+        "naturalHeight": 384,
+        "left": "0%",
+        "overflow": "hidden",
+        "box": {
+          "x": 33,
+          "y": 175,
+          "width": 92,
+          "height": 138
+        }
+      },
+      "path": "docs/screenshots/m6-bat/final/art-a4/phone-captain-1-captain-neutral.png"
+    },
+    {
+      "device": "phone",
+      "id": "captain",
+      "index": 2,
+      "text": "빨간 하트는 체력을 채워 줘. 상자 두 개 위에는 항해자의 메달이 있지. 대장을 이기고 오른쪽 출항 종을 울려 줘!",
+      "observed": {
+        "character": "captain",
+        "expression": "joy",
+        "frame": "1",
+        "src": "/assets/webtoon/captain-faces.webp",
+        "naturalWidth": 768,
+        "naturalHeight": 384,
+        "left": "-100%",
+        "overflow": "hidden",
+        "box": {
+          "x": 33,
+          "y": 175,
+          "width": 92,
+          "height": 138
+        }
+      },
+      "path": "docs/screenshots/m6-bat/final/art-a4/phone-captain-2-captain-joy.png"
+    },
+    {
+      "device": "phone",
+      "id": "rah",
+      "index": 0,
+      "text": "힘은 길을 태우는 데만 쓰이지 않는다. 길을 밝힐 수도 있지.",
+      "observed": {
+        "character": "rah",
+        "expression": "neutral",
+        "frame": "0",
+        "src": "/assets/webtoon/rah-faces.webp",
+        "naturalWidth": 768,
+        "naturalHeight": 384,
+        "left": "0%",
+        "overflow": "hidden",
+        "box": {
+          "x": 33,
+          "y": 175,
+          "width": 92,
+          "height": 138
+        }
+      },
+      "path": "docs/screenshots/m6-bat/final/art-a4/phone-rah-0-rah-neutral.png"
+    },
+    {
+      "device": "phone",
+      "id": "rah",
+      "index": 1,
+      "text": "영원의 불씨 T01과 불꽃 곡도 W03을 받았어. 보물과 무기는 이미 안전하게 기록했단다.",
+      "observed": {
+        "character": "rah",
+        "expression": "joy",
+        "frame": "1",
+        "src": "/assets/webtoon/rah-faces.webp",
+        "naturalWidth": 768,
+        "naturalHeight": 384,
+        "left": "-100%",
+        "overflow": "hidden",
+        "box": {
+          "x": 33,
+          "y": 175,
+          "width": 92,
+          "height": 138
+        }
+      },
+      "path": "docs/screenshots/m6-bat/final/art-a4/phone-rah-1-rah-joy.png"
+    },
+    {
+      "device": "phone",
+      "id": "rah",
+      "index": 2,
+      "text": "R은 전방 불꽃 파동. 마력 15를 쓰고 4초 뒤 다시 쓸 수 있어. Q로 불꽃 곡도를 고르면 짧은 불꽃 잔상이 남아.",
+      "observed": {
+        "character": "rah",
+        "expression": "worried",
+        "frame": "2",
+        "src": "/assets/webtoon/rah-faces.webp",
+        "naturalWidth": 768,
+        "naturalHeight": 384,
+        "left": "-200%",
+        "overflow": "hidden",
+        "box": {
+          "x": 33,
+          "y": 175,
+          "width": 92,
+          "height": 138
+        }
+      },
+      "path": "docs/screenshots/m6-bat/final/art-a4/phone-rah-2-rah-worried.png"
+    },
+    {
+      "device": "phone",
+      "id": "rah",
+      "index": 3,
+      "text": "바로 오른쪽 문양은 E로 무료 점화해 보렴. 입구의 마른 덩굴 뒤에도 작은 선물이 있어.",
+      "observed": {
+        "character": "rah",
+        "expression": "neutral",
+        "frame": "0",
+        "src": "/assets/webtoon/rah-faces.webp",
+        "naturalWidth": 768,
+        "naturalHeight": 384,
+        "left": "0%",
+        "overflow": "hidden",
+        "box": {
+          "x": 33,
+          "y": 175,
+          "width": 92,
+          "height": 138
+        }
+      },
+      "path": "docs/screenshots/m6-bat/final/art-a4/phone-rah-3-rah-neutral.png"
+    },
+    {
+      "device": "phone",
+      "id": "hazil",
+      "index": 0,
+      "text": "세 갈래 별빛이 하나의 길을 만들었구나. 이 진실의 수정구슬 T02를 받으렴.",
+      "observed": {
+        "character": "genie",
+        "expression": "joy",
+        "frame": "1",
+        "src": "/assets/webtoon/genie-faces.webp",
+        "naturalWidth": 768,
+        "naturalHeight": 384,
+        "left": "-100%",
+        "overflow": "hidden",
+        "box": {
+          "x": 33,
+          "y": 175,
+          "width": 92,
+          "height": 138
+        }
+      },
+      "path": "docs/screenshots/m6-bat/final/art-a4/phone-hazil-0-genie-joy.png"
+    },
+    {
+      "device": "phone",
+      "id": "hazil",
+      "index": 1,
+      "text": "이 구슬은 가까운 비밀의 반짝임을 보여 주지. E로 살펴보면 환영이 걷힐 거야. 마력은 들지 않아.",
+      "observed": {
+        "character": "genie",
+        "expression": "neutral",
+        "frame": "0",
+        "src": "/assets/webtoon/genie-faces.webp",
+        "naturalWidth": 768,
+        "naturalHeight": 384,
+        "left": "0%",
+        "overflow": "hidden",
+        "box": {
+          "x": 33,
+          "y": 175,
+          "width": 92,
+          "height": 138
+        }
+      },
+      "path": "docs/screenshots/m6-bat/final/art-a4/phone-hazil-1-genie-neutral.png"
+    },
+    {
+      "device": "phone",
+      "id": "hazil",
+      "index": 2,
+      "text": "아리아나는 탑의 문양을 조사하며 별 지도를 남겼어. 오른쪽 흐릿한 벽을 살펴보렴. 왼쪽 쉼터 근처에도 잊힌 기록이 있어.",
+      "observed": {
+        "character": "genie",
+        "expression": "worried",
+        "frame": "2",
+        "src": "/assets/webtoon/genie-faces.webp",
+        "naturalWidth": 768,
+        "naturalHeight": 384,
+        "left": "-200%",
+        "overflow": "hidden",
+        "box": {
+          "x": 33,
+          "y": 175,
+          "width": 92,
+          "height": 138
+        }
+      },
+      "path": "docs/screenshots/m6-bat/final/art-a4/phone-hazil-2-genie-worried.png"
+    },
+    {
+      "device": "phone",
+      "id": "starMap",
+      "index": 0,
+      "text": "나는 탑의 문양을 조사하고 있어요. 일곱 보물을 찾아 주세요.",
+      "observed": {
+        "character": "ariana",
+        "expression": "worried",
+        "frame": "2",
+        "src": "/assets/webtoon/ariana-faces.webp",
+        "naturalWidth": 768,
+        "naturalHeight": 384,
+        "left": "-200%",
+        "overflow": "hidden",
+        "box": {
+          "x": 33,
+          "y": 175,
+          "width": 92,
+          "height": 138
+        }
+      },
+      "path": "docs/screenshots/m6-bat/final/art-a4/phone-starMap-0-ariana-worried.png"
+    },
+    {
+      "device": "phone",
+      "id": "starMap",
+      "index": 1,
+      "text": "별 지도의 다음 표식은 높은 둥지예요. 로크새를 찾아가면 하늘로 이어지는 길을 알 수 있을 거예요.",
+      "observed": {
+        "character": "ariana",
+        "expression": "neutral",
+        "frame": "0",
+        "src": "/assets/webtoon/ariana-faces.webp",
+        "naturalWidth": 768,
+        "naturalHeight": 384,
+        "left": "0%",
+        "overflow": "hidden",
+        "box": {
+          "x": 33,
+          "y": 175,
+          "width": 92,
+          "height": 138
+        }
+      },
+      "path": "docs/screenshots/m6-bat/final/art-a4/phone-starMap-1-ariana-neutral.png"
+    },
+    {
+      "device": "phone",
+      "id": "starMap",
+      "index": 2,
+      "text": "이 환영 너머 길은 이제 열렸어요. 지도 단서는 항해 기록에 남겨 둘게요.",
+      "observed": {
+        "character": "ariana",
+        "expression": "joy",
+        "frame": "1",
+        "src": "/assets/webtoon/ariana-faces.webp",
+        "naturalWidth": 768,
+        "naturalHeight": 384,
+        "left": "-100%",
+        "overflow": "hidden",
+        "box": {
+          "x": 33,
+          "y": 175,
+          "width": 92,
+          "height": 138
+        }
+      },
+      "path": "docs/screenshots/m6-bat/final/art-a4/phone-starMap-2-ariana-joy.png"
+    },
+    {
+      "device": "phone",
+      "id": "nairaHint",
+      "index": 0,
+      "text": "산호문 너머에 갇혀 있어요! 바위 위의 산호 열쇠로 왕관 장식 보물함을 열어 주세요.",
+      "observed": {
+        "character": "naira",
+        "expression": "worried",
+        "frame": "2",
+        "src": "/assets/webtoon/naira-faces.webp",
+        "naturalWidth": 768,
+        "naturalHeight": 384,
+        "left": "-200%",
+        "overflow": "hidden",
+        "box": {
+          "x": 33,
+          "y": 175,
+          "width": 92,
+          "height": 138
+        }
+      },
+      "path": "docs/screenshots/m6-bat/final/art-a4/phone-nairaHint-0-naira-worried.png"
+    },
+    {
+      "device": "phone",
+      "id": "nairaHint",
+      "index": 1,
+      "text": "수호병은 정면을 방패로 막아요. 공격 예고를 보고 뛰어넘거나, 공격 뒤 빈틈에 다가가세요.",
+      "observed": {
+        "character": "naira",
+        "expression": "neutral",
+        "frame": "0",
+        "src": "/assets/webtoon/naira-faces.webp",
+        "naturalWidth": 768,
+        "naturalHeight": 384,
+        "left": "0%",
+        "overflow": "hidden",
+        "box": {
+          "x": 33,
+          "y": 175,
+          "width": 92,
+          "height": 138
+        }
+      },
+      "path": "docs/screenshots/m6-bat/final/art-a4/phone-nairaHint-1-naira-neutral.png"
+    },
+    {
+      "device": "phone",
+      "id": "S20.intro",
+      "index": 0,
+      "text": "덩굴을 태우고 길 표식 세 개를 남겨요.",
+      "observed": {
+        "character": "mira",
+        "expression": "worried",
+        "frame": "2",
+        "src": "/assets/webtoon/mira-faces.webp",
+        "naturalWidth": 768,
+        "naturalHeight": 384,
+        "left": "-200%",
+        "overflow": "hidden",
+        "box": {
+          "x": 33,
+          "y": 175,
+          "width": 92,
+          "height": 138
+        }
+      },
+      "path": "docs/screenshots/m6-bat/final/art-a4/phone-S20-intro-0-mira-worried.png"
+    },
+    {
+      "device": "phone",
+      "id": "S20.intro",
+      "index": 1,
+      "text": "마지막 야영지는 다음 원정의 안전 지점이에요.",
+      "observed": {
+        "character": "mira",
+        "expression": "neutral",
+        "frame": "0",
+        "src": "/assets/webtoon/mira-faces.webp",
+        "naturalWidth": 768,
+        "naturalHeight": 384,
+        "left": "0%",
+        "overflow": "hidden",
+        "box": {
+          "x": 33,
+          "y": 175,
+          "width": 92,
+          "height": 138
+        }
+      },
+      "path": "docs/screenshots/m6-bat/final/art-a4/phone-S20-intro-1-mira-neutral.png"
+    },
+    {
+      "device": "phone",
+      "id": "S27.intro",
+      "index": 0,
+      "text": "시장 사람들의 상자를 옮겨 주세요.",
+      "observed": {
+        "character": "mira",
+        "expression": "neutral",
+        "frame": "0",
+        "src": "/assets/webtoon/mira-faces.webp",
+        "naturalWidth": 768,
+        "naturalHeight": 384,
+        "left": "0%",
+        "overflow": "hidden",
+        "box": {
+          "x": 33,
+          "y": 175,
+          "width": 92,
+          "height": 138
+        }
+      },
+      "path": "docs/screenshots/m6-bat/final/art-a4/phone-S27-intro-0-mira-neutral.png"
+    },
+    {
+      "device": "phone",
+      "id": "S27.intro",
+      "index": 1,
+      "text": "밖의 도적은 항복시키고 신전 추천서를 받을 수 있어요.",
+      "observed": {
+        "character": "mira",
+        "expression": "worried",
+        "frame": "2",
+        "src": "/assets/webtoon/mira-faces.webp",
+        "naturalWidth": 768,
+        "naturalHeight": 384,
+        "left": "-200%",
+        "overflow": "hidden",
+        "box": {
+          "x": 33,
+          "y": 175,
+          "width": 92,
+          "height": 138
+        }
+      },
+      "path": "docs/screenshots/m6-bat/final/art-a4/phone-S27-intro-1-mira-worried.png"
+    },
+    {
+      "device": "phone",
+      "id": "S25.intro",
+      "index": 0,
+      "text": "세 도깨비불을 제자리로 안내해 주세요.",
+      "observed": {
+        "character": "baru",
+        "expression": "worried",
+        "frame": "2",
+        "src": "/assets/webtoon/baru-faces.webp",
+        "naturalWidth": 768,
+        "naturalHeight": 384,
+        "left": "-200%",
+        "overflow": "hidden",
+        "box": {
+          "x": 33,
+          "y": 175,
+          "width": 92,
+          "height": 138
+        }
+      },
+      "path": "docs/screenshots/m6-bat/final/art-a4/phone-S25-intro-0-baru-worried.png"
+    },
+    {
+      "device": "phone",
+      "id": "S25.intro",
+      "index": 1,
+      "text": "달빛 연꽃은 12초 동안 다리를 만들고, 다리 위에 서면 시간이 유지돼요.",
+      "observed": {
+        "character": "baru",
+        "expression": "neutral",
+        "frame": "0",
+        "src": "/assets/webtoon/baru-faces.webp",
+        "naturalWidth": 768,
+        "naturalHeight": 384,
+        "left": "0%",
+        "overflow": "hidden",
+        "box": {
+          "x": 33,
+          "y": 175,
+          "width": 92,
+          "height": 138
+        }
+      },
+      "path": "docs/screenshots/m6-bat/final/art-a4/phone-S25-intro-1-baru-neutral.png"
+    },
+    {
+      "device": "phone",
+      "id": "S34.intro",
+      "index": 0,
+      "text": "모험의 지도와 보물 기록을 정리해 주세요.",
+      "observed": {
+        "character": "king",
+        "expression": "worried",
+        "frame": "2",
+        "src": "/assets/webtoon/king-faces.webp",
+        "naturalWidth": 768,
+        "naturalHeight": 384,
+        "left": "-200%",
+        "overflow": "hidden",
+        "box": {
+          "x": 33,
+          "y": 175,
+          "width": 92,
+          "height": 138
+        }
+      },
+      "path": "docs/screenshots/m6-bat/final/art-a4/phone-S34-intro-0-king-worried.png"
+    },
+    {
+      "device": "phone",
+      "id": "S34.intro",
+      "index": 1,
+      "text": "완성한 편지를 왕에게 전달하면 축제가 열려요.",
+      "observed": {
+        "character": "king",
+        "expression": "neutral",
+        "frame": "0",
+        "src": "/assets/webtoon/king-faces.webp",
+        "naturalWidth": 768,
+        "naturalHeight": 384,
+        "left": "0%",
+        "overflow": "hidden",
+        "box": {
+          "x": 33,
+          "y": 175,
+          "width": 92,
+          "height": 138
+        }
+      },
+      "path": "docs/screenshots/m6-bat/final/art-a4/phone-S34-intro-1-king-neutral.png"
+    },
+    {
+      "device": "phone",
+      "id": "siren",
+      "index": 0,
+      "text": "검은 마법이 내 노래를 뒤틀었어! 세 조개 종을 울려 방벽부터 걷어 줘.",
+      "observed": {
+        "character": "siren",
+        "expression": "worried",
+        "frame": "2",
+        "src": "/assets/webtoon/siren-faces.webp",
+        "naturalWidth": 768,
+        "naturalHeight": 384,
+        "left": "-200%",
+        "overflow": "hidden",
+        "box": {
+          "x": 33,
+          "y": 175,
+          "width": 92,
+          "height": 138
+        }
+      },
+      "path": "docs/screenshots/m6-bat/final/art-a4/phone-siren-0-siren-worried.png"
+    },
+    {
+      "device": "phone",
+      "id": "siren",
+      "index": 1,
+      "text": "바닥을 흐르는 음파는 뛰어넘어 줘. 음표가 퍼질 때는 빈 곳으로 피하면 돼.",
+      "observed": {
+        "character": "siren",
+        "expression": "neutral",
+        "frame": "0",
+        "src": "/assets/webtoon/siren-faces.webp",
+        "naturalWidth": 768,
+        "naturalHeight": 384,
+        "left": "0%",
+        "overflow": "hidden",
+        "box": {
+          "x": 33,
+          "y": 175,
+          "width": 92,
+          "height": 138
+        }
+      },
+      "path": "docs/screenshots/m6-bat/final/art-a4/phone-siren-1-siren-neutral.png"
+    },
+    {
+      "device": "phone",
+      "id": "S27.outro",
+      "index": 0,
+      "text": "미라가 신전 출입 추천서를 써 주었어요.",
+      "observed": {
+        "character": "mira",
+        "expression": "joy",
+        "frame": "1",
+        "src": "/assets/webtoon/mira-faces.webp",
+        "naturalWidth": 768,
+        "naturalHeight": 384,
+        "left": "-100%",
+        "overflow": "hidden",
+        "box": {
+          "x": 33,
+          "y": 175,
+          "width": 92,
+          "height": 138
+        }
+      },
+      "path": "docs/screenshots/m6-bat/final/art-a4/phone-S27-outro-0-mira-joy.png"
+    },
+    {
+      "device": "phone",
+      "id": "S25.outro",
+      "index": 0,
+      "text": "바루: 길이 없으면 만들면 되지! 대신 약속은 꼭 지켜.",
+      "observed": {
+        "character": "baru",
+        "expression": "joy",
+        "frame": "1",
+        "src": "/assets/webtoon/baru-faces.webp",
+        "naturalWidth": 768,
+        "naturalHeight": 384,
+        "left": "-100%",
+        "overflow": "hidden",
+        "box": {
+          "x": 33,
+          "y": 175,
+          "width": 92,
+          "height": 138
+        }
+      },
+      "path": "docs/screenshots/m6-bat/final/art-a4/phone-S25-outro-0-baru-joy.png"
+    },
+    {
+      "device": "phone",
+      "id": "S25.outro",
+      "index": 1,
+      "text": "도깨비의 방울 T05와 달빛 방망이 W06을 얻었어요. 마지막 다리를 밝혀 보세요.",
+      "observed": {
+        "character": "baru",
+        "expression": "neutral",
+        "frame": "0",
+        "src": "/assets/webtoon/baru-faces.webp",
+        "naturalWidth": 768,
+        "naturalHeight": 384,
+        "left": "0%",
+        "overflow": "hidden",
+        "box": {
+          "x": 33,
+          "y": 175,
+          "width": 92,
+          "height": 138
+        }
+      },
+      "path": "docs/screenshots/m6-bat/final/art-a4/phone-S25-outro-1-baru-neutral.png"
+    },
+    {
+      "device": "phone",
+      "id": "S34.outro",
+      "index": 0,
+      "text": "왕국의 귀환 축제가 열렸어요.",
+      "observed": {
+        "character": "king",
+        "expression": "joy",
+        "frame": "1",
+        "src": "/assets/webtoon/king-faces.webp",
+        "naturalWidth": 768,
+        "naturalHeight": 384,
+        "left": "-100%",
+        "overflow": "hidden",
+        "box": {
+          "x": 33,
+          "y": 175,
+          "width": 92,
+          "height": 138
+        }
+      },
+      "path": "docs/screenshots/m6-bat/final/art-a4/phone-S34-outro-0-king-joy.png"
+    },
+    {
+      "device": "phone",
+      "id": "S35.outro",
+      "index": 0,
+      "text": "신밧드: 다음 모험도 당신과 함께하고 싶어요.",
+      "observed": {
+        "character": "static",
+        "expression": "neutral",
+        "frame": "0",
+        "src": "/assets/webtoon/hero-webtoon.webp",
+        "naturalWidth": 512,
+        "naturalHeight": 768,
+        "left": "0%",
+        "overflow": "hidden",
+        "box": {
+          "x": 33,
+          "y": 175,
+          "width": 92,
+          "height": 138
+        }
+      },
+      "path": "docs/screenshots/m6-bat/final/art-a4/phone-S35-outro-0-static-neutral.png"
+    },
+    {
+      "device": "phone",
+      "id": "S35.outro",
+      "index": 1,
+      "text": "아리아나: 나도 같은 마음이에요.",
+      "observed": {
+        "character": "ariana",
+        "expression": "joy",
+        "frame": "1",
+        "src": "/assets/webtoon/ariana-faces.webp",
+        "naturalWidth": 768,
+        "naturalHeight": 384,
+        "left": "-100%",
+        "overflow": "hidden",
+        "box": {
+          "x": 33,
+          "y": 175,
+          "width": 92,
+          "height": 138
+        }
+      },
+      "path": "docs/screenshots/m6-bat/final/art-a4/phone-S35-outro-1-ariana-joy.png"
+    },
+    {
+      "device": "phone",
+      "id": "S35.outro",
+      "index": 2,
+      "text": "왕: 두 사람의 약속을 축복하노라.",
+      "observed": {
+        "character": "king",
+        "expression": "joy",
+        "frame": "1",
+        "src": "/assets/webtoon/king-faces.webp",
+        "naturalWidth": 768,
+        "naturalHeight": 384,
+        "left": "-100%",
+        "overflow": "hidden",
+        "box": {
+          "x": 33,
+          "y": 175,
+          "width": 92,
+          "height": 138
+        }
+      },
+      "path": "docs/screenshots/m6-bat/final/art-a4/phone-S35-outro-2-king-joy.png"
+    },
+    {
+      "device": "phone",
+      "id": "S35.outro",
+      "index": 3,
+      "text": "두 사람은 왕의 축복 속에 결혼하고 항해 도서관을 함께 열었어요.",
+      "observed": {
+        "character": "ariana",
+        "expression": "neutral",
+        "frame": "0",
+        "src": "/assets/webtoon/ariana-faces.webp",
+        "naturalWidth": 768,
+        "naturalHeight": 384,
+        "left": "0%",
+        "overflow": "hidden",
+        "box": {
+          "x": 33,
+          "y": 175,
+          "width": 92,
+          "height": 138
+        }
+      },
+      "path": "docs/screenshots/m6-bat/final/art-a4/phone-S35-outro-3-ariana-neutral.png"
+    },
+    {
+      "device": "phone",
+      "id": "naira",
+      "index": 0,
+      "text": "고마워요, 신밧드. 아리아나가 검은 탑으로 끌려가는 걸 봤어요.",
+      "observed": {
+        "character": "naira",
+        "expression": "joy",
+        "frame": "1",
+        "src": "/assets/webtoon/naira-faces.webp",
+        "naturalWidth": 768,
+        "naturalHeight": 384,
+        "left": "-100%",
+        "overflow": "hidden",
+        "box": {
+          "x": 33,
+          "y": 175,
+          "width": 92,
+          "height": 138
+        }
+      },
+      "path": "docs/screenshots/m6-bat/final/art-a4/phone-naira-0-naira-joy.png"
+    },
+    {
+      "device": "phone",
+      "id": "naira",
+      "index": 1,
+      "text": "제 공기방울 보호를 드렸어요. 잠긴 길에서도 숨을 쉴 수 있지만 아직 자유롭게 헤엄치지는 못해요.",
+      "observed": {
+        "character": "naira",
+        "expression": "neutral",
+        "frame": "0",
+        "src": "/assets/webtoon/naira-faces.webp",
+        "naturalWidth": 768,
+        "naturalHeight": 384,
+        "left": "0%",
+        "overflow": "hidden",
+        "box": {
+          "x": 33,
+          "y": 175,
+          "width": 92,
+          "height": 138
+        }
+      },
+      "path": "docs/screenshots/m6-bat/final/art-a4/phone-naira-1-naira-neutral.png"
+    },
+    {
+      "device": "phone",
+      "id": "naira",
+      "index": 2,
+      "text": "오른쪽 산호방이 열렸어요. 황금 하트를 찾은 뒤 다시 바닷길로 나가요!",
+      "observed": {
+        "character": "naira",
+        "expression": "joy",
+        "frame": "1",
+        "src": "/assets/webtoon/naira-faces.webp",
+        "naturalWidth": 768,
+        "naturalHeight": 384,
+        "left": "-100%",
+        "overflow": "hidden",
+        "box": {
+          "x": 33,
+          "y": 175,
+          "width": 92,
+          "height": 138
+        }
+      },
+      "path": "docs/screenshots/m6-bat/final/art-a4/phone-naira-2-naira-joy.png"
+    },
+    {
+      "device": "phone",
+      "id": "freed",
+      "index": 0,
+      "text": "이제 내 노래가 돌아왔어. 고마워, 신밧드!",
+      "observed": {
+        "character": "siren",
+        "expression": "joy",
+        "frame": "1",
+        "src": "/assets/webtoon/siren-faces.webp",
+        "naturalWidth": 768,
+        "naturalHeight": 384,
+        "left": "-100%",
+        "overflow": "hidden",
+        "box": {
+          "x": 33,
+          "y": 175,
+          "width": 92,
+          "height": 138
+        }
+      },
+      "path": "docs/screenshots/m6-bat/final/art-a4/phone-freed-0-siren-joy.png"
+    },
+    {
+      "device": "phone",
+      "id": "freed",
+      "index": 1,
+      "text": "오른쪽 보물함의 바람 부메랑을 가져가. Q로 검과 바꾸면 멀리 있는 조개도 칠 수 있어.",
+      "observed": {
+        "character": "siren",
+        "expression": "neutral",
+        "frame": "0",
+        "src": "/assets/webtoon/siren-faces.webp",
+        "naturalWidth": 768,
+        "naturalHeight": 384,
+        "left": "0%",
+        "overflow": "hidden",
+        "box": {
+          "x": 33,
+          "y": 175,
+          "width": 92,
+          "height": 138
+        }
+      },
+      "path": "docs/screenshots/m6-bat/final/art-a4/phone-freed-1-siren-neutral.png"
+    },
+    {
+      "device": "tablet",
+      "id": "captain",
+      "index": 0,
+      "text": "바닷길에 검은 마법이 드리웠구나. 먼저 이 항구를 안전하게 만들자.",
+      "observed": {
+        "character": "captain",
+        "expression": "worried",
+        "frame": "2",
+        "src": "/assets/webtoon/captain-faces.webp",
+        "naturalWidth": 768,
+        "naturalHeight": 384,
+        "left": "-200%",
+        "overflow": "hidden",
+        "box": {
+          "x": 125,
+          "y": 554,
+          "width": 118,
+          "height": 177
+        }
+      },
+      "path": "docs/screenshots/m6-bat/final/art-a4/tablet-captain-0-captain-worried.png"
+    },
+    {
+      "device": "tablet",
+      "id": "captain",
+      "index": 1,
+      "text": "A·D 또는 ←→로 움직이고 ↑로 뛰어 보렴. Space는 검과 대화, L은 회피야. 적이 검을 들면 공격 예고란다.",
+      "observed": {
+        "character": "captain",
+        "expression": "neutral",
+        "frame": "0",
+        "src": "/assets/webtoon/captain-faces.webp",
+        "naturalWidth": 768,
+        "naturalHeight": 384,
+        "left": "0%",
+        "overflow": "hidden",
+        "box": {
+          "x": 125,
+          "y": 554,
+          "width": 118,
+          "height": 177
+        }
+      },
+      "path": "docs/screenshots/m6-bat/final/art-a4/tablet-captain-1-captain-neutral.png"
+    },
+    {
+      "device": "tablet",
+      "id": "captain",
+      "index": 2,
+      "text": "빨간 하트는 체력을 채워 줘. 상자 두 개 위에는 항해자의 메달이 있지. 대장을 이기고 오른쪽 출항 종을 울려 줘!",
+      "observed": {
+        "character": "captain",
+        "expression": "joy",
+        "frame": "1",
+        "src": "/assets/webtoon/captain-faces.webp",
+        "naturalWidth": 768,
+        "naturalHeight": 384,
+        "left": "-100%",
+        "overflow": "hidden",
+        "box": {
+          "x": 125,
+          "y": 554,
+          "width": 118,
+          "height": 177
+        }
+      },
+      "path": "docs/screenshots/m6-bat/final/art-a4/tablet-captain-2-captain-joy.png"
+    },
+    {
+      "device": "tablet",
+      "id": "rah",
+      "index": 0,
+      "text": "힘은 길을 태우는 데만 쓰이지 않는다. 길을 밝힐 수도 있지.",
+      "observed": {
+        "character": "rah",
+        "expression": "neutral",
+        "frame": "0",
+        "src": "/assets/webtoon/rah-faces.webp",
+        "naturalWidth": 768,
+        "naturalHeight": 384,
+        "left": "0%",
+        "overflow": "hidden",
+        "box": {
+          "x": 125,
+          "y": 554,
+          "width": 118,
+          "height": 177
+        }
+      },
+      "path": "docs/screenshots/m6-bat/final/art-a4/tablet-rah-0-rah-neutral.png"
+    },
+    {
+      "device": "tablet",
+      "id": "rah",
+      "index": 1,
+      "text": "영원의 불씨 T01과 불꽃 곡도 W03을 받았어. 보물과 무기는 이미 안전하게 기록했단다.",
+      "observed": {
+        "character": "rah",
+        "expression": "joy",
+        "frame": "1",
+        "src": "/assets/webtoon/rah-faces.webp",
+        "naturalWidth": 768,
+        "naturalHeight": 384,
+        "left": "-100%",
+        "overflow": "hidden",
+        "box": {
+          "x": 125,
+          "y": 554,
+          "width": 118,
+          "height": 177
+        }
+      },
+      "path": "docs/screenshots/m6-bat/final/art-a4/tablet-rah-1-rah-joy.png"
+    },
+    {
+      "device": "tablet",
+      "id": "rah",
+      "index": 2,
+      "text": "R은 전방 불꽃 파동. 마력 15를 쓰고 4초 뒤 다시 쓸 수 있어. Q로 불꽃 곡도를 고르면 짧은 불꽃 잔상이 남아.",
+      "observed": {
+        "character": "rah",
+        "expression": "worried",
+        "frame": "2",
+        "src": "/assets/webtoon/rah-faces.webp",
+        "naturalWidth": 768,
+        "naturalHeight": 384,
+        "left": "-200%",
+        "overflow": "hidden",
+        "box": {
+          "x": 125,
+          "y": 554,
+          "width": 118,
+          "height": 177
+        }
+      },
+      "path": "docs/screenshots/m6-bat/final/art-a4/tablet-rah-2-rah-worried.png"
+    },
+    {
+      "device": "tablet",
+      "id": "rah",
+      "index": 3,
+      "text": "바로 오른쪽 문양은 E로 무료 점화해 보렴. 입구의 마른 덩굴 뒤에도 작은 선물이 있어.",
+      "observed": {
+        "character": "rah",
+        "expression": "neutral",
+        "frame": "0",
+        "src": "/assets/webtoon/rah-faces.webp",
+        "naturalWidth": 768,
+        "naturalHeight": 384,
+        "left": "0%",
+        "overflow": "hidden",
+        "box": {
+          "x": 125,
+          "y": 554,
+          "width": 118,
+          "height": 177
+        }
+      },
+      "path": "docs/screenshots/m6-bat/final/art-a4/tablet-rah-3-rah-neutral.png"
+    },
+    {
+      "device": "tablet",
+      "id": "hazil",
+      "index": 0,
+      "text": "세 갈래 별빛이 하나의 길을 만들었구나. 이 진실의 수정구슬 T02를 받으렴.",
+      "observed": {
+        "character": "genie",
+        "expression": "joy",
+        "frame": "1",
+        "src": "/assets/webtoon/genie-faces.webp",
+        "naturalWidth": 768,
+        "naturalHeight": 384,
+        "left": "-100%",
+        "overflow": "hidden",
+        "box": {
+          "x": 125,
+          "y": 554,
+          "width": 118,
+          "height": 177
+        }
+      },
+      "path": "docs/screenshots/m6-bat/final/art-a4/tablet-hazil-0-genie-joy.png"
+    },
+    {
+      "device": "tablet",
+      "id": "hazil",
+      "index": 1,
+      "text": "이 구슬은 가까운 비밀의 반짝임을 보여 주지. E로 살펴보면 환영이 걷힐 거야. 마력은 들지 않아.",
+      "observed": {
+        "character": "genie",
+        "expression": "neutral",
+        "frame": "0",
+        "src": "/assets/webtoon/genie-faces.webp",
+        "naturalWidth": 768,
+        "naturalHeight": 384,
+        "left": "0%",
+        "overflow": "hidden",
+        "box": {
+          "x": 125,
+          "y": 554,
+          "width": 118,
+          "height": 177
+        }
+      },
+      "path": "docs/screenshots/m6-bat/final/art-a4/tablet-hazil-1-genie-neutral.png"
+    },
+    {
+      "device": "tablet",
+      "id": "hazil",
+      "index": 2,
+      "text": "아리아나는 탑의 문양을 조사하며 별 지도를 남겼어. 오른쪽 흐릿한 벽을 살펴보렴. 왼쪽 쉼터 근처에도 잊힌 기록이 있어.",
+      "observed": {
+        "character": "genie",
+        "expression": "worried",
+        "frame": "2",
+        "src": "/assets/webtoon/genie-faces.webp",
+        "naturalWidth": 768,
+        "naturalHeight": 384,
+        "left": "-200%",
+        "overflow": "hidden",
+        "box": {
+          "x": 125,
+          "y": 554,
+          "width": 118,
+          "height": 177
+        }
+      },
+      "path": "docs/screenshots/m6-bat/final/art-a4/tablet-hazil-2-genie-worried.png"
+    },
+    {
+      "device": "tablet",
+      "id": "starMap",
+      "index": 0,
+      "text": "나는 탑의 문양을 조사하고 있어요. 일곱 보물을 찾아 주세요.",
+      "observed": {
+        "character": "ariana",
+        "expression": "worried",
+        "frame": "2",
+        "src": "/assets/webtoon/ariana-faces.webp",
+        "naturalWidth": 768,
+        "naturalHeight": 384,
+        "left": "-200%",
+        "overflow": "hidden",
+        "box": {
+          "x": 125,
+          "y": 554,
+          "width": 118,
+          "height": 177
+        }
+      },
+      "path": "docs/screenshots/m6-bat/final/art-a4/tablet-starMap-0-ariana-worried.png"
+    },
+    {
+      "device": "tablet",
+      "id": "starMap",
+      "index": 1,
+      "text": "별 지도의 다음 표식은 높은 둥지예요. 로크새를 찾아가면 하늘로 이어지는 길을 알 수 있을 거예요.",
+      "observed": {
+        "character": "ariana",
+        "expression": "neutral",
+        "frame": "0",
+        "src": "/assets/webtoon/ariana-faces.webp",
+        "naturalWidth": 768,
+        "naturalHeight": 384,
+        "left": "0%",
+        "overflow": "hidden",
+        "box": {
+          "x": 125,
+          "y": 554,
+          "width": 118,
+          "height": 177
+        }
+      },
+      "path": "docs/screenshots/m6-bat/final/art-a4/tablet-starMap-1-ariana-neutral.png"
+    },
+    {
+      "device": "tablet",
+      "id": "starMap",
+      "index": 2,
+      "text": "이 환영 너머 길은 이제 열렸어요. 지도 단서는 항해 기록에 남겨 둘게요.",
+      "observed": {
+        "character": "ariana",
+        "expression": "joy",
+        "frame": "1",
+        "src": "/assets/webtoon/ariana-faces.webp",
+        "naturalWidth": 768,
+        "naturalHeight": 384,
+        "left": "-100%",
+        "overflow": "hidden",
+        "box": {
+          "x": 125,
+          "y": 554,
+          "width": 118,
+          "height": 177
+        }
+      },
+      "path": "docs/screenshots/m6-bat/final/art-a4/tablet-starMap-2-ariana-joy.png"
+    },
+    {
+      "device": "tablet",
+      "id": "nairaHint",
+      "index": 0,
+      "text": "산호문 너머에 갇혀 있어요! 바위 위의 산호 열쇠로 왕관 장식 보물함을 열어 주세요.",
+      "observed": {
+        "character": "naira",
+        "expression": "worried",
+        "frame": "2",
+        "src": "/assets/webtoon/naira-faces.webp",
+        "naturalWidth": 768,
+        "naturalHeight": 384,
+        "left": "-200%",
+        "overflow": "hidden",
+        "box": {
+          "x": 125,
+          "y": 554,
+          "width": 118,
+          "height": 177
+        }
+      },
+      "path": "docs/screenshots/m6-bat/final/art-a4/tablet-nairaHint-0-naira-worried.png"
+    },
+    {
+      "device": "tablet",
+      "id": "nairaHint",
+      "index": 1,
+      "text": "수호병은 정면을 방패로 막아요. 공격 예고를 보고 뛰어넘거나, 공격 뒤 빈틈에 다가가세요.",
+      "observed": {
+        "character": "naira",
+        "expression": "neutral",
+        "frame": "0",
+        "src": "/assets/webtoon/naira-faces.webp",
+        "naturalWidth": 768,
+        "naturalHeight": 384,
+        "left": "0%",
+        "overflow": "hidden",
+        "box": {
+          "x": 125,
+          "y": 554,
+          "width": 118,
+          "height": 177
+        }
+      },
+      "path": "docs/screenshots/m6-bat/final/art-a4/tablet-nairaHint-1-naira-neutral.png"
+    },
+    {
+      "device": "tablet",
+      "id": "S20.intro",
+      "index": 0,
+      "text": "덩굴을 태우고 길 표식 세 개를 남겨요.",
+      "observed": {
+        "character": "mira",
+        "expression": "worried",
+        "frame": "2",
+        "src": "/assets/webtoon/mira-faces.webp",
+        "naturalWidth": 768,
+        "naturalHeight": 384,
+        "left": "-200%",
+        "overflow": "hidden",
+        "box": {
+          "x": 125,
+          "y": 554,
+          "width": 118,
+          "height": 177
+        }
+      },
+      "path": "docs/screenshots/m6-bat/final/art-a4/tablet-S20-intro-0-mira-worried.png"
+    },
+    {
+      "device": "tablet",
+      "id": "S20.intro",
+      "index": 1,
+      "text": "마지막 야영지는 다음 원정의 안전 지점이에요.",
+      "observed": {
+        "character": "mira",
+        "expression": "neutral",
+        "frame": "0",
+        "src": "/assets/webtoon/mira-faces.webp",
+        "naturalWidth": 768,
+        "naturalHeight": 384,
+        "left": "0%",
+        "overflow": "hidden",
+        "box": {
+          "x": 125,
+          "y": 554,
+          "width": 118,
+          "height": 177
+        }
+      },
+      "path": "docs/screenshots/m6-bat/final/art-a4/tablet-S20-intro-1-mira-neutral.png"
+    },
+    {
+      "device": "tablet",
+      "id": "S27.intro",
+      "index": 0,
+      "text": "시장 사람들의 상자를 옮겨 주세요.",
+      "observed": {
+        "character": "mira",
+        "expression": "neutral",
+        "frame": "0",
+        "src": "/assets/webtoon/mira-faces.webp",
+        "naturalWidth": 768,
+        "naturalHeight": 384,
+        "left": "0%",
+        "overflow": "hidden",
+        "box": {
+          "x": 125,
+          "y": 554,
+          "width": 118,
+          "height": 177
+        }
+      },
+      "path": "docs/screenshots/m6-bat/final/art-a4/tablet-S27-intro-0-mira-neutral.png"
+    },
+    {
+      "device": "tablet",
+      "id": "S27.intro",
+      "index": 1,
+      "text": "밖의 도적은 항복시키고 신전 추천서를 받을 수 있어요.",
+      "observed": {
+        "character": "mira",
+        "expression": "worried",
+        "frame": "2",
+        "src": "/assets/webtoon/mira-faces.webp",
+        "naturalWidth": 768,
+        "naturalHeight": 384,
+        "left": "-200%",
+        "overflow": "hidden",
+        "box": {
+          "x": 125,
+          "y": 554,
+          "width": 118,
+          "height": 177
+        }
+      },
+      "path": "docs/screenshots/m6-bat/final/art-a4/tablet-S27-intro-1-mira-worried.png"
+    },
+    {
+      "device": "tablet",
+      "id": "S25.intro",
+      "index": 0,
+      "text": "세 도깨비불을 제자리로 안내해 주세요.",
+      "observed": {
+        "character": "baru",
+        "expression": "worried",
+        "frame": "2",
+        "src": "/assets/webtoon/baru-faces.webp",
+        "naturalWidth": 768,
+        "naturalHeight": 384,
+        "left": "-200%",
+        "overflow": "hidden",
+        "box": {
+          "x": 125,
+          "y": 554,
+          "width": 118,
+          "height": 177
+        }
+      },
+      "path": "docs/screenshots/m6-bat/final/art-a4/tablet-S25-intro-0-baru-worried.png"
+    },
+    {
+      "device": "tablet",
+      "id": "S25.intro",
+      "index": 1,
+      "text": "달빛 연꽃은 12초 동안 다리를 만들고, 다리 위에 서면 시간이 유지돼요.",
+      "observed": {
+        "character": "baru",
+        "expression": "neutral",
+        "frame": "0",
+        "src": "/assets/webtoon/baru-faces.webp",
+        "naturalWidth": 768,
+        "naturalHeight": 384,
+        "left": "0%",
+        "overflow": "hidden",
+        "box": {
+          "x": 125,
+          "y": 554,
+          "width": 118,
+          "height": 177
+        }
+      },
+      "path": "docs/screenshots/m6-bat/final/art-a4/tablet-S25-intro-1-baru-neutral.png"
+    },
+    {
+      "device": "tablet",
+      "id": "S34.intro",
+      "index": 0,
+      "text": "모험의 지도와 보물 기록을 정리해 주세요.",
+      "observed": {
+        "character": "king",
+        "expression": "worried",
+        "frame": "2",
+        "src": "/assets/webtoon/king-faces.webp",
+        "naturalWidth": 768,
+        "naturalHeight": 384,
+        "left": "-200%",
+        "overflow": "hidden",
+        "box": {
+          "x": 125,
+          "y": 554,
+          "width": 118,
+          "height": 177
+        }
+      },
+      "path": "docs/screenshots/m6-bat/final/art-a4/tablet-S34-intro-0-king-worried.png"
+    },
+    {
+      "device": "tablet",
+      "id": "S34.intro",
+      "index": 1,
+      "text": "완성한 편지를 왕에게 전달하면 축제가 열려요.",
+      "observed": {
+        "character": "king",
+        "expression": "neutral",
+        "frame": "0",
+        "src": "/assets/webtoon/king-faces.webp",
+        "naturalWidth": 768,
+        "naturalHeight": 384,
+        "left": "0%",
+        "overflow": "hidden",
+        "box": {
+          "x": 125,
+          "y": 554,
+          "width": 118,
+          "height": 177
+        }
+      },
+      "path": "docs/screenshots/m6-bat/final/art-a4/tablet-S34-intro-1-king-neutral.png"
+    },
+    {
+      "device": "tablet",
+      "id": "siren",
+      "index": 0,
+      "text": "검은 마법이 내 노래를 뒤틀었어! 세 조개 종을 울려 방벽부터 걷어 줘.",
+      "observed": {
+        "character": "siren",
+        "expression": "worried",
+        "frame": "2",
+        "src": "/assets/webtoon/siren-faces.webp",
+        "naturalWidth": 768,
+        "naturalHeight": 384,
+        "left": "-200%",
+        "overflow": "hidden",
+        "box": {
+          "x": 125,
+          "y": 554,
+          "width": 118,
+          "height": 177
+        }
+      },
+      "path": "docs/screenshots/m6-bat/final/art-a4/tablet-siren-0-siren-worried.png"
+    },
+    {
+      "device": "tablet",
+      "id": "siren",
+      "index": 1,
+      "text": "바닥을 흐르는 음파는 뛰어넘어 줘. 음표가 퍼질 때는 빈 곳으로 피하면 돼.",
+      "observed": {
+        "character": "siren",
+        "expression": "neutral",
+        "frame": "0",
+        "src": "/assets/webtoon/siren-faces.webp",
+        "naturalWidth": 768,
+        "naturalHeight": 384,
+        "left": "0%",
+        "overflow": "hidden",
+        "box": {
+          "x": 125,
+          "y": 554,
+          "width": 118,
+          "height": 177
+        }
+      },
+      "path": "docs/screenshots/m6-bat/final/art-a4/tablet-siren-1-siren-neutral.png"
+    },
+    {
+      "device": "tablet",
+      "id": "S27.outro",
+      "index": 0,
+      "text": "미라가 신전 출입 추천서를 써 주었어요.",
+      "observed": {
+        "character": "mira",
+        "expression": "joy",
+        "frame": "1",
+        "src": "/assets/webtoon/mira-faces.webp",
+        "naturalWidth": 768,
+        "naturalHeight": 384,
+        "left": "-100%",
+        "overflow": "hidden",
+        "box": {
+          "x": 125,
+          "y": 554,
+          "width": 118,
+          "height": 177
+        }
+      },
+      "path": "docs/screenshots/m6-bat/final/art-a4/tablet-S27-outro-0-mira-joy.png"
+    },
+    {
+      "device": "tablet",
+      "id": "S25.outro",
+      "index": 0,
+      "text": "바루: 길이 없으면 만들면 되지! 대신 약속은 꼭 지켜.",
+      "observed": {
+        "character": "baru",
+        "expression": "joy",
+        "frame": "1",
+        "src": "/assets/webtoon/baru-faces.webp",
+        "naturalWidth": 768,
+        "naturalHeight": 384,
+        "left": "-100%",
+        "overflow": "hidden",
+        "box": {
+          "x": 125,
+          "y": 554,
+          "width": 118,
+          "height": 177
+        }
+      },
+      "path": "docs/screenshots/m6-bat/final/art-a4/tablet-S25-outro-0-baru-joy.png"
+    },
+    {
+      "device": "tablet",
+      "id": "S25.outro",
+      "index": 1,
+      "text": "도깨비의 방울 T05와 달빛 방망이 W06을 얻었어요. 마지막 다리를 밝혀 보세요.",
+      "observed": {
+        "character": "baru",
+        "expression": "neutral",
+        "frame": "0",
+        "src": "/assets/webtoon/baru-faces.webp",
+        "naturalWidth": 768,
+        "naturalHeight": 384,
+        "left": "0%",
+        "overflow": "hidden",
+        "box": {
+          "x": 125,
+          "y": 554,
+          "width": 118,
+          "height": 177
+        }
+      },
+      "path": "docs/screenshots/m6-bat/final/art-a4/tablet-S25-outro-1-baru-neutral.png"
+    },
+    {
+      "device": "tablet",
+      "id": "S34.outro",
+      "index": 0,
+      "text": "왕국의 귀환 축제가 열렸어요.",
+      "observed": {
+        "character": "king",
+        "expression": "joy",
+        "frame": "1",
+        "src": "/assets/webtoon/king-faces.webp",
+        "naturalWidth": 768,
+        "naturalHeight": 384,
+        "left": "-100%",
+        "overflow": "hidden",
+        "box": {
+          "x": 125,
+          "y": 554,
+          "width": 118,
+          "height": 177
+        }
+      },
+      "path": "docs/screenshots/m6-bat/final/art-a4/tablet-S34-outro-0-king-joy.png"
+    },
+    {
+      "device": "tablet",
+      "id": "S35.outro",
+      "index": 0,
+      "text": "신밧드: 다음 모험도 당신과 함께하고 싶어요.",
+      "observed": {
+        "character": "static",
+        "expression": "neutral",
+        "frame": "0",
+        "src": "/assets/webtoon/hero-webtoon.webp",
+        "naturalWidth": 512,
+        "naturalHeight": 768,
+        "left": "0%",
+        "overflow": "hidden",
+        "box": {
+          "x": 125,
+          "y": 554,
+          "width": 118,
+          "height": 177
+        }
+      },
+      "path": "docs/screenshots/m6-bat/final/art-a4/tablet-S35-outro-0-static-neutral.png"
+    },
+    {
+      "device": "tablet",
+      "id": "S35.outro",
+      "index": 1,
+      "text": "아리아나: 나도 같은 마음이에요.",
+      "observed": {
+        "character": "ariana",
+        "expression": "joy",
+        "frame": "1",
+        "src": "/assets/webtoon/ariana-faces.webp",
+        "naturalWidth": 768,
+        "naturalHeight": 384,
+        "left": "-100%",
+        "overflow": "hidden",
+        "box": {
+          "x": 125,
+          "y": 554,
+          "width": 118,
+          "height": 177
+        }
+      },
+      "path": "docs/screenshots/m6-bat/final/art-a4/tablet-S35-outro-1-ariana-joy.png"
+    },
+    {
+      "device": "tablet",
+      "id": "S35.outro",
+      "index": 2,
+      "text": "왕: 두 사람의 약속을 축복하노라.",
+      "observed": {
+        "character": "king",
+        "expression": "joy",
+        "frame": "1",
+        "src": "/assets/webtoon/king-faces.webp",
+        "naturalWidth": 768,
+        "naturalHeight": 384,
+        "left": "-100%",
+        "overflow": "hidden",
+        "box": {
+          "x": 125,
+          "y": 554,
+          "width": 118,
+          "height": 177
+        }
+      },
+      "path": "docs/screenshots/m6-bat/final/art-a4/tablet-S35-outro-2-king-joy.png"
+    },
+    {
+      "device": "tablet",
+      "id": "S35.outro",
+      "index": 3,
+      "text": "두 사람은 왕의 축복 속에 결혼하고 항해 도서관을 함께 열었어요.",
+      "observed": {
+        "character": "ariana",
+        "expression": "neutral",
+        "frame": "0",
+        "src": "/assets/webtoon/ariana-faces.webp",
+        "naturalWidth": 768,
+        "naturalHeight": 384,
+        "left": "0%",
+        "overflow": "hidden",
+        "box": {
+          "x": 125,
+          "y": 554,
+          "width": 118,
+          "height": 177
+        }
+      },
+      "path": "docs/screenshots/m6-bat/final/art-a4/tablet-S35-outro-3-ariana-neutral.png"
+    },
+    {
+      "device": "tablet",
+      "id": "naira",
+      "index": 0,
+      "text": "고마워요, 신밧드. 아리아나가 검은 탑으로 끌려가는 걸 봤어요.",
+      "observed": {
+        "character": "naira",
+        "expression": "joy",
+        "frame": "1",
+        "src": "/assets/webtoon/naira-faces.webp",
+        "naturalWidth": 768,
+        "naturalHeight": 384,
+        "left": "-100%",
+        "overflow": "hidden",
+        "box": {
+          "x": 125,
+          "y": 554,
+          "width": 118,
+          "height": 177
+        }
+      },
+      "path": "docs/screenshots/m6-bat/final/art-a4/tablet-naira-0-naira-joy.png"
+    },
+    {
+      "device": "tablet",
+      "id": "naira",
+      "index": 1,
+      "text": "제 공기방울 보호를 드렸어요. 잠긴 길에서도 숨을 쉴 수 있지만 아직 자유롭게 헤엄치지는 못해요.",
+      "observed": {
+        "character": "naira",
+        "expression": "neutral",
+        "frame": "0",
+        "src": "/assets/webtoon/naira-faces.webp",
+        "naturalWidth": 768,
+        "naturalHeight": 384,
+        "left": "0%",
+        "overflow": "hidden",
+        "box": {
+          "x": 125,
+          "y": 554,
+          "width": 118,
+          "height": 177
+        }
+      },
+      "path": "docs/screenshots/m6-bat/final/art-a4/tablet-naira-1-naira-neutral.png"
+    },
+    {
+      "device": "tablet",
+      "id": "naira",
+      "index": 2,
+      "text": "오른쪽 산호방이 열렸어요. 황금 하트를 찾은 뒤 다시 바닷길로 나가요!",
+      "observed": {
+        "character": "naira",
+        "expression": "joy",
+        "frame": "1",
+        "src": "/assets/webtoon/naira-faces.webp",
+        "naturalWidth": 768,
+        "naturalHeight": 384,
+        "left": "-100%",
+        "overflow": "hidden",
+        "box": {
+          "x": 125,
+          "y": 554,
+          "width": 118,
+          "height": 177
+        }
+      },
+      "path": "docs/screenshots/m6-bat/final/art-a4/tablet-naira-2-naira-joy.png"
+    },
+    {
+      "device": "tablet",
+      "id": "freed",
+      "index": 0,
+      "text": "이제 내 노래가 돌아왔어. 고마워, 신밧드!",
+      "observed": {
+        "character": "siren",
+        "expression": "joy",
+        "frame": "1",
+        "src": "/assets/webtoon/siren-faces.webp",
+        "naturalWidth": 768,
+        "naturalHeight": 384,
+        "left": "-100%",
+        "overflow": "hidden",
+        "box": {
+          "x": 125,
+          "y": 554,
+          "width": 118,
+          "height": 177
+        }
+      },
+      "path": "docs/screenshots/m6-bat/final/art-a4/tablet-freed-0-siren-joy.png"
+    },
+    {
+      "device": "tablet",
+      "id": "freed",
+      "index": 1,
+      "text": "오른쪽 보물함의 바람 부메랑을 가져가. Q로 검과 바꾸면 멀리 있는 조개도 칠 수 있어.",
+      "observed": {
+        "character": "siren",
+        "expression": "neutral",
+        "frame": "0",
+        "src": "/assets/webtoon/siren-faces.webp",
+        "naturalWidth": 768,
+        "naturalHeight": 384,
+        "left": "0%",
+        "overflow": "hidden",
+        "box": {
+          "x": 125,
+          "y": 554,
+          "width": 118,
+          "height": 177
+        }
+      },
+      "path": "docs/screenshots/m6-bat/final/art-a4/tablet-freed-1-siren-neutral.png"
+    }
+  ],
+  "errors": []
+}

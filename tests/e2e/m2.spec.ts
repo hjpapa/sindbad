@@ -2,6 +2,7 @@ import {test,expect,type Page} from '@playwright/test';
 import {freshSave} from '../../src/core/state';
 import {SAVE_KEY} from '../../src/core/save';
 import {maps} from '../../src/content/maps';
+import {moveJourney} from './journey-bot';
 const read=(page:Page)=>page.evaluate(()=>Reflect.get(window,'__SINBAD_TEST__'));
 async function walk(page:Page,x:number){const until=Date.now()+25000;let jump=0;while(true){const s=await read(page);if(!s.player){if(Date.now()>until)throw Error("Player did not load");await page.waitForTimeout(50);continue;}if(Math.abs(s.player.x-x)<12)break;if(Date.now()>until)throw Error(`Unreachable ${x}: ${JSON.stringify(s.player)}`);const key=s.player.x<x?'d':'a';await page.keyboard.up(key==='d'?'a':'d');await page.keyboard.down(key);if(Date.now()-jump>430){await page.keyboard.press('ArrowUp');jump=Date.now();}await page.waitForTimeout(65);}await page.keyboard.up('a');await page.keyboard.up('d');await page.waitForTimeout(600);}
 async function use(page:Page,x:number){await walk(page,x);await expect.poll(async()=>{const s=await read(page);const o=maps[s.stage]?.objects.find(o=>o.x===x);return !!s.player?.grounded && !!o && Math.abs(s.player.x-x)<85 && Math.abs(s.player.y-o.y)<90;}).toBe(true);await page.keyboard.press('e');await page.waitForTimeout(150);}
@@ -24,12 +25,22 @@ test('existing M1 save → whale rescue, moving deck, G01 → coral rescue, G02 
  await use(page,3880);await page.getByRole('button',{name:'항해 지도'}).click();await expect(page.locator('[data-stage="S06"]')).toBeEnabled();expect((await read(page)).save.clearedStageIds).toContain('S05');expect(errors).toEqual([]);await page.screenshot({path:info.outputPath('M2-part-one.png')});
 });
 
-test('coral gate rejects missing crown; guardian blocks frontal attacks and exposes recovery',async({page})=>{
+test('coral gate rejects missing crown; guardian blocks frontal attacks and exposes recovery',async({page},info)=>{
  const s=freshSave();s.clearedStageIds=['S01','S02','S03','S04'];s.checkpoint={stageId:'S05',checkpointId:'start'};
  await page.addInitScript(({key,value})=>localStorage.setItem(key,value),{key:SAVE_KEY,value:JSON.stringify(s)});await page.goto('/');await page.getByRole('button',{name:'이어하기 · S05'}).click();await expect.poll(async()=>(await read(page)).stage).toBe('S05');
- await walk(page,350);const enemy=()=>read(page).then(s=>s.enemies.find((e:{id:string})=>e.id==='S05.enemy.guardian.1'));
- await page.keyboard.down('d');await page.waitForTimeout(30);await page.keyboard.up('d');const hp=(await enemy()).hp;await page.keyboard.press('j');await page.waitForTimeout(230);expect((await enemy()).hp).toBe(hp);
+ const enemy=()=>read(page).then(s=>s.enemies.find((e:{id:string})=>e.id==='S05.enemy.guardian.1'));
+ await moveJourney(page,350);await moveJourney(page,(await enemy()).x-55);
+ await page.keyboard.down('d');await page.waitForTimeout(30);await page.keyboard.up('d');
+ // A new telegraph locks the shield towards this grounded frontal attacker.
+ // The old hopping route could reach the enemy during its unshielded recovery.
+ await expect.poll(async()=>(await enemy()).state).toBe('recover');
+ await expect.poll(async()=>(await enemy()).state).toBe('telegraph');
+ const frontal=await read(page),hp=(await enemy()).hp;
+ expect(frontal.player.grounded).toBe(true);expect(frontal.player.x).toBeLessThan((await enemy()).x);expect((await enemy()).flipX).toBe(true);
+ await page.keyboard.press('j');await page.waitForTimeout(230);expect((await enemy()).hp).toBe(hp);
+ await page.screenshot({path:info.outputPath('S05-frontal-shield.png')});
  await expect.poll(async()=>(await enemy()).state).toBe('recover');await page.keyboard.press('j');await expect.poll(async()=>(await enemy()).hp).toBeLessThan(hp);
+ await page.screenshot({path:info.outputPath('S05-recovery-hit.png')});
  await use(page,1870);expect((await read(page)).save.completedObjectiveIds).not.toContain('S05.crown');
  await use(page,2460);expect((await read(page)).save.completedObjectiveIds).not.toContain('S05.gate');await page.keyboard.down('d');await page.keyboard.press('ArrowUp');await page.waitForTimeout(1100);await page.keyboard.up('d');expect((await read(page)).player.x).toBeLessThan(2500);
  expect((await read(page)).save.flags).not.toContain('bubbleBlessing');

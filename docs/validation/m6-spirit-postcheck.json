@@ -1,0 +1,281 @@
+{
+  "date": "2026-10-06T13:48:30.773620+00:00",
+  "fullStats": {
+    "startTime": "2026-10-06T12:38:26.710Z",
+    "duration": 4180263.449,
+    "expected": 69,
+    "skipped": 0,
+    "unexpected": 4,
+    "flaky": 0
+  },
+  "staticCommands": 8,
+  "units": 115,
+  "frozenFiles": 984,
+  "screenshots": 141,
+  "mediaPreserved": 570,
+  "backupsPreserved": 363,
+  "budgetBytes": 3083504,
+  "campaign": [
+    {
+      "id": "S01",
+      "elapsedSeconds": 21
+    },
+    {
+      "id": "S02",
+      "elapsedSeconds": 55
+    },
+    {
+      "id": "S03",
+      "elapsedSeconds": 77
+    },
+    {
+      "id": "S04",
+      "elapsedSeconds": 96
+    },
+    {
+      "id": "S05",
+      "elapsedSeconds": 116
+    },
+    {
+      "id": "S06",
+      "elapsedSeconds": 171
+    },
+    {
+      "id": "S07",
+      "elapsedSeconds": 195
+    },
+    {
+      "id": "S08",
+      "elapsedSeconds": 211
+    },
+    {
+      "id": "S09",
+      "elapsedSeconds": 232
+    },
+    {
+      "id": "S10",
+      "elapsedSeconds": 243
+    },
+    {
+      "id": "S11",
+      "elapsedSeconds": 270
+    },
+    {
+      "id": "S12",
+      "elapsedSeconds": 292
+    },
+    {
+      "id": "S13",
+      "elapsedSeconds": 317
+    },
+    {
+      "id": "S14",
+      "elapsedSeconds": 334
+    },
+    {
+      "id": "S15",
+      "elapsedSeconds": 353
+    },
+    {
+      "id": "S16",
+      "elapsedSeconds": 377
+    },
+    {
+      "id": "S17",
+      "elapsedSeconds": 397
+    },
+    {
+      "id": "S18",
+      "elapsedSeconds": 419
+    },
+    {
+      "id": "S19",
+      "elapsedSeconds": 440
+    },
+    {
+      "id": "S20",
+      "elapsedSeconds": 460
+    },
+    {
+      "id": "S21",
+      "elapsedSeconds": 485
+    },
+    {
+      "id": "S22",
+      "elapsedSeconds": 506
+    },
+    {
+      "id": "S23",
+      "elapsedSeconds": 525
+    },
+    {
+      "id": "S24",
+      "elapsedSeconds": 547
+    },
+    {
+      "id": "S25",
+      "elapsedSeconds": 571
+    },
+    {
+      "id": "S26",
+      "elapsedSeconds": 593
+    },
+    {
+      "id": "S27",
+      "elapsedSeconds": 616
+    },
+    {
+      "id": "S28",
+      "elapsedSeconds": 637
+    },
+    {
+      "id": "S29",
+      "elapsedSeconds": 663
+    },
+    {
+      "id": "S30",
+      "elapsedSeconds": 688
+    },
+    {
+      "id": "S31",
+      "elapsedSeconds": 721
+    },
+    {
+      "id": "S32",
+      "elapsedSeconds": 746
+    },
+    {
+      "id": "S33",
+      "elapsedSeconds": 757
+    },
+    {
+      "id": "S34",
+      "elapsedSeconds": 774
+    },
+    {
+      "id": "S35",
+      "elapsedSeconds": 794
+    },
+    {
+      "id": "S36",
+      "elapsedSeconds": 812
+    }
+  ],
+  "mobile": {
+    "phone": {
+      "visibleButtons": [
+        "left",
+        "right",
+        "jump",
+        "primary"
+      ],
+      "touchMode": true,
+      "walkRight": 252,
+      "slideReverses": true,
+      "runJump": {
+        "dx": 0,
+        "dy": -110
+      },
+      "firstSkeleton": "defeated",
+      "walkBack": 221,
+      "actionKind": "talk",
+      "dialogue": "바닷길에 검은 마법이 드리웠구나. 먼저 이 항구를 안전하게 만들자.",
+      "errors": []
+    },
+    "tablet": {
+      "visibleButtons": [
+        "left",
+        "right",
+        "jump",
+        "primary"
+      ],
+      "touchMode": true,
+      "walkRight": 252,
+      "slideReverses": true,
+      "runJump": {
+        "dx": 7,
+        "dy": -110
+      },
+      "firstSkeleton": "defeated",
+      "walkBack": 197,
+      "actionKind": "talk",
+      "dialogue": "바닷길에 검은 마법이 드리웠구나. 먼저 이 항구를 안전하게 만들자.",
+      "errors": []
+    }
+  },
+  "artStatus": "ART_DRAFT",
+  "previousCommit": "934c421",
+  "push": "not requested this turn; local work",
+  "deploy": false,
+  "unverified": [
+    "physical phone/tablet",
+    "iOS Safari",
+    "child usability",
+    "long-run FPS/heat",
+    "physical speaker mix",
+    "final user art approval"
+  ],
+  "regressionRepair": {
+    "date": "2026-10-06T13:53:59.374841+00:00",
+    "full": {
+      "report": "docs/validation/m6-spirit-e2e-final.json",
+      "exitCode": 1,
+      "stats": {
+        "startTime": "2026-10-06T12:38:26.710Z",
+        "duration": 4180263.449,
+        "expected": 69,
+        "skipped": 0,
+        "unexpected": 4,
+        "flaky": 0
+      }
+    },
+    "targeted": {
+      "report": "docs/validation/m6-spirit-regression-repair.json",
+      "exitCode": 0,
+      "stats": {
+        "startTime": "2026-10-06T13:49:44.932Z",
+        "duration": 209984.796,
+        "expected": 5,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      }
+    },
+    "changesAfterFull": [
+      "tests/e2e/m2.spec.ts",
+      "tests/e2e/siren-actions.spec.ts"
+    ],
+    "unchangedGameAssetsBuildAndOtherFiles": 982,
+    "targetRunFrozenFiles": 984,
+    "targetRunUnchanged": true,
+    "screenshots": 34,
+    "staticRechecks": [
+      {
+        "command": "npm run typecheck",
+        "started": "2026-10-06T13:50:41.278067+00:00",
+        "exitCode": 0,
+        "seconds": 8.25,
+        "output": "docs/validation/m6-spirit-repair-check-1.txt"
+      },
+      {
+        "command": "npm run lint",
+        "started": "2026-10-06T13:50:49.515146+00:00",
+        "exitCode": 0,
+        "seconds": 14.77,
+        "output": "docs/validation/m6-spirit-repair-check-2.txt"
+      },
+      {
+        "command": "npm run test",
+        "started": "2026-10-06T13:51:04.286896+00:00",
+        "exitCode": 0,
+        "seconds": 5.88,
+        "output": "docs/validation/m6-spirit-repair-check-3.txt"
+      }
+    ],
+    "repairs": [
+      "Guardian waits for a new frontal telegraph after recovery; HP blocking and subsequent recovery damage remain asserted.",
+      "Siren actor/shot observations use a single read-only simulation snapshot before screenshot encoding; exact shot counts and velocities remain asserted."
+    ],
+    "limitation": "Full 73-case suite was not repeated after these two E2E-only repairs. Do not report a single 73-pass full run."
+  }
+}

@@ -1,0 +1,339 @@
+{
+  "pass": true,
+  "method": "nine intentional PNG request aborts; explicit fixtures, real touch actions, actual ability MP costs and reload; no save injection claimed as fresh campaign",
+  "result": {
+    "device": "phone",
+    "fallback": true,
+    "checks": [
+      {
+        "action": "jump",
+        "key": "ui-jump",
+        "aria": "터치 ↑",
+        "caption": "점프",
+        "button": {
+          "x": 660,
+          "y": 308,
+          "w": 68,
+          "h": 68
+        },
+        "image": {
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0,
+          "natural": 0,
+          "hidden": true,
+          "alt": "",
+          "transform": "none",
+          "pointerEvents": "none"
+        },
+        "path": "docs/screenshots/m6-roc/final/art-a8/phone-fallback-ui-jump.png"
+      },
+      {
+        "action": "skill",
+        "key": "ui-flame",
+        "aria": "터치 영원의 불씨",
+        "caption": "불꽃",
+        "button": {
+          "x": 764,
+          "y": 210,
+          "w": 52,
+          "h": 52
+        },
+        "image": {
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0,
+          "natural": 0,
+          "hidden": true,
+          "alt": "",
+          "transform": "none",
+          "pointerEvents": "none"
+        },
+        "path": "docs/screenshots/m6-roc/final/art-a8/phone-fallback-ui-flame.png"
+      },
+      {
+        "action": "skill",
+        "key": "ui-bridge",
+        "aria": "터치 도깨비의 방울",
+        "caption": "다리",
+        "button": {
+          "x": 764,
+          "y": 210,
+          "w": 52,
+          "h": 52
+        },
+        "image": {
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0,
+          "natural": 0,
+          "hidden": true,
+          "alt": "",
+          "transform": "none",
+          "pointerEvents": "none"
+        },
+        "path": "docs/screenshots/m6-roc/final/art-a8/phone-fallback-ui-bridge.png"
+      },
+      {
+        "action": "skill",
+        "key": "ui-shield",
+        "aria": "터치 균형의 연꽃",
+        "caption": "방패",
+        "button": {
+          "x": 764,
+          "y": 210,
+          "w": 52,
+          "h": 52
+        },
+        "image": {
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0,
+          "natural": 0,
+          "hidden": true,
+          "alt": "",
+          "transform": "none",
+          "pointerEvents": "none"
+        },
+        "path": "docs/screenshots/m6-roc/final/art-a8/phone-fallback-ui-shield.png"
+      },
+      {
+        "action": "skill",
+        "key": "ui-dawn",
+        "aria": "터치 새벽의 나침반",
+        "caption": "새벽",
+        "button": {
+          "x": 764,
+          "y": 210,
+          "w": 52,
+          "h": 52
+        },
+        "image": {
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0,
+          "natural": 0,
+          "hidden": true,
+          "alt": "",
+          "transform": "none",
+          "pointerEvents": "none"
+        },
+        "path": "docs/screenshots/m6-roc/final/art-a8/phone-fallback-ui-dawn.png"
+      },
+      {
+        "action": "primary",
+        "key": "ui-talk",
+        "aria": "터치 행동",
+        "caption": "대화",
+        "button": {
+          "x": 742,
+          "y": 274,
+          "w": 84,
+          "h": 84
+        },
+        "image": {
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0,
+          "natural": 0,
+          "hidden": true,
+          "alt": "",
+          "transform": "none",
+          "pointerEvents": "none"
+        },
+        "path": "docs/screenshots/m6-roc/final/art-a8/phone-fallback-ui-talk.png"
+      },
+      {
+        "action": "primary",
+        "key": "ui-inspect",
+        "aria": "터치 행동",
+        "caption": "살펴보기",
+        "button": {
+          "x": 742,
+          "y": 274,
+          "w": 84,
+          "h": 84
+        },
+        "image": {
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0,
+          "natural": 0,
+          "hidden": true,
+          "alt": "",
+          "transform": "none",
+          "pointerEvents": "none"
+        },
+        "path": "docs/screenshots/m6-roc/final/art-a8/phone-fallback-ui-inspect.png"
+      },
+      {
+        "action": "primary",
+        "key": "ui-depart",
+        "aria": "터치 행동",
+        "caption": "출발",
+        "button": {
+          "x": 742,
+          "y": 274,
+          "w": 84,
+          "h": 84
+        },
+        "image": {
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0,
+          "natural": 0,
+          "hidden": true,
+          "alt": "",
+          "transform": "none",
+          "pointerEvents": "none"
+        },
+        "path": "docs/screenshots/m6-roc/final/art-a8/phone-fallback-ui-depart.png"
+      },
+      {
+        "action": "primary",
+        "key": "ui-wing",
+        "aria": "터치 행동",
+        "caption": "공격",
+        "button": {
+          "x": 742,
+          "y": 274,
+          "w": 84,
+          "h": 84
+        },
+        "image": {
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0,
+          "natural": 0,
+          "hidden": true,
+          "alt": "",
+          "transform": "none",
+          "pointerEvents": "none"
+        },
+        "path": "docs/screenshots/m6-roc/final/art-a8/phone-fallback-ui-wing.png"
+      }
+    ],
+    "casts": [
+      {
+        "id": "flamePulse",
+        "beforeMp": 98,
+        "afterMp": 83
+      },
+      {
+        "id": "moonBridge",
+        "beforeMp": 94.1670999999995,
+        "afterMp": 82.41704999999948
+      },
+      {
+        "id": "lotusShield",
+        "beforeMp": 88.5005499999992,
+        "afterMp": 73.75054999999918
+      },
+      {
+        "id": "dawnWave",
+        "beforeMp": 89.83504999999852,
+        "afterMp": 70.0849999999985
+      }
+    ],
+    "jump": {
+      "dx": 27.00000000000003,
+      "dy": -77.25
+    },
+    "dialogue": "바닷길에 검은 마법이 드리웠구나. 먼저 이 항구를 안전하게 만들자.",
+    "bridgeReload": true,
+    "departure": "S02",
+    "wingDamage": 22,
+    "skillReload": true,
+    "requests": [
+      "http://127.0.0.1:5174/assets/webtoon/ui-jump.png",
+      "http://127.0.0.1:5174/assets/webtoon/ui-jump.png",
+      "http://127.0.0.1:5174/assets/webtoon/ui-flame.png",
+      "http://127.0.0.1:5174/assets/webtoon/ui-talk.png",
+      "http://127.0.0.1:5174/assets/webtoon/ui-bridge.png",
+      "http://127.0.0.1:5174/assets/webtoon/ui-shield.png",
+      "http://127.0.0.1:5174/assets/webtoon/ui-dawn.png",
+      "http://127.0.0.1:5174/assets/webtoon/ui-jump.png",
+      "http://127.0.0.1:5174/assets/webtoon/ui-dawn.png",
+      "http://127.0.0.1:5174/assets/webtoon/ui-talk.png",
+      "http://127.0.0.1:5174/assets/webtoon/ui-jump.png",
+      "http://127.0.0.1:5174/assets/webtoon/ui-jump.png",
+      "http://127.0.0.1:5174/assets/webtoon/ui-flame.png",
+      "http://127.0.0.1:5174/assets/webtoon/ui-talk.png",
+      "http://127.0.0.1:5174/assets/webtoon/ui-inspect.png",
+      "http://127.0.0.1:5174/assets/webtoon/ui-jump.png",
+      "http://127.0.0.1:5174/assets/webtoon/ui-jump.png",
+      "http://127.0.0.1:5174/assets/webtoon/ui-jump.png",
+      "http://127.0.0.1:5174/assets/webtoon/ui-flame.png",
+      "http://127.0.0.1:5174/assets/webtoon/ui-depart.png",
+      "http://127.0.0.1:5174/assets/webtoon/ui-jump.png",
+      "http://127.0.0.1:5174/assets/webtoon/ui-jump.png",
+      "http://127.0.0.1:5174/assets/webtoon/ui-wing.png",
+      "http://127.0.0.1:5174/assets/webtoon/ui-talk.png",
+      "http://127.0.0.1:5174/assets/webtoon/ui-wing.png"
+    ],
+    "expectedAborts": [
+      "http://127.0.0.1:5174/assets/webtoon/ui-jump.png",
+      "http://127.0.0.1:5174/assets/webtoon/ui-jump.png",
+      "http://127.0.0.1:5174/assets/webtoon/ui-flame.png",
+      "http://127.0.0.1:5174/assets/webtoon/ui-talk.png",
+      "http://127.0.0.1:5174/assets/webtoon/ui-bridge.png",
+      "http://127.0.0.1:5174/assets/webtoon/ui-shield.png",
+      "http://127.0.0.1:5174/assets/webtoon/ui-dawn.png",
+      "http://127.0.0.1:5174/assets/webtoon/ui-jump.png",
+      "http://127.0.0.1:5174/assets/webtoon/ui-dawn.png",
+      "http://127.0.0.1:5174/assets/webtoon/ui-talk.png",
+      "http://127.0.0.1:5174/assets/webtoon/ui-jump.png",
+      "http://127.0.0.1:5174/assets/webtoon/ui-jump.png",
+      "http://127.0.0.1:5174/assets/webtoon/ui-flame.png",
+      "http://127.0.0.1:5174/assets/webtoon/ui-talk.png",
+      "http://127.0.0.1:5174/assets/webtoon/ui-inspect.png",
+      "http://127.0.0.1:5174/assets/webtoon/ui-jump.png",
+      "http://127.0.0.1:5174/assets/webtoon/ui-jump.png",
+      "http://127.0.0.1:5174/assets/webtoon/ui-jump.png",
+      "http://127.0.0.1:5174/assets/webtoon/ui-flame.png",
+      "http://127.0.0.1:5174/assets/webtoon/ui-depart.png",
+      "http://127.0.0.1:5174/assets/webtoon/ui-jump.png",
+      "http://127.0.0.1:5174/assets/webtoon/ui-jump.png",
+      "http://127.0.0.1:5174/assets/webtoon/ui-wing.png",
+      "http://127.0.0.1:5174/assets/webtoon/ui-talk.png",
+      "http://127.0.0.1:5174/assets/webtoon/ui-wing.png"
+    ],
+    "errors": [],
+    "consoleErrors": [
+      "Failed to load resource: net::ERR_FAILED",
+      "Failed to load resource: net::ERR_FAILED",
+      "Failed to load resource: net::ERR_FAILED",
+      "Failed to load resource: net::ERR_FAILED",
+      "Failed to load resource: net::ERR_FAILED",
+      "Failed to load resource: net::ERR_FAILED",
+      "Failed to load resource: net::ERR_FAILED",
+      "Failed to load resource: net::ERR_FAILED",
+      "Failed to load resource: net::ERR_FAILED",
+      "Failed to load resource: net::ERR_FAILED",
+      "Failed to load resource: net::ERR_FAILED",
+      "Failed to load resource: net::ERR_FAILED",
+      "Failed to load resource: net::ERR_FAILED",
+      "Failed to load resource: net::ERR_FAILED",
+      "Failed to load resource: net::ERR_FAILED",
+      "Failed to load resource: net::ERR_FAILED",
+      "Failed to load resource: net::ERR_FAILED",
+      "Failed to load resource: net::ERR_FAILED",
+      "Failed to load resource: net::ERR_FAILED",
+      "Failed to load resource: net::ERR_FAILED",
+      "Failed to load resource: net::ERR_FAILED",
+      "Failed to load resource: net::ERR_FAILED",
+      "Failed to load resource: net::ERR_FAILED",
+      "Failed to load resource: net::ERR_FAILED",
+      "Failed to load resource: net::ERR_FAILED"
+    ]
+  }
+}

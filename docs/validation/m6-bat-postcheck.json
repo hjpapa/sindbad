@@ -1,0 +1,224 @@
+{
+  "date": "2026-10-06T11:43:19.343416+00:00",
+  "fullStats": {
+    "startTime": "2026-10-06T10:49:24.170Z",
+    "duration": 3197653.4790000003,
+    "expected": 69,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "staticCommands": 8,
+  "units": 113,
+  "frozenFiles": 970,
+  "screenshots": 45,
+  "mediaPreserved": 566,
+  "backupsPreserved": 333,
+  "budgetBytes": 3082569,
+  "campaign": [
+    {
+      "id": "S01",
+      "elapsedSeconds": 22
+    },
+    {
+      "id": "S02",
+      "elapsedSeconds": 54
+    },
+    {
+      "id": "S03",
+      "elapsedSeconds": 77
+    },
+    {
+      "id": "S04",
+      "elapsedSeconds": 96
+    },
+    {
+      "id": "S05",
+      "elapsedSeconds": 115
+    },
+    {
+      "id": "S06",
+      "elapsedSeconds": 171
+    },
+    {
+      "id": "S07",
+      "elapsedSeconds": 195
+    },
+    {
+      "id": "S08",
+      "elapsedSeconds": 211
+    },
+    {
+      "id": "S09",
+      "elapsedSeconds": 233
+    },
+    {
+      "id": "S10",
+      "elapsedSeconds": 244
+    },
+    {
+      "id": "S11",
+      "elapsedSeconds": 272
+    },
+    {
+      "id": "S12",
+      "elapsedSeconds": 295
+    },
+    {
+      "id": "S13",
+      "elapsedSeconds": 321
+    },
+    {
+      "id": "S14",
+      "elapsedSeconds": 338
+    },
+    {
+      "id": "S15",
+      "elapsedSeconds": 357
+    },
+    {
+      "id": "S16",
+      "elapsedSeconds": 380
+    },
+    {
+      "id": "S17",
+      "elapsedSeconds": 399
+    },
+    {
+      "id": "S18",
+      "elapsedSeconds": 421
+    },
+    {
+      "id": "S19",
+      "elapsedSeconds": 443
+    },
+    {
+      "id": "S20",
+      "elapsedSeconds": 462
+    },
+    {
+      "id": "S21",
+      "elapsedSeconds": 487
+    },
+    {
+      "id": "S22",
+      "elapsedSeconds": 509
+    },
+    {
+      "id": "S23",
+      "elapsedSeconds": 528
+    },
+    {
+      "id": "S24",
+      "elapsedSeconds": 549
+    },
+    {
+      "id": "S25",
+      "elapsedSeconds": 573
+    },
+    {
+      "id": "S26",
+      "elapsedSeconds": 596
+    },
+    {
+      "id": "S27",
+      "elapsedSeconds": 618
+    },
+    {
+      "id": "S28",
+      "elapsedSeconds": 639
+    },
+    {
+      "id": "S29",
+      "elapsedSeconds": 665
+    },
+    {
+      "id": "S30",
+      "elapsedSeconds": 691
+    },
+    {
+      "id": "S31",
+      "elapsedSeconds": 724
+    },
+    {
+      "id": "S32",
+      "elapsedSeconds": 750
+    },
+    {
+      "id": "S33",
+      "elapsedSeconds": 762
+    },
+    {
+      "id": "S34",
+      "elapsedSeconds": 778
+    },
+    {
+      "id": "S35",
+      "elapsedSeconds": 797
+    },
+    {
+      "id": "S36",
+      "elapsedSeconds": 815
+    }
+  ],
+  "mobile": {
+    "phone": {
+      "visibleButtons": [
+        "left",
+        "right",
+        "jump",
+        "primary"
+      ],
+      "touchMode": true,
+      "walkRight": 252,
+      "slideReverses": true,
+      "runJump": {
+        "dx": 7,
+        "dy": -110
+      },
+      "firstSkeleton": "defeated",
+      "walkBack": 223,
+      "actionKind": "talk",
+      "dialogue": "\ubc14\ub2f7\uae38\uc5d0 \uac80\uc740 \ub9c8\ubc95\uc774 \ub4dc\ub9ac\uc6e0\uad6c\ub098. \uba3c\uc800 \uc774 \ud56d\uad6c\ub97c \uc548\uc804\ud558\uac8c \ub9cc\ub4e4\uc790.",
+      "errors": []
+    },
+    "tablet": {
+      "visibleButtons": [
+        "left",
+        "right",
+        "jump",
+        "primary"
+      ],
+      "touchMode": true,
+      "walkRight": 252,
+      "slideReverses": true,
+      "runJump": {
+        "dx": 7,
+        "dy": -110
+      },
+      "firstSkeleton": "defeated",
+      "walkBack": 221,
+      "actionKind": "talk",
+      "dialogue": "\ubc14\ub2f7\uae38\uc5d0 \uac80\uc740 \ub9c8\ubc95\uc774 \ub4dc\ub9ac\uc6e0\uad6c\ub098. \uba3c\uc800 \uc774 \ud56d\uad6c\ub97c \uc548\uc804\ud558\uac8c \ub9cc\ub4e4\uc790.",
+      "errors": []
+    }
+  },
+  "artStatus": "ART_DRAFT",
+  "previousCommit": "934c421",
+  "push": "not requested this turn; local work",
+  "deploy": false,
+  "unverified": [
+    "physical phone/tablet",
+    "iOS Safari",
+    "child usability",
+    "long-run FPS/heat",
+    "physical speaker mix",
+    "final user art approval"
+  ],
+  "provenanceCorrection": {
+    "report": "docs/validation/m6-bat-provenance-postcheck.json",
+    "metadataOnly": true,
+    "currentBudgetBytes": 3082605,
+    "fullE2eRepeated": false
+  }
+}

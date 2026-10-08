@@ -1,0 +1,55 @@
+{
+  "completedTargetRuns": [
+    {
+      "report": "m6-bat-target.json",
+      "stats": {
+        "startTime": "2026-10-06T10:35:16.276Z",
+        "duration": 256620.63199999998,
+        "expected": 0,
+        "skipped": 0,
+        "unexpected": 4,
+        "flaky": 0
+      }
+    },
+    {
+      "report": "m6-bat-recheck2.json",
+      "stats": {
+        "startTime": "2026-10-06T10:42:59.083Z",
+        "duration": 155477.266,
+        "expected": 2,
+        "skipped": 0,
+        "unexpected": 2,
+        "flaky": 0
+      }
+    },
+    {
+      "report": "m6-bat-recheck3.json",
+      "stats": {
+        "startTime": "2026-10-06T10:46:18.364Z",
+        "duration": 146920.71899999998,
+        "expected": 4,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      }
+    }
+  ],
+  "interruptedRun": {
+    "output": "docs/validation/m6-bat-recheck-output.txt",
+    "reason": "checkpoint was incorrectly treated as a completed interaction objective; stopped before a full result; no complete JSON result"
+  },
+  "repairs": [
+    "One touch hit lowers HP but does not defeat this existing bat; use the actual second melee attack.",
+    "Checkpoints save on grounded proximity; observe the saved checkpoint instead of waiting for an interaction objective.",
+    "Phaser retries aborted loads. Count actual requests and verify every retry is blocked; preserve SVG recovery and require no unexpected errors."
+  ],
+  "failureEvidence": [
+    "docs/screenshots/m6-bat/first-target-failure/",
+    "docs/screenshots/m6-bat/second-target-failure/",
+    "docs/screenshots/m6-bat/third-target-failure/"
+  ],
+  "documentHelperError": "Python3.9 reported non-UTF-8 source in the Korean document helper; explicit UTF-8 coding declaration repaired it. Files are written with explicit UTF-8 bytes.",
+  "runtimeRulesChangedForRepairs": false,
+  "deletedOriginals": false,
+  "artStatus": "ART_DRAFT"
+}

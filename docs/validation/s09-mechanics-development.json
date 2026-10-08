@@ -1,0 +1,125 @@
+{
+  "date": "2026-10-08T10:37:17.318063+00:00",
+  "attempts": [
+    {
+      "run": "first",
+      "report": "docs/validation/s09-mechanics-first.json",
+      "stats": {
+        "startTime": "2026-10-08T10:17:41.448Z",
+        "duration": 1041.4669999999996,
+        "expected": 0,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      },
+      "log": "docs/validation/s09-mechanics-first-output.txt",
+      "reason": "No tests selected: the anchored grep matched the whole Playwright title, not its short test title."
+    },
+    {
+      "run": "target",
+      "report": "docs/validation/s09-mechanics-target.json",
+      "stats": {
+        "startTime": "2026-10-08T10:18:13.865Z",
+        "duration": 107154.28700000001,
+        "expected": 0,
+        "skipped": 0,
+        "unexpected": 1,
+        "flaky": 0
+      },
+      "log": "docs/validation/s09-mechanics-target-output.txt",
+      "reason": "One failure: wind damage began before a normal jump could clear the body. Preserved first-failure screenshots."
+    },
+    {
+      "run": "recheck",
+      "report": "docs/validation/s09-mechanics-recheck.json",
+      "stats": {
+        "startTime": "2026-10-08T10:21:35.390Z",
+        "duration": 58500.411,
+        "expected": 0,
+        "skipped": 0,
+        "unexpected": 1,
+        "flaky": 0
+      },
+      "log": "docs/validation/s09-mechanics-recheck-output.txt",
+      "reason": "One failure: observed jump ascent but early wind damage. Delayed wind active damage to 40%-75% of its attack."
+    },
+    {
+      "run": "recheck2",
+      "report": "docs/validation/s09-mechanics-recheck2.json",
+      "stats": {
+        "startTime": "2026-10-08T10:23:29.867Z",
+        "duration": 64837.63500000001,
+        "expected": 0,
+        "skipped": 0,
+        "unexpected": 1,
+        "flaky": 0
+      },
+      "log": "docs/validation/s09-mechanics-recheck2-output.txt",
+      "reason": "One failure: total XP included 7 XP from route hearts. Changed the test to compare boss reward delta, not total XP."
+    },
+    {
+      "run": "recheck3",
+      "report": null,
+      "stats": null,
+      "log": "docs/validation/s09-mechanics-recheck3-output.txt",
+      "reason": "Interrupted after the first phone failure revealed unregistered core proof IDs in parseSave. Tablet had not completed. Added only the two authored IDs and two retired S09 enemy IDs to the strict whitelist."
+    },
+    {
+      "run": "recheck4",
+      "report": "docs/validation/s09-mechanics-recheck4.json",
+      "stats": {
+        "startTime": "2026-10-08T10:28:26.005Z",
+        "duration": 230247.377,
+        "expected": 2,
+        "skipped": 0,
+        "unexpected": 2,
+        "flaky": 0
+      },
+      "log": "docs/validation/s09-mechanics-recheck4-output.txt",
+      "reason": "2 passed, 2 failed: phone/tablet combat and glide passed; death and old victory tests read before the E input had opened the dialogue. Wait for actual dialogue visibility before checking T03."
+    }
+  ],
+  "initialTypeError": "TS2556 in the new tuple-loop test; fixed by destructuring typed arguments.",
+  "initialPermissionErrors": [
+    "Vitest dependency realpath EPERM: reran successfully with approved normal host permissions.",
+    "Snapshot path resolution WinError 5: reran successfully with approved normal host permissions."
+  ],
+  "runtimeFixes": [
+    "Wind damage starts after jump reaction clearance.",
+    "Explicit new core proof and retired enemy save IDs."
+  ],
+  "testCorrections": [
+    "XP delta includes no route-heart rewards.",
+    "Wait for dialogue before acquisition checks."
+  ],
+  "sourceCopies": "docs/validation/s09-mechanics-{first,second,third,fourth,fifth}-test.ts.txt",
+  "failureScreenshots": "docs/screenshots/s09-mechanics/{first,second,third,fourth,fifth}-failure/",
+  "additionalChecks": [
+    {
+      "run": "e2e-final",
+      "result": "interrupted after S11/36; no completed 12-case result",
+      "reason": "Static compatibility review found legacy boss victory before channels could become blocked; preserve victory-derived core objectives on parse."
+    },
+    {
+      "run": "release2-check",
+      "result": "type/lint pass; unit120 pass1 fail, stopped before content/build",
+      "reason": "New idempotence test compared writtenAt (1 ms refresh); compare actual progression and rewards."
+    },
+    {
+      "run": "release2-final",
+      "result": "11 passed, 1 failed; exit 1",
+      "reason": "M3 continuous-route test called the boss helper before the S09 player and boss were ready. Runtime was unchanged after this run.",
+      "evidence": "docs/screenshots/s09-mechanics/primary-test-results/m3-opening-S09-S12-continu-2fe28-d-R03-with-save-safe-bosses/"
+    },
+    {
+      "run": "regression-repair",
+      "result": "1 passed; exit 0",
+      "reason": "Only the M3 test gained a wait for actual player and boss readiness. Typecheck and lint passed. The complete 12/81 cases were not rerun."
+    },
+    {
+      "run": "documentation-helper",
+      "result": "Completed by explicitly reading UTF-8 source and compiling it in Python.",
+      "reason": "Direct Python source invocation reported an encoding error; explicit Unicode source compilation succeeded. No partial document writes preceded the successful run."
+    }
+  ]
+}

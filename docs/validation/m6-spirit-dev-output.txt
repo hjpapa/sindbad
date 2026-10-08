@@ -1,0 +1,12 @@
+
+> sinbad-seven-treasures@0.1.0 dev
+> vite --host 127.0.0.1 --port 5175 --strictPort
+
+
+  VITE v7.1.5  ready in 508 ms
+
+  ➜  Local:   http://127.0.0.1:5175/
+오후 9:19:50 [vite] (client) page reload docs/validation/m6-spirit-target-report/index.html
+오후 9:31:01 [vite] (client) page reload docs/validation/m6-spirit-recheck-report/index.html
+오후 9:32:29 [vite] (client) page reload src/content/assets.manifest.ts
+오후 9:35:10 [vite] (client) page reload docs/validation/m6-spirit-recheck2-report/index.html

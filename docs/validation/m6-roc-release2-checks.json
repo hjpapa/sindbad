@@ -1,0 +1,58 @@
+[
+  {
+    "command": "python scripts/optimize-webtoon.py",
+    "exitCode": 0,
+    "started": "2026-10-07T11:19:19.195130+00:00",
+    "finished": "2026-10-07T11:19:33.905169+00:00",
+    "log": "docs/validation/m6-roc-release2-check-1.txt"
+  },
+  {
+    "command": "python scripts/audit-webtoon.py",
+    "exitCode": 0,
+    "started": "2026-10-07T11:19:33.908680+00:00",
+    "finished": "2026-10-07T11:19:57.752403+00:00",
+    "log": "docs/validation/m6-roc-release2-check-2.txt"
+  },
+  {
+    "command": "npm run typecheck",
+    "exitCode": 0,
+    "started": "2026-10-07T11:19:57.755494+00:00",
+    "finished": "2026-10-07T11:20:01.977430+00:00",
+    "log": "docs/validation/m6-roc-release2-check-3.txt"
+  },
+  {
+    "command": "npm run lint",
+    "exitCode": 0,
+    "started": "2026-10-07T11:20:01.978436+00:00",
+    "finished": "2026-10-07T11:20:06.808763+00:00",
+    "log": "docs/validation/m6-roc-release2-check-4.txt"
+  },
+  {
+    "command": "npm run test",
+    "exitCode": 0,
+    "started": "2026-10-07T11:20:06.809875+00:00",
+    "finished": "2026-10-07T11:20:12.582457+00:00",
+    "log": "docs/validation/m6-roc-release2-check-5.txt"
+  },
+  {
+    "command": "npm run validate:content",
+    "exitCode": 0,
+    "started": "2026-10-07T11:20:12.585963+00:00",
+    "finished": "2026-10-07T11:20:15.011519+00:00",
+    "log": "docs/validation/m6-roc-release2-check-6.txt"
+  },
+  {
+    "command": "npm run build",
+    "exitCode": 0,
+    "started": "2026-10-07T11:20:15.013518+00:00",
+    "finished": "2026-10-07T11:20:34.533980+00:00",
+    "log": "docs/validation/m6-roc-release2-check-7.txt"
+  },
+  {
+    "command": "npx tsx scripts/check-art-budget.ts",
+    "exitCode": 0,
+    "started": "2026-10-07T11:20:34.534983+00:00",
+    "finished": "2026-10-07T11:20:38.445730+00:00",
+    "log": "docs/validation/m6-roc-release2-check-8.txt"
+  }
+]

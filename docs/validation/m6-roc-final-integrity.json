@@ -1,0 +1,159 @@
+{
+  "date": "2026-10-07T12:58:40.125371+00:00",
+  "testedFilesUnchanged": 997,
+  "originalMediaUnchanged": 575,
+  "backupFilesVerified": 402,
+  "allowedExistingCodeChanges": [
+    "scripts/audit-webtoon.py",
+    "scripts/optimize-webtoon.py",
+    "src/content/assets.manifest.ts",
+    "src/content/enemyActions.ts",
+    "src/content/maps.ts",
+    "src/game/stage.ts",
+    "tests/e2e/spirit-actions.spec.ts",
+    "tests/unit/enemy-actions.test.ts"
+  ],
+  "historicalReportsRestored": 35,
+  "failureFilesPreserved": [
+    {
+      "path": "docs/screenshots/m6-roc/first-target-failure/test-results/.last-run.json",
+      "sha256": "4d14a29218a0e07d9cea040aa693b7ce304b6814eb6962da54b7aa9e891610b3"
+    },
+    {
+      "path": "docs/screenshots/m6-roc/first-target-failure/test-results/roc-actions-phone-roc-miss-676e5-ss-saddle-and-return-flight/error-context.md",
+      "sha256": "fbaf9d4f325e32e8609222eff9026a712222c8d45e108e4bd0b6e690e215e8bd"
+    },
+    {
+      "path": "docs/screenshots/m6-roc/first-target-failure/test-results/roc-actions-phone-roc-miss-676e5-ss-saddle-and-return-flight/test-failed-1.png",
+      "sha256": "2f36aedbd8e690f22bd554182cf8ee5bda4b310d40eb1abd1f1ea9786d768500"
+    },
+    {
+      "path": "docs/screenshots/m6-roc/first-target-failure/test-results/roc-actions-phone-roc-six--bfb4d-ss-saddle-and-return-flight/error-context.md",
+      "sha256": "fbaf9d4f325e32e8609222eff9026a712222c8d45e108e4bd0b6e690e215e8bd"
+    },
+    {
+      "path": "docs/screenshots/m6-roc/first-target-failure/test-results/roc-actions-phone-roc-six--bfb4d-ss-saddle-and-return-flight/test-failed-1.png",
+      "sha256": "b73c02e3f71c2c96e7b401baa0c972e3d1402f93648c27389e963d578bf53308"
+    },
+    {
+      "path": "docs/screenshots/m6-roc/first-target-failure/test-results/roc-actions-tablet-roc-mis-f6fa2-ss-saddle-and-return-flight/error-context.md",
+      "sha256": "6241d74c84e2c9caf137b3c3d47b2b4ad7792e8b11d6c51d993f3a64e4554752"
+    },
+    {
+      "path": "docs/screenshots/m6-roc/first-target-failure/test-results/roc-actions-tablet-roc-mis-f6fa2-ss-saddle-and-return-flight/test-failed-1.png",
+      "sha256": "502fdbf9e3a63fcd62604a4146151955be6f44c8e276f332b8db47b071c73a24"
+    },
+    {
+      "path": "docs/screenshots/m6-roc/first-target-failure/test-results/roc-actions-tablet-roc-six-42383-ss-saddle-and-return-flight/error-context.md",
+      "sha256": "6241d74c84e2c9caf137b3c3d47b2b4ad7792e8b11d6c51d993f3a64e4554752"
+    },
+    {
+      "path": "docs/screenshots/m6-roc/first-target-failure/test-results/roc-actions-tablet-roc-six-42383-ss-saddle-and-return-flight/test-failed-1.png",
+      "sha256": "36b31ebbf03a5a9d311caf57b30fcd2885864bd196794a4b683880d9c742e88f"
+    },
+    {
+      "path": "docs/screenshots/m6-roc/second-target-failure/test-results/.last-run.json",
+      "sha256": "4d14a29218a0e07d9cea040aa693b7ce304b6814eb6962da54b7aa9e891610b3"
+    },
+    {
+      "path": "docs/screenshots/m6-roc/second-target-failure/test-results/roc-actions-phone-roc-miss-676e5-ss-saddle-and-return-flight/error-context.md",
+      "sha256": "c978e157db599bb836ad52770f84ea3900c80d2503c3510e15d7fc49bd8a5eb9"
+    },
+    {
+      "path": "docs/screenshots/m6-roc/second-target-failure/test-results/roc-actions-phone-roc-miss-676e5-ss-saddle-and-return-flight/test-failed-1.png",
+      "sha256": "70f75a6191787ec6598eacb4fc8d3a02fccb9c48b8f4dad01d61cabc22673ef1"
+    },
+    {
+      "path": "docs/screenshots/m6-roc/second-target-failure/test-results/roc-actions-phone-roc-six--bfb4d-ss-saddle-and-return-flight/error-context.md",
+      "sha256": "3c90683ad444a1a41922aab3e37b021651d0305f74aa9d36d8d2ba7caa274b14"
+    },
+    {
+      "path": "docs/screenshots/m6-roc/second-target-failure/test-results/roc-actions-phone-roc-six--bfb4d-ss-saddle-and-return-flight/test-failed-1.png",
+      "sha256": "d1673cb4342938dfef258196a7dcd86a74047dc5b839dec6e52eed47c7ba3ae5"
+    },
+    {
+      "path": "docs/screenshots/m6-roc/second-target-failure/test-results/roc-actions-tablet-roc-mis-f6fa2-ss-saddle-and-return-flight/error-context.md",
+      "sha256": "fdf0c16dc22b736d869ab09a2b43fb3806345094b16da2b023475cb27e52b17c"
+    },
+    {
+      "path": "docs/screenshots/m6-roc/second-target-failure/test-results/roc-actions-tablet-roc-mis-f6fa2-ss-saddle-and-return-flight/test-failed-1.png",
+      "sha256": "028e9261ecf5e20f75c50bd0e961a294c2262c5f40cb93c6a483b575b6a38846"
+    },
+    {
+      "path": "docs/screenshots/m6-roc/second-target-failure/test-results/roc-actions-tablet-roc-six-42383-ss-saddle-and-return-flight/error-context.md",
+      "sha256": "71ae72bf1c1150c5af09b9f45ff36c883ab63195ee13457c99a264e0dc54fd27"
+    },
+    {
+      "path": "docs/screenshots/m6-roc/second-target-failure/test-results/roc-actions-tablet-roc-six-42383-ss-saddle-and-return-flight/test-failed-1.png",
+      "sha256": "005d2af604a0779875153d604952ea62551a7f3fb3a3f4c53577953d2827ad8f"
+    },
+    {
+      "path": "docs/screenshots/m6-roc/third-target-failure/test-results/.last-run.json",
+      "sha256": "d9f96d513aec00dcef8a619059bc7a35e70ee1425ab96e3b0940c149000d2135"
+    },
+    {
+      "path": "docs/screenshots/m6-roc/third-target-failure/test-results/roc-actions-phone-roc-miss-676e5-ss-saddle-and-return-flight/error-context.md",
+      "sha256": "1076ff92132395167f08381cc8fa5292a42cba13c8ba29a3515009d3ad2d0c57"
+    },
+    {
+      "path": "docs/screenshots/m6-roc/third-target-failure/test-results/roc-actions-phone-roc-miss-676e5-ss-saddle-and-return-flight/test-failed-1.png",
+      "sha256": "febfbc33fc640ebfe619e4af7cff9ffa75154854ea73591f15f60b3ffcc6cb98"
+    },
+    {
+      "path": "docs/screenshots/m6-roc/third-target-failure/test-results/roc-actions-tablet-roc-six-42383-ss-saddle-and-return-flight/error-context.md",
+      "sha256": "105211e9b0ac12ff60d122eeb6cad7670c1314b12bad377f787743486972c7df"
+    },
+    {
+      "path": "docs/screenshots/m6-roc/third-target-failure/test-results/roc-actions-tablet-roc-six-42383-ss-saddle-and-return-flight/test-failed-1.png",
+      "sha256": "432875083990ac1c6c181b48c8f0f54749f64fc8029f602b957b980bcf785441"
+    },
+    {
+      "path": "docs/screenshots/m6-roc/full-regression-failure/spirit-actions-phone-spiri-09b8f-flame-waves-and-final-tower/error-context.md",
+      "sha256": "2759f065b826d81ba387b37a5982f0bcd5a5114f9dc4cef17764f44a11d282a5"
+    },
+    {
+      "path": "docs/screenshots/m6-roc/full-regression-failure/spirit-actions-phone-spiri-09b8f-flame-waves-and-final-tower/test-failed-1.png",
+      "sha256": "3649488c42e939d517d83c444a1376a1edcbebd9bd7784ee15cc786c59b2b33b"
+    }
+  ],
+  "ownedPorts": [
+    {
+      "port": 5174,
+      "state": "closed",
+      "listenerRows": [],
+      "otherTcpRows": [
+        "TCP    127.0.0.1:5174         127.0.0.1:50178        TIME_WAIT       0",
+        "TCP    127.0.0.1:5174         127.0.0.1:50414        TIME_WAIT       0",
+        "TCP    127.0.0.1:5174         127.0.0.1:53977        TIME_WAIT       0",
+        "TCP    127.0.0.1:5174         127.0.0.1:54475        TIME_WAIT       0",
+        "TCP    127.0.0.1:5174         127.0.0.1:56444        TIME_WAIT       0",
+        "TCP    127.0.0.1:5174         127.0.0.1:56782        TIME_WAIT       0",
+        "TCP    127.0.0.1:5174         127.0.0.1:60606        TIME_WAIT       0",
+        "TCP    127.0.0.1:5174         127.0.0.1:63139        TIME_WAIT       0",
+        "TCP    127.0.0.1:5174         127.0.0.1:63441        TIME_WAIT       0",
+        "TCP    127.0.0.1:5174         127.0.0.1:63590        TIME_WAIT       0",
+        "TCP    127.0.0.1:5174         127.0.0.1:64787        TIME_WAIT       0",
+        "TCP    127.0.0.1:50233        127.0.0.1:5174         TIME_WAIT       0",
+        "TCP    127.0.0.1:51688        127.0.0.1:5174         TIME_WAIT       0",
+        "TCP    127.0.0.1:51735        127.0.0.1:5174         TIME_WAIT       0",
+        "TCP    127.0.0.1:55076        127.0.0.1:5174         TIME_WAIT       0",
+        "TCP    127.0.0.1:60141        127.0.0.1:5174         TIME_WAIT       0",
+        "TCP    127.0.0.1:65381        127.0.0.1:5174         TIME_WAIT       0"
+      ]
+    },
+    {
+      "port": 5175,
+      "state": "closed",
+      "listenerRows": [],
+      "otherTcpRows": []
+    },
+    {
+      "port": 9323,
+      "state": "closed",
+      "listenerRows": [],
+      "otherTcpRows": []
+    }
+  ],
+  "artStatus": "ART_DRAFT",
+  "commitPushDeployThisTurn": false
+}

@@ -1,0 +1,42 @@
+{
+  "date": "2026-10-07T12:55:52.705785+00:00",
+  "method": "netstat -ano; no LISTENING binding on any interface for the owned ports. Earlier socket connect_ex returned 10035 (inconclusive); it is not the shutdown evidence.",
+  "ports": [
+    {
+      "port": 5174,
+      "state": "closed",
+      "listenerRows": [],
+      "otherTcpRows": [
+        "TCP    127.0.0.1:5174         127.0.0.1:50178        TIME_WAIT       0",
+        "TCP    127.0.0.1:5174         127.0.0.1:50414        TIME_WAIT       0",
+        "TCP    127.0.0.1:5174         127.0.0.1:53977        TIME_WAIT       0",
+        "TCP    127.0.0.1:5174         127.0.0.1:54475        TIME_WAIT       0",
+        "TCP    127.0.0.1:5174         127.0.0.1:56444        TIME_WAIT       0",
+        "TCP    127.0.0.1:5174         127.0.0.1:56782        TIME_WAIT       0",
+        "TCP    127.0.0.1:5174         127.0.0.1:60606        TIME_WAIT       0",
+        "TCP    127.0.0.1:5174         127.0.0.1:63139        TIME_WAIT       0",
+        "TCP    127.0.0.1:5174         127.0.0.1:63441        TIME_WAIT       0",
+        "TCP    127.0.0.1:5174         127.0.0.1:63590        TIME_WAIT       0",
+        "TCP    127.0.0.1:5174         127.0.0.1:64787        TIME_WAIT       0",
+        "TCP    127.0.0.1:50233        127.0.0.1:5174         TIME_WAIT       0",
+        "TCP    127.0.0.1:51688        127.0.0.1:5174         TIME_WAIT       0",
+        "TCP    127.0.0.1:51735        127.0.0.1:5174         TIME_WAIT       0",
+        "TCP    127.0.0.1:55076        127.0.0.1:5174         TIME_WAIT       0",
+        "TCP    127.0.0.1:60141        127.0.0.1:5174         TIME_WAIT       0",
+        "TCP    127.0.0.1:65381        127.0.0.1:5174         TIME_WAIT       0"
+      ]
+    },
+    {
+      "port": 5175,
+      "state": "closed",
+      "listenerRows": [],
+      "otherTcpRows": []
+    },
+    {
+      "port": 9323,
+      "state": "closed",
+      "listenerRows": [],
+      "otherTcpRows": []
+    }
+  ]
+}

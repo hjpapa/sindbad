@@ -1,0 +1,124 @@
+
+> sinbad-seven-treasures@0.1.0 test:e2e
+> playwright test tests/e2e/roc-actions.spec.ts --reporter=list,json,html
+
+
+Running 4 tests using 1 worker
+
+(node:30768) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:30768) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x  1 tests\e2e\roc-actions.spec.ts:61:41 › phone roc six actions boss, saddle and return flight (1.6m)
+(node:9644) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:9644) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x  2 tests\e2e\roc-actions.spec.ts:61:41 › phone roc missing-sheet recovery boss, saddle and return flight (35.4s)
+(node:9652) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:9652) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x  3 tests\e2e\roc-actions.spec.ts:61:41 › tablet roc six actions boss, saddle and return flight (36.4s)
+(node:23932) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:23932) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x  4 tests\e2e\roc-actions.spec.ts:61:41 › tablet roc missing-sheet recovery boss, saddle and return flight (36.3s)
+
+
+  1) tests\e2e\roc-actions.spec.ts:61:41 › phone roc six actions boss, saddle and return flight ────
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: [32m"저주가 풀렸어[7m요[27m"[39m
+    Received: [31m"저주가 풀렸어[7m![27m"[39m
+
+      68 |             await page.waitForTimeout(240);if((await enemy())!.hp>0)await page.waitForTimeout(350);
+      69 |         }
+    > 70 |         const defeated=await capture('defeated');expect(defeated.label).toBe('저주가 풀렸어!');
+         |                                                                         ^
+      71 |         await expect.poll(async()=>(await enemy())!.visible).toBe(false);
+      72 |         const rewarded=(await read(page)).save as Save;
+      73 |         expect(rewarded.totalXp-before.totalXp).toBe(6);expect(rewarded.coins-before.coins).toBe(3);
+        at C:\code\code10(sindbad)\tests\e2e\roc-actions.spec.ts:70:73
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\roc-actions-phone-roc-six--bfb4d-ss-saddle-and-return-flight\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\roc-actions-phone-roc-six--bfb4d-ss-saddle-and-return-flight\error-context.md
+
+  2) tests\e2e\roc-actions.spec.ts:61:41 › phone roc missing-sheet recovery boss, saddle and return flight 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: [32m"저주가 풀렸어[7m요[27m"[39m
+    Received: [31m"저주가 풀렸어[7m![27m"[39m
+
+      68 |             await page.waitForTimeout(240);if((await enemy())!.hp>0)await page.waitForTimeout(350);
+      69 |         }
+    > 70 |         const defeated=await capture('defeated');expect(defeated.label).toBe('저주가 풀렸어!');
+         |                                                                         ^
+      71 |         await expect.poll(async()=>(await enemy())!.visible).toBe(false);
+      72 |         const rewarded=(await read(page)).save as Save;
+      73 |         expect(rewarded.totalXp-before.totalXp).toBe(6);expect(rewarded.coins-before.coins).toBe(3);
+        at C:\code\code10(sindbad)\tests\e2e\roc-actions.spec.ts:70:73
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\roc-actions-phone-roc-miss-676e5-ss-saddle-and-return-flight\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\roc-actions-phone-roc-miss-676e5-ss-saddle-and-return-flight\error-context.md
+
+  3) tests\e2e\roc-actions.spec.ts:61:41 › tablet roc six actions boss, saddle and return flight ───
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: [32m"저주가 풀렸어[7m요[27m"[39m
+    Received: [31m"저주가 풀렸어[7m![27m"[39m
+
+      68 |             await page.waitForTimeout(240);if((await enemy())!.hp>0)await page.waitForTimeout(350);
+      69 |         }
+    > 70 |         const defeated=await capture('defeated');expect(defeated.label).toBe('저주가 풀렸어!');
+         |                                                                         ^
+      71 |         await expect.poll(async()=>(await enemy())!.visible).toBe(false);
+      72 |         const rewarded=(await read(page)).save as Save;
+      73 |         expect(rewarded.totalXp-before.totalXp).toBe(6);expect(rewarded.coins-before.coins).toBe(3);
+        at C:\code\code10(sindbad)\tests\e2e\roc-actions.spec.ts:70:73
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\roc-actions-tablet-roc-six-42383-ss-saddle-and-return-flight\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\roc-actions-tablet-roc-six-42383-ss-saddle-and-return-flight\error-context.md
+
+  4) tests\e2e\roc-actions.spec.ts:61:41 › tablet roc missing-sheet recovery boss, saddle and return flight 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: [32m"저주가 풀렸어[7m요[27m"[39m
+    Received: [31m"저주가 풀렸어[7m![27m"[39m
+
+      68 |             await page.waitForTimeout(240);if((await enemy())!.hp>0)await page.waitForTimeout(350);
+      69 |         }
+    > 70 |         const defeated=await capture('defeated');expect(defeated.label).toBe('저주가 풀렸어!');
+         |                                                                         ^
+      71 |         await expect.poll(async()=>(await enemy())!.visible).toBe(false);
+      72 |         const rewarded=(await read(page)).save as Save;
+      73 |         expect(rewarded.totalXp-before.totalXp).toBe(6);expect(rewarded.coins-before.coins).toBe(3);
+        at C:\code\code10(sindbad)\tests\e2e\roc-actions.spec.ts:70:73
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\roc-actions-tablet-roc-mis-f6fa2-ss-saddle-and-return-flight\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\roc-actions-tablet-roc-mis-f6fa2-ss-saddle-and-return-flight\error-context.md
+
+  4 failed
+    tests\e2e\roc-actions.spec.ts:61:41 › phone roc six actions boss, saddle and return flight ─────
+    tests\e2e\roc-actions.spec.ts:61:41 › phone roc missing-sheet recovery boss, saddle and return flight 
+    tests\e2e\roc-actions.spec.ts:61:41 › tablet roc six actions boss, saddle and return flight ────
+    tests\e2e\roc-actions.spec.ts:61:41 › tablet roc missing-sheet recovery boss, saddle and return flight 
+
+[36m  Serving HTML report at http://localhost:9323. Press Ctrl+C to quit.[39m

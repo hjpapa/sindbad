@@ -1,0 +1,126 @@
+import {test,expect,type Page} from '@playwright/test';
+import {mkdirSync,writeFileSync} from 'node:fs';
+import {freshSave,type Save} from '../../src/core/state';
+import {SAVE_KEY} from '../../src/core/save';
+import {rocCoreProofs} from '../../src/core/rocBoss';
+import {moveJourney,strikeRocJourney,skipJourneyDialogue} from './journey-bot';
+import {evidencePath} from './art-evidence';
+
+test.use({hasTouch:true});
+const read=(page:Page)=>page.evaluate(()=>Reflect.get(window,'__SINBAD_TEST__'));
+function fixture(){
+    const save=freshSave();save.checkpoint={stageId:'S09',checkpointId:'start'};
+    save.clearedStageIds=Array.from({length:8},(_,i)=>`S${String(i+1).padStart(2,'0')}`);
+    save.treasures=['T01','T02'];save.weapons=['W01','W02','W03'];save.equippedWeapon='W03';save.equippedSkill='flamePulse';
+    save.settings.difficulty='normal';save.settings.aimAssist=false;return save;
+}
+async function resume(page:Page){
+    await page.reload();await page.getByRole('button',{name:'이어하기 · S09'}).click();
+    await page.waitForFunction(()=>Reflect.get(window,'__SINBAD_TEST__')?.stage==='S09'&&Reflect.get(window,'__SINBAD_TEST__')?.player);
+    await page.waitForTimeout(2000);
+}
+async function load(page:Page,save:Save){await page.evaluate(({key,save})=>localStorage.setItem(key,JSON.stringify(save)),{key:SAVE_KEY,save});await resume(page);}
+async function state(page:Page,phase:string,pattern?:number){
+    const handle=await page.waitForFunction(({phase,pattern})=>{
+        const s=Reflect.get(window,'__SINBAD_TEST__');const e=s?.enemies.find((e:{id:string})=>e.id==='S09.enemy.3');
+        return e?.state===phase&&(pattern===undefined||s.rocEncounter.pattern===pattern)?s:false;
+    },{phase,pattern},{timeout:15000});const result=await handle.jsonValue();await handle.dispose();return result;
+}
+function evidence(page:Page,label:string){
+    const root=evidencePath('s09-mechanics');mkdirSync(root,{recursive:true});const checks:unknown[]=[];
+    return {
+        async shot(name:string,observed?:unknown){const path=`${root}/${label}-${name}.png`;const s=observed??await read(page);checks.push({name,path,observed:s});
+            writeFileSync(`${root}/${label}.json`,JSON.stringify({checks},null,2));const began=Date.now();await page.screenshot({path});console.log(`SHOT ${name} ${Date.now()-began}ms`);},
+        finish(errors:string[]){writeFileSync(`${root}/${label}.json`,JSON.stringify({date:new Date().toISOString(),fixture:'S09 checkpoint, actual keyboard/touch after fixture',checks,errors},null,2));},
+    };
+}
+for(const [device,viewport] of Object.entries({phone:{width:844,height:390},tablet:{width:1180,height:820}})){
+    test(`${device} S09 three distinct avoidable patterns, three cores and feather glide`,async({page})=>{
+        test.setTimeout(240000);await page.setViewportSize(viewport);const errors:string[]=[];
+        page.on('pageerror',e=>errors.push(e.message));page.on('console',m=>{if(m.type()==='error')errors.push(m.text());});
+        await page.goto('/');await load(page,fixture());const proof=evidence(page,device);
+        expect((await read(page)).enemies).toHaveLength(1);expect((await read(page)).save.treasures).not.toContain('T03');
+        await moveJourney(page,2240);await state(page,'telegraph',0);
+        await page.keyboard.press('j');await page.waitForTimeout(230);
+        expect((await read(page)).enemies[0].hp).toBe(3);expect((await read(page)).enemies[0].burn).toBeUndefined();
+        const beforeBoss=(await read(page)).save;
+        await moveJourney(page,2130);await proof.shot('peck-warning');
+        await page.locator('#pause').click();const paused=await read(page);await page.waitForTimeout(300);
+        expect((await read(page)).sim).toBe(paused.sim);expect((await read(page)).rocEncounter).toEqual(paused.rocEncounter);
+        await page.locator('#resume').click();let hp=(await read(page)).player.hp;
+        await state(page,'recover',0);expect((await read(page)).player.hp).toBe(hp);
+        await proof.shot('core-open');await moveJourney(page,2207);
+        await page.keyboard.down('d');await page.waitForTimeout(25);await page.keyboard.up('d');
+        const action=page.getByRole('button',{name:'터치 행동',exact:true});await expect(action).toHaveAttribute('data-kind','attack');await action.tap();
+        await expect.poll(async()=>(await read(page)).rocEncounter.coresBroken).toBe(1);
+        await page.keyboard.press('j');await page.keyboard.press('r');await page.waitForTimeout(700);
+        expect((await read(page)).rocEncounter.coresBroken).toBe(1);expect((await read(page)).enemies[0].hp).toBe(2);
+        await proof.shot('one-core-one-landing');
+        await state(page,'telegraph',1);hp=(await read(page)).player.hp;
+        await state(page,'attack',1);console.log('WIND INPUT',JSON.stringify((await read(page)).player));await page.keyboard.down('k');await page.waitForTimeout(300);console.log('WIND AIR',JSON.stringify((await read(page)).player));await page.waitForTimeout(250);await page.keyboard.up('k');
+        await state(page,'recover',1);expect((await read(page)).player.hp).toBe(hp);await proof.shot('wind-jump-safe');
+        await strikeRocJourney(page);expect((await read(page)).rocEncounter.coresBroken).toBe(2);
+        const dive=await state(page,'telegraph',2);await proof.shot('dive-warning',dive);hp=dive.player.hp;
+        await moveJourney(page,dive.rocEncounter.zone.x-180);await state(page,'recover',2);
+        expect((await read(page)).player.hp).toBe(hp);await proof.shot('dive-safe');
+        await strikeRocJourney(page);expect((await read(page)).rocEncounter.coresBroken).toBe(3);
+        expect((await read(page)).save.totalXp-beforeBoss.totalXp).toBe(6);expect((await read(page)).save.coins-beforeBoss.coins).toBe(3);
+        await proof.shot('freed');await moveJourney(page,2480);await page.keyboard.press('e');
+        await expect(page.getByTestId('dialogue-text')).toBeVisible();const treasure=(await read(page)).save;
+        expect(treasure.treasures).toContain('T03');await proof.shot('alliance-dialogue');
+        // Reload during the dialogue: acquisition and the boss cannot repeat.
+        await resume(page);expect((await read(page)).save.claimedRewardIds).toEqual(treasure.claimedRewardIds);expect((await read(page)).enemies).toHaveLength(0);
+        await moveJourney(page,2600);
+        const cdp=device==='tablet'?await page.context().newCDPSession(page):null;
+        const jumpBox=await page.getByRole('button',{name:'터치 ↑',exact:true}).boundingBox();expect(jumpBox).not.toBeNull();
+        const holdJump=async(down:boolean)=>{
+            if(cdp)await cdp.send('Input.dispatchTouchEvent',{type:down?'touchStart':'touchCancel',touchPoints:down?[{x:jumpBox!.x+jumpBox!.width/2,y:jumpBox!.y+jumpBox!.height/2,id:7}]:[]});
+            else if(down)await page.keyboard.down('k');else await page.keyboard.up('k');
+        };
+        await holdJump(true);
+        await page.waitForFunction(()=>{const s=Reflect.get(window,'__SINBAD_TEST__');return s?.gliding&&s.player.vy>0;});
+        const glide=await read(page);await proof.shot('glide-held',glide);
+        expect(glide.player.vy).toBeLessThanOrEqual(180.01);expect(glide.freeMovement).toBe(false);expect(glide.extraJump).toBe(false);
+        const start=glide.player.y;await page.waitForTimeout(160);const later=await read(page);
+        expect(later.player.y).toBeGreaterThan(start);expect(later.player.vy).toBeLessThanOrEqual(180.01);
+        await holdJump(false);await page.waitForTimeout(120);const released=await read(page);
+        expect(released.gliding).toBe(false);expect(released.player.vy).toBeGreaterThan(180);await proof.shot('glide-release',released);
+        await page.waitForTimeout(450);await page.keyboard.press('k');await page.waitForTimeout(200);await page.keyboard.press('k');
+        await page.waitForFunction(()=>Reflect.get(window,'__SINBAD_TEST__')?.extraJump===true);
+        await proof.shot('double-jump');expect(errors).toEqual([]);proof.finish(errors);
+    });
+}
+
+test('partial cores survive death and reload; legacy channels cannot bypass combat',async({page})=>{
+    test.setTimeout(240000);const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));await page.goto('/');
+    const save=fixture();save.completedObjectiveIds=['S09.quest.1','S09.quest.2','S09.quest.3'];
+    save.claimedRewardIds.push(...save.completedObjectiveIds.map(id=>`${id}.reward`));await load(page,save);const proof=evidence(page,'save-retry');
+    expect((await read(page)).rocEncounter.coresBroken).toBe(0);
+    await moveJourney(page,2480);await page.keyboard.press('e');expect((await read(page)).save.treasures).not.toContain('T03');
+    await strikeRocJourney(page);const once=(await read(page)).save;expect(once.claimedRewardIds).toContain(rocCoreProofs[0]);await proof.shot('core-one-saved');
+    await resume(page);expect((await read(page)).rocEncounter.coresBroken).toBe(1);expect((await read(page)).enemies[0].hp).toBe(2);
+    await moveJourney(page,2240);const began=(await read(page)).sim;
+    // Stay in the warning zones without attacking until an actual death.
+    await page.waitForFunction(({began})=>{const s=Reflect.get(window,'__SINBAD_TEST__');return s?.player&&s.sim<began&&s.player.hp===s.player.maxHp&&s.player.x<1800;},{began},{timeout:150000});
+    const restarted=await read(page);expect(restarted.save.claimedRewardIds).toEqual(once.claimedRewardIds);expect(restarted.rocEncounter.coresBroken).toBe(1);
+    expect(restarted.enemies[0].hp).toBe(2);await proof.shot('death-checkpoint');
+    await strikeRocJourney(page);await strikeRocJourney(page);const won=(await read(page)).save;
+    expect(won.claimedRewardIds.filter((id:string)=>id==='S09.enemy.3')).toHaveLength(1);expect(won.totalXp-once.totalXp).toBe(6);expect(won.coins-once.coins).toBe(3);
+    await resume(page);expect((await read(page)).enemies).toHaveLength(0);expect((await read(page)).save.claimedRewardIds).toEqual(won.claimedRewardIds);
+    await moveJourney(page,2480);await page.keyboard.press('e');await skipJourneyDialogue(page);expect((await read(page)).save.treasures).toContain('T03');
+    await proof.shot('retry-alliance');expect(errors).toEqual([]);proof.finish(errors);
+});
+
+test('missing orb cannot expose a core; feather is needed for glide; old victory remains valid',async({page})=>{
+    const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));await page.goto('/');const save=fixture();save.treasures=['T01'];
+    await load(page,save);const proof=evidence(page,'guards');await moveJourney(page,2240);await state(page,'recover',0);
+    expect((await read(page)).rocEncounter.coreOpen).toBe(false);await page.keyboard.press('j');await page.waitForTimeout(240);expect((await read(page)).enemies[0].hp).toBe(3);
+    await proof.shot('missing-orb');await moveJourney(page,1800);await page.keyboard.down('k');
+    await page.waitForFunction(()=>{const s=Reflect.get(window,'__SINBAD_TEST__');return s?.player.vy>250;});
+    expect((await read(page)).gliding).toBe(false);await proof.shot('no-feather-fall');await page.keyboard.up('k');
+    const legacy=fixture();legacy.completedObjectiveIds=['S09.quest.1','S09.quest.2','S09.quest.3','S09.enemy.3'];legacy.claimedRewardIds.push('S09.enemy.3');
+    await load(page,legacy);expect((await read(page)).enemies).toHaveLength(0);await moveJourney(page,2480);const legacyBefore=(await read(page)).save;
+    await page.keyboard.press('e');await skipJourneyDialogue(page);
+    expect((await read(page)).save.treasures).toContain('T03');expect((await read(page)).save.totalXp).toBe(legacyBefore.totalXp);await proof.shot('legacy-alliance');
+    expect(errors).toEqual([]);proof.finish(errors);
+});

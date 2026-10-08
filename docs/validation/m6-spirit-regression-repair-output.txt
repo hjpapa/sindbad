@@ -1,0 +1,23 @@
+
+> sinbad-seven-treasures@0.1.0 test:e2e
+> playwright test tests/e2e/m2.spec.ts tests/e2e/siren-actions.spec.ts --grep coral gate rejects|siren --reporter=list,json,html
+
+
+Running 5 tests using 1 worker
+
+(node:43732) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:43732) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 tests\e2e\m2.spec.ts:161:1 › coral gate rejects missing crown; guardian blocks frontal attacks and exposes recovery (1.1m)
+  ok 2 tests\e2e\siren-actions.spec.ts:35:41 › phone siren four actions preserves shield, two songs and saved reward (35.1s)
+  ok 3 tests\e2e\siren-actions.spec.ts:35:41 › phone siren missing-sheet recovery preserves shield, two songs and saved reward (34.1s)
+  ok 4 tests\e2e\siren-actions.spec.ts:35:41 › tablet siren four actions preserves shield, two songs and saved reward (35.0s)
+  ok 5 tests\e2e\siren-actions.spec.ts:35:41 › tablet siren missing-sheet recovery preserves shield, two songs and saved reward (34.6s)
+
+  5 passed (3.5m)
+
+To open last HTML report run:
+[36m[39m
+[36m  npx playwright show-report[39m
+[36m[39m

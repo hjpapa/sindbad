@@ -1,0 +1,73 @@
+
+> sinbad-seven-treasures@0.1.0 test
+> vitest run
+
+
+ RUN  v3.2.4 C:/code/code10(sindbad)
+
+ ✓ tests/unit/audio.test.ts (3 tests) 17ms
+ ✓ tests/unit/skills.test.ts (3 tests) 7ms
+ ✓ tests/unit/world-props.test.ts (4 tests) 8ms
+ ✓ tests/unit/controlText.test.ts (3 tests) 8ms
+ ✓ tests/unit/campaign-complete.test.ts (3 tests) 12ms
+ ✓ tests/unit/crystal.test.ts (5 tests) 11ms
+ ✓ tests/unit/recovery.test.ts (5 tests) 10ms
+ ✓ tests/unit/story-mechanics.test.ts (6 tests) 13ms
+ ✓ tests/unit/flame.test.ts (6 tests) 37ms
+ ✓ tests/unit/adventure.test.ts (6 tests) 33ms
+ ✓ tests/unit/effects-art.test.ts (5 tests) 8ms
+ ✓ tests/unit/weapons-art.test.ts (2 tests) 11ms
+ ❯ tests/unit/roc-mechanics.test.ts (4 tests | 1 failed) 28ms
+   ✓ roc necklace progression and safe movement > preserves legacy channels without treating them as new core strikes 9ms
+   ✓ roc necklace progression and safe movement > opens only one core on an orb-revealed landing and gives each attack an avoidable zone 2ms
+   × roc necklace progression and safe movement > keeps a legacy victory before any channel completable without new loot 17ms
+     → expected { schemaVersion: 1, …(18) } to match object { schemaVersion: 1, …(18) }
+   ✓ roc necklace progression and safe movement > caps feather-held descent without granting ascent, swimming or flight 0ms
+ ✓ tests/unit/terrain.test.ts (5 tests) 9ms
+ ✓ tests/unit/core.test.ts (32 tests) 31ms
+ ✓ tests/unit/reachability.test.ts (6 tests) 9ms
+ ✓ tests/unit/dialogueArt.test.ts (5 tests) 9ms
+ ✓ tests/unit/touch-icons.test.ts (2 tests) 6ms
+ ✓ tests/unit/passives.test.ts (2 tests) 7ms
+ ✓ tests/unit/hero-art.test.ts (2 tests) 5ms
+ ✓ tests/unit/enemy-actions.test.ts (2 tests) 5ms
+ ✓ tests/unit/spirit-actions.test.ts (2 tests) 6ms
+ ✓ tests/unit/bat-actions.test.ts (2 tests) 6ms
+ ✓ tests/unit/kite-actions.test.ts (2 tests) 7ms
+ ✓ tests/unit/siren-actions.test.ts (2 tests) 7ms
+ ✓ tests/unit/roc-actions.test.ts (2 tests) 6ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/unit/roc-mechanics.test.ts > roc necklace progression and safe movement > keeps a legacy victory before any channel completable without new loot
+AssertionError: expected { schemaVersion: 1, …(18) } to match object { schemaVersion: 1, …(18) }
+
+- Expected
++ Received
+
+@@ -37,7 +37,7 @@
+    "treasures": [],
+    "upgrades": {},
+    "weapons": [
+      "W01",
+    ],
+-   "writtenAt": "2026-10-08T10:39:39.103Z",
++   "writtenAt": "2026-10-08T10:39:39.104Z",
+  }
+
+ ❯ tests/unit/roc-mechanics.test.ts:44:88
+     42|         expect(loaded.completedObjectiveIds).toEqual(expect.arrayConta…
+     43|         expect(loaded.claimedRewardIds).toEqual(old.claimedRewardIds);…
+     44|         expect(loaded.treasures).toEqual([]);expect(parseSave(JSON.str…
+       |                                                                                        ^
+     45|     });
+     46|     it('caps feather-held descent without granting ascent, swimming or…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed | 25 passed (26)
+      Tests  1 failed | 120 passed (121)
+   Start at  19:39:37
+   Duration  2.21s (transform 1.76s, setup 0ms, collect 6.58s, tests 316ms, environment 6ms, prepare 8.45s)
+

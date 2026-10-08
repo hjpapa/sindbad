@@ -1,0 +1,39 @@
+
+> sinbad-seven-treasures@0.1.0 test
+> vitest run
+
+
+ RUN  v3.2.4 C:/code/code10(sindbad)
+
+ ✓ tests/unit/audio.test.ts (3 tests) 19ms
+ ✓ tests/unit/campaign-complete.test.ts (3 tests) 10ms
+ ✓ tests/unit/reachability.test.ts (6 tests) 9ms
+ ✓ tests/unit/controlText.test.ts (3 tests) 8ms
+ ✓ tests/unit/crystal.test.ts (5 tests) 11ms
+ ✓ tests/unit/flame.test.ts (6 tests) 31ms
+ ✓ tests/unit/adventure.test.ts (6 tests) 34ms
+ ✓ tests/unit/recovery.test.ts (5 tests) 9ms
+ ✓ tests/unit/story-mechanics.test.ts (6 tests) 11ms
+ ✓ tests/unit/roc-mechanics.test.ts (4 tests) 13ms
+ ✓ tests/unit/effects-art.test.ts (5 tests) 8ms
+ ✓ tests/unit/dialogueArt.test.ts (5 tests) 8ms
+ ✓ tests/unit/weapons-art.test.ts (2 tests) 14ms
+ ✓ tests/unit/terrain.test.ts (5 tests) 10ms
+ ✓ tests/unit/core.test.ts (32 tests) 29ms
+ ✓ tests/unit/world-props.test.ts (4 tests) 8ms
+ ✓ tests/unit/passives.test.ts (2 tests) 7ms
+ ✓ tests/unit/skills.test.ts (3 tests) 7ms
+ ✓ tests/unit/touch-icons.test.ts (2 tests) 7ms
+ ✓ tests/unit/siren-actions.test.ts (2 tests) 7ms
+ ✓ tests/unit/kite-actions.test.ts (2 tests) 7ms
+ ✓ tests/unit/roc-actions.test.ts (2 tests) 6ms
+ ✓ tests/unit/spirit-actions.test.ts (2 tests) 5ms
+ ✓ tests/unit/bat-actions.test.ts (2 tests) 6ms
+ ✓ tests/unit/enemy-actions.test.ts (2 tests) 7ms
+ ✓ tests/unit/hero-art.test.ts (2 tests) 6ms
+
+ Test Files  26 passed (26)
+      Tests  121 passed (121)
+   Start at  19:40:57
+   Duration  2.30s (transform 1.65s, setup 0ms, collect 7.11s, tests 300ms, environment 6ms, prepare 8.78s)
+

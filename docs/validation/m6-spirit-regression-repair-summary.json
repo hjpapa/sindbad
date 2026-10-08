@@ -1,0 +1,63 @@
+{
+  "date": "2026-10-06T13:53:59.374841+00:00",
+  "full": {
+    "report": "docs/validation/m6-spirit-e2e-final.json",
+    "exitCode": 1,
+    "stats": {
+      "startTime": "2026-10-06T12:38:26.710Z",
+      "duration": 4180263.449,
+      "expected": 69,
+      "skipped": 0,
+      "unexpected": 4,
+      "flaky": 0
+    }
+  },
+  "targeted": {
+    "report": "docs/validation/m6-spirit-regression-repair.json",
+    "exitCode": 0,
+    "stats": {
+      "startTime": "2026-10-06T13:49:44.932Z",
+      "duration": 209984.796,
+      "expected": 5,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    }
+  },
+  "changesAfterFull": [
+    "tests/e2e/m2.spec.ts",
+    "tests/e2e/siren-actions.spec.ts"
+  ],
+  "unchangedGameAssetsBuildAndOtherFiles": 982,
+  "targetRunFrozenFiles": 984,
+  "targetRunUnchanged": true,
+  "screenshots": 34,
+  "staticRechecks": [
+    {
+      "command": "npm run typecheck",
+      "started": "2026-10-06T13:50:41.278067+00:00",
+      "exitCode": 0,
+      "seconds": 8.25,
+      "output": "docs/validation/m6-spirit-repair-check-1.txt"
+    },
+    {
+      "command": "npm run lint",
+      "started": "2026-10-06T13:50:49.515146+00:00",
+      "exitCode": 0,
+      "seconds": 14.77,
+      "output": "docs/validation/m6-spirit-repair-check-2.txt"
+    },
+    {
+      "command": "npm run test",
+      "started": "2026-10-06T13:51:04.286896+00:00",
+      "exitCode": 0,
+      "seconds": 5.88,
+      "output": "docs/validation/m6-spirit-repair-check-3.txt"
+    }
+  ],
+  "repairs": [
+    "Guardian waits for a new frontal telegraph after recovery; HP blocking and subsequent recovery damage remain asserted.",
+    "Siren actor/shot observations use a single read-only simulation snapshot before screenshot encoding; exact shot counts and velocities remain asserted."
+  ],
+  "limitation": "Full 73-case suite was not repeated after these two E2E-only repairs. Do not report a single 73-pass full run."
+}

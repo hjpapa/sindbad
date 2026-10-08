@@ -1,0 +1,43 @@
+
+> sinbad-seven-treasures@0.1.0 test:e2e
+> playwright test tests/e2e/roc-mechanics.spec.ts --grep phone S09 --reporter=list,json
+
+
+Running 1 test using 1 worker
+
+(node:22272) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:22272) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+SHOT peck-warning 178ms
+SHOT core-open 186ms
+SHOT one-core-one-landing 177ms
+WIND INPUT {"x":2232.888888888888,"y":546,"grounded":true,"vx":0,"vy":0,"hp":68,"maxHp":100,"bodyWidth":42,"bodyHeight":84}
+WIND AIR {"x":2223.722222222221,"y":425.25,"grounded":false,"vx":0,"vy":-190,"hp":54,"maxHp":100,"bodyWidth":42,"bodyHeight":84}
+  x  1 tests\e2e\roc-mechanics.spec.ts:112:3 › phone S09 three distinct avoidable patterns, three cores and feather glide (54.3s)
+
+
+  1) tests\e2e\roc-mechanics.spec.ts:112:3 › phone S09 three distinct avoidable patterns, three cores and feather glide 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: [32m68[39m
+    Received: [31m54[39m
+
+      58 |         await state(page,'telegraph',1);hp=(await read(page)).player.hp;
+      59 |         await state(page,'attack',1);console.log('WIND INPUT',JSON.stringify((await read(page)).player));await page.keyboard.down('k');await page.waitForTimeout(300);console.log('WIND AIR',JSON.stringify((await read(page)).player));await page.waitForTimeout(250);await page.keyboard.up('k');
+    > 60 |         await state(page,'recover',1);expect((await read(page)).player.hp).toBe(hp);await proof.shot('wind-jump-safe');
+         |                                                                            ^
+      61 |         await strikeRocJourney(page);expect((await read(page)).rocEncounter.coresBroken).toBe(2);
+      62 |         const dive=await state(page,'telegraph',2);await proof.shot('dive-warning',dive);hp=dive.player.hp;
+      63 |         await moveJourney(page,dive.rocEncounter.zone.x-180);await state(page,'recover',2);
+        at C:\code\code10(sindbad)\tests\e2e\roc-mechanics.spec.ts:60:76
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\roc-mechanics-phone-S09-th-da99a-ree-cores-and-feather-glide\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\roc-mechanics-phone-S09-th-da99a-ree-cores-and-feather-glide\error-context.md
+
+  1 failed
+    tests\e2e\roc-mechanics.spec.ts:112:3 › phone S09 three distinct avoidable patterns, three cores and feather glide 

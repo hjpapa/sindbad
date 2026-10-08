@@ -1,0 +1,11 @@
+{
+  "date": "2026-10-08T11:10:55.560800+00:00",
+  "method": "netstat -ano all interfaces",
+  "ports": [
+    5174,
+    5175,
+    9323
+  ],
+  "listeners": [],
+  "otherSocketStates": []
+}

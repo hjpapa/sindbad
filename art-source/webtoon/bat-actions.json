@@ -1,0 +1,78 @@
+{
+  "key": "bat",
+  "texture": "bat-actions",
+  "cellSize": 512,
+  "columns": 4,
+  "rows": 1,
+  "idleHeight": 233,
+  "legacyCanvasWidth": 96,
+  "legacyCanvasHeight": 128,
+  "restingVisibleHeight": 84,
+  "legacyGroundIndicatorOffset": 64,
+  "frames": [
+    {
+      "pose": "idle",
+      "frame": 0,
+      "bounds": [
+        130,
+        197,
+        484,
+        430
+      ],
+      "baseline": 429,
+      "centre": [
+        327,
+        384
+      ]
+    },
+    {
+      "pose": "telegraph",
+      "frame": 1,
+      "bounds": [
+        132,
+        140,
+        390,
+        449
+      ],
+      "baseline": 448,
+      "centre": [
+        280,
+        412
+      ]
+    },
+    {
+      "pose": "attack",
+      "frame": 2,
+      "bounds": [
+        140,
+        141,
+        494,
+        366
+      ],
+      "baseline": 365,
+      "centre": [
+        347,
+        280
+      ]
+    },
+    {
+      "pose": "defeated",
+      "frame": 3,
+      "bounds": [
+        150,
+        131,
+        358,
+        364
+      ],
+      "baseline": 363,
+      "centre": [
+        272,
+        288
+      ]
+    }
+  ],
+  "source": "art-source/webtoon/generated/bat-m6/bat-actions-01.png",
+  "sourceSha256": "ffc21dea78b814dc5cf9bde14a537f7ad60090fb24a6ddde1db0bf155bc359d8",
+  "method": "Full627px cells uniformly resized512 and repacked4x1; exact lossless RGBA. Alpha>16 bounds; torso centres measured manually. Resting visible height84 follows original bat SVG outer y12..95 approximately. Legacy target/body/ground indicator preserved. No repaint or silhouette crop.",
+  "artStatus": "ART_DRAFT"
+}

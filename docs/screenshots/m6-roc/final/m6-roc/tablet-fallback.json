@@ -1,0 +1,3956 @@
+{
+  "fixture": true,
+  "device": "tablet",
+  "fallback": true,
+  "errors": [],
+  "blocked": [
+    "http://127.0.0.1:5174/assets/webtoon/roc-actions.webp",
+    "http://127.0.0.1:5174/assets/webtoon/roc-actions.webp",
+    "http://127.0.0.1:5174/assets/webtoon/roc-actions.webp",
+    "http://127.0.0.1:5174/assets/webtoon/roc-actions.webp",
+    "http://127.0.0.1:5174/assets/webtoon/roc-actions.webp",
+    "http://127.0.0.1:5174/assets/webtoon/roc-actions.webp",
+    "http://127.0.0.1:5174/assets/webtoon/roc-actions.webp",
+    "http://127.0.0.1:5174/assets/webtoon/roc-actions.webp",
+    "http://127.0.0.1:5174/assets/webtoon/roc-actions.webp",
+    "http://127.0.0.1:5174/assets/webtoon/roc-actions.webp",
+    "http://127.0.0.1:5174/assets/webtoon/roc-actions.webp",
+    "http://127.0.0.1:5174/assets/webtoon/roc-actions.webp",
+    "http://127.0.0.1:5174/assets/webtoon/roc-actions.webp",
+    "http://127.0.0.1:5174/assets/webtoon/roc-actions.webp",
+    "http://127.0.0.1:5174/assets/webtoon/roc-actions.webp",
+    "http://127.0.0.1:5174/assets/webtoon/roc-actions.webp",
+    "http://127.0.0.1:5174/assets/webtoon/roc-actions.webp",
+    "http://127.0.0.1:5174/assets/webtoon/roc-actions.webp"
+  ],
+  "checks": [
+    {
+      "label": "S09-idle",
+      "observed": {
+        "id": "S09.enemy.3",
+        "x": 2300,
+        "y": 550,
+        "hp": 128,
+        "state": "idle",
+        "visible": true,
+        "alpha": 1,
+        "art": "roc",
+        "texture": "roc-webtoon",
+        "frame": null,
+        "flipX": false,
+        "originX": 0.5,
+        "originY": 0.65,
+        "displayHeight": 145,
+        "label": ""
+      },
+      "path": "docs/screenshots/m6-roc/final/m6-roc/tablet-fallback-S09-idle.png"
+    },
+    {
+      "label": "S09-telegraph",
+      "observed": {
+        "id": "S09.enemy.3",
+        "x": 2209.2530000000183,
+        "y": 550,
+        "hp": 128,
+        "state": "telegraph",
+        "visible": true,
+        "alpha": 1,
+        "art": "roc",
+        "texture": "roc-webtoon",
+        "frame": null,
+        "flipX": true,
+        "originX": 0.5,
+        "originY": 0.65,
+        "displayHeight": 145,
+        "label": "⚠ 준비… 피하세요!"
+      },
+      "path": "docs/screenshots/m6-roc/final/m6-roc/tablet-fallback-S09-telegraph.png"
+    },
+    {
+      "label": "S09-attack",
+      "observed": {
+        "id": "S09.enemy.3",
+        "x": 2209.2530000000183,
+        "y": 550,
+        "hp": 128,
+        "state": "attack",
+        "visible": true,
+        "alpha": 1,
+        "art": "roc",
+        "texture": "roc-webtoon",
+        "frame": null,
+        "flipX": true,
+        "originX": 0.5,
+        "originY": 0.65,
+        "displayHeight": 145,
+        "label": "⚠ 준비… 피하세요!"
+      },
+      "path": "docs/screenshots/m6-roc/final/m6-roc/tablet-fallback-S09-attack.png"
+    },
+    {
+      "label": "S09-recover",
+      "observed": {
+        "id": "S09.enemy.3",
+        "x": 2209.2530000000183,
+        "y": 550,
+        "hp": 128,
+        "state": "recover",
+        "visible": true,
+        "alpha": 1,
+        "art": "roc",
+        "texture": "roc-webtoon",
+        "frame": null,
+        "flipX": true,
+        "originX": 0.5,
+        "originY": 0.65,
+        "displayHeight": 145,
+        "label": "빈틈 · J 공격"
+      },
+      "path": "docs/screenshots/m6-roc/final/m6-roc/tablet-fallback-S09-recover.png"
+    },
+    {
+      "label": "S09-right",
+      "observed": {
+        "id": "S09.enemy.3",
+        "x": 2209.2530000000183,
+        "y": 550,
+        "hp": 128,
+        "state": "recover",
+        "visible": true,
+        "alpha": 1,
+        "art": "roc",
+        "texture": "roc-webtoon",
+        "frame": null,
+        "flipX": false,
+        "originX": 0.5,
+        "originY": 0.65,
+        "displayHeight": 145,
+        "label": "빈틈 · J 공격"
+      },
+      "path": "docs/screenshots/m6-roc/final/m6-roc/tablet-fallback-S09-right.png"
+    },
+    {
+      "label": "S09-defeated",
+      "observed": {
+        "id": "S09.enemy.3",
+        "x": 2209.2530000000183,
+        "y": 525,
+        "hp": 0,
+        "state": "defeated",
+        "visible": false,
+        "alpha": 0,
+        "art": "roc",
+        "texture": "roc-webtoon",
+        "frame": null,
+        "flipX": true,
+        "originX": 0.5,
+        "originY": 0.65,
+        "displayHeight": 181.25,
+        "label": "저주가 풀렸어!"
+      },
+      "path": "docs/screenshots/m6-roc/final/m6-roc/tablet-fallback-S09-defeated.png"
+    },
+    {
+      "label": "S09-treasure",
+      "observed": {
+        "schemaVersion": 1,
+        "buildVersion": "0.1.0",
+        "writtenAt": "2026-10-07T12:08:42.204Z",
+        "checkpoint": {
+          "stageId": "S09",
+          "checkpointId": "middle"
+        },
+        "totalXp": 5013,
+        "coins": 3,
+        "weapons": [
+          "W01",
+          "W02",
+          "W03"
+        ],
+        "equippedWeapon": "W01",
+        "upgrades": {},
+        "treasures": [
+          "T01",
+          "T02",
+          "T03"
+        ],
+        "relics": [],
+        "goldenHearts": [],
+        "equippedSkill": null,
+        "clearedStageIds": [
+          "S01",
+          "S02",
+          "S03",
+          "S04",
+          "S05",
+          "S06",
+          "S07",
+          "S08"
+        ],
+        "claimedRewardIds": [
+          "S01.reward.start",
+          "S09.heart.1",
+          "S09.heart.2",
+          "S09.quest.1.reward",
+          "S09.quest.2.reward",
+          "S09.quest.3.reward",
+          "S09.enemy.3",
+          "S09.reward.reward"
+        ],
+        "completedObjectiveIds": [
+          "S09.quest.1",
+          "S09.quest.2",
+          "S09.quest.3",
+          "S09.enemy.3",
+          "S09.reward"
+        ],
+        "flags": [
+          "bubbleBlessing",
+          "genieCave"
+        ],
+        "journalPageIds": [],
+        "settings": {
+          "difficulty": "relaxed",
+          "musicVolume": 0.18,
+          "sfxVolume": 0.3,
+          "reducedMotion": true,
+          "largeText": false,
+          "aimAssist": false
+        }
+      },
+      "path": "docs/screenshots/m6-roc/final/m6-roc/tablet-fallback-S09-treasure.png"
+    },
+    {
+      "label": "S09-resume",
+      "observed": {
+        "projectileArt": [],
+        "effectArt": [],
+        "cachedEffectKeys": [
+          "effect-hit-spark",
+          "effect-purify-light",
+          "effect-surrender-flag"
+        ],
+        "cachedActionKeys": [
+          "enemy-actions"
+        ],
+        "terrain": {
+          "style": "cloud",
+          "cachedKeys": [
+            "terrain-cloud-fill",
+            "terrain-cloud-top"
+          ],
+          "textures": [
+            {
+              "key": "terrain-cloud-fill",
+              "width": 128,
+              "height": 128,
+              "source": "blob:http://127.0.0.1:5174/dbfd1339-ae0a-4d50-b372-753bd1d79b14"
+            },
+            {
+              "key": "terrain-cloud-top",
+              "width": 128,
+              "height": 34,
+              "source": "blob:http://127.0.0.1:5174/eab46b1e-a40b-4fba-b541-a2702b7ea9e9"
+            }
+          ],
+          "platforms": [
+            {
+              "x": 1500,
+              "y": 664,
+              "width": 3000,
+              "height": 112,
+              "texture": "terrain-cloud-fill",
+              "visible": true,
+              "skinX": 1500,
+              "skinY": 664,
+              "skinWidth": 3000,
+              "skinHeight": 112
+            },
+            {
+              "x": 700,
+              "y": 548,
+              "width": 180,
+              "height": 24,
+              "texture": "terrain-cloud-fill",
+              "visible": false,
+              "skinX": 700,
+              "skinY": 548,
+              "skinWidth": 180,
+              "skinHeight": 24
+            },
+            {
+              "x": 910,
+              "y": 476,
+              "width": 180,
+              "height": 24,
+              "texture": "terrain-cloud-fill",
+              "visible": false,
+              "skinX": 910,
+              "skinY": 476,
+              "skinWidth": 180,
+              "skinHeight": 24
+            }
+          ],
+          "tops": [
+            {
+              "x": 1500,
+              "y": 621,
+              "width": 3000,
+              "height": 34,
+              "texture": "terrain-cloud-top"
+            },
+            {
+              "x": 700,
+              "y": 549,
+              "width": 180,
+              "height": 34,
+              "texture": "terrain-cloud-top"
+            },
+            {
+              "x": 910,
+              "y": 477,
+              "width": 180,
+              "height": 34,
+              "texture": "terrain-cloud-top"
+            }
+          ]
+        },
+        "propArt": {
+          "cachedKeys": [
+            "prop-heart",
+            "prop-lantern",
+            "prop-gift"
+          ],
+          "objects": [
+            {
+              "id": "S09.intro",
+              "kind": "npc",
+              "texture": "roc-webtoon",
+              "x": 230,
+              "y": 550,
+              "width": 192,
+              "height": 128,
+              "visible": true,
+              "done": false
+            },
+            {
+              "id": "S09.quest.1",
+              "kind": "quest",
+              "texture": "prop-lantern",
+              "x": 982.5,
+              "y": 550,
+              "width": 65.28,
+              "height": 87.04,
+              "visible": true,
+              "done": true
+            },
+            {
+              "id": "S09.quest.2",
+              "kind": "quest",
+              "texture": "prop-lantern",
+              "x": 1445,
+              "y": 550,
+              "width": 65.28,
+              "height": 87.04,
+              "visible": true,
+              "done": true
+            },
+            {
+              "id": "S09.quest.3",
+              "kind": "quest",
+              "texture": "prop-lantern",
+              "x": 1907.5,
+              "y": 550,
+              "width": 65.28,
+              "height": 87.04,
+              "visible": true,
+              "done": true
+            },
+            {
+              "id": "S09.reward",
+              "kind": "gift",
+              "texture": "prop-gift",
+              "x": 2480,
+              "y": 550,
+              "width": 65.28,
+              "height": 87.04,
+              "visible": true,
+              "done": true
+            },
+            {
+              "id": "S09.exit",
+              "kind": "exit",
+              "texture": "bell",
+              "x": 2840,
+              "y": 550,
+              "width": 65.28,
+              "height": 87.04,
+              "visible": true,
+              "done": false
+            },
+            {
+              "id": "S09.cp.middle",
+              "kind": "checkpoint",
+              "texture": "bell",
+              "x": 1560,
+              "y": 550,
+              "width": 40.32,
+              "height": 53.76,
+              "visible": true,
+              "done": false
+            }
+          ],
+          "chests": [],
+          "hearts": [
+            {
+              "id": "S09.heart.1",
+              "large": false,
+              "active": true,
+              "texture": "prop-heart",
+              "x": 1350,
+              "y": 550,
+              "width": 34.56,
+              "height": 46.08
+            },
+            {
+              "id": "S09.heart.2",
+              "large": true,
+              "active": true,
+              "texture": "prop-heart",
+              "x": 2280,
+              "y": 550,
+              "width": 48,
+              "height": 64
+            }
+          ]
+        },
+        "flightArt": null,
+        "heroArt": {
+          "texture": "hero-action",
+          "frame": 0,
+          "x": 1560,
+          "y": 610,
+          "flipX": false,
+          "originY": 0.9609375
+        },
+        "weaponArt": {
+          "visible": false,
+          "x": 1560,
+          "y": 548,
+          "texture": "weapon-W01",
+          "angle": 0
+        },
+        "storyDevices": [
+          {
+            "id": "S09.quest.1",
+            "x": 982.5,
+            "y": 550,
+            "mechanic": {
+              "type": "channel",
+              "duration": 900,
+              "symbol": "깃털 봉인"
+            },
+            "done": true
+          },
+          {
+            "id": "S09.quest.2",
+            "x": 1445,
+            "y": 550,
+            "mechanic": {
+              "type": "channel",
+              "duration": 900,
+              "symbol": "바람 봉인"
+            },
+            "done": true
+          },
+          {
+            "id": "S09.quest.3",
+            "x": 1907.5,
+            "y": 550,
+            "mechanic": {
+              "type": "channel",
+              "duration": 900,
+              "symbol": "둥지 봉인"
+            },
+            "done": true
+          }
+        ],
+        "freeMovement": false,
+        "stage": "S09",
+        "player": {
+          "x": 1560,
+          "y": 546,
+          "grounded": true,
+          "vx": 0,
+          "vy": 0,
+          "hp": 186.6,
+          "maxHp": 195,
+          "bodyWidth": 42,
+          "bodyHeight": 84
+        },
+        "save": {
+          "schemaVersion": 1,
+          "buildVersion": "0.1.0",
+          "writtenAt": "2026-10-07T12:09:18.474Z",
+          "checkpoint": {
+            "stageId": "S09",
+            "checkpointId": "middle"
+          },
+          "totalXp": 5013,
+          "coins": 3,
+          "weapons": [
+            "W01",
+            "W02",
+            "W03"
+          ],
+          "equippedWeapon": "W01",
+          "upgrades": {},
+          "treasures": [
+            "T01",
+            "T02",
+            "T03"
+          ],
+          "relics": [],
+          "goldenHearts": [],
+          "equippedSkill": null,
+          "clearedStageIds": [
+            "S01",
+            "S02",
+            "S03",
+            "S04",
+            "S05",
+            "S06",
+            "S07",
+            "S08"
+          ],
+          "claimedRewardIds": [
+            "S01.reward.start",
+            "S09.heart.1",
+            "S09.heart.2",
+            "S09.quest.1.reward",
+            "S09.quest.2.reward",
+            "S09.quest.3.reward",
+            "S09.enemy.3",
+            "S09.reward.reward"
+          ],
+          "completedObjectiveIds": [
+            "S09.quest.1",
+            "S09.quest.2",
+            "S09.quest.3",
+            "S09.enemy.3",
+            "S09.reward"
+          ],
+          "flags": [
+            "bubbleBlessing",
+            "genieCave"
+          ],
+          "journalPageIds": [],
+          "settings": {
+            "difficulty": "relaxed",
+            "musicVolume": 0.18,
+            "sfxVolume": 0.3,
+            "reducedMotion": true,
+            "largeText": false,
+            "aimAssist": false
+          }
+        },
+        "sim": 2258.5266666666703,
+        "paused": false,
+        "enemies": [
+          {
+            "id": "S09.enemy.1",
+            "x": 800,
+            "y": 550,
+            "hp": 34,
+            "state": "idle",
+            "visible": true,
+            "alpha": 1,
+            "art": "bandit",
+            "texture": "enemy-actions",
+            "frame": 4,
+            "flipX": false,
+            "originX": 0.5,
+            "originY": 0.5844350961538461,
+            "displayHeight": 238.5663082437276,
+            "footOffset": 60,
+            "label": ""
+          },
+          {
+            "id": "S09.enemy.2",
+            "x": 1550,
+            "y": 550,
+            "hp": 34,
+            "state": "recover",
+            "visible": true,
+            "alpha": 1,
+            "art": "bandit",
+            "texture": "enemy-actions",
+            "frame": 4,
+            "flipX": false,
+            "originX": 0.5,
+            "originY": 0.5844350961538461,
+            "displayHeight": 238.5663082437276,
+            "footOffset": 60,
+            "label": "빈틈 · 행동 공격"
+          }
+        ],
+        "flightHazards": [],
+        "projectiles": 0,
+        "boomerang": false,
+        "attack": null,
+        "air": 10000,
+        "submerged": false,
+        "bubbleProtected": true,
+        "movingPlatforms": [],
+        "mp": 98,
+        "flameReady": 0,
+        "pulse": false,
+        "wave": null,
+        "grip": null,
+        "mirrors": [
+          0,
+          0,
+          0
+        ],
+        "connectedMirrors": 0,
+        "puzzleSafe": false,
+        "frameMs": 16.66999999999998
+      },
+      "path": "docs/screenshots/m6-roc/final/m6-roc/tablet-fallback-S09-resume.png"
+    },
+    {
+      "label": "S09-double-jump",
+      "observed": {
+        "projectileArt": [],
+        "effectArt": [],
+        "cachedEffectKeys": [
+          "effect-hit-spark",
+          "effect-purify-light",
+          "effect-surrender-flag"
+        ],
+        "cachedActionKeys": [
+          "enemy-actions"
+        ],
+        "terrain": {
+          "style": "cloud",
+          "cachedKeys": [
+            "terrain-cloud-fill",
+            "terrain-cloud-top"
+          ],
+          "textures": [
+            {
+              "key": "terrain-cloud-fill",
+              "width": 128,
+              "height": 128,
+              "source": "blob:http://127.0.0.1:5174/dbfd1339-ae0a-4d50-b372-753bd1d79b14"
+            },
+            {
+              "key": "terrain-cloud-top",
+              "width": 128,
+              "height": 34,
+              "source": "blob:http://127.0.0.1:5174/eab46b1e-a40b-4fba-b541-a2702b7ea9e9"
+            }
+          ],
+          "platforms": [
+            {
+              "x": 1500,
+              "y": 664,
+              "width": 3000,
+              "height": 112,
+              "texture": "terrain-cloud-fill",
+              "visible": true,
+              "skinX": 1500,
+              "skinY": 664,
+              "skinWidth": 3000,
+              "skinHeight": 112
+            },
+            {
+              "x": 700,
+              "y": 548,
+              "width": 180,
+              "height": 24,
+              "texture": "terrain-cloud-fill",
+              "visible": false,
+              "skinX": 700,
+              "skinY": 548,
+              "skinWidth": 180,
+              "skinHeight": 24
+            },
+            {
+              "x": 910,
+              "y": 476,
+              "width": 180,
+              "height": 24,
+              "texture": "terrain-cloud-fill",
+              "visible": false,
+              "skinX": 910,
+              "skinY": 476,
+              "skinWidth": 180,
+              "skinHeight": 24
+            }
+          ],
+          "tops": [
+            {
+              "x": 1500,
+              "y": 621,
+              "width": 3000,
+              "height": 34,
+              "texture": "terrain-cloud-top"
+            },
+            {
+              "x": 700,
+              "y": 549,
+              "width": 180,
+              "height": 34,
+              "texture": "terrain-cloud-top"
+            },
+            {
+              "x": 910,
+              "y": 477,
+              "width": 180,
+              "height": 34,
+              "texture": "terrain-cloud-top"
+            }
+          ]
+        },
+        "propArt": {
+          "cachedKeys": [
+            "prop-heart",
+            "prop-lantern",
+            "prop-gift"
+          ],
+          "objects": [
+            {
+              "id": "S09.intro",
+              "kind": "npc",
+              "texture": "roc-webtoon",
+              "x": 230,
+              "y": 550,
+              "width": 192,
+              "height": 128,
+              "visible": true,
+              "done": false
+            },
+            {
+              "id": "S09.quest.1",
+              "kind": "quest",
+              "texture": "prop-lantern",
+              "x": 982.5,
+              "y": 550,
+              "width": 65.28,
+              "height": 87.04,
+              "visible": true,
+              "done": true
+            },
+            {
+              "id": "S09.quest.2",
+              "kind": "quest",
+              "texture": "prop-lantern",
+              "x": 1445,
+              "y": 550,
+              "width": 65.28,
+              "height": 87.04,
+              "visible": true,
+              "done": true
+            },
+            {
+              "id": "S09.quest.3",
+              "kind": "quest",
+              "texture": "prop-lantern",
+              "x": 1907.5,
+              "y": 550,
+              "width": 65.28,
+              "height": 87.04,
+              "visible": true,
+              "done": true
+            },
+            {
+              "id": "S09.reward",
+              "kind": "gift",
+              "texture": "prop-gift",
+              "x": 2480,
+              "y": 550,
+              "width": 65.28,
+              "height": 87.04,
+              "visible": true,
+              "done": true
+            },
+            {
+              "id": "S09.exit",
+              "kind": "exit",
+              "texture": "bell",
+              "x": 2840,
+              "y": 550,
+              "width": 65.28,
+              "height": 87.04,
+              "visible": true,
+              "done": false
+            },
+            {
+              "id": "S09.cp.middle",
+              "kind": "checkpoint",
+              "texture": "bell",
+              "x": 1560,
+              "y": 550,
+              "width": 40.32,
+              "height": 53.76,
+              "visible": true,
+              "done": false
+            }
+          ],
+          "chests": [],
+          "hearts": [
+            {
+              "id": "S09.heart.1",
+              "large": false,
+              "active": true,
+              "texture": "prop-heart",
+              "x": 1350,
+              "y": 550,
+              "width": 34.56,
+              "height": 46.08
+            },
+            {
+              "id": "S09.heart.2",
+              "large": true,
+              "active": false
+            }
+          ]
+        },
+        "flightArt": null,
+        "heroArt": {
+          "texture": "hero-action",
+          "frame": 2,
+          "x": 2621.8333333333335,
+          "y": 500,
+          "flipX": false,
+          "originY": 0.80859375
+        },
+        "weaponArt": {
+          "visible": false,
+          "x": 1560,
+          "y": 548,
+          "texture": "weapon-W01",
+          "angle": 0
+        },
+        "storyDevices": [
+          {
+            "id": "S09.quest.1",
+            "x": 982.5,
+            "y": 550,
+            "mechanic": {
+              "type": "channel",
+              "duration": 900,
+              "symbol": "깃털 봉인"
+            },
+            "done": true
+          },
+          {
+            "id": "S09.quest.2",
+            "x": 1445,
+            "y": 550,
+            "mechanic": {
+              "type": "channel",
+              "duration": 900,
+              "symbol": "바람 봉인"
+            },
+            "done": true
+          },
+          {
+            "id": "S09.quest.3",
+            "x": 1907.5,
+            "y": 550,
+            "mechanic": {
+              "type": "channel",
+              "duration": 900,
+              "symbol": "둥지 봉인"
+            },
+            "done": true
+          }
+        ],
+        "freeMovement": false,
+        "stage": "S09",
+        "player": {
+          "x": 2621.8333333333335,
+          "y": 432,
+          "grounded": false,
+          "vx": 0,
+          "vy": -570,
+          "hp": 195,
+          "maxHp": 195,
+          "bodyWidth": 42,
+          "bodyHeight": 84
+        },
+        "save": {
+          "schemaVersion": 1,
+          "buildVersion": "0.1.0",
+          "writtenAt": "2026-10-07T12:09:18.474Z",
+          "checkpoint": {
+            "stageId": "S09",
+            "checkpointId": "middle"
+          },
+          "totalXp": 5013,
+          "coins": 3,
+          "weapons": [
+            "W01",
+            "W02",
+            "W03"
+          ],
+          "equippedWeapon": "W01",
+          "upgrades": {},
+          "treasures": [
+            "T01",
+            "T02",
+            "T03"
+          ],
+          "relics": [],
+          "goldenHearts": [],
+          "equippedSkill": null,
+          "clearedStageIds": [
+            "S01",
+            "S02",
+            "S03",
+            "S04",
+            "S05",
+            "S06",
+            "S07",
+            "S08"
+          ],
+          "claimedRewardIds": [
+            "S01.reward.start",
+            "S09.heart.1",
+            "S09.heart.2",
+            "S09.quest.1.reward",
+            "S09.quest.2.reward",
+            "S09.quest.3.reward",
+            "S09.enemy.3",
+            "S09.reward.reward"
+          ],
+          "completedObjectiveIds": [
+            "S09.quest.1",
+            "S09.quest.2",
+            "S09.quest.3",
+            "S09.enemy.3",
+            "S09.reward"
+          ],
+          "flags": [
+            "bubbleBlessing",
+            "genieCave"
+          ],
+          "journalPageIds": [],
+          "settings": {
+            "difficulty": "relaxed",
+            "musicVolume": 0.18,
+            "sfxVolume": 0.3,
+            "reducedMotion": true,
+            "largeText": false,
+            "aimAssist": false
+          }
+        },
+        "sim": 6608.776666666668,
+        "paused": false,
+        "enemies": [
+          {
+            "id": "S09.enemy.1",
+            "x": 800,
+            "y": 550,
+            "hp": 34,
+            "state": "idle",
+            "visible": true,
+            "alpha": 1,
+            "art": "bandit",
+            "texture": "enemy-actions",
+            "frame": 4,
+            "flipX": false,
+            "originX": 0.5,
+            "originY": 0.5844350961538461,
+            "displayHeight": 238.5663082437276,
+            "footOffset": 60,
+            "label": ""
+          },
+          {
+            "id": "S09.enemy.2",
+            "x": 1550,
+            "y": 550,
+            "hp": 34,
+            "state": "recover",
+            "visible": true,
+            "alpha": 1,
+            "art": "bandit",
+            "texture": "enemy-actions",
+            "frame": 4,
+            "flipX": false,
+            "originX": 0.5,
+            "originY": 0.5844350961538461,
+            "displayHeight": 238.5663082437276,
+            "footOffset": 60,
+            "label": "빈틈 · J 공격"
+          }
+        ],
+        "flightHazards": [],
+        "projectiles": 0,
+        "boomerang": false,
+        "attack": null,
+        "air": 10000,
+        "submerged": false,
+        "bubbleProtected": true,
+        "movingPlatforms": [],
+        "mp": 98,
+        "flameReady": 0,
+        "pulse": false,
+        "wave": null,
+        "grip": null,
+        "mirrors": [
+          0,
+          0,
+          0
+        ],
+        "connectedMirrors": 0,
+        "puzzleSafe": false,
+        "frameMs": 16.659999999999947
+      },
+      "path": "docs/screenshots/m6-roc/final/m6-roc/tablet-fallback-S09-double-jump.png"
+    },
+    {
+      "label": "S10-framenull",
+      "observed": {
+        "projectileArt": [],
+        "effectArt": [],
+        "cachedEffectKeys": [
+          "projectile-kite-wind",
+          "effect-hit-spark",
+          "effect-purify-light",
+          "effect-surrender-flag"
+        ],
+        "cachedActionKeys": [
+          "kite-actions"
+        ],
+        "terrain": {
+          "style": "cloud",
+          "cachedKeys": [
+            "terrain-cloud-fill",
+            "terrain-cloud-top"
+          ],
+          "textures": [
+            {
+              "key": "terrain-cloud-fill",
+              "width": 128,
+              "height": 128,
+              "source": "blob:http://127.0.0.1:5174/e6720dc5-1619-420e-afca-eaa5f7767f65"
+            },
+            {
+              "key": "terrain-cloud-top",
+              "width": 128,
+              "height": 34,
+              "source": "blob:http://127.0.0.1:5174/489d015e-3b3d-4ce6-8ee5-379a9f1abdd2"
+            }
+          ],
+          "platforms": [
+            {
+              "x": 1500,
+              "y": 664,
+              "width": 3000,
+              "height": 112,
+              "texture": "terrain-cloud-fill",
+              "visible": true,
+              "skinX": 1500,
+              "skinY": 664,
+              "skinWidth": 3000,
+              "skinHeight": 112
+            }
+          ],
+          "tops": [
+            {
+              "x": 1500,
+              "y": 621,
+              "width": 3000,
+              "height": 34,
+              "texture": "terrain-cloud-top"
+            }
+          ]
+        },
+        "propArt": {
+          "cachedKeys": [
+            "prop-flight-ring",
+            "prop-gust-cloud",
+            "prop-heart",
+            "prop-gift"
+          ],
+          "objects": [
+            {
+              "id": "S10.intro",
+              "kind": "npc",
+              "texture": "roc-webtoon",
+              "x": 230,
+              "y": 550,
+              "width": 192,
+              "height": 128,
+              "visible": true,
+              "done": false
+            },
+            {
+              "id": "S10.quest.1",
+              "kind": "quest",
+              "texture": "prop-flight-ring",
+              "x": 700,
+              "y": 360,
+              "width": 129.60000000000002,
+              "height": 172.8,
+              "visible": true,
+              "done": false
+            },
+            {
+              "id": "S10.quest.2",
+              "kind": "quest",
+              "texture": "prop-flight-ring",
+              "x": 1450,
+              "y": 210,
+              "width": 129.60000000000002,
+              "height": 172.8,
+              "visible": true,
+              "done": false
+            },
+            {
+              "id": "S10.quest.3",
+              "kind": "quest",
+              "texture": "prop-flight-ring",
+              "x": 2200,
+              "y": 390,
+              "width": 129.60000000000002,
+              "height": 172.8,
+              "visible": true,
+              "done": false
+            },
+            {
+              "id": "S10.reward",
+              "kind": "gift",
+              "texture": "prop-gift",
+              "x": 2480,
+              "y": 550,
+              "width": 65.28,
+              "height": 87.04,
+              "visible": true,
+              "done": false
+            },
+            {
+              "id": "S10.exit",
+              "kind": "exit",
+              "texture": "bell",
+              "x": 2840,
+              "y": 550,
+              "width": 65.28,
+              "height": 87.04,
+              "visible": true,
+              "done": false
+            }
+          ],
+          "chests": [],
+          "hearts": [
+            {
+              "id": "S10.heart.1",
+              "large": false,
+              "active": true,
+              "texture": "prop-heart",
+              "x": 1350,
+              "y": 550,
+              "width": 34.56,
+              "height": 46.08
+            },
+            {
+              "id": "S10.heart.2",
+              "large": true,
+              "active": true,
+              "texture": "prop-heart",
+              "x": 2280,
+              "y": 550,
+              "width": 48,
+              "height": 64
+            }
+          ]
+        },
+        "flightArt": {
+          "mount": {
+            "texture": "roc-webtoon",
+            "frame": null,
+            "x": 120,
+            "y": 563,
+            "originX": 0.5,
+            "originY": 0.5,
+            "displayWidth": 240,
+            "displayHeight": 171.6147448789323,
+            "flipX": false
+          },
+          "rider": {
+            "texture": "hero-webtoon",
+            "frame": null,
+            "x": 156,
+            "y": 558,
+            "originX": 0.5,
+            "originY": 1,
+            "displayWidth": 86,
+            "displayHeight": 110,
+            "flipX": false
+          },
+          "passenger": null
+        },
+        "heroArt": {
+          "texture": "hero-webtoon",
+          "frame": null,
+          "x": 156,
+          "y": 558,
+          "flipX": false,
+          "originY": 1
+        },
+        "weaponArt": {
+          "visible": false,
+          "x": 120,
+          "y": 548,
+          "texture": "weapon-W01",
+          "angle": 0
+        },
+        "storyDevices": [],
+        "freeMovement": true,
+        "stage": "S10",
+        "player": {
+          "x": 120,
+          "y": 548,
+          "grounded": false,
+          "vx": 0,
+          "vy": 0,
+          "hp": 195,
+          "maxHp": 195,
+          "bodyWidth": 42,
+          "bodyHeight": 84
+        },
+        "save": {
+          "schemaVersion": 1,
+          "buildVersion": "0.1.0",
+          "writtenAt": "2026-10-07T12:09:26.278Z",
+          "checkpoint": {
+            "stageId": "S10",
+            "checkpointId": "start"
+          },
+          "totalXp": 5000,
+          "coins": 0,
+          "weapons": [
+            "W01",
+            "W02",
+            "W03"
+          ],
+          "equippedWeapon": "W01",
+          "upgrades": {},
+          "treasures": [
+            "T01",
+            "T02",
+            "T03"
+          ],
+          "relics": [],
+          "goldenHearts": [],
+          "equippedSkill": null,
+          "clearedStageIds": [
+            "S01",
+            "S02",
+            "S03",
+            "S04",
+            "S05",
+            "S06",
+            "S07",
+            "S08",
+            "S09"
+          ],
+          "claimedRewardIds": [
+            "S01.reward.start"
+          ],
+          "completedObjectiveIds": [],
+          "flags": [
+            "bubbleBlessing",
+            "genieCave"
+          ],
+          "journalPageIds": [],
+          "settings": {
+            "difficulty": "relaxed",
+            "musicVolume": 0.18,
+            "sfxVolume": 0.3,
+            "reducedMotion": true,
+            "largeText": false,
+            "aimAssist": false
+          }
+        },
+        "sim": 2221.294200000005,
+        "paused": false,
+        "enemies": [
+          {
+            "id": "S10.enemy.1",
+            "x": 900,
+            "y": 317.71169820687567,
+            "hp": 22,
+            "state": "idle",
+            "visible": true,
+            "alpha": 1,
+            "art": "kite",
+            "texture": "kite-actions",
+            "frame": 0,
+            "flipX": true,
+            "originX": 0.44140625,
+            "originY": 0.568359375,
+            "displayHeight": 229.14685314685315,
+            "footOffset": 0,
+            "label": ""
+          },
+          {
+            "id": "S10.enemy.2",
+            "x": 1210,
+            "y": 433.4254432980439,
+            "hp": 22,
+            "state": "idle",
+            "visible": true,
+            "alpha": 1,
+            "art": "kite",
+            "texture": "kite-actions",
+            "frame": 0,
+            "flipX": false,
+            "originX": 0.55859375,
+            "originY": 0.568359375,
+            "displayHeight": 229.14685314685315,
+            "footOffset": 0,
+            "label": ""
+          },
+          {
+            "id": "S10.enemy.3",
+            "x": 1520,
+            "y": 209.1961574684431,
+            "hp": 22,
+            "state": "idle",
+            "visible": true,
+            "alpha": 1,
+            "art": "kite",
+            "texture": "kite-actions",
+            "frame": 0,
+            "flipX": false,
+            "originX": 0.55859375,
+            "originY": 0.568359375,
+            "displayHeight": 229.14685314685315,
+            "footOffset": 0,
+            "label": ""
+          },
+          {
+            "id": "S10.enemy.4",
+            "x": 1830,
+            "y": 387.9261030236512,
+            "hp": 22,
+            "state": "idle",
+            "visible": true,
+            "alpha": 1,
+            "art": "kite",
+            "texture": "kite-actions",
+            "frame": 0,
+            "flipX": false,
+            "originX": 0.55859375,
+            "originY": 0.568359375,
+            "displayHeight": 229.14685314685315,
+            "footOffset": 0,
+            "label": ""
+          },
+          {
+            "id": "S10.enemy.5",
+            "x": 2140,
+            "y": 241.96897074903288,
+            "hp": 22,
+            "state": "idle",
+            "visible": true,
+            "alpha": 1,
+            "art": "kite",
+            "texture": "kite-actions",
+            "frame": 0,
+            "flipX": false,
+            "originX": 0.55859375,
+            "originY": 0.568359375,
+            "displayHeight": 229.14685314685315,
+            "footOffset": 0,
+            "label": ""
+          },
+          {
+            "id": "S10.enemy.6",
+            "x": 2450,
+            "y": 410.51206148003894,
+            "hp": 22,
+            "state": "idle",
+            "visible": true,
+            "alpha": 1,
+            "art": "kite",
+            "texture": "kite-actions",
+            "frame": 0,
+            "flipX": false,
+            "originX": 0.55859375,
+            "originY": 0.568359375,
+            "displayHeight": 229.14685314685315,
+            "footOffset": 0,
+            "label": ""
+          }
+        ],
+        "flightHazards": [
+          {
+            "id": "S10.gust.1",
+            "x": 1150,
+            "y": 444.78977589678453,
+            "kind": "gust",
+            "radius": 62,
+            "texture": "prop-gust-cloud",
+            "width": 91.02219948040629,
+            "height": 121.36293264054171,
+            "rotation": 0,
+            "scale": 0.9481479112542321
+          },
+          {
+            "id": "S10.gust.2",
+            "x": 1680,
+            "y": 313.7845525980915,
+            "kind": "gust",
+            "radius": 70,
+            "texture": "prop-gust-cloud",
+            "width": 94.22541504520912,
+            "height": 125.63388672694549,
+            "rotation": 0,
+            "scale": 0.9815147400542616
+          },
+          {
+            "id": "S10.gust.3",
+            "x": 2210,
+            "y": 163.70988393326917,
+            "kind": "gust",
+            "radius": 62,
+            "texture": "prop-gust-cloud",
+            "width": 87.75632807455145,
+            "height": 117.00843743273526,
+            "rotation": 0,
+            "scale": 0.9141284174432442
+          }
+        ],
+        "projectiles": 0,
+        "boomerang": false,
+        "attack": null,
+        "air": 10000,
+        "submerged": false,
+        "bubbleProtected": true,
+        "movingPlatforms": [],
+        "mp": 98,
+        "flameReady": 0,
+        "pulse": false,
+        "wave": null,
+        "grip": null,
+        "mirrors": [
+          0,
+          0,
+          0
+        ],
+        "connectedMirrors": 0,
+        "puzzleSafe": false,
+        "frameMs": 16.65999999999999
+      },
+      "path": "docs/screenshots/m6-roc/final/m6-roc/tablet-fallback-S10-framenull.png"
+    },
+    {
+      "label": "S10-left",
+      "observed": {
+        "projectileArt": [],
+        "effectArt": [],
+        "cachedEffectKeys": [
+          "projectile-kite-wind",
+          "effect-hit-spark",
+          "effect-purify-light",
+          "effect-surrender-flag"
+        ],
+        "cachedActionKeys": [
+          "kite-actions"
+        ],
+        "terrain": {
+          "style": "cloud",
+          "cachedKeys": [
+            "terrain-cloud-fill",
+            "terrain-cloud-top"
+          ],
+          "textures": [
+            {
+              "key": "terrain-cloud-fill",
+              "width": 128,
+              "height": 128,
+              "source": "blob:http://127.0.0.1:5174/e6720dc5-1619-420e-afca-eaa5f7767f65"
+            },
+            {
+              "key": "terrain-cloud-top",
+              "width": 128,
+              "height": 34,
+              "source": "blob:http://127.0.0.1:5174/489d015e-3b3d-4ce6-8ee5-379a9f1abdd2"
+            }
+          ],
+          "platforms": [
+            {
+              "x": 1500,
+              "y": 664,
+              "width": 3000,
+              "height": 112,
+              "texture": "terrain-cloud-fill",
+              "visible": true,
+              "skinX": 1500,
+              "skinY": 664,
+              "skinWidth": 3000,
+              "skinHeight": 112
+            }
+          ],
+          "tops": [
+            {
+              "x": 1500,
+              "y": 621,
+              "width": 3000,
+              "height": 34,
+              "texture": "terrain-cloud-top"
+            }
+          ]
+        },
+        "propArt": {
+          "cachedKeys": [
+            "prop-flight-ring",
+            "prop-gust-cloud",
+            "prop-heart",
+            "prop-gift"
+          ],
+          "objects": [
+            {
+              "id": "S10.intro",
+              "kind": "npc",
+              "texture": "roc-webtoon",
+              "x": 230,
+              "y": 550,
+              "width": 192,
+              "height": 128,
+              "visible": true,
+              "done": false
+            },
+            {
+              "id": "S10.quest.1",
+              "kind": "quest",
+              "texture": "prop-flight-ring",
+              "x": 700,
+              "y": 360,
+              "width": 129.60000000000002,
+              "height": 172.8,
+              "visible": true,
+              "done": false
+            },
+            {
+              "id": "S10.quest.2",
+              "kind": "quest",
+              "texture": "prop-flight-ring",
+              "x": 1450,
+              "y": 210,
+              "width": 129.60000000000002,
+              "height": 172.8,
+              "visible": true,
+              "done": false
+            },
+            {
+              "id": "S10.quest.3",
+              "kind": "quest",
+              "texture": "prop-flight-ring",
+              "x": 2200,
+              "y": 390,
+              "width": 129.60000000000002,
+              "height": 172.8,
+              "visible": true,
+              "done": false
+            },
+            {
+              "id": "S10.reward",
+              "kind": "gift",
+              "texture": "prop-gift",
+              "x": 2480,
+              "y": 550,
+              "width": 65.28,
+              "height": 87.04,
+              "visible": true,
+              "done": false
+            },
+            {
+              "id": "S10.exit",
+              "kind": "exit",
+              "texture": "bell",
+              "x": 2840,
+              "y": 550,
+              "width": 65.28,
+              "height": 87.04,
+              "visible": true,
+              "done": false
+            }
+          ],
+          "chests": [],
+          "hearts": [
+            {
+              "id": "S10.heart.1",
+              "large": false,
+              "active": true,
+              "texture": "prop-heart",
+              "x": 1350,
+              "y": 550,
+              "width": 34.56,
+              "height": 46.08
+            },
+            {
+              "id": "S10.heart.2",
+              "large": true,
+              "active": true,
+              "texture": "prop-heart",
+              "x": 2280,
+              "y": 550,
+              "width": 48,
+              "height": 64
+            }
+          ]
+        },
+        "flightArt": {
+          "mount": {
+            "texture": "roc-webtoon",
+            "frame": null,
+            "x": 94.94444444444444,
+            "y": 563,
+            "originX": 0.5,
+            "originY": 0.5,
+            "displayWidth": 240,
+            "displayHeight": 149.85261409202204,
+            "flipX": true
+          },
+          "rider": {
+            "texture": "hero-webtoon",
+            "frame": null,
+            "x": 58.94444444444444,
+            "y": 558,
+            "originX": 0.5,
+            "originY": 1,
+            "displayWidth": 86,
+            "displayHeight": 110,
+            "flipX": true
+          },
+          "passenger": null
+        },
+        "heroArt": {
+          "texture": "hero-webtoon",
+          "frame": null,
+          "x": 58.94444444444444,
+          "y": 558,
+          "flipX": true,
+          "originY": 1
+        },
+        "weaponArt": {
+          "visible": false,
+          "x": 120,
+          "y": 548,
+          "texture": "weapon-W01",
+          "angle": 0
+        },
+        "storyDevices": [],
+        "freeMovement": true,
+        "stage": "S10",
+        "player": {
+          "x": 94.94444444444444,
+          "y": 548,
+          "grounded": false,
+          "vx": 0,
+          "vy": 0,
+          "hp": 195,
+          "maxHp": 195,
+          "bodyWidth": 42,
+          "bodyHeight": 84
+        },
+        "save": {
+          "schemaVersion": 1,
+          "buildVersion": "0.1.0",
+          "writtenAt": "2026-10-07T12:09:26.278Z",
+          "checkpoint": {
+            "stageId": "S10",
+            "checkpointId": "start"
+          },
+          "totalXp": 5000,
+          "coins": 0,
+          "weapons": [
+            "W01",
+            "W02",
+            "W03"
+          ],
+          "equippedWeapon": "W01",
+          "upgrades": {},
+          "treasures": [
+            "T01",
+            "T02",
+            "T03"
+          ],
+          "relics": [],
+          "goldenHearts": [],
+          "equippedSkill": null,
+          "clearedStageIds": [
+            "S01",
+            "S02",
+            "S03",
+            "S04",
+            "S05",
+            "S06",
+            "S07",
+            "S08",
+            "S09"
+          ],
+          "claimedRewardIds": [
+            "S01.reward.start"
+          ],
+          "completedObjectiveIds": [],
+          "flags": [
+            "bubbleBlessing",
+            "genieCave"
+          ],
+          "journalPageIds": [],
+          "settings": {
+            "difficulty": "relaxed",
+            "musicVolume": 0.18,
+            "sfxVolume": 0.3,
+            "reducedMotion": true,
+            "largeText": false,
+            "aimAssist": false
+          }
+        },
+        "sim": 2854.694200000003,
+        "paused": false,
+        "enemies": [
+          {
+            "id": "S10.enemy.1",
+            "x": 900,
+            "y": 299.8302764891565,
+            "hp": 22,
+            "state": "idle",
+            "visible": true,
+            "alpha": 1,
+            "art": "kite",
+            "texture": "kite-actions",
+            "frame": 0,
+            "flipX": true,
+            "originX": 0.44140625,
+            "originY": 0.568359375,
+            "displayHeight": 229.14685314685315,
+            "footOffset": 0,
+            "label": ""
+          },
+          {
+            "id": "S10.enemy.2",
+            "x": 1210,
+            "y": 424.77386631857274,
+            "hp": 22,
+            "state": "idle",
+            "visible": true,
+            "alpha": 1,
+            "art": "kite",
+            "texture": "kite-actions",
+            "frame": 0,
+            "flipX": false,
+            "originX": 0.55859375,
+            "originY": 0.568359375,
+            "displayHeight": 229.14685314685315,
+            "footOffset": 0,
+            "label": ""
+          },
+          {
+            "id": "S10.enemy.3",
+            "x": 1520,
+            "y": 236.1677502573619,
+            "hp": 22,
+            "state": "idle",
+            "visible": true,
+            "alpha": 1,
+            "art": "kite",
+            "texture": "kite-actions",
+            "frame": 0,
+            "flipX": false,
+            "originX": 0.55859375,
+            "originY": 0.568359375,
+            "displayHeight": 229.14685314685315,
+            "footOffset": 0,
+            "label": ""
+          },
+          {
+            "id": "S10.enemy.4",
+            "x": 1830,
+            "y": 368.23875484579804,
+            "hp": 22,
+            "state": "idle",
+            "visible": true,
+            "alpha": 1,
+            "art": "kite",
+            "texture": "kite-actions",
+            "frame": 0,
+            "flipX": false,
+            "originX": 0.55859375,
+            "originY": 0.568359375,
+            "displayHeight": 229.14685314685315,
+            "footOffset": 0,
+            "label": ""
+          },
+          {
+            "id": "S10.enemy.5",
+            "x": 2140,
+            "y": 235.68278170785212,
+            "hp": 22,
+            "state": "idle",
+            "visible": true,
+            "alpha": 1,
+            "art": "kite",
+            "texture": "kite-actions",
+            "frame": 0,
+            "flipX": false,
+            "originX": 0.55859375,
+            "originY": 0.568359375,
+            "displayHeight": 229.14685314685315,
+            "footOffset": 0,
+            "label": ""
+          },
+          {
+            "id": "S10.enemy.6",
+            "x": 2450,
+            "y": 436.80427879398565,
+            "hp": 22,
+            "state": "idle",
+            "visible": true,
+            "alpha": 1,
+            "art": "kite",
+            "texture": "kite-actions",
+            "frame": 0,
+            "flipX": false,
+            "originX": 0.55859375,
+            "originY": 0.568359375,
+            "displayHeight": 229.14685314685315,
+            "footOffset": 0,
+            "label": ""
+          }
+        ],
+        "flightHazards": [
+          {
+            "id": "S10.gust.1",
+            "x": 1150,
+            "y": 463.92009556612027,
+            "kind": "gust",
+            "radius": 62,
+            "texture": "prop-gust-cloud",
+            "width": 90.022938789832,
+            "height": 120.03058505310933,
+            "rotation": 0,
+            "scale": 0.9377389457274167
+          },
+          {
+            "id": "S10.gust.2",
+            "x": 1680,
+            "y": 303.3055851461618,
+            "kind": "gust",
+            "radius": 70,
+            "texture": "prop-gust-cloud",
+            "width": 89.13831578635518,
+            "height": 118.85108771514024,
+            "rotation": 0,
+            "scale": 0.9285241227745331
+          },
+          {
+            "id": "S10.gust.3",
+            "x": 2210,
+            "y": 157.12306368883262,
+            "kind": "gust",
+            "radius": 62,
+            "texture": "prop-gust-cloud",
+            "width": 94.84493172000651,
+            "height": 126.45990896000869,
+            "rotation": 0,
+            "scale": 0.9879680387500679
+          }
+        ],
+        "projectiles": 0,
+        "boomerang": false,
+        "attack": null,
+        "air": 10000,
+        "submerged": false,
+        "bubbleProtected": true,
+        "movingPlatforms": [],
+        "mp": 98,
+        "flameReady": 0,
+        "pulse": false,
+        "wave": null,
+        "grip": null,
+        "mirrors": [
+          0,
+          0,
+          0
+        ],
+        "connectedMirrors": 0,
+        "puzzleSafe": false,
+        "frameMs": 16.67999999999997
+      },
+      "path": "docs/screenshots/m6-roc/final/m6-roc/tablet-fallback-S10-left.png"
+    },
+    {
+      "label": "S10-resume",
+      "observed": {
+        "projectileArt": [
+          {
+            "x": 1352.4223241858733,
+            "y": 478.60726469200654,
+            "vx": 208.6498838041505,
+            "vy": 69.75117195083178,
+            "wave": true,
+            "start": 1588.6714666666662,
+            "remaining": 3334.046666666666,
+            "type": "Sprite",
+            "texture": "projectile-kite-wind",
+            "frame": 0,
+            "flipX": false,
+            "rotation": 0.3226182145698022,
+            "displayWidth": 64,
+            "displayHeight": 64,
+            "glyph": null
+          },
+          {
+            "x": 1537.7243530626124,
+            "y": 360.5885002863915,
+            "vx": 25.96632394645789,
+            "vy": 218.46223934746163,
+            "wave": true,
+            "start": 1588.6714666666662,
+            "remaining": 3334.046666666666,
+            "type": "Sprite",
+            "texture": "projectile-kite-wind",
+            "frame": 0,
+            "flipX": false,
+            "rotation": 1.4524918104533224,
+            "displayWidth": 64,
+            "displayHeight": 64,
+            "glyph": null
+          },
+          {
+            "x": 1700.8168362267252,
+            "y": 464.53647452745423,
+            "vx": -189.25440421523052,
+            "vy": 112.17294899011141,
+            "wave": true,
+            "start": 1588.6714666666662,
+            "remaining": 3334.046666666666,
+            "type": "Sprite",
+            "texture": "projectile-kite-wind",
+            "frame": 0,
+            "flipX": false,
+            "rotation": 2.6065508040085152,
+            "displayWidth": 64,
+            "displayHeight": 64,
+            "glyph": null
+          }
+        ],
+        "effectArt": [],
+        "cachedEffectKeys": [
+          "projectile-kite-wind",
+          "effect-hit-spark",
+          "effect-purify-light",
+          "effect-surrender-flag"
+        ],
+        "cachedActionKeys": [
+          "kite-actions"
+        ],
+        "terrain": {
+          "style": "cloud",
+          "cachedKeys": [
+            "terrain-cloud-fill",
+            "terrain-cloud-top"
+          ],
+          "textures": [
+            {
+              "key": "terrain-cloud-fill",
+              "width": 128,
+              "height": 128,
+              "source": "blob:http://127.0.0.1:5174/3b5643b6-4b7a-4f71-bab9-77364caf5ccb"
+            },
+            {
+              "key": "terrain-cloud-top",
+              "width": 128,
+              "height": 34,
+              "source": "blob:http://127.0.0.1:5174/ce87b0ec-3fa2-42ed-84a1-183c1f3dee76"
+            }
+          ],
+          "platforms": [
+            {
+              "x": 1500,
+              "y": 664,
+              "width": 3000,
+              "height": 112,
+              "texture": "terrain-cloud-fill",
+              "visible": true,
+              "skinX": 1500,
+              "skinY": 664,
+              "skinWidth": 3000,
+              "skinHeight": 112
+            }
+          ],
+          "tops": [
+            {
+              "x": 1500,
+              "y": 621,
+              "width": 3000,
+              "height": 34,
+              "texture": "terrain-cloud-top"
+            }
+          ]
+        },
+        "propArt": {
+          "cachedKeys": [
+            "prop-flight-ring",
+            "prop-gust-cloud",
+            "prop-heart",
+            "prop-gift"
+          ],
+          "objects": [
+            {
+              "id": "S10.intro",
+              "kind": "npc",
+              "texture": "roc-webtoon",
+              "x": 230,
+              "y": 550,
+              "width": 192,
+              "height": 128,
+              "visible": true,
+              "done": false
+            },
+            {
+              "id": "S10.quest.1",
+              "kind": "quest",
+              "texture": "prop-flight-ring",
+              "x": 700,
+              "y": 360,
+              "width": 129.60000000000002,
+              "height": 172.8,
+              "visible": false,
+              "done": true
+            },
+            {
+              "id": "S10.quest.2",
+              "kind": "quest",
+              "texture": "prop-flight-ring",
+              "x": 1450,
+              "y": 210,
+              "width": 129.60000000000002,
+              "height": 172.8,
+              "visible": true,
+              "done": false
+            },
+            {
+              "id": "S10.quest.3",
+              "kind": "quest",
+              "texture": "prop-flight-ring",
+              "x": 2200,
+              "y": 390,
+              "width": 129.60000000000002,
+              "height": 172.8,
+              "visible": true,
+              "done": false
+            },
+            {
+              "id": "S10.reward",
+              "kind": "gift",
+              "texture": "prop-gift",
+              "x": 2480,
+              "y": 550,
+              "width": 65.28,
+              "height": 87.04,
+              "visible": true,
+              "done": false
+            },
+            {
+              "id": "S10.exit",
+              "kind": "exit",
+              "texture": "bell",
+              "x": 2840,
+              "y": 550,
+              "width": 65.28,
+              "height": 87.04,
+              "visible": true,
+              "done": false
+            }
+          ],
+          "chests": [],
+          "hearts": [
+            {
+              "id": "S10.heart.1",
+              "large": false,
+              "active": true,
+              "texture": "prop-heart",
+              "x": 1350,
+              "y": 550,
+              "width": 34.56,
+              "height": 46.08
+            },
+            {
+              "id": "S10.heart.2",
+              "large": true,
+              "active": true,
+              "texture": "prop-heart",
+              "x": 2280,
+              "y": 550,
+              "width": 48,
+              "height": 64
+            }
+          ]
+        },
+        "flightArt": {
+          "mount": {
+            "texture": "roc-webtoon",
+            "frame": null,
+            "x": 1560,
+            "y": 563,
+            "originX": 0.5,
+            "originY": 0.5,
+            "displayWidth": 240,
+            "displayHeight": 171.98743726104092,
+            "flipX": false
+          },
+          "rider": {
+            "texture": "hero-webtoon",
+            "frame": null,
+            "x": 1596,
+            "y": 558,
+            "originX": 0.5,
+            "originY": 1,
+            "displayWidth": 86,
+            "displayHeight": 110,
+            "flipX": false
+          },
+          "passenger": null
+        },
+        "heroArt": {
+          "texture": "hero-webtoon",
+          "frame": null,
+          "x": 1596,
+          "y": 558,
+          "flipX": false,
+          "originY": 1
+        },
+        "weaponArt": {
+          "visible": false,
+          "x": 1560,
+          "y": 548,
+          "texture": "weapon-W01",
+          "angle": 0
+        },
+        "storyDevices": [],
+        "freeMovement": true,
+        "stage": "S10",
+        "player": {
+          "x": 1560,
+          "y": 548,
+          "grounded": false,
+          "vx": 0,
+          "vy": 0,
+          "hp": 195,
+          "maxHp": 195,
+          "bodyWidth": 42,
+          "bodyHeight": 84
+        },
+        "save": {
+          "schemaVersion": 1,
+          "buildVersion": "0.1.0",
+          "writtenAt": "2026-10-07T12:09:36.532Z",
+          "checkpoint": {
+            "stageId": "S10",
+            "checkpointId": "middle"
+          },
+          "totalXp": 5008,
+          "coins": 28,
+          "weapons": [
+            "W01",
+            "W02",
+            "W03"
+          ],
+          "equippedWeapon": "W01",
+          "upgrades": {},
+          "treasures": [
+            "T01",
+            "T02",
+            "T03"
+          ],
+          "relics": [],
+          "goldenHearts": [],
+          "equippedSkill": null,
+          "clearedStageIds": [
+            "S01",
+            "S02",
+            "S03",
+            "S04",
+            "S05",
+            "S06",
+            "S07",
+            "S08",
+            "S09"
+          ],
+          "claimedRewardIds": [
+            "S01.reward.start",
+            "S10.quest.1.reward",
+            "S10.enemy.1",
+            "S10.heart.1"
+          ],
+          "completedObjectiveIds": [
+            "S10.quest.1"
+          ],
+          "flags": [
+            "bubbleBlessing",
+            "genieCave"
+          ],
+          "journalPageIds": [],
+          "settings": {
+            "difficulty": "relaxed",
+            "musicVolume": 0.18,
+            "sfxVolume": 0.3,
+            "reducedMotion": true,
+            "largeText": false,
+            "aimAssist": false
+          }
+        },
+        "sim": 2254.6248000000005,
+        "paused": false,
+        "enemies": [
+          {
+            "id": "S10.enemy.1",
+            "x": 900,
+            "y": 317.93249335377027,
+            "hp": 22,
+            "state": "idle",
+            "visible": true,
+            "alpha": 1,
+            "art": "kite",
+            "texture": "kite-actions",
+            "frame": 0,
+            "flipX": false,
+            "originX": 0.55859375,
+            "originY": 0.568359375,
+            "displayHeight": 229.14685314685315,
+            "footOffset": 0,
+            "label": ""
+          },
+          {
+            "id": "S10.enemy.2",
+            "x": 1210,
+            "y": 430.9958122300881,
+            "hp": 22,
+            "state": "recover",
+            "visible": true,
+            "alpha": 1,
+            "art": "kite",
+            "texture": "kite-actions",
+            "frame": 0,
+            "flipX": false,
+            "originX": 0.55859375,
+            "originY": 0.568359375,
+            "displayHeight": 229.14685314685315,
+            "footOffset": 0,
+            "label": "빈틈 · 행동 공격"
+          },
+          {
+            "id": "S10.enemy.3",
+            "x": 1520,
+            "y": 211.46836033020787,
+            "hp": 22,
+            "state": "recover",
+            "visible": true,
+            "alpha": 1,
+            "art": "kite",
+            "texture": "kite-actions",
+            "frame": 0,
+            "flipX": false,
+            "originX": 0.55859375,
+            "originY": 0.568359375,
+            "displayHeight": 229.14685314685315,
+            "footOffset": 0,
+            "label": "빈틈 · 행동 공격"
+          },
+          {
+            "id": "S10.enemy.4",
+            "x": 1830,
+            "y": 387.96834127629404,
+            "hp": 22,
+            "state": "recover",
+            "visible": true,
+            "alpha": 1,
+            "art": "kite",
+            "texture": "kite-actions",
+            "frame": 0,
+            "flipX": true,
+            "originX": 0.44140625,
+            "originY": 0.568359375,
+            "displayHeight": 229.14685314685315,
+            "footOffset": 0,
+            "label": "빈틈 · 행동 공격"
+          },
+          {
+            "id": "S10.enemy.5",
+            "x": 2140,
+            "y": 240.51403747907761,
+            "hp": 22,
+            "state": "idle",
+            "visible": true,
+            "alpha": 1,
+            "art": "kite",
+            "texture": "kite-actions",
+            "frame": 0,
+            "flipX": true,
+            "originX": 0.44140625,
+            "originY": 0.568359375,
+            "displayHeight": 229.14685314685315,
+            "footOffset": 0,
+            "label": ""
+          },
+          {
+            "id": "S10.enemy.6",
+            "x": 2450,
+            "y": 411.96688991368933,
+            "hp": 22,
+            "state": "idle",
+            "visible": true,
+            "alpha": 1,
+            "art": "kite",
+            "texture": "kite-actions",
+            "frame": 0,
+            "flipX": false,
+            "originX": 0.55859375,
+            "originY": 0.568359375,
+            "displayHeight": 229.14685314685315,
+            "footOffset": 0,
+            "label": ""
+          }
+        ],
+        "flightHazards": [
+          {
+            "id": "S10.gust.1",
+            "x": 1150,
+            "y": 445.58126353174197,
+            "kind": "gust",
+            "radius": 62,
+            "texture": "prop-gust-cloud",
+            "width": 91.6960872837962,
+            "height": 122.26144971172828,
+            "rotation": 0,
+            "scale": 0.9551675758728772
+          },
+          {
+            "id": "S10.gust.2",
+            "x": 1680,
+            "y": 313.9351284457184,
+            "kind": "gust",
+            "radius": 70,
+            "texture": "prop-gust-cloud",
+            "width": 93.79841210097543,
+            "height": 125.06454946796724,
+            "rotation": 0,
+            "scale": 0.9770667927184941
+          },
+          {
+            "id": "S10.gust.3",
+            "x": 2210,
+            "y": 162.73815448853648,
+            "kind": "gust",
+            "radius": 62,
+            "texture": "prop-gust-cloud",
+            "width": 87.59356994209465,
+            "height": 116.79142658945953,
+            "rotation": 0,
+            "scale": 0.9124330202301526
+          }
+        ],
+        "projectiles": 3,
+        "boomerang": false,
+        "attack": null,
+        "air": 10000,
+        "submerged": false,
+        "bubbleProtected": true,
+        "movingPlatforms": [],
+        "mp": 98,
+        "flameReady": 0,
+        "pulse": false,
+        "wave": null,
+        "grip": null,
+        "mirrors": [
+          0,
+          0,
+          0
+        ],
+        "connectedMirrors": 0,
+        "puzzleSafe": false,
+        "frameMs": 16.65999999999999
+      },
+      "path": "docs/screenshots/m6-roc/final/m6-roc/tablet-fallback-S10-resume.png"
+    },
+    {
+      "label": "S33-framenull",
+      "observed": {
+        "projectileArt": [],
+        "effectArt": [],
+        "cachedEffectKeys": [
+          "projectile-kite-wind",
+          "effect-purify-light",
+          "effect-hit-spark",
+          "effect-surrender-flag"
+        ],
+        "cachedActionKeys": [
+          "kite-actions"
+        ],
+        "terrain": {
+          "style": "cloud",
+          "cachedKeys": [
+            "terrain-cloud-fill",
+            "terrain-cloud-top"
+          ],
+          "textures": [
+            {
+              "key": "terrain-cloud-fill",
+              "width": 128,
+              "height": 128,
+              "source": "blob:http://127.0.0.1:5174/204bb1a0-690c-47b7-8fce-1de548deb588"
+            },
+            {
+              "key": "terrain-cloud-top",
+              "width": 128,
+              "height": 34,
+              "source": "blob:http://127.0.0.1:5174/2ad60c3a-249e-4312-9dc0-b6cab05ce7d2"
+            }
+          ],
+          "platforms": [
+            {
+              "x": 1500,
+              "y": 664,
+              "width": 3000,
+              "height": 112,
+              "texture": "terrain-cloud-fill",
+              "visible": true,
+              "skinX": 1500,
+              "skinY": 664,
+              "skinWidth": 3000,
+              "skinHeight": 112
+            }
+          ],
+          "tops": [
+            {
+              "x": 1500,
+              "y": 621,
+              "width": 3000,
+              "height": 34,
+              "texture": "terrain-cloud-top"
+            }
+          ]
+        },
+        "propArt": {
+          "cachedKeys": [
+            "prop-flight-ring",
+            "prop-falling-debris",
+            "prop-heart",
+            "prop-gift"
+          ],
+          "objects": [
+            {
+              "id": "S33.intro",
+              "kind": "npc",
+              "texture": "hero-webtoon",
+              "x": 230,
+              "y": 550,
+              "width": 85.33333333333333,
+              "height": 128,
+              "visible": true,
+              "done": false
+            },
+            {
+              "id": "S33.quest.1",
+              "kind": "quest",
+              "texture": "prop-flight-ring",
+              "x": 700,
+              "y": 360,
+              "width": 129.60000000000002,
+              "height": 172.8,
+              "visible": true,
+              "done": false
+            },
+            {
+              "id": "S33.quest.2",
+              "kind": "quest",
+              "texture": "prop-flight-ring",
+              "x": 1075,
+              "y": 210,
+              "width": 129.60000000000002,
+              "height": 172.8,
+              "visible": true,
+              "done": false
+            },
+            {
+              "id": "S33.quest.3",
+              "kind": "quest",
+              "texture": "prop-flight-ring",
+              "x": 1450,
+              "y": 390,
+              "width": 129.60000000000002,
+              "height": 172.8,
+              "visible": true,
+              "done": false
+            },
+            {
+              "id": "S33.quest.4",
+              "kind": "quest",
+              "texture": "prop-flight-ring",
+              "x": 1825,
+              "y": 240,
+              "width": 129.60000000000002,
+              "height": 172.8,
+              "visible": true,
+              "done": false
+            },
+            {
+              "id": "S33.quest.5",
+              "kind": "quest",
+              "texture": "prop-flight-ring",
+              "x": 2200,
+              "y": 360,
+              "width": 129.60000000000002,
+              "height": 172.8,
+              "visible": true,
+              "done": false
+            },
+            {
+              "id": "S33.reward",
+              "kind": "gift",
+              "texture": "prop-gift",
+              "x": 2480,
+              "y": 550,
+              "width": 65.28,
+              "height": 87.04,
+              "visible": true,
+              "done": false
+            },
+            {
+              "id": "S33.exit",
+              "kind": "exit",
+              "texture": "bell",
+              "x": 2840,
+              "y": 550,
+              "width": 65.28,
+              "height": 87.04,
+              "visible": true,
+              "done": false
+            }
+          ],
+          "chests": [],
+          "hearts": [
+            {
+              "id": "S33.heart.1",
+              "large": false,
+              "active": true,
+              "texture": "prop-heart",
+              "x": 1350,
+              "y": 550,
+              "width": 34.56,
+              "height": 46.08
+            },
+            {
+              "id": "S33.heart.2",
+              "large": true,
+              "active": true,
+              "texture": "prop-heart",
+              "x": 2280,
+              "y": 550,
+              "width": 48,
+              "height": 64
+            }
+          ]
+        },
+        "flightArt": {
+          "mount": {
+            "texture": "roc-webtoon",
+            "frame": null,
+            "x": 120,
+            "y": 563,
+            "originX": 0.5,
+            "originY": 0.5,
+            "displayWidth": 240,
+            "displayHeight": 171.9149330742938,
+            "flipX": false
+          },
+          "rider": {
+            "texture": "hero-webtoon",
+            "frame": null,
+            "x": 156,
+            "y": 558,
+            "originX": 0.5,
+            "originY": 1,
+            "displayWidth": 86,
+            "displayHeight": 110,
+            "flipX": false
+          },
+          "passenger": {
+            "texture": "ariana-webtoon",
+            "frame": null,
+            "x": 123,
+            "y": 558,
+            "originX": 0.5,
+            "originY": 1,
+            "displayWidth": 64,
+            "displayHeight": 100,
+            "flipX": false
+          }
+        },
+        "heroArt": {
+          "texture": "hero-webtoon",
+          "frame": null,
+          "x": 156,
+          "y": 558,
+          "flipX": false,
+          "originY": 1
+        },
+        "weaponArt": {
+          "visible": false,
+          "x": 120,
+          "y": 548,
+          "texture": "weapon-W01",
+          "angle": 0
+        },
+        "storyDevices": [],
+        "freeMovement": true,
+        "stage": "S33",
+        "player": {
+          "x": 120,
+          "y": 548,
+          "grounded": false,
+          "vx": 0,
+          "vy": 0,
+          "hp": 195,
+          "maxHp": 195,
+          "bodyWidth": 42,
+          "bodyHeight": 84
+        },
+        "save": {
+          "schemaVersion": 1,
+          "buildVersion": "0.1.0",
+          "writtenAt": "2026-10-07T12:09:39.972Z",
+          "checkpoint": {
+            "stageId": "S33",
+            "checkpointId": "start"
+          },
+          "totalXp": 5000,
+          "coins": 0,
+          "weapons": [
+            "W01",
+            "W02",
+            "W03"
+          ],
+          "equippedWeapon": "W01",
+          "upgrades": {},
+          "treasures": [
+            "T01",
+            "T02",
+            "T03"
+          ],
+          "relics": [],
+          "goldenHearts": [],
+          "equippedSkill": null,
+          "clearedStageIds": [
+            "S01",
+            "S02",
+            "S03",
+            "S04",
+            "S05",
+            "S06",
+            "S07",
+            "S08",
+            "S09",
+            "S10",
+            "S11",
+            "S12",
+            "S13",
+            "S14",
+            "S15",
+            "S16",
+            "S17",
+            "S18",
+            "S19",
+            "S20",
+            "S21",
+            "S22",
+            "S23",
+            "S24",
+            "S25",
+            "S26",
+            "S27",
+            "S28",
+            "S29",
+            "S30",
+            "S31",
+            "S32"
+          ],
+          "claimedRewardIds": [
+            "S01.reward.start"
+          ],
+          "completedObjectiveIds": [],
+          "flags": [
+            "bubbleBlessing",
+            "genieCave"
+          ],
+          "journalPageIds": [],
+          "settings": {
+            "difficulty": "relaxed",
+            "musicVolume": 0.18,
+            "sfxVolume": 0.3,
+            "reducedMotion": true,
+            "largeText": false,
+            "aimAssist": false
+          }
+        },
+        "sim": 2242.884133333334,
+        "paused": false,
+        "enemies": [
+          {
+            "id": "S33.enemy.1",
+            "x": 900,
+            "y": 317.87217326440935,
+            "hp": 26,
+            "state": "idle",
+            "visible": true,
+            "alpha": 1,
+            "art": "kite",
+            "texture": "kite-actions",
+            "frame": 0,
+            "flipX": true,
+            "originX": 0.44140625,
+            "originY": 0.568359375,
+            "displayHeight": 229.14685314685315,
+            "footOffset": 0,
+            "label": ""
+          },
+          {
+            "id": "S33.enemy.2",
+            "x": 1287.5,
+            "y": 429.7483767006639,
+            "hp": 26,
+            "state": "idle",
+            "visible": true,
+            "alpha": 1,
+            "art": "kite",
+            "texture": "kite-actions",
+            "frame": 0,
+            "flipX": false,
+            "originX": 0.55859375,
+            "originY": 0.568359375,
+            "displayHeight": 229.14685314685315,
+            "footOffset": 0,
+            "label": ""
+          },
+          {
+            "id": "S33.enemy.3",
+            "x": 1675,
+            "y": 211.71730171146973,
+            "hp": 26,
+            "state": "idle",
+            "visible": true,
+            "alpha": 1,
+            "art": "kite",
+            "texture": "kite-actions",
+            "frame": 0,
+            "flipX": false,
+            "originX": 0.55859375,
+            "originY": 0.568359375,
+            "displayHeight": 229.14685314685315,
+            "footOffset": 0,
+            "label": ""
+          },
+          {
+            "id": "S33.enemy.4",
+            "x": 2062.5,
+            "y": 387.99934535773076,
+            "hp": 26,
+            "state": "idle",
+            "visible": true,
+            "alpha": 1,
+            "art": "kite",
+            "texture": "kite-actions",
+            "frame": 0,
+            "flipX": false,
+            "originX": 0.55859375,
+            "originY": 0.568359375,
+            "displayHeight": 229.14685314685315,
+            "footOffset": 0,
+            "label": ""
+          },
+          {
+            "id": "S33.enemy.5",
+            "x": 2450,
+            "y": 241.4459235797498,
+            "hp": 26,
+            "state": "idle",
+            "visible": true,
+            "alpha": 1,
+            "art": "kite",
+            "texture": "kite-actions",
+            "frame": 0,
+            "flipX": false,
+            "originX": 0.55859375,
+            "originY": 0.568359375,
+            "displayHeight": 229.14685314685315,
+            "footOffset": 0,
+            "label": ""
+          }
+        ],
+        "flightHazards": [
+          {
+            "id": "S33.debris.1",
+            "x": 850,
+            "y": 223.6451513333334,
+            "kind": "debris",
+            "radius": 48,
+            "texture": "prop-falling-debris",
+            "width": 69.87631311942374,
+            "height": 93.16841749256498,
+            "rotation": -0.004388811011455829,
+            "scale": 0.7278782616606639
+          },
+          {
+            "id": "S33.debris.2",
+            "x": 1250,
+            "y": 153.6451513333334,
+            "kind": "debris",
+            "radius": 48,
+            "texture": "prop-falling-debris",
+            "width": 66.00719900718157,
+            "height": 88.00959867624209,
+            "rotation": -0.13379044242021898,
+            "scale": 0.6875749896581413
+          },
+          {
+            "id": "S33.debris.3",
+            "x": 1650,
+            "y": 291.6451513333334,
+            "kind": "debris",
+            "radius": 48,
+            "texture": "prop-falling-debris",
+            "width": 65.77683486908963,
+            "height": 87.7024464921195,
+            "rotation": 0.144948070108887,
+            "scale": 0.6851753632196836
+          },
+          {
+            "id": "S33.debris.4",
+            "x": 2050,
+            "y": 221.6451513333334,
+            "kind": "debris",
+            "radius": 48,
+            "texture": "prop-falling-debris",
+            "width": 69.88796785792029,
+            "height": 93.18395714389372,
+            "rotation": -0.018490938622779396,
+            "scale": 0.7279996651866697
+          },
+          {
+            "id": "S33.debris.5",
+            "x": 2450,
+            "y": 376.6451513333334,
+            "kind": "debris",
+            "radius": 48,
+            "texture": "prop-falling-debris",
+            "width": 65.79920578260217,
+            "height": 87.73227437680289,
+            "rotation": -0.1255216253956668,
+            "scale": 0.6854083935687726
+          }
+        ],
+        "projectiles": 0,
+        "boomerang": false,
+        "attack": null,
+        "air": 10000,
+        "submerged": false,
+        "bubbleProtected": true,
+        "movingPlatforms": [],
+        "mp": 98,
+        "flameReady": 0,
+        "pulse": false,
+        "wave": null,
+        "grip": null,
+        "mirrors": [
+          0,
+          0,
+          0
+        ],
+        "connectedMirrors": 0,
+        "puzzleSafe": false,
+        "frameMs": 16.660000000000036
+      },
+      "path": "docs/screenshots/m6-roc/final/m6-roc/tablet-fallback-S33-framenull.png"
+    },
+    {
+      "label": "S33-left",
+      "observed": {
+        "projectileArt": [],
+        "effectArt": [],
+        "cachedEffectKeys": [
+          "projectile-kite-wind",
+          "effect-purify-light",
+          "effect-hit-spark",
+          "effect-surrender-flag"
+        ],
+        "cachedActionKeys": [
+          "kite-actions"
+        ],
+        "terrain": {
+          "style": "cloud",
+          "cachedKeys": [
+            "terrain-cloud-fill",
+            "terrain-cloud-top"
+          ],
+          "textures": [
+            {
+              "key": "terrain-cloud-fill",
+              "width": 128,
+              "height": 128,
+              "source": "blob:http://127.0.0.1:5174/204bb1a0-690c-47b7-8fce-1de548deb588"
+            },
+            {
+              "key": "terrain-cloud-top",
+              "width": 128,
+              "height": 34,
+              "source": "blob:http://127.0.0.1:5174/2ad60c3a-249e-4312-9dc0-b6cab05ce7d2"
+            }
+          ],
+          "platforms": [
+            {
+              "x": 1500,
+              "y": 664,
+              "width": 3000,
+              "height": 112,
+              "texture": "terrain-cloud-fill",
+              "visible": true,
+              "skinX": 1500,
+              "skinY": 664,
+              "skinWidth": 3000,
+              "skinHeight": 112
+            }
+          ],
+          "tops": [
+            {
+              "x": 1500,
+              "y": 621,
+              "width": 3000,
+              "height": 34,
+              "texture": "terrain-cloud-top"
+            }
+          ]
+        },
+        "propArt": {
+          "cachedKeys": [
+            "prop-flight-ring",
+            "prop-falling-debris",
+            "prop-heart",
+            "prop-gift"
+          ],
+          "objects": [
+            {
+              "id": "S33.intro",
+              "kind": "npc",
+              "texture": "hero-webtoon",
+              "x": 230,
+              "y": 550,
+              "width": 85.33333333333333,
+              "height": 128,
+              "visible": true,
+              "done": false
+            },
+            {
+              "id": "S33.quest.1",
+              "kind": "quest",
+              "texture": "prop-flight-ring",
+              "x": 700,
+              "y": 360,
+              "width": 129.60000000000002,
+              "height": 172.8,
+              "visible": true,
+              "done": false
+            },
+            {
+              "id": "S33.quest.2",
+              "kind": "quest",
+              "texture": "prop-flight-ring",
+              "x": 1075,
+              "y": 210,
+              "width": 129.60000000000002,
+              "height": 172.8,
+              "visible": true,
+              "done": false
+            },
+            {
+              "id": "S33.quest.3",
+              "kind": "quest",
+              "texture": "prop-flight-ring",
+              "x": 1450,
+              "y": 390,
+              "width": 129.60000000000002,
+              "height": 172.8,
+              "visible": true,
+              "done": false
+            },
+            {
+              "id": "S33.quest.4",
+              "kind": "quest",
+              "texture": "prop-flight-ring",
+              "x": 1825,
+              "y": 240,
+              "width": 129.60000000000002,
+              "height": 172.8,
+              "visible": true,
+              "done": false
+            },
+            {
+              "id": "S33.quest.5",
+              "kind": "quest",
+              "texture": "prop-flight-ring",
+              "x": 2200,
+              "y": 360,
+              "width": 129.60000000000002,
+              "height": 172.8,
+              "visible": true,
+              "done": false
+            },
+            {
+              "id": "S33.reward",
+              "kind": "gift",
+              "texture": "prop-gift",
+              "x": 2480,
+              "y": 550,
+              "width": 65.28,
+              "height": 87.04,
+              "visible": true,
+              "done": false
+            },
+            {
+              "id": "S33.exit",
+              "kind": "exit",
+              "texture": "bell",
+              "x": 2840,
+              "y": 550,
+              "width": 65.28,
+              "height": 87.04,
+              "visible": true,
+              "done": false
+            }
+          ],
+          "chests": [],
+          "hearts": [
+            {
+              "id": "S33.heart.1",
+              "large": false,
+              "active": true,
+              "texture": "prop-heart",
+              "x": 1350,
+              "y": 550,
+              "width": 34.56,
+              "height": 46.08
+            },
+            {
+              "id": "S33.heart.2",
+              "large": true,
+              "active": true,
+              "texture": "prop-heart",
+              "x": 2280,
+              "y": 550,
+              "width": 48,
+              "height": 64
+            }
+          ]
+        },
+        "flightArt": {
+          "mount": {
+            "texture": "roc-webtoon",
+            "frame": null,
+            "x": 94.94444444444444,
+            "y": 563,
+            "originX": 0.5,
+            "originY": 0.5,
+            "displayWidth": 240,
+            "displayHeight": 150.05057149450934,
+            "flipX": true
+          },
+          "rider": {
+            "texture": "hero-webtoon",
+            "frame": null,
+            "x": 58.94444444444444,
+            "y": 558,
+            "originX": 0.5,
+            "originY": 1,
+            "displayWidth": 86,
+            "displayHeight": 110,
+            "flipX": true
+          },
+          "passenger": {
+            "texture": "ariana-webtoon",
+            "frame": null,
+            "x": 91.94444444444444,
+            "y": 558,
+            "originX": 0.5,
+            "originY": 1,
+            "displayWidth": 64,
+            "displayHeight": 100,
+            "flipX": true
+          }
+        },
+        "heroArt": {
+          "texture": "hero-webtoon",
+          "frame": null,
+          "x": 58.94444444444444,
+          "y": 558,
+          "flipX": true,
+          "originY": 1
+        },
+        "weaponArt": {
+          "visible": false,
+          "x": 120,
+          "y": 548,
+          "texture": "weapon-W01",
+          "angle": 0
+        },
+        "storyDevices": [],
+        "freeMovement": true,
+        "stage": "S33",
+        "player": {
+          "x": 94.94444444444444,
+          "y": 548,
+          "grounded": false,
+          "vx": 0,
+          "vy": 0,
+          "hp": 195,
+          "maxHp": 195,
+          "bodyWidth": 42,
+          "bodyHeight": 84
+        },
+        "save": {
+          "schemaVersion": 1,
+          "buildVersion": "0.1.0",
+          "writtenAt": "2026-10-07T12:09:39.972Z",
+          "checkpoint": {
+            "stageId": "S33",
+            "checkpointId": "start"
+          },
+          "totalXp": 5000,
+          "coins": 0,
+          "weapons": [
+            "W01",
+            "W02",
+            "W03"
+          ],
+          "equippedWeapon": "W01",
+          "upgrades": {},
+          "treasures": [
+            "T01",
+            "T02",
+            "T03"
+          ],
+          "relics": [],
+          "goldenHearts": [],
+          "equippedSkill": null,
+          "clearedStageIds": [
+            "S01",
+            "S02",
+            "S03",
+            "S04",
+            "S05",
+            "S06",
+            "S07",
+            "S08",
+            "S09",
+            "S10",
+            "S11",
+            "S12",
+            "S13",
+            "S14",
+            "S15",
+            "S16",
+            "S17",
+            "S18",
+            "S19",
+            "S20",
+            "S21",
+            "S22",
+            "S23",
+            "S24",
+            "S25",
+            "S26",
+            "S27",
+            "S28",
+            "S29",
+            "S30",
+            "S31",
+            "S32"
+          ],
+          "claimedRewardIds": [
+            "S01.reward.start"
+          ],
+          "completedObjectiveIds": [],
+          "flags": [
+            "bubbleBlessing",
+            "genieCave"
+          ],
+          "journalPageIds": [],
+          "settings": {
+            "difficulty": "relaxed",
+            "musicVolume": 0.18,
+            "sfxVolume": 0.3,
+            "reducedMotion": true,
+            "largeText": false,
+            "aimAssist": false
+          }
+        },
+        "sim": 2859.524133333333,
+        "paused": false,
+        "enemies": [
+          {
+            "id": "S33.enemy.1",
+            "x": 900,
+            "y": 299.58881307782434,
+            "hp": 26,
+            "state": "idle",
+            "visible": true,
+            "alpha": 1,
+            "art": "kite",
+            "texture": "kite-actions",
+            "frame": 0,
+            "flipX": true,
+            "originX": 0.44140625,
+            "originY": 0.568359375,
+            "displayHeight": 229.14685314685315,
+            "footOffset": 0,
+            "label": ""
+          },
+          {
+            "id": "S33.enemy.2",
+            "x": 1287.5,
+            "y": 456.0980839451139,
+            "hp": 26,
+            "state": "idle",
+            "visible": true,
+            "alpha": 1,
+            "art": "kite",
+            "texture": "kite-actions",
+            "frame": 0,
+            "flipX": false,
+            "originX": 0.55859375,
+            "originY": 0.568359375,
+            "displayHeight": 229.14685314685315,
+            "footOffset": 0,
+            "label": ""
+          },
+          {
+            "id": "S33.enemy.3",
+            "x": 1675,
+            "y": 205.35287189793243,
+            "hp": 26,
+            "state": "idle",
+            "visible": true,
+            "alpha": 1,
+            "art": "kite",
+            "texture": "kite-actions",
+            "frame": 0,
+            "flipX": false,
+            "originX": 0.55859375,
+            "originY": 0.568359375,
+            "displayHeight": 229.14685314685315,
+            "footOffset": 0,
+            "label": ""
+          },
+          {
+            "id": "S33.enemy.4",
+            "x": 2062.5,
+            "y": 367.6029919042426,
+            "hp": 26,
+            "state": "idle",
+            "visible": true,
+            "alpha": 1,
+            "art": "kite",
+            "texture": "kite-actions",
+            "frame": 0,
+            "flipX": false,
+            "originX": 0.55859375,
+            "originY": 0.568359375,
+            "displayHeight": 229.14685314685315,
+            "footOffset": 0,
+            "label": ""
+          },
+          {
+            "id": "S33.enemy.5",
+            "x": 2450,
+            "y": 266.8893143861373,
+            "hp": 26,
+            "state": "idle",
+            "visible": true,
+            "alpha": 1,
+            "art": "kite",
+            "texture": "kite-actions",
+            "frame": 0,
+            "flipX": false,
+            "originX": 0.55859375,
+            "originY": 0.568359375,
+            "displayHeight": 229.14685314685315,
+            "footOffset": 0,
+            "label": ""
+          }
+        ],
+        "flightHazards": [
+          {
+            "id": "S33.debris.1",
+            "x": 850,
+            "y": 276.0595513333333,
+            "kind": "debris",
+            "radius": 48,
+            "texture": "prop-falling-debris",
+            "width": 64.7012340841584,
+            "height": 86.2683121122112,
+            "rotation": 0.14946266652747653,
+            "scale": 0.67397118837665
+          },
+          {
+            "id": "S33.debris.2",
+            "x": 1250,
+            "y": 206.05955133333327,
+            "kind": "debris",
+            "radius": 48,
+            "texture": "prop-falling-debris",
+            "width": 67.66957543626151,
+            "height": 90.226100581682,
+            "rotation": -0.12710342214330694,
+            "scale": 0.7048914107943907
+          },
+          {
+            "id": "S33.debris.3",
+            "x": 1650,
+            "y": 344.0595513333333,
+            "kind": "debris",
+            "radius": 48,
+            "texture": "prop-falling-debris",
+            "width": 69.20543340107241,
+            "height": 92.27391120142988,
+            "rotation": -0.015928741965851145,
+            "scale": 0.720889931261171
+          },
+          {
+            "id": "S33.debris.4",
+            "x": 2050,
+            "y": 274.0595513333333,
+            "kind": "debris",
+            "radius": 48,
+            "texture": "prop-falling-debris",
+            "width": 64.6235309177889,
+            "height": 86.1647078903852,
+            "rotation": 0.1438380418109766,
+            "scale": 0.6731617803936344
+          },
+          {
+            "id": "S33.debris.5",
+            "x": 2450,
+            "y": 429.0595513333333,
+            "kind": "debris",
+            "radius": 48,
+            "texture": "prop-falling-debris",
+            "width": 67.90138614994993,
+            "height": 90.53518153326658,
+            "rotation": -0.1351864514758212,
+            "scale": 0.7073061057286452
+          }
+        ],
+        "projectiles": 0,
+        "boomerang": false,
+        "attack": null,
+        "air": 10000,
+        "submerged": false,
+        "bubbleProtected": true,
+        "movingPlatforms": [],
+        "mp": 98,
+        "flameReady": 0,
+        "pulse": false,
+        "wave": null,
+        "grip": null,
+        "mirrors": [
+          0,
+          0,
+          0
+        ],
+        "connectedMirrors": 0,
+        "puzzleSafe": false,
+        "frameMs": 16.67999999999997
+      },
+      "path": "docs/screenshots/m6-roc/final/m6-roc/tablet-fallback-S33-left.png"
+    },
+    {
+      "label": "S33-resume",
+      "observed": {
+        "projectileArt": [
+          {
+            "x": 1428.9092198709986,
+            "y": 491.8072109542378,
+            "vx": 202.20574814728127,
+            "vy": 86.67661400976768,
+            "wave": true,
+            "start": 1577.9948000000013,
+            "remaining": 3317.296666666665,
+            "type": "Sprite",
+            "texture": "projectile-kite-wind",
+            "frame": 0,
+            "flipX": false,
+            "rotation": 0.40496284313522857,
+            "displayWidth": 64,
+            "displayHeight": 64,
+            "glyph": null
+          },
+          {
+            "x": 1625.411054562743,
+            "y": 355.8878275494509,
+            "vx": -70.90888289407475,
+            "vy": 208.25928629166668,
+            "wave": true,
+            "start": 1577.9948000000013,
+            "remaining": 3317.296666666665,
+            "type": "Sprite",
+            "texture": "projectile-kite-wind",
+            "frame": 0,
+            "flipX": false,
+            "rotation": 1.8989683072712715,
+            "displayWidth": 64,
+            "displayHeight": 64,
+            "glyph": null
+          },
+          {
+            "x": 1915.9043917221225,
+            "y": 434.6300428947157,
+            "vx": -209.62193748028227,
+            "vy": 66.77307336803229,
+            "wave": true,
+            "start": 1577.9948000000013,
+            "remaining": 3317.296666666665,
+            "type": "Sprite",
+            "texture": "projectile-kite-wind",
+            "frame": 0,
+            "flipX": false,
+            "rotation": 2.8332142137711074,
+            "displayWidth": 64,
+            "displayHeight": 64,
+            "glyph": null
+          }
+        ],
+        "effectArt": [],
+        "cachedEffectKeys": [
+          "projectile-kite-wind",
+          "effect-hit-spark",
+          "effect-purify-light",
+          "effect-surrender-flag"
+        ],
+        "cachedActionKeys": [
+          "kite-actions"
+        ],
+        "terrain": {
+          "style": "cloud",
+          "cachedKeys": [
+            "terrain-cloud-fill",
+            "terrain-cloud-top"
+          ],
+          "textures": [
+            {
+              "key": "terrain-cloud-fill",
+              "width": 128,
+              "height": 128,
+              "source": "blob:http://127.0.0.1:5174/cada3980-fe00-4c11-919e-ecc0a5107c06"
+            },
+            {
+              "key": "terrain-cloud-top",
+              "width": 128,
+              "height": 34,
+              "source": "blob:http://127.0.0.1:5174/5af1ed51-37ed-4fd9-b20a-cbd0907e9c1a"
+            }
+          ],
+          "platforms": [
+            {
+              "x": 1500,
+              "y": 664,
+              "width": 3000,
+              "height": 112,
+              "texture": "terrain-cloud-fill",
+              "visible": true,
+              "skinX": 1500,
+              "skinY": 664,
+              "skinWidth": 3000,
+              "skinHeight": 112
+            }
+          ],
+          "tops": [
+            {
+              "x": 1500,
+              "y": 621,
+              "width": 3000,
+              "height": 34,
+              "texture": "terrain-cloud-top"
+            }
+          ]
+        },
+        "propArt": {
+          "cachedKeys": [
+            "prop-flight-ring",
+            "prop-falling-debris",
+            "prop-heart",
+            "prop-gift"
+          ],
+          "objects": [
+            {
+              "id": "S33.intro",
+              "kind": "npc",
+              "texture": "hero-webtoon",
+              "x": 230,
+              "y": 550,
+              "width": 85.33333333333333,
+              "height": 128,
+              "visible": true,
+              "done": false
+            },
+            {
+              "id": "S33.quest.1",
+              "kind": "quest",
+              "texture": "prop-flight-ring",
+              "x": 700,
+              "y": 360,
+              "width": 129.60000000000002,
+              "height": 172.8,
+              "visible": false,
+              "done": true
+            },
+            {
+              "id": "S33.quest.2",
+              "kind": "quest",
+              "texture": "prop-flight-ring",
+              "x": 1075,
+              "y": 210,
+              "width": 129.60000000000002,
+              "height": 172.8,
+              "visible": true,
+              "done": false
+            },
+            {
+              "id": "S33.quest.3",
+              "kind": "quest",
+              "texture": "prop-flight-ring",
+              "x": 1450,
+              "y": 390,
+              "width": 129.60000000000002,
+              "height": 172.8,
+              "visible": true,
+              "done": false
+            },
+            {
+              "id": "S33.quest.4",
+              "kind": "quest",
+              "texture": "prop-flight-ring",
+              "x": 1825,
+              "y": 240,
+              "width": 129.60000000000002,
+              "height": 172.8,
+              "visible": true,
+              "done": false
+            },
+            {
+              "id": "S33.quest.5",
+              "kind": "quest",
+              "texture": "prop-flight-ring",
+              "x": 2200,
+              "y": 360,
+              "width": 129.60000000000002,
+              "height": 172.8,
+              "visible": true,
+              "done": false
+            },
+            {
+              "id": "S33.reward",
+              "kind": "gift",
+              "texture": "prop-gift",
+              "x": 2480,
+              "y": 550,
+              "width": 65.28,
+              "height": 87.04,
+              "visible": true,
+              "done": false
+            },
+            {
+              "id": "S33.exit",
+              "kind": "exit",
+              "texture": "bell",
+              "x": 2840,
+              "y": 550,
+              "width": 65.28,
+              "height": 87.04,
+              "visible": true,
+              "done": false
+            }
+          ],
+          "chests": [],
+          "hearts": [
+            {
+              "id": "S33.heart.1",
+              "large": false,
+              "active": true,
+              "texture": "prop-heart",
+              "x": 1350,
+              "y": 550,
+              "width": 34.56,
+              "height": 46.08
+            },
+            {
+              "id": "S33.heart.2",
+              "large": true,
+              "active": true,
+              "texture": "prop-heart",
+              "x": 2280,
+              "y": 550,
+              "width": 48,
+              "height": 64
+            }
+          ]
+        },
+        "flightArt": {
+          "mount": {
+            "texture": "roc-webtoon",
+            "frame": null,
+            "x": 1560,
+            "y": 563,
+            "originX": 0.5,
+            "originY": 0.5,
+            "displayWidth": 240,
+            "displayHeight": 171.99963462408405,
+            "flipX": false
+          },
+          "rider": {
+            "texture": "hero-webtoon",
+            "frame": null,
+            "x": 1596,
+            "y": 558,
+            "originX": 0.5,
+            "originY": 1,
+            "displayWidth": 86,
+            "displayHeight": 110,
+            "flipX": false
+          },
+          "passenger": {
+            "texture": "ariana-webtoon",
+            "frame": null,
+            "x": 1563,
+            "y": 558,
+            "originX": 0.5,
+            "originY": 1,
+            "displayWidth": 64,
+            "displayHeight": 100,
+            "flipX": false
+          }
+        },
+        "heroArt": {
+          "texture": "hero-webtoon",
+          "frame": null,
+          "x": 1596,
+          "y": 558,
+          "flipX": false,
+          "originY": 1
+        },
+        "weaponArt": {
+          "visible": false,
+          "x": 1560,
+          "y": 548,
+          "texture": "weapon-W01",
+          "angle": 0
+        },
+        "storyDevices": [],
+        "freeMovement": true,
+        "stage": "S33",
+        "player": {
+          "x": 1560,
+          "y": 548,
+          "grounded": false,
+          "vx": 0,
+          "vy": 0,
+          "hp": 195,
+          "maxHp": 195,
+          "bodyWidth": 42,
+          "bodyHeight": 84
+        },
+        "save": {
+          "schemaVersion": 1,
+          "buildVersion": "0.1.0",
+          "writtenAt": "2026-10-07T12:09:49.677Z",
+          "checkpoint": {
+            "stageId": "S33",
+            "checkpointId": "middle"
+          },
+          "totalXp": 5002,
+          "coins": 0,
+          "weapons": [
+            "W01",
+            "W02",
+            "W03"
+          ],
+          "equippedWeapon": "W01",
+          "upgrades": {},
+          "treasures": [
+            "T01",
+            "T02",
+            "T03"
+          ],
+          "relics": [],
+          "goldenHearts": [],
+          "equippedSkill": null,
+          "clearedStageIds": [
+            "S01",
+            "S02",
+            "S03",
+            "S04",
+            "S05",
+            "S06",
+            "S07",
+            "S08",
+            "S09",
+            "S10",
+            "S11",
+            "S12",
+            "S13",
+            "S14",
+            "S15",
+            "S16",
+            "S17",
+            "S18",
+            "S19",
+            "S20",
+            "S21",
+            "S22",
+            "S23",
+            "S24",
+            "S25",
+            "S26",
+            "S27",
+            "S28",
+            "S29",
+            "S30",
+            "S31",
+            "S32"
+          ],
+          "claimedRewardIds": [
+            "S01.reward.start",
+            "S33.quest.1.reward",
+            "S33.heart.1"
+          ],
+          "completedObjectiveIds": [
+            "S33.quest.1"
+          ],
+          "flags": [
+            "bubbleBlessing",
+            "genieCave"
+          ],
+          "journalPageIds": [],
+          "settings": {
+            "difficulty": "relaxed",
+            "musicVolume": 0.18,
+            "sfxVolume": 0.3,
+            "reducedMotion": true,
+            "largeText": false,
+            "aimAssist": false
+          }
+        },
+        "sim": 2260.6981333333365,
+        "paused": false,
+        "enemies": [
+          {
+            "id": "S33.enemy.1",
+            "x": 900,
+            "y": 317.95621521946543,
+            "hp": 26,
+            "state": "idle",
+            "visible": true,
+            "alpha": 1,
+            "art": "kite",
+            "texture": "kite-actions",
+            "frame": 0,
+            "flipX": false,
+            "originX": 0.55859375,
+            "originY": 0.568359375,
+            "displayHeight": 229.14685314685315,
+            "footOffset": 0,
+            "label": ""
+          },
+          {
+            "id": "S33.enemy.2",
+            "x": 1287.5,
+            "y": 431.1913655567399,
+            "hp": 26,
+            "state": "recover",
+            "visible": true,
+            "alpha": 1,
+            "art": "kite",
+            "texture": "kite-actions",
+            "frame": 0,
+            "flipX": false,
+            "originX": 0.55859375,
+            "originY": 0.568359375,
+            "displayHeight": 229.14685314685315,
+            "footOffset": 0,
+            "label": "빈틈 · 행동 공격"
+          },
+          {
+            "id": "S33.enemy.3",
+            "x": 1675,
+            "y": 210.24516666947878,
+            "hp": 26,
+            "state": "recover",
+            "visible": true,
+            "alpha": 1,
+            "art": "kite",
+            "texture": "kite-actions",
+            "frame": 0,
+            "flipX": true,
+            "originX": 0.44140625,
+            "originY": 0.568359375,
+            "displayHeight": 229.14685314685315,
+            "footOffset": 0,
+            "label": "빈틈 · 행동 공격"
+          },
+          {
+            "id": "S33.enemy.4",
+            "x": 2062.5,
+            "y": 387.93340691933855,
+            "hp": 26,
+            "state": "recover",
+            "visible": true,
+            "alpha": 1,
+            "art": "kite",
+            "texture": "kite-actions",
+            "frame": 0,
+            "flipX": true,
+            "originX": 0.44140625,
+            "originY": 0.568359375,
+            "displayHeight": 229.14685314685315,
+            "footOffset": 0,
+            "label": "빈틈 · 행동 공격"
+          },
+          {
+            "id": "S33.enemy.5",
+            "x": 2450,
+            "y": 242.23976884577993,
+            "hp": 26,
+            "state": "idle",
+            "visible": true,
+            "alpha": 1,
+            "art": "kite",
+            "texture": "kite-actions",
+            "frame": 0,
+            "flipX": false,
+            "originX": 0.55859375,
+            "originY": 0.568359375,
+            "displayHeight": 229.14685314685315,
+            "footOffset": 0,
+            "label": ""
+          }
+        ],
+        "flightHazards": [
+          {
+            "id": "S33.debris.1",
+            "x": 850,
+            "y": 225.1593413333336,
+            "kind": "debris",
+            "radius": 48,
+            "texture": "prop-falling-debris",
+            "width": 69.83847814394989,
+            "height": 93.11797085859985,
+            "rotation": 0.0013111037653867896,
+            "scale": 0.7274841473328113
+          },
+          {
+            "id": "S33.debris.2",
+            "x": 1250,
+            "y": 155.1593413333336,
+            "kind": "debris",
+            "radius": 48,
+            "texture": "prop-falling-debris",
+            "width": 66.25104274999482,
+            "height": 88.33472366665977,
+            "rotation": -0.13683124445902628,
+            "scale": 0.6901150286457794
+          },
+          {
+            "id": "S33.debris.3",
+            "x": 1650,
+            "y": 293.1593413333336,
+            "kind": "debris",
+            "radius": 48,
+            "texture": "prop-falling-debris",
+            "width": 65.55848939396206,
+            "height": 87.41131919194942,
+            "rotation": 0.1424427996870712,
+            "scale": 0.6829009311871048
+          },
+          {
+            "id": "S33.debris.4",
+            "x": 2050,
+            "y": 223.1593413333336,
+            "kind": "debris",
+            "radius": 48,
+            "texture": "prop-falling-debris",
+            "width": 69.8735162723944,
+            "height": 93.16468836319252,
+            "rotation": -0.012818117824194175,
+            "scale": 0.7278491278374416
+          },
+          {
+            "id": "S33.debris.5",
+            "x": 2450,
+            "y": 378.1593413333336,
+            "kind": "debris",
+            "radius": 48,
+            "texture": "prop-falling-debris",
+            "width": 66.03273398765788,
+            "height": 88.04364531687717,
+            "rotation": -0.12897617896439506,
+            "scale": 0.6878409790381029
+          }
+        ],
+        "projectiles": 3,
+        "boomerang": false,
+        "attack": null,
+        "air": 10000,
+        "submerged": false,
+        "bubbleProtected": true,
+        "movingPlatforms": [],
+        "mp": 98,
+        "flameReady": 0,
+        "pulse": false,
+        "wave": null,
+        "grip": null,
+        "mirrors": [
+          0,
+          0,
+          0
+        ],
+        "connectedMirrors": 0,
+        "puzzleSafe": false,
+        "frameMs": 16.630000000000017
+      },
+      "path": "docs/screenshots/m6-roc/final/m6-roc/tablet-fallback-S33-resume.png"
+    }
+  ],
+  "screens": [
+    "docs/screenshots/m6-roc/final/m6-roc/tablet-fallback-S09-idle.png",
+    "docs/screenshots/m6-roc/final/m6-roc/tablet-fallback-S09-telegraph.png",
+    "docs/screenshots/m6-roc/final/m6-roc/tablet-fallback-S09-attack.png",
+    "docs/screenshots/m6-roc/final/m6-roc/tablet-fallback-S09-recover.png",
+    "docs/screenshots/m6-roc/final/m6-roc/tablet-fallback-S09-right.png",
+    "docs/screenshots/m6-roc/final/m6-roc/tablet-fallback-S09-defeated.png",
+    "docs/screenshots/m6-roc/final/m6-roc/tablet-fallback-S09-treasure.png",
+    "docs/screenshots/m6-roc/final/m6-roc/tablet-fallback-S09-resume.png",
+    "docs/screenshots/m6-roc/final/m6-roc/tablet-fallback-S09-double-jump.png",
+    "docs/screenshots/m6-roc/final/m6-roc/tablet-fallback-S10-framenull.png",
+    "docs/screenshots/m6-roc/final/m6-roc/tablet-fallback-S10-left.png",
+    "docs/screenshots/m6-roc/final/m6-roc/tablet-fallback-S10-resume.png",
+    "docs/screenshots/m6-roc/final/m6-roc/tablet-fallback-S33-framenull.png",
+    "docs/screenshots/m6-roc/final/m6-roc/tablet-fallback-S33-left.png",
+    "docs/screenshots/m6-roc/final/m6-roc/tablet-fallback-S33-resume.png"
+  ]
+}

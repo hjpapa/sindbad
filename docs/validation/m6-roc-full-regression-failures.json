@@ -1,0 +1,35 @@
+{
+  "stats": {
+    "startTime": "2026-10-07T11:37:01.715Z",
+    "duration": 4011365.208,
+    "expected": 76,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  },
+  "failures": [
+    {
+      "title": "phone spirits four actions in storm, flame, waves and final tower",
+      "error": {
+        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: < \u001b[32m31\u001b[39m\nReceived:   \u001b[31m31\u001b[39m\n\nCall Log:\n- Timeout 10000ms exceeded while waiting on the predicate",
+        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: < \u001b[32m31\u001b[39m\nReceived:   \u001b[31m31\u001b[39m\n\nCall Log:\n- Timeout 10000ms exceeded while waiting on the predicate\n    at C:\\code\\code10(sindbad)\\tests\\e2e\\spirit-actions.spec.ts:93:17",
+        "location": {
+          "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\spirit-actions.spec.ts",
+          "column": 17,
+          "line": 93
+        },
+        "snippet": "  91 |                     await expect(action).toHaveAttribute('data-kind','attack');await action.tap();\n  92 |                 }else await page.keyboard.press('j');\n> 93 |                 await expect.poll(async()=>(await enemy())!.hp).toBeLessThan(hp);\n     |                 ^\n  94 |                 if((await enemy())!.hp>0)await page.waitForTimeout(440);\n  95 |             }\n  96 |             await capture('defeated');expect((await enemy())!.label).toBe('\ube5b\uc73c\ub85c \ub3cc\uc544\uac14\uc5b4\uc694');"
+      },
+      "files": [
+        {
+          "path": "docs/screenshots/m6-roc/full-regression-failure/spirit-actions-phone-spiri-09b8f-flame-waves-and-final-tower/test-failed-1.png",
+          "sha256": "3649488c42e939d517d83c444a1376a1edcbebd9bd7784ee15cc786c59b2b33b"
+        },
+        {
+          "path": "docs/screenshots/m6-roc/full-regression-failure/spirit-actions-phone-spiri-09b8f-flame-waves-and-final-tower/error-context.md",
+          "sha256": "2759f065b826d81ba387b37a5982f0bcd5a5114f9dc4cef17764f44a11d282a5"
+        }
+      ]
+    }
+  ]
+}

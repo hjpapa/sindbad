@@ -1,0 +1,76 @@
+[
+  {
+    "path": "art-source\\webtoon\\generated\\spirit-m6\\spirit-actions-01.png",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": "126c1c8b04196d201f810f3ad72f65271d934904b51b75f04544806a1c78f4d1",
+    "edges": [
+      {
+        "edge": 0,
+        "vertical": null,
+        "horizontal": null
+      },
+      {
+        "edge": 626,
+        "vertical": [
+          0,
+          899,
+          1,
+          958
+        ],
+        "horizontal": null
+      },
+      {
+        "edge": 627,
+        "vertical": [
+          0,
+          900,
+          1,
+          957
+        ],
+        "horizontal": null
+      },
+      {
+        "edge": 1253,
+        "vertical": null,
+        "horizontal": null
+      }
+    ],
+    "selected": false,
+    "visualReview": "No writing, child-safe original wisp. First attack effect crosses central seam; selected second complete sprites are contained."
+  },
+  {
+    "path": "art-source\\webtoon\\generated\\spirit-m6\\spirit-actions-02.png",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": "b1b9c0f5c093342fedf24d4c54a5a9f92b758f99df5dc81caff22adbb31e044e",
+    "edges": [
+      {
+        "edge": 0,
+        "vertical": null,
+        "horizontal": null
+      },
+      {
+        "edge": 626,
+        "vertical": null,
+        "horizontal": null
+      },
+      {
+        "edge": 627,
+        "vertical": null,
+        "horizontal": null
+      },
+      {
+        "edge": 1253,
+        "vertical": null,
+        "horizontal": null
+      }
+    ],
+    "selected": true,
+    "visualReview": "No writing, child-safe original wisp. First attack effect crosses central seam; selected second complete sprites are contained."
+  }
+]

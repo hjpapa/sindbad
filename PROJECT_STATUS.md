@@ -1,5 +1,100 @@
 # PROJECT_STATUS.md
 
+<!-- S09_MECHANICS_STATUS_START -->
+## 최신 실제 상태 · 2026-10-08 · S09 저주 핵·3패턴 / T03 활공
+
+**기능 구현 / 선택 회귀12조건 11통과·1실패, 해당 검사 보완 후 재통과 / 단위121개 통과 / ART_DRAFT.** S09의 일반 HP보스·봉인 채널을 로크새1마리의 목걸이 핵3회 타격으로 바꿨다. 부리 찍기·날개 바람·표시 지점 급강하가 순서대로 나오고 착지 빈틈에 T02가 핵을 드러낸다. 한 착지에 한 핵만 깨지며 무기 피해량·불꽃 지속 피해로 세 핵을 한꺼번에 없앨 수 없다. T03 없이 기본 무기로 승리할 수 있다.
+
+- 기존 `S09.enemy.3`, `S09.quest.1~3`, 보물·출구·체크포인트 ID를 유지한다. 첫 두 핵은 전용 증명 ID로 저장하고 마지막 핵·보스 XP6/금화3·안전 체크포인트를 한 번에 저장한다. 옛 봉인만 완료한 저장은 새 핵 타격으로 계산하지 않는다. 퇴역한 두 적의 저장 ID는 명시적으로 허용하며, 옛 보스 선행 승리는 핵 완료 조건만 복구해 보물 앞 막힘을 방지한다. 추가 XP/금화/T03 자동 지급 없음.
+- T03 보유 후 지상 공중에서 ↑/K 또는 터치 점프 유지 시 낙하 상한180px/s. 상승·수중·지정 비행에 적용하지 않으며 버튼 해제·터치 취소 시 정상 낙하로 돌아온다. 이단 점프·착지 리셋·42×84 신체 판정 유지. 새 아트 생성/기존 이미지 수정 없음; 기존 `roc-actions`와 `hero-action`을 재사용하고 핵/예고는 런타임 도형이다.
+- 실제 정적7명령 통과: 타입→린트→단위121개/26파일→콘텐츠→빌드50모듈→아트 감사178파일→용량 3,091,479/8,000,000B. 기존 Phaser500KB 청크 경고 유지. `docs/validation/s09-mechanics-release3-checks.json`, 해당7로그. 콘텐츠 통과는 등록/획득 그래프 검사이며 설계서 전체 일치 판정이 아니다.
+- 실제 선택 E2E **12조건 11통과·1실패·exit1·23.6분**, skipped/flaky0: 새 게임36구간, 기존 로크새 폰/태블릿×정상/시트 누락4조건, 신규 S09전투·활공 폰/태블릿·부분 핵 사망/재개·수정구슬 없음/옛 승리4조건, 기존 단순 조작·모바일 보물 통과. S09~S12 연속 검사는 장면 로딩 완료 전에 전투를 시작해 실패했다. 해당 검사에 실제 플레이어/보스 준비 대기만 추가한 뒤 **1조건 재검사 통과·exit0·1.5분**. 게임·자산·빌드는 그대로다. `npm run test:e2e --` 뒤6검사 파일, 재검사는 `tests/e2e/m3-opening.spec.ts`만 지정했다. 보완 후 전체12조건 및 전체81개 E2E 재실행은 **미검증**: 변경 범위의 선택 검사와 새 게임 전체 항로를 검증했다. `s09-mechanics-e2e-release2-final.json`, `s09-mechanics-e2e-release2-final-output.txt`, `s09-mechanics-release2-final-report/`, `s09-mechanics-regression-repair.json`, `s09-mechanics-regression-repair-output.txt`에 실제 결과를 보존한다. 보완 후 타입/린트도 통과했다.
+- 저장 주입 없는 새 게임36구간 정상 키 입력 완주(807초), 보물/무기 각7·엔딩·S16/S32뒤 새로고침·S01재방문·오류[] 확인. 별도의 S09 조건은 명시적 단계/장비 픽스처이며 실기기 검증이 아니다. 완주 결과는 `s09-mechanics-regression-reports/complete-journey.json`이다.
+- 최종 **102스크린샷**: `docs/screenshots/s09-mechanics/release2-final/`. 대표 `s09-mechanics/phone-core-open.png`, `phone-glide-held.png`, `tablet-glide-release.png`, `save-retry-death-checkpoint.png`, `guards-legacy-alliance.png`; 기존 아트4조건은 `m6-roc/`, 캠페인7장은 `journey/`. 실측 크기·바이트·SHA는 `s09-mechanics-final-screenshots.json`이다. 화면과 관측 JSON을 함께 기록했으며 짧은 상태의 PNG와 관측 시각이 다를 수 있다.
+- 개발 중 실제 실패도 보존했다. 날개 바람의 너무 이른 피해와 저장 ID 미등록은 런타임을 수정했다. 하트 XP를 포함한 기대값·대화가 열리기 전 확인·갱신 시각 비교는 검사를 보완했다. 옛 보스 선행 승리 막힘을 정적 검토에서 발견해 첫 완주 실행을 S11에서 중단하고 보완 후 다시 검증했다. 원래 로그/실패 PNG/문맥/검사 소스와 `s09-mechanics-development.json` 참조. 마지막 M3 실패 화면/문맥은 `docs/screenshots/s09-mechanics/primary-test-results/m3-opening-S09-S12-continu-2fe28-d-R03-with-save-safe-bosses/`, 보완 전 소스는 `s09-mechanics-before-m3-repair.test.ts.txt`에 보존했다. 중단본을 전체 통과로 취급하지 않는다.
+- 기본 실행 및 검사 보완 실행 각각 전후1001파일 SHA256 일치; 두 실행 사이에는 `tests/e2e/m3-opening.spec.ts`만 바뀌었다. 이전 자산638개·의존성/lockfile 보존. 범위 외 코드 변경 없음. 기존 고정 보고서의 이번 실행본은 별도 폴더에 보존하고 원본 바이트를 복구했다. `s09-mechanics-release2-final-runtime-hashes.json`, `s09-mechanics-regression-repair-runtime-hashes.json`, `s09-mechanics-repair-code-diff.json`, `s09-mechanics-regression-repair-preservation.json`, `s09-mechanics-regression-reports.json`. 서버 종료·최종 diff 결과는 별도 마무리 기록을 참조한다.
+
+**남은 문제/미검증:** S09 승리 후 둥지 위 선택 보석과 별도 연습 동선은 미구현. S26동굴 박쥐5마리/S32저주 구체4개/박쥐 제한 비행 경로도 기존 미완료다. 실기기 폰/태블릿·iOS Safari·어린이 조작성·장시간FPS/발열·스피커·최종 아트 승인 미검증(Windows Edge 자동 입력/터치 이벤트 검증). 로크새 보석 색 연속성 및 전용 활공 자세는 ART_DRAFT 검수 대상이다. 이번 작업 커밋·푸시·배포 없음.
+
+마무리 확인: 문서 갱신 후 런타임1001파일 해시 일치, 기존 고정 보고서3개 원본 바이트 복구 확인. `git diff --check` exit0. netstat의 전체 인터페이스에서 5174/5175/9323 LISTENING 없음. 실제 기록은 `docs/validation/s09-mechanics-finish.json`, `s09-mechanics-final-diff-check.txt`, `s09-mechanics-stopped-servers.json`에 보존했다.
+
+**다음 한 작업:** S09 승리 후 T03를 쓰는 둥지 상단 선택 보석과 안전한 이단 점프·활공 연습 동선 구현 및 저장/재방문 검증.
+<!-- S09_MECHANICS_STATUS_END -->
+
+<!-- M6_ROC_STATUS_START -->
+## 최신 실제 상태 · 2026-10-07 · M6 로크새 행동6프레임
+
+**로크새 구현·4조건 검증 완료 / 전체77개 E2E 76통과·1실패(66.9분), 검사 보완 후 정령4조건 통과 / ART_DRAFT.** 내장 imagegen으로 자체 hero/roc 원화만 참조한 대기·예고·공격·평온한 저주 해제·비행 날개 위/아래6셀을 만들었다. 도구 원본1536×1024와 전체 프롬프트/SHA를 보존하고, 전체512셀을448로 축소·32px 여백에 넣은 동일 RGBA PNG/무손실 WebP928,470B를 저장했다. 런타임768×512/256셀103,480B는 최적화 스크립트로 생성했다. 원본 삭제 없음.
+
+- JSON의 발/몸통/안장 좌표를 연결했다. 날개로 가려진 안장2셀은 투영 좌표임을 명시한다. S09 보스의 기존 타깃/HP/대기 높이/경고 발 위치를 유지하고 S10·S33 비행의 탑승자 발을 안장에 고정한다. 기존 날개 공격 피해22/활성80~200ms/420ms 재사용·플레이어 물리42×84·적/보상/저장 ID 유지. 누락은 기존 로크새 원화로 복구한다.
+- ART_DRAFT 검수 항목: 비행 공격은 보스의 셀2를 공용하므로 목 보석이 보라색이다. 평온한 비행의 청록 보석과 색 연속성을 최종 아트에서 보완해야 한다.
+- 최종 정적8명령 순서 통과: 최적화→이미지 감사178파일→타입→린트→단위117개/25파일→콘텐츠→빌드48모듈→첫 화면3,085,916/8,000,000B. 기존 Phaser 큰 청크 경고 유지. `docs/validation/m6-roc-release2-checks.json`, `m6-roc-release2-check-{1..8}.txt`.
+- 최초 단위116통과/1실패는 기존 S09 행동 시트 없음 기대값으로 수정 후117통과. 새 E2E 최초4실패는 저주 해제 문구의 기대값, 두 번째4실패는 이동 직후 물리/그림 좌표 비교, 세 번째2통과/2실패는 이단 점프의 짧은 상승 구간을 느린 poll이 놓친 검사였다. 기존 문구·멈춘 뒤 좌표 비교·프레임별 관측으로 검사만 보완했다. `m6-roc-development.json`, 각 실행 JSON/로그/검사 원본과 `docs/screenshots/m6-roc/{first,second,third}-target-failure/`에 실패 증거를 보존했다.
+- 로크새 전용 폰/태블릿×정상/의도적 누락4조건 모두통과/exit0/5.4분. 실제 봉인3개·보스5상태·반전·일시정지·터치공격·동물해제·XP6/금화3 한번·T03 조기 지급 차단/대화 중 저장/새로고침·이단 점프·비행4/5/2와 반전안장·동승자·피해22·물리42×84·체크포인트 재개·캐시 해제 확인. stage/레벨/아이템 픽스처이며 새 게임 완주와 구별. `m6-roc-recheck3.json`,66화면 `docs/screenshots/m6-roc/recheck3/m6-roc/`. 최종 검사 보완 뒤 타입/린트 재통과.
+- 전체 `npm run test:e2e -- --reporter=list,json,html` exit1, **76통과·정령1실패/66.9분**, 건너뜀/재시도0. 새 게임 실제 입력36구간 완주와 새 로크새4조건은 통과. S06 정령 터치 공격이 빗나가 HP31이 유지된 검사였고, 현재 적 위치를 다시 읽고 접근/방향을 맞추도록 **검사1파일만 보완**했다. 게임/자산/빌드 변경 없음. 관련 정령4조건 재실행 **exit0/모두통과/9.0분**. 보완 후 전체77개 재실행은 미검증: 게임 바이트가 같고 관련4조건을 모두 재검사하여 전체 실행을 반복하지 않았다. 전체 통과로 바꾸어 기록하지 않는다. `m6-roc-e2e-final.json`, `m6-roc-regression-repair.json`, 양쪽 로그/HTML 보고서와 `m6-roc-full-regression-failures.json`에 실제 결과 보존.
+- 전체 전후997파일 SHA256 일치, 보완4조건 전후도997파일 일치. 두 검증본의 차이는 `tests/e2e/spirit-actions.spec.ts` 하나뿐(`m6-roc-regression-repair-code-diff.json`). 기존 미디어575개와 백업402개 확인. 기존 아트 연결4파일·감사/최적화2파일·단위 기대값1파일·정령 검사 접근1파일 외 이전 코드 보존. 이전 고정 JSON35개를 바이트 복구하고 이번 실행본을 `m6-roc-regression-reports/`에 보존했다. `m6-roc-final-runtime-hashes.json`, `m6-roc-regression-repair-runtime-hashes.json`, `m6-roc-final-integrity.json`.
+- 최종 로크새66+터치6=**72스크린샷** 보존. `docs/screenshots/m6-roc/final/m6-roc/`의 폰/태블릿·정상/누락 S09 봉인/공격/해제/보물/재개/이단점프와 S10/S33 프레임/반전/날개 공격/재개, `docs/screenshots/m6-roc/mobile/`. 대표 `phone-normal-S09-telegraph.png`, `tablet-normal-S09-defeated.png`, `phone-normal-S33-attack.png`. 실제 크기/바이트/SHA는 `m6-roc-final-screenshots.json`. 짧은 공격은 관측 JSON과 원화 프레임도 함께 확인했다. 자체 서버 종료 및 최종 diff 검사 확인.
+- dev와 CDP 실제 터치 검사 exit0. 폰844×390/태블릿1180×820 이동257/252px·밀기 반전·첫 해골 처치·선장 대화·오류[] 확인. 동시 이동·점프는 모두dx0/dy−110px로 가로 판정 보류. `m6-roc-mobile.json`, 화면 `docs/screenshots/m6-roc/mobile/`.
+
+**남은 구현:** S09 설계의 저주 핵3회 피격/공격3패턴은 현재 일반 HP보스+채널 봉인3개와 다르며 미구현이다. T03 별도 지상 활공도 코드에서 확인되지 않아 미구현으로 기록한다(이단 점프/지정 비행과 구별). S26박쥐5마리/S32저주 구체4개/박쥐 제한 비행 경로도 기존 미완료. 콘텐츠 그래프 통과는 설계서 전체 일치 검증이 아니다.
+
+**미검증:** 실기기 폰/태블릿·iOS Safari·어린이 조작성·장시간FPS/발열·실제스피커·최종사용자아트승인. ART_DRAFT 유지, 이번 작업 커밋/푸시/배포 없음. **다음 한 작업: S09 설계 정합성 구현 — 저주 핵3회·고유 공격3패턴과 T03 지상 활공을 실제 플레이에 연결하고 저장·재시도를 검증한다.**
+<!-- M6_ROC_STATUS_END -->
+
+<!-- M6_SPIRIT_STATUS_START -->
+## 최신 실제 상태 · 2026-10-06 · M6 정령 행동4프레임
+
+**구현·정령4조건 검증 완료 / 전체73개 E2E 69통과·4실패(69.7분), 테스트 보완 뒤 관련5개 재검사 통과 / ART_DRAFT.** 내장 imagegen 후보1의 공격 효과가 중앙 세로 셀 경계 x626/627을 넘어 반려하고 원본/전체 프롬프트/도구 경로/SHA를 보존했다. 더 작고 효과를 제한한 후보2의1254×1254 RGBA/2×2 전체627px 셀을512px로 균일 축소·4×1 재배열해2048×512 PNG + 동일RGBA 무손실 WebP259,304B를 만들었다. SIZES/runtimeSize 등록→최적화 런타임1024×256/4셀256px WebP34,476B. 외곽/중앙alpha>16 비어 있음·글자/상처/피 없음·안전한 빛/연기 마무리 확인. 원본 삭제 없음.
+
+512px baseline453/441/375/392·불투명 중심(314,355)/(265,334)/(301,288)/(268,284)·대기 높이313을 JSON으로 실측 기록하고 게임 JSON으로 바이트 동일 복사했다. 좌우 원점도 반전한다. 대기 가시 높이약116px·기존 타깃96×128·바닥 경고64·위치/HP/타이밍/접촉 피해/보상/저장ID·S06기존0xffaa65색조 유지. 꼬리는 공중 정령이므로 바닥에 강제 고정하지 않는다. S03 3·S06 5·S07 4·S32 3=실제15마리에 연결, 누락은 기존 자체 SVG 복구. 마법 적의 프레임3·“빛으로 돌아갔어요”·기존300ms 유지 뒤520ms 소멸(연출 줄이기0ms)을 쓴다.
+
+- **정적8명령 순서 통과:** 최적화→이미지 감사→typecheck→lint→단위115개/24파일→validate:content→build→용량. `docs/validation/m6-spirit-release-checks.json`, `m6-spirit-release-check-{1..8}.txt`. 실제 원화88+런타임88=176파일·정령 네이티브/무손실RGBA/경계/실측JSON 감사 통과. 기존 지형·무기·효과·아이콘·소품도 감사했다.
+- **콘텐츠 검사36스테이지·아이장면24·7무기/보물·8하트 통과는 등록/획득 그래프 검사이며 전체 설계 일치 판정이 아니다.** S32설계 잔여 저주구체4개/실제정령3마리, S26설계박쥐5마리/현재산적3마리, 박쥐의 제한 비행 경로는 별도 미구현. 이번 작업에서 개수/AI를 바꾸지 않았다.
+- **빌드46모듈 통과:** JS220.06KB/CSS16.93KB/Phaser1,481.77KB, 기존500KB청크 경고 유지. 첫 화면3,083,504/8,000,000B 통과. HTTP/실기기 성능 검사로 취급하지 않는다.
+- **정령 전용 검사 두 번째 실행3통과·1실패, 해당1조건 보완 재실행통과/exit0/2.6분.** 이어진 아래 전체73개 실행에서 새4조건도 전부 통과했다. 폰844×390/태블릿1180×820×원화/의도적 시트 누락, 각 조건에서S03/S06/S07/S32를 검사했다.15마리 텍스처/초기좌표 계약·대기/예고/공격/회복/빛 마무리·좌우 중심·일시정지·실제 터치 공격·XP6/금화3한 번 지급·새로고침/재등장추가0·S06진정적 재등장 생략/1마리 진정만으로T01조기지급 안 됨·S07첫 파도/보호/보물·설정된쉼터x/착지 재개·S01캐시 해제를 확인했다. 명시적 stage/레벨/아이템 픽스처이며 새게임 완주와 구별한다. 태블릿 연출 줄이기, S03 HP관측은 기존 번개도 포함하여 접촉 피해만의 측정으로 취급하지 않는다. `m6-spirit-recheck.json`, `m6-spirit-recheck2.json`과 각각의raw출력. 최종128화면은 `docs/screenshots/m6-spirit/final/m6-spirit/`.
+- **최초 추가검사4실패 후 테스트만 보완.** 3개는 S06덩굴 근처의 ‘살펴보기’를 공격으로 가정한 오류,1개는 S03기존 무적/번개가 겹칠 수 있는데 첫 회복 때 피해를 고정 기대한 오류였다. 실제 공격버튼 상태를 기다려 터치하고, 필요하면 후속 실제 공격 주기의HP변화를 관측하도록 바꿨다. 최초소스·raw로그/JSON·실패9파일/해시는 `m6-spirit-first-test.ts.txt`, `m6-spirit-target*`, `docs/screenshots/m6-spirit/first-target-failure/`에 보존했다. `m6-spirit-development.json`. 전투/입력/피해/저장 규칙을 이 보완 때문에 바꾸지 않았다.
+- 두 번째1실패는 태블릿S32에서 주인공이 접근 중인 정령을 관성으로 조금 지나쳐 오른쪽을 보는데 테스트가 왼쪽을 고정 기대한 문제였다. 접근 뒤 실제 정령x를 다시 읽고 두 번째 이동으로 간격을 맞춰 보완했다. 기존게임좌표/속도/AI/반전규칙은 유지했다. 두 번째소스와 실패3파일/해시는 `m6-spirit-second-test.ts.txt`, `docs/screenshots/m6-spirit/second-target-failure/`에 보존했다. 세 번째소스는 `m6-spirit-third-test.ts.txt`다. 별도3통과+보완1통과를 단일4통과로 기록하지 않는다.
+- **CDP 실제 터치 스모크 exit0**, 정적 최종 검사 뒤 dev서버에서 다시 실행했다. 폰/태블릿 이동+252px/+252px·밀기 반전·첫해골처치·선장대화·오류[]; 동시 이동/점프는 폰dx0/dy-110, 태블릿dx7/dy-110px다. 가로0이면 그 조건은 판정 보류하며 점프 성공만 기록한다. `m6-spirit-mobile-final.json`, `m6-spirit-mobile-final-output.txt`,6화면 `docs/screenshots/m6-spirit/mobile-final/`. 초기실행은 `m6-spirit-mobile.json`/`mobile/`에 별도 보존했다. 뷰포트/실제 CDP터치이며 실기기 결과로 취급하지 않는다.
+- **전체73개 단일 E2E 실행 69통과·4실패/exit1/69.7분**, flaky/skipped각0. 신규 정령4조건은 모두 통과했다. 산호 수호자1개는 회복 중 공격을 방패 차단으로 고정 기대해HP32→20으로 실패했고, 세이렌 폰정상/폰누락/태블릿정상3개는 촬영 후 이미 사라진 음파를 읽어1개 대신0개를 관측했다. 태블릿누락은 통과. 실제 실패로그/수정전테스트/화면4장·문맥4파일은 `m6-spirit-full-regression-failures.json`, `m6-spirit-full-before-{m2,siren-actions}.ts.txt`, `docs/screenshots/m6-spirit/full-regression-failures/`에 보존했다. 전체결과 `m6-spirit-e2e-final.json`, `m6-spirit-e2e-final-output.txt`, `m6-spirit-final-report/index.html`.
+- **테스트2파일만 보완 후 관련5개 재검사 통과/exit0/3.5분**, flaky/skipped0. 수호자는 실제 정면/착지와 새 예고를 기다려 방패 차단·뒤이은 회복 피해를 검증한다. 세이렌은 읽기 전용 동일 시뮬레이션 스냅샷에서 적 상태와 짧게 살아 있는 투사체를 함께 관측하고 촬영한다. 파동1개/속도−230·음표3개/속도−190와vy−140/−55/35, 보상/무기/새로고침/누락복구 조건 유지. 산호 관문 보물 차단도 유지. 게임규칙·HP·시간·판정 변경 없음. 전체실행과 재검사 사이984파일 중 E2E2개만 변경, 나머지982개(실제게임/빌드/원화/런타임 포함)동일; 재검사 전후984개 동일. `m6-spirit-regression-repair-summary.json`, `m6-spirit-regression-repair.json`, `m6-spirit-regression-repair-output.txt`, 별도34화면/SHA `m6-spirit-regression-repair-screenshots.json`, `docs/screenshots/m6-spirit/regression-repair/`. 타입/린트/단위115개 추가 재검사도통과(`m6-spirit-repair-checks.json`). **보완 후 전체73개 단일 실행은 재실행하지 않았으며 전체73통과라고 기록하지 않는다.**
+- **저장 주입 없는 새게임36스테이지 정상키입력 완주812초.** 무기/보물각7·엔딩·S01재방문·S16/S32완료 뒤 새로고침 보상ID 유지·오류[] 확인(`m6-spirit-complete-journey.json`). 자동 시간을 어린이 플레이 시간으로 취급하지 않는다.
+- **보존/실행 일치:** 전체실행 전후 실제 소스/런타임/빌드/원화/스크립트/테스트984파일 모두동일. 백업363개·기존미디어570개·기존src37개·네이티브후보2의 도구원본 일치 재확인. 고정이름 이번회귀 보고서35개는 `m6-spirit-regression-reports/`에 바이트 동일 보존하고 이전보고서 원본을 복구했다. `m6-spirit-final-runtime-hashes.json`, `m6-spirit-preservation.json`, `m6-spirit-postcheck.json`. 원본 삭제 없음.
+
+**실제 화면:** 주요141장은 `docs/screenshots/m6-spirit/final/m6-spirit/`에 있다. 정령128장(2뷰포트×2모드×4맵×8상태/맥락), 터치6장, 캠페인7장. 예: `phone-normal-S06-telegraph.png`, `tablet-normal-S32-defeated.png`, `phone-fallback-S07-resume.png`. 빛 마무리 캡처에는 주인공/무기/기존정화 효과가 일부 겹치므로 JSON프레임3관측과 보존 원화도 함께 확인했다. 실제크기/SHA/복사 일치는 `m6-spirit-final-screenshots.json`.
+
+**미검증:** 실제 폰/태블릿·iOS Safari·어린이 조작성·장시간FPS/발열·실제스피커믹스·최종사용자아트승인. Windows Edge 뷰포트/실제CDP터치만 가능했다. 동시 이동·점프의 가로0조건은 판정 보류. **ART_DRAFT 유지**, 로컬작업으로 이번 커밋/푸시/배포 없음. 자체서버 종료/TCP확인 및 최종diff 검사는 `m6-spirit-stopped-servers.json`, `m6-spirit-final-diff-check.txt`다.
+
+**다음 한 작업:** M6 로크새 행동 프레임. 기존 원화/보스저주해제·비행날개공격을 기준으로 남은 자세를 제작하고 안정ID·봉인·T03·비행입력·저장·누락복구를 검증한다. S32/S26콘텐츠 불일치·박쥐비행경로·실기기검수는 별도 미완료다.
+<!-- M6_SPIRIT_STATUS_END -->
+
+<!-- M6_BAT_STATUS_START -->
+## 최신 실제 상태 · 2026-10-06 · M6 박쥐 행동4프레임
+
+**구현·추가4조건 검증 완료 / 전체69개 E2E 통과/53.3분 / ART_DRAFT.** 내장 imagegen으로 자체 보라 박쥐 디자인과 `hero-webtoon.webp` 화풍을 사용해 대기·공격 예고·공격·평온한 저주 해제4셀을 제작했다. 선택1번1254×1254/2×2의 전체627px 셀을 균일 축소·재배열하여2048×512 PNG와 동일 RGBA 무손실 WebP264,444B로 저장했다. 런타임1024×256/4셀256px WebP31,056B는 최적화 스크립트로 생성했다. alpha>16 외곽/중앙 경계 비어 있음·글자/잘림/피/상처 없음 확인. 모든 원본 보존.
+
+512px 기준 baseline429/448/365/363·몸통 중심(327,384)/(280,412)/(347,280)/(272,288)·대기 높이233을 JSON으로 기록하고 바이트 동일 게임 JSON으로 복사했다. 좌우 원점을 반전해 몸통을 기존 타깃에 맞춘다. 가시 대기 높이약84px·기존 타깃96×128·바닥 경고 오프셋64·적/보상/저장 ID를 유지한다. 날개 가시 폭은 SVG보다 넓다. 실제 S08 박쥐4마리만 연결하고, 안전 구역에서 그림도 대기로 복귀한다. 누락은 보존 SVG로 복구한다.
+
+- 정적8명령 순서 통과: 최적화→이미지 감사→typecheck→lint→단위113개/23파일→validate:content→build→용량 검사. `docs/validation/m6-bat-release-checks.json`, `m6-bat-release-check-{1..8}.txt`. 마지막 테스트 보완 후 타입/린트도 다시 통과(`m6-bat-{typecheck,lint}-release2.txt`).
+- 실제 원화87+런타임87=174파일 감사 통과. 콘텐츠 검사는36스테이지·아이 장면24·7무기/보물·8하트의 등록/획득 그래프 검사이며 **설계서 전체 콘텐츠 일치 검증이 아니다**. 실제 S26은 산적3마리여서 설계의 동굴 박쥐5마리는 미반영이다. S08도 현재 고정 높이 수평 접근 AI이며 설계의 제한 비행 경로는 별도 미구현이다. 이번 아트 연결에서 적 종류·개수·AI를 바꾸지 않았다.
+- 빌드45모듈, JS219.12KB/CSS16.93KB/Phaser1,481.77KB, 기존500KB 청크 경고 유지. 첫 화면3,082,569/8,000,000B 통과; HTTP/실기기 성능 검사로 취급하지 않는다.
+- 추가4개 E2E 통과/exit0/2.4분: 폰844×390/태블릿1180×820×원화/의도적 시트 누락. 대기·예고·접촉 공격·회복·해제·좌우 몸통 중심·일시정지·실제 터치 공격·XP6/금화3 한 번 지급·재등장 후 추가0·퍼즐 안전 구역 HP 유지/대기 프레임·T02 없는 쉼터 저장/새로고침·S01 캐시 해제. 명시적 S08시작/레벨/보물 픽스처이며 새 게임 완주와 구별한다. 태블릿은 연출 줄이기. `m6-bat-recheck3.json`, `m6-bat-recheck3-output.txt`,32화면 `docs/screenshots/m6-bat/recheck3/m6-bat/`.
+- CDP 실제 터치 스모크 exit0: 폰/태블릿 이동+252px·밀기 반전·동시 이동/점프dx7px/dy−110px·첫 해골 처치·선장 대화·오류[]. `m6-bat-mobile.json`,6화면 `docs/screenshots/m6-bat/mobile/`. 실기기 결과로 취급하지 않는다.
+- 첫 추가검사4실패는 테스트의 한 번 처치 가정으로, 실제 두 번 공격을 쓰게 수정했다. 두 번째는 체크포인트를 일반 완료 목표처럼 기다려1실패 후 중단한 실행이다(나머지 전체 결과 없음). 쉼터의 착지/근접 자동 저장을 직접 확인하도록 바꿨다. 세 번째2통과/2실패는 실제 SVG 복구 성공 후 Phaser의 재시도를3회로 가정한 요청 수 검사였다. 실패 로그·소스·스크린샷/문맥은 `m6-bat-{target,recheck,recheck2}-output.txt`, `m6-bat-{first,second,third}-test.ts.txt`, `docs/screenshots/m6-bat/{first,second,third}-target-failure/`에 삭제 없이 보존했다. 게임 피해/체크포인트/로더 규칙은 유지했다.
+- 보존 사전 검사: 백업333파일·기존 미디어566개·기존 src36개·도구와 같은 네이티브1장 SHA 확인(`m6-bat-current-preservation.json`). 최종 전체 검사 전 실제 소스/런타임/빌드/원화/테스트970파일 해시를 고정했다(`m6-bat-final-runtime-hashes.json`). 전체 결과와 실행 후 일치는 아래 최종 기록처럼 확인했다.
+
+- **전체69개 E2E 통과/exit0/53.3분**, 실패·flaky·skipped 각0. `docs/validation/m6-bat-e2e-final.json`, `m6-bat-e2e-final-output.txt`, `m6-bat-final-report/index.html`. 새 박쥐4조건·기존 적40자세·무기·지형·효과·터치·소품·저장/사망·불씨/파도·엔딩을 포함한다.
+- **저장 주입 없는 새 게임36스테이지 정상 키 입력 완주815초.** 무기/보물 각7·엔딩·S01재방문·S16/S32완료 뒤 새로고침 보상 ID 유지·오류[]를 확인했다(`m6-bat-complete-journey.json`). 자동 완주 시간을 어린이 플레이 시간이나 모든 콘텐츠 설계 일치 검증으로 취급하지 않는다.
+- **보존/실행 일치:** 전체 실행 전후970파일 전부 동일, 백업333개·기존 미디어566개·기존 src36개·네이티브1장의 도구 원본 일치를 최종 재확인했다(`m6-bat-final-runtime-hashes.json`, `m6-bat-preservation.json`, `m6-bat-postcheck.json`). 고정 이름에 쓰인 이번 회귀 보고서35개는 `m6-bat-regression-reports/`에 바이트 동일 보존하고 이전 원본 보고서를 복구했다. 원본 삭제 없음.
+
+**실제 화면:** 주요45장은 `docs/screenshots/m6-bat/final/m6-bat/`에 있다. 박쥐32장(2뷰포트×2모드×8상태/맥락), 터치6장, 캠페인7장이다. 예: `phone-normal-attack.png`, `tablet-normal-defeated.png`, `tablet-normal-safe-puzzle.png`, `phone-fallback-checkpoint-resume.png`. 해제 캡처에는 기존 공격 연출/주인공이 일부 겹치며 JSON 프레임3 관찰과 보존 원화도 함께 확인했다. 경로·디코딩 크기·SHA·복사13개 일치는 `m6-bat-final-screenshots.json`이다.
+
+**최종 출처 날짜 보완:** 전체69개 실행 뒤 자산 목록의 박쥐 출처가 이전 공통 날짜2026-10-01~04를 상속한 것을 발견했다. 박쥐만 실제 생성일2026-10-06로 분리했고 다른 자산의 출처 문구를 유지했다. 원래 검사한 manifest를 사본으로 보존하고 **출처 문자열 한 곳만 바뀐 것**을 확인했다. 변경 파일은 그 manifest와 재빌드된 dist3파일뿐이다. 타입·린트·단위113개/23파일·콘텐츠 포함 build·용량 검사를 다시 통과했다. 최종 JS219.16KB, 첫 화면3,082,605/8,000,000B다. 전체69개 E2E는 출처 표기 보완 전 실행이며 이후 전체E2E를 반복하지 않았다. 실제 차이/해시는 `m6-bat-provenance-postcheck.json`, 로그는 `m6-bat-provenance-{typecheck,lint,test,build,budget-output}.txt`다. 원화·런타임 이미지·전투/좌표/보상/저장 코드·테스트는 전체 실행 때와 바이트 동일하다.
+
+**미검증:** 실제 폰/태블릿·iOS Safari·어린이 조작성·장시간 FPS/발열·실제 스피커 믹스·최종 사용자 아트 승인. Windows Edge 뷰포트/실제 CDP터치만 가능했다. **ART_DRAFT 유지**, 이번 로컬 작업은 커밋·푸시·배포 없음. 자체 개발/테스트 서버 종료와 최종 diff 검사는 `m6-bat-stopped-servers.json`, `m6-bat-final-diff-check.txt`에 기록했다.
+
+**다음 한 작업:** M6 정령 행동4프레임. 기존 실제 정령에 대기·예고·공격·빛/연기로 진정되는 자세를 연결하고 안정 ID·타이밍·피해·불씨/파도·저장·누락 복구를 검증한다. 로크새의 남은 동작·S26 콘텐츠 불일치·박쥐 비행 경로·실기기 검수는 별도 미완료다.
+<!-- M6_BAT_STATUS_END -->
+
 <!-- M6_SIREN_STATUS_START -->
 ## 최신 실제 상태 · 2026-10-04 · M6 세이렌 행동 4프레임
 

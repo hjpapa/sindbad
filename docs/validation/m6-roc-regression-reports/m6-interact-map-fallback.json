@@ -1,0 +1,1187 @@
+{
+  "pass": true,
+  "method": "explicit progression/enemy fixtures; actual loaded scene textures and dimensions, no teleport or game-state hooks; spawn screenshots do not show every offscreen object",
+  "checks": [
+    {
+      "stage": "S01",
+      "objects": [
+        {
+          "id": "S01.medal",
+          "kind": "chest",
+          "texture": "chest",
+          "x": 774,
+          "y": 456,
+          "width": 65.28,
+          "height": 87.04,
+          "visible": true,
+          "done": false
+        },
+        {
+          "id": "S01.exit",
+          "kind": "exit",
+          "texture": "bell",
+          "x": 4610,
+          "y": 550,
+          "width": 65.28,
+          "height": 87.04,
+          "visible": true,
+          "done": false
+        }
+      ],
+      "hazards": [],
+      "path": "docs/screenshots/m6-roc/final/m6-interact/fallback-S01-scene-start.png",
+      "caption": "real map at saved start; snapshot verifies all mapped textures, screenshot shows only the current viewport"
+    },
+    {
+      "stage": "S02",
+      "objects": [
+        {
+          "id": "S02.shell.1",
+          "kind": "shell",
+          "texture": "shell",
+          "x": 960,
+          "y": 523,
+          "width": 65.28,
+          "height": 87.04,
+          "visible": true,
+          "done": false
+        },
+        {
+          "id": "S02.shell.2",
+          "kind": "shell",
+          "texture": "shell",
+          "x": 1930,
+          "y": 555,
+          "width": 65.28,
+          "height": 87.04,
+          "visible": true,
+          "done": false
+        },
+        {
+          "id": "S02.shell.3",
+          "kind": "shell",
+          "texture": "shell",
+          "x": 2830,
+          "y": 499,
+          "width": 65.28,
+          "height": 87.04,
+          "visible": true,
+          "done": false
+        },
+        {
+          "id": "S02.boomerang",
+          "kind": "chest",
+          "texture": "chest",
+          "x": 4050,
+          "y": 560,
+          "width": 65.28,
+          "height": 87.04,
+          "visible": true,
+          "done": false
+        },
+        {
+          "id": "S02.remote",
+          "kind": "remote",
+          "texture": "shell",
+          "x": 4440,
+          "y": 465,
+          "width": 65.28,
+          "height": 87.04,
+          "visible": true,
+          "done": false
+        }
+      ],
+      "hazards": [],
+      "path": "docs/screenshots/m6-roc/final/m6-interact/fallback-S02-scene-start.png",
+      "caption": "real map at saved start; snapshot verifies all mapped textures, screenshot shows only the current viewport"
+    },
+    {
+      "stage": "S03",
+      "objects": [
+        {
+          "id": "S03.rod.1",
+          "kind": "rod",
+          "texture": "rod",
+          "x": 860,
+          "y": 477,
+          "width": 65.28,
+          "height": 87.04,
+          "visible": true,
+          "done": false
+        },
+        {
+          "id": "S03.rod.2",
+          "kind": "rod",
+          "texture": "rod",
+          "x": 2210,
+          "y": 477,
+          "width": 65.28,
+          "height": 87.04,
+          "visible": true,
+          "done": false
+        },
+        {
+          "id": "S03.coins",
+          "kind": "chest",
+          "texture": "chest",
+          "x": 2730,
+          "y": 404,
+          "width": 65.28,
+          "height": 87.04,
+          "visible": true,
+          "done": false
+        },
+        {
+          "id": "S03.crystal",
+          "kind": "chest",
+          "texture": "chest",
+          "x": 3020,
+          "y": 554,
+          "width": 65.28,
+          "height": 87.04,
+          "visible": true,
+          "done": false
+        },
+        {
+          "id": "S03.crisis",
+          "kind": "crisis",
+          "texture": "rod",
+          "x": 3730,
+          "y": 554,
+          "width": 65.28,
+          "height": 87.04,
+          "visible": true,
+          "done": false
+        }
+      ],
+      "hazards": [],
+      "path": "docs/screenshots/m6-roc/final/m6-interact/fallback-S03-scene-start.png",
+      "caption": "real map at saved start; snapshot verifies all mapped textures, screenshot shows only the current viewport"
+    },
+    {
+      "stage": "S04",
+      "objects": [
+        {
+          "id": "S04.gear.1",
+          "kind": "gear",
+          "texture": "gear",
+          "x": 560,
+          "y": 553,
+          "width": 65.28,
+          "height": 87.04,
+          "visible": true,
+          "done": false
+        },
+        {
+          "id": "S04.gear.2",
+          "kind": "gear",
+          "texture": "gear",
+          "x": 860,
+          "y": 532,
+          "width": 65.28,
+          "height": 87.04,
+          "visible": true,
+          "done": false
+        },
+        {
+          "id": "S04.gear.3",
+          "kind": "gear",
+          "texture": "gear",
+          "x": 1500,
+          "y": 532,
+          "width": 65.28,
+          "height": 87.04,
+          "visible": true,
+          "done": false
+        },
+        {
+          "id": "S04.golden",
+          "kind": "golden",
+          "texture": "golden",
+          "x": 1270,
+          "y": 392,
+          "width": 65.28,
+          "height": 87.04,
+          "visible": true,
+          "done": false
+        }
+      ],
+      "hazards": [],
+      "path": "docs/screenshots/m6-roc/final/m6-interact/fallback-S04-scene-start.png",
+      "caption": "real map at saved start; snapshot verifies all mapped textures, screenshot shows only the current viewport"
+    },
+    {
+      "stage": "S05",
+      "objects": [
+        {
+          "id": "S05.key",
+          "kind": "key",
+          "texture": "key",
+          "x": 960,
+          "y": 414,
+          "width": 65.28,
+          "height": 87.04,
+          "visible": true,
+          "done": false
+        },
+        {
+          "id": "S05.crown",
+          "kind": "chest",
+          "texture": "chest",
+          "x": 1870,
+          "y": 554,
+          "width": 65.28,
+          "height": 87.04,
+          "visible": true,
+          "done": false
+        },
+        {
+          "id": "S05.gate",
+          "kind": "gate",
+          "texture": "gate",
+          "x": 2460,
+          "y": 543,
+          "width": 65.28,
+          "height": 87.04,
+          "visible": true,
+          "done": false
+        },
+        {
+          "id": "S05.golden",
+          "kind": "golden",
+          "texture": "golden",
+          "x": 3200,
+          "y": 487,
+          "width": 65.28,
+          "height": 87.04,
+          "visible": true,
+          "done": false
+        }
+      ],
+      "hazards": [],
+      "path": "docs/screenshots/m6-roc/final/m6-interact/fallback-S05-scene-start.png",
+      "caption": "real map at saved start; snapshot verifies all mapped textures, screenshot shows only the current viewport"
+    },
+    {
+      "stage": "S06",
+      "objects": [
+        {
+          "id": "S06.vine",
+          "kind": "vine",
+          "texture": "vine",
+          "x": 350,
+          "y": 551,
+          "width": 65.28,
+          "height": 87.04,
+          "visible": true,
+          "done": false
+        },
+        {
+          "id": "S06.coins",
+          "kind": "chest",
+          "texture": "chest",
+          "x": 550,
+          "y": 485,
+          "width": 65.28,
+          "height": 87.04,
+          "visible": true,
+          "done": false
+        },
+        {
+          "id": "S06.torch.1",
+          "kind": "torch",
+          "texture": "torch",
+          "x": 600,
+          "y": 551,
+          "width": 65.28,
+          "height": 87.04,
+          "visible": true,
+          "done": false
+        },
+        {
+          "id": "S06.furnace.1",
+          "kind": "furnace",
+          "texture": "furnace",
+          "x": 720,
+          "y": 551,
+          "width": 65.28,
+          "height": 87.04,
+          "visible": true,
+          "done": false
+        },
+        {
+          "id": "S06.torch.2",
+          "kind": "torch",
+          "texture": "torch",
+          "x": 1460,
+          "y": 551,
+          "width": 65.28,
+          "height": 87.04,
+          "visible": true,
+          "done": false
+        },
+        {
+          "id": "S06.furnace.2",
+          "kind": "furnace",
+          "texture": "furnace",
+          "x": 1580,
+          "y": 551,
+          "width": 65.28,
+          "height": 87.04,
+          "visible": true,
+          "done": false
+        },
+        {
+          "id": "S06.torch.3",
+          "kind": "torch",
+          "texture": "torch",
+          "x": 2360,
+          "y": 551,
+          "width": 65.28,
+          "height": 87.04,
+          "visible": true,
+          "done": false
+        },
+        {
+          "id": "S06.furnace.3",
+          "kind": "furnace",
+          "texture": "furnace",
+          "x": 2480,
+          "y": 551,
+          "width": 65.28,
+          "height": 87.04,
+          "visible": true,
+          "done": false
+        },
+        {
+          "id": "S06.practice",
+          "kind": "furnace",
+          "texture": "furnace",
+          "x": 3540,
+          "y": 551,
+          "width": 65.28,
+          "height": 87.04,
+          "visible": true,
+          "done": false
+        }
+      ],
+      "hazards": [],
+      "path": "docs/screenshots/m6-roc/final/m6-interact/fallback-S06-scene-start.png",
+      "caption": "real map at saved start; snapshot verifies all mapped textures, screenshot shows only the current viewport"
+    },
+    {
+      "stage": "S07",
+      "objects": [
+        {
+          "id": "S07.wave.1",
+          "kind": "rope",
+          "texture": "rope",
+          "x": 900,
+          "y": 550,
+          "width": 65.28,
+          "height": 87.04,
+          "visible": true,
+          "done": false
+        },
+        {
+          "id": "S07.wave.2",
+          "kind": "rope",
+          "texture": "rope",
+          "x": 1900,
+          "y": 550,
+          "width": 65.28,
+          "height": 87.04,
+          "visible": true,
+          "done": false
+        },
+        {
+          "id": "S07.wave.3",
+          "kind": "rope",
+          "texture": "rope",
+          "x": 2900,
+          "y": 550,
+          "width": 65.28,
+          "height": 87.04,
+          "visible": true,
+          "done": false
+        },
+        {
+          "id": "S07.coins",
+          "kind": "chest",
+          "texture": "chest",
+          "x": 1410,
+          "y": 470,
+          "width": 65.28,
+          "height": 87.04,
+          "visible": true,
+          "done": false
+        }
+      ],
+      "hazards": [],
+      "path": "docs/screenshots/m6-roc/final/m6-interact/fallback-S07-scene-start.png",
+      "caption": "real map at saved start; snapshot verifies all mapped textures, screenshot shows only the current viewport"
+    },
+    {
+      "stage": "S08",
+      "objects": [
+        {
+          "id": "S08.journal",
+          "kind": "journal",
+          "texture": "journal",
+          "x": 1530,
+          "y": 550,
+          "width": 65.28,
+          "height": 87.04,
+          "visible": true,
+          "done": false
+        },
+        {
+          "id": "S08.mirror.1",
+          "kind": "mirror",
+          "texture": "mirror",
+          "x": 1650,
+          "y": 550,
+          "width": 65.28,
+          "height": 87.04,
+          "visible": true,
+          "done": false
+        },
+        {
+          "id": "S08.mirror.2",
+          "kind": "mirror",
+          "texture": "mirror",
+          "x": 1940,
+          "y": 550,
+          "width": 65.28,
+          "height": 87.04,
+          "visible": true,
+          "done": false
+        },
+        {
+          "id": "S08.mirror.3",
+          "kind": "mirror",
+          "texture": "mirror",
+          "x": 2230,
+          "y": 550,
+          "width": 65.28,
+          "height": 87.04,
+          "visible": true,
+          "done": false
+        },
+        {
+          "id": "S08.starMap",
+          "kind": "vision",
+          "texture": "starMap",
+          "x": 3000,
+          "y": 550,
+          "width": 65.28,
+          "height": 87.04,
+          "visible": true,
+          "done": false
+        }
+      ],
+      "hazards": [],
+      "path": "docs/screenshots/m6-roc/final/m6-interact/fallback-S08-scene-start.png",
+      "caption": "real map at saved start; snapshot verifies all mapped textures, screenshot shows only the current viewport"
+    },
+    {
+      "stage": "S09",
+      "objects": [
+        {
+          "id": "S09.quest.1",
+          "kind": "quest",
+          "texture": "lantern",
+          "x": 982.5,
+          "y": 550,
+          "width": 65.28,
+          "height": 87.04,
+          "visible": true,
+          "done": false
+        },
+        {
+          "id": "S09.quest.2",
+          "kind": "quest",
+          "texture": "lantern",
+          "x": 1445,
+          "y": 550,
+          "width": 65.28,
+          "height": 87.04,
+          "visible": true,
+          "done": false
+        },
+        {
+          "id": "S09.quest.3",
+          "kind": "quest",
+          "texture": "lantern",
+          "x": 1907.5,
+          "y": 550,
+          "width": 65.28,
+          "height": 87.04,
+          "visible": true,
+          "done": false
+        },
+        {
+          "id": "S09.reward",
+          "kind": "gift",
+          "texture": "gift",
+          "x": 2480,
+          "y": 550,
+          "width": 65.28,
+          "height": 87.04,
+          "visible": true,
+          "done": false
+        }
+      ],
+      "hazards": [],
+      "path": "docs/screenshots/m6-roc/final/m6-interact/fallback-S09-scene-start.png",
+      "caption": "real map at saved start; snapshot verifies all mapped textures, screenshot shows only the current viewport"
+    },
+    {
+      "stage": "S10",
+      "objects": [
+        {
+          "id": "S10.quest.1",
+          "kind": "quest",
+          "texture": "flightRing",
+          "x": 700,
+          "y": 360,
+          "width": 129.60000000000002,
+          "height": 172.8,
+          "visible": true,
+          "done": false
+        },
+        {
+          "id": "S10.quest.2",
+          "kind": "quest",
+          "texture": "flightRing",
+          "x": 1450,
+          "y": 210,
+          "width": 129.60000000000002,
+          "height": 172.8,
+          "visible": true,
+          "done": false
+        },
+        {
+          "id": "S10.quest.3",
+          "kind": "quest",
+          "texture": "flightRing",
+          "x": 2200,
+          "y": 390,
+          "width": 129.60000000000002,
+          "height": 172.8,
+          "visible": true,
+          "done": false
+        },
+        {
+          "id": "S10.reward",
+          "kind": "gift",
+          "texture": "gift",
+          "x": 2480,
+          "y": 550,
+          "width": 65.28,
+          "height": 87.04,
+          "visible": true,
+          "done": false
+        }
+      ],
+      "hazards": [
+        {
+          "id": "S10.gust.1",
+          "x": 1150,
+          "y": 458.0105443506746,
+          "kind": "gust",
+          "radius": 62,
+          "texture": "stormCloud",
+          "width": 92.17159043821036,
+          "height": 122.89545391761382,
+          "rotation": 0,
+          "scale": 0.960120733731358
+        },
+        {
+          "id": "S10.gust.2",
+          "x": 1680,
+          "y": 309.15141153519085,
+          "kind": "gust",
+          "radius": 70,
+          "texture": "stormCloud",
+          "width": 93.43540990605831,
+          "height": 124.58054654141108,
+          "rotation": 0,
+          "scale": 0.9732855198547741
+        },
+        {
+          "id": "S10.gust.3",
+          "x": 2210,
+          "y": 156.03506287587192,
+          "kind": "gust",
+          "radius": 62,
+          "texture": "stormCloud",
+          "width": 87.55258649051076,
+          "height": 116.73678198734768,
+          "rotation": 0,
+          "scale": 0.9120061092761538
+        }
+      ],
+      "path": "docs/screenshots/m6-roc/final/m6-interact/fallback-S10-scene-start.png",
+      "caption": "real map at saved start; snapshot verifies all mapped textures, screenshot shows only the current viewport"
+    },
+    {
+      "stage": "S11",
+      "objects": [
+        {
+          "id": "S11.quest.1",
+          "kind": "quest",
+          "texture": "starDevice",
+          "x": 890,
+          "y": 550,
+          "width": 65.28,
+          "height": 87.04,
+          "visible": true,
+          "done": false
+        },
+        {
+          "id": "S11.quest.2",
+          "kind": "quest",
+          "texture": "starDevice",
+          "x": 1260,
+          "y": 550,
+          "width": 65.28,
+          "height": 87.04,
+          "visible": true,
+          "done": false
+        },
+        {
+          "id": "S11.quest.3",
+          "kind": "quest",
+          "texture": "starDevice",
+          "x": 1630,
+          "y": 550,
+          "width": 65.28,
+          "height": 87.04,
+          "visible": true,
+          "done": false
+        },
+        {
+          "id": "S11.quest.4",
+          "kind": "quest",
+          "texture": "lantern",
+          "x": 2000,
+          "y": 550,
+          "width": 65.28,
+          "height": 87.04,
+          "visible": true,
+          "done": false
+        },
+        {
+          "id": "S11.golden",
+          "kind": "golden",
+          "texture": "golden",
+          "x": 1860,
+          "y": 470,
+          "width": 65.28,
+          "height": 87.04,
+          "visible": true,
+          "done": false
+        },
+        {
+          "id": "S11.reward",
+          "kind": "gift",
+          "texture": "gift",
+          "x": 2480,
+          "y": 550,
+          "width": 65.28,
+          "height": 87.04,
+          "visible": true,
+          "done": false
+        }
+      ],
+      "hazards": [],
+      "path": "docs/screenshots/m6-roc/final/m6-interact/fallback-S11-scene-start.png",
+      "caption": "real map at saved start; snapshot verifies all mapped textures, screenshot shows only the current viewport"
+    },
+    {
+      "stage": "S13",
+      "objects": [
+        {
+          "id": "S13.quest.1",
+          "kind": "quest",
+          "texture": "cargo",
+          "x": 870,
+          "y": 550,
+          "width": 65.28,
+          "height": 87.04,
+          "visible": true,
+          "done": false
+        },
+        {
+          "id": "S13.quest.2",
+          "kind": "quest",
+          "texture": "cargo",
+          "x": 1220,
+          "y": 550,
+          "width": 65.28,
+          "height": 87.04,
+          "visible": true,
+          "done": false
+        },
+        {
+          "id": "S13.quest.3",
+          "kind": "quest",
+          "texture": "cargo",
+          "x": 1570,
+          "y": 550,
+          "width": 65.28,
+          "height": 87.04,
+          "visible": true,
+          "done": false
+        },
+        {
+          "id": "S13.quest.4",
+          "kind": "quest",
+          "texture": "journal",
+          "x": 1920,
+          "y": 550,
+          "width": 65.28,
+          "height": 87.04,
+          "visible": true,
+          "done": false
+        },
+        {
+          "id": "S13.quest.5",
+          "kind": "quest",
+          "texture": "journal",
+          "x": 2270,
+          "y": 550,
+          "width": 65.28,
+          "height": 87.04,
+          "visible": true,
+          "done": false
+        },
+        {
+          "id": "S13.reward",
+          "kind": "gift",
+          "texture": "gift",
+          "x": 2730,
+          "y": 550,
+          "width": 65.28,
+          "height": 87.04,
+          "visible": true,
+          "done": false
+        }
+      ],
+      "hazards": [],
+      "path": "docs/screenshots/m6-roc/final/m6-interact/fallback-S13-scene-start.png",
+      "caption": "real map at saved start; snapshot verifies all mapped textures, screenshot shows only the current viewport"
+    },
+    {
+      "stage": "S19",
+      "objects": [
+        {
+          "id": "S19.intro",
+          "kind": "npc",
+          "texture": "starMap",
+          "x": 230,
+          "y": 550,
+          "width": 96,
+          "height": 128,
+          "visible": true,
+          "done": false
+        },
+        {
+          "id": "S19.quest.1",
+          "kind": "quest",
+          "texture": "treasureAltar",
+          "x": 982.5,
+          "y": 550,
+          "width": 65.28,
+          "height": 87.04,
+          "visible": true,
+          "done": false
+        },
+        {
+          "id": "S19.quest.2",
+          "kind": "quest",
+          "texture": "treasureAltar",
+          "x": 1445,
+          "y": 550,
+          "width": 65.28,
+          "height": 87.04,
+          "visible": true,
+          "done": false
+        },
+        {
+          "id": "S19.quest.3",
+          "kind": "quest",
+          "texture": "treasureAltar",
+          "x": 1907.5,
+          "y": 550,
+          "width": 65.28,
+          "height": 87.04,
+          "visible": true,
+          "done": false
+        },
+        {
+          "id": "S19.reward",
+          "kind": "gift",
+          "texture": "gift",
+          "x": 2480,
+          "y": 550,
+          "width": 65.28,
+          "height": 87.04,
+          "visible": true,
+          "done": false
+        }
+      ],
+      "hazards": [],
+      "path": "docs/screenshots/m6-roc/final/m6-interact/fallback-S19-scene-start.png",
+      "caption": "real map at saved start; snapshot verifies all mapped textures, screenshot shows only the current viewport"
+    },
+    {
+      "stage": "S25",
+      "objects": [
+        {
+          "id": "S25.quest.1",
+          "kind": "quest",
+          "texture": "cargo",
+          "x": 890,
+          "y": 550,
+          "width": 65.28,
+          "height": 87.04,
+          "visible": true,
+          "done": false
+        },
+        {
+          "id": "S25.quest.2",
+          "kind": "quest",
+          "texture": "cargo",
+          "x": 1260,
+          "y": 550,
+          "width": 65.28,
+          "height": 87.04,
+          "visible": true,
+          "done": false
+        },
+        {
+          "id": "S25.quest.3",
+          "kind": "quest",
+          "texture": "cargo",
+          "x": 1630,
+          "y": 550,
+          "width": 65.28,
+          "height": 87.04,
+          "visible": true,
+          "done": false
+        },
+        {
+          "id": "S25.quest.4",
+          "kind": "quest",
+          "texture": "lantern",
+          "x": 2000,
+          "y": 550,
+          "width": 65.28,
+          "height": 87.04,
+          "visible": true,
+          "done": false
+        },
+        {
+          "id": "S25.reward",
+          "kind": "gift",
+          "texture": "gift",
+          "x": 1770,
+          "y": 550,
+          "width": 65.28,
+          "height": 87.04,
+          "visible": true,
+          "done": false
+        },
+        {
+          "id": "S25.moonRock",
+          "kind": "chest",
+          "texture": "moonRock",
+          "x": 2730,
+          "y": 550,
+          "width": 65.28,
+          "height": 87.04,
+          "visible": true,
+          "done": false
+        }
+      ],
+      "hazards": [],
+      "path": "docs/screenshots/m6-roc/final/m6-interact/fallback-S25-scene-start.png",
+      "caption": "real map at saved start; snapshot verifies all mapped textures, screenshot shows only the current viewport"
+    },
+    {
+      "stage": "S28",
+      "objects": [
+        {
+          "id": "S28.intro",
+          "kind": "npc",
+          "texture": "lotusShrine",
+          "x": 230,
+          "y": 550,
+          "width": 96,
+          "height": 128,
+          "visible": true,
+          "done": false
+        },
+        {
+          "id": "S28.quest.1",
+          "kind": "quest",
+          "texture": "starDevice",
+          "x": 982.5,
+          "y": 550,
+          "width": 65.28,
+          "height": 87.04,
+          "visible": true,
+          "done": false
+        },
+        {
+          "id": "S28.quest.2",
+          "kind": "quest",
+          "texture": "starDevice",
+          "x": 1445,
+          "y": 550,
+          "width": 65.28,
+          "height": 87.04,
+          "visible": true,
+          "done": false
+        },
+        {
+          "id": "S28.quest.3",
+          "kind": "quest",
+          "texture": "starDevice",
+          "x": 1907.5,
+          "y": 550,
+          "width": 65.28,
+          "height": 87.04,
+          "visible": true,
+          "done": false
+        },
+        {
+          "id": "S28.reward",
+          "kind": "gift",
+          "texture": "gift",
+          "x": 2480,
+          "y": 550,
+          "width": 65.28,
+          "height": 87.04,
+          "visible": true,
+          "done": false
+        }
+      ],
+      "hazards": [],
+      "path": "docs/screenshots/m6-roc/final/m6-interact/fallback-S28-scene-start.png",
+      "caption": "real map at saved start; snapshot verifies all mapped textures, screenshot shows only the current viewport"
+    },
+    {
+      "stage": "S33",
+      "objects": [
+        {
+          "id": "S33.quest.1",
+          "kind": "quest",
+          "texture": "flightRing",
+          "x": 700,
+          "y": 360,
+          "width": 129.60000000000002,
+          "height": 172.8,
+          "visible": true,
+          "done": false
+        },
+        {
+          "id": "S33.quest.2",
+          "kind": "quest",
+          "texture": "flightRing",
+          "x": 1075,
+          "y": 210,
+          "width": 129.60000000000002,
+          "height": 172.8,
+          "visible": true,
+          "done": false
+        },
+        {
+          "id": "S33.quest.3",
+          "kind": "quest",
+          "texture": "flightRing",
+          "x": 1450,
+          "y": 390,
+          "width": 129.60000000000002,
+          "height": 172.8,
+          "visible": true,
+          "done": false
+        },
+        {
+          "id": "S33.quest.4",
+          "kind": "quest",
+          "texture": "flightRing",
+          "x": 1825,
+          "y": 240,
+          "width": 129.60000000000002,
+          "height": 172.8,
+          "visible": true,
+          "done": false
+        },
+        {
+          "id": "S33.quest.5",
+          "kind": "quest",
+          "texture": "flightRing",
+          "x": 2200,
+          "y": 360,
+          "width": 129.60000000000002,
+          "height": 172.8,
+          "visible": true,
+          "done": false
+        },
+        {
+          "id": "S33.reward",
+          "kind": "gift",
+          "texture": "gift",
+          "x": 2480,
+          "y": 550,
+          "width": 65.28,
+          "height": 87.04,
+          "visible": true,
+          "done": false
+        }
+      ],
+      "hazards": [
+        {
+          "id": "S33.debris.1",
+          "x": 850,
+          "y": 444.4150403333333,
+          "kind": "debris",
+          "radius": 48,
+          "texture": "debris",
+          "width": 69.77446961260262,
+          "height": 93.03262615013682,
+          "rotation": 0.15569559903573627,
+          "scale": 0.7268173917979439
+        },
+        {
+          "id": "S33.debris.2",
+          "x": 1250,
+          "y": 374.4150403333333,
+          "kind": "debris",
+          "radius": 48,
+          "texture": "debris",
+          "width": 66.50535783814371,
+          "height": 88.67381045085827,
+          "rotation": -0.050418891548645206,
+          "scale": 0.6927641441473302
+        },
+        {
+          "id": "S33.debris.3",
+          "x": 1650,
+          "y": 512.4150403333333,
+          "kind": "debris",
+          "radius": 48,
+          "texture": "debris",
+          "width": 65.35531635597707,
+          "height": 87.14042180796943,
+          "rotation": -0.10272588077790346,
+          "scale": 0.6807845453747612
+        },
+        {
+          "id": "S33.debris.4",
+          "x": 2050,
+          "y": 442.4150403333333,
+          "kind": "debris",
+          "radius": 48,
+          "texture": "debris",
+          "width": 69.83265329017445,
+          "height": 93.11020438689926,
+          "rotation": 0.15834194966157078,
+          "scale": 0.7274234717726504
+        },
+        {
+          "id": "S33.debris.5",
+          "x": 2450,
+          "y": 187.4150403333333,
+          "kind": "debris",
+          "radius": 48,
+          "texture": "debris",
+          "width": 66.27883737553475,
+          "height": 88.37178316737966,
+          "rotation": -0.06362701204358423,
+          "scale": 0.6904045559951536
+        }
+      ],
+      "path": "docs/screenshots/m6-roc/final/m6-interact/fallback-S33-scene-start.png",
+      "caption": "real map at saved start; snapshot verifies all mapped textures, screenshot shows only the current viewport"
+    },
+    {
+      "stage": "S36",
+      "objects": [
+        {
+          "id": "S36.quest.1",
+          "kind": "quest",
+          "texture": "journal",
+          "x": 890,
+          "y": 550,
+          "width": 65.28,
+          "height": 87.04,
+          "visible": true,
+          "done": false
+        },
+        {
+          "id": "S36.quest.2",
+          "kind": "quest",
+          "texture": "journal",
+          "x": 1260,
+          "y": 550,
+          "width": 65.28,
+          "height": 87.04,
+          "visible": true,
+          "done": false
+        },
+        {
+          "id": "S36.quest.3",
+          "kind": "quest",
+          "texture": "journal",
+          "x": 1630,
+          "y": 550,
+          "width": 65.28,
+          "height": 87.04,
+          "visible": true,
+          "done": false
+        },
+        {
+          "id": "S36.quest.4",
+          "kind": "quest",
+          "texture": "journal",
+          "x": 2000,
+          "y": 550,
+          "width": 65.28,
+          "height": 87.04,
+          "visible": true,
+          "done": false
+        },
+        {
+          "id": "S36.reward",
+          "kind": "gift",
+          "texture": "gift",
+          "x": 2480,
+          "y": 550,
+          "width": 65.28,
+          "height": 87.04,
+          "visible": true,
+          "done": false
+        },
+        {
+          "id": "S36.exit",
+          "kind": "ending",
+          "texture": "ending",
+          "x": 2840,
+          "y": 550,
+          "width": 65.28,
+          "height": 87.04,
+          "visible": true,
+          "done": false
+        }
+      ],
+      "hazards": [],
+      "path": "docs/screenshots/m6-roc/final/m6-interact/fallback-S36-scene-start.png",
+      "caption": "real map at saved start; snapshot verifies all mapped textures, screenshot shows only the current viewport"
+    }
+  ],
+  "errors": []
+}

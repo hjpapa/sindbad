@@ -1,0 +1,8 @@
+{
+  "date": "2026-10-08T11:09:33.561335+00:00",
+  "changes": [
+    "tests/e2e/m3-opening.spec.ts"
+  ],
+  "runtimeAssetsBuildUnchanged": true,
+  "reason": "Wait for actual S09 player and boss readiness before calling the battle helper; no game change."
+}

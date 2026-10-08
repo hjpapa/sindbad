@@ -1,6 +1,7 @@
 import {test,expect,type Page} from '@playwright/test';
 import {freshSave} from '../../src/core/state';
 import {SAVE_KEY} from '../../src/core/save';
+import {fightRocJourney} from './journey-bot';
 
 const read=(page:Page)=>page.evaluate(()=>Reflect.get(window,'__SINBAD_TEST__'));
 async function move(page:Page,x:number){
@@ -24,8 +25,9 @@ test('S09-S12 continuous route grants flight, W04 and R03 with save-safe bosses'
  const errors:string[]=[];page.on('pageerror',error=>errors.push(error.message));
  const save=freshSave();save.checkpoint={stageId:'S09',checkpointId:'start'};save.clearedStageIds=Array.from({length:8},(_,i)=>`S${String(i+1).padStart(2,'0')}`);save.weapons=['W01','W02','W03'];save.equippedWeapon='W03';save.treasures=['T01','T02'];save.relics=['R01','R02'];save.flags=['bubbleBlessing','genieCave'];save.equippedSkill='flamePulse';save.totalXp=420;
  await page.addInitScript(({key,value})=>{if(!localStorage.getItem(key))localStorage.setItem(key,value);},{key:SAVE_KEY,value:JSON.stringify(save)});await page.goto('/');await page.getByRole('button',{name:'이어하기 · S09'}).click();
+ await page.waitForFunction(()=>{const state=Reflect.get(window,'__SINBAD_TEST__');return state?.stage==='S09'&&!!state.player&&state.enemies.some((enemy:{id:string})=>enemy.id==='S09.enemy.3');});
 
- for(const [i,x] of [983,1445,1908].entries())await objective(page,x,`S09.quest.${i+1}`);await fight(page,'S09.enemy.3');await gift(page,'S09');expect((await read(page)).save.treasures).toContain('T03');await exitToNext(page);await expect.poll(async()=>(await read(page)).stage).toBe('S10');
+ await fightRocJourney(page);await gift(page,'S09');expect((await read(page)).save.treasures).toContain('T03');await exitToNext(page);await expect.poll(async()=>(await read(page)).stage).toBe('S10');
  const y=(await read(page)).player.y;await page.keyboard.down('ArrowUp');await page.waitForTimeout(400);await page.keyboard.up('ArrowUp');expect((await read(page)).player.y).toBeLessThan(y-25);await page.keyboard.down('s');await page.waitForTimeout(520);await page.keyboard.up('s');await gift(page,'S10');expect((await read(page)).save.flags).toContain('flightJournal');await exitToNext(page);await expect.poll(async()=>(await read(page)).stage).toBe('S11');
  for(const [i,x] of [890,1260,1630,2000].entries())await objective(page,x,`S11.quest.${i+1}`);await fight(page,'S11.enemy.3');await gift(page,'S11');expect((await read(page)).save.weapons).toContain('W04');await exitToNext(page);await expect.poll(async()=>(await read(page)).stage).toBe('S12');
  for(const [i,x] of [983,1445,1908].entries())await objective(page,x,`S12.quest.${i+1}`);await fight(page,'S12.enemy.3');await gift(page,'S12');expect((await read(page)).save.relics).toContain('R03');await page.reload();await page.getByRole('button',{name:'이어하기 · S12'}).click();expect((await read(page)).save.relics).toContain('R03');expect(errors).toEqual([]);

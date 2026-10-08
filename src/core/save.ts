@@ -3,12 +3,16 @@ import { maps } from '../content/maps';
 import campaign from '../content/stageIndex';
 import { goldenHearts, relics, treasures, weapons, type WeaponId } from '../content/items';
 import { freshSave, type Save } from './state';
+import {rocBossId,rocCoresBroken,rocCoreProofs,retiredRocEnemyIds} from './rocBoss';
 export const SAVE_KEY = 'sinbad.sevenTreasures.v1.slot1';
 export const SAVE_WARNING = '이 브라우저에서는 저장하지 못했어요. 파일로 보관해 주세요.';
 const checkpointIds: Record<string, string[]> = Object.fromEntries(campaign.map(s => [s.id, maps[s.id]?.checkpoints.map(c => c.id) ?? ['start']]));
-const knownObjectives = new Set(Object.values(maps).flatMap(m => [...m.objects.map(o => o.id), ...m.spawns.map(e => e.id)]));
+const knownObjectives = new Set([...retiredRocEnemyIds,...Object.values(maps).flatMap(m => [...m.objects.map(o => o.id), ...m.spawns.map(e => e.id)])]);
 const knownRewards = new Set(['S01.reward.start', ...campaign.map(s => s.rewardId), ...campaign.flatMap(s => [...s.mandatoryItems, ...s.optionalItems].map(id => `${s.id}.reward.${id}`)), ...Object.values(maps).flatMap(m => [...m.spawns.map(e => e.id), ...m.hearts.map(h => h.id), ...m.objects.flatMap(o => [`${o.id}.reward`,objectiveReward(o).id])]), ...campaign.flatMap(s => s.optionalItems.filter(x => x.startsWith('G')).map(x => `${s.id}.golden.${x}`))]);
 const knownFlags = new Set(campaign.flatMap(s => s.rewardFlags));
+// Keep the strict whitelist and accept only these authored new core proofs
+// and the two retired bandits that can exist in earlier valid saves.
+for(const id of [...rocCoreProofs,...retiredRocEnemyIds])knownRewards.add(id);
 const record = (v: unknown): v is Record<string, unknown> => typeof v === 'object' && v !== null && !Array.isArray(v);
 const number = (v: unknown, max = 1e9) => typeof v === 'number' && Number.isFinite(v) && v >= 0 && v <= max;
 const strings = (v: unknown, allowed?: (id: string) => boolean): v is string[] => Array.isArray(v) && v.length <= 20000 && v.every(x => typeof x === 'string' && x.length <= 150 && /^[\w.-]+$/.test(x) && (!allowed || allowed(x))) && new Set(v).size === v.length;
@@ -52,6 +56,10 @@ export function parseSave(raw: string): Save {
     s.upgrades = { ...v.upgrades } as Save['upgrades'];
     s.equippedSkill = v.equippedSkill as Save['equippedSkill'];
     s.settings = { difficulty: v.settings.difficulty as 'relaxed' | 'normal', musicVolume: v.settings.musicVolume as number, sfxVolume: v.settings.sfxVolume as number, reducedMotion: v.settings.reducedMotion as boolean, largeText: v.settings.largeText as boolean, aimAssist: v.settings.aimAssist as boolean };
+    // Earlier versions let the roc be defeated before its channel devices.
+    // Preserve that victory and its loot, and derive the now-hidden core
+    // objectives so the saved player can still reach the alliance dialogue.
+    if(rocCoresBroken(s)===3)s.completedObjectiveIds=[...new Set([...s.completedObjectiveIds,rocBossId,...[1,2,3].map(n=>`S09.quest.${n}`)])];
     return s;
 }
 export interface StoragePort {

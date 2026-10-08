@@ -1,0 +1,289 @@
+{
+  "date": "2026-10-06T10:42:39.724830+00:00",
+  "pass": true,
+  "artStatus": "ART_DRAFT",
+  "method": "native hashes, preserved SVG hashes, exact lossless uniform normalization, 14 real decodes, transparent boundaries and opaque measured grip; visual approval separate",
+  "nativeCandidates": 8,
+  "files": [
+    {
+      "path": "art-source/weapons/W01.webp",
+      "role": "original",
+      "size": [
+        640,
+        256
+      ],
+      "grip": [
+        83.2,
+        128.0
+      ],
+      "visibleBounds": [
+        11,
+        28,
+        613,
+        176
+      ],
+      "bytes": 42148,
+      "sha256": "fa8f269d17920d88c7a9afcc1b79e36bf020bbb1c545b4a0ba4182cee5566ad3"
+    },
+    {
+      "path": "public/assets/weapons/W01.webp",
+      "role": "runtime",
+      "size": [
+        160,
+        64
+      ],
+      "grip": [
+        20.8,
+        32.0
+      ],
+      "visibleBounds": [
+        2,
+        7,
+        154,
+        44
+      ],
+      "bytes": 3210,
+      "sha256": "9f5f9a88f7dc6a33f7b332d4eb4715843d514e04641b921b09b4ecba52b7b599"
+    },
+    {
+      "path": "art-source/weapons/W03.webp",
+      "role": "original",
+      "size": [
+        640,
+        256
+      ],
+      "grip": [
+        83.2,
+        128.0
+      ],
+      "visibleBounds": [
+        28,
+        30,
+        503,
+        168
+      ],
+      "bytes": 41974,
+      "sha256": "f71329135845eacd9f83b0dc6098e80c7b843c4a0f3c4099eb9b8d81a8930db4"
+    },
+    {
+      "path": "public/assets/weapons/W03.webp",
+      "role": "runtime",
+      "size": [
+        160,
+        64
+      ],
+      "grip": [
+        20.8,
+        32.0
+      ],
+      "visibleBounds": [
+        6,
+        7,
+        126,
+        42
+      ],
+      "bytes": 3634,
+      "sha256": "28fb00b9099b80eb25e16c2949e226f7636b2be5edc63d7b334d2f1790b62073"
+    },
+    {
+      "path": "art-source/weapons/W04.webp",
+      "role": "original",
+      "size": [
+        640,
+        256
+      ],
+      "grip": [
+        160.0,
+        128.0
+      ],
+      "visibleBounds": [
+        9,
+        91,
+        626,
+        186
+      ],
+      "bytes": 39804,
+      "sha256": "0088eccbe2b5f06ba94565e989efe570fc1518f86389ecd63c59c136a932ffd5"
+    },
+    {
+      "path": "public/assets/weapons/W04.webp",
+      "role": "runtime",
+      "size": [
+        160,
+        64
+      ],
+      "grip": [
+        40.0,
+        32.0
+      ],
+      "visibleBounds": [
+        2,
+        22,
+        157,
+        47
+      ],
+      "bytes": 3176,
+      "sha256": "1e2469130784ad6f54eb92f81c956b345d0e52764ae80b3c1867731089374f56"
+    },
+    {
+      "path": "art-source/weapons/W05.webp",
+      "role": "original",
+      "size": [
+        320,
+        640
+      ],
+      "grip": [
+        144.0,
+        320.0
+      ],
+      "visibleBounds": [
+        30,
+        9,
+        183,
+        621
+      ],
+      "bytes": 58010,
+      "sha256": "b6847e3fe56fd0110720c190d9bd5978072121f9adb7e4e53a1abb7d681167f2"
+    },
+    {
+      "path": "public/assets/weapons/W05.webp",
+      "role": "runtime",
+      "size": [
+        80,
+        160
+      ],
+      "grip": [
+        36.0,
+        80.0
+      ],
+      "visibleBounds": [
+        7,
+        2,
+        46,
+        155
+      ],
+      "bytes": 4448,
+      "sha256": "32af3fda2fe54903e6b2f00d5d3f7b88fbf4cf56ac9e962ee5cbd8b74f419625"
+    },
+    {
+      "path": "art-source/weapons/W06.webp",
+      "role": "original",
+      "size": [
+        640,
+        256
+      ],
+      "grip": [
+        51.2,
+        128.0
+      ],
+      "visibleBounds": [
+        9,
+        56,
+        565,
+        201
+      ],
+      "bytes": 59500,
+      "sha256": "7d4fed71e5354a00aebdc6ccbbb3d393729fe332ccb02e386563bb8048a83de5"
+    },
+    {
+      "path": "public/assets/weapons/W06.webp",
+      "role": "runtime",
+      "size": [
+        160,
+        64
+      ],
+      "grip": [
+        12.8,
+        32.0
+      ],
+      "visibleBounds": [
+        2,
+        13,
+        142,
+        51
+      ],
+      "bytes": 3512,
+      "sha256": "0b2bea82dbe3561bf78ce7893ecf74e4836d99ad5c5e3c7539aa8d5e8671d947"
+    },
+    {
+      "path": "art-source/weapons/W07.webp",
+      "role": "original",
+      "size": [
+        640,
+        256
+      ],
+      "grip": [
+        96.0,
+        128.0
+      ],
+      "visibleBounds": [
+        27,
+        43,
+        631,
+        214
+      ],
+      "bytes": 50182,
+      "sha256": "4461f021a93335535d582ca9dab2894ce6f73ff5569c6186dfd1f6b819e9aed6"
+    },
+    {
+      "path": "public/assets/weapons/W07.webp",
+      "role": "runtime",
+      "size": [
+        160,
+        64
+      ],
+      "grip": [
+        24.0,
+        32.0
+      ],
+      "visibleBounds": [
+        6,
+        10,
+        158,
+        54
+      ],
+      "bytes": 3420,
+      "sha256": "f3c8069d33121a35695135ca0ee6d6929fff322499331a9b65d62c1dc127621f"
+    },
+    {
+      "path": "art-source/weapons/W02.webp",
+      "role": "original",
+      "size": [
+        640,
+        256
+      ],
+      "grip": [
+        320.0,
+        128.0
+      ],
+      "visibleBounds": [
+        51,
+        104,
+        589,
+        197
+      ],
+      "bytes": 40716,
+      "sha256": "8485a26e405f568ed8413b34dd818d9ad12f6f3843043cfbf30fe80c6a9f52cf"
+    },
+    {
+      "path": "public/assets/weapons/W02.webp",
+      "role": "runtime",
+      "size": [
+        160,
+        64
+      ],
+      "grip": [
+        80.0,
+        32.0
+      ],
+      "visibleBounds": [
+        12,
+        26,
+        148,
+        50
+      ],
+      "bytes": 3118,
+      "sha256": "a75006cf681a18063f6f9b3fb3522f3e6269a90bf8bb771abd36c582b5e01de6"
+    }
+  ]
+}

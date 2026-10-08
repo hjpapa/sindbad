@@ -1,0 +1,215 @@
+{
+  "method": "Legacy tests/audits write fixed report names. Current-run bytes preserved under a unique folder; exact previous report bytes restored from pre-task backup. No evidence deleted.",
+  "reports": [
+    {
+      "restoredOriginal": "docs/validation/a4-transition.json",
+      "originalSha256": "96edc68fb867088f19e75b77d1030ca99a2b213a96f7b4d12c4369a44aa05755",
+      "currentRunCopy": "docs/validation/m6-bat-regression-reports/a4-transition.json",
+      "currentRunSha256": "9a491c9e333d3042cd4a8785533633d73cc30b0a513687d2ab09fdf620e16e0a"
+    },
+    {
+      "restoredOriginal": "docs/validation/a7-effects-fallback.json",
+      "originalSha256": "ec74756607eced17f02b606a04f5482f2ba4fdd142466d690d2df6565c4e5f4d",
+      "currentRunCopy": "docs/validation/m6-bat-regression-reports/a7-effects-fallback.json",
+      "currentRunSha256": "fd5fb512b93d78a1087f172924e5af42cfb60159e806d16b2c68b7efd2fd26a0"
+    },
+    {
+      "restoredOriginal": "docs/validation/a7-effects.json",
+      "originalSha256": "ad3d4870722c86f503797f11e975beb82e201e0ba531d16e3d9ee8d7d363e980",
+      "currentRunCopy": "docs/validation/m6-bat-regression-reports/a7-effects.json",
+      "currentRunSha256": "c5b776a303f88cdbfef14ecba76ac5570cb932696346a5e0b3f689164612cc71"
+    },
+    {
+      "restoredOriginal": "docs/validation/a7-projectiles.json",
+      "originalSha256": "3ba59a4edfbec85f9d2c95949daeaa0b407900fdf261a309a97b36c13b59c6ce",
+      "currentRunCopy": "docs/validation/m6-bat-regression-reports/a7-projectiles.json",
+      "currentRunSha256": "cd1c0e1ff3b2a749481d408a4fcdb78d2a45cb4c67c361d08bd3e0eb91d5c21b"
+    },
+    {
+      "restoredOriginal": "docs/validation/a8-touch-fallback.json",
+      "originalSha256": "7063cf719a133f89b0b902753b718d02d1f4a6d4d83f11c06596d15928006a79",
+      "currentRunCopy": "docs/validation/m6-bat-regression-reports/a8-touch-fallback.json",
+      "currentRunSha256": "17ed4a12adb8f9cb200644ea166cc82862dcc2fbe3ab354c7666883a006cedc6"
+    },
+    {
+      "restoredOriginal": "docs/validation/a8-touch-icons.json",
+      "originalSha256": "5f60b17a7493630e92e157253b3ff11bc8851e89ee296042858bcb9dcfae27b2",
+      "currentRunCopy": "docs/validation/m6-bat-regression-reports/a8-touch-icons.json",
+      "currentRunSha256": "96950e308b4ef8be8c3093a8a61b2b51f78c6cc9ef8610bd02dea6301deb4373"
+    },
+    {
+      "restoredOriginal": "docs/validation/art-budget.json",
+      "originalSha256": "e205ad6e7d787258984b80648985978183235de0dbe654dcc9a071fffd98c34c",
+      "currentRunCopy": "docs/validation/m6-bat-regression-reports/art-budget.json",
+      "currentRunSha256": "bbd59ba9188b4dcb6d9ca7405b62c860d3e93f8c2899a2a1c70a18818fd2af31"
+    },
+    {
+      "restoredOriginal": "docs/validation/complete-journey.json",
+      "originalSha256": "39c964f728b31a6646db900ef94224dee3098b5eddbe9f33e6c8ba0168702177",
+      "currentRunCopy": "docs/validation/m6-bat-regression-reports/complete-journey.json",
+      "currentRunSha256": "507a0d5650e9444404feb44bdbd0b78234f30fb8f1f38a7ba471542ecd849631"
+    },
+    {
+      "restoredOriginal": "docs/validation/effects.json",
+      "originalSha256": "7fd8297a68a602150eeeb11795ecca37c53eb378f4382a04b0bcd724776d719e",
+      "currentRunCopy": "docs/validation/m6-bat-regression-reports/effects.json",
+      "currentRunSha256": "7dc49aa768324edd39d698baeae54b7c05cb4fea4e8b110b1d7d39924d25b40a"
+    },
+    {
+      "restoredOriginal": "docs/validation/enemy-art.json",
+      "originalSha256": "513cc583aab03ec6663ae347d32faa633d435ac6dd351fdebd75552d796bdc23",
+      "currentRunCopy": "docs/validation/m6-bat-regression-reports/enemy-art.json",
+      "currentRunSha256": "673c7ee2f386e4a5cfc5cd681076c08ffdd230ef8baaa49efd05545a8e488d3f"
+    },
+    {
+      "restoredOriginal": "docs/validation/illustrations.json",
+      "originalSha256": "75a2bcc592028342c4abd290b6e2c9b08ca7079ae89df604ef380b38ea571a5f",
+      "currentRunCopy": "docs/validation/m6-bat-regression-reports/illustrations.json",
+      "currentRunSha256": "99abaae38b7c339496f1295a92336335acf23d3823a74f0324459ebea1d94656"
+    },
+    {
+      "restoredOriginal": "docs/validation/m6-flight-phone-fallback.json",
+      "originalSha256": "bd502f9fdc08dd58ca6936b2151248b4eb571b84c413d74cc36fccc1f3e720a7",
+      "currentRunCopy": "docs/validation/m6-bat-regression-reports/m6-flight-phone-fallback.json",
+      "currentRunSha256": "0b707b67dd9d4202f066d42ed2b349b88bc04c874c455c1f35ab140c2f10337c"
+    },
+    {
+      "restoredOriginal": "docs/validation/m6-flight-phone-normal.json",
+      "originalSha256": "35eea6f2fb90131f03272193b558a95e7d8749e28ad8a700172d2ed770d8194b",
+      "currentRunCopy": "docs/validation/m6-bat-regression-reports/m6-flight-phone-normal.json",
+      "currentRunSha256": "0397f19c02e7b08db0a3c3752b40300c02d9b4b48578228811102860b603469b"
+    },
+    {
+      "restoredOriginal": "docs/validation/m6-flight-tablet-fallback.json",
+      "originalSha256": "5ac9f96b4fef2eaa62f2d6594532f4c71b07f47fda892e938c41133961c15fc7",
+      "currentRunCopy": "docs/validation/m6-bat-regression-reports/m6-flight-tablet-fallback.json",
+      "currentRunSha256": "28bff49a69f7c692f889ab69956fe2512b400a934fb29e12bc529dfd09e383b4"
+    },
+    {
+      "restoredOriginal": "docs/validation/m6-flight-tablet-normal.json",
+      "originalSha256": "3e220aae14fe9ccce01d8e57ba92ff96e46e017cf9b35525fabdf13fdd3e7243",
+      "currentRunCopy": "docs/validation/m6-bat-regression-reports/m6-flight-tablet-normal.json",
+      "currentRunSha256": "1ef6b2e75dc2c7a1affe7035e7a4658e42e1f483816d0aa3e540d06a6b89b0df"
+    },
+    {
+      "restoredOriginal": "docs/validation/m6-interact-chest-fallback.json",
+      "originalSha256": "9d65aad860bc6990ca7c8ccae28523735721cf8e49ed3157796b2759ea090731",
+      "currentRunCopy": "docs/validation/m6-bat-regression-reports/m6-interact-chest-fallback.json",
+      "currentRunSha256": "3b8f8dab70159af6b50fd2e4c1a39e00781cc12c2da80d26abc61069b54282ac"
+    },
+    {
+      "restoredOriginal": "docs/validation/m6-interact-chest-play.json",
+      "originalSha256": "2e9cfcfb99cd9da664b1b964daa613bea5d9673385c22853167eb08171757de2",
+      "currentRunCopy": "docs/validation/m6-bat-regression-reports/m6-interact-chest-play.json",
+      "currentRunSha256": "0ba9b6bb1f794db302c409c5a5e1441ef953726ec88b3dad941c9968adb125fa"
+    },
+    {
+      "restoredOriginal": "docs/validation/m6-interact-map-fallback.json",
+      "originalSha256": "bae759105e6d8a7f7bec3902deb2dea43d821f114518cb1e4f08059a91c89b8f",
+      "currentRunCopy": "docs/validation/m6-bat-regression-reports/m6-interact-map-fallback.json",
+      "currentRunSha256": "3d74a66623aa656e383e7ed6a4ae02679eed28479552c553a46bc934d3a23534"
+    },
+    {
+      "restoredOriginal": "docs/validation/m6-interact-map-normal.json",
+      "originalSha256": "9c6b2c2ca03d075fc343c8dc642c862b3848aa036bbf2ad3a930b2c96450211e",
+      "currentRunCopy": "docs/validation/m6-bat-regression-reports/m6-interact-map-normal.json",
+      "currentRunSha256": "9ea192cab6667d0616a533559f88e8b0f549c914287bbdbfc98bc69f15dcc3d2"
+    },
+    {
+      "restoredOriginal": "docs/validation/m6-interact-rescue-fallback.json",
+      "originalSha256": "dd5a22757a3c3bc7b76f5f4de314076349544266994f9fa4abb7a379cf9460c1",
+      "currentRunCopy": "docs/validation/m6-bat-regression-reports/m6-interact-rescue-fallback.json",
+      "currentRunSha256": "95ba423de28df3d262eca402f2cdf2247d07eab788ecd124f85f257a267211b6"
+    },
+    {
+      "restoredOriginal": "docs/validation/m6-interact-rescue-normal.json",
+      "originalSha256": "47c6f5160135297284c63ec42cf88f3438cf7a8978e6874bf0ee37967b0fe412",
+      "currentRunCopy": "docs/validation/m6-bat-regression-reports/m6-interact-rescue-normal.json",
+      "currentRunSha256": "7af50c3fcbd99fc7ee886e0e6dfe916d6c4bcb33e83f20614c7af5ccc0940152"
+    },
+    {
+      "restoredOriginal": "docs/validation/m6-kite-phone-fallback.json",
+      "originalSha256": "fa295062c950f3e22a88f4a37124aacd050f67418b0c0d07aad03ed7c5fd2cae",
+      "currentRunCopy": "docs/validation/m6-bat-regression-reports/m6-kite-phone-fallback.json",
+      "currentRunSha256": "f44bde78ba6c8b336788ebce4107ea5dca8d81fb93b2fad7d757471068d000e9"
+    },
+    {
+      "restoredOriginal": "docs/validation/m6-kite-phone-normal.json",
+      "originalSha256": "c01a22a427109ed68e76682c0a74bf3bbe680d7d65144b61cf2841ceb69f472a",
+      "currentRunCopy": "docs/validation/m6-bat-regression-reports/m6-kite-phone-normal.json",
+      "currentRunSha256": "503382c4c63986b481d97bf385d9cbab86b3abb27f70446396928a5891f29e36"
+    },
+    {
+      "restoredOriginal": "docs/validation/m6-kite-tablet-fallback.json",
+      "originalSha256": "0e2e232dc6feda47d578934a6503d4daae16579c044229b531f496c733ec67df",
+      "currentRunCopy": "docs/validation/m6-bat-regression-reports/m6-kite-tablet-fallback.json",
+      "currentRunSha256": "96ddfcd357abbbe0a1288943c6aa81f9d7ad931dbfa08cef1db81e529b434d8f"
+    },
+    {
+      "restoredOriginal": "docs/validation/m6-kite-tablet-normal.json",
+      "originalSha256": "2124b3b47d1869a91410c97d0d526c997c3f97eebd7ce32db8638e84757399c3",
+      "currentRunCopy": "docs/validation/m6-bat-regression-reports/m6-kite-tablet-normal.json",
+      "currentRunSha256": "c30e516eef84e6ede96e27ec2bcdd7a5816a1f6b47ad57d5f30b41011407c149"
+    },
+    {
+      "restoredOriginal": "docs/validation/npc-faces-fallback.json",
+      "originalSha256": "d89ffdccdd523612d9c989d1a40d28af0e4f05f24202ece31075d4547d413bc5",
+      "currentRunCopy": "docs/validation/m6-bat-regression-reports/npc-faces-fallback.json",
+      "currentRunSha256": "7f78e964445516a33c71cb8ed7f74d585dda6a16f77ab34a1689f55864dbd817"
+    },
+    {
+      "restoredOriginal": "docs/validation/npc-faces.json",
+      "originalSha256": "44c2ea8a2870f3f3470c38d59f0e9346f5062ee7901121cbc482d18583f96827",
+      "currentRunCopy": "docs/validation/m6-bat-regression-reports/npc-faces.json",
+      "currentRunSha256": "fb3096cca7dc8983efc75e84b3715133626304dd94c2cd473802b6e9f2817e26"
+    },
+    {
+      "restoredOriginal": "docs/validation/terrain-art.json",
+      "originalSha256": "41762be3d761d27e84eba242081d6e649d12cb5df28f2bb6ea787400eaec8444",
+      "currentRunCopy": "docs/validation/m6-bat-regression-reports/terrain-art.json",
+      "currentRunSha256": "77274a46cc4757d5a3444b6d7dfa6ec097554cbefa8380b3198741c1ea29d672"
+    },
+    {
+      "restoredOriginal": "docs/validation/terrain-fallback-both.json",
+      "originalSha256": "056241d20816cd636e9d9657f78c380abf6242d4fbd9ae200e3dba18af73e4ab",
+      "currentRunCopy": "docs/validation/m6-bat-regression-reports/terrain-fallback-both.json",
+      "currentRunSha256": "4cc01e56c6e7a56ad8dde9282d4b43e03c36848acdeb4758ca6a412fbc09e0f2"
+    },
+    {
+      "restoredOriginal": "docs/validation/terrain-fallback-fill.json",
+      "originalSha256": "f7146362f2128c31dbba91f49196cb42872cb84de01ad267346226568872345f",
+      "currentRunCopy": "docs/validation/m6-bat-regression-reports/terrain-fallback-fill.json",
+      "currentRunSha256": "4b2bd7a2b0f02892e063891baa2d51c2c08e1a7066736cb8be3aede177948482"
+    },
+    {
+      "restoredOriginal": "docs/validation/terrain-fallback-top.json",
+      "originalSha256": "f5baee6f53d9542e52625ae2dfe95107d74fdf69e305c4c443292bc34f93a054",
+      "currentRunCopy": "docs/validation/m6-bat-regression-reports/terrain-fallback-top.json",
+      "currentRunSha256": "8ec776de1d1f01d165d22ee122f3b6b4c6ab0f813343cf009c3fa10ee6b152a1"
+    },
+    {
+      "restoredOriginal": "docs/validation/terrain.json",
+      "originalSha256": "0940187955f8d3fa31c85ab438c46c04aaf8601a53d08373ba3e03b0ef2f1d3d",
+      "currentRunCopy": "docs/validation/m6-bat-regression-reports/terrain.json",
+      "currentRunSha256": "4edce33adf8afd0cfbe6daba97ccd9e2cebd6209b7e1aa3178e1f89432a9318e"
+    },
+    {
+      "restoredOriginal": "docs/validation/touch-icons.json",
+      "originalSha256": "64d08a43484541b589b5b98eb1bc953b5569015d64f5800a95373130c000215c",
+      "currentRunCopy": "docs/validation/m6-bat-regression-reports/touch-icons.json",
+      "currentRunSha256": "af4f9fa7f1e6d0b0bc777ef43af47968bf35ac98f6769876a0d35d21bfb4120d"
+    },
+    {
+      "restoredOriginal": "docs/validation/weapons.json",
+      "originalSha256": "fa79ade99091ef77eec041dda0645a1ab4d975330cebd377023e85837b759e70",
+      "currentRunCopy": "docs/validation/m6-bat-regression-reports/weapons.json",
+      "currentRunSha256": "05448880a37315a2ea44073f3701ddc33e044c70aa70c8cc6e1f9c3e7e8df609"
+    },
+    {
+      "restoredOriginal": "docs/validation/world-props.json",
+      "originalSha256": "174a3b0e99decf4221231d3d6f4a8f1e857b5c8cb8e9c390462e4f24f2d61c96",
+      "currentRunCopy": "docs/validation/m6-bat-regression-reports/world-props.json",
+      "currentRunSha256": "12a792d107083f9fa4d51d3d62d43f16ab9b6d5f6ef6967ac5620b214a46cf54"
+    }
+  ]
+}

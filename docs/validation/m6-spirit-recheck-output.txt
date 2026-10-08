@@ -1,0 +1,51 @@
+
+> sinbad-seven-treasures@0.1.0 test:e2e
+> playwright test tests/e2e/spirit-actions.spec.ts --reporter=list,json,html
+
+
+Running 4 tests using 1 worker
+
+(node:34684) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:34684) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 tests\e2e\spirit-actions.spec.ts:54:41 › phone spirits four actions in storm, flame, waves and final tower (2.5m)
+  ok 2 tests\e2e\spirit-actions.spec.ts:54:41 › phone spirits missing-sheet recovery in storm, flame, waves and final tower (2.4m)
+  x  3 tests\e2e\spirit-actions.spec.ts:54:41 › tablet spirits four actions in storm, flame, waves and final tower (2.1m)
+(node:39536) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:39536) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 4 tests\e2e\spirit-actions.spec.ts:54:41 › tablet spirits missing-sheet recovery in storm, flame, waves and final tower (2.4m)
+
+
+  1) tests\e2e\spirit-actions.spec.ts:54:41 › tablet spirits four actions in storm, flame, waves and final tower 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: [32mtrue[39m
+    Received: [31mfalse[39m
+
+      68 |             expect((await read(page)).sim).toBe(paused.sim);expect((await read(page)).enemies).toEqual(paused.enemies);
+      69 |             const hpBefore=(await read(page)).player.hp;await page.locator('#resume').click();const attack=await capture('attack');
+    > 70 |             expect(attack.flipX).toBe(true);expect(attack.y).toBe(def.y);
+         |                                  ^
+      71 |             await capture('recover');const hpAtFirstRecovery=(await read(page)).player.hp;
+      72 |             // An earlier hit can leave the hero invulnerable for this cycle.
+      73 |             // Observe subsequent real cycles without changing the damage rule;
+        at C:\code\code10(sindbad)\tests\e2e\spirit-actions.spec.ts:70:34
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\spirit-actions-tablet-spir-4cf2f-flame-waves-and-final-tower\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\spirit-actions-tablet-spir-4cf2f-flame-waves-and-final-tower\error-context.md
+
+  1 failed
+    tests\e2e\spirit-actions.spec.ts:54:41 › tablet spirits four actions in storm, flame, waves and final tower 
+  3 passed (9.6m)
+
+To open last HTML report run:
+[36m[39m
+[36m  npx playwright show-report[39m
+[36m[39m

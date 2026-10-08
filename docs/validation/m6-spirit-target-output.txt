@@ -1,0 +1,136 @@
+
+> sinbad-seven-treasures@0.1.0 test:e2e
+> playwright test tests/e2e/spirit-actions.spec.ts --reporter=list,json,html
+
+
+Running 4 tests using 1 worker
+
+(node:41652) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:41652) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x  1 tests\e2e\spirit-actions.spec.ts:54:41 › phone spirits four actions in storm, flame, waves and final tower (1.1m)
+(node:46576) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:46576) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x  2 tests\e2e\spirit-actions.spec.ts:54:41 › phone spirits missing-sheet recovery in storm, flame, waves and final tower (50.1s)
+(node:58132) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:58132) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x  3 tests\e2e\spirit-actions.spec.ts:54:41 › tablet spirits four actions in storm, flame, waves and final tower (11.7s)
+(node:21764) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:21764) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x  4 tests\e2e\spirit-actions.spec.ts:54:41 › tablet spirits missing-sheet recovery in storm, flame, waves and final tower (51.2s)
+
+
+  1) tests\e2e\spirit-actions.spec.ts:54:41 › phone spirits four actions in storm, flame, waves and final tower › Expect "poll toBeLessThan" 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBeLessThan[2m([22m[32mexpected[39m[2m)[22m
+
+    Expected: < [32m31[39m
+    Received:   [31m31[39m
+
+    Call Log:
+    - Timeout 10000ms exceeded while waiting on the predicate
+
+      78 |                 const hp=(await enemy())!.hp;
+      79 |                 if(hit===0)await page.getByRole('button',{name:'터치 행동',exact:true}).tap();else await page.keyboard.press('j');
+    > 80 |                 await expect.poll(async()=>(await enemy())!.hp).toBeLessThan(hp);
+         |                 ^
+      81 |                 if((await enemy())!.hp>0)await page.waitForTimeout(440);
+      82 |             }
+      83 |             await capture('defeated');expect((await enemy())!.label).toBe('빛으로 돌아갔어요');
+        at C:\code\code10(sindbad)\tests\e2e\spirit-actions.spec.ts:80:17
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\spirit-actions-phone-spiri-09b8f-flame-waves-and-final-tower\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\spirit-actions-phone-spiri-09b8f-flame-waves-and-final-tower\error-context.md
+
+  2) tests\e2e\spirit-actions.spec.ts:54:41 › phone spirits missing-sheet recovery in storm, flame, waves and final tower › Expect "poll toBeLessThan" 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBeLessThan[2m([22m[32mexpected[39m[2m)[22m
+
+    Expected: < [32m31[39m
+    Received:   [31m31[39m
+
+    Call Log:
+    - Timeout 10000ms exceeded while waiting on the predicate
+
+      78 |                 const hp=(await enemy())!.hp;
+      79 |                 if(hit===0)await page.getByRole('button',{name:'터치 행동',exact:true}).tap();else await page.keyboard.press('j');
+    > 80 |                 await expect.poll(async()=>(await enemy())!.hp).toBeLessThan(hp);
+         |                 ^
+      81 |                 if((await enemy())!.hp>0)await page.waitForTimeout(440);
+      82 |             }
+      83 |             await capture('defeated');expect((await enemy())!.label).toBe('빛으로 돌아갔어요');
+        at C:\code\code10(sindbad)\tests\e2e\spirit-actions.spec.ts:80:17
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\spirit-actions-phone-spiri-6d34b-flame-waves-and-final-tower\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\spirit-actions-phone-spiri-6d34b-flame-waves-and-final-tower\error-context.md
+
+  3) tests\e2e\spirit-actions.spec.ts:54:41 › tablet spirits four actions in storm, flame, waves and final tower 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBeLessThan[2m([22m[32mexpected[39m[2m)[22m
+
+    Expected: < [32m186.6[39m
+    Received:   [31m186.6[39m
+
+      70 |             expect(attack.flipX).toBe(true);expect(attack.y).toBe(def.y);
+      71 |             await capture('recover');const hpAfter=(await read(page)).player.hp;
+    > 72 |             expect(hpAfter).toBeLessThan(hpBefore);expect((await read(page)).projectiles).toBe(0);
+         |                             ^
+      73 |             await moveJourney(page,(await enemy())!.x+130,552);
+      74 |             await expect.poll(async()=>(await enemy())!.flipX).toBe(false);inspect((await enemy())!);await shot('right',(await enemy())!);
+      75 |             const before=(await read(page)).save as Save;
+        at C:\code\code10(sindbad)\tests\e2e\spirit-actions.spec.ts:72:29
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\spirit-actions-tablet-spir-4cf2f-flame-waves-and-final-tower\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\spirit-actions-tablet-spir-4cf2f-flame-waves-and-final-tower\error-context.md
+
+  4) tests\e2e\spirit-actions.spec.ts:54:41 › tablet spirits missing-sheet recovery in storm, flame, waves and final tower › Expect "poll toBeLessThan" 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBeLessThan[2m([22m[32mexpected[39m[2m)[22m
+
+    Expected: < [32m31[39m
+    Received:   [31m31[39m
+
+    Call Log:
+    - Timeout 10000ms exceeded while waiting on the predicate
+
+      78 |                 const hp=(await enemy())!.hp;
+      79 |                 if(hit===0)await page.getByRole('button',{name:'터치 행동',exact:true}).tap();else await page.keyboard.press('j');
+    > 80 |                 await expect.poll(async()=>(await enemy())!.hp).toBeLessThan(hp);
+         |                 ^
+      81 |                 if((await enemy())!.hp>0)await page.waitForTimeout(440);
+      82 |             }
+      83 |             await capture('defeated');expect((await enemy())!.label).toBe('빛으로 돌아갔어요');
+        at C:\code\code10(sindbad)\tests\e2e\spirit-actions.spec.ts:80:17
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\spirit-actions-tablet-spir-f0a7b-flame-waves-and-final-tower\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\spirit-actions-tablet-spir-f0a7b-flame-waves-and-final-tower\error-context.md
+
+  4 failed
+    tests\e2e\spirit-actions.spec.ts:54:41 › phone spirits four actions in storm, flame, waves and final tower 
+    tests\e2e\spirit-actions.spec.ts:54:41 › phone spirits missing-sheet recovery in storm, flame, waves and final tower 
+    tests\e2e\spirit-actions.spec.ts:54:41 › tablet spirits four actions in storm, flame, waves and final tower 
+    tests\e2e\spirit-actions.spec.ts:54:41 › tablet spirits missing-sheet recovery in storm, flame, waves and final tower 
+
+To open last HTML report run:
+[36m[39m
+[36m  npx playwright show-report[39m
+[36m[39m

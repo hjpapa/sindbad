@@ -1,0 +1,1966 @@
+{
+  "device": "phone",
+  "viewport": {
+    "width": 844,
+    "height": 390
+  },
+  "fallback": false,
+  "fixture": true,
+  "checks": [
+    {
+      "label": "idle",
+      "observed": {
+        "id": "S08.enemy.bat.1",
+        "x": 359.78650499994586,
+        "y": 550,
+        "hp": 31,
+        "state": "idle",
+        "visible": true,
+        "alpha": 1,
+        "art": "bat",
+        "texture": "bat-actions",
+        "frame": 0,
+        "flipX": true,
+        "originX": 0.361328125,
+        "originY": 0.75,
+        "displayHeight": 184.58369098712447,
+        "footOffset": 64,
+        "label": ""
+      },
+      "path": "docs/screenshots/m6-bat/final/m6-bat/phone-normal-idle.png"
+    },
+    {
+      "label": "telegraph",
+      "observed": {
+        "id": "S08.enemy.bat.1",
+        "x": 359.78650499994586,
+        "y": 550,
+        "hp": 31,
+        "state": "telegraph",
+        "visible": true,
+        "alpha": 1,
+        "art": "bat",
+        "texture": "bat-actions",
+        "frame": 1,
+        "flipX": true,
+        "originX": 0.453125,
+        "originY": 0.8046875,
+        "displayHeight": 184.58369098712447,
+        "footOffset": 64,
+        "label": "⚠ 준비… 피하세요!"
+      },
+      "path": "docs/screenshots/m6-bat/final/m6-bat/phone-normal-telegraph.png"
+    },
+    {
+      "label": "attack",
+      "observed": {
+        "id": "S08.enemy.bat.1",
+        "x": 359.78650499994586,
+        "y": 550,
+        "hp": 31,
+        "state": "attack",
+        "visible": true,
+        "alpha": 1,
+        "art": "bat",
+        "texture": "bat-actions",
+        "frame": 2,
+        "flipX": true,
+        "originX": 0.322265625,
+        "originY": 0.546875,
+        "displayHeight": 184.58369098712447,
+        "footOffset": 64,
+        "label": "⚠ 준비… 피하세요!"
+      },
+      "path": "docs/screenshots/m6-bat/final/m6-bat/phone-normal-attack.png"
+    },
+    {
+      "label": "recover",
+      "observed": {
+        "id": "S08.enemy.bat.1",
+        "x": 359.78650499994586,
+        "y": 550,
+        "hp": 31,
+        "state": "recover",
+        "visible": true,
+        "alpha": 1,
+        "art": "bat",
+        "texture": "bat-actions",
+        "frame": 0,
+        "flipX": true,
+        "originX": 0.361328125,
+        "originY": 0.75,
+        "displayHeight": 184.58369098712447,
+        "footOffset": 64,
+        "label": "✦"
+      },
+      "path": "docs/screenshots/m6-bat/final/m6-bat/phone-normal-recover.png"
+    },
+    {
+      "contactDamage": {
+        "hpBefore": 195,
+        "hpAfter": 186.6
+      }
+    },
+    {
+      "label": "right",
+      "observed": {
+        "id": "S08.enemy.bat.1",
+        "x": 359.78650499994586,
+        "y": 550,
+        "hp": 31,
+        "state": "idle",
+        "visible": true,
+        "alpha": 1,
+        "art": "bat",
+        "texture": "bat-actions",
+        "frame": 0,
+        "flipX": false,
+        "originX": 0.638671875,
+        "originY": 0.75,
+        "displayHeight": 184.58369098712447,
+        "footOffset": 64,
+        "label": "빈틈 · J 공격"
+      },
+      "path": "docs/screenshots/m6-bat/final/m6-bat/phone-normal-right.png"
+    },
+    {
+      "label": "defeated",
+      "observed": {
+        "id": "S08.enemy.bat.1",
+        "x": 359.83609177680535,
+        "y": 550,
+        "hp": 0,
+        "state": "defeated",
+        "visible": true,
+        "alpha": 1,
+        "art": "bat",
+        "texture": "bat-actions",
+        "frame": 3,
+        "flipX": false,
+        "originX": 0.53125,
+        "originY": 0.5625,
+        "displayHeight": 184.58369098712447,
+        "footOffset": 64,
+        "label": "저주가 풀렸어!"
+      },
+      "path": "docs/screenshots/m6-bat/final/m6-bat/phone-normal-defeated.png"
+    },
+    {
+      "label": "safe-puzzle",
+      "observed": {
+        "projectileArt": [],
+        "effectArt": [],
+        "cachedEffectKeys": [
+          "effect-hit-spark",
+          "effect-purify-light",
+          "effect-surrender-flag"
+        ],
+        "cachedActionKeys": [
+          "bat-actions"
+        ],
+        "terrain": {
+          "style": "crystal",
+          "cachedKeys": [
+            "terrain-crystal-fill",
+            "terrain-crystal-top"
+          ],
+          "textures": [
+            {
+              "key": "terrain-crystal-fill",
+              "width": 128,
+              "height": 128,
+              "source": "blob:http://127.0.0.1:5174/c66b4d1e-d855-4e8d-a2bd-aa0196472f0f"
+            },
+            {
+              "key": "terrain-crystal-top",
+              "width": 128,
+              "height": 34,
+              "source": "blob:http://127.0.0.1:5174/b48e7383-0353-4ec0-a405-dc73b553e8a2"
+            }
+          ],
+          "platforms": [
+            {
+              "x": 1850,
+              "y": 664,
+              "width": 3700,
+              "height": 112,
+              "texture": "terrain-crystal-fill",
+              "visible": true,
+              "skinX": 1850,
+              "skinY": 664,
+              "skinWidth": 3700,
+              "skinHeight": 112
+            },
+            {
+              "x": 640,
+              "y": 572,
+              "width": 160,
+              "height": 72,
+              "texture": "terrain-crystal-fill",
+              "visible": true,
+              "skinX": 640,
+              "skinY": 572,
+              "skinWidth": 160,
+              "skinHeight": 72
+            },
+            {
+              "x": 1010,
+              "y": 568,
+              "width": 160,
+              "height": 80,
+              "texture": "terrain-crystal-fill",
+              "visible": true,
+              "skinX": 1010,
+              "skinY": 568,
+              "skinWidth": 160,
+              "skinHeight": 80
+            }
+          ],
+          "tops": [
+            {
+              "x": 1850,
+              "y": 621,
+              "width": 3700,
+              "height": 34,
+              "texture": "terrain-crystal-top"
+            },
+            {
+              "x": 640,
+              "y": 549,
+              "width": 160,
+              "height": 34,
+              "texture": "terrain-crystal-top"
+            },
+            {
+              "x": 1010,
+              "y": 541,
+              "width": 160,
+              "height": 34,
+              "texture": "terrain-crystal-top"
+            }
+          ]
+        },
+        "propArt": {
+          "cachedKeys": [
+            "prop-heart",
+            "prop-mirror",
+            "prop-journal",
+            "prop-star-map"
+          ],
+          "objects": [
+            {
+              "id": "S08.hint",
+              "kind": "npc",
+              "texture": "genie-webtoon",
+              "x": 220,
+              "y": 550,
+              "width": 85.33333333333333,
+              "height": 128,
+              "visible": true,
+              "done": false
+            },
+            {
+              "id": "S08.cp.puzzle",
+              "kind": "checkpoint",
+              "texture": "bell",
+              "x": 1435,
+              "y": 550,
+              "width": 40.32,
+              "height": 53.76,
+              "visible": true,
+              "done": false
+            },
+            {
+              "id": "S08.journal",
+              "kind": "journal",
+              "texture": "prop-journal",
+              "x": 1530,
+              "y": 550,
+              "width": 65.28,
+              "height": 87.04,
+              "visible": true,
+              "done": false
+            },
+            {
+              "id": "S08.mirror.1",
+              "kind": "mirror",
+              "texture": "prop-mirror",
+              "x": 1650,
+              "y": 550,
+              "width": 65.28,
+              "height": 87.04,
+              "visible": true,
+              "done": false
+            },
+            {
+              "id": "S08.mirror.2",
+              "kind": "mirror",
+              "texture": "prop-mirror",
+              "x": 1940,
+              "y": 550,
+              "width": 65.28,
+              "height": 87.04,
+              "visible": true,
+              "done": false
+            },
+            {
+              "id": "S08.mirror.3",
+              "kind": "mirror",
+              "texture": "prop-mirror",
+              "x": 2230,
+              "y": 550,
+              "width": 65.28,
+              "height": 87.04,
+              "visible": true,
+              "done": false
+            },
+            {
+              "id": "S08.light",
+              "kind": "lightGate",
+              "texture": "bell",
+              "x": 2460,
+              "y": 550,
+              "width": 65.28,
+              "height": 87.04,
+              "visible": true,
+              "done": false
+            },
+            {
+              "id": "S08.reward.truthOrb",
+              "kind": "truthGift",
+              "texture": "genie-webtoon",
+              "x": 2690,
+              "y": 550,
+              "width": 85.33333333333333,
+              "height": 128,
+              "visible": true,
+              "done": false
+            },
+            {
+              "id": "S08.starMap",
+              "kind": "vision",
+              "texture": "prop-star-map",
+              "x": 3000,
+              "y": 550,
+              "width": 65.28,
+              "height": 87.04,
+              "visible": true,
+              "done": false
+            },
+            {
+              "id": "S08.exit",
+              "kind": "exit",
+              "texture": "bell",
+              "x": 3500,
+              "y": 550,
+              "width": 65.28,
+              "height": 87.04,
+              "visible": true,
+              "done": false
+            }
+          ],
+          "chests": [],
+          "hearts": [
+            {
+              "id": "S08.heart.1",
+              "large": false,
+              "active": true,
+              "texture": "prop-heart",
+              "x": 850,
+              "y": 550,
+              "width": 34.56,
+              "height": 46.08
+            },
+            {
+              "id": "S08.heart.2",
+              "large": true,
+              "active": false
+            }
+          ]
+        },
+        "heroArt": {
+          "texture": "hero-action",
+          "frame": 0,
+          "x": 1448.166666666667,
+          "y": 611.3699226910462,
+          "flipX": false,
+          "originY": 0.9609375
+        },
+        "weaponArt": {
+          "visible": false,
+          "x": 369.3645833333334,
+          "y": 559.65625,
+          "texture": "weapon-W01",
+          "angle": -55.00000000000006
+        },
+        "storyDevices": [],
+        "freeMovement": false,
+        "stage": "S08",
+        "player": {
+          "x": 1448.166666666667,
+          "y": 546,
+          "grounded": true,
+          "vx": 0,
+          "vy": 0,
+          "hp": 195,
+          "maxHp": 195,
+          "bodyWidth": 42,
+          "bodyHeight": 84
+        },
+        "save": {
+          "schemaVersion": 1,
+          "buildVersion": "0.1.0",
+          "writtenAt": "2026-10-06T10:51:33.290Z",
+          "checkpoint": {
+            "stageId": "S08",
+            "checkpointId": "puzzle"
+          },
+          "totalXp": 5011,
+          "coins": 3,
+          "weapons": [
+            "W01"
+          ],
+          "equippedWeapon": "W01",
+          "upgrades": {},
+          "treasures": [
+            "T01"
+          ],
+          "relics": [],
+          "goldenHearts": [],
+          "equippedSkill": null,
+          "clearedStageIds": [
+            "S01",
+            "S02",
+            "S03",
+            "S04",
+            "S05",
+            "S06",
+            "S07"
+          ],
+          "claimedRewardIds": [
+            "S01.reward.start",
+            "S08.enemy.bat.1",
+            "S08.heart.2"
+          ],
+          "completedObjectiveIds": [],
+          "flags": [
+            "bubbleBlessing",
+            "genieCave"
+          ],
+          "journalPageIds": [],
+          "settings": {
+            "difficulty": "relaxed",
+            "musicVolume": 0.18,
+            "sfxVolume": 0.3,
+            "reducedMotion": false,
+            "largeText": false,
+            "aimAssist": false
+          }
+        },
+        "sim": 12105.862800000003,
+        "paused": false,
+        "enemies": [
+          {
+            "id": "S08.enemy.bat.1",
+            "x": 345.761374,
+            "y": 525,
+            "hp": 0,
+            "state": "defeated",
+            "visible": false,
+            "alpha": 0,
+            "art": "bat",
+            "texture": "bat-actions",
+            "frame": 3,
+            "flipX": false,
+            "originX": 0.53125,
+            "originY": 0.5625,
+            "displayHeight": 230.72961373390558,
+            "footOffset": 64,
+            "label": "저주가 풀렸어!"
+          },
+          {
+            "id": "S08.enemy.bat.2",
+            "x": 699.9928000000045,
+            "y": 550,
+            "hp": 31,
+            "state": "idle",
+            "visible": true,
+            "alpha": 1,
+            "art": "bat",
+            "texture": "bat-actions",
+            "frame": 0,
+            "flipX": false,
+            "originX": 0.638671875,
+            "originY": 0.75,
+            "displayHeight": 184.58369098712447,
+            "footOffset": 64,
+            "label": "빈틈 · J 공격"
+          },
+          {
+            "id": "S08.enemy.bat.3",
+            "x": 1057.2495499999957,
+            "y": 550,
+            "hp": 31,
+            "state": "idle",
+            "visible": true,
+            "alpha": 1,
+            "art": "bat",
+            "texture": "bat-actions",
+            "frame": 0,
+            "flipX": false,
+            "originX": 0.638671875,
+            "originY": 0.75,
+            "displayHeight": 184.58369098712447,
+            "footOffset": 64,
+            "label": "✦"
+          },
+          {
+            "id": "S08.enemy.bat.4",
+            "x": 1207.2549499999957,
+            "y": 550,
+            "hp": 31,
+            "state": "idle",
+            "visible": true,
+            "alpha": 1,
+            "art": "bat",
+            "texture": "bat-actions",
+            "frame": 0,
+            "flipX": false,
+            "originX": 0.638671875,
+            "originY": 0.75,
+            "displayHeight": 184.58369098712447,
+            "footOffset": 64,
+            "label": "⚠ 준비… 피하세요!"
+          }
+        ],
+        "flightHazards": [],
+        "projectiles": 0,
+        "boomerang": false,
+        "attack": null,
+        "air": 10000,
+        "submerged": false,
+        "bubbleProtected": true,
+        "movingPlatforms": [],
+        "mp": 98,
+        "flameReady": 0,
+        "pulse": false,
+        "wave": null,
+        "grip": null,
+        "mirrors": [
+          0,
+          0,
+          0
+        ],
+        "connectedMirrors": 0,
+        "puzzleSafe": true,
+        "frameMs": 16.660000000000036
+      },
+      "path": "docs/screenshots/m6-bat/final/m6-bat/phone-normal-safe-puzzle.png"
+    },
+    {
+      "label": "checkpoint-resume",
+      "observed": {
+        "projectileArt": [],
+        "effectArt": [],
+        "cachedEffectKeys": [
+          "effect-hit-spark",
+          "effect-purify-light",
+          "effect-surrender-flag"
+        ],
+        "cachedActionKeys": [
+          "bat-actions"
+        ],
+        "terrain": {
+          "style": "crystal",
+          "cachedKeys": [
+            "terrain-crystal-fill",
+            "terrain-crystal-top"
+          ],
+          "textures": [
+            {
+              "key": "terrain-crystal-fill",
+              "width": 128,
+              "height": 128,
+              "source": "blob:http://127.0.0.1:5174/9d6c6edb-ab19-4067-a655-63dd5e89d50f"
+            },
+            {
+              "key": "terrain-crystal-top",
+              "width": 128,
+              "height": 34,
+              "source": "blob:http://127.0.0.1:5174/b1fdf983-4350-41ec-937f-fee929d1e08b"
+            }
+          ],
+          "platforms": [
+            {
+              "x": 1850,
+              "y": 664,
+              "width": 3700,
+              "height": 112,
+              "texture": "terrain-crystal-fill",
+              "visible": true,
+              "skinX": 1850,
+              "skinY": 664,
+              "skinWidth": 3700,
+              "skinHeight": 112
+            },
+            {
+              "x": 640,
+              "y": 572,
+              "width": 160,
+              "height": 72,
+              "texture": "terrain-crystal-fill",
+              "visible": true,
+              "skinX": 640,
+              "skinY": 572,
+              "skinWidth": 160,
+              "skinHeight": 72
+            },
+            {
+              "x": 1010,
+              "y": 568,
+              "width": 160,
+              "height": 80,
+              "texture": "terrain-crystal-fill",
+              "visible": true,
+              "skinX": 1010,
+              "skinY": 568,
+              "skinWidth": 160,
+              "skinHeight": 80
+            }
+          ],
+          "tops": [
+            {
+              "x": 1850,
+              "y": 621,
+              "width": 3700,
+              "height": 34,
+              "texture": "terrain-crystal-top"
+            },
+            {
+              "x": 640,
+              "y": 549,
+              "width": 160,
+              "height": 34,
+              "texture": "terrain-crystal-top"
+            },
+            {
+              "x": 1010,
+              "y": 541,
+              "width": 160,
+              "height": 34,
+              "texture": "terrain-crystal-top"
+            }
+          ]
+        },
+        "propArt": {
+          "cachedKeys": [
+            "prop-heart",
+            "prop-mirror",
+            "prop-journal",
+            "prop-star-map"
+          ],
+          "objects": [
+            {
+              "id": "S08.hint",
+              "kind": "npc",
+              "texture": "genie-webtoon",
+              "x": 220,
+              "y": 550,
+              "width": 85.33333333333333,
+              "height": 128,
+              "visible": true,
+              "done": false
+            },
+            {
+              "id": "S08.cp.puzzle",
+              "kind": "checkpoint",
+              "texture": "bell",
+              "x": 1435,
+              "y": 550,
+              "width": 40.32,
+              "height": 53.76,
+              "visible": true,
+              "done": false
+            },
+            {
+              "id": "S08.journal",
+              "kind": "journal",
+              "texture": "prop-journal",
+              "x": 1530,
+              "y": 550,
+              "width": 65.28,
+              "height": 87.04,
+              "visible": true,
+              "done": false
+            },
+            {
+              "id": "S08.mirror.1",
+              "kind": "mirror",
+              "texture": "prop-mirror",
+              "x": 1650,
+              "y": 550,
+              "width": 65.28,
+              "height": 87.04,
+              "visible": true,
+              "done": false
+            },
+            {
+              "id": "S08.mirror.2",
+              "kind": "mirror",
+              "texture": "prop-mirror",
+              "x": 1940,
+              "y": 550,
+              "width": 65.28,
+              "height": 87.04,
+              "visible": true,
+              "done": false
+            },
+            {
+              "id": "S08.mirror.3",
+              "kind": "mirror",
+              "texture": "prop-mirror",
+              "x": 2230,
+              "y": 550,
+              "width": 65.28,
+              "height": 87.04,
+              "visible": true,
+              "done": false
+            },
+            {
+              "id": "S08.light",
+              "kind": "lightGate",
+              "texture": "bell",
+              "x": 2460,
+              "y": 550,
+              "width": 65.28,
+              "height": 87.04,
+              "visible": true,
+              "done": false
+            },
+            {
+              "id": "S08.reward.truthOrb",
+              "kind": "truthGift",
+              "texture": "genie-webtoon",
+              "x": 2690,
+              "y": 550,
+              "width": 85.33333333333333,
+              "height": 128,
+              "visible": true,
+              "done": false
+            },
+            {
+              "id": "S08.starMap",
+              "kind": "vision",
+              "texture": "prop-star-map",
+              "x": 3000,
+              "y": 550,
+              "width": 65.28,
+              "height": 87.04,
+              "visible": true,
+              "done": false
+            },
+            {
+              "id": "S08.exit",
+              "kind": "exit",
+              "texture": "bell",
+              "x": 3500,
+              "y": 550,
+              "width": 65.28,
+              "height": 87.04,
+              "visible": true,
+              "done": false
+            }
+          ],
+          "chests": [],
+          "hearts": [
+            {
+              "id": "S08.heart.1",
+              "large": false,
+              "active": true,
+              "texture": "prop-heart",
+              "x": 850,
+              "y": 550,
+              "width": 34.56,
+              "height": 46.08
+            },
+            {
+              "id": "S08.heart.2",
+              "large": true,
+              "active": true,
+              "texture": "prop-heart",
+              "x": 1370,
+              "y": 550,
+              "width": 48,
+              "height": 64
+            }
+          ]
+        },
+        "heroArt": {
+          "texture": "hero-action",
+          "frame": 0,
+          "x": 1435,
+          "y": 609.5863757302669,
+          "flipX": false,
+          "originY": 0.9609375
+        },
+        "weaponArt": {
+          "visible": false,
+          "x": 1435,
+          "y": 548,
+          "texture": "weapon-W01",
+          "angle": 0
+        },
+        "storyDevices": [],
+        "freeMovement": false,
+        "stage": "S08",
+        "player": {
+          "x": 1435,
+          "y": 546,
+          "grounded": true,
+          "vx": 0,
+          "vy": 0,
+          "hp": 195,
+          "maxHp": 195,
+          "bodyWidth": 42,
+          "bodyHeight": 84
+        },
+        "save": {
+          "schemaVersion": 1,
+          "buildVersion": "0.1.0",
+          "writtenAt": "2026-10-06T10:51:46.304Z",
+          "checkpoint": {
+            "stageId": "S08",
+            "checkpointId": "puzzle"
+          },
+          "totalXp": 5011,
+          "coins": 3,
+          "weapons": [
+            "W01"
+          ],
+          "equippedWeapon": "W01",
+          "upgrades": {},
+          "treasures": [
+            "T01"
+          ],
+          "relics": [],
+          "goldenHearts": [],
+          "equippedSkill": null,
+          "clearedStageIds": [
+            "S01",
+            "S02",
+            "S03",
+            "S04",
+            "S05",
+            "S06",
+            "S07"
+          ],
+          "claimedRewardIds": [
+            "S01.reward.start",
+            "S08.enemy.bat.1",
+            "S08.heart.2"
+          ],
+          "completedObjectiveIds": [],
+          "flags": [
+            "bubbleBlessing",
+            "genieCave"
+          ],
+          "journalPageIds": [],
+          "settings": {
+            "difficulty": "relaxed",
+            "musicVolume": 0.18,
+            "sfxVolume": 0.3,
+            "reducedMotion": false,
+            "largeText": false,
+            "aimAssist": false
+          }
+        },
+        "sim": 2625.0218666666674,
+        "paused": false,
+        "enemies": [
+          {
+            "id": "S08.enemy.bat.1",
+            "x": 450,
+            "y": 550,
+            "hp": 31,
+            "state": "idle",
+            "visible": true,
+            "alpha": 1,
+            "art": "bat",
+            "texture": "bat-actions",
+            "frame": 0,
+            "flipX": false,
+            "originX": 0.638671875,
+            "originY": 0.75,
+            "displayHeight": 184.58369098712447,
+            "footOffset": 64,
+            "label": ""
+          },
+          {
+            "id": "S08.enemy.bat.2",
+            "x": 790,
+            "y": 550,
+            "hp": 31,
+            "state": "idle",
+            "visible": true,
+            "alpha": 1,
+            "art": "bat",
+            "texture": "bat-actions",
+            "frame": 0,
+            "flipX": false,
+            "originX": 0.638671875,
+            "originY": 0.75,
+            "displayHeight": 184.58369098712447,
+            "footOffset": 64,
+            "label": ""
+          },
+          {
+            "id": "S08.enemy.bat.3",
+            "x": 1100,
+            "y": 550,
+            "hp": 31,
+            "state": "idle",
+            "visible": true,
+            "alpha": 1,
+            "art": "bat",
+            "texture": "bat-actions",
+            "frame": 0,
+            "flipX": false,
+            "originX": 0.638671875,
+            "originY": 0.75,
+            "displayHeight": 184.58369098712447,
+            "footOffset": 64,
+            "label": ""
+          },
+          {
+            "id": "S08.enemy.bat.4",
+            "x": 1250,
+            "y": 550,
+            "hp": 31,
+            "state": "idle",
+            "visible": true,
+            "alpha": 1,
+            "art": "bat",
+            "texture": "bat-actions",
+            "frame": 0,
+            "flipX": false,
+            "originX": 0.638671875,
+            "originY": 0.75,
+            "displayHeight": 184.58369098712447,
+            "footOffset": 64,
+            "label": ""
+          }
+        ],
+        "flightHazards": [],
+        "projectiles": 0,
+        "boomerang": false,
+        "attack": null,
+        "air": 10000,
+        "submerged": false,
+        "bubbleProtected": true,
+        "movingPlatforms": [],
+        "mp": 98,
+        "flameReady": 0,
+        "pulse": false,
+        "wave": null,
+        "grip": null,
+        "mirrors": [
+          0,
+          0,
+          0
+        ],
+        "connectedMirrors": 0,
+        "puzzleSafe": true,
+        "frameMs": 16.670000000000027
+      },
+      "path": "docs/screenshots/m6-bat/final/m6-bat/phone-normal-checkpoint-resume.png"
+    },
+    {
+      "before": {
+        "schemaVersion": 1,
+        "buildVersion": "0.1.0",
+        "writtenAt": "2026-10-06T10:51:21.020Z",
+        "checkpoint": {
+          "stageId": "S08",
+          "checkpointId": "start"
+        },
+        "totalXp": 5000,
+        "coins": 0,
+        "weapons": [
+          "W01"
+        ],
+        "equippedWeapon": "W01",
+        "upgrades": {},
+        "treasures": [
+          "T01"
+        ],
+        "relics": [],
+        "goldenHearts": [],
+        "equippedSkill": null,
+        "clearedStageIds": [
+          "S01",
+          "S02",
+          "S03",
+          "S04",
+          "S05",
+          "S06",
+          "S07"
+        ],
+        "claimedRewardIds": [
+          "S01.reward.start"
+        ],
+        "completedObjectiveIds": [],
+        "flags": [
+          "bubbleBlessing",
+          "genieCave"
+        ],
+        "journalPageIds": [],
+        "settings": {
+          "difficulty": "relaxed",
+          "musicVolume": 0.18,
+          "sfxVolume": 0.3,
+          "reducedMotion": false,
+          "largeText": false,
+          "aimAssist": false
+        }
+      },
+      "rewarded": {
+        "schemaVersion": 1,
+        "buildVersion": "0.1.0",
+        "writtenAt": "2026-10-06T10:51:21.020Z",
+        "checkpoint": {
+          "stageId": "S08",
+          "checkpointId": "start"
+        },
+        "totalXp": 5006,
+        "coins": 3,
+        "weapons": [
+          "W01"
+        ],
+        "equippedWeapon": "W01",
+        "upgrades": {},
+        "treasures": [
+          "T01"
+        ],
+        "relics": [],
+        "goldenHearts": [],
+        "equippedSkill": null,
+        "clearedStageIds": [
+          "S01",
+          "S02",
+          "S03",
+          "S04",
+          "S05",
+          "S06",
+          "S07"
+        ],
+        "claimedRewardIds": [
+          "S01.reward.start",
+          "S08.enemy.bat.1"
+        ],
+        "completedObjectiveIds": [],
+        "flags": [
+          "bubbleBlessing",
+          "genieCave"
+        ],
+        "journalPageIds": [],
+        "settings": {
+          "difficulty": "relaxed",
+          "musicVolume": 0.18,
+          "sfxVolume": 0.3,
+          "reducedMotion": false,
+          "largeText": false,
+          "aimAssist": false
+        }
+      },
+      "restored": {
+        "schemaVersion": 1,
+        "buildVersion": "0.1.0",
+        "writtenAt": "2026-10-06T10:51:33.290Z",
+        "checkpoint": {
+          "stageId": "S08",
+          "checkpointId": "start"
+        },
+        "totalXp": 5006,
+        "coins": 3,
+        "weapons": [
+          "W01"
+        ],
+        "equippedWeapon": "W01",
+        "upgrades": {},
+        "treasures": [
+          "T01"
+        ],
+        "relics": [],
+        "goldenHearts": [],
+        "equippedSkill": null,
+        "clearedStageIds": [
+          "S01",
+          "S02",
+          "S03",
+          "S04",
+          "S05",
+          "S06",
+          "S07"
+        ],
+        "claimedRewardIds": [
+          "S01.reward.start",
+          "S08.enemy.bat.1"
+        ],
+        "completedObjectiveIds": [],
+        "flags": [
+          "bubbleBlessing",
+          "genieCave"
+        ],
+        "journalPageIds": [],
+        "settings": {
+          "difficulty": "relaxed",
+          "musicVolume": 0.18,
+          "sfxVolume": 0.3,
+          "reducedMotion": false,
+          "largeText": false,
+          "aimAssist": false
+        }
+      },
+      "safe": {
+        "projectileArt": [],
+        "effectArt": [],
+        "cachedEffectKeys": [
+          "effect-hit-spark",
+          "effect-purify-light",
+          "effect-surrender-flag"
+        ],
+        "cachedActionKeys": [
+          "bat-actions"
+        ],
+        "terrain": {
+          "style": "crystal",
+          "cachedKeys": [
+            "terrain-crystal-fill",
+            "terrain-crystal-top"
+          ],
+          "textures": [
+            {
+              "key": "terrain-crystal-fill",
+              "width": 128,
+              "height": 128,
+              "source": "blob:http://127.0.0.1:5174/c66b4d1e-d855-4e8d-a2bd-aa0196472f0f"
+            },
+            {
+              "key": "terrain-crystal-top",
+              "width": 128,
+              "height": 34,
+              "source": "blob:http://127.0.0.1:5174/b48e7383-0353-4ec0-a405-dc73b553e8a2"
+            }
+          ],
+          "platforms": [
+            {
+              "x": 1850,
+              "y": 664,
+              "width": 3700,
+              "height": 112,
+              "texture": "terrain-crystal-fill",
+              "visible": true,
+              "skinX": 1850,
+              "skinY": 664,
+              "skinWidth": 3700,
+              "skinHeight": 112
+            },
+            {
+              "x": 640,
+              "y": 572,
+              "width": 160,
+              "height": 72,
+              "texture": "terrain-crystal-fill",
+              "visible": true,
+              "skinX": 640,
+              "skinY": 572,
+              "skinWidth": 160,
+              "skinHeight": 72
+            },
+            {
+              "x": 1010,
+              "y": 568,
+              "width": 160,
+              "height": 80,
+              "texture": "terrain-crystal-fill",
+              "visible": true,
+              "skinX": 1010,
+              "skinY": 568,
+              "skinWidth": 160,
+              "skinHeight": 80
+            }
+          ],
+          "tops": [
+            {
+              "x": 1850,
+              "y": 621,
+              "width": 3700,
+              "height": 34,
+              "texture": "terrain-crystal-top"
+            },
+            {
+              "x": 640,
+              "y": 549,
+              "width": 160,
+              "height": 34,
+              "texture": "terrain-crystal-top"
+            },
+            {
+              "x": 1010,
+              "y": 541,
+              "width": 160,
+              "height": 34,
+              "texture": "terrain-crystal-top"
+            }
+          ]
+        },
+        "propArt": {
+          "cachedKeys": [
+            "prop-heart",
+            "prop-mirror",
+            "prop-journal",
+            "prop-star-map"
+          ],
+          "objects": [
+            {
+              "id": "S08.hint",
+              "kind": "npc",
+              "texture": "genie-webtoon",
+              "x": 220,
+              "y": 550,
+              "width": 85.33333333333333,
+              "height": 128,
+              "visible": true,
+              "done": false
+            },
+            {
+              "id": "S08.cp.puzzle",
+              "kind": "checkpoint",
+              "texture": "bell",
+              "x": 1435,
+              "y": 550,
+              "width": 40.32,
+              "height": 53.76,
+              "visible": true,
+              "done": false
+            },
+            {
+              "id": "S08.journal",
+              "kind": "journal",
+              "texture": "prop-journal",
+              "x": 1530,
+              "y": 550,
+              "width": 65.28,
+              "height": 87.04,
+              "visible": true,
+              "done": false
+            },
+            {
+              "id": "S08.mirror.1",
+              "kind": "mirror",
+              "texture": "prop-mirror",
+              "x": 1650,
+              "y": 550,
+              "width": 65.28,
+              "height": 87.04,
+              "visible": true,
+              "done": false
+            },
+            {
+              "id": "S08.mirror.2",
+              "kind": "mirror",
+              "texture": "prop-mirror",
+              "x": 1940,
+              "y": 550,
+              "width": 65.28,
+              "height": 87.04,
+              "visible": true,
+              "done": false
+            },
+            {
+              "id": "S08.mirror.3",
+              "kind": "mirror",
+              "texture": "prop-mirror",
+              "x": 2230,
+              "y": 550,
+              "width": 65.28,
+              "height": 87.04,
+              "visible": true,
+              "done": false
+            },
+            {
+              "id": "S08.light",
+              "kind": "lightGate",
+              "texture": "bell",
+              "x": 2460,
+              "y": 550,
+              "width": 65.28,
+              "height": 87.04,
+              "visible": true,
+              "done": false
+            },
+            {
+              "id": "S08.reward.truthOrb",
+              "kind": "truthGift",
+              "texture": "genie-webtoon",
+              "x": 2690,
+              "y": 550,
+              "width": 85.33333333333333,
+              "height": 128,
+              "visible": true,
+              "done": false
+            },
+            {
+              "id": "S08.starMap",
+              "kind": "vision",
+              "texture": "prop-star-map",
+              "x": 3000,
+              "y": 550,
+              "width": 65.28,
+              "height": 87.04,
+              "visible": true,
+              "done": false
+            },
+            {
+              "id": "S08.exit",
+              "kind": "exit",
+              "texture": "bell",
+              "x": 3500,
+              "y": 550,
+              "width": 65.28,
+              "height": 87.04,
+              "visible": true,
+              "done": false
+            }
+          ],
+          "chests": [],
+          "hearts": [
+            {
+              "id": "S08.heart.1",
+              "large": false,
+              "active": true,
+              "texture": "prop-heart",
+              "x": 850,
+              "y": 550,
+              "width": 34.56,
+              "height": 46.08
+            },
+            {
+              "id": "S08.heart.2",
+              "large": true,
+              "active": false
+            }
+          ]
+        },
+        "heroArt": {
+          "texture": "hero-action",
+          "frame": 0,
+          "x": 1448.166666666667,
+          "y": 611.001961466651,
+          "flipX": false,
+          "originY": 0.9609375
+        },
+        "weaponArt": {
+          "visible": false,
+          "x": 369.3645833333334,
+          "y": 559.65625,
+          "texture": "weapon-W01",
+          "angle": -55.00000000000006
+        },
+        "storyDevices": [],
+        "freeMovement": false,
+        "stage": "S08",
+        "player": {
+          "x": 1448.166666666667,
+          "y": 546,
+          "grounded": true,
+          "vx": 0,
+          "vy": 0,
+          "hp": 195,
+          "maxHp": 195,
+          "bodyWidth": 42,
+          "bodyHeight": 84
+        },
+        "save": {
+          "schemaVersion": 1,
+          "buildVersion": "0.1.0",
+          "writtenAt": "2026-10-06T10:51:33.290Z",
+          "checkpoint": {
+            "stageId": "S08",
+            "checkpointId": "puzzle"
+          },
+          "totalXp": 5011,
+          "coins": 3,
+          "weapons": [
+            "W01"
+          ],
+          "equippedWeapon": "W01",
+          "upgrades": {},
+          "treasures": [
+            "T01"
+          ],
+          "relics": [],
+          "goldenHearts": [],
+          "equippedSkill": null,
+          "clearedStageIds": [
+            "S01",
+            "S02",
+            "S03",
+            "S04",
+            "S05",
+            "S06",
+            "S07"
+          ],
+          "claimedRewardIds": [
+            "S01.reward.start",
+            "S08.enemy.bat.1",
+            "S08.heart.2"
+          ],
+          "completedObjectiveIds": [],
+          "flags": [
+            "bubbleBlessing",
+            "genieCave"
+          ],
+          "journalPageIds": [],
+          "settings": {
+            "difficulty": "relaxed",
+            "musicVolume": 0.18,
+            "sfxVolume": 0.3,
+            "reducedMotion": false,
+            "largeText": false,
+            "aimAssist": false
+          }
+        },
+        "sim": 9089.0528,
+        "paused": false,
+        "enemies": [
+          {
+            "id": "S08.enemy.bat.1",
+            "x": 345.761374,
+            "y": 525,
+            "hp": 0,
+            "state": "defeated",
+            "visible": false,
+            "alpha": 0,
+            "art": "bat",
+            "texture": "bat-actions",
+            "frame": 3,
+            "flipX": false,
+            "originX": 0.53125,
+            "originY": 0.5625,
+            "displayHeight": 230.72961373390558,
+            "footOffset": 64,
+            "label": "저주가 풀렸어!"
+          },
+          {
+            "id": "S08.enemy.bat.2",
+            "x": 699.9928000000045,
+            "y": 550,
+            "hp": 31,
+            "state": "idle",
+            "visible": true,
+            "alpha": 1,
+            "art": "bat",
+            "texture": "bat-actions",
+            "frame": 0,
+            "flipX": false,
+            "originX": 0.638671875,
+            "originY": 0.75,
+            "displayHeight": 184.58369098712447,
+            "footOffset": 64,
+            "label": "빈틈 · J 공격"
+          },
+          {
+            "id": "S08.enemy.bat.3",
+            "x": 1057.2495499999957,
+            "y": 550,
+            "hp": 31,
+            "state": "idle",
+            "visible": true,
+            "alpha": 1,
+            "art": "bat",
+            "texture": "bat-actions",
+            "frame": 0,
+            "flipX": false,
+            "originX": 0.638671875,
+            "originY": 0.75,
+            "displayHeight": 184.58369098712447,
+            "footOffset": 64,
+            "label": "✦"
+          },
+          {
+            "id": "S08.enemy.bat.4",
+            "x": 1207.2549499999957,
+            "y": 550,
+            "hp": 31,
+            "state": "idle",
+            "visible": true,
+            "alpha": 1,
+            "art": "bat",
+            "texture": "bat-actions",
+            "frame": 0,
+            "flipX": false,
+            "originX": 0.638671875,
+            "originY": 0.75,
+            "displayHeight": 184.58369098712447,
+            "footOffset": 64,
+            "label": "⚠ 준비… 피하세요!"
+          }
+        ],
+        "flightHazards": [],
+        "projectiles": 0,
+        "boomerang": false,
+        "attack": null,
+        "air": 10000,
+        "submerged": false,
+        "bubbleProtected": true,
+        "movingPlatforms": [],
+        "mp": 98,
+        "flameReady": 0,
+        "pulse": false,
+        "wave": null,
+        "grip": null,
+        "mirrors": [
+          0,
+          0,
+          0
+        ],
+        "connectedMirrors": 0,
+        "puzzleSafe": true,
+        "frameMs": 16.65
+      },
+      "checkpoint": {
+        "projectileArt": [],
+        "effectArt": [],
+        "cachedEffectKeys": [
+          "effect-hit-spark",
+          "effect-purify-light",
+          "effect-surrender-flag"
+        ],
+        "cachedActionKeys": [
+          "bat-actions"
+        ],
+        "terrain": {
+          "style": "crystal",
+          "cachedKeys": [
+            "terrain-crystal-fill",
+            "terrain-crystal-top"
+          ],
+          "textures": [
+            {
+              "key": "terrain-crystal-fill",
+              "width": 128,
+              "height": 128,
+              "source": "blob:http://127.0.0.1:5174/9d6c6edb-ab19-4067-a655-63dd5e89d50f"
+            },
+            {
+              "key": "terrain-crystal-top",
+              "width": 128,
+              "height": 34,
+              "source": "blob:http://127.0.0.1:5174/b1fdf983-4350-41ec-937f-fee929d1e08b"
+            }
+          ],
+          "platforms": [
+            {
+              "x": 1850,
+              "y": 664,
+              "width": 3700,
+              "height": 112,
+              "texture": "terrain-crystal-fill",
+              "visible": true,
+              "skinX": 1850,
+              "skinY": 664,
+              "skinWidth": 3700,
+              "skinHeight": 112
+            },
+            {
+              "x": 640,
+              "y": 572,
+              "width": 160,
+              "height": 72,
+              "texture": "terrain-crystal-fill",
+              "visible": true,
+              "skinX": 640,
+              "skinY": 572,
+              "skinWidth": 160,
+              "skinHeight": 72
+            },
+            {
+              "x": 1010,
+              "y": 568,
+              "width": 160,
+              "height": 80,
+              "texture": "terrain-crystal-fill",
+              "visible": true,
+              "skinX": 1010,
+              "skinY": 568,
+              "skinWidth": 160,
+              "skinHeight": 80
+            }
+          ],
+          "tops": [
+            {
+              "x": 1850,
+              "y": 621,
+              "width": 3700,
+              "height": 34,
+              "texture": "terrain-crystal-top"
+            },
+            {
+              "x": 640,
+              "y": 549,
+              "width": 160,
+              "height": 34,
+              "texture": "terrain-crystal-top"
+            },
+            {
+              "x": 1010,
+              "y": 541,
+              "width": 160,
+              "height": 34,
+              "texture": "terrain-crystal-top"
+            }
+          ]
+        },
+        "propArt": {
+          "cachedKeys": [
+            "prop-heart",
+            "prop-mirror",
+            "prop-journal",
+            "prop-star-map"
+          ],
+          "objects": [
+            {
+              "id": "S08.hint",
+              "kind": "npc",
+              "texture": "genie-webtoon",
+              "x": 220,
+              "y": 550,
+              "width": 85.33333333333333,
+              "height": 128,
+              "visible": true,
+              "done": false
+            },
+            {
+              "id": "S08.cp.puzzle",
+              "kind": "checkpoint",
+              "texture": "bell",
+              "x": 1435,
+              "y": 550,
+              "width": 40.32,
+              "height": 53.76,
+              "visible": true,
+              "done": false
+            },
+            {
+              "id": "S08.journal",
+              "kind": "journal",
+              "texture": "prop-journal",
+              "x": 1530,
+              "y": 550,
+              "width": 65.28,
+              "height": 87.04,
+              "visible": true,
+              "done": false
+            },
+            {
+              "id": "S08.mirror.1",
+              "kind": "mirror",
+              "texture": "prop-mirror",
+              "x": 1650,
+              "y": 550,
+              "width": 65.28,
+              "height": 87.04,
+              "visible": true,
+              "done": false
+            },
+            {
+              "id": "S08.mirror.2",
+              "kind": "mirror",
+              "texture": "prop-mirror",
+              "x": 1940,
+              "y": 550,
+              "width": 65.28,
+              "height": 87.04,
+              "visible": true,
+              "done": false
+            },
+            {
+              "id": "S08.mirror.3",
+              "kind": "mirror",
+              "texture": "prop-mirror",
+              "x": 2230,
+              "y": 550,
+              "width": 65.28,
+              "height": 87.04,
+              "visible": true,
+              "done": false
+            },
+            {
+              "id": "S08.light",
+              "kind": "lightGate",
+              "texture": "bell",
+              "x": 2460,
+              "y": 550,
+              "width": 65.28,
+              "height": 87.04,
+              "visible": true,
+              "done": false
+            },
+            {
+              "id": "S08.reward.truthOrb",
+              "kind": "truthGift",
+              "texture": "genie-webtoon",
+              "x": 2690,
+              "y": 550,
+              "width": 85.33333333333333,
+              "height": 128,
+              "visible": true,
+              "done": false
+            },
+            {
+              "id": "S08.starMap",
+              "kind": "vision",
+              "texture": "prop-star-map",
+              "x": 3000,
+              "y": 550,
+              "width": 65.28,
+              "height": 87.04,
+              "visible": true,
+              "done": false
+            },
+            {
+              "id": "S08.exit",
+              "kind": "exit",
+              "texture": "bell",
+              "x": 3500,
+              "y": 550,
+              "width": 65.28,
+              "height": 87.04,
+              "visible": true,
+              "done": false
+            }
+          ],
+          "chests": [],
+          "hearts": [
+            {
+              "id": "S08.heart.1",
+              "large": false,
+              "active": true,
+              "texture": "prop-heart",
+              "x": 850,
+              "y": 550,
+              "width": 34.56,
+              "height": 46.08
+            },
+            {
+              "id": "S08.heart.2",
+              "large": true,
+              "active": true,
+              "texture": "prop-heart",
+              "x": 1370,
+              "y": 550,
+              "width": 48,
+              "height": 64
+            }
+          ]
+        },
+        "heroArt": {
+          "texture": "hero-action",
+          "frame": 0,
+          "x": 1435,
+          "y": 609.5863757302669,
+          "flipX": false,
+          "originY": 0.9609375
+        },
+        "weaponArt": {
+          "visible": false,
+          "x": 1435,
+          "y": 548,
+          "texture": "weapon-W01",
+          "angle": 0
+        },
+        "storyDevices": [],
+        "freeMovement": false,
+        "stage": "S08",
+        "player": {
+          "x": 1435,
+          "y": 546,
+          "grounded": true,
+          "vx": 0,
+          "vy": 0,
+          "hp": 195,
+          "maxHp": 195,
+          "bodyWidth": 42,
+          "bodyHeight": 84
+        },
+        "save": {
+          "schemaVersion": 1,
+          "buildVersion": "0.1.0",
+          "writtenAt": "2026-10-06T10:51:46.304Z",
+          "checkpoint": {
+            "stageId": "S08",
+            "checkpointId": "puzzle"
+          },
+          "totalXp": 5011,
+          "coins": 3,
+          "weapons": [
+            "W01"
+          ],
+          "equippedWeapon": "W01",
+          "upgrades": {},
+          "treasures": [
+            "T01"
+          ],
+          "relics": [],
+          "goldenHearts": [],
+          "equippedSkill": null,
+          "clearedStageIds": [
+            "S01",
+            "S02",
+            "S03",
+            "S04",
+            "S05",
+            "S06",
+            "S07"
+          ],
+          "claimedRewardIds": [
+            "S01.reward.start",
+            "S08.enemy.bat.1",
+            "S08.heart.2"
+          ],
+          "completedObjectiveIds": [],
+          "flags": [
+            "bubbleBlessing",
+            "genieCave"
+          ],
+          "journalPageIds": [],
+          "settings": {
+            "difficulty": "relaxed",
+            "musicVolume": 0.18,
+            "sfxVolume": 0.3,
+            "reducedMotion": false,
+            "largeText": false,
+            "aimAssist": false
+          }
+        },
+        "sim": 2625.0218666666674,
+        "paused": false,
+        "enemies": [
+          {
+            "id": "S08.enemy.bat.1",
+            "x": 450,
+            "y": 550,
+            "hp": 31,
+            "state": "idle",
+            "visible": true,
+            "alpha": 1,
+            "art": "bat",
+            "texture": "bat-actions",
+            "frame": 0,
+            "flipX": false,
+            "originX": 0.638671875,
+            "originY": 0.75,
+            "displayHeight": 184.58369098712447,
+            "footOffset": 64,
+            "label": ""
+          },
+          {
+            "id": "S08.enemy.bat.2",
+            "x": 790,
+            "y": 550,
+            "hp": 31,
+            "state": "idle",
+            "visible": true,
+            "alpha": 1,
+            "art": "bat",
+            "texture": "bat-actions",
+            "frame": 0,
+            "flipX": false,
+            "originX": 0.638671875,
+            "originY": 0.75,
+            "displayHeight": 184.58369098712447,
+            "footOffset": 64,
+            "label": ""
+          },
+          {
+            "id": "S08.enemy.bat.3",
+            "x": 1100,
+            "y": 550,
+            "hp": 31,
+            "state": "idle",
+            "visible": true,
+            "alpha": 1,
+            "art": "bat",
+            "texture": "bat-actions",
+            "frame": 0,
+            "flipX": false,
+            "originX": 0.638671875,
+            "originY": 0.75,
+            "displayHeight": 184.58369098712447,
+            "footOffset": 64,
+            "label": ""
+          },
+          {
+            "id": "S08.enemy.bat.4",
+            "x": 1250,
+            "y": 550,
+            "hp": 31,
+            "state": "idle",
+            "visible": true,
+            "alpha": 1,
+            "art": "bat",
+            "texture": "bat-actions",
+            "frame": 0,
+            "flipX": false,
+            "originX": 0.638671875,
+            "originY": 0.75,
+            "displayHeight": 184.58369098712447,
+            "footOffset": 64,
+            "label": ""
+          }
+        ],
+        "flightHazards": [],
+        "projectiles": 0,
+        "boomerang": false,
+        "attack": null,
+        "air": 10000,
+        "submerged": false,
+        "bubbleProtected": true,
+        "movingPlatforms": [],
+        "mp": 98,
+        "flameReady": 0,
+        "pulse": false,
+        "wave": null,
+        "grip": null,
+        "mirrors": [
+          0,
+          0,
+          0
+        ],
+        "connectedMirrors": 0,
+        "puzzleSafe": true,
+        "frameMs": 16.670000000000027
+      }
+    }
+  ],
+  "screens": [
+    "docs/screenshots/m6-bat/final/m6-bat/phone-normal-idle.png",
+    "docs/screenshots/m6-bat/final/m6-bat/phone-normal-telegraph.png",
+    "docs/screenshots/m6-bat/final/m6-bat/phone-normal-attack.png",
+    "docs/screenshots/m6-bat/final/m6-bat/phone-normal-recover.png",
+    "docs/screenshots/m6-bat/final/m6-bat/phone-normal-right.png",
+    "docs/screenshots/m6-bat/final/m6-bat/phone-normal-defeated.png",
+    "docs/screenshots/m6-bat/final/m6-bat/phone-normal-safe-puzzle.png",
+    "docs/screenshots/m6-bat/final/m6-bat/phone-normal-checkpoint-resume.png"
+  ],
+  "requests": [
+    "http://127.0.0.1:5174/assets/webtoon/bat-actions.webp",
+    "http://127.0.0.1:5174/assets/webtoon/bat-actions.webp",
+    "http://127.0.0.1:5174/assets/webtoon/bat-actions.webp",
+    "http://127.0.0.1:5174/assets/webtoon/enemy-actions.webp"
+  ],
+  "blocked": [],
+  "errors": [],
+  "artStatus": "ART_DRAFT"
+}

@@ -66,6 +66,9 @@ const runtimeSize: Record<string, { width: number; height: number; frame?: numbe
     'enemy-actions': { width: 1024, height: 2560, frame: 256 },
     'kite-actions': {width:1024,height:256,frame:256},
     'siren-actions': {width:1024,height:256,frame:256},
+    'bat-actions': {width:1024,height:256,frame:256},
+    'spirit-actions': {width:1024,height:256,frame:256},
+    'roc-actions': {width:768,height:512,frame:256},
     'roc-webtoon': { width: 768, height: 512 },
     'whale-webtoon': { width: 1536, height: 1024 },
     'crab-webtoon': { width: 512, height: 512 },
@@ -98,9 +101,9 @@ const weaponAssets: AssetEntry[] = ['W01','W02','W03','W04','W05','W06','W07'].f
     {key:`weapon-fallback-${id}`,path:`assets/weapons/${id}.svg`,...runtimeSize[`weapon-${id}`],kind:'svg' as const,status:'draft' as const,
         source:'Preserved project SVG · scripts/make-weapon-art.mjs',license:'Project original design; use and modification allowed.'},
 ]);
-const illustratedAssets: AssetEntry[] = [...Array.from({length:7},(_,i)=>`chapter-${i+1}`),'hero-webtoon','hero-action','captain-webtoon','sailor-webtoon','ariana-webtoon','kuura-webtoon','naira-webtoon','mira-webtoon','baru-webtoon','king-webtoon','villager-webtoon','genie-webtoon','roc-webtoon','elephant-webtoon','hero-run','enemy-atlas','enemy-actions','kite-actions','siren-actions','whale-webtoon','chef-webtoon','siren-webtoon','rah-webtoon','crab-webtoon'].map(key=>{
+const illustratedAssets: AssetEntry[] = [...Array.from({length:7},(_,i)=>`chapter-${i+1}`),'hero-webtoon','hero-action','captain-webtoon','sailor-webtoon','ariana-webtoon','kuura-webtoon','naira-webtoon','mira-webtoon','baru-webtoon','king-webtoon','villager-webtoon','genie-webtoon','roc-webtoon','elephant-webtoon','hero-run','enemy-atlas','enemy-actions','kite-actions','siren-actions','bat-actions','spirit-actions','roc-actions','whale-webtoon','chef-webtoon','siren-webtoon','rah-webtoon','crab-webtoon'].map(key=>{
     const size=key.startsWith('chapter')?{width:1536,height:1024}:runtimeSize[key]??portrait;
-    return {key,path:`assets/webtoon/${key}.webp`,...size,kind:size.frame?'sheet':'image',status:'draft',source:'2026-10-01~04 OpenAI built-in imagegen · docs/ART_PROMPTS.md · 원본 art-source/webtoon (무손실)',license:'본 프로젝트용 AI 생성 원본. 특정 작품·작가 참조 없음. 최종 아트 QA·애니메이션 승인 전.'};
+    return {key,path:`assets/webtoon/${key}.webp`,...size,kind:size.frame?'sheet':'image',status:'draft',source:`${key==='roc-actions'?'2026-10-07':['bat-actions','spirit-actions'].includes(key)?'2026-10-06':'2026-10-01~04'} OpenAI built-in imagegen · docs/ART_PROMPTS.md · 원본 art-source/webtoon (무손실)`,license:'본 프로젝트용 AI 생성 원본. 특정 작품·작가 참조 없음. 최종 아트 QA·애니메이션 승인 전.'};
 });
 // Rectangular expression sheets are cropped by the DOM portrait, never eagerly
 // preloaded into a Phaser scene. Each runtime cell is 256x384.

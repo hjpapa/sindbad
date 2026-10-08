@@ -7,7 +7,6 @@ const memory = (text:string): StoryMechanic => ({type:'memory',text});
 
 // Authored devices rather than a stage-number-derived random layout.
 export const storyDevices: Record<string, StoryMechanic[]> = {
- S09:[channel('깃털 봉인'),channel('바람 봉인'),channel('둥지 봉인')],
  S11:[rotate(1,'반사석'),rotate(2,'반사석'),rotate(3,'반사석'),channel('상승 바람')],
  S12:[channel('독 분출구'),channel('독 분출구'),rotate(1,'정화 바람')],
  S13:[carry(),carry(),carry(),memory('하미드: 지붕을 고쳐 주었군! 오늘은 여기서 쉬어 가게.'),memory('마진: 모험가도 밥 먹고 자야 힘을 쓰지. 따뜻한 식사를 준비했어.')],

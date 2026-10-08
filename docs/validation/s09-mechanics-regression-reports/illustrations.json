@@ -1,0 +1,1786 @@
+{
+  "date": "2026-10-08T10:41:16.214400+00:00",
+  "method": "decode real WebP illustrations and A8 PNG runtime icons with Pillow, record dimensions and SHA256; not animation or visual approval",
+  "files": [
+    {
+      "path": "art-source/webtoon/ariana-faces.webp",
+      "width": 1536,
+      "height": 768,
+      "bytes": 738838,
+      "mode": "RGBA",
+      "sha256": "b6146dd1ff9773ad935d4e4ccc0865023c75bec9a841c155f23aee0849b78c94",
+      "role": "original",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "art-source/webtoon/ariana-webtoon.webp",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 1013910,
+      "mode": "RGBA",
+      "sha256": "6816e54878f78efcd244ee412e47653fe5c76b0bab7d5e438ebebd9ca76f39d0",
+      "role": "original",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "art-source/webtoon/baru-faces.webp",
+      "width": 1536,
+      "height": 768,
+      "bytes": 888558,
+      "mode": "RGBA",
+      "sha256": "d889bb727773ebaa24df289ee6fc50e5a05755cbba3afbbb1f849b593a17925f",
+      "role": "original",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "art-source/webtoon/baru-webtoon.webp",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 1552304,
+      "mode": "RGBA",
+      "sha256": "dd28ebf39f7a4ed96c1cdad51daa013222711a1aa2a0e96bfb4eaff67c8056d4",
+      "role": "original",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "art-source/webtoon/bat-actions.webp",
+      "width": 2048,
+      "height": 512,
+      "bytes": 264444,
+      "mode": "RGBA",
+      "sha256": "64c0e49e18817eea2637a1f31d4120bee38a2f377ccd9bec905ec2851d92ddcf",
+      "role": "original",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "art-source/webtoon/captain-faces.webp",
+      "width": 1536,
+      "height": 768,
+      "bytes": 703344,
+      "mode": "RGBA",
+      "sha256": "79910f309de002a58156a605743f086fb99690ce909a25226c63f2f8137bde91",
+      "role": "original",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "art-source/webtoon/captain-webtoon.webp",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 1208880,
+      "mode": "RGBA",
+      "sha256": "6184a44ace2033c8b25f92a61f17976371f4b68274248dc7c7c6cd26e5af455e",
+      "role": "original",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "art-source/webtoon/chapter-1.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1800106,
+      "mode": "RGB",
+      "sha256": "d5069dd90f3a999e3afadc2bffb3bc6eeefeaf54537773fc1befc00c800ed4e4",
+      "role": "original",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "art-source/webtoon/chapter-2.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1609060,
+      "mode": "RGB",
+      "sha256": "cd9e2567b707e57531b07410b072e02972f8f008dfcbc861bb5480f2088452ea",
+      "role": "original",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "art-source/webtoon/chapter-3.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1971890,
+      "mode": "RGB",
+      "sha256": "fe24b22ba6a51e486e43d8aab61cdb2ba5e6d1a7b2e898c4cd3ce27626eec802",
+      "role": "original",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "art-source/webtoon/chapter-4.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1472540,
+      "mode": "RGB",
+      "sha256": "42aa464c140cc9f619d9205b735f6c470400116135f8a3a881cf083c5b24a23f",
+      "role": "original",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "art-source/webtoon/chapter-5.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1659844,
+      "mode": "RGB",
+      "sha256": "5cea34603a95bbd394e393a0f2286f23339b8203a503adf00fb1bab41d089b0d",
+      "role": "original",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "art-source/webtoon/chapter-6.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1730988,
+      "mode": "RGB",
+      "sha256": "12f864f00ac2f3bf5008b9a9b8e4a553111e06615e2a962c17d11cf026a715a0",
+      "role": "original",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "art-source/webtoon/chapter-7.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1666718,
+      "mode": "RGB",
+      "sha256": "0ee6c6d077be2d98f4b774f46e596f6cb0c426a4793120412df4e749221cc75b",
+      "role": "original",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "art-source/webtoon/chef-webtoon.webp",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 1386524,
+      "mode": "RGBA",
+      "sha256": "4a130bf23b61b945def38c1344d4ea2be0854aa41277c25f6cf740c2945b317a",
+      "role": "original",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "art-source/webtoon/crab-webtoon.webp",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 719962,
+      "mode": "RGBA",
+      "sha256": "d50b7952a7f42d6ed50469405f2bb56d1a72da1e26b95ab62f62b52d33327204",
+      "role": "original",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "art-source/webtoon/effect-hit-spark.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 421442,
+      "mode": "RGBA",
+      "sha256": "2eabdd7d398262373d824716ce56bafdc757a4f7d7c52e7a623dcc94fedc493e",
+      "role": "original",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "art-source/webtoon/effect-purify-light.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 373290,
+      "mode": "RGBA",
+      "sha256": "1bfeff04d9f64b46dc789602b0b713bbcda1247d53524a4329f0419d01984a7c",
+      "role": "original",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "art-source/webtoon/effect-surrender-flag.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 489804,
+      "mode": "RGBA",
+      "sha256": "d3307ab6fcb236cd4ada17bb2a8745c907e6dcc1bd7fc0a1d5b69eb5a9b751eb",
+      "role": "original",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "art-source/webtoon/elephant-webtoon.webp",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 819640,
+      "mode": "RGBA",
+      "sha256": "93e29ba37385aeb84b625585114e340d4228b915028349fd6910fe7a1fa81c72",
+      "role": "original",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "art-source/webtoon/enemy-actions.webp",
+      "width": 2048,
+      "height": 5120,
+      "bytes": 4026634,
+      "mode": "RGBA",
+      "sha256": "27ac4ef232eac7e4511a8b5ce54d1c967244c3a042aeb43c8db0d206f88c7e2a",
+      "role": "original",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "art-source/webtoon/enemy-atlas.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1871468,
+      "mode": "RGBA",
+      "sha256": "91471f306b83b568ab8f59bf0a9f7909922d0cf5cdcbfe63e28f7cf432677c3a",
+      "role": "original",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "art-source/webtoon/genie-faces.webp",
+      "width": 1536,
+      "height": 768,
+      "bytes": 916396,
+      "mode": "RGBA",
+      "sha256": "e1920bf4f43c1c333fa7a30f5d9201b00a8d5e339ae5dae7e0275947e3473059",
+      "role": "original",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "art-source/webtoon/genie-webtoon.webp",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 1511156,
+      "mode": "RGBA",
+      "sha256": "3265e00ff8c3c888a63a4bcf1bc294e029ef5b79ec49c07e84dd1dfdda72666d",
+      "role": "original",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "art-source/webtoon/hero-action.webp",
+      "width": 1536,
+      "height": 1536,
+      "bytes": 1044062,
+      "mode": "RGBA",
+      "sha256": "91a55b7e2d3aa60331b499e090d1ae41dee6ba6f9ae2eb0b249edd75c0d82bfb",
+      "role": "original",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "art-source/webtoon/hero-run.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1281500,
+      "mode": "RGBA",
+      "sha256": "7ab9ba95598166486e13960e2b7ee3f9a0ede0e0dbf1fb55fb2508300e2a236f",
+      "role": "original",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "art-source/webtoon/hero-webtoon.webp",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 935578,
+      "mode": "RGBA",
+      "sha256": "176c1b8bcc4a033c9791efedec6fd643bf52b3224263af4818275eb7e998bee5",
+      "role": "original",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "art-source/webtoon/king-faces.webp",
+      "width": 1536,
+      "height": 768,
+      "bytes": 827548,
+      "mode": "RGBA",
+      "sha256": "37b3127326b654bf47ff3f147ee385dc4848f29f95cb98862449978d47a42913",
+      "role": "original",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "art-source/webtoon/king-webtoon.webp",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 1152362,
+      "mode": "RGBA",
+      "sha256": "d7482141204c751095e1bc9514bce4313a13e44d75b61282f50ee1d8aaf1f91f",
+      "role": "original",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "art-source/webtoon/kite-actions.webp",
+      "width": 2048,
+      "height": 512,
+      "bytes": 249586,
+      "mode": "RGBA",
+      "sha256": "c2c415cc74846fad123b653b193699dfb81b439daf1b44e5370e1d12e13524f9",
+      "role": "original",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "art-source/webtoon/kuura-webtoon.webp",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 1368690,
+      "mode": "RGBA",
+      "sha256": "99beae608dc9ee16ebdc7720f0cad5eecc78d11d7ad8102be66454fbedf618e1",
+      "role": "original",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "art-source/webtoon/mira-faces.webp",
+      "width": 1536,
+      "height": 768,
+      "bytes": 768076,
+      "mode": "RGBA",
+      "sha256": "4faa0501fcb2038e43d4be618e8e28113c2fef57b1ede730b8a4da8a55397418",
+      "role": "original",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "art-source/webtoon/mira-webtoon.webp",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 1275304,
+      "mode": "RGBA",
+      "sha256": "22d4f41564208e72a20a078c448cb425a42c59b3a6f0d087dd1e8579baa9ddad",
+      "role": "original",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "art-source/webtoon/naira-faces.webp",
+      "width": 1536,
+      "height": 768,
+      "bytes": 923178,
+      "mode": "RGBA",
+      "sha256": "07280580828470bfea4a938af8bf46a16bfbc31be6ce38bc631cea6a51899b1a",
+      "role": "original",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "art-source/webtoon/naira-webtoon.webp",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 1550590,
+      "mode": "RGBA",
+      "sha256": "a4088c1890ee9e2ff76a2d639667ee9dd063633406be0ed894b86a563bd57338",
+      "role": "original",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "art-source/webtoon/projectile-kite-wind.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 416112,
+      "mode": "RGBA",
+      "sha256": "e54c45cb4643df192d8b120630db7e6e375431b503319681dfbb870973a4ef18",
+      "role": "original",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "art-source/webtoon/projectile-kuura-orb.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 418144,
+      "mode": "RGBA",
+      "sha256": "cc9f4ce4a6e825d5e1ba29e006dfa9e6e63bfac85043fbb0638f050b8bdff3db",
+      "role": "original",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "art-source/webtoon/projectile-siren-note.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 404808,
+      "mode": "RGBA",
+      "sha256": "51e283877c0e7fe432c22847e32b270f19a4418cc356461fe1bafbdd09d9dfd2",
+      "role": "original",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "art-source/webtoon/projectile-siren-wave.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 427516,
+      "mode": "RGBA",
+      "sha256": "4b2fa38d492c6cea246fcf2362aeb0dff3b5d5b9e30012d3c885b07886333d3f",
+      "role": "original",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "art-source/webtoon/prop-bell.webp",
+      "width": 384,
+      "height": 512,
+      "bytes": 108252,
+      "mode": "RGBA",
+      "sha256": "da46f73e48a7858cc60108aaf5fa329030ba4b20049a0e158494c105b92d7fe4",
+      "role": "original",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "art-source/webtoon/prop-cargo.webp",
+      "width": 384,
+      "height": 512,
+      "bytes": 124026,
+      "mode": "RGBA",
+      "sha256": "9ee6b8c79dc346cc4a7d197b1ffc217e6fd03710121811a85e382aebfe380ba7",
+      "role": "original",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "art-source/webtoon/prop-chest.webp",
+      "width": 384,
+      "height": 512,
+      "bytes": 102262,
+      "mode": "RGBA",
+      "sha256": "5c158f842b0fb03ee276e379d317d2202a5ffb4d9825a6d082694147a547a89b",
+      "role": "original",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "art-source/webtoon/prop-coral-gate.webp",
+      "width": 384,
+      "height": 512,
+      "bytes": 119190,
+      "mode": "RGBA",
+      "sha256": "3f2413b2dea1b57bc83202b817b7a6ebaa4c555a52dabcb76d12a1841d5670c7",
+      "role": "original",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "art-source/webtoon/prop-damaged-mast.webp",
+      "width": 384,
+      "height": 512,
+      "bytes": 114194,
+      "mode": "RGBA",
+      "sha256": "05c8ddb2de30da59fd8e53f511b023286ba3a942590ad8a77d805617b4725825",
+      "role": "original",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "art-source/webtoon/prop-ending.webp",
+      "width": 384,
+      "height": 512,
+      "bytes": 149540,
+      "mode": "RGBA",
+      "sha256": "de35d8e48c25e12874c4bd92635659b95c726101e7eee464cc0f5585a36fce77",
+      "role": "original",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "art-source/webtoon/prop-falling-debris.webp",
+      "width": 384,
+      "height": 512,
+      "bytes": 99408,
+      "mode": "RGBA",
+      "sha256": "7be99e9f0e59a3147d769c22769e5d172274a03af419efb45ed9c6856d2079fc",
+      "role": "original",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "art-source/webtoon/prop-flight-ring.webp",
+      "width": 384,
+      "height": 512,
+      "bytes": 172176,
+      "mode": "RGBA",
+      "sha256": "6d751d567a4d368c3cf6812e08f13d967e59a35824cd80d4dba484d2c337ba86",
+      "role": "original",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "art-source/webtoon/prop-furnace.webp",
+      "width": 384,
+      "height": 512,
+      "bytes": 134020,
+      "mode": "RGBA",
+      "sha256": "718618d67b6b3ef13614fae6b012e8e6bb6627be9412fbe764220543e985bec4",
+      "role": "original",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "art-source/webtoon/prop-gift.webp",
+      "width": 384,
+      "height": 512,
+      "bytes": 132234,
+      "mode": "RGBA",
+      "sha256": "65ca9193f5a8c4c2d3004bad2d03cdba5b04a25f32499858f6c2e5f600bf510c",
+      "role": "original",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "art-source/webtoon/prop-golden.webp",
+      "width": 384,
+      "height": 512,
+      "bytes": 84342,
+      "mode": "RGBA",
+      "sha256": "967c40b9e3df7045cbe1d8b5c78fa6d3609d6f8d5641274d481cf9a477e9c09e",
+      "role": "original",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "art-source/webtoon/prop-gust-cloud.webp",
+      "width": 384,
+      "height": 512,
+      "bytes": 82406,
+      "mode": "RGBA",
+      "sha256": "d5b73aed35d1879410e2bf8f2ff59c300d187b86b791fb640401a50f9b4632e6",
+      "role": "original",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "art-source/webtoon/prop-heart.webp",
+      "width": 384,
+      "height": 512,
+      "bytes": 63630,
+      "mode": "RGBA",
+      "sha256": "6b35face9af9c73e5e643ebe21bfcf7debedbe40d8b03b16fce37725db242966",
+      "role": "original",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "art-source/webtoon/prop-journal.webp",
+      "width": 384,
+      "height": 512,
+      "bytes": 100208,
+      "mode": "RGBA",
+      "sha256": "2e442f1751915cfbdf5b2762e01a5f25884b2b7ca9b6ba75a9fb4556d0abac04",
+      "role": "original",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "art-source/webtoon/prop-key.webp",
+      "width": 384,
+      "height": 512,
+      "bytes": 91426,
+      "mode": "RGBA",
+      "sha256": "e9793da8bd5fd358adc4f83d6c7f904b4566290245a7fa1a8e7f3c450a664a93",
+      "role": "original",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "art-source/webtoon/prop-lantern.webp",
+      "width": 384,
+      "height": 512,
+      "bytes": 115174,
+      "mode": "RGBA",
+      "sha256": "3d773826ddd39157341117245135047b58ae01d24cdf5a022507765974e81c92",
+      "role": "original",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "art-source/webtoon/prop-lifering.webp",
+      "width": 384,
+      "height": 512,
+      "bytes": 107432,
+      "mode": "RGBA",
+      "sha256": "631e96d7b752691602653e2ab4de3eca0455bb8fe02f46ae9ccba19c21c746c4",
+      "role": "original",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "art-source/webtoon/prop-lifevest.webp",
+      "width": 384,
+      "height": 512,
+      "bytes": 133182,
+      "mode": "RGBA",
+      "sha256": "8c1ce759d520180313cae2aa929351a18df656aadf115925a0a219f7094c2ffa",
+      "role": "original",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "art-source/webtoon/prop-lightning-rod.webp",
+      "width": 384,
+      "height": 512,
+      "bytes": 81066,
+      "mode": "RGBA",
+      "sha256": "a7a626ba9dde0372a007a31046109a48588be3de27ba9a15695b551b25698977",
+      "role": "original",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "art-source/webtoon/prop-lotus-shrine.webp",
+      "width": 384,
+      "height": 512,
+      "bytes": 150146,
+      "mode": "RGBA",
+      "sha256": "e0e1d25d802cb0831bbf9ec211a7d042a3f9c26e6cc02492a81ea30a96f6c88b",
+      "role": "original",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "art-source/webtoon/prop-mirror.webp",
+      "width": 384,
+      "height": 512,
+      "bytes": 127692,
+      "mode": "RGBA",
+      "sha256": "c05f7c9a46c54d81acc05b47078d58f854d162c578d883ee8233a18fbce018d4",
+      "role": "original",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "art-source/webtoon/prop-moon-rock.webp",
+      "width": 384,
+      "height": 512,
+      "bytes": 101438,
+      "mode": "RGBA",
+      "sha256": "53affe06e661277ab8593f3f923569b3466ee556f6ce19ed4866e3071b868773",
+      "role": "original",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "art-source/webtoon/prop-rescue-rope.webp",
+      "width": 384,
+      "height": 512,
+      "bytes": 136924,
+      "mode": "RGBA",
+      "sha256": "dc0811d33319527c383415152c94efec9ed058cd22eef4a262814604a7f811e8",
+      "role": "original",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "art-source/webtoon/prop-shell.webp",
+      "width": 384,
+      "height": 512,
+      "bytes": 95038,
+      "mode": "RGBA",
+      "sha256": "224b206661fd5fae9d48c98b2092d930938368c64c271e9ba2a1173c4e297985",
+      "role": "original",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "art-source/webtoon/prop-star-device.webp",
+      "width": 384,
+      "height": 512,
+      "bytes": 131820,
+      "mode": "RGBA",
+      "sha256": "32e7a75067e1c55b87955636b070480299c2afafe26d2ab3c79437c52b4d2fcc",
+      "role": "original",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "art-source/webtoon/prop-star-map.webp",
+      "width": 384,
+      "height": 512,
+      "bytes": 154470,
+      "mode": "RGBA",
+      "sha256": "f535de9e8dd071f12ab6e9f9ff3498aebae9416151ab2320ad4e1eacd87db35b",
+      "role": "original",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "art-source/webtoon/prop-torch.webp",
+      "width": 384,
+      "height": 512,
+      "bytes": 57792,
+      "mode": "RGBA",
+      "sha256": "2b33d8a1dbad389cdbd1aea03ed74c9179537bd0f3150b30c3dcbfcd24faba3d",
+      "role": "original",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "art-source/webtoon/prop-treasure-altar.webp",
+      "width": 384,
+      "height": 512,
+      "bytes": 118288,
+      "mode": "RGBA",
+      "sha256": "c4ea92d27fd165aa1a9a98bcc5f70505173281839bb8fe9d362d89842809319b",
+      "role": "original",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "art-source/webtoon/prop-vine.webp",
+      "width": 384,
+      "height": 512,
+      "bytes": 95688,
+      "mode": "RGBA",
+      "sha256": "00e57082c3ef437dde6838f08d5c06c7cdcfa6097ed45921979648b96d873560",
+      "role": "original",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "art-source/webtoon/prop-wave-rope.webp",
+      "width": 384,
+      "height": 512,
+      "bytes": 61896,
+      "mode": "RGBA",
+      "sha256": "b451f0460ae019251722c4f36ad35e662807ccd9e21ce6a05f42fcf2f9e0dda1",
+      "role": "original",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "art-source/webtoon/rah-faces.webp",
+      "width": 1536,
+      "height": 768,
+      "bytes": 1168532,
+      "mode": "RGBA",
+      "sha256": "e0466814853c1dad3de65179c97bfc3093ac5a53860f20a374b8b980456ed34c",
+      "role": "original",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "art-source/webtoon/rah-webtoon.webp",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 1775590,
+      "mode": "RGBA",
+      "sha256": "400c1ffb0325017b3af1751aa697866a72016c23c2f1044182e582d43f87c5e8",
+      "role": "original",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "art-source/webtoon/roc-actions.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 928470,
+      "mode": "RGBA",
+      "sha256": "37bc53f96d2f7715086bc2dcaabad6b8eca13e47d7df623676c1f95337ed7d02",
+      "role": "original",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "art-source/webtoon/roc-webtoon.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1478420,
+      "mode": "RGBA",
+      "sha256": "724354f0ba2c1b2902f13c6df749b0b4041f7f0ac4558a84a4ed023043ae8b21",
+      "role": "original",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "art-source/webtoon/sailor-webtoon.webp",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 1010482,
+      "mode": "RGBA",
+      "sha256": "81d558632d4c9026ce07184ce2d7759e9f68b7a1aac0420cc61962f237da6a55",
+      "role": "original",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "art-source/webtoon/siren-actions.webp",
+      "width": 2048,
+      "height": 512,
+      "bytes": 441120,
+      "mode": "RGBA",
+      "sha256": "e0e944a47da7f0a1d05427efedf8745e30a9985a390a0f9281c2e0d4ad33e883",
+      "role": "original",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "art-source/webtoon/siren-faces.webp",
+      "width": 1536,
+      "height": 768,
+      "bytes": 881690,
+      "mode": "RGBA",
+      "sha256": "f7ad3276ada9c65cc029fcc42b851860616618d2626b6adc85a48c48a93b1383",
+      "role": "original",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "art-source/webtoon/siren-webtoon.webp",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 1643142,
+      "mode": "RGBA",
+      "sha256": "dded996e11ed7c64842e22d9d4e4839c7fb986141f29b7889ba47f35dad22195",
+      "role": "original",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "art-source/webtoon/spirit-actions.webp",
+      "width": 2048,
+      "height": 512,
+      "bytes": 259304,
+      "mode": "RGBA",
+      "sha256": "7ca4d2d09811eb3ece855d581bc9c5383dcf8761dca5916432fa8985173b2404",
+      "role": "original",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "art-source/webtoon/ui-bridge.webp",
+      "width": 512,
+      "height": 512,
+      "bytes": 153530,
+      "mode": "RGBA",
+      "sha256": "23d2a68e2a6eaf11d09e0968d0bd37ed3eba4a871b8cc18fc71dc8547b10cd41",
+      "role": "original",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "art-source/webtoon/ui-dawn.webp",
+      "width": 512,
+      "height": 512,
+      "bytes": 124114,
+      "mode": "RGBA",
+      "sha256": "77b472a77ab4017d8f7d2cd9c6055f6c65efb2f114bcfb4bc78a089e0247f69c",
+      "role": "original",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "art-source/webtoon/ui-depart.webp",
+      "width": 512,
+      "height": 512,
+      "bytes": 157712,
+      "mode": "RGBA",
+      "sha256": "db0750e1f8bc661cbf3d5ccae951582ef5149853daf14d03d74fdeae3a6c27a7",
+      "role": "original",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "art-source/webtoon/ui-flame.webp",
+      "width": 512,
+      "height": 512,
+      "bytes": 152680,
+      "mode": "RGBA",
+      "sha256": "6e6a08f57b1bc2306bc3e8af40e59fbf55c4babdd601c3b882350694a0354cba",
+      "role": "original",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "art-source/webtoon/ui-inspect.webp",
+      "width": 512,
+      "height": 512,
+      "bytes": 126922,
+      "mode": "RGBA",
+      "sha256": "3bdcbab991092d07c1345041c2a51143f390d1784b8370b9ed98f3cd15f60558",
+      "role": "original",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "art-source/webtoon/ui-jump.webp",
+      "width": 512,
+      "height": 512,
+      "bytes": 84446,
+      "mode": "RGBA",
+      "sha256": "2201cf6d273b9975cc888efdd17cc3922bfeee7700ce9485c5486f4522479d2e",
+      "role": "original",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "art-source/webtoon/ui-shield.webp",
+      "width": 512,
+      "height": 512,
+      "bytes": 202142,
+      "mode": "RGBA",
+      "sha256": "b4251f1a1c9d8db586c56e4f05e0641f2280f576fdd2863039fd9591f7bf1dab",
+      "role": "original",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "art-source/webtoon/ui-talk.webp",
+      "width": 512,
+      "height": 512,
+      "bytes": 125402,
+      "mode": "RGBA",
+      "sha256": "990868ff6f5285d35e0ea84c9cf06ed37a22964d8113696862250d2c7d92b934",
+      "role": "original",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "art-source/webtoon/ui-wing.webp",
+      "width": 512,
+      "height": 512,
+      "bytes": 180052,
+      "mode": "RGBA",
+      "sha256": "34c40c061d6ac1a3bbda4a7b83197a82c107b917fa21ade82aa97ba0274ac010",
+      "role": "original",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "art-source/webtoon/villager-webtoon.webp",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 1134562,
+      "mode": "RGBA",
+      "sha256": "f859b1f5e882ec715f9bb4ea5d646a76bc4a7e3d30017d311f4733853b2c5dae",
+      "role": "original",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "art-source/webtoon/whale-webtoon.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1043088,
+      "mode": "RGBA",
+      "sha256": "7ae66ea702680005e28042b812e5100b66a2abcb6fba23bb49a76a949a0cdd8c",
+      "role": "original",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "public/assets/webtoon/ariana-faces.webp",
+      "width": 768,
+      "height": 384,
+      "bytes": 64752,
+      "mode": "RGBA",
+      "sha256": "face1f1e5f5778e7ceecca0058e74ba43e33631af3a77597be4f1d3298b8927b",
+      "role": "runtime",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "public/assets/webtoon/ariana-webtoon.webp",
+      "width": 512,
+      "height": 768,
+      "bytes": 58148,
+      "mode": "RGBA",
+      "sha256": "e6d3234506fee15011ea4f4425fc70d719df7c678397716c936e73ab13967a86",
+      "role": "runtime",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "public/assets/webtoon/baru-faces.webp",
+      "width": 768,
+      "height": 384,
+      "bytes": 77116,
+      "mode": "RGBA",
+      "sha256": "9203f4d6e8806161c8108457bf6c1310cba583d0fbbf3b657c4e8a7a851f1c52",
+      "role": "runtime",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "public/assets/webtoon/baru-webtoon.webp",
+      "width": 512,
+      "height": 768,
+      "bytes": 110472,
+      "mode": "RGBA",
+      "sha256": "c39bcac0eb640ab68e8a537e70ab51df6c49f70f8cb209d842aa8e4cc76620c0",
+      "role": "runtime",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "public/assets/webtoon/bat-actions.webp",
+      "width": 1024,
+      "height": 256,
+      "bytes": 31056,
+      "mode": "RGBA",
+      "sha256": "0563e3057aa97c8fcb22a734d8e40ee42bf348e83ebcfd96f517876906f41e6e",
+      "role": "runtime",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "public/assets/webtoon/captain-faces.webp",
+      "width": 768,
+      "height": 384,
+      "bytes": 57866,
+      "mode": "RGBA",
+      "sha256": "f251e45c95883770d3e3245e29a8e496381b6877857644ff66c65234448d3eb8",
+      "role": "runtime",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "public/assets/webtoon/captain-webtoon.webp",
+      "width": 512,
+      "height": 768,
+      "bytes": 66296,
+      "mode": "RGBA",
+      "sha256": "4b7d67ac7cb0841ae3e14474b56bbf6a740e8418dc466bc3afb7f0579c6a6e7c",
+      "role": "runtime",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "public/assets/webtoon/chapter-1.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 194742,
+      "mode": "RGB",
+      "sha256": "c8c0db1e61208972a90a7fdf2060b3342cb0b1190f5166db4385e75ef4271b2a",
+      "role": "runtime",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "public/assets/webtoon/chapter-2.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 136070,
+      "mode": "RGB",
+      "sha256": "1e538e6cb03814b6a75ad84fe95674d2877d25bd78c2b95fb8c6d76415018ae8",
+      "role": "runtime",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "public/assets/webtoon/chapter-3.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 243064,
+      "mode": "RGB",
+      "sha256": "c8c38ace3f182e49edfc7b3fa42e1a50c3ca0de26bea2a2c51f179033da94a2f",
+      "role": "runtime",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "public/assets/webtoon/chapter-4.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 99222,
+      "mode": "RGB",
+      "sha256": "e7dced3a596144e79155215d9e5396eaeb9d951b3252f673089c75344d25b9e7",
+      "role": "runtime",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "public/assets/webtoon/chapter-5.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 151480,
+      "mode": "RGB",
+      "sha256": "367d9b8831ac89f064647ed987c429d23782c1cf8972191ba73e7051f057dcc6",
+      "role": "runtime",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "public/assets/webtoon/chapter-6.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 183486,
+      "mode": "RGB",
+      "sha256": "b0f514cfb81676601e8faff8f8d75f9a8b1404b6b5632351d6d5f4adb906a775",
+      "role": "runtime",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "public/assets/webtoon/chapter-7.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 156292,
+      "mode": "RGB",
+      "sha256": "7656bb9c98829e35a8879d7fe3123b96c3184fac6202c9a9c5e0343f2dbe45ee",
+      "role": "runtime",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "public/assets/webtoon/chef-webtoon.webp",
+      "width": 512,
+      "height": 768,
+      "bytes": 74986,
+      "mode": "RGBA",
+      "sha256": "10082270c85f332cca5263809775da3a2f530640e414f1b9d32cda237ddb2636",
+      "role": "runtime",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "public/assets/webtoon/crab-webtoon.webp",
+      "width": 512,
+      "height": 512,
+      "bytes": 46830,
+      "mode": "RGBA",
+      "sha256": "3f663f4a3c42afefcda65d4e7e0b6d6131c2ff01197098b1915be098f9aaa5ad",
+      "role": "runtime",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "public/assets/webtoon/effect-hit-spark.webp",
+      "width": 384,
+      "height": 256,
+      "bytes": 22310,
+      "mode": "RGBA",
+      "sha256": "2446b515875ddbf0fde1946e8542e4a84527a3cd748814ec7bb8f10fbac352ce",
+      "role": "runtime",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "public/assets/webtoon/effect-purify-light.webp",
+      "width": 384,
+      "height": 256,
+      "bytes": 18940,
+      "mode": "RGBA",
+      "sha256": "6fc0d8bf078c25dcbd8cdc7149080d996966f5eee123d7de9d77350b019a6756",
+      "role": "runtime",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "public/assets/webtoon/effect-surrender-flag.webp",
+      "width": 384,
+      "height": 256,
+      "bytes": 24538,
+      "mode": "RGBA",
+      "sha256": "142cd3c39e0e9f55d597cfc3fbfad3ba66ede2036cac7364b4b95192c8dafc97",
+      "role": "runtime",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "public/assets/webtoon/elephant-webtoon.webp",
+      "width": 512,
+      "height": 512,
+      "bytes": 41554,
+      "mode": "RGBA",
+      "sha256": "165f16330c060a1a4b4ffe71a1fcb1290a8f143926cd3daa023efa93406a7579",
+      "role": "runtime",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "public/assets/webtoon/enemy-actions.webp",
+      "width": 1024,
+      "height": 2560,
+      "bytes": 428836,
+      "mode": "RGBA",
+      "sha256": "aef2117b166d24219f4bc00ff646a31e4f6d2b866d2d77bb4ba369bdfa644c43",
+      "role": "runtime",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "public/assets/webtoon/enemy-atlas.webp",
+      "width": 768,
+      "height": 512,
+      "bytes": 160690,
+      "mode": "RGBA",
+      "sha256": "48abeb651acd61e466895324361a7d9b2e56688174e33d152ea8294d79200690",
+      "role": "runtime",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "public/assets/webtoon/genie-faces.webp",
+      "width": 768,
+      "height": 384,
+      "bytes": 71974,
+      "mode": "RGBA",
+      "sha256": "9f6dc8d342fe8b8a2c04c2329892a91efcfd040bf0fb7c59f5e2d2a08d613cb3",
+      "role": "runtime",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "public/assets/webtoon/genie-webtoon.webp",
+      "width": 512,
+      "height": 768,
+      "bytes": 113808,
+      "mode": "RGBA",
+      "sha256": "58512f3ca1b73e600cdf0aa7b27098c0bb418802b7634c0e6f4c9602e09bd8af",
+      "role": "runtime",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "public/assets/webtoon/hero-action.webp",
+      "width": 768,
+      "height": 768,
+      "bytes": 119426,
+      "mode": "RGBA",
+      "sha256": "8b4c5d84d516ea9f7da89a68704b2830e9e5f21d682e5ba6cf53785684ba85ea",
+      "role": "runtime",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "public/assets/webtoon/hero-run.webp",
+      "width": 768,
+      "height": 512,
+      "bytes": 96484,
+      "mode": "RGBA",
+      "sha256": "5ba847855b36a337390e42c7dfbaaecced114b13de6425a0a6d26fb61323a66b",
+      "role": "runtime",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "public/assets/webtoon/hero-webtoon.webp",
+      "width": 512,
+      "height": 768,
+      "bytes": 49532,
+      "mode": "RGBA",
+      "sha256": "70d27188663d99d1bb43bf72ac3026e9903993e8dec214d69b2d8cc59ba4fbb4",
+      "role": "runtime",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "public/assets/webtoon/king-faces.webp",
+      "width": 768,
+      "height": 384,
+      "bytes": 69350,
+      "mode": "RGBA",
+      "sha256": "3c62e8d038f768aada369d5f09fdab1991e35cd5aa9d785af979a9985da2d3c6",
+      "role": "runtime",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "public/assets/webtoon/king-webtoon.webp",
+      "width": 512,
+      "height": 768,
+      "bytes": 63932,
+      "mode": "RGBA",
+      "sha256": "73e29774d44ab1af99c3153f90be3a6722eb85648b0f5980dedd70e9aaff8ef9",
+      "role": "runtime",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "public/assets/webtoon/kite-actions.webp",
+      "width": 1024,
+      "height": 256,
+      "bytes": 33784,
+      "mode": "RGBA",
+      "sha256": "5260f711ebd5374093774fb12dee2b4b70eec47bae2c169d5a78b0449c68fa9f",
+      "role": "runtime",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "public/assets/webtoon/kuura-webtoon.webp",
+      "width": 512,
+      "height": 768,
+      "bytes": 101846,
+      "mode": "RGBA",
+      "sha256": "d1fa9e621fbf40e0f0a02f8b7389cca19c6b104980774616cc426284b0104519",
+      "role": "runtime",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "public/assets/webtoon/mira-faces.webp",
+      "width": 768,
+      "height": 384,
+      "bytes": 62164,
+      "mode": "RGBA",
+      "sha256": "cf548931570171fe67450f467169e8ff6a0fb990319547b05d065205256cd388",
+      "role": "runtime",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "public/assets/webtoon/mira-webtoon.webp",
+      "width": 512,
+      "height": 768,
+      "bytes": 67924,
+      "mode": "RGBA",
+      "sha256": "34e1cfb40ac31bb88f5a458ddc51c99685ee74c77404f749cc9eefd4ea1a7541",
+      "role": "runtime",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "public/assets/webtoon/naira-faces.webp",
+      "width": 768,
+      "height": 384,
+      "bytes": 73052,
+      "mode": "RGBA",
+      "sha256": "c6b350f93501f1d73a38581c8cebaa9917368c932df19d201f9931865f8d0cb0",
+      "role": "runtime",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "public/assets/webtoon/naira-webtoon.webp",
+      "width": 512,
+      "height": 768,
+      "bytes": 114308,
+      "mode": "RGBA",
+      "sha256": "e06517aabf3e4b96b778c074282fc6e5df43ffb87b87b661aa83ed031bd2adea",
+      "role": "runtime",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "public/assets/webtoon/projectile-kite-wind.webp",
+      "width": 128,
+      "height": 128,
+      "bytes": 7210,
+      "mode": "RGBA",
+      "sha256": "0a58723acd9867b56a3e955c6869ada6dc3c09a9de596a98042803ccfa6032d5",
+      "role": "runtime",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "public/assets/webtoon/projectile-kuura-orb.webp",
+      "width": 128,
+      "height": 128,
+      "bytes": 6784,
+      "mode": "RGBA",
+      "sha256": "c4d3d34f820a3185c2bdf6b10c59ec14e70add364e15182efce150bf6723c551",
+      "role": "runtime",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "public/assets/webtoon/projectile-siren-note.webp",
+      "width": 128,
+      "height": 128,
+      "bytes": 7010,
+      "mode": "RGBA",
+      "sha256": "a54f8815bba05bf79a64573cda4e8acd7ed154f6da8e069bf57d4e0b8bf642a5",
+      "role": "runtime",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "public/assets/webtoon/projectile-siren-wave.webp",
+      "width": 128,
+      "height": 128,
+      "bytes": 6790,
+      "mode": "RGBA",
+      "sha256": "1cee45acb2e6643c94113efe187581d603b5137fd23161eacbab42825c050f74",
+      "role": "runtime",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "public/assets/webtoon/prop-bell.webp",
+      "width": 96,
+      "height": 128,
+      "bytes": 4720,
+      "mode": "RGBA",
+      "sha256": "13653fb4a71b9f22ea7607e48dbe23bbfef41c85ac567fc7585a103a1d810ee9",
+      "role": "runtime",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "public/assets/webtoon/prop-cargo.webp",
+      "width": 96,
+      "height": 128,
+      "bytes": 4222,
+      "mode": "RGBA",
+      "sha256": "079f90984e1e01e9cf59fbbed8281b82203905f9dbd47ddbf800186fa1151f7d",
+      "role": "runtime",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "public/assets/webtoon/prop-chest.webp",
+      "width": 96,
+      "height": 128,
+      "bytes": 3872,
+      "mode": "RGBA",
+      "sha256": "fc76b180154ed91d7571d7dc126612505e8fa922d0cfe9af60e3c119c62191db",
+      "role": "runtime",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "public/assets/webtoon/prop-coral-gate.webp",
+      "width": 96,
+      "height": 128,
+      "bytes": 4658,
+      "mode": "RGBA",
+      "sha256": "ca2c65c20d1272533716de5166dc18fdaa31d5d48ff1af8acc920575ccec273e",
+      "role": "runtime",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "public/assets/webtoon/prop-damaged-mast.webp",
+      "width": 96,
+      "height": 128,
+      "bytes": 6400,
+      "mode": "RGBA",
+      "sha256": "f1ad63a2b3d09f5c4fec5928d5692e7be80af70ccf9054601756bc1c7df1f180",
+      "role": "runtime",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "public/assets/webtoon/prop-ending.webp",
+      "width": 96,
+      "height": 128,
+      "bytes": 8080,
+      "mode": "RGBA",
+      "sha256": "94d559030f6f37fa50a9ac706dc039fde5bfed40468d6b13aa1fa3343a314169",
+      "role": "runtime",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "public/assets/webtoon/prop-falling-debris.webp",
+      "width": 96,
+      "height": 128,
+      "bytes": 4274,
+      "mode": "RGBA",
+      "sha256": "da17201c93f5d539d0d7e241c71a8a1e215954d88de193f8e4f3693f4421fcb5",
+      "role": "runtime",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "public/assets/webtoon/prop-flight-ring.webp",
+      "width": 96,
+      "height": 128,
+      "bytes": 8458,
+      "mode": "RGBA",
+      "sha256": "33a98d3fbf2ddcedec9473c7f0a6c95936e258a339757634c0663f48cc1f65cc",
+      "role": "runtime",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "public/assets/webtoon/prop-furnace.webp",
+      "width": 96,
+      "height": 128,
+      "bytes": 5106,
+      "mode": "RGBA",
+      "sha256": "942cbe054583999944b776c6267c5111be021b3ccaf7ca1b5d621072d90224ba",
+      "role": "runtime",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "public/assets/webtoon/prop-gift.webp",
+      "width": 96,
+      "height": 128,
+      "bytes": 5280,
+      "mode": "RGBA",
+      "sha256": "953a0e0b529b6e9a67b604114c403183f98423e8feee9c1ae712899701ba40e4",
+      "role": "runtime",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "public/assets/webtoon/prop-golden.webp",
+      "width": 96,
+      "height": 128,
+      "bytes": 4352,
+      "mode": "RGBA",
+      "sha256": "a675bab940b0322b1c35613e0cf88142991d4622be23ec88e166425ea3e88a38",
+      "role": "runtime",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "public/assets/webtoon/prop-gust-cloud.webp",
+      "width": 96,
+      "height": 128,
+      "bytes": 4912,
+      "mode": "RGBA",
+      "sha256": "be4f41990fd6c768c045a20225e0f381cfb3cf3c740d1f469bff4e98f0ad9704",
+      "role": "runtime",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "public/assets/webtoon/prop-heart.webp",
+      "width": 96,
+      "height": 128,
+      "bytes": 2882,
+      "mode": "RGBA",
+      "sha256": "b3acf465c2d04a63429267fb9337a124e80a92b3e94174eddeac9fbb1364b3ff",
+      "role": "runtime",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "public/assets/webtoon/prop-journal.webp",
+      "width": 96,
+      "height": 128,
+      "bytes": 3838,
+      "mode": "RGBA",
+      "sha256": "ddb9f8e536309d2938dbcccff96322af9ef0fa75cb5e440e2d1a616403d8e047",
+      "role": "runtime",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "public/assets/webtoon/prop-key.webp",
+      "width": 96,
+      "height": 128,
+      "bytes": 5058,
+      "mode": "RGBA",
+      "sha256": "65db0c1fa2f45a02632c9553e3cef08b823386358bdb3f03963bfb227ad7910d",
+      "role": "runtime",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "public/assets/webtoon/prop-lantern.webp",
+      "width": 96,
+      "height": 128,
+      "bytes": 4664,
+      "mode": "RGBA",
+      "sha256": "4d5c33f7a9687a8b636ed32b5179dc7a90729bed5399575ffffd010733f07f7e",
+      "role": "runtime",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "public/assets/webtoon/prop-lifering.webp",
+      "width": 96,
+      "height": 128,
+      "bytes": 4938,
+      "mode": "RGBA",
+      "sha256": "471ded337469ae233e28036cc57203955d7c2bd72dca7a90664f62e460e66824",
+      "role": "runtime",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "public/assets/webtoon/prop-lifevest.webp",
+      "width": 96,
+      "height": 128,
+      "bytes": 5362,
+      "mode": "RGBA",
+      "sha256": "47d67458a3c59fdde8443813c0861bd80fafa91500676fe0950abcd623965de4",
+      "role": "runtime",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "public/assets/webtoon/prop-lightning-rod.webp",
+      "width": 96,
+      "height": 128,
+      "bytes": 4998,
+      "mode": "RGBA",
+      "sha256": "f7bdfef3deeac13e980d70978cdad5aea4461b2f106f5e84aea17c8314151096",
+      "role": "runtime",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "public/assets/webtoon/prop-lotus-shrine.webp",
+      "width": 96,
+      "height": 128,
+      "bytes": 5696,
+      "mode": "RGBA",
+      "sha256": "7a2d4651cee8ab14b75285143b762ea933b575bc233862223bf13294d9020b18",
+      "role": "runtime",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "public/assets/webtoon/prop-mirror.webp",
+      "width": 96,
+      "height": 128,
+      "bytes": 5254,
+      "mode": "RGBA",
+      "sha256": "f22f2c4160634c7905961adde2a88865c83cf19771056f9f16f25f825d3e4bcb",
+      "role": "runtime",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "public/assets/webtoon/prop-moon-rock.webp",
+      "width": 96,
+      "height": 128,
+      "bytes": 3982,
+      "mode": "RGBA",
+      "sha256": "ac30bc113263270e60fcc268fa1b1dd536a00be1e39f8e05cefda3e05ebdeb52",
+      "role": "runtime",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "public/assets/webtoon/prop-rescue-rope.webp",
+      "width": 96,
+      "height": 128,
+      "bytes": 5718,
+      "mode": "RGBA",
+      "sha256": "50bc72b0b75b6a156a934b3414d0e6d1ea5af1b130d246a2624d0eaf7e8fd97a",
+      "role": "runtime",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "public/assets/webtoon/prop-shell.webp",
+      "width": 96,
+      "height": 128,
+      "bytes": 4178,
+      "mode": "RGBA",
+      "sha256": "8bcf8c42db3311bb81b5d2e046d75fa6397c9fec6555d24e1f112755ca61cd4c",
+      "role": "runtime",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "public/assets/webtoon/prop-star-device.webp",
+      "width": 96,
+      "height": 128,
+      "bytes": 5944,
+      "mode": "RGBA",
+      "sha256": "e221399e491605110d0538352ca723539de48b30a1ace14b6aec2aecd7814b57",
+      "role": "runtime",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "public/assets/webtoon/prop-star-map.webp",
+      "width": 96,
+      "height": 128,
+      "bytes": 5720,
+      "mode": "RGBA",
+      "sha256": "2f827b75ed5225490123a7c9e46b4c4affdc8ccdcf086822bf8498a8204ea87a",
+      "role": "runtime",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "public/assets/webtoon/prop-torch.webp",
+      "width": 96,
+      "height": 128,
+      "bytes": 3486,
+      "mode": "RGBA",
+      "sha256": "84ab763b60a108e49f429f0e2b093e9b0e158882b4995a13ad8af8dd60a45b8f",
+      "role": "runtime",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "public/assets/webtoon/prop-treasure-altar.webp",
+      "width": 96,
+      "height": 128,
+      "bytes": 5360,
+      "mode": "RGBA",
+      "sha256": "ec0ad74a6d5841f709751ff61efddab70b7e58847384e12531400179fadd3ab5",
+      "role": "runtime",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "public/assets/webtoon/prop-vine.webp",
+      "width": 96,
+      "height": 128,
+      "bytes": 5654,
+      "mode": "RGBA",
+      "sha256": "c1c0b1067d7ab828e8e99a42f581dbdb88630c29621618431b99a719ca3a22d0",
+      "role": "runtime",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "public/assets/webtoon/prop-wave-rope.webp",
+      "width": 96,
+      "height": 128,
+      "bytes": 4114,
+      "mode": "RGBA",
+      "sha256": "e0ddb84389446784d01268d31ea1a28b7bbed0f197106bbb4af264b0654ce0a4",
+      "role": "runtime",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "public/assets/webtoon/rah-faces.webp",
+      "width": 768,
+      "height": 384,
+      "bytes": 91494,
+      "mode": "RGBA",
+      "sha256": "2da4e090a9f7bd679136c751e2647ff052185b7ea055a1d5d2683eb4c4f98567",
+      "role": "runtime",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "public/assets/webtoon/rah-webtoon.webp",
+      "width": 512,
+      "height": 768,
+      "bytes": 137152,
+      "mode": "RGBA",
+      "sha256": "34adb5cf5b59ebb6440cc99df2a970f75c8d4ac22c439834e9f8c5e07310f2d0",
+      "role": "runtime",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "public/assets/webtoon/roc-actions.webp",
+      "width": 768,
+      "height": 512,
+      "bytes": 103480,
+      "mode": "RGBA",
+      "sha256": "9847cbdeb2acd1861efd2091215cfa103e0085d14983af26f574a19d66ba982c",
+      "role": "runtime",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "public/assets/webtoon/roc-webtoon.webp",
+      "width": 768,
+      "height": 512,
+      "bytes": 101806,
+      "mode": "RGBA",
+      "sha256": "9789b4bafb31dcadda1d5af62d093acf918038a9c3e99da76c02c674b458339a",
+      "role": "runtime",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "public/assets/webtoon/sailor-webtoon.webp",
+      "width": 512,
+      "height": 768,
+      "bytes": 57238,
+      "mode": "RGBA",
+      "sha256": "6a8d99318aa0a0d2d786393825506395f323d325ff3f7f648c43850c5cbb3f47",
+      "role": "runtime",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "public/assets/webtoon/siren-actions.webp",
+      "width": 1024,
+      "height": 256,
+      "bytes": 49312,
+      "mode": "RGBA",
+      "sha256": "4b12cb3809275ceb8ff7db4aa595852dd20201769dbe0082e6c96a1712d878ae",
+      "role": "runtime",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "public/assets/webtoon/siren-faces.webp",
+      "width": 768,
+      "height": 384,
+      "bytes": 69182,
+      "mode": "RGBA",
+      "sha256": "846f26ecaca7b54bbd6ecdc30af93fa0cd3d6e8608ab12940720053e53ab6133",
+      "role": "runtime",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "public/assets/webtoon/siren-webtoon.webp",
+      "width": 512,
+      "height": 768,
+      "bytes": 126080,
+      "mode": "RGBA",
+      "sha256": "5bd8adc19bac85099577b68ae6449e88ccf29110a84216be5645295564d4c98c",
+      "role": "runtime",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "public/assets/webtoon/spirit-actions.webp",
+      "width": 1024,
+      "height": 256,
+      "bytes": 34476,
+      "mode": "RGBA",
+      "sha256": "b3487f6720174d2f4e396e414af9979167a0aa9cf482afb9c6df80e7915dfa48",
+      "role": "runtime",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "public/assets/webtoon/ui-bridge.png",
+      "width": 128,
+      "height": 128,
+      "bytes": 20722,
+      "mode": "RGBA",
+      "sha256": "67d449cb2e2fc89b529c7fe4ed98a09c40feb7d0225902a71bb99a8efee037d4",
+      "role": "runtime",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "public/assets/webtoon/ui-dawn.png",
+      "width": 128,
+      "height": 128,
+      "bytes": 18376,
+      "mode": "RGBA",
+      "sha256": "ec41af42f3f7e793dc4e2cad85c606975ab176b20161092c9812a823443df559",
+      "role": "runtime",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "public/assets/webtoon/ui-depart.png",
+      "width": 128,
+      "height": 128,
+      "bytes": 21393,
+      "mode": "RGBA",
+      "sha256": "66c6dcd8fd5e4ffc550567d596f2927f2c90947ec6977b58ef62065b848c36e4",
+      "role": "runtime",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "public/assets/webtoon/ui-flame.png",
+      "width": 128,
+      "height": 128,
+      "bytes": 21279,
+      "mode": "RGBA",
+      "sha256": "47d87fa14ee531a5e4efac4ce77d2610fe04476d6af79dbf9e5024805b88ae5e",
+      "role": "runtime",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "public/assets/webtoon/ui-inspect.png",
+      "width": 128,
+      "height": 128,
+      "bytes": 18420,
+      "mode": "RGBA",
+      "sha256": "5de2131b8bd7b1542a7036fe01a046426b00ae637575cd58714d94fe2b3f71be",
+      "role": "runtime",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "public/assets/webtoon/ui-jump.png",
+      "width": 128,
+      "height": 128,
+      "bytes": 13387,
+      "mode": "RGBA",
+      "sha256": "cec3edf92bc5f491eda699db88d7e5a284b3a797997cdbf80e753ff5100f98ea",
+      "role": "runtime",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "public/assets/webtoon/ui-shield.png",
+      "width": 128,
+      "height": 128,
+      "bytes": 25797,
+      "mode": "RGBA",
+      "sha256": "7dc40d489ccd6799ff252b649155a9cc4f7c89f338c36dda416a6234a9eba8df",
+      "role": "runtime",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "public/assets/webtoon/ui-talk.png",
+      "width": 128,
+      "height": 128,
+      "bytes": 17846,
+      "mode": "RGBA",
+      "sha256": "e83770e61394937a5a84250945acd7d61ad6457f7f47382ef19a1f4944fc0960",
+      "role": "runtime",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "public/assets/webtoon/ui-wing.png",
+      "width": 128,
+      "height": 128,
+      "bytes": 25620,
+      "mode": "RGBA",
+      "sha256": "deeb029b799595c2dd319c733449de8da1ceb513261b17fb1878d3ab21fa93f5",
+      "role": "runtime",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "public/assets/webtoon/villager-webtoon.webp",
+      "width": 512,
+      "height": 768,
+      "bytes": 59760,
+      "mode": "RGBA",
+      "sha256": "f81cb60448a9f319a2da8cc83e3e193fcbc8348e45dcf693bf65556600898ff4",
+      "role": "runtime",
+      "artStatus": "ART_DRAFT"
+    },
+    {
+      "path": "public/assets/webtoon/whale-webtoon.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 112596,
+      "mode": "RGBA",
+      "sha256": "270c9ac8f0973f1cc0127b52698fc0f49d7dbcffce871867dcd3024302e7965d",
+      "role": "runtime",
+      "artStatus": "ART_DRAFT"
+    }
+  ]
+}

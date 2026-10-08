@@ -1,0 +1,99 @@
+
+> sinbad-seven-treasures@0.1.0 test:e2e
+> playwright test tests/e2e/roc-mechanics.spec.ts --reporter=list,json
+
+
+Running 4 tests using 1 worker
+
+(node:49972) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:49972) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+SHOT peck-warning 172ms
+SHOT core-open 177ms
+SHOT one-core-one-landing 179ms
+WIND INPUT {"x":2214.1111111111104,"y":546,"grounded":true,"vx":0,"vy":0,"hp":68,"maxHp":100,"bodyWidth":42,"bodyHeight":84}
+WIND AIR {"x":2214.1111111111104,"y":425.25,"grounded":false,"vx":0,"vy":-190,"hp":68,"maxHp":100,"bodyWidth":42,"bodyHeight":84}
+SHOT wind-jump-safe 188ms
+SHOT dive-warning 167ms
+SHOT dive-safe 188ms
+SHOT freed 183ms
+SHOT alliance-dialogue 160ms
+SHOT glide-held 154ms
+SHOT glide-release 160ms
+SHOT double-jump 157ms
+  ok 1 tests\e2e\roc-mechanics.spec.ts:112:3 › phone S09 three distinct avoidable patterns, three cores and feather glide (1.1m)
+SHOT peck-warning 307ms
+SHOT core-open 304ms
+SHOT one-core-one-landing 322ms
+WIND INPUT {"x":2234.1111111111104,"y":546,"grounded":true,"vx":0,"vy":0,"hp":68,"maxHp":100,"bodyWidth":42,"bodyHeight":84}
+WIND AIR {"x":2234.1111111111104,"y":425.25,"grounded":false,"vx":0,"vy":-190,"hp":68,"maxHp":100,"bodyWidth":42,"bodyHeight":84}
+SHOT wind-jump-safe 327ms
+SHOT dive-warning 335ms
+SHOT dive-safe 360ms
+SHOT freed 381ms
+SHOT alliance-dialogue 380ms
+SHOT glide-held 317ms
+SHOT glide-release 318ms
+SHOT double-jump 292ms
+  ok 2 tests\e2e\roc-mechanics.spec.ts:112:3 › tablet S09 three distinct avoidable patterns, three cores and feather glide (52.6s)
+SHOT core-one-saved 321ms
+SHOT death-checkpoint 311ms
+  x  3 tests\e2e\roc-mechanics.spec.ts:250:1 › partial cores survive death and reload; legacy channels cannot bypass combat (1.3m)
+(node:31136) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:31136) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+SHOT missing-orb 314ms
+SHOT no-feather-fall 326ms
+  x  4 tests\e2e\roc-mechanics.spec.ts:308:1 › missing orb cannot expose a core; feather is needed for glide; old victory remains valid (25.9s)
+
+
+  1) tests\e2e\roc-mechanics.spec.ts:250:1 › partial cores survive death and reload; legacy channels cannot bypass combat 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoContain[2m([22m[32mexpected[39m[2m) // indexOf[22m
+
+    Expected value: [32m"T03"[39m
+    Received array: [31m["T01", "T02"][39m
+
+      108 |     expect(won.claimedRewardIds.filter((id:string)=>id==='S09.enemy.3')).toHaveLength(1);expect(won.totalXp-once.totalXp).toBe(6);expect(won.coins-once.coins).toBe(3);
+      109 |     await resume(page);expect((await read(page)).enemies).toHaveLength(0);expect((await read(page)).save.claimedRewardIds).toEqual(won.claimedRewardIds);
+    > 110 |     await moveJourney(page,2480);await page.keyboard.press('e');await skipJourneyDialogue(page);expect((await read(page)).save.treasures).toContain('T03');
+          |                                                                                                                                           ^
+      111 |     await proof.shot('retry-alliance');expect(errors).toEqual([]);proof.finish(errors);
+      112 | });
+      113 |
+        at C:\code\code10(sindbad)\tests\e2e\roc-mechanics.spec.ts:110:139
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\roc-mechanics-partial-core-98382-annels-cannot-bypass-combat\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\roc-mechanics-partial-core-98382-annels-cannot-bypass-combat\error-context.md
+
+  2) tests\e2e\roc-mechanics.spec.ts:308:1 › missing orb cannot expose a core; feather is needed for glide; old victory remains valid 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoContain[2m([22m[32mexpected[39m[2m) // indexOf[22m
+
+    Expected value: [32m"T03"[39m
+    Received array: [31m["T01", "T02"][39m
+
+      122 |     await load(page,legacy);expect((await read(page)).enemies).toHaveLength(0);await moveJourney(page,2480);const legacyBefore=(await read(page)).save;
+      123 |     await page.keyboard.press('e');await skipJourneyDialogue(page);
+    > 124 |     expect((await read(page)).save.treasures).toContain('T03');expect((await read(page)).save.totalXp).toBe(legacyBefore.totalXp);await proof.shot('legacy-alliance');
+          |                                               ^
+      125 |     expect(errors).toEqual([]);proof.finish(errors);
+      126 | });
+      127 |
+        at C:\code\code10(sindbad)\tests\e2e\roc-mechanics.spec.ts:124:47
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\roc-mechanics-missing-orb--91db3-e-old-victory-remains-valid\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\roc-mechanics-missing-orb--91db3-e-old-victory-remains-valid\error-context.md
+
+  2 failed
+    tests\e2e\roc-mechanics.spec.ts:250:1 › partial cores survive death and reload; legacy channels cannot bypass combat 
+    tests\e2e\roc-mechanics.spec.ts:308:1 › missing orb cannot expose a core; feather is needed for glide; old victory remains valid 
+  2 passed (3.8m)

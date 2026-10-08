@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-07",
+  "tool": "OpenAI built-in imagegen",
+  "toolPath": "C:/Users/tbose/.codex/generated_images/01a10013-499c-7b11-9c12-3ae8826e542a/exec-5ca88f29-6344-4816-99e5-b904f4188f4f.png",
+  "referenceImages": [
+    "art-source/webtoon/roc-webtoon.webp",
+    "art-source/webtoon/hero-webtoon.webp"
+  ],
+  "prompt": "Use case: identity-preserve. Asset type: transparent game action sprite sheet, 6 poses of the project original roc bird.\nInput image 1 is the existing roc character identity reference; image 2 is ONLY the project's outline/cel-shading style reference. Create a new derivative sheet, preserve both original files.\nCanvas exactly 1536x1024 RGBA, 3 columns x 2 rows, six 512x512 square cells. Each complete bird must be SMALL and fit inside its own cell with generous transparent clearance on ALL four sides, including wings, tail, toes and magical sparkles. No grid lines, no labels, no writing.\nSame friendly roc in every pose, facing RIGHT: teal feathers, ivory head and belly, golden feather tips and beak, small brown saddle and teal/gold cloth on back. Clear dark outlines, restrained cel shading, upper-left light. Original project character, no external artist or franchise. No human riders.\nRead left-to-right, top-to-bottom:\n0 top-left: standing alert idle, wings folded, claws touching an implied floor, gaze right; small dark violet jewel in gold neck ornament.\n1 top-middle: boss windup, crouched with wings lifted compactly ABOVE body, clearly prepares a flap, jewel same.\n2 top-right: boss forward wing sweep, beak aimed right, wings swept forward/down but compact; no wind trail or effect beyond bird; jewel same.\n3 bottom-left: peaceful curse-lifted standing bird, wings folded, relaxed eyes; neck jewel now clear turquoise, just two tiny gold glints contained close to body, no injury, no death pose.\n4 bottom-middle: in-flight wing UP pose, flying right, feet tucked, stable upright brown saddle on the middle of its back, restored turquoise jewel. Keep wings inside cell.\n5 bottom-right: in-flight wing DOWN pose, flying right, feet tucked, same stable saddle position on body. Keep all wing tips within cell.\nKeep body proportions, anatomy, colors, saddle and identity consistent. Side/three-quarter side view, at most 370px silhouette extent in each 512px cell. Preserve true transparent alpha background, no scenery, no floor, no shadows floating outside, no gradients or black backdrop. Entire bodies visible, never cropped, six isolated figures, no figure crosses a cell boundary. No weapons, gore, wounds, frightening close-up, deity or religious imagery, logos, signatures, text, numbers or watermark.",
+  "status": "selected; visible outer/central seams transparent, no text; ART_DRAFT",
+  "artStatus": "ART_DRAFT",
+  "nativeSize": [
+    1536,
+    1024
+  ],
+  "sha256": "9de059aa12536ff282043340c75292e01b454de59a849f859b0a1e80bc240832"
+}

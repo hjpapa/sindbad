@@ -1,0 +1,46 @@
+
+> sinbad-seven-treasures@0.1.0 test:e2e
+> playwright test tests/e2e/roc-mechanics.spec.ts --grep phone S09 --reporter=list,json
+
+
+Running 1 test using 1 worker
+
+(node:39420) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:39420) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+SHOT peck-warning 194ms
+SHOT core-open 174ms
+SHOT one-core-one-landing 188ms
+WIND INPUT {"x":2224.1111111111104,"y":546,"grounded":true,"vx":0,"vy":0,"hp":68,"maxHp":100,"bodyWidth":42,"bodyHeight":84}
+WIND AIR {"x":2224.1111111111104,"y":425.25,"grounded":false,"vx":0,"vy":-190,"hp":68,"maxHp":100,"bodyWidth":42,"bodyHeight":84}
+SHOT wind-jump-safe 187ms
+SHOT dive-warning 179ms
+SHOT dive-safe 183ms
+  x  1 tests\e2e\roc-mechanics.spec.ts:112:3 › phone S09 three distinct avoidable patterns, three cores and feather glide (1.0m)
+
+
+  1) tests\e2e\roc-mechanics.spec.ts:112:3 › phone S09 three distinct avoidable patterns, three cores and feather glide 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: [32m6[39m
+    Received: [31m13[39m
+
+      64 |         expect((await read(page)).player.hp).toBe(hp);await proof.shot('dive-safe');
+      65 |         await strikeRocJourney(page);expect((await read(page)).rocEncounter.coresBroken).toBe(3);
+    > 66 |         expect((await read(page)).save.totalXp).toBe(6);expect((await read(page)).save.coins).toBe(3);
+         |                                                 ^
+      67 |         await proof.shot('freed');await moveJourney(page,2480);await page.keyboard.press('e');
+      68 |         await expect(page.getByTestId('dialogue-text')).toBeVisible();const treasure=(await read(page)).save;
+      69 |         expect(treasure.treasures).toContain('T03');await proof.shot('alliance-dialogue');
+        at C:\code\code10(sindbad)\tests\e2e\roc-mechanics.spec.ts:66:49
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\roc-mechanics-phone-S09-th-da99a-ree-cores-and-feather-glide\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\roc-mechanics-phone-S09-th-da99a-ree-cores-and-feather-glide\error-context.md
+
+  1 failed
+    tests\e2e\roc-mechanics.spec.ts:112:3 › phone S09 three distinct avoidable patterns, three cores and feather glide 

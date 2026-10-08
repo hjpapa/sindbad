@@ -1,0 +1,22 @@
+
+> sinbad-seven-treasures@0.1.0 test:e2e
+> playwright test tests/e2e/bat-actions.spec.ts --reporter=list,json,html
+
+
+Running 4 tests using 1 worker
+
+(node:8512) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:8512) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 tests\e2e\bat-actions.spec.ts:50:41 › phone bat four actions keeps contact combat, puzzle safety and rewards (52.4s)
+  ok 2 tests\e2e\bat-actions.spec.ts:50:41 › phone bat missing-sheet recovery keeps contact combat, puzzle safety and rewards (28.9s)
+  ok 3 tests\e2e\bat-actions.spec.ts:50:41 › tablet bat four actions keeps contact combat, puzzle safety and rewards (30.3s)
+  ok 4 tests\e2e\bat-actions.spec.ts:50:41 › tablet bat missing-sheet recovery keeps contact combat, puzzle safety and rewards (29.7s)
+
+  4 passed (2.4m)
+
+To open last HTML report run:
+[36m[39m
+[36m  npx playwright show-report[39m
+[36m[39m

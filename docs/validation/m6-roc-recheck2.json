@@ -1,0 +1,407 @@
+{
+  "config": {
+    "configFile": "C:\\code\\code10(sindbad)\\playwright.config.ts",
+    "rootDir": "C:/code/code10(sindbad)/tests/e2e",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": "C:\\code\\code10(sindbad)\\tests\\e2e\\server.setup.ts",
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ],
+      [
+        "html"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "C:/code/code10(sindbad)/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "C:/code/code10(sindbad)/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 240000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.55.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "roc-actions.spec.ts",
+      "file": "roc-actions.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "phone roc six actions boss, saddle and return flight",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 480000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 88739,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 12
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 4
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 1913
+                    },
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 6
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 5
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 5
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 5
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 8
+                    }
+                  ],
+                  "startTime": "2026-10-07T11:25:54.993Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a23d2927f9e49768226d-42b51149c87f570e5d81",
+          "file": "roc-actions.spec.ts",
+          "line": 61,
+          "column": 41
+        },
+        {
+          "title": "phone roc missing-sheet recovery boss, saddle and return flight",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 480000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 53285,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: < \u001b[32m-450\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n\nCall Log:\n- Timeout 10000ms exceeded while waiting on the predicate",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: < \u001b[32m-450\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n\nCall Log:\n- Timeout 10000ms exceeded while waiting on the predicate\n    at C:\\code\\code10(sindbad)\\tests\\e2e\\roc-actions.spec.ts:81:46",
+                    "location": {
+                      "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\roc-actions.spec.ts",
+                      "column": 46,
+                      "line": 81
+                    },
+                    "snippet": "  79 |         await moveJourney(page,2600,550);await page.keyboard.press('ArrowUp');await page.waitForTimeout(240);\n  80 |         expect((await read(page)).player.grounded).toBe(false);\n> 81 |         await page.keyboard.press('ArrowUp');await expect.poll(async()=>(await read(page)).player.vy).toBeLessThan(-450);\n     |                                              ^\n  82 |         await shot('S09-double-jump',await read(page));\n  83 |         for(const stage of ['S10','S33']){\n  84 |             await load(page,fixture(stage,device==='tablet'));"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\roc-actions.spec.ts",
+                        "column": 46,
+                        "line": 81
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: < \u001b[32m-450\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n\nCall Log:\n- Timeout 10000ms exceeded while waiting on the predicate\n\n  79 |         await moveJourney(page,2600,550);await page.keyboard.press('ArrowUp');await page.waitForTimeout(240);\n  80 |         expect((await read(page)).player.grounded).toBe(false);\n> 81 |         await page.keyboard.press('ArrowUp');await expect.poll(async()=>(await read(page)).player.vy).toBeLessThan(-450);\n     |                                              ^\n  82 |         await shot('S09-double-jump',await read(page));\n  83 |         for(const stage of ['S10','S33']){\n  84 |             await load(page,fixture(stage,device==='tablet'));\n    at C:\\code\\code10(sindbad)\\tests\\e2e\\roc-actions.spec.ts:81:46"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 6
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 6
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 396
+                    },
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 9005,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: < \u001b[32m-450\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n\nCall Log:\n- Timeout 10000ms exceeded while waiting on the predicate",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: < \u001b[32m-450\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n\nCall Log:\n- Timeout 10000ms exceeded while waiting on the predicate\n    at C:\\code\\code10(sindbad)\\tests\\e2e\\roc-actions.spec.ts:81:46",
+                        "location": {
+                          "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\roc-actions.spec.ts",
+                          "column": 46,
+                          "line": 81
+                        },
+                        "snippet": "  79 |         await moveJourney(page,2600,550);await page.keyboard.press('ArrowUp');await page.waitForTimeout(240);\n  80 |         expect((await read(page)).player.grounded).toBe(false);\n> 81 |         await page.keyboard.press('ArrowUp');await expect.poll(async()=>(await read(page)).player.vy).toBeLessThan(-450);\n     |                                              ^\n  82 |         await shot('S09-double-jump',await read(page));\n  83 |         for(const stage of ['S10','S33']){\n  84 |             await load(page,fixture(stage,device==='tablet'));"
+                      }
+                    }
+                  ],
+                  "startTime": "2026-10-07T11:27:24.526Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\code\\code10(sindbad)\\test-results\\roc-actions-phone-roc-miss-676e5-ss-saddle-and-return-flight\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\code\\code10(sindbad)\\test-results\\roc-actions-phone-roc-miss-676e5-ss-saddle-and-return-flight\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\roc-actions.spec.ts",
+                    "column": 46,
+                    "line": 81
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "a23d2927f9e49768226d-036d5b1bca76726f8ff1",
+          "file": "roc-actions.spec.ts",
+          "line": 61,
+          "column": 41
+        },
+        {
+          "title": "tablet roc six actions boss, saddle and return flight",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 480000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 56660,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: < \u001b[32m-450\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n\nCall Log:\n- Timeout 10000ms exceeded while waiting on the predicate",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: < \u001b[32m-450\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n\nCall Log:\n- Timeout 10000ms exceeded while waiting on the predicate\n    at C:\\code\\code10(sindbad)\\tests\\e2e\\roc-actions.spec.ts:81:46",
+                    "location": {
+                      "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\roc-actions.spec.ts",
+                      "column": 46,
+                      "line": 81
+                    },
+                    "snippet": "  79 |         await moveJourney(page,2600,550);await page.keyboard.press('ArrowUp');await page.waitForTimeout(240);\n  80 |         expect((await read(page)).player.grounded).toBe(false);\n> 81 |         await page.keyboard.press('ArrowUp');await expect.poll(async()=>(await read(page)).player.vy).toBeLessThan(-450);\n     |                                              ^\n  82 |         await shot('S09-double-jump',await read(page));\n  83 |         for(const stage of ['S10','S33']){\n  84 |             await load(page,fixture(stage,device==='tablet'));"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\roc-actions.spec.ts",
+                        "column": 46,
+                        "line": 81
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: < \u001b[32m-450\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n\nCall Log:\n- Timeout 10000ms exceeded while waiting on the predicate\n\n  79 |         await moveJourney(page,2600,550);await page.keyboard.press('ArrowUp');await page.waitForTimeout(240);\n  80 |         expect((await read(page)).player.grounded).toBe(false);\n> 81 |         await page.keyboard.press('ArrowUp');await expect.poll(async()=>(await read(page)).player.vy).toBeLessThan(-450);\n     |                                              ^\n  82 |         await shot('S09-double-jump',await read(page));\n  83 |         for(const stage of ['S10','S33']){\n  84 |             await load(page,fixture(stage,device==='tablet'));\n    at C:\\code\\code10(sindbad)\\tests\\e2e\\roc-actions.spec.ts:81:46"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 9
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 7
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 903
+                    },
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 9018,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: < \u001b[32m-450\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n\nCall Log:\n- Timeout 10000ms exceeded while waiting on the predicate",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: < \u001b[32m-450\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n\nCall Log:\n- Timeout 10000ms exceeded while waiting on the predicate\n    at C:\\code\\code10(sindbad)\\tests\\e2e\\roc-actions.spec.ts:81:46",
+                        "location": {
+                          "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\roc-actions.spec.ts",
+                          "column": 46,
+                          "line": 81
+                        },
+                        "snippet": "  79 |         await moveJourney(page,2600,550);await page.keyboard.press('ArrowUp');await page.waitForTimeout(240);\n  80 |         expect((await read(page)).player.grounded).toBe(false);\n> 81 |         await page.keyboard.press('ArrowUp');await expect.poll(async()=>(await read(page)).player.vy).toBeLessThan(-450);\n     |                                              ^\n  82 |         await shot('S09-double-jump',await read(page));\n  83 |         for(const stage of ['S10','S33']){\n  84 |             await load(page,fixture(stage,device==='tablet'));"
+                      }
+                    }
+                  ],
+                  "startTime": "2026-10-07T11:28:19.484Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\code\\code10(sindbad)\\test-results\\roc-actions-tablet-roc-six-42383-ss-saddle-and-return-flight\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\code\\code10(sindbad)\\test-results\\roc-actions-tablet-roc-six-42383-ss-saddle-and-return-flight\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\roc-actions.spec.ts",
+                    "column": 46,
+                    "line": 81
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "a23d2927f9e49768226d-9963a26541e1970c4872",
+          "file": "roc-actions.spec.ts",
+          "line": 61,
+          "column": 41
+        },
+        {
+          "title": "tablet roc missing-sheet recovery boss, saddle and return flight",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 480000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 75626,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 11
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 6
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 6
+                    },
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 8
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 118
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 6
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 119
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 6
+                    }
+                  ],
+                  "startTime": "2026-10-07T11:29:19.021Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a23d2927f9e49768226d-f161bc9544ab27c566ca",
+          "file": "roc-actions.spec.ts",
+          "line": 61,
+          "column": 41
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-07T11:25:51.838Z",
+    "duration": 284716.68600000005,
+    "expected": 2,
+    "skipped": 0,
+    "unexpected": 2,
+    "flaky": 0
+  }
+}

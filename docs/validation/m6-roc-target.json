@@ -1,0 +1,393 @@
+{
+  "config": {
+    "configFile": "C:\\code\\code10(sindbad)\\playwright.config.ts",
+    "rootDir": "C:/code/code10(sindbad)/tests/e2e",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": "C:\\code\\code10(sindbad)\\tests\\e2e\\server.setup.ts",
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ],
+      [
+        "html"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "C:/code/code10(sindbad)/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "C:/code/code10(sindbad)/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 240000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.55.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "roc-actions.spec.ts",
+      "file": "roc-actions.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "phone roc six actions boss, saddle and return flight",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 480000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 97180,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"저주가 풀렸어\u001b[7m요\u001b[27m\"\u001b[39m\nReceived: \u001b[31m\"저주가 풀렸어\u001b[7m!\u001b[27m\"\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"저주가 풀렸어\u001b[7m요\u001b[27m\"\u001b[39m\nReceived: \u001b[31m\"저주가 풀렸어\u001b[7m!\u001b[27m\"\u001b[39m\n    at C:\\code\\code10(sindbad)\\tests\\e2e\\roc-actions.spec.ts:70:73",
+                    "location": {
+                      "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\roc-actions.spec.ts",
+                      "column": 73,
+                      "line": 70
+                    },
+                    "snippet": "  68 |             await page.waitForTimeout(240);if((await enemy())!.hp>0)await page.waitForTimeout(350);\n  69 |         }\n> 70 |         const defeated=await capture('defeated');expect(defeated.label).toBe('저주가 풀렸어!');\n     |                                                                         ^\n  71 |         await expect.poll(async()=>(await enemy())!.visible).toBe(false);\n  72 |         const rewarded=(await read(page)).save as Save;\n  73 |         expect(rewarded.totalXp-before.totalXp).toBe(6);expect(rewarded.coins-before.coins).toBe(3);"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\roc-actions.spec.ts",
+                        "column": 73,
+                        "line": 70
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"저주가 풀렸어\u001b[7m요\u001b[27m\"\u001b[39m\nReceived: \u001b[31m\"저주가 풀렸어\u001b[7m!\u001b[27m\"\u001b[39m\n\n  68 |             await page.waitForTimeout(240);if((await enemy())!.hp>0)await page.waitForTimeout(350);\n  69 |         }\n> 70 |         const defeated=await capture('defeated');expect(defeated.label).toBe('저주가 풀렸어!');\n     |                                                                         ^\n  71 |         await expect.poll(async()=>(await enemy())!.visible).toBe(false);\n  72 |         const rewarded=(await read(page)).save as Save;\n  73 |         expect(rewarded.totalXp-before.totalXp).toBe(6);expect(rewarded.coins-before.coins).toBe(3);\n    at C:\\code\\code10(sindbad)\\tests\\e2e\\roc-actions.spec.ts:70:73"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 12
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 7
+                    }
+                  ],
+                  "startTime": "2026-10-07T11:16:46.908Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\code\\code10(sindbad)\\test-results\\roc-actions-phone-roc-six--bfb4d-ss-saddle-and-return-flight\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\code\\code10(sindbad)\\test-results\\roc-actions-phone-roc-six--bfb4d-ss-saddle-and-return-flight\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\roc-actions.spec.ts",
+                    "column": 73,
+                    "line": 70
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "a23d2927f9e49768226d-42b51149c87f570e5d81",
+          "file": "roc-actions.spec.ts",
+          "line": 61,
+          "column": 41
+        },
+        {
+          "title": "phone roc missing-sheet recovery boss, saddle and return flight",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 480000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 35415,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"저주가 풀렸어\u001b[7m요\u001b[27m\"\u001b[39m\nReceived: \u001b[31m\"저주가 풀렸어\u001b[7m!\u001b[27m\"\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"저주가 풀렸어\u001b[7m요\u001b[27m\"\u001b[39m\nReceived: \u001b[31m\"저주가 풀렸어\u001b[7m!\u001b[27m\"\u001b[39m\n    at C:\\code\\code10(sindbad)\\tests\\e2e\\roc-actions.spec.ts:70:73",
+                    "location": {
+                      "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\roc-actions.spec.ts",
+                      "column": 73,
+                      "line": 70
+                    },
+                    "snippet": "  68 |             await page.waitForTimeout(240);if((await enemy())!.hp>0)await page.waitForTimeout(350);\n  69 |         }\n> 70 |         const defeated=await capture('defeated');expect(defeated.label).toBe('저주가 풀렸어!');\n     |                                                                         ^\n  71 |         await expect.poll(async()=>(await enemy())!.visible).toBe(false);\n  72 |         const rewarded=(await read(page)).save as Save;\n  73 |         expect(rewarded.totalXp-before.totalXp).toBe(6);expect(rewarded.coins-before.coins).toBe(3);"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\roc-actions.spec.ts",
+                        "column": 73,
+                        "line": 70
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"저주가 풀렸어\u001b[7m요\u001b[27m\"\u001b[39m\nReceived: \u001b[31m\"저주가 풀렸어\u001b[7m!\u001b[27m\"\u001b[39m\n\n  68 |             await page.waitForTimeout(240);if((await enemy())!.hp>0)await page.waitForTimeout(350);\n  69 |         }\n> 70 |         const defeated=await capture('defeated');expect(defeated.label).toBe('저주가 풀렸어!');\n     |                                                                         ^\n  71 |         await expect.poll(async()=>(await enemy())!.visible).toBe(false);\n  72 |         const rewarded=(await read(page)).save as Save;\n  73 |         expect(rewarded.totalXp-before.totalXp).toBe(6);expect(rewarded.coins-before.coins).toBe(3);\n    at C:\\code\\code10(sindbad)\\tests\\e2e\\roc-actions.spec.ts:70:73"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 7
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 6
+                    }
+                  ],
+                  "startTime": "2026-10-07T11:18:26.893Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\code\\code10(sindbad)\\test-results\\roc-actions-phone-roc-miss-676e5-ss-saddle-and-return-flight\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\code\\code10(sindbad)\\test-results\\roc-actions-phone-roc-miss-676e5-ss-saddle-and-return-flight\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\roc-actions.spec.ts",
+                    "column": 73,
+                    "line": 70
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "a23d2927f9e49768226d-036d5b1bca76726f8ff1",
+          "file": "roc-actions.spec.ts",
+          "line": 61,
+          "column": 41
+        },
+        {
+          "title": "tablet roc six actions boss, saddle and return flight",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 480000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 36391,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"저주가 풀렸어\u001b[7m요\u001b[27m\"\u001b[39m\nReceived: \u001b[31m\"저주가 풀렸어\u001b[7m!\u001b[27m\"\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"저주가 풀렸어\u001b[7m요\u001b[27m\"\u001b[39m\nReceived: \u001b[31m\"저주가 풀렸어\u001b[7m!\u001b[27m\"\u001b[39m\n    at C:\\code\\code10(sindbad)\\tests\\e2e\\roc-actions.spec.ts:70:73",
+                    "location": {
+                      "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\roc-actions.spec.ts",
+                      "column": 73,
+                      "line": 70
+                    },
+                    "snippet": "  68 |             await page.waitForTimeout(240);if((await enemy())!.hp>0)await page.waitForTimeout(350);\n  69 |         }\n> 70 |         const defeated=await capture('defeated');expect(defeated.label).toBe('저주가 풀렸어!');\n     |                                                                         ^\n  71 |         await expect.poll(async()=>(await enemy())!.visible).toBe(false);\n  72 |         const rewarded=(await read(page)).save as Save;\n  73 |         expect(rewarded.totalXp-before.totalXp).toBe(6);expect(rewarded.coins-before.coins).toBe(3);"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\roc-actions.spec.ts",
+                        "column": 73,
+                        "line": 70
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"저주가 풀렸어\u001b[7m요\u001b[27m\"\u001b[39m\nReceived: \u001b[31m\"저주가 풀렸어\u001b[7m!\u001b[27m\"\u001b[39m\n\n  68 |             await page.waitForTimeout(240);if((await enemy())!.hp>0)await page.waitForTimeout(350);\n  69 |         }\n> 70 |         const defeated=await capture('defeated');expect(defeated.label).toBe('저주가 풀렸어!');\n     |                                                                         ^\n  71 |         await expect.poll(async()=>(await enemy())!.visible).toBe(false);\n  72 |         const rewarded=(await read(page)).save as Save;\n  73 |         expect(rewarded.totalXp-before.totalXp).toBe(6);expect(rewarded.coins-before.coins).toBe(3);\n    at C:\\code\\code10(sindbad)\\tests\\e2e\\roc-actions.spec.ts:70:73"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 7
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 5
+                    }
+                  ],
+                  "startTime": "2026-10-07T11:19:04.848Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\code\\code10(sindbad)\\test-results\\roc-actions-tablet-roc-six-42383-ss-saddle-and-return-flight\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\code\\code10(sindbad)\\test-results\\roc-actions-tablet-roc-six-42383-ss-saddle-and-return-flight\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\roc-actions.spec.ts",
+                    "column": 73,
+                    "line": 70
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "a23d2927f9e49768226d-9963a26541e1970c4872",
+          "file": "roc-actions.spec.ts",
+          "line": 61,
+          "column": 41
+        },
+        {
+          "title": "tablet roc missing-sheet recovery boss, saddle and return flight",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 480000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 36318,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"저주가 풀렸어\u001b[7m요\u001b[27m\"\u001b[39m\nReceived: \u001b[31m\"저주가 풀렸어\u001b[7m!\u001b[27m\"\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"저주가 풀렸어\u001b[7m요\u001b[27m\"\u001b[39m\nReceived: \u001b[31m\"저주가 풀렸어\u001b[7m!\u001b[27m\"\u001b[39m\n    at C:\\code\\code10(sindbad)\\tests\\e2e\\roc-actions.spec.ts:70:73",
+                    "location": {
+                      "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\roc-actions.spec.ts",
+                      "column": 73,
+                      "line": 70
+                    },
+                    "snippet": "  68 |             await page.waitForTimeout(240);if((await enemy())!.hp>0)await page.waitForTimeout(350);\n  69 |         }\n> 70 |         const defeated=await capture('defeated');expect(defeated.label).toBe('저주가 풀렸어!');\n     |                                                                         ^\n  71 |         await expect.poll(async()=>(await enemy())!.visible).toBe(false);\n  72 |         const rewarded=(await read(page)).save as Save;\n  73 |         expect(rewarded.totalXp-before.totalXp).toBe(6);expect(rewarded.coins-before.coins).toBe(3);"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\roc-actions.spec.ts",
+                        "column": 73,
+                        "line": 70
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"저주가 풀렸어\u001b[7m요\u001b[27m\"\u001b[39m\nReceived: \u001b[31m\"저주가 풀렸어\u001b[7m!\u001b[27m\"\u001b[39m\n\n  68 |             await page.waitForTimeout(240);if((await enemy())!.hp>0)await page.waitForTimeout(350);\n  69 |         }\n> 70 |         const defeated=await capture('defeated');expect(defeated.label).toBe('저주가 풀렸어!');\n     |                                                                         ^\n  71 |         await expect.poll(async()=>(await enemy())!.visible).toBe(false);\n  72 |         const rewarded=(await read(page)).save as Save;\n  73 |         expect(rewarded.totalXp-before.totalXp).toBe(6);expect(rewarded.coins-before.coins).toBe(3);\n    at C:\\code\\code10(sindbad)\\tests\\e2e\\roc-actions.spec.ts:70:73"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 10
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 5
+                    }
+                  ],
+                  "startTime": "2026-10-07T11:19:43.791Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\code\\code10(sindbad)\\test-results\\roc-actions-tablet-roc-mis-f6fa2-ss-saddle-and-return-flight\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\code\\code10(sindbad)\\test-results\\roc-actions-tablet-roc-mis-f6fa2-ss-saddle-and-return-flight\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\roc-actions.spec.ts",
+                    "column": 73,
+                    "line": 70
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "a23d2927f9e49768226d-f161bc9544ab27c566ca",
+          "file": "roc-actions.spec.ts",
+          "line": 61,
+          "column": 41
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-07T11:16:44.248Z",
+    "duration": 217472.91,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 4,
+    "flaky": 0
+  }
+}

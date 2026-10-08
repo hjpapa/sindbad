@@ -1,0 +1,182 @@
+{
+  "config": {
+    "configFile": "C:\\code\\code10(sindbad)\\playwright.config.ts",
+    "rootDir": "C:/code/code10(sindbad)/tests/e2e",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": "C:\\code\\code10(sindbad)\\tests\\e2e\\server.setup.ts",
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "C:/code/code10(sindbad)/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "C:/code/code10(sindbad)/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 240000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.55.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "roc-mechanics.spec.ts",
+      "file": "roc-mechanics.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "phone S09 three distinct avoidable patterns, three cores and feather glide",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 60706,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m6\u001b[39m\nReceived: \u001b[31m13\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m6\u001b[39m\nReceived: \u001b[31m13\u001b[39m\n    at C:\\code\\code10(sindbad)\\tests\\e2e\\roc-mechanics.spec.ts:66:49",
+                    "location": {
+                      "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\roc-mechanics.spec.ts",
+                      "column": 49,
+                      "line": 66
+                    },
+                    "snippet": "  64 |         expect((await read(page)).player.hp).toBe(hp);await proof.shot('dive-safe');\n  65 |         await strikeRocJourney(page);expect((await read(page)).rocEncounter.coresBroken).toBe(3);\n> 66 |         expect((await read(page)).save.totalXp).toBe(6);expect((await read(page)).save.coins).toBe(3);\n     |                                                 ^\n  67 |         await proof.shot('freed');await moveJourney(page,2480);await page.keyboard.press('e');\n  68 |         await expect(page.getByTestId('dialogue-text')).toBeVisible();const treasure=(await read(page)).save;\n  69 |         expect(treasure.treasures).toContain('T03');await proof.shot('alliance-dialogue');"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\roc-mechanics.spec.ts",
+                        "column": 49,
+                        "line": 66
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m6\u001b[39m\nReceived: \u001b[31m13\u001b[39m\n\n  64 |         expect((await read(page)).player.hp).toBe(hp);await proof.shot('dive-safe');\n  65 |         await strikeRocJourney(page);expect((await read(page)).rocEncounter.coresBroken).toBe(3);\n> 66 |         expect((await read(page)).save.totalXp).toBe(6);expect((await read(page)).save.coins).toBe(3);\n     |                                                 ^\n  67 |         await proof.shot('freed');await moveJourney(page,2480);await page.keyboard.press('e');\n  68 |         await expect(page.getByTestId('dialogue-text')).toBeVisible();const treasure=(await read(page)).save;\n  69 |         expect(treasure.treasures).toContain('T03');await proof.shot('alliance-dialogue');\n    at C:\\code\\code10(sindbad)\\tests\\e2e\\roc-mechanics.spec.ts:66:49"
+                    }
+                  ],
+                  "stdout": [
+                    {
+                      "text": "SHOT peck-warning 194ms\n"
+                    },
+                    {
+                      "text": "SHOT core-open 174ms\n"
+                    },
+                    {
+                      "text": "SHOT one-core-one-landing 188ms\n"
+                    },
+                    {
+                      "text": "WIND INPUT {\"x\":2224.1111111111104,\"y\":546,\"grounded\":true,\"vx\":0,\"vy\":0,\"hp\":68,\"maxHp\":100,\"bodyWidth\":42,\"bodyHeight\":84}\n"
+                    },
+                    {
+                      "text": "WIND AIR {\"x\":2224.1111111111104,\"y\":425.25,\"grounded\":false,\"vx\":0,\"vy\":-190,\"hp\":68,\"maxHp\":100,\"bodyWidth\":42,\"bodyHeight\":84}\n"
+                    },
+                    {
+                      "text": "SHOT wind-jump-safe 187ms\n"
+                    },
+                    {
+                      "text": "SHOT dive-warning 179ms\n"
+                    },
+                    {
+                      "text": "SHOT dive-safe 183ms\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 115
+                    },
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 123
+                    },
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 122
+                    }
+                  ],
+                  "startTime": "2026-10-08T10:23:32.813Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\code\\code10(sindbad)\\test-results\\roc-mechanics-phone-S09-th-da99a-ree-cores-and-feather-glide\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\code\\code10(sindbad)\\test-results\\roc-mechanics-phone-S09-th-da99a-ree-cores-and-feather-glide\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\roc-mechanics.spec.ts",
+                    "column": 49,
+                    "line": 66
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "172dc00ef8224171178c-df4304ccc8b79616a7f5",
+          "file": "roc-mechanics.spec.ts",
+          "line": 112,
+          "column": 3
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-08T10:23:29.867Z",
+    "duration": 64837.63500000001,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

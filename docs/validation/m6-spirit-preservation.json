@@ -1,0 +1,26 @@
+{
+  "backups": 363,
+  "unchangedMedia": 570,
+  "unchangedOldSource": 37,
+  "allowedChangedSource": [
+    "src/content/assets.manifest.ts",
+    "src/content/enemyActions.ts",
+    "src/content/maps.ts",
+    "src/game/stage.ts"
+  ],
+  "natives": [
+    {
+      "path": "art-source/webtoon/generated/spirit-m6/spirit-actions-01.png",
+      "toolPath": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-110bc2ff-862a-4057-b3f2-191ce1626295.png",
+      "sha256": "126c1c8b04196d201f810f3ad72f65271d934904b51b75f04544806a1c78f4d1",
+      "status": "rejected: attack effect crosses central vertical cell boundary; original preserved"
+    },
+    {
+      "path": "art-source/webtoon/generated/spirit-m6/spirit-actions-02.png",
+      "toolPath": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-9afce069-2c19-48c4-b86c-832f79dab0c0.png",
+      "sha256": "b1b9c0f5c093342fedf24d4c54a5a9f92b758f99df5dc81caff22adbb31e044e",
+      "status": "selected; transparent outer/central seams and no text; ART_DRAFT"
+    }
+  ],
+  "artStatus": "ART_DRAFT"
+}

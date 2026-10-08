@@ -1,0 +1,62 @@
+{
+  "pass": true,
+  "method": "S04 explicit enemy/hearts fixture; real movement, interaction, pause retry and reload",
+  "checks": [
+    {
+      "id": "S04.gear.1",
+      "texture": "gear",
+      "path": "docs/screenshots/m6-bat/final/m6-interact/fallback-prop-lifevest.png"
+    },
+    {
+      "id": "S04.gear.2",
+      "texture": "gear",
+      "path": "docs/screenshots/m6-bat/final/m6-interact/fallback-prop-rescue-rope.png"
+    },
+    {
+      "id": "S04.gear.3",
+      "texture": "gear",
+      "path": "docs/screenshots/m6-bat/final/m6-interact/fallback-prop-lifering.png"
+    }
+  ],
+  "golden": {
+    "path": "docs/screenshots/m6-bat/final/m6-interact/fallback-golden-before.png",
+    "before": {
+      "x": 1163.611111111111,
+      "y": 522,
+      "grounded": true,
+      "vx": 0,
+      "vy": 0,
+      "hp": 62.79999999999999,
+      "maxHp": 100,
+      "bodyWidth": 42,
+      "bodyHeight": 84
+    },
+    "after": {
+      "x": 1245.611111111111,
+      "y": 378,
+      "grounded": true,
+      "vx": 0,
+      "vy": 0,
+      "hp": 110,
+      "maxHp": 110,
+      "bodyWidth": 42,
+      "bodyHeight": 84
+    },
+    "xpGain": 15,
+    "retryDuplicateXp": 0
+  },
+  "rewardIds": [
+    "S01.reward.start",
+    "S04.enemy.crab.1",
+    "S04.enemy.crab.2",
+    "S04.enemy.crab.3",
+    "S04.enemy.crab.4",
+    "S04.heart.1",
+    "S04.heart.2",
+    "S04.gear.1.reward",
+    "S04.gear.2.reward",
+    "S04.gear.3.reward",
+    "S04.golden.G01"
+  ],
+  "errors": []
+}

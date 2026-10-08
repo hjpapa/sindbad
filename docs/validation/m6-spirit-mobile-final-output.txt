@@ -1,0 +1,42 @@
+{
+ "phone": {
+  "visibleButtons": [
+   "left",
+   "right",
+   "jump",
+   "primary"
+  ],
+  "touchMode": true,
+  "walkRight": 252,
+  "slideReverses": true,
+  "runJump": {
+   "dx": 0,
+   "dy": -110
+  },
+  "firstSkeleton": "defeated",
+  "walkBack": 221,
+  "actionKind": "talk",
+  "dialogue": "바닷길에 검은 마법이 드리웠구나. 먼저 이 항구를 안전하게 만들자.",
+  "errors": []
+ },
+ "tablet": {
+  "visibleButtons": [
+   "left",
+   "right",
+   "jump",
+   "primary"
+  ],
+  "touchMode": true,
+  "walkRight": 252,
+  "slideReverses": true,
+  "runJump": {
+   "dx": 7,
+   "dy": -110
+  },
+  "firstSkeleton": "defeated",
+  "walkBack": 197,
+  "actionKind": "talk",
+  "dialogue": "바닷길에 검은 마법이 드리웠구나. 먼저 이 항구를 안전하게 만들자.",
+  "errors": []
+ }
+}

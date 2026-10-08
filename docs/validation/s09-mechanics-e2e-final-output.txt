@@ -1,0 +1,22 @@
+
+> sinbad-seven-treasures@0.1.0 test:e2e
+> playwright test tests/e2e/roc-mechanics.spec.ts tests/e2e/roc-actions.spec.ts tests/e2e/m3-opening.spec.ts tests/e2e/complete-journey.spec.ts tests/e2e/controls-ui.spec.ts tests/e2e/mobile-abilities.spec.ts --reporter=list,json,html
+
+
+Running 12 tests using 1 worker
+
+(node:10660) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:10660) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+JOURNEY S01 cleared; 1/36
+JOURNEY S02 cleared; 2/36
+JOURNEY S03 cleared; 3/36
+JOURNEY S04 cleared; 4/36
+JOURNEY S05 cleared; 5/36
+JOURNEY S06 cleared; 6/36
+JOURNEY S07 cleared; 7/36
+JOURNEY S08 cleared; 8/36
+JOURNEY S09 cleared; 9/36
+JOURNEY S10 cleared; 10/36
+JOURNEY S11 cleared; 11/36

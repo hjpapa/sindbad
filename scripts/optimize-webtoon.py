@@ -60,6 +60,9 @@ SIZES = {
     'enemy-actions': (1024, 2560),  # 4x10 sheet, 256 px frames
     'kite-actions': (1024, 256),   # Flight-only 4x1 sheet, 256px frames
     'siren-actions': (1024,256),   # S02 boss 4x1 sheet, 256px frames
+    'bat-actions': (1024,256),
+    'spirit-actions': (1024,256),  # S03/S06/S07/S32 spirits, 4x1
+    'roc-actions': (768,512),      # S09 boss and S10/S33 flight, 3x2
     'roc-webtoon': (768, 512),
     'whale-webtoon': (1536, 1024),  # stretched across the whole S04 island
     'crab-webtoon': (512, 512),
@@ -85,7 +88,7 @@ def main() -> None:
     TARGET.mkdir(parents=True, exist_ok=True)
     # Keep the measurements in the build even when art-source/ is excluded from
     # the uploaded source. The original JSON remains the single editing source.
-    for key in ('hero-action', 'enemy-actions', 'kite-actions', 'siren-actions'):
+    for key in ('hero-action', 'enemy-actions', 'kite-actions', 'siren-actions', 'bat-actions', 'spirit-actions', 'roc-actions'):
         measurements = SOURCE / f'{key}.json'
         compiled_measurements = Path(f'src/content/{key}.generated.json')
         data = measurements.read_bytes()

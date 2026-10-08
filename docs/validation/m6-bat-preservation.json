@@ -1,0 +1,20 @@
+{
+  "backups": 333,
+  "unchangedMedia": 566,
+  "unchangedOldSource": 36,
+  "allowedChangedSource": [
+    "src/content/assets.manifest.ts",
+    "src/content/enemyActions.ts",
+    "src/content/maps.ts",
+    "src/game/stage.ts"
+  ],
+  "natives": [
+    {
+      "path": "art-source/webtoon/generated/bat-m6/bat-actions-01.png",
+      "toolPath": "C:\\Users\\tbose\\.codex\\generated_images\\01a10013-499c-7b11-9c12-3ae8826e542a\\exec-9bad9c6b-d221-4a15-b60a-fc24307d0ddb.png",
+      "sha256": "ffc21dea78b814dc5cf9bde14a537f7ad60090fb24a6ddde1db0bf155bc359d8",
+      "status": "selected; transparent outer/central seams and no text; ART_DRAFT"
+    }
+  ],
+  "artStatus": "ART_DRAFT"
+}

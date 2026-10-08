@@ -1,0 +1,51 @@
+{
+  "completedTargetRuns": [
+    {
+      "report": "m6-spirit-target.json",
+      "stats": {
+        "startTime": "2026-10-06T12:16:34.400Z",
+        "duration": 195472.093,
+        "expected": 0,
+        "skipped": 0,
+        "unexpected": 4,
+        "flaky": 0
+      }
+    },
+    {
+      "report": "m6-spirit-recheck.json",
+      "stats": {
+        "startTime": "2026-10-06T12:21:22.906Z",
+        "duration": 576361.252,
+        "expected": 3,
+        "skipped": 0,
+        "unexpected": 1,
+        "flaky": 0
+      }
+    },
+    {
+      "report": "m6-spirit-recheck2.json",
+      "stats": {
+        "startTime": "2026-10-06T12:32:33.534Z",
+        "duration": 155977.674,
+        "expected": 1,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      }
+    }
+  ],
+  "firstFailures": "Four failed: three assumed inspect primary button would attack near S06 vine; one expected a hit in the first S03 recovery despite existing prior-hit invulnerability/lightning overlap.",
+  "repairs": [
+    "Wait for the actual primary action to offer attack before tapping; keyboard attacks still use J.",
+    "Observe actual later cycles when the first cycle is invulnerable; S03 HP observation explicitly includes lightning, not isolated contact damage.",
+    "Require checkpoint resume at the configured x and grounded state."
+  ],
+  "secondFailure": "Second target run 3 passed/1 failed: tablet S32 approach momentum crossed the moving spirit, but the test fixed expected left facing. Read actual spirit x after approach and align a second real movement; game AI/physics unchanged.",
+  "failureEvidence": [
+    "docs/screenshots/m6-spirit/first-target-failure/",
+    "docs/screenshots/m6-spirit/second-target-failure/"
+  ],
+  "runtimeRulesChangedForRepairs": false,
+  "deletedOriginals": false,
+  "artStatus": "ART_DRAFT"
+}

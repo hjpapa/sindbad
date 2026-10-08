@@ -1,0 +1,14 @@
+{
+  "backupFiles": 333,
+  "unchangedMedia": 566,
+  "unchangedOldSources": 36,
+  "allowedChangedSources": [
+    "src/content/assets.manifest.ts",
+    "src/content/enemyActions.ts",
+    "src/content/maps.ts",
+    "src/game/stage.ts"
+  ],
+  "nativeEqualsTool": true,
+  "nativeSha256": "ffc21dea78b814dc5cf9bde14a537f7ad60090fb24a6ddde1db0bf155bc359d8",
+  "artStatus": "ART_DRAFT"
+}

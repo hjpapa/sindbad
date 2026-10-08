@@ -1,0 +1,920 @@
+[
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/journey/S05-route.png",
+    "size": [
+      1280,
+      720
+    ],
+    "bytes": 1101426,
+    "sha256": "aefa9bdc97a32d275b4bbccaa2e1d42b7446a357a5e865e9e4aa9e79085d3a3f"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/journey/S10-route.png",
+    "size": [
+      1280,
+      720
+    ],
+    "bytes": 1080540,
+    "sha256": "454e180c49b19fcffe5ab08447ace2d605da4accf7160c6f140ab66e89a8433d"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/journey/S15-route.png",
+    "size": [
+      1280,
+      720
+    ],
+    "bytes": 1250936,
+    "sha256": "e7e71141ab9ede589e73018567d76a53f5a90b93803c65ad34828b821c4cd225"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/journey/S19-route.png",
+    "size": [
+      1280,
+      720
+    ],
+    "bytes": 850186,
+    "sha256": "3bbe9002499a8a74c6472d3fbc753e88f95acfba7bb14c0fa738bfb2b7298977"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/journey/S25-route.png",
+    "size": [
+      1280,
+      720
+    ],
+    "bytes": 1062241,
+    "sha256": "4a6650714468599bc38dba4206c47575ffde1bccb5833e89151afbee515b56c1"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/journey/S29-route.png",
+    "size": [
+      1280,
+      720
+    ],
+    "bytes": 1188825,
+    "sha256": "f8ebbf0fe7da28be2a49a490fafc7c111788b4d2ae8fac640bbbad992bcb47b0"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/journey/S36-route.png",
+    "size": [
+      1280,
+      720
+    ],
+    "bytes": 1004226,
+    "sha256": "13162074eb6c24e5ba48f9730147c6d26619615d7be614d2bcf8302a418ae548"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/m6-roc/phone-fallback-S09-attack.png",
+    "size": [
+      844,
+      390
+    ],
+    "bytes": 454810,
+    "sha256": "72e3aa8a64f6391cb0a357ef267639dcfaed9030a2e1b7fdccc483e63c8f06e8"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/m6-roc/phone-fallback-S09-defeated.png",
+    "size": [
+      844,
+      390
+    ],
+    "bytes": 463376,
+    "sha256": "773f8271fa50201aa2de6c08ab74bb2190663680c6af35f21ad1d57dc61f705c"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/m6-roc/phone-fallback-S09-double-jump.png",
+    "size": [
+      844,
+      390
+    ],
+    "bytes": 452116,
+    "sha256": "9c3d38e596e0ff7c99794ae13521f323f638f804ca569f19a9290141d3d69bda"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/m6-roc/phone-fallback-S09-idle.png",
+    "size": [
+      844,
+      390
+    ],
+    "bytes": 457697,
+    "sha256": "4e984327a5b4e6e485387cf696c08bfde92db3cf7dbf4fec87cbf2689ad06a7f"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/m6-roc/phone-fallback-S09-recover.png",
+    "size": [
+      844,
+      390
+    ],
+    "bytes": 450547,
+    "sha256": "c7f1f37aecc45f50500716ced5f515829dfc02da5304e0b30c00933fc92ad87c"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/m6-roc/phone-fallback-S09-resume.png",
+    "size": [
+      844,
+      390
+    ],
+    "bytes": 456998,
+    "sha256": "1a626330490db7d2d15af80ee3e323551edaae2ebb8827c1d9aafde9139d70a1"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/m6-roc/phone-fallback-S09-right.png",
+    "size": [
+      844,
+      390
+    ],
+    "bytes": 451498,
+    "sha256": "d3a838f444def7583b7933f656e599040c22947de0dc4a9d1257cd5ee7528243"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/m6-roc/phone-fallback-S09-telegraph.png",
+    "size": [
+      844,
+      390
+    ],
+    "bytes": 450372,
+    "sha256": "2eda6bbbb8cf7fb3785000a005bd9a050b9a722cbb640bddab70e739066d50ff"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/m6-roc/phone-fallback-S09-treasure.png",
+    "size": [
+      844,
+      390
+    ],
+    "bytes": 287457,
+    "sha256": "ecdef86ecc8d4285df8cf0010ae3fef92752ad6e1120ba7cd99e7977f890d91d"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/m6-roc/phone-fallback-S10-framenull.png",
+    "size": [
+      844,
+      390
+    ],
+    "bytes": 470961,
+    "sha256": "1cd7e5f9439efcbf4dc3fedbd0fc15a1cfd120d29c505d51c0fe9a5d56504899"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/m6-roc/phone-fallback-S10-left.png",
+    "size": [
+      844,
+      390
+    ],
+    "bytes": 468178,
+    "sha256": "6fc1dacacfcd815da139d5cfddb8d7c092827ee9e397cfa17a5d982587054eeb"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/m6-roc/phone-fallback-S10-resume.png",
+    "size": [
+      844,
+      390
+    ],
+    "bytes": 476452,
+    "sha256": "3c71961b8c1f64cc02e148d605c4220908f1e4ef5e18589420e4b1433616d12d"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/m6-roc/phone-fallback-S33-framenull.png",
+    "size": [
+      844,
+      390
+    ],
+    "bytes": 456759,
+    "sha256": "302d4ae62d3460b8174bd2f981dff9cb2b5ebbf6c5290a698f5474e54a89e2bf"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/m6-roc/phone-fallback-S33-left.png",
+    "size": [
+      844,
+      390
+    ],
+    "bytes": 454256,
+    "sha256": "93c2b56a988b56bbdfddb933c15764da64d9f41b78a2d189fba1bc68a2bafa01"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/m6-roc/phone-fallback-S33-resume.png",
+    "size": [
+      844,
+      390
+    ],
+    "bytes": 465737,
+    "sha256": "d7701ae3ce83847a51d62b53fdfa7a8ea4d717b28232470e3ae718166d3f9e64"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/m6-roc/phone-normal-S09-attack.png",
+    "size": [
+      844,
+      390
+    ],
+    "bytes": 454810,
+    "sha256": "1973a2761edaa8385b6cc7c43a537209f8e3dfabf0475928da74f24596bcfaf2"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/m6-roc/phone-normal-S09-defeated.png",
+    "size": [
+      844,
+      390
+    ],
+    "bytes": 463241,
+    "sha256": "05f09f10aa514e418c1996dbec9272eab7b1a9e389be9218ff1de0a113366ea5"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/m6-roc/phone-normal-S09-double-jump.png",
+    "size": [
+      844,
+      390
+    ],
+    "bytes": 452116,
+    "sha256": "9c3d38e596e0ff7c99794ae13521f323f638f804ca569f19a9290141d3d69bda"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/m6-roc/phone-normal-S09-idle.png",
+    "size": [
+      844,
+      390
+    ],
+    "bytes": 458295,
+    "sha256": "2ce1bdfbaea56d5483c8f99e87bebce5f467d0a64d76c474639d93cbdbe39291"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/m6-roc/phone-normal-S09-recover.png",
+    "size": [
+      844,
+      390
+    ],
+    "bytes": 449126,
+    "sha256": "5cbed3e63a685097d98ebc7a0185ae1adbebd287bc75903241cb8e27e6be21b0"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/m6-roc/phone-normal-S09-resume.png",
+    "size": [
+      844,
+      390
+    ],
+    "bytes": 457420,
+    "sha256": "9c3a2f7158b018ee900fea5aed2dbcfe54c030aac5accb585803b9d07ef19bbd"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/m6-roc/phone-normal-S09-right.png",
+    "size": [
+      844,
+      390
+    ],
+    "bytes": 452170,
+    "sha256": "36fbaee5c9f700eab86da4b92f59ada9a6e412182e0a2ac6eb14dae34f0b1d98"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/m6-roc/phone-normal-S09-telegraph.png",
+    "size": [
+      844,
+      390
+    ],
+    "bytes": 450641,
+    "sha256": "5e80cd159437d0a3d1f3320764f4981260569383b20fa2fd8c41bba6cb00836f"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/m6-roc/phone-normal-S09-treasure.png",
+    "size": [
+      844,
+      390
+    ],
+    "bytes": 287457,
+    "sha256": "ecdef86ecc8d4285df8cf0010ae3fef92752ad6e1120ba7cd99e7977f890d91d"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/m6-roc/phone-normal-S10-attack.png",
+    "size": [
+      844,
+      390
+    ],
+    "bytes": 470446,
+    "sha256": "96ec7a857281679ee927507ccb7dba7e237543e6b15c95d3a9264678deb46572"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/m6-roc/phone-normal-S10-frame4.png",
+    "size": [
+      844,
+      390
+    ],
+    "bytes": 472187,
+    "sha256": "7d78015dd894e4c1b3dc68cd47b82bce40564444cbfc0443628aed7fc42ee37a"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/m6-roc/phone-normal-S10-frame5.png",
+    "size": [
+      844,
+      390
+    ],
+    "bytes": 472417,
+    "sha256": "4b30be6f1fe8e79d89cb5ec1fb356205776945e0e674f43bde8c42c05a52f9f1"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/m6-roc/phone-normal-S10-left.png",
+    "size": [
+      844,
+      390
+    ],
+    "bytes": 470276,
+    "sha256": "74571689eb83f8213376c8d1cf40d757400d80033b96269938dfc787aa7f378a"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/m6-roc/phone-normal-S10-resume.png",
+    "size": [
+      844,
+      390
+    ],
+    "bytes": 478576,
+    "sha256": "c5b987a19362fe2fbfabd074c414f5f859e0f6b44018bf3e9d6c908da307405d"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/m6-roc/phone-normal-S33-attack.png",
+    "size": [
+      844,
+      390
+    ],
+    "bytes": 455982,
+    "sha256": "a347baf7a098050065b3b4df557a2912eb6906566b515bfbbe1cb94cc59439f9"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/m6-roc/phone-normal-S33-frame4.png",
+    "size": [
+      844,
+      390
+    ],
+    "bytes": 457909,
+    "sha256": "8ea5ec4d7f774660403a7bcb6a453892ee5d860f5c3646c08a8ab3b3f4c198e0"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/m6-roc/phone-normal-S33-frame5.png",
+    "size": [
+      844,
+      390
+    ],
+    "bytes": 458055,
+    "sha256": "60a6cde4b0ea9b321eae01adadf1c1a772fdcdf8778154c9db6bb259caf694c1"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/m6-roc/phone-normal-S33-left.png",
+    "size": [
+      844,
+      390
+    ],
+    "bytes": 455639,
+    "sha256": "bc99955a7862798dac32afcc6f4e51674842c346ce7f6dfbc825da52b2d247d1"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/m6-roc/phone-normal-S33-resume.png",
+    "size": [
+      844,
+      390
+    ],
+    "bytes": 466483,
+    "sha256": "c2b83d59492cc848468766de56b13d5f1acb97006b53f26a81c286ca5fd86a41"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/m6-roc/tablet-fallback-S09-attack.png",
+    "size": [
+      1180,
+      820
+    ],
+    "bytes": 943913,
+    "sha256": "7a2d1ff935b6761dc6ffafb9dd5c5135c6bee1aa7d337893d1bcbd7f600e5ef5"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/m6-roc/tablet-fallback-S09-defeated.png",
+    "size": [
+      1180,
+      820
+    ],
+    "bytes": 938410,
+    "sha256": "b5df8dc2d4078c293761cbbfbf6767eefe23a9e12ad5875b329803df518f9ba1"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/m6-roc/tablet-fallback-S09-double-jump.png",
+    "size": [
+      1180,
+      820
+    ],
+    "bytes": 936144,
+    "sha256": "be82179c4640471f5bf9860e94700a5ac6d692155556c03dbc606127eccca2d6"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/m6-roc/tablet-fallback-S09-idle.png",
+    "size": [
+      1180,
+      820
+    ],
+    "bytes": 967007,
+    "sha256": "e99d11b770ed5b380fd8a5dc5d6692c6fae56d4016ef9d9f0138e5fd82344c9e"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/m6-roc/tablet-fallback-S09-recover.png",
+    "size": [
+      1180,
+      820
+    ],
+    "bytes": 939939,
+    "sha256": "096b88ff363e277ded46ac5d261b78db45e3286c84097dea760eb394c4702b0a"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/m6-roc/tablet-fallback-S09-resume.png",
+    "size": [
+      1180,
+      820
+    ],
+    "bytes": 962473,
+    "sha256": "28bdb8c4bd12ce2ed7a088477979fdaebca0fdefd6144603f3f633ca3466a56b"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/m6-roc/tablet-fallback-S09-right.png",
+    "size": [
+      1180,
+      820
+    ],
+    "bytes": 937543,
+    "sha256": "4042a7b4e3f7479ea61a84ec0cc0bfc112bfc1a943e7fa8fed19c881034a99b0"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/m6-roc/tablet-fallback-S09-telegraph.png",
+    "size": [
+      1180,
+      820
+    ],
+    "bytes": 940612,
+    "sha256": "7f15b1a86ad8e690289f4c0f9d94a557384aa39f9ebc15f78ce5ad661400a044"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/m6-roc/tablet-fallback-S09-treasure.png",
+    "size": [
+      1180,
+      820
+    ],
+    "bytes": 945431,
+    "sha256": "d7fe93ddf66589ab6ae03271faa64357c36cbae7bd602116569db266fd7412ed"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/m6-roc/tablet-fallback-S10-framenull.png",
+    "size": [
+      1180,
+      820
+    ],
+    "bytes": 1013953,
+    "sha256": "a0419d6dc33628cbdcfc17d0e95781c8f49d2034d4d0d7709aef083505dec8b7"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/m6-roc/tablet-fallback-S10-left.png",
+    "size": [
+      1180,
+      820
+    ],
+    "bytes": 980887,
+    "sha256": "c0d1b1070bb09ef60c98a09a3170573356f404917f3767d079f3cffb1c35c166"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/m6-roc/tablet-fallback-S10-resume.png",
+    "size": [
+      1180,
+      820
+    ],
+    "bytes": 1033581,
+    "sha256": "71c2287fa9601d937cb3f1b6cc33e84bbf2e050c234eab6e698e719044016c47"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/m6-roc/tablet-fallback-S33-framenull.png",
+    "size": [
+      1180,
+      820
+    ],
+    "bytes": 971955,
+    "sha256": "b3284b55c536a27c34b90a4f93adcfbcbd8ad774a8da1769b9db812aa23eff07"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/m6-roc/tablet-fallback-S33-left.png",
+    "size": [
+      1180,
+      820
+    ],
+    "bytes": 941891,
+    "sha256": "abdd751371bba6ad6fc1b7854a06873cde6f4397d049d67f5268a256de0e005e"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/m6-roc/tablet-fallback-S33-resume.png",
+    "size": [
+      1180,
+      820
+    ],
+    "bytes": 1013711,
+    "sha256": "5ee0e9d9bee76734d5bae3159d539da9a2dad2389e6b12c30c6fea3a2a0c637b"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/m6-roc/tablet-normal-S09-attack.png",
+    "size": [
+      1180,
+      820
+    ],
+    "bytes": 940861,
+    "sha256": "2f86dd18b2b95e440c00ca94ac0735bd3e7294cdf7e9636922e5feaf7f0cbffd"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/m6-roc/tablet-normal-S09-defeated.png",
+    "size": [
+      1180,
+      820
+    ],
+    "bytes": 951543,
+    "sha256": "437721e971dc8870fea935bea0bd28c733c5b3cd2e1696bc17da0dbd9fa8cfbf"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/m6-roc/tablet-normal-S09-double-jump.png",
+    "size": [
+      1180,
+      820
+    ],
+    "bytes": 936013,
+    "sha256": "0f2dec08759bde5e21c7d23544f7783572f3a0e502e601fa533e5a0aaa9f79c1"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/m6-roc/tablet-normal-S09-idle.png",
+    "size": [
+      1180,
+      820
+    ],
+    "bytes": 967007,
+    "sha256": "e99d11b770ed5b380fd8a5dc5d6692c6fae56d4016ef9d9f0138e5fd82344c9e"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/m6-roc/tablet-normal-S09-recover.png",
+    "size": [
+      1180,
+      820
+    ],
+    "bytes": 935443,
+    "sha256": "36a097a3092c8db3716a6b3d4777dad8f787c408d32170059d4b15214d1d85ae"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/m6-roc/tablet-normal-S09-resume.png",
+    "size": [
+      1180,
+      820
+    ],
+    "bytes": 962473,
+    "sha256": "28bdb8c4bd12ce2ed7a088477979fdaebca0fdefd6144603f3f633ca3466a56b"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/m6-roc/tablet-normal-S09-right.png",
+    "size": [
+      1180,
+      820
+    ],
+    "bytes": 937683,
+    "sha256": "db46ee83dd7e63e168529008cb48ec3bb04e0f137e629bff825449c1b17a189a"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/m6-roc/tablet-normal-S09-telegraph.png",
+    "size": [
+      1180,
+      820
+    ],
+    "bytes": 940089,
+    "sha256": "08b6fe82dabc26612d51041e0e69d4d775bbbf255a4196e7e724f1017641c16d"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/m6-roc/tablet-normal-S09-treasure.png",
+    "size": [
+      1180,
+      820
+    ],
+    "bytes": 945337,
+    "sha256": "92c834a6e233c9c1029d903146de3e69105e391fc0e1e76f19b55f449811a10d"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/m6-roc/tablet-normal-S10-attack.png",
+    "size": [
+      1180,
+      820
+    ],
+    "bytes": 1016316,
+    "sha256": "684c0fa7613bccca18a8032c1d5c0a619471133e9790cb379f7f0336e53a07ba"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/m6-roc/tablet-normal-S10-frame4.png",
+    "size": [
+      1180,
+      820
+    ],
+    "bytes": 1018065,
+    "sha256": "510bf65fbd05c021ecd82e8cf2a75265c30e53a29c00271815db570446772f76"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/m6-roc/tablet-normal-S10-left.png",
+    "size": [
+      1180,
+      820
+    ],
+    "bytes": 987129,
+    "sha256": "f5b0f314bf605f4633b849417caf5dac6e372560600c79eba152531661c23c68"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/m6-roc/tablet-normal-S10-resume.png",
+    "size": [
+      1180,
+      820
+    ],
+    "bytes": 1035444,
+    "sha256": "d362953caffe129412910622e9cf597e4500370b9d94d9fe71c8f5da83b4a750"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/m6-roc/tablet-normal-S33-attack.png",
+    "size": [
+      1180,
+      820
+    ],
+    "bytes": 970683,
+    "sha256": "92439e15482488696c8fc93c77edaf51c4c4311cad210ae64f806b1ceb93f4c1"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/m6-roc/tablet-normal-S33-frame4.png",
+    "size": [
+      1180,
+      820
+    ],
+    "bytes": 975425,
+    "sha256": "f965e90755b365deb69f05ef01bd9c93c0a2dc9d3f79407e75cba469a7f0e6d5"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/m6-roc/tablet-normal-S33-left.png",
+    "size": [
+      1180,
+      820
+    ],
+    "bytes": 945993,
+    "sha256": "e53d2a4c51c8082e0c6cb1b389a5f778ed8271f3ff7c60e7c0804ec3993dee18"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/m6-roc/tablet-normal-S33-resume.png",
+    "size": [
+      1180,
+      820
+    ],
+    "bytes": 1013937,
+    "sha256": "ca3afd540acdeb59f82f15c88129327a7e8a93426a7447099433eea636eeb948"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/mobile-polished.png",
+    "size": [
+      844,
+      390
+    ],
+    "bytes": 462050,
+    "sha256": "acac82fe29604e4c49eff13876847e1507c0641f448cd9fb79dbfbe9c8f64b9d"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/s09-mechanics/guards-legacy-alliance.png",
+    "size": [
+      1280,
+      720
+    ],
+    "bytes": 1032806,
+    "sha256": "db93840fdd08ef7ef04b5ab6230664468a18ed6fe638d6e0b4de1c0efc33bbbe"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/s09-mechanics/guards-missing-orb.png",
+    "size": [
+      1280,
+      720
+    ],
+    "bytes": 1030416,
+    "sha256": "1e5bc13930d90044d3bb3ec60dea2eb8c67ba98223ff0dc2be55b94d1fd88bab"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/s09-mechanics/guards-no-feather-fall.png",
+    "size": [
+      1280,
+      720
+    ],
+    "bytes": 1035298,
+    "sha256": "88944b1a185684efbdd52fd95d21499def0814cb93620f4fd6ff4238b09b4ed4"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/s09-mechanics/phone-alliance-dialogue.png",
+    "size": [
+      844,
+      390
+    ],
+    "bytes": 287219,
+    "sha256": "9dd3a72d6e41b356050353d85f52196d59f34df0c49751bb9c1faea65d27a686"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/s09-mechanics/phone-core-open.png",
+    "size": [
+      844,
+      390
+    ],
+    "bytes": 452217,
+    "sha256": "98144393f956db0372fb87e2179ea9972caab9277cc847c9ff9fde2ae43a2b75"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/s09-mechanics/phone-dive-safe.png",
+    "size": [
+      844,
+      390
+    ],
+    "bytes": 453173,
+    "sha256": "ab10be7586f5df371dfaf57d73e643927d0b291e44ba4b5e575643ddc4139fed"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/s09-mechanics/phone-dive-warning.png",
+    "size": [
+      844,
+      390
+    ],
+    "bytes": 455933,
+    "sha256": "117f386fe2afda01b319e0b5fe89d7d2abdd796c1f6d36cae486edc98cff72a4"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/s09-mechanics/phone-double-jump.png",
+    "size": [
+      844,
+      390
+    ],
+    "bytes": 455630,
+    "sha256": "7b1c4293024d371908e5949ce021056ea3481601e8eb7751c6169ebbdad06216"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/s09-mechanics/phone-freed.png",
+    "size": [
+      844,
+      390
+    ],
+    "bytes": 465809,
+    "sha256": "3229198d166d97da0d18504c5a0a8b530174a2ae6515c7760a01713f047447b8"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/s09-mechanics/phone-glide-held.png",
+    "size": [
+      844,
+      390
+    ],
+    "bytes": 455208,
+    "sha256": "20179e2e2310ec2ccfe60ff2c830b68e8d2d6daf42e78463bb19d1f7ba4fa7bd"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/s09-mechanics/phone-glide-release.png",
+    "size": [
+      844,
+      390
+    ],
+    "bytes": 455736,
+    "sha256": "ece1a55ecd69cd92c9914c906cdbe044dffd47052b77b42d84f6dc758af4dcff"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/s09-mechanics/phone-one-core-one-landing.png",
+    "size": [
+      844,
+      390
+    ],
+    "bytes": 458473,
+    "sha256": "9029dd5d54138da633667a63192950022e0f87e114bb8b40cc663fceebd12548"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/s09-mechanics/phone-peck-warning.png",
+    "size": [
+      844,
+      390
+    ],
+    "bytes": 452263,
+    "sha256": "c13872d94140ec9b9b98abb055a8234c3215fb628c79263eeafe343bd84ea91d"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/s09-mechanics/phone-wind-jump-safe.png",
+    "size": [
+      844,
+      390
+    ],
+    "bytes": 452556,
+    "sha256": "23d55c6b5caee659d6245f2b6e96d15c6198cdddcf75828891a8323049380bf7"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/s09-mechanics/save-retry-core-one-saved.png",
+    "size": [
+      1280,
+      720
+    ],
+    "bytes": 1042875,
+    "sha256": "1a9fd1bdb284dfd88b2e6344fc71f23834453ab9c37d3891bf91df50d0077a40"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/s09-mechanics/save-retry-death-checkpoint.png",
+    "size": [
+      1280,
+      720
+    ],
+    "bytes": 992622,
+    "sha256": "1693a3ddd3bee32c22b44ef52712aa41fee608ca82ccccacb76e573246b03c91"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/s09-mechanics/save-retry-retry-alliance.png",
+    "size": [
+      1280,
+      720
+    ],
+    "bytes": 1032765,
+    "sha256": "6bf75d9607e728827a829f218d510b1ab4fe972df1a512c228ec34205ba63163"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/s09-mechanics/tablet-alliance-dialogue.png",
+    "size": [
+      1180,
+      820
+    ],
+    "bytes": 945156,
+    "sha256": "9cedca2799cd29941c8d51119a6000adf53bcb17fd79589d62d53241034323f0"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/s09-mechanics/tablet-core-open.png",
+    "size": [
+      1180,
+      820
+    ],
+    "bytes": 940305,
+    "sha256": "e19731cf7a669df2f97341800181d645e449b16d7ee0bcbe2703a9b5c32a1430"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/s09-mechanics/tablet-dive-safe.png",
+    "size": [
+      1180,
+      820
+    ],
+    "bytes": 941971,
+    "sha256": "012e47def098207f2aafd1aab41b038e864bed101ce51f569611f11309d7571b"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/s09-mechanics/tablet-dive-warning.png",
+    "size": [
+      1180,
+      820
+    ],
+    "bytes": 947716,
+    "sha256": "88f58bb03528b3dbf23c3b73514dc31e430f4efddfecc76cc3d36fa6b2a75b04"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/s09-mechanics/tablet-double-jump.png",
+    "size": [
+      1180,
+      820
+    ],
+    "bytes": 942387,
+    "sha256": "5b9a4e3ab2a0c80330ad05a7e23798d0e775ebf5c4bed502ef09a822372947bf"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/s09-mechanics/tablet-freed.png",
+    "size": [
+      1180,
+      820
+    ],
+    "bytes": 957726,
+    "sha256": "88a705e0a96d4c2db8f2e63df6b1ab2f8b0e5fc7ac2082c5b9745ff1a5c80921"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/s09-mechanics/tablet-glide-held.png",
+    "size": [
+      1180,
+      820
+    ],
+    "bytes": 966188,
+    "sha256": "1ab115115df6012c97eead0017bf61ee33c1ba5a0e86f0e63bde3ed3e0796daf"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/s09-mechanics/tablet-glide-release.png",
+    "size": [
+      1180,
+      820
+    ],
+    "bytes": 969541,
+    "sha256": "4006c5909d1aa36197f830f5d64372d2039e9448f84d1218a6cd809f5a56af51"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/s09-mechanics/tablet-one-core-one-landing.png",
+    "size": [
+      1180,
+      820
+    ],
+    "bytes": 947382,
+    "sha256": "785d2f52d7aa78fb267d942d45338a257c5ecf1c4f3302ced59e66d435d6ca69"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/s09-mechanics/tablet-peck-warning.png",
+    "size": [
+      1180,
+      820
+    ],
+    "bytes": 942903,
+    "sha256": "8c2d2d404a50ec5de6528bc2a14760d43f85df5e54312e3f9365893f6d9a8e5c"
+  },
+  {
+    "path": "docs/screenshots/s09-mechanics/release2-final/s09-mechanics/tablet-wind-jump-safe.png",
+    "size": [
+      1180,
+      820
+    ],
+    "bytes": 940155,
+    "sha256": "534c5cbadce692026bb8214b450baaafefcf5a7781df1c76ce41499c45185255"
+  }
+]

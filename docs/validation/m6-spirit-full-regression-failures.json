@@ -1,0 +1,172 @@
+{
+  "stats": {
+    "startTime": "2026-10-06T12:38:26.710Z",
+    "duration": 4180263.449,
+    "expected": 69,
+    "skipped": 0,
+    "unexpected": 4,
+    "flaky": 0
+  },
+  "failures": [
+    {
+      "title": "coral gate rejects missing crown; guardian blocks frontal attacks and exposes recovery",
+      "file": "m2.spec.ts",
+      "status": "failed",
+      "errors": [
+        {
+          "location": {
+            "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\m2.spec.ts",
+            "column": 207,
+            "line": 31
+          },
+          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m32\u001b[39m\nReceived: \u001b[31m20\u001b[39m\n\n  29 |  await page.addInitScript(({key,value})=>localStorage.setItem(key,value),{key:SAVE_KEY,value:JSON.stringify(s)});await page.goto('/');await page.getByRole('button',{name:'이어하기 · S05'}).click();await expect.poll(async()=>(await read(page)).stage).toBe('S05');\n  30 |  await walk(page,350);const enemy=()=>read(page).then(s=>s.enemies.find((e:{id:string})=>e.id==='S05.enemy.guardian.1'));\n> 31 |  await page.keyboard.down('d');await page.waitForTimeout(30);await page.keyboard.up('d');const hp=(await enemy()).hp;await page.keyboard.press('j');await page.waitForTimeout(230);expect((await enemy()).hp).toBe(hp);\n     |                                                                                                                                                                                                               ^\n  32 |  await expect.poll(async()=>(await enemy()).state).toBe('recover');await page.keyboard.press('j');await expect.poll(async()=>(await enemy()).hp).toBeLessThan(hp);\n  33 |  await use(page,1870);expect((await read(page)).save.completedObjectiveIds).not.toContain('S05.crown');\n  34 |  await use(page,2460);expect((await read(page)).save.completedObjectiveIds).not.toContain('S05.gate');await page.keyboard.down('d');await page.keyboard.press('ArrowUp');await page.waitForTimeout(1100);await page.keyboard.up('d');expect((await read(page)).player.x).toBeLessThan(2500);\n    at C:\\code\\code10(sindbad)\\tests\\e2e\\m2.spec.ts:31:207"
+        }
+      ],
+      "files": [
+        {
+          "source": "test-results/m2-coral-gate-rejects-miss-192f4-ttacks-and-exposes-recovery/error-context.md",
+          "preserved": "docs/screenshots/m6-spirit/full-regression-failures/m2-coral-gate-rejects-miss-192f4-ttacks-and-exposes-recovery/error-context.md",
+          "sha256": "659e0e78acd292957f9e915d225b450016812863d5a6531601622fb9d7ede4b9"
+        },
+        {
+          "source": "test-results/m2-coral-gate-rejects-miss-192f4-ttacks-and-exposes-recovery/test-failed-1.png",
+          "preserved": "docs/screenshots/m6-spirit/full-regression-failures/m2-coral-gate-rejects-miss-192f4-ttacks-and-exposes-recovery/test-failed-1.png",
+          "sha256": "633d9b2a2bbbe795a1f9c162f1d6662b8d87efeafa1df0144c9c4af785eeab11"
+        },
+        {
+          "source": "test-results/m2-coral-gate-rejects-miss-192f4-ttacks-and-exposes-recovery/error-context.md",
+          "preserved": "docs/screenshots/m6-spirit/full-regression-failures/m2-coral-gate-rejects-miss-192f4-ttacks-and-exposes-recovery/error-context.md",
+          "sha256": "659e0e78acd292957f9e915d225b450016812863d5a6531601622fb9d7ede4b9"
+        },
+        {
+          "source": "test-results/m2-coral-gate-rejects-miss-192f4-ttacks-and-exposes-recovery/test-failed-1.png",
+          "preserved": "docs/screenshots/m6-spirit/full-regression-failures/m2-coral-gate-rejects-miss-192f4-ttacks-and-exposes-recovery/test-failed-1.png",
+          "sha256": "633d9b2a2bbbe795a1f9c162f1d6662b8d87efeafa1df0144c9c4af785eeab11"
+        }
+      ]
+    },
+    {
+      "title": "phone siren four actions preserves shield, two songs and saved reward",
+      "file": "siren-actions.spec.ts",
+      "status": "failed",
+      "errors": [
+        {
+          "location": {
+            "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\siren-actions.spec.ts",
+            "column": 22,
+            "line": 62
+          },
+          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoHaveLength\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected length: \u001b[32m1\u001b[39m\nReceived length: \u001b[31m0\u001b[39m\nReceived array:  \u001b[31m[]\u001b[39m\n\n  60 |         await page.locator('#resume').click();await capture('attack','attack');\n  61 |         const wave=(await read(page)).projectileArt.filter((p:Shot)=>p.texture==='projectile-siren-wave');\n> 62 |         expect(wave).toHaveLength(1);expect(wave[0].vx).toBe(-230);expect(wave[0].vy).toBe(0);\n     |                      ^\n  63 |         checks.push({pattern:'wave',shots:wave});await capture('recover','recover');\n  64 |         await page.waitForFunction(()=>Reflect.get(window,'__SINBAD_TEST__')?.projectileArt.filter((p:Shot)=>p.texture==='projectile-siren-note').length===3);\n  65 |         const notes=(await read(page)).projectileArt.filter((p:Shot)=>p.texture==='projectile-siren-note');\n    at C:\\code\\code10(sindbad)\\tests\\e2e\\siren-actions.spec.ts:62:22"
+        }
+      ],
+      "files": [
+        {
+          "source": "test-results/siren-actions-phone-siren--23ce4--two-songs-and-saved-reward/error-context.md",
+          "preserved": "docs/screenshots/m6-spirit/full-regression-failures/siren-actions-phone-siren--23ce4--two-songs-and-saved-reward/error-context.md",
+          "sha256": "66db904948ee9882416a0da1bdf8c14bbc7103b81cc3945af0048a868df61f35"
+        },
+        {
+          "source": "test-results/siren-actions-phone-siren--23ce4--two-songs-and-saved-reward/test-failed-1.png",
+          "preserved": "docs/screenshots/m6-spirit/full-regression-failures/siren-actions-phone-siren--23ce4--two-songs-and-saved-reward/test-failed-1.png",
+          "sha256": "e8ef993cce2e35f7979c628c09f7f4ee655ba8d20083e9c8f4d01decd2c6cc6c"
+        },
+        {
+          "source": "test-results/siren-actions-phone-siren--23ce4--two-songs-and-saved-reward/error-context.md",
+          "preserved": "docs/screenshots/m6-spirit/full-regression-failures/siren-actions-phone-siren--23ce4--two-songs-and-saved-reward/error-context.md",
+          "sha256": "66db904948ee9882416a0da1bdf8c14bbc7103b81cc3945af0048a868df61f35"
+        },
+        {
+          "source": "test-results/siren-actions-phone-siren--23ce4--two-songs-and-saved-reward/test-failed-1.png",
+          "preserved": "docs/screenshots/m6-spirit/full-regression-failures/siren-actions-phone-siren--23ce4--two-songs-and-saved-reward/test-failed-1.png",
+          "sha256": "e8ef993cce2e35f7979c628c09f7f4ee655ba8d20083e9c8f4d01decd2c6cc6c"
+        }
+      ]
+    },
+    {
+      "title": "phone siren missing-sheet recovery preserves shield, two songs and saved reward",
+      "file": "siren-actions.spec.ts",
+      "status": "failed",
+      "errors": [
+        {
+          "location": {
+            "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\siren-actions.spec.ts",
+            "column": 22,
+            "line": 62
+          },
+          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoHaveLength\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected length: \u001b[32m1\u001b[39m\nReceived length: \u001b[31m0\u001b[39m\nReceived array:  \u001b[31m[]\u001b[39m\n\n  60 |         await page.locator('#resume').click();await capture('attack','attack');\n  61 |         const wave=(await read(page)).projectileArt.filter((p:Shot)=>p.texture==='projectile-siren-wave');\n> 62 |         expect(wave).toHaveLength(1);expect(wave[0].vx).toBe(-230);expect(wave[0].vy).toBe(0);\n     |                      ^\n  63 |         checks.push({pattern:'wave',shots:wave});await capture('recover','recover');\n  64 |         await page.waitForFunction(()=>Reflect.get(window,'__SINBAD_TEST__')?.projectileArt.filter((p:Shot)=>p.texture==='projectile-siren-note').length===3);\n  65 |         const notes=(await read(page)).projectileArt.filter((p:Shot)=>p.texture==='projectile-siren-note');\n    at C:\\code\\code10(sindbad)\\tests\\e2e\\siren-actions.spec.ts:62:22"
+        }
+      ],
+      "files": [
+        {
+          "source": "test-results/siren-actions-phone-siren--40d49--two-songs-and-saved-reward/error-context.md",
+          "preserved": "docs/screenshots/m6-spirit/full-regression-failures/siren-actions-phone-siren--40d49--two-songs-and-saved-reward/error-context.md",
+          "sha256": "3f356f6c53d82fd9c5045dbde74a6027df8d60eaea88374e7c18032e3c1e2c8f"
+        },
+        {
+          "source": "test-results/siren-actions-phone-siren--40d49--two-songs-and-saved-reward/test-failed-1.png",
+          "preserved": "docs/screenshots/m6-spirit/full-regression-failures/siren-actions-phone-siren--40d49--two-songs-and-saved-reward/test-failed-1.png",
+          "sha256": "5908f62e21c1b62f992956a39725e140285f0522b86f6d60211da4f59e6c3084"
+        },
+        {
+          "source": "test-results/siren-actions-phone-siren--40d49--two-songs-and-saved-reward/error-context.md",
+          "preserved": "docs/screenshots/m6-spirit/full-regression-failures/siren-actions-phone-siren--40d49--two-songs-and-saved-reward/error-context.md",
+          "sha256": "3f356f6c53d82fd9c5045dbde74a6027df8d60eaea88374e7c18032e3c1e2c8f"
+        },
+        {
+          "source": "test-results/siren-actions-phone-siren--40d49--two-songs-and-saved-reward/test-failed-1.png",
+          "preserved": "docs/screenshots/m6-spirit/full-regression-failures/siren-actions-phone-siren--40d49--two-songs-and-saved-reward/test-failed-1.png",
+          "sha256": "5908f62e21c1b62f992956a39725e140285f0522b86f6d60211da4f59e6c3084"
+        }
+      ]
+    },
+    {
+      "title": "tablet siren four actions preserves shield, two songs and saved reward",
+      "file": "siren-actions.spec.ts",
+      "status": "failed",
+      "errors": [
+        {
+          "location": {
+            "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\siren-actions.spec.ts",
+            "column": 22,
+            "line": 62
+          },
+          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoHaveLength\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected length: \u001b[32m1\u001b[39m\nReceived length: \u001b[31m0\u001b[39m\nReceived array:  \u001b[31m[]\u001b[39m\n\n  60 |         await page.locator('#resume').click();await capture('attack','attack');\n  61 |         const wave=(await read(page)).projectileArt.filter((p:Shot)=>p.texture==='projectile-siren-wave');\n> 62 |         expect(wave).toHaveLength(1);expect(wave[0].vx).toBe(-230);expect(wave[0].vy).toBe(0);\n     |                      ^\n  63 |         checks.push({pattern:'wave',shots:wave});await capture('recover','recover');\n  64 |         await page.waitForFunction(()=>Reflect.get(window,'__SINBAD_TEST__')?.projectileArt.filter((p:Shot)=>p.texture==='projectile-siren-note').length===3);\n  65 |         const notes=(await read(page)).projectileArt.filter((p:Shot)=>p.texture==='projectile-siren-note');\n    at C:\\code\\code10(sindbad)\\tests\\e2e\\siren-actions.spec.ts:62:22"
+        }
+      ],
+      "files": [
+        {
+          "source": "test-results/siren-actions-tablet-siren-5228c--two-songs-and-saved-reward/error-context.md",
+          "preserved": "docs/screenshots/m6-spirit/full-regression-failures/siren-actions-tablet-siren-5228c--two-songs-and-saved-reward/error-context.md",
+          "sha256": "c26107c5c51095898356d277bf96d9ca7fdcf6107c99296c65c482b8976d6eed"
+        },
+        {
+          "source": "test-results/siren-actions-tablet-siren-5228c--two-songs-and-saved-reward/test-failed-1.png",
+          "preserved": "docs/screenshots/m6-spirit/full-regression-failures/siren-actions-tablet-siren-5228c--two-songs-and-saved-reward/test-failed-1.png",
+          "sha256": "eeab9080dccee5361bd8023f100d0a39622127c2b2928b6c8cd750dd04561210"
+        },
+        {
+          "source": "test-results/siren-actions-tablet-siren-5228c--two-songs-and-saved-reward/error-context.md",
+          "preserved": "docs/screenshots/m6-spirit/full-regression-failures/siren-actions-tablet-siren-5228c--two-songs-and-saved-reward/error-context.md",
+          "sha256": "c26107c5c51095898356d277bf96d9ca7fdcf6107c99296c65c482b8976d6eed"
+        },
+        {
+          "source": "test-results/siren-actions-tablet-siren-5228c--two-songs-and-saved-reward/test-failed-1.png",
+          "preserved": "docs/screenshots/m6-spirit/full-regression-failures/siren-actions-tablet-siren-5228c--two-songs-and-saved-reward/test-failed-1.png",
+          "sha256": "eeab9080dccee5361bd8023f100d0a39622127c2b2928b6c8cd750dd04561210"
+        }
+      ]
+    }
+  ],
+  "testSources": [
+    {
+      "source": "tests/e2e/m2.spec.ts",
+      "preserved": "docs/validation/m6-spirit-full-before-m2.ts.txt",
+      "sha256": "24ed8ec18dd6223a8312cb12428ce29b411a499cb1c316311f5af7fd5505fcdf"
+    },
+    {
+      "source": "tests/e2e/siren-actions.spec.ts",
+      "preserved": "docs/validation/m6-spirit-full-before-siren-actions.ts.txt",
+      "sha256": "62e23a9986de5cba87a32c8f4dd13db04f30d0050fee7fbf566e1da1f77769d1"
+    }
+  ]
+}

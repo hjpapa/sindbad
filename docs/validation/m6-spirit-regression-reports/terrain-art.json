@@ -1,0 +1,3944 @@
+{
+  "date": "2026-10-06T13:26:10.201Z",
+  "pass": true,
+  "method": "explicit unlocked-stage/item save fixture; real map buttons and keyboard move/jump; phone/tablet viewport emulation; read-only texture and platform observations, not fresh campaign",
+  "checks": [
+    {
+      "device": "phone",
+      "stage": "S01",
+      "style": "dock",
+      "observed": {
+        "style": "dock",
+        "cachedKeys": [
+          "terrain-dock-fill",
+          "terrain-dock-top"
+        ],
+        "textures": [
+          {
+            "key": "terrain-dock-fill",
+            "width": 128,
+            "height": 128,
+            "source": "blob:http://127.0.0.1:5174/6a4fa7b8-b78e-4732-9dbb-2c03102250bb"
+          },
+          {
+            "key": "terrain-dock-top",
+            "width": 128,
+            "height": 34,
+            "source": "blob:http://127.0.0.1:5174/bf5e98dd-eb8e-4b2d-b8cd-10c5343c9f3d"
+          }
+        ],
+        "platforms": [
+          {
+            "x": 2400,
+            "y": 664,
+            "width": 4800,
+            "height": 112,
+            "texture": "terrain-dock-fill",
+            "visible": true,
+            "skinX": 2400,
+            "skinY": 664,
+            "skinWidth": 4800,
+            "skinHeight": 112
+          },
+          {
+            "x": 560,
+            "y": 572,
+            "width": 160,
+            "height": 72,
+            "texture": "terrain-dock-fill",
+            "visible": true,
+            "skinX": 560,
+            "skinY": 572,
+            "skinWidth": 160,
+            "skinHeight": 72
+          },
+          {
+            "x": 776,
+            "y": 552,
+            "width": 192,
+            "height": 112,
+            "texture": "terrain-dock-fill",
+            "visible": true,
+            "skinX": 776,
+            "skinY": 552,
+            "skinWidth": 192,
+            "skinHeight": 112
+          },
+          {
+            "x": 1426,
+            "y": 576,
+            "width": 192,
+            "height": 64,
+            "texture": "terrain-dock-fill",
+            "visible": true,
+            "skinX": 1426,
+            "skinY": 576,
+            "skinWidth": 192,
+            "skinHeight": 64
+          },
+          {
+            "x": 2128,
+            "y": 568,
+            "width": 256,
+            "height": 80,
+            "texture": "terrain-dock-fill",
+            "visible": true,
+            "skinX": 2128,
+            "skinY": 568,
+            "skinWidth": 256,
+            "skinHeight": 80
+          },
+          {
+            "x": 2766,
+            "y": 576,
+            "width": 192,
+            "height": 64,
+            "texture": "terrain-dock-fill",
+            "visible": true,
+            "skinX": 2766,
+            "skinY": 576,
+            "skinWidth": 192,
+            "skinHeight": 64
+          },
+          {
+            "x": 3496,
+            "y": 576,
+            "width": 192,
+            "height": 64,
+            "texture": "terrain-dock-fill",
+            "visible": true,
+            "skinX": 3496,
+            "skinY": 576,
+            "skinWidth": 192,
+            "skinHeight": 64
+          }
+        ],
+        "tops": [
+          {
+            "x": 2400,
+            "y": 621,
+            "width": 4800,
+            "height": 34,
+            "texture": "terrain-dock-top"
+          },
+          {
+            "x": 560,
+            "y": 549,
+            "width": 160,
+            "height": 34,
+            "texture": "terrain-dock-top"
+          },
+          {
+            "x": 776,
+            "y": 509,
+            "width": 192,
+            "height": 34,
+            "texture": "terrain-dock-top"
+          },
+          {
+            "x": 1426,
+            "y": 557,
+            "width": 192,
+            "height": 34,
+            "texture": "terrain-dock-top"
+          },
+          {
+            "x": 2128,
+            "y": 541,
+            "width": 256,
+            "height": 34,
+            "texture": "terrain-dock-top"
+          },
+          {
+            "x": 2766,
+            "y": 557,
+            "width": 192,
+            "height": 34,
+            "texture": "terrain-dock-top"
+          },
+          {
+            "x": 3496,
+            "y": 557,
+            "width": 192,
+            "height": 34,
+            "texture": "terrain-dock-top"
+          }
+        ]
+      },
+      "path": "docs/screenshots/m6-spirit/final/art-a5/phone-S01-dock.png"
+    },
+    {
+      "device": "phone",
+      "stage": "S03",
+      "style": "deck",
+      "observed": {
+        "style": "deck",
+        "cachedKeys": [
+          "terrain-deck-fill",
+          "terrain-deck-top"
+        ],
+        "textures": [
+          {
+            "key": "terrain-deck-fill",
+            "width": 128,
+            "height": 128,
+            "source": "blob:http://127.0.0.1:5174/43070e63-83f0-4f39-950f-685cb3c9903f"
+          },
+          {
+            "key": "terrain-deck-top",
+            "width": 128,
+            "height": 34,
+            "source": "blob:http://127.0.0.1:5174/91660088-2b5e-4f35-b07a-7ca8b662bd01"
+          }
+        ],
+        "platforms": [
+          {
+            "x": 850,
+            "y": 664,
+            "width": 1700,
+            "height": 112,
+            "texture": "terrain-deck-fill",
+            "visible": true,
+            "skinX": 850,
+            "skinY": 664,
+            "skinWidth": 1700,
+            "skinHeight": 112
+          },
+          {
+            "x": 2535,
+            "y": 664,
+            "width": 1430,
+            "height": 112,
+            "texture": "terrain-deck-fill",
+            "visible": true,
+            "skinX": 2535,
+            "skinY": 664,
+            "skinWidth": 1430,
+            "skinHeight": 112
+          },
+          {
+            "x": 4085,
+            "y": 664,
+            "width": 1430,
+            "height": 112,
+            "texture": "terrain-deck-fill",
+            "visible": true,
+            "skinX": 4085,
+            "skinY": 664,
+            "skinWidth": 1430,
+            "skinHeight": 112
+          },
+          {
+            "x": 860,
+            "y": 568,
+            "width": 240,
+            "height": 80,
+            "texture": "terrain-deck-fill",
+            "visible": true,
+            "skinX": 860,
+            "skinY": 568,
+            "skinWidth": 240,
+            "skinHeight": 80
+          },
+          {
+            "x": 2228,
+            "y": 568,
+            "width": 256,
+            "height": 80,
+            "texture": "terrain-deck-fill",
+            "visible": true,
+            "skinX": 2228,
+            "skinY": 568,
+            "skinWidth": 256,
+            "skinHeight": 80
+          },
+          {
+            "x": 2478,
+            "y": 532,
+            "width": 176,
+            "height": 24,
+            "texture": "terrain-deck-fill",
+            "visible": false,
+            "skinX": 2478,
+            "skinY": 532,
+            "skinWidth": 176,
+            "skinHeight": 24
+          },
+          {
+            "x": 2730,
+            "y": 460,
+            "width": 200,
+            "height": 24,
+            "texture": "terrain-deck-fill",
+            "visible": false,
+            "skinX": 2730,
+            "skinY": 460,
+            "skinWidth": 200,
+            "skinHeight": 24
+          },
+          {
+            "x": 4020,
+            "y": 568,
+            "width": 200,
+            "height": 80,
+            "texture": "terrain-deck-fill",
+            "visible": true,
+            "skinX": 4020,
+            "skinY": 568,
+            "skinWidth": 200,
+            "skinHeight": 80
+          }
+        ],
+        "tops": [
+          {
+            "x": 850,
+            "y": 621,
+            "width": 1700,
+            "height": 34,
+            "texture": "terrain-deck-top"
+          },
+          {
+            "x": 2535,
+            "y": 621,
+            "width": 1430,
+            "height": 34,
+            "texture": "terrain-deck-top"
+          },
+          {
+            "x": 4085,
+            "y": 621,
+            "width": 1430,
+            "height": 34,
+            "texture": "terrain-deck-top"
+          },
+          {
+            "x": 860,
+            "y": 541,
+            "width": 240,
+            "height": 34,
+            "texture": "terrain-deck-top"
+          },
+          {
+            "x": 2228,
+            "y": 541,
+            "width": 256,
+            "height": 34,
+            "texture": "terrain-deck-top"
+          },
+          {
+            "x": 2478,
+            "y": 533,
+            "width": 176,
+            "height": 34,
+            "texture": "terrain-deck-top"
+          },
+          {
+            "x": 2730,
+            "y": 461,
+            "width": 200,
+            "height": 34,
+            "texture": "terrain-deck-top"
+          },
+          {
+            "x": 4020,
+            "y": 541,
+            "width": 200,
+            "height": 34,
+            "texture": "terrain-deck-top"
+          }
+        ]
+      },
+      "path": "docs/screenshots/m6-spirit/final/art-a5/phone-S03-deck.png"
+    },
+    {
+      "device": "phone",
+      "stage": "S02",
+      "style": "reef",
+      "observed": {
+        "style": "reef",
+        "cachedKeys": [
+          "terrain-reef-fill",
+          "terrain-reef-top"
+        ],
+        "textures": [
+          {
+            "key": "terrain-reef-fill",
+            "width": 128,
+            "height": 128,
+            "source": "blob:http://127.0.0.1:5174/1c662fac-e2a3-43b9-b996-5f854eeff955"
+          },
+          {
+            "key": "terrain-reef-top",
+            "width": 128,
+            "height": 34,
+            "source": "blob:http://127.0.0.1:5174/45da404f-4d54-4bc3-aa21-9396ac199068"
+          }
+        ],
+        "platforms": [
+          {
+            "x": 325,
+            "y": 664,
+            "width": 650,
+            "height": 112,
+            "texture": "terrain-reef-fill",
+            "visible": true,
+            "skinX": 325,
+            "skinY": 664,
+            "skinWidth": 650,
+            "skinHeight": 112
+          },
+          {
+            "x": 1090,
+            "y": 632,
+            "width": 640,
+            "height": 112,
+            "texture": "terrain-reef-fill",
+            "visible": true,
+            "skinX": 1090,
+            "skinY": 632,
+            "skinWidth": 640,
+            "skinHeight": 112
+          },
+          {
+            "x": 1845,
+            "y": 664,
+            "width": 610,
+            "height": 112,
+            "texture": "terrain-reef-fill",
+            "visible": true,
+            "skinX": 1845,
+            "skinY": 664,
+            "skinWidth": 610,
+            "skinHeight": 112
+          },
+          {
+            "x": 2600,
+            "y": 608,
+            "width": 660,
+            "height": 112,
+            "texture": "terrain-reef-fill",
+            "visible": true,
+            "skinX": 2600,
+            "skinY": 608,
+            "skinWidth": 660,
+            "skinHeight": 112
+          },
+          {
+            "x": 3930,
+            "y": 664,
+            "width": 1740,
+            "height": 112,
+            "texture": "terrain-reef-fill",
+            "visible": true,
+            "skinX": 3930,
+            "skinY": 664,
+            "skinWidth": 1740,
+            "skinHeight": 112
+          },
+          {
+            "x": 4400,
+            "y": 532,
+            "width": 200,
+            "height": 24,
+            "texture": "terrain-reef-fill",
+            "visible": false,
+            "skinX": 4400,
+            "skinY": 532,
+            "skinWidth": 200,
+            "skinHeight": 24
+          }
+        ],
+        "tops": [
+          {
+            "x": 325,
+            "y": 621,
+            "width": 650,
+            "height": 34,
+            "texture": "terrain-reef-top"
+          },
+          {
+            "x": 1090,
+            "y": 589,
+            "width": 640,
+            "height": 34,
+            "texture": "terrain-reef-top"
+          },
+          {
+            "x": 1845,
+            "y": 621,
+            "width": 610,
+            "height": 34,
+            "texture": "terrain-reef-top"
+          },
+          {
+            "x": 2600,
+            "y": 565,
+            "width": 660,
+            "height": 34,
+            "texture": "terrain-reef-top"
+          },
+          {
+            "x": 3930,
+            "y": 621,
+            "width": 1740,
+            "height": 34,
+            "texture": "terrain-reef-top"
+          },
+          {
+            "x": 4400,
+            "y": 533,
+            "width": 200,
+            "height": 34,
+            "texture": "terrain-reef-top"
+          }
+        ]
+      },
+      "path": "docs/screenshots/m6-spirit/final/art-a5/phone-S02-reef.png"
+    },
+    {
+      "device": "phone",
+      "stage": "S05",
+      "style": "coral",
+      "observed": {
+        "style": "coral",
+        "cachedKeys": [
+          "terrain-coral-fill",
+          "terrain-coral-top"
+        ],
+        "textures": [
+          {
+            "key": "terrain-coral-fill",
+            "width": 128,
+            "height": 128,
+            "source": "blob:http://127.0.0.1:5174/197c5fbb-3051-4688-b9d1-0b7d5eede882"
+          },
+          {
+            "key": "terrain-coral-top",
+            "width": 128,
+            "height": 34,
+            "source": "blob:http://127.0.0.1:5174/f72cbd4d-15d5-4a54-9dd2-b101cea77d32"
+          }
+        ],
+        "platforms": [
+          {
+            "x": 2050,
+            "y": 664,
+            "width": 4100,
+            "height": 112,
+            "texture": "terrain-coral-fill",
+            "visible": true,
+            "skinX": 2050,
+            "skinY": 664,
+            "skinWidth": 4100,
+            "skinHeight": 112
+          },
+          {
+            "x": 696,
+            "y": 572,
+            "width": 192,
+            "height": 72,
+            "texture": "terrain-coral-fill",
+            "visible": true,
+            "skinX": 696,
+            "skinY": 572,
+            "skinWidth": 192,
+            "skinHeight": 72
+          },
+          {
+            "x": 956,
+            "y": 476,
+            "width": 192,
+            "height": 24,
+            "texture": "terrain-coral-fill",
+            "visible": false,
+            "skinX": 956,
+            "skinY": 476,
+            "skinWidth": 192,
+            "skinHeight": 24
+          },
+          {
+            "x": 1536,
+            "y": 568,
+            "width": 192,
+            "height": 80,
+            "texture": "terrain-coral-fill",
+            "visible": true,
+            "skinX": 1536,
+            "skinY": 568,
+            "skinWidth": 192,
+            "skinHeight": 80
+          },
+          {
+            "x": 2076,
+            "y": 572,
+            "width": 192,
+            "height": 72,
+            "texture": "terrain-coral-fill",
+            "visible": true,
+            "skinX": 2076,
+            "skinY": 572,
+            "skinWidth": 192,
+            "skinHeight": 72
+          },
+          {
+            "x": 3196,
+            "y": 572,
+            "width": 192,
+            "height": 72,
+            "texture": "terrain-coral-fill",
+            "visible": true,
+            "skinX": 3196,
+            "skinY": 572,
+            "skinWidth": 192,
+            "skinHeight": 72
+          }
+        ],
+        "tops": [
+          {
+            "x": 2050,
+            "y": 621,
+            "width": 4100,
+            "height": 34,
+            "texture": "terrain-coral-top"
+          },
+          {
+            "x": 696,
+            "y": 549,
+            "width": 192,
+            "height": 34,
+            "texture": "terrain-coral-top"
+          },
+          {
+            "x": 956,
+            "y": 477,
+            "width": 192,
+            "height": 34,
+            "texture": "terrain-coral-top"
+          },
+          {
+            "x": 1536,
+            "y": 541,
+            "width": 192,
+            "height": 34,
+            "texture": "terrain-coral-top"
+          },
+          {
+            "x": 2076,
+            "y": 549,
+            "width": 192,
+            "height": 34,
+            "texture": "terrain-coral-top"
+          },
+          {
+            "x": 3196,
+            "y": 549,
+            "width": 192,
+            "height": 34,
+            "texture": "terrain-coral-top"
+          }
+        ]
+      },
+      "path": "docs/screenshots/m6-spirit/final/art-a5/phone-S05-coral.png"
+    },
+    {
+      "device": "phone",
+      "stage": "S04",
+      "style": "whale",
+      "observed": {
+        "style": "whale",
+        "cachedKeys": [
+          "terrain-whale-fill",
+          "terrain-whale-top"
+        ],
+        "textures": [
+          {
+            "key": "terrain-whale-fill",
+            "width": 128,
+            "height": 128,
+            "source": "blob:http://127.0.0.1:5174/4065e077-5df5-4f60-8a2f-93b2d57a8556"
+          },
+          {
+            "key": "terrain-whale-top",
+            "width": 128,
+            "height": 34,
+            "source": "blob:http://127.0.0.1:5174/c61e41da-877b-4f98-86f0-ca5fcc19139f"
+          }
+        ],
+        "platforms": [
+          {
+            "x": 350,
+            "y": 664,
+            "width": 700,
+            "height": 112,
+            "texture": "terrain-whale-fill",
+            "visible": true,
+            "skinX": 350,
+            "skinY": 664,
+            "skinWidth": 700,
+            "skinHeight": 112
+          },
+          {
+            "x": 1175,
+            "y": 640,
+            "width": 750,
+            "height": 112,
+            "texture": "terrain-whale-fill",
+            "visible": true,
+            "skinX": 1175,
+            "skinY": 640,
+            "skinWidth": 750,
+            "skinHeight": 112
+          },
+          {
+            "x": 1870,
+            "y": 664,
+            "width": 420,
+            "height": 112,
+            "texture": "terrain-whale-fill",
+            "visible": true,
+            "skinX": 1870,
+            "skinY": 664,
+            "skinWidth": 420,
+            "skinHeight": 112
+          },
+          {
+            "x": 2510,
+            "y": 616,
+            "width": 620,
+            "height": 112,
+            "texture": "terrain-whale-fill",
+            "visible": true,
+            "skinX": 2510,
+            "skinY": 616,
+            "skinWidth": 620,
+            "skinHeight": 112
+          },
+          {
+            "x": 3420,
+            "y": 664,
+            "width": 960,
+            "height": 112,
+            "texture": "terrain-whale-fill",
+            "visible": true,
+            "skinX": 3420,
+            "skinY": 664,
+            "skinWidth": 960,
+            "skinHeight": 112
+          },
+          {
+            "x": 1048,
+            "y": 524,
+            "width": 176,
+            "height": 24,
+            "texture": "terrain-whale-fill",
+            "visible": false,
+            "skinX": 1048,
+            "skinY": 524,
+            "skinWidth": 176,
+            "skinHeight": 24
+          },
+          {
+            "x": 1276,
+            "y": 452,
+            "width": 192,
+            "height": 24,
+            "texture": "terrain-whale-fill",
+            "visible": false,
+            "skinX": 1276,
+            "skinY": 452,
+            "skinWidth": 192,
+            "skinHeight": 24
+          },
+          {
+            "x": 3276,
+            "y": 572,
+            "width": 192,
+            "height": 72,
+            "texture": "terrain-whale-fill",
+            "visible": true,
+            "skinX": 3276,
+            "skinY": 572,
+            "skinWidth": 192,
+            "skinHeight": 72
+          }
+        ],
+        "tops": [
+          {
+            "x": 350,
+            "y": 621,
+            "width": 700,
+            "height": 34,
+            "texture": "terrain-whale-top"
+          },
+          {
+            "x": 1175,
+            "y": 597,
+            "width": 750,
+            "height": 34,
+            "texture": "terrain-whale-top"
+          },
+          {
+            "x": 1870,
+            "y": 621,
+            "width": 420,
+            "height": 34,
+            "texture": "terrain-whale-top"
+          },
+          {
+            "x": 2510,
+            "y": 573,
+            "width": 620,
+            "height": 34,
+            "texture": "terrain-whale-top"
+          },
+          {
+            "x": 3420,
+            "y": 621,
+            "width": 960,
+            "height": 34,
+            "texture": "terrain-whale-top"
+          },
+          {
+            "x": 1048,
+            "y": 525,
+            "width": 176,
+            "height": 34,
+            "texture": "terrain-whale-top"
+          },
+          {
+            "x": 1276,
+            "y": 453,
+            "width": 192,
+            "height": 34,
+            "texture": "terrain-whale-top"
+          },
+          {
+            "x": 3276,
+            "y": 549,
+            "width": 192,
+            "height": 34,
+            "texture": "terrain-whale-top"
+          }
+        ]
+      },
+      "path": "docs/screenshots/m6-spirit/final/art-a5/phone-S04-whale.png"
+    },
+    {
+      "device": "phone",
+      "stage": "S06",
+      "style": "basalt",
+      "observed": {
+        "style": "basalt",
+        "cachedKeys": [
+          "terrain-basalt-fill",
+          "terrain-basalt-top"
+        ],
+        "textures": [
+          {
+            "key": "terrain-basalt-fill",
+            "width": 128,
+            "height": 128,
+            "source": "blob:http://127.0.0.1:5174/0d38296a-7c0e-408a-af3e-35ee258842a8"
+          },
+          {
+            "key": "terrain-basalt-top",
+            "width": 128,
+            "height": 34,
+            "source": "blob:http://127.0.0.1:5174/88884c17-b5e2-487a-9e7a-acf81b1dfd6c"
+          }
+        ],
+        "platforms": [
+          {
+            "x": 1950,
+            "y": 664,
+            "width": 3900,
+            "height": 112,
+            "texture": "terrain-basalt-fill",
+            "visible": true,
+            "skinX": 1950,
+            "skinY": 664,
+            "skinWidth": 3900,
+            "skinHeight": 112
+          },
+          {
+            "x": 556,
+            "y": 572,
+            "width": 192,
+            "height": 72,
+            "texture": "terrain-basalt-fill",
+            "visible": true,
+            "skinX": 556,
+            "skinY": 572,
+            "skinWidth": 192,
+            "skinHeight": 72
+          },
+          {
+            "x": 1272,
+            "y": 568,
+            "width": 224,
+            "height": 80,
+            "texture": "terrain-basalt-fill",
+            "visible": true,
+            "skinX": 1272,
+            "skinY": 568,
+            "skinWidth": 224,
+            "skinHeight": 80
+          },
+          {
+            "x": 2152,
+            "y": 568,
+            "width": 224,
+            "height": 80,
+            "texture": "terrain-basalt-fill",
+            "visible": true,
+            "skinX": 2152,
+            "skinY": 568,
+            "skinWidth": 224,
+            "skinHeight": 80
+          },
+          {
+            "x": 2916,
+            "y": 572,
+            "width": 192,
+            "height": 72,
+            "texture": "terrain-basalt-fill",
+            "visible": true,
+            "skinX": 2916,
+            "skinY": 572,
+            "skinWidth": 192,
+            "skinHeight": 72
+          }
+        ],
+        "tops": [
+          {
+            "x": 1950,
+            "y": 621,
+            "width": 3900,
+            "height": 34,
+            "texture": "terrain-basalt-top"
+          },
+          {
+            "x": 556,
+            "y": 549,
+            "width": 192,
+            "height": 34,
+            "texture": "terrain-basalt-top"
+          },
+          {
+            "x": 1272,
+            "y": 541,
+            "width": 224,
+            "height": 34,
+            "texture": "terrain-basalt-top"
+          },
+          {
+            "x": 2152,
+            "y": 541,
+            "width": 224,
+            "height": 34,
+            "texture": "terrain-basalt-top"
+          },
+          {
+            "x": 2916,
+            "y": 549,
+            "width": 192,
+            "height": 34,
+            "texture": "terrain-basalt-top"
+          }
+        ]
+      },
+      "path": "docs/screenshots/m6-spirit/final/art-a5/phone-S06-basalt.png"
+    },
+    {
+      "device": "phone",
+      "stage": "S08",
+      "style": "crystal",
+      "observed": {
+        "style": "crystal",
+        "cachedKeys": [
+          "terrain-crystal-fill",
+          "terrain-crystal-top"
+        ],
+        "textures": [
+          {
+            "key": "terrain-crystal-fill",
+            "width": 128,
+            "height": 128,
+            "source": "blob:http://127.0.0.1:5174/9c065aa7-51d7-4086-823c-e8969c1fa8fb"
+          },
+          {
+            "key": "terrain-crystal-top",
+            "width": 128,
+            "height": 34,
+            "source": "blob:http://127.0.0.1:5174/a3c5f762-1d5a-4774-856d-fb11efabb18b"
+          }
+        ],
+        "platforms": [
+          {
+            "x": 1850,
+            "y": 664,
+            "width": 3700,
+            "height": 112,
+            "texture": "terrain-crystal-fill",
+            "visible": true,
+            "skinX": 1850,
+            "skinY": 664,
+            "skinWidth": 3700,
+            "skinHeight": 112
+          },
+          {
+            "x": 640,
+            "y": 572,
+            "width": 160,
+            "height": 72,
+            "texture": "terrain-crystal-fill",
+            "visible": true,
+            "skinX": 640,
+            "skinY": 572,
+            "skinWidth": 160,
+            "skinHeight": 72
+          },
+          {
+            "x": 1010,
+            "y": 568,
+            "width": 160,
+            "height": 80,
+            "texture": "terrain-crystal-fill",
+            "visible": true,
+            "skinX": 1010,
+            "skinY": 568,
+            "skinWidth": 160,
+            "skinHeight": 80
+          }
+        ],
+        "tops": [
+          {
+            "x": 1850,
+            "y": 621,
+            "width": 3700,
+            "height": 34,
+            "texture": "terrain-crystal-top"
+          },
+          {
+            "x": 640,
+            "y": 549,
+            "width": 160,
+            "height": 34,
+            "texture": "terrain-crystal-top"
+          },
+          {
+            "x": 1010,
+            "y": 541,
+            "width": 160,
+            "height": 34,
+            "texture": "terrain-crystal-top"
+          }
+        ]
+      },
+      "path": "docs/screenshots/m6-spirit/final/art-a5/phone-S08-crystal.png"
+    },
+    {
+      "device": "phone",
+      "stage": "S09",
+      "style": "cloud",
+      "observed": {
+        "style": "cloud",
+        "cachedKeys": [
+          "terrain-cloud-fill",
+          "terrain-cloud-top"
+        ],
+        "textures": [
+          {
+            "key": "terrain-cloud-fill",
+            "width": 128,
+            "height": 128,
+            "source": "blob:http://127.0.0.1:5174/ba809cfe-8fd1-4f4e-802f-bfaabf82fb0f"
+          },
+          {
+            "key": "terrain-cloud-top",
+            "width": 128,
+            "height": 34,
+            "source": "blob:http://127.0.0.1:5174/9c71d843-5fcb-48d5-98fd-39d90f41eceb"
+          }
+        ],
+        "platforms": [
+          {
+            "x": 1500,
+            "y": 664,
+            "width": 3000,
+            "height": 112,
+            "texture": "terrain-cloud-fill",
+            "visible": true,
+            "skinX": 1500,
+            "skinY": 664,
+            "skinWidth": 3000,
+            "skinHeight": 112
+          },
+          {
+            "x": 700,
+            "y": 548,
+            "width": 180,
+            "height": 24,
+            "texture": "terrain-cloud-fill",
+            "visible": false,
+            "skinX": 700,
+            "skinY": 548,
+            "skinWidth": 180,
+            "skinHeight": 24
+          },
+          {
+            "x": 910,
+            "y": 476,
+            "width": 180,
+            "height": 24,
+            "texture": "terrain-cloud-fill",
+            "visible": false,
+            "skinX": 910,
+            "skinY": 476,
+            "skinWidth": 180,
+            "skinHeight": 24
+          }
+        ],
+        "tops": [
+          {
+            "x": 1500,
+            "y": 621,
+            "width": 3000,
+            "height": 34,
+            "texture": "terrain-cloud-top"
+          },
+          {
+            "x": 700,
+            "y": 549,
+            "width": 180,
+            "height": 34,
+            "texture": "terrain-cloud-top"
+          },
+          {
+            "x": 910,
+            "y": 477,
+            "width": 180,
+            "height": 34,
+            "texture": "terrain-cloud-top"
+          }
+        ]
+      },
+      "path": "docs/screenshots/m6-spirit/final/art-a5/phone-S09-cloud.png"
+    },
+    {
+      "device": "phone",
+      "stage": "S13",
+      "style": "village",
+      "observed": {
+        "style": "village",
+        "cachedKeys": [
+          "terrain-village-fill",
+          "terrain-village-top"
+        ],
+        "textures": [
+          {
+            "key": "terrain-village-fill",
+            "width": 128,
+            "height": 128,
+            "source": "blob:http://127.0.0.1:5174/0f769d31-2256-40d7-8e0e-00b86508be5b"
+          },
+          {
+            "key": "terrain-village-top",
+            "width": 128,
+            "height": 34,
+            "source": "blob:http://127.0.0.1:5174/d31c326a-17d5-40e5-9ef3-6d5621df0962"
+          }
+        ],
+        "platforms": [
+          {
+            "x": 1625,
+            "y": 664,
+            "width": 3250,
+            "height": 112,
+            "texture": "terrain-village-fill",
+            "visible": true,
+            "skinX": 1625,
+            "skinY": 664,
+            "skinWidth": 3250,
+            "skinHeight": 112
+          },
+          {
+            "x": 720,
+            "y": 560,
+            "width": 240,
+            "height": 24,
+            "texture": "terrain-village-fill",
+            "visible": false,
+            "skinX": 720,
+            "skinY": 560,
+            "skinWidth": 240,
+            "skinHeight": 24
+          },
+          {
+            "x": 1870,
+            "y": 548,
+            "width": 240,
+            "height": 24,
+            "texture": "terrain-village-fill",
+            "visible": false,
+            "skinX": 1870,
+            "skinY": 548,
+            "skinWidth": 240,
+            "skinHeight": 24
+          }
+        ],
+        "tops": [
+          {
+            "x": 1625,
+            "y": 621,
+            "width": 3250,
+            "height": 34,
+            "texture": "terrain-village-top"
+          },
+          {
+            "x": 720,
+            "y": 561,
+            "width": 240,
+            "height": 34,
+            "texture": "terrain-village-top"
+          },
+          {
+            "x": 1870,
+            "y": 549,
+            "width": 240,
+            "height": 34,
+            "texture": "terrain-village-top"
+          }
+        ]
+      },
+      "path": "docs/screenshots/m6-spirit/final/art-a5/phone-S13-village.png"
+    },
+    {
+      "device": "phone",
+      "stage": "S15",
+      "style": "warehouse",
+      "observed": {
+        "style": "warehouse",
+        "cachedKeys": [
+          "terrain-warehouse-fill",
+          "terrain-warehouse-top"
+        ],
+        "textures": [
+          {
+            "key": "terrain-warehouse-fill",
+            "width": 128,
+            "height": 128,
+            "source": "blob:http://127.0.0.1:5174/bdc0e010-3261-4db6-a35b-95d478a2783c"
+          },
+          {
+            "key": "terrain-warehouse-top",
+            "width": 128,
+            "height": 34,
+            "source": "blob:http://127.0.0.1:5174/8afbab3e-f20c-4c83-9f4e-1a39ea6ce347"
+          }
+        ],
+        "platforms": [
+          {
+            "x": 1500,
+            "y": 664,
+            "width": 3000,
+            "height": 112,
+            "texture": "terrain-warehouse-fill",
+            "visible": true,
+            "skinX": 1500,
+            "skinY": 664,
+            "skinWidth": 3000,
+            "skinHeight": 112
+          },
+          {
+            "x": 630,
+            "y": 548,
+            "width": 200,
+            "height": 24,
+            "texture": "terrain-warehouse-fill",
+            "visible": false,
+            "skinX": 630,
+            "skinY": 548,
+            "skinWidth": 200,
+            "skinHeight": 24
+          },
+          {
+            "x": 870,
+            "y": 476,
+            "width": 220,
+            "height": 24,
+            "texture": "terrain-warehouse-fill",
+            "visible": false,
+            "skinX": 870,
+            "skinY": 476,
+            "skinWidth": 220,
+            "skinHeight": 24
+          },
+          {
+            "x": 1100,
+            "y": 404,
+            "width": 180,
+            "height": 24,
+            "texture": "terrain-warehouse-fill",
+            "visible": false,
+            "skinX": 1100,
+            "skinY": 404,
+            "skinWidth": 180,
+            "skinHeight": 24
+          }
+        ],
+        "tops": [
+          {
+            "x": 1500,
+            "y": 621,
+            "width": 3000,
+            "height": 34,
+            "texture": "terrain-warehouse-top"
+          },
+          {
+            "x": 630,
+            "y": 549,
+            "width": 200,
+            "height": 34,
+            "texture": "terrain-warehouse-top"
+          },
+          {
+            "x": 870,
+            "y": 477,
+            "width": 220,
+            "height": 34,
+            "texture": "terrain-warehouse-top"
+          },
+          {
+            "x": 1100,
+            "y": 405,
+            "width": 180,
+            "height": 34,
+            "texture": "terrain-warehouse-top"
+          }
+        ]
+      },
+      "path": "docs/screenshots/m6-spirit/final/art-a5/phone-S15-warehouse.png"
+    },
+    {
+      "device": "phone",
+      "stage": "S16",
+      "style": "sand",
+      "observed": {
+        "style": "sand",
+        "cachedKeys": [
+          "terrain-sand-fill",
+          "terrain-sand-top"
+        ],
+        "textures": [
+          {
+            "key": "terrain-sand-fill",
+            "width": 128,
+            "height": 128,
+            "source": "blob:http://127.0.0.1:5174/101a3a7d-2a1b-4a38-a3b5-99cc900f2e59"
+          },
+          {
+            "key": "terrain-sand-top",
+            "width": 128,
+            "height": 34,
+            "source": "blob:http://127.0.0.1:5174/af84581c-9b36-441c-bf86-17a38d598571"
+          }
+        ],
+        "platforms": [
+          {
+            "x": 1500,
+            "y": 664,
+            "width": 3000,
+            "height": 112,
+            "texture": "terrain-sand-fill",
+            "visible": true,
+            "skinX": 1500,
+            "skinY": 664,
+            "skinWidth": 3000,
+            "skinHeight": 112
+          },
+          {
+            "x": 770,
+            "y": 548,
+            "width": 220,
+            "height": 24,
+            "texture": "terrain-sand-fill",
+            "visible": false,
+            "skinX": 770,
+            "skinY": 548,
+            "skinWidth": 220,
+            "skinHeight": 24
+          },
+          {
+            "x": 1950,
+            "y": 532,
+            "width": 220,
+            "height": 24,
+            "texture": "terrain-sand-fill",
+            "visible": false,
+            "skinX": 1950,
+            "skinY": 532,
+            "skinWidth": 220,
+            "skinHeight": 24
+          }
+        ],
+        "tops": [
+          {
+            "x": 1500,
+            "y": 621,
+            "width": 3000,
+            "height": 34,
+            "texture": "terrain-sand-top"
+          },
+          {
+            "x": 770,
+            "y": 549,
+            "width": 220,
+            "height": 34,
+            "texture": "terrain-sand-top"
+          },
+          {
+            "x": 1950,
+            "y": 533,
+            "width": 220,
+            "height": 34,
+            "texture": "terrain-sand-top"
+          }
+        ]
+      },
+      "path": "docs/screenshots/m6-spirit/final/art-a5/phone-S16-sand.png"
+    },
+    {
+      "device": "phone",
+      "stage": "S11",
+      "style": "shadow",
+      "observed": {
+        "style": "shadow",
+        "cachedKeys": [
+          "terrain-shadow-fill",
+          "terrain-shadow-top"
+        ],
+        "textures": [
+          {
+            "key": "terrain-shadow-fill",
+            "width": 128,
+            "height": 128,
+            "source": "blob:http://127.0.0.1:5174/2d3d48ff-03d9-4063-9f89-e7aef8bd475d"
+          },
+          {
+            "key": "terrain-shadow-top",
+            "width": 128,
+            "height": 34,
+            "source": "blob:http://127.0.0.1:5174/d6b44368-acd8-4d0e-b5c4-8d4a50cead37"
+          }
+        ],
+        "platforms": [
+          {
+            "x": 1500,
+            "y": 664,
+            "width": 3000,
+            "height": 112,
+            "texture": "terrain-shadow-fill",
+            "visible": true,
+            "skinX": 1500,
+            "skinY": 664,
+            "skinWidth": 3000,
+            "skinHeight": 112
+          },
+          {
+            "x": 710,
+            "y": 548,
+            "width": 180,
+            "height": 24,
+            "texture": "terrain-shadow-fill",
+            "visible": false,
+            "skinX": 710,
+            "skinY": 548,
+            "skinWidth": 180,
+            "skinHeight": 24
+          },
+          {
+            "x": 930,
+            "y": 476,
+            "width": 180,
+            "height": 24,
+            "texture": "terrain-shadow-fill",
+            "visible": false,
+            "skinX": 930,
+            "skinY": 476,
+            "skinWidth": 180,
+            "skinHeight": 24
+          },
+          {
+            "x": 1170,
+            "y": 404,
+            "width": 180,
+            "height": 24,
+            "texture": "terrain-shadow-fill",
+            "visible": false,
+            "skinX": 1170,
+            "skinY": 404,
+            "skinWidth": 180,
+            "skinHeight": 24
+          }
+        ],
+        "tops": [
+          {
+            "x": 1500,
+            "y": 621,
+            "width": 3000,
+            "height": 34,
+            "texture": "terrain-shadow-top"
+          },
+          {
+            "x": 710,
+            "y": 549,
+            "width": 180,
+            "height": 34,
+            "texture": "terrain-shadow-top"
+          },
+          {
+            "x": 930,
+            "y": 477,
+            "width": 180,
+            "height": 34,
+            "texture": "terrain-shadow-top"
+          },
+          {
+            "x": 1170,
+            "y": 405,
+            "width": 180,
+            "height": 34,
+            "texture": "terrain-shadow-top"
+          }
+        ]
+      },
+      "path": "docs/screenshots/m6-spirit/final/art-a5/phone-S11-shadow.png"
+    },
+    {
+      "device": "phone",
+      "stage": "S12",
+      "style": "jungle",
+      "observed": {
+        "style": "jungle",
+        "cachedKeys": [
+          "terrain-jungle-fill",
+          "terrain-jungle-top"
+        ],
+        "textures": [
+          {
+            "key": "terrain-jungle-fill",
+            "width": 128,
+            "height": 128,
+            "source": "blob:http://127.0.0.1:5174/d80824c6-b431-46b0-93ec-5abd7c6314e8"
+          },
+          {
+            "key": "terrain-jungle-top",
+            "width": 128,
+            "height": 34,
+            "source": "blob:http://127.0.0.1:5174/a9c46d3d-9b35-417c-8235-ea8a82390178"
+          }
+        ],
+        "platforms": [
+          {
+            "x": 1500,
+            "y": 664,
+            "width": 3000,
+            "height": 112,
+            "texture": "terrain-jungle-fill",
+            "visible": true,
+            "skinX": 1500,
+            "skinY": 664,
+            "skinWidth": 3000,
+            "skinHeight": 112
+          },
+          {
+            "x": 720,
+            "y": 556,
+            "width": 200,
+            "height": 24,
+            "texture": "terrain-jungle-fill",
+            "visible": false,
+            "skinX": 720,
+            "skinY": 556,
+            "skinWidth": 200,
+            "skinHeight": 24
+          },
+          {
+            "x": 1990,
+            "y": 540,
+            "width": 220,
+            "height": 24,
+            "texture": "terrain-jungle-fill",
+            "visible": false,
+            "skinX": 1990,
+            "skinY": 540,
+            "skinWidth": 220,
+            "skinHeight": 24
+          }
+        ],
+        "tops": [
+          {
+            "x": 1500,
+            "y": 621,
+            "width": 3000,
+            "height": 34,
+            "texture": "terrain-jungle-top"
+          },
+          {
+            "x": 720,
+            "y": 557,
+            "width": 200,
+            "height": 34,
+            "texture": "terrain-jungle-top"
+          },
+          {
+            "x": 1990,
+            "y": 541,
+            "width": 220,
+            "height": 34,
+            "texture": "terrain-jungle-top"
+          }
+        ]
+      },
+      "path": "docs/screenshots/m6-spirit/final/art-a5/phone-S12-jungle.png"
+    },
+    {
+      "device": "phone",
+      "stage": "S23",
+      "style": "temple",
+      "observed": {
+        "style": "temple",
+        "cachedKeys": [
+          "terrain-temple-fill",
+          "terrain-temple-top"
+        ],
+        "textures": [
+          {
+            "key": "terrain-temple-fill",
+            "width": 128,
+            "height": 128,
+            "source": "blob:http://127.0.0.1:5174/601e515e-d916-4975-aafe-e800c49fd670"
+          },
+          {
+            "key": "terrain-temple-top",
+            "width": 128,
+            "height": 34,
+            "source": "blob:http://127.0.0.1:5174/1a11928e-1c16-477b-81c1-fa657c708f06"
+          }
+        ],
+        "platforms": [
+          {
+            "x": 1500,
+            "y": 664,
+            "width": 3000,
+            "height": 112,
+            "texture": "terrain-temple-fill",
+            "visible": true,
+            "skinX": 1500,
+            "skinY": 664,
+            "skinWidth": 3000,
+            "skinHeight": 112
+          },
+          {
+            "x": 790,
+            "y": 572,
+            "width": 220,
+            "height": 24,
+            "texture": "terrain-temple-fill",
+            "visible": false,
+            "skinX": 790,
+            "skinY": 572,
+            "skinWidth": 220,
+            "skinHeight": 24
+          },
+          {
+            "x": 1710,
+            "y": 564,
+            "width": 220,
+            "height": 24,
+            "texture": "terrain-temple-fill",
+            "visible": false,
+            "skinX": 1710,
+            "skinY": 564,
+            "skinWidth": 220,
+            "skinHeight": 24
+          }
+        ],
+        "tops": [
+          {
+            "x": 1500,
+            "y": 621,
+            "width": 3000,
+            "height": 34,
+            "texture": "terrain-temple-top"
+          },
+          {
+            "x": 790,
+            "y": 573,
+            "width": 220,
+            "height": 34,
+            "texture": "terrain-temple-top"
+          },
+          {
+            "x": 1710,
+            "y": 565,
+            "width": 220,
+            "height": 34,
+            "texture": "terrain-temple-top"
+          }
+        ]
+      },
+      "path": "docs/screenshots/m6-spirit/final/art-a5/phone-S23-temple.png"
+    },
+    {
+      "device": "phone",
+      "stage": "S28",
+      "style": "garden",
+      "observed": {
+        "style": "garden",
+        "cachedKeys": [
+          "terrain-garden-fill",
+          "terrain-garden-top"
+        ],
+        "textures": [
+          {
+            "key": "terrain-garden-fill",
+            "width": 128,
+            "height": 128,
+            "source": "blob:http://127.0.0.1:5174/b1ef09c0-8ecd-4356-83ee-4b83a6d47ce3"
+          },
+          {
+            "key": "terrain-garden-top",
+            "width": 128,
+            "height": 34,
+            "source": "blob:http://127.0.0.1:5174/ce58072c-44bf-4474-b776-d7049e1fada1"
+          }
+        ],
+        "platforms": [
+          {
+            "x": 1500,
+            "y": 664,
+            "width": 3000,
+            "height": 112,
+            "texture": "terrain-garden-fill",
+            "visible": true,
+            "skinX": 1500,
+            "skinY": 664,
+            "skinWidth": 3000,
+            "skinHeight": 112
+          },
+          {
+            "x": 760,
+            "y": 572,
+            "width": 220,
+            "height": 24,
+            "texture": "terrain-garden-fill",
+            "visible": false,
+            "skinX": 760,
+            "skinY": 572,
+            "skinWidth": 220,
+            "skinHeight": 24
+          },
+          {
+            "x": 1730,
+            "y": 556,
+            "width": 220,
+            "height": 24,
+            "texture": "terrain-garden-fill",
+            "visible": false,
+            "skinX": 1730,
+            "skinY": 556,
+            "skinWidth": 220,
+            "skinHeight": 24
+          }
+        ],
+        "tops": [
+          {
+            "x": 1500,
+            "y": 621,
+            "width": 3000,
+            "height": 34,
+            "texture": "terrain-garden-top"
+          },
+          {
+            "x": 760,
+            "y": 573,
+            "width": 220,
+            "height": 34,
+            "texture": "terrain-garden-top"
+          },
+          {
+            "x": 1730,
+            "y": 557,
+            "width": 220,
+            "height": 34,
+            "texture": "terrain-garden-top"
+          }
+        ]
+      },
+      "path": "docs/screenshots/m6-spirit/final/art-a5/phone-S28-garden.png"
+    },
+    {
+      "device": "phone",
+      "stage": "S30",
+      "style": "tower",
+      "observed": {
+        "style": "tower",
+        "cachedKeys": [
+          "terrain-tower-fill",
+          "terrain-tower-top"
+        ],
+        "textures": [
+          {
+            "key": "terrain-tower-fill",
+            "width": 128,
+            "height": 128,
+            "source": "blob:http://127.0.0.1:5174/a62b9e95-17e1-4b8f-91da-bd7a9ca59367"
+          },
+          {
+            "key": "terrain-tower-top",
+            "width": 128,
+            "height": 34,
+            "source": "blob:http://127.0.0.1:5174/d457bfeb-7eef-4eb5-8e6a-b684a1a996aa"
+          }
+        ],
+        "platforms": [
+          {
+            "x": 1895,
+            "y": 664,
+            "width": 3790,
+            "height": 112,
+            "texture": "terrain-tower-fill",
+            "visible": true,
+            "skinX": 1895,
+            "skinY": 664,
+            "skinWidth": 3790,
+            "skinHeight": 112
+          },
+          {
+            "x": 710,
+            "y": 548,
+            "width": 180,
+            "height": 24,
+            "texture": "terrain-tower-fill",
+            "visible": false,
+            "skinX": 710,
+            "skinY": 548,
+            "skinWidth": 180,
+            "skinHeight": 24
+          },
+          {
+            "x": 930,
+            "y": 476,
+            "width": 180,
+            "height": 24,
+            "texture": "terrain-tower-fill",
+            "visible": false,
+            "skinX": 930,
+            "skinY": 476,
+            "skinWidth": 180,
+            "skinHeight": 24
+          }
+        ],
+        "tops": [
+          {
+            "x": 1895,
+            "y": 621,
+            "width": 3790,
+            "height": 34,
+            "texture": "terrain-tower-top"
+          },
+          {
+            "x": 710,
+            "y": 549,
+            "width": 180,
+            "height": 34,
+            "texture": "terrain-tower-top"
+          },
+          {
+            "x": 930,
+            "y": 477,
+            "width": 180,
+            "height": 34,
+            "texture": "terrain-tower-top"
+          }
+        ]
+      },
+      "path": "docs/screenshots/m6-spirit/final/art-a5/phone-S30-tower.png"
+    },
+    {
+      "device": "phone",
+      "stage": "S34",
+      "style": "kingdom",
+      "observed": {
+        "style": "kingdom",
+        "cachedKeys": [
+          "terrain-kingdom-fill",
+          "terrain-kingdom-top"
+        ],
+        "textures": [
+          {
+            "key": "terrain-kingdom-fill",
+            "width": 128,
+            "height": 128,
+            "source": "blob:http://127.0.0.1:5174/75b7a526-4207-4d1e-b6d3-426ad9c5a195"
+          },
+          {
+            "key": "terrain-kingdom-top",
+            "width": 128,
+            "height": 34,
+            "source": "blob:http://127.0.0.1:5174/91af0ddb-87c1-4db6-a8cb-f79a9ec89194"
+          }
+        ],
+        "platforms": [
+          {
+            "x": 1500,
+            "y": 664,
+            "width": 3000,
+            "height": 112,
+            "texture": "terrain-kingdom-fill",
+            "visible": true,
+            "skinX": 1500,
+            "skinY": 664,
+            "skinWidth": 3000,
+            "skinHeight": 112
+          },
+          {
+            "x": 690,
+            "y": 572,
+            "width": 220,
+            "height": 24,
+            "texture": "terrain-kingdom-fill",
+            "visible": false,
+            "skinX": 690,
+            "skinY": 572,
+            "skinWidth": 220,
+            "skinHeight": 24
+          }
+        ],
+        "tops": [
+          {
+            "x": 1500,
+            "y": 621,
+            "width": 3000,
+            "height": 34,
+            "texture": "terrain-kingdom-top"
+          },
+          {
+            "x": 690,
+            "y": 573,
+            "width": 220,
+            "height": 34,
+            "texture": "terrain-kingdom-top"
+          }
+        ]
+      },
+      "path": "docs/screenshots/m6-spirit/final/art-a5/phone-S34-kingdom.png"
+    },
+    {
+      "device": "tablet",
+      "stage": "S01",
+      "style": "dock",
+      "observed": {
+        "style": "dock",
+        "cachedKeys": [
+          "terrain-dock-fill",
+          "terrain-dock-top"
+        ],
+        "textures": [
+          {
+            "key": "terrain-dock-fill",
+            "width": 128,
+            "height": 128,
+            "source": "blob:http://127.0.0.1:5174/a2ff702a-4b06-48b1-a3b4-85de6c9a6e97"
+          },
+          {
+            "key": "terrain-dock-top",
+            "width": 128,
+            "height": 34,
+            "source": "blob:http://127.0.0.1:5174/8ed9f27a-b16d-455c-8cb9-ac1f842fc9eb"
+          }
+        ],
+        "platforms": [
+          {
+            "x": 2400,
+            "y": 664,
+            "width": 4800,
+            "height": 112,
+            "texture": "terrain-dock-fill",
+            "visible": true,
+            "skinX": 2400,
+            "skinY": 664,
+            "skinWidth": 4800,
+            "skinHeight": 112
+          },
+          {
+            "x": 560,
+            "y": 572,
+            "width": 160,
+            "height": 72,
+            "texture": "terrain-dock-fill",
+            "visible": true,
+            "skinX": 560,
+            "skinY": 572,
+            "skinWidth": 160,
+            "skinHeight": 72
+          },
+          {
+            "x": 776,
+            "y": 552,
+            "width": 192,
+            "height": 112,
+            "texture": "terrain-dock-fill",
+            "visible": true,
+            "skinX": 776,
+            "skinY": 552,
+            "skinWidth": 192,
+            "skinHeight": 112
+          },
+          {
+            "x": 1426,
+            "y": 576,
+            "width": 192,
+            "height": 64,
+            "texture": "terrain-dock-fill",
+            "visible": true,
+            "skinX": 1426,
+            "skinY": 576,
+            "skinWidth": 192,
+            "skinHeight": 64
+          },
+          {
+            "x": 2128,
+            "y": 568,
+            "width": 256,
+            "height": 80,
+            "texture": "terrain-dock-fill",
+            "visible": true,
+            "skinX": 2128,
+            "skinY": 568,
+            "skinWidth": 256,
+            "skinHeight": 80
+          },
+          {
+            "x": 2766,
+            "y": 576,
+            "width": 192,
+            "height": 64,
+            "texture": "terrain-dock-fill",
+            "visible": true,
+            "skinX": 2766,
+            "skinY": 576,
+            "skinWidth": 192,
+            "skinHeight": 64
+          },
+          {
+            "x": 3496,
+            "y": 576,
+            "width": 192,
+            "height": 64,
+            "texture": "terrain-dock-fill",
+            "visible": true,
+            "skinX": 3496,
+            "skinY": 576,
+            "skinWidth": 192,
+            "skinHeight": 64
+          }
+        ],
+        "tops": [
+          {
+            "x": 2400,
+            "y": 621,
+            "width": 4800,
+            "height": 34,
+            "texture": "terrain-dock-top"
+          },
+          {
+            "x": 560,
+            "y": 549,
+            "width": 160,
+            "height": 34,
+            "texture": "terrain-dock-top"
+          },
+          {
+            "x": 776,
+            "y": 509,
+            "width": 192,
+            "height": 34,
+            "texture": "terrain-dock-top"
+          },
+          {
+            "x": 1426,
+            "y": 557,
+            "width": 192,
+            "height": 34,
+            "texture": "terrain-dock-top"
+          },
+          {
+            "x": 2128,
+            "y": 541,
+            "width": 256,
+            "height": 34,
+            "texture": "terrain-dock-top"
+          },
+          {
+            "x": 2766,
+            "y": 557,
+            "width": 192,
+            "height": 34,
+            "texture": "terrain-dock-top"
+          },
+          {
+            "x": 3496,
+            "y": 557,
+            "width": 192,
+            "height": 34,
+            "texture": "terrain-dock-top"
+          }
+        ]
+      },
+      "path": "docs/screenshots/m6-spirit/final/art-a5/tablet-S01-dock.png"
+    },
+    {
+      "device": "tablet",
+      "stage": "S03",
+      "style": "deck",
+      "observed": {
+        "style": "deck",
+        "cachedKeys": [
+          "terrain-deck-fill",
+          "terrain-deck-top"
+        ],
+        "textures": [
+          {
+            "key": "terrain-deck-fill",
+            "width": 128,
+            "height": 128,
+            "source": "blob:http://127.0.0.1:5174/41a9c0d9-f34c-43b9-b4db-1c9d8a3adcf6"
+          },
+          {
+            "key": "terrain-deck-top",
+            "width": 128,
+            "height": 34,
+            "source": "blob:http://127.0.0.1:5174/e91f267d-1348-4a1f-903f-0fe8125abfe7"
+          }
+        ],
+        "platforms": [
+          {
+            "x": 850,
+            "y": 664,
+            "width": 1700,
+            "height": 112,
+            "texture": "terrain-deck-fill",
+            "visible": true,
+            "skinX": 850,
+            "skinY": 664,
+            "skinWidth": 1700,
+            "skinHeight": 112
+          },
+          {
+            "x": 2535,
+            "y": 664,
+            "width": 1430,
+            "height": 112,
+            "texture": "terrain-deck-fill",
+            "visible": true,
+            "skinX": 2535,
+            "skinY": 664,
+            "skinWidth": 1430,
+            "skinHeight": 112
+          },
+          {
+            "x": 4085,
+            "y": 664,
+            "width": 1430,
+            "height": 112,
+            "texture": "terrain-deck-fill",
+            "visible": true,
+            "skinX": 4085,
+            "skinY": 664,
+            "skinWidth": 1430,
+            "skinHeight": 112
+          },
+          {
+            "x": 860,
+            "y": 568,
+            "width": 240,
+            "height": 80,
+            "texture": "terrain-deck-fill",
+            "visible": true,
+            "skinX": 860,
+            "skinY": 568,
+            "skinWidth": 240,
+            "skinHeight": 80
+          },
+          {
+            "x": 2228,
+            "y": 568,
+            "width": 256,
+            "height": 80,
+            "texture": "terrain-deck-fill",
+            "visible": true,
+            "skinX": 2228,
+            "skinY": 568,
+            "skinWidth": 256,
+            "skinHeight": 80
+          },
+          {
+            "x": 2478,
+            "y": 532,
+            "width": 176,
+            "height": 24,
+            "texture": "terrain-deck-fill",
+            "visible": false,
+            "skinX": 2478,
+            "skinY": 532,
+            "skinWidth": 176,
+            "skinHeight": 24
+          },
+          {
+            "x": 2730,
+            "y": 460,
+            "width": 200,
+            "height": 24,
+            "texture": "terrain-deck-fill",
+            "visible": false,
+            "skinX": 2730,
+            "skinY": 460,
+            "skinWidth": 200,
+            "skinHeight": 24
+          },
+          {
+            "x": 4020,
+            "y": 568,
+            "width": 200,
+            "height": 80,
+            "texture": "terrain-deck-fill",
+            "visible": true,
+            "skinX": 4020,
+            "skinY": 568,
+            "skinWidth": 200,
+            "skinHeight": 80
+          }
+        ],
+        "tops": [
+          {
+            "x": 850,
+            "y": 621,
+            "width": 1700,
+            "height": 34,
+            "texture": "terrain-deck-top"
+          },
+          {
+            "x": 2535,
+            "y": 621,
+            "width": 1430,
+            "height": 34,
+            "texture": "terrain-deck-top"
+          },
+          {
+            "x": 4085,
+            "y": 621,
+            "width": 1430,
+            "height": 34,
+            "texture": "terrain-deck-top"
+          },
+          {
+            "x": 860,
+            "y": 541,
+            "width": 240,
+            "height": 34,
+            "texture": "terrain-deck-top"
+          },
+          {
+            "x": 2228,
+            "y": 541,
+            "width": 256,
+            "height": 34,
+            "texture": "terrain-deck-top"
+          },
+          {
+            "x": 2478,
+            "y": 533,
+            "width": 176,
+            "height": 34,
+            "texture": "terrain-deck-top"
+          },
+          {
+            "x": 2730,
+            "y": 461,
+            "width": 200,
+            "height": 34,
+            "texture": "terrain-deck-top"
+          },
+          {
+            "x": 4020,
+            "y": 541,
+            "width": 200,
+            "height": 34,
+            "texture": "terrain-deck-top"
+          }
+        ]
+      },
+      "path": "docs/screenshots/m6-spirit/final/art-a5/tablet-S03-deck.png"
+    },
+    {
+      "device": "tablet",
+      "stage": "S02",
+      "style": "reef",
+      "observed": {
+        "style": "reef",
+        "cachedKeys": [
+          "terrain-reef-fill",
+          "terrain-reef-top"
+        ],
+        "textures": [
+          {
+            "key": "terrain-reef-fill",
+            "width": 128,
+            "height": 128,
+            "source": "blob:http://127.0.0.1:5174/b3c5611f-55e0-4750-a22d-78c47b431867"
+          },
+          {
+            "key": "terrain-reef-top",
+            "width": 128,
+            "height": 34,
+            "source": "blob:http://127.0.0.1:5174/07eab409-abc5-45bb-8275-cd7d4e5d5a78"
+          }
+        ],
+        "platforms": [
+          {
+            "x": 325,
+            "y": 664,
+            "width": 650,
+            "height": 112,
+            "texture": "terrain-reef-fill",
+            "visible": true,
+            "skinX": 325,
+            "skinY": 664,
+            "skinWidth": 650,
+            "skinHeight": 112
+          },
+          {
+            "x": 1090,
+            "y": 632,
+            "width": 640,
+            "height": 112,
+            "texture": "terrain-reef-fill",
+            "visible": true,
+            "skinX": 1090,
+            "skinY": 632,
+            "skinWidth": 640,
+            "skinHeight": 112
+          },
+          {
+            "x": 1845,
+            "y": 664,
+            "width": 610,
+            "height": 112,
+            "texture": "terrain-reef-fill",
+            "visible": true,
+            "skinX": 1845,
+            "skinY": 664,
+            "skinWidth": 610,
+            "skinHeight": 112
+          },
+          {
+            "x": 2600,
+            "y": 608,
+            "width": 660,
+            "height": 112,
+            "texture": "terrain-reef-fill",
+            "visible": true,
+            "skinX": 2600,
+            "skinY": 608,
+            "skinWidth": 660,
+            "skinHeight": 112
+          },
+          {
+            "x": 3930,
+            "y": 664,
+            "width": 1740,
+            "height": 112,
+            "texture": "terrain-reef-fill",
+            "visible": true,
+            "skinX": 3930,
+            "skinY": 664,
+            "skinWidth": 1740,
+            "skinHeight": 112
+          },
+          {
+            "x": 4400,
+            "y": 532,
+            "width": 200,
+            "height": 24,
+            "texture": "terrain-reef-fill",
+            "visible": false,
+            "skinX": 4400,
+            "skinY": 532,
+            "skinWidth": 200,
+            "skinHeight": 24
+          }
+        ],
+        "tops": [
+          {
+            "x": 325,
+            "y": 621,
+            "width": 650,
+            "height": 34,
+            "texture": "terrain-reef-top"
+          },
+          {
+            "x": 1090,
+            "y": 589,
+            "width": 640,
+            "height": 34,
+            "texture": "terrain-reef-top"
+          },
+          {
+            "x": 1845,
+            "y": 621,
+            "width": 610,
+            "height": 34,
+            "texture": "terrain-reef-top"
+          },
+          {
+            "x": 2600,
+            "y": 565,
+            "width": 660,
+            "height": 34,
+            "texture": "terrain-reef-top"
+          },
+          {
+            "x": 3930,
+            "y": 621,
+            "width": 1740,
+            "height": 34,
+            "texture": "terrain-reef-top"
+          },
+          {
+            "x": 4400,
+            "y": 533,
+            "width": 200,
+            "height": 34,
+            "texture": "terrain-reef-top"
+          }
+        ]
+      },
+      "path": "docs/screenshots/m6-spirit/final/art-a5/tablet-S02-reef.png"
+    },
+    {
+      "device": "tablet",
+      "stage": "S05",
+      "style": "coral",
+      "observed": {
+        "style": "coral",
+        "cachedKeys": [
+          "terrain-coral-fill",
+          "terrain-coral-top"
+        ],
+        "textures": [
+          {
+            "key": "terrain-coral-fill",
+            "width": 128,
+            "height": 128,
+            "source": "blob:http://127.0.0.1:5174/b5e08b58-0c40-4e66-9e85-e3d1cc2d8f02"
+          },
+          {
+            "key": "terrain-coral-top",
+            "width": 128,
+            "height": 34,
+            "source": "blob:http://127.0.0.1:5174/86f1388b-0511-4ef9-8260-8bbcc20f9e96"
+          }
+        ],
+        "platforms": [
+          {
+            "x": 2050,
+            "y": 664,
+            "width": 4100,
+            "height": 112,
+            "texture": "terrain-coral-fill",
+            "visible": true,
+            "skinX": 2050,
+            "skinY": 664,
+            "skinWidth": 4100,
+            "skinHeight": 112
+          },
+          {
+            "x": 696,
+            "y": 572,
+            "width": 192,
+            "height": 72,
+            "texture": "terrain-coral-fill",
+            "visible": true,
+            "skinX": 696,
+            "skinY": 572,
+            "skinWidth": 192,
+            "skinHeight": 72
+          },
+          {
+            "x": 956,
+            "y": 476,
+            "width": 192,
+            "height": 24,
+            "texture": "terrain-coral-fill",
+            "visible": false,
+            "skinX": 956,
+            "skinY": 476,
+            "skinWidth": 192,
+            "skinHeight": 24
+          },
+          {
+            "x": 1536,
+            "y": 568,
+            "width": 192,
+            "height": 80,
+            "texture": "terrain-coral-fill",
+            "visible": true,
+            "skinX": 1536,
+            "skinY": 568,
+            "skinWidth": 192,
+            "skinHeight": 80
+          },
+          {
+            "x": 2076,
+            "y": 572,
+            "width": 192,
+            "height": 72,
+            "texture": "terrain-coral-fill",
+            "visible": true,
+            "skinX": 2076,
+            "skinY": 572,
+            "skinWidth": 192,
+            "skinHeight": 72
+          },
+          {
+            "x": 3196,
+            "y": 572,
+            "width": 192,
+            "height": 72,
+            "texture": "terrain-coral-fill",
+            "visible": true,
+            "skinX": 3196,
+            "skinY": 572,
+            "skinWidth": 192,
+            "skinHeight": 72
+          }
+        ],
+        "tops": [
+          {
+            "x": 2050,
+            "y": 621,
+            "width": 4100,
+            "height": 34,
+            "texture": "terrain-coral-top"
+          },
+          {
+            "x": 696,
+            "y": 549,
+            "width": 192,
+            "height": 34,
+            "texture": "terrain-coral-top"
+          },
+          {
+            "x": 956,
+            "y": 477,
+            "width": 192,
+            "height": 34,
+            "texture": "terrain-coral-top"
+          },
+          {
+            "x": 1536,
+            "y": 541,
+            "width": 192,
+            "height": 34,
+            "texture": "terrain-coral-top"
+          },
+          {
+            "x": 2076,
+            "y": 549,
+            "width": 192,
+            "height": 34,
+            "texture": "terrain-coral-top"
+          },
+          {
+            "x": 3196,
+            "y": 549,
+            "width": 192,
+            "height": 34,
+            "texture": "terrain-coral-top"
+          }
+        ]
+      },
+      "path": "docs/screenshots/m6-spirit/final/art-a5/tablet-S05-coral.png"
+    },
+    {
+      "device": "tablet",
+      "stage": "S04",
+      "style": "whale",
+      "observed": {
+        "style": "whale",
+        "cachedKeys": [
+          "terrain-whale-fill",
+          "terrain-whale-top"
+        ],
+        "textures": [
+          {
+            "key": "terrain-whale-fill",
+            "width": 128,
+            "height": 128,
+            "source": "blob:http://127.0.0.1:5174/aacc03e2-e95c-4bf7-a6ac-72a4833ad00c"
+          },
+          {
+            "key": "terrain-whale-top",
+            "width": 128,
+            "height": 34,
+            "source": "blob:http://127.0.0.1:5174/fd9f73d5-822b-4bb0-83f5-83af58a4b495"
+          }
+        ],
+        "platforms": [
+          {
+            "x": 350,
+            "y": 664,
+            "width": 700,
+            "height": 112,
+            "texture": "terrain-whale-fill",
+            "visible": true,
+            "skinX": 350,
+            "skinY": 664,
+            "skinWidth": 700,
+            "skinHeight": 112
+          },
+          {
+            "x": 1175,
+            "y": 640,
+            "width": 750,
+            "height": 112,
+            "texture": "terrain-whale-fill",
+            "visible": true,
+            "skinX": 1175,
+            "skinY": 640,
+            "skinWidth": 750,
+            "skinHeight": 112
+          },
+          {
+            "x": 1870,
+            "y": 664,
+            "width": 420,
+            "height": 112,
+            "texture": "terrain-whale-fill",
+            "visible": true,
+            "skinX": 1870,
+            "skinY": 664,
+            "skinWidth": 420,
+            "skinHeight": 112
+          },
+          {
+            "x": 2510,
+            "y": 616,
+            "width": 620,
+            "height": 112,
+            "texture": "terrain-whale-fill",
+            "visible": true,
+            "skinX": 2510,
+            "skinY": 616,
+            "skinWidth": 620,
+            "skinHeight": 112
+          },
+          {
+            "x": 3420,
+            "y": 664,
+            "width": 960,
+            "height": 112,
+            "texture": "terrain-whale-fill",
+            "visible": true,
+            "skinX": 3420,
+            "skinY": 664,
+            "skinWidth": 960,
+            "skinHeight": 112
+          },
+          {
+            "x": 1048,
+            "y": 524,
+            "width": 176,
+            "height": 24,
+            "texture": "terrain-whale-fill",
+            "visible": false,
+            "skinX": 1048,
+            "skinY": 524,
+            "skinWidth": 176,
+            "skinHeight": 24
+          },
+          {
+            "x": 1276,
+            "y": 452,
+            "width": 192,
+            "height": 24,
+            "texture": "terrain-whale-fill",
+            "visible": false,
+            "skinX": 1276,
+            "skinY": 452,
+            "skinWidth": 192,
+            "skinHeight": 24
+          },
+          {
+            "x": 3276,
+            "y": 572,
+            "width": 192,
+            "height": 72,
+            "texture": "terrain-whale-fill",
+            "visible": true,
+            "skinX": 3276,
+            "skinY": 572,
+            "skinWidth": 192,
+            "skinHeight": 72
+          }
+        ],
+        "tops": [
+          {
+            "x": 350,
+            "y": 621,
+            "width": 700,
+            "height": 34,
+            "texture": "terrain-whale-top"
+          },
+          {
+            "x": 1175,
+            "y": 597,
+            "width": 750,
+            "height": 34,
+            "texture": "terrain-whale-top"
+          },
+          {
+            "x": 1870,
+            "y": 621,
+            "width": 420,
+            "height": 34,
+            "texture": "terrain-whale-top"
+          },
+          {
+            "x": 2510,
+            "y": 573,
+            "width": 620,
+            "height": 34,
+            "texture": "terrain-whale-top"
+          },
+          {
+            "x": 3420,
+            "y": 621,
+            "width": 960,
+            "height": 34,
+            "texture": "terrain-whale-top"
+          },
+          {
+            "x": 1048,
+            "y": 525,
+            "width": 176,
+            "height": 34,
+            "texture": "terrain-whale-top"
+          },
+          {
+            "x": 1276,
+            "y": 453,
+            "width": 192,
+            "height": 34,
+            "texture": "terrain-whale-top"
+          },
+          {
+            "x": 3276,
+            "y": 549,
+            "width": 192,
+            "height": 34,
+            "texture": "terrain-whale-top"
+          }
+        ]
+      },
+      "path": "docs/screenshots/m6-spirit/final/art-a5/tablet-S04-whale.png"
+    },
+    {
+      "device": "tablet",
+      "stage": "S06",
+      "style": "basalt",
+      "observed": {
+        "style": "basalt",
+        "cachedKeys": [
+          "terrain-basalt-fill",
+          "terrain-basalt-top"
+        ],
+        "textures": [
+          {
+            "key": "terrain-basalt-fill",
+            "width": 128,
+            "height": 128,
+            "source": "blob:http://127.0.0.1:5174/608b89d9-a63e-4669-b892-bee138b4ab97"
+          },
+          {
+            "key": "terrain-basalt-top",
+            "width": 128,
+            "height": 34,
+            "source": "blob:http://127.0.0.1:5174/04507038-cd3a-4f1a-ac6d-57cadbaa4659"
+          }
+        ],
+        "platforms": [
+          {
+            "x": 1950,
+            "y": 664,
+            "width": 3900,
+            "height": 112,
+            "texture": "terrain-basalt-fill",
+            "visible": true,
+            "skinX": 1950,
+            "skinY": 664,
+            "skinWidth": 3900,
+            "skinHeight": 112
+          },
+          {
+            "x": 556,
+            "y": 572,
+            "width": 192,
+            "height": 72,
+            "texture": "terrain-basalt-fill",
+            "visible": true,
+            "skinX": 556,
+            "skinY": 572,
+            "skinWidth": 192,
+            "skinHeight": 72
+          },
+          {
+            "x": 1272,
+            "y": 568,
+            "width": 224,
+            "height": 80,
+            "texture": "terrain-basalt-fill",
+            "visible": true,
+            "skinX": 1272,
+            "skinY": 568,
+            "skinWidth": 224,
+            "skinHeight": 80
+          },
+          {
+            "x": 2152,
+            "y": 568,
+            "width": 224,
+            "height": 80,
+            "texture": "terrain-basalt-fill",
+            "visible": true,
+            "skinX": 2152,
+            "skinY": 568,
+            "skinWidth": 224,
+            "skinHeight": 80
+          },
+          {
+            "x": 2916,
+            "y": 572,
+            "width": 192,
+            "height": 72,
+            "texture": "terrain-basalt-fill",
+            "visible": true,
+            "skinX": 2916,
+            "skinY": 572,
+            "skinWidth": 192,
+            "skinHeight": 72
+          }
+        ],
+        "tops": [
+          {
+            "x": 1950,
+            "y": 621,
+            "width": 3900,
+            "height": 34,
+            "texture": "terrain-basalt-top"
+          },
+          {
+            "x": 556,
+            "y": 549,
+            "width": 192,
+            "height": 34,
+            "texture": "terrain-basalt-top"
+          },
+          {
+            "x": 1272,
+            "y": 541,
+            "width": 224,
+            "height": 34,
+            "texture": "terrain-basalt-top"
+          },
+          {
+            "x": 2152,
+            "y": 541,
+            "width": 224,
+            "height": 34,
+            "texture": "terrain-basalt-top"
+          },
+          {
+            "x": 2916,
+            "y": 549,
+            "width": 192,
+            "height": 34,
+            "texture": "terrain-basalt-top"
+          }
+        ]
+      },
+      "path": "docs/screenshots/m6-spirit/final/art-a5/tablet-S06-basalt.png"
+    },
+    {
+      "device": "tablet",
+      "stage": "S08",
+      "style": "crystal",
+      "observed": {
+        "style": "crystal",
+        "cachedKeys": [
+          "terrain-crystal-fill",
+          "terrain-crystal-top"
+        ],
+        "textures": [
+          {
+            "key": "terrain-crystal-fill",
+            "width": 128,
+            "height": 128,
+            "source": "blob:http://127.0.0.1:5174/9c2b8bc3-227a-43af-9f8f-d1a5aecc9643"
+          },
+          {
+            "key": "terrain-crystal-top",
+            "width": 128,
+            "height": 34,
+            "source": "blob:http://127.0.0.1:5174/7bf7d6d5-b4d6-4e6c-9c0c-35d72184222a"
+          }
+        ],
+        "platforms": [
+          {
+            "x": 1850,
+            "y": 664,
+            "width": 3700,
+            "height": 112,
+            "texture": "terrain-crystal-fill",
+            "visible": true,
+            "skinX": 1850,
+            "skinY": 664,
+            "skinWidth": 3700,
+            "skinHeight": 112
+          },
+          {
+            "x": 640,
+            "y": 572,
+            "width": 160,
+            "height": 72,
+            "texture": "terrain-crystal-fill",
+            "visible": true,
+            "skinX": 640,
+            "skinY": 572,
+            "skinWidth": 160,
+            "skinHeight": 72
+          },
+          {
+            "x": 1010,
+            "y": 568,
+            "width": 160,
+            "height": 80,
+            "texture": "terrain-crystal-fill",
+            "visible": true,
+            "skinX": 1010,
+            "skinY": 568,
+            "skinWidth": 160,
+            "skinHeight": 80
+          }
+        ],
+        "tops": [
+          {
+            "x": 1850,
+            "y": 621,
+            "width": 3700,
+            "height": 34,
+            "texture": "terrain-crystal-top"
+          },
+          {
+            "x": 640,
+            "y": 549,
+            "width": 160,
+            "height": 34,
+            "texture": "terrain-crystal-top"
+          },
+          {
+            "x": 1010,
+            "y": 541,
+            "width": 160,
+            "height": 34,
+            "texture": "terrain-crystal-top"
+          }
+        ]
+      },
+      "path": "docs/screenshots/m6-spirit/final/art-a5/tablet-S08-crystal.png"
+    },
+    {
+      "device": "tablet",
+      "stage": "S09",
+      "style": "cloud",
+      "observed": {
+        "style": "cloud",
+        "cachedKeys": [
+          "terrain-cloud-fill",
+          "terrain-cloud-top"
+        ],
+        "textures": [
+          {
+            "key": "terrain-cloud-fill",
+            "width": 128,
+            "height": 128,
+            "source": "blob:http://127.0.0.1:5174/b70e58ce-a499-4a68-bc67-f62c8388e1ad"
+          },
+          {
+            "key": "terrain-cloud-top",
+            "width": 128,
+            "height": 34,
+            "source": "blob:http://127.0.0.1:5174/a4ee1891-9295-4cfa-9aec-28b6de76cf13"
+          }
+        ],
+        "platforms": [
+          {
+            "x": 1500,
+            "y": 664,
+            "width": 3000,
+            "height": 112,
+            "texture": "terrain-cloud-fill",
+            "visible": true,
+            "skinX": 1500,
+            "skinY": 664,
+            "skinWidth": 3000,
+            "skinHeight": 112
+          },
+          {
+            "x": 700,
+            "y": 548,
+            "width": 180,
+            "height": 24,
+            "texture": "terrain-cloud-fill",
+            "visible": false,
+            "skinX": 700,
+            "skinY": 548,
+            "skinWidth": 180,
+            "skinHeight": 24
+          },
+          {
+            "x": 910,
+            "y": 476,
+            "width": 180,
+            "height": 24,
+            "texture": "terrain-cloud-fill",
+            "visible": false,
+            "skinX": 910,
+            "skinY": 476,
+            "skinWidth": 180,
+            "skinHeight": 24
+          }
+        ],
+        "tops": [
+          {
+            "x": 1500,
+            "y": 621,
+            "width": 3000,
+            "height": 34,
+            "texture": "terrain-cloud-top"
+          },
+          {
+            "x": 700,
+            "y": 549,
+            "width": 180,
+            "height": 34,
+            "texture": "terrain-cloud-top"
+          },
+          {
+            "x": 910,
+            "y": 477,
+            "width": 180,
+            "height": 34,
+            "texture": "terrain-cloud-top"
+          }
+        ]
+      },
+      "path": "docs/screenshots/m6-spirit/final/art-a5/tablet-S09-cloud.png"
+    },
+    {
+      "device": "tablet",
+      "stage": "S13",
+      "style": "village",
+      "observed": {
+        "style": "village",
+        "cachedKeys": [
+          "terrain-village-fill",
+          "terrain-village-top"
+        ],
+        "textures": [
+          {
+            "key": "terrain-village-fill",
+            "width": 128,
+            "height": 128,
+            "source": "blob:http://127.0.0.1:5174/3120f291-ff72-4c69-bb17-6aacce7fcb8c"
+          },
+          {
+            "key": "terrain-village-top",
+            "width": 128,
+            "height": 34,
+            "source": "blob:http://127.0.0.1:5174/89212f0a-4542-4d17-bece-80e7b28eb018"
+          }
+        ],
+        "platforms": [
+          {
+            "x": 1625,
+            "y": 664,
+            "width": 3250,
+            "height": 112,
+            "texture": "terrain-village-fill",
+            "visible": true,
+            "skinX": 1625,
+            "skinY": 664,
+            "skinWidth": 3250,
+            "skinHeight": 112
+          },
+          {
+            "x": 720,
+            "y": 560,
+            "width": 240,
+            "height": 24,
+            "texture": "terrain-village-fill",
+            "visible": false,
+            "skinX": 720,
+            "skinY": 560,
+            "skinWidth": 240,
+            "skinHeight": 24
+          },
+          {
+            "x": 1870,
+            "y": 548,
+            "width": 240,
+            "height": 24,
+            "texture": "terrain-village-fill",
+            "visible": false,
+            "skinX": 1870,
+            "skinY": 548,
+            "skinWidth": 240,
+            "skinHeight": 24
+          }
+        ],
+        "tops": [
+          {
+            "x": 1625,
+            "y": 621,
+            "width": 3250,
+            "height": 34,
+            "texture": "terrain-village-top"
+          },
+          {
+            "x": 720,
+            "y": 561,
+            "width": 240,
+            "height": 34,
+            "texture": "terrain-village-top"
+          },
+          {
+            "x": 1870,
+            "y": 549,
+            "width": 240,
+            "height": 34,
+            "texture": "terrain-village-top"
+          }
+        ]
+      },
+      "path": "docs/screenshots/m6-spirit/final/art-a5/tablet-S13-village.png"
+    },
+    {
+      "device": "tablet",
+      "stage": "S15",
+      "style": "warehouse",
+      "observed": {
+        "style": "warehouse",
+        "cachedKeys": [
+          "terrain-warehouse-fill",
+          "terrain-warehouse-top"
+        ],
+        "textures": [
+          {
+            "key": "terrain-warehouse-fill",
+            "width": 128,
+            "height": 128,
+            "source": "blob:http://127.0.0.1:5174/de806cf4-23bd-471e-9524-98ae79815e5e"
+          },
+          {
+            "key": "terrain-warehouse-top",
+            "width": 128,
+            "height": 34,
+            "source": "blob:http://127.0.0.1:5174/a7f624a7-bf7e-45dd-89f7-24c2686dddd4"
+          }
+        ],
+        "platforms": [
+          {
+            "x": 1500,
+            "y": 664,
+            "width": 3000,
+            "height": 112,
+            "texture": "terrain-warehouse-fill",
+            "visible": true,
+            "skinX": 1500,
+            "skinY": 664,
+            "skinWidth": 3000,
+            "skinHeight": 112
+          },
+          {
+            "x": 630,
+            "y": 548,
+            "width": 200,
+            "height": 24,
+            "texture": "terrain-warehouse-fill",
+            "visible": false,
+            "skinX": 630,
+            "skinY": 548,
+            "skinWidth": 200,
+            "skinHeight": 24
+          },
+          {
+            "x": 870,
+            "y": 476,
+            "width": 220,
+            "height": 24,
+            "texture": "terrain-warehouse-fill",
+            "visible": false,
+            "skinX": 870,
+            "skinY": 476,
+            "skinWidth": 220,
+            "skinHeight": 24
+          },
+          {
+            "x": 1100,
+            "y": 404,
+            "width": 180,
+            "height": 24,
+            "texture": "terrain-warehouse-fill",
+            "visible": false,
+            "skinX": 1100,
+            "skinY": 404,
+            "skinWidth": 180,
+            "skinHeight": 24
+          }
+        ],
+        "tops": [
+          {
+            "x": 1500,
+            "y": 621,
+            "width": 3000,
+            "height": 34,
+            "texture": "terrain-warehouse-top"
+          },
+          {
+            "x": 630,
+            "y": 549,
+            "width": 200,
+            "height": 34,
+            "texture": "terrain-warehouse-top"
+          },
+          {
+            "x": 870,
+            "y": 477,
+            "width": 220,
+            "height": 34,
+            "texture": "terrain-warehouse-top"
+          },
+          {
+            "x": 1100,
+            "y": 405,
+            "width": 180,
+            "height": 34,
+            "texture": "terrain-warehouse-top"
+          }
+        ]
+      },
+      "path": "docs/screenshots/m6-spirit/final/art-a5/tablet-S15-warehouse.png"
+    },
+    {
+      "device": "tablet",
+      "stage": "S16",
+      "style": "sand",
+      "observed": {
+        "style": "sand",
+        "cachedKeys": [
+          "terrain-sand-fill",
+          "terrain-sand-top"
+        ],
+        "textures": [
+          {
+            "key": "terrain-sand-fill",
+            "width": 128,
+            "height": 128,
+            "source": "blob:http://127.0.0.1:5174/cd6d928d-b7cf-4f11-9664-9540fe785b43"
+          },
+          {
+            "key": "terrain-sand-top",
+            "width": 128,
+            "height": 34,
+            "source": "blob:http://127.0.0.1:5174/5e196e4c-c2e0-46ec-a525-79b59b727c0e"
+          }
+        ],
+        "platforms": [
+          {
+            "x": 1500,
+            "y": 664,
+            "width": 3000,
+            "height": 112,
+            "texture": "terrain-sand-fill",
+            "visible": true,
+            "skinX": 1500,
+            "skinY": 664,
+            "skinWidth": 3000,
+            "skinHeight": 112
+          },
+          {
+            "x": 770,
+            "y": 548,
+            "width": 220,
+            "height": 24,
+            "texture": "terrain-sand-fill",
+            "visible": false,
+            "skinX": 770,
+            "skinY": 548,
+            "skinWidth": 220,
+            "skinHeight": 24
+          },
+          {
+            "x": 1950,
+            "y": 532,
+            "width": 220,
+            "height": 24,
+            "texture": "terrain-sand-fill",
+            "visible": false,
+            "skinX": 1950,
+            "skinY": 532,
+            "skinWidth": 220,
+            "skinHeight": 24
+          }
+        ],
+        "tops": [
+          {
+            "x": 1500,
+            "y": 621,
+            "width": 3000,
+            "height": 34,
+            "texture": "terrain-sand-top"
+          },
+          {
+            "x": 770,
+            "y": 549,
+            "width": 220,
+            "height": 34,
+            "texture": "terrain-sand-top"
+          },
+          {
+            "x": 1950,
+            "y": 533,
+            "width": 220,
+            "height": 34,
+            "texture": "terrain-sand-top"
+          }
+        ]
+      },
+      "path": "docs/screenshots/m6-spirit/final/art-a5/tablet-S16-sand.png"
+    },
+    {
+      "device": "tablet",
+      "stage": "S11",
+      "style": "shadow",
+      "observed": {
+        "style": "shadow",
+        "cachedKeys": [
+          "terrain-shadow-fill",
+          "terrain-shadow-top"
+        ],
+        "textures": [
+          {
+            "key": "terrain-shadow-fill",
+            "width": 128,
+            "height": 128,
+            "source": "blob:http://127.0.0.1:5174/ad22f1a8-2926-4297-ada7-84818f432fa0"
+          },
+          {
+            "key": "terrain-shadow-top",
+            "width": 128,
+            "height": 34,
+            "source": "blob:http://127.0.0.1:5174/ccc890b4-c1c7-4635-8b85-73b1f3c1b264"
+          }
+        ],
+        "platforms": [
+          {
+            "x": 1500,
+            "y": 664,
+            "width": 3000,
+            "height": 112,
+            "texture": "terrain-shadow-fill",
+            "visible": true,
+            "skinX": 1500,
+            "skinY": 664,
+            "skinWidth": 3000,
+            "skinHeight": 112
+          },
+          {
+            "x": 710,
+            "y": 548,
+            "width": 180,
+            "height": 24,
+            "texture": "terrain-shadow-fill",
+            "visible": false,
+            "skinX": 710,
+            "skinY": 548,
+            "skinWidth": 180,
+            "skinHeight": 24
+          },
+          {
+            "x": 930,
+            "y": 476,
+            "width": 180,
+            "height": 24,
+            "texture": "terrain-shadow-fill",
+            "visible": false,
+            "skinX": 930,
+            "skinY": 476,
+            "skinWidth": 180,
+            "skinHeight": 24
+          },
+          {
+            "x": 1170,
+            "y": 404,
+            "width": 180,
+            "height": 24,
+            "texture": "terrain-shadow-fill",
+            "visible": false,
+            "skinX": 1170,
+            "skinY": 404,
+            "skinWidth": 180,
+            "skinHeight": 24
+          }
+        ],
+        "tops": [
+          {
+            "x": 1500,
+            "y": 621,
+            "width": 3000,
+            "height": 34,
+            "texture": "terrain-shadow-top"
+          },
+          {
+            "x": 710,
+            "y": 549,
+            "width": 180,
+            "height": 34,
+            "texture": "terrain-shadow-top"
+          },
+          {
+            "x": 930,
+            "y": 477,
+            "width": 180,
+            "height": 34,
+            "texture": "terrain-shadow-top"
+          },
+          {
+            "x": 1170,
+            "y": 405,
+            "width": 180,
+            "height": 34,
+            "texture": "terrain-shadow-top"
+          }
+        ]
+      },
+      "path": "docs/screenshots/m6-spirit/final/art-a5/tablet-S11-shadow.png"
+    },
+    {
+      "device": "tablet",
+      "stage": "S12",
+      "style": "jungle",
+      "observed": {
+        "style": "jungle",
+        "cachedKeys": [
+          "terrain-jungle-fill",
+          "terrain-jungle-top"
+        ],
+        "textures": [
+          {
+            "key": "terrain-jungle-fill",
+            "width": 128,
+            "height": 128,
+            "source": "blob:http://127.0.0.1:5174/a0039ddb-7d39-4829-8165-1a57fa3203fc"
+          },
+          {
+            "key": "terrain-jungle-top",
+            "width": 128,
+            "height": 34,
+            "source": "blob:http://127.0.0.1:5174/93f7f1c3-e6e6-429b-8fc2-ef8554a07537"
+          }
+        ],
+        "platforms": [
+          {
+            "x": 1500,
+            "y": 664,
+            "width": 3000,
+            "height": 112,
+            "texture": "terrain-jungle-fill",
+            "visible": true,
+            "skinX": 1500,
+            "skinY": 664,
+            "skinWidth": 3000,
+            "skinHeight": 112
+          },
+          {
+            "x": 720,
+            "y": 556,
+            "width": 200,
+            "height": 24,
+            "texture": "terrain-jungle-fill",
+            "visible": false,
+            "skinX": 720,
+            "skinY": 556,
+            "skinWidth": 200,
+            "skinHeight": 24
+          },
+          {
+            "x": 1990,
+            "y": 540,
+            "width": 220,
+            "height": 24,
+            "texture": "terrain-jungle-fill",
+            "visible": false,
+            "skinX": 1990,
+            "skinY": 540,
+            "skinWidth": 220,
+            "skinHeight": 24
+          }
+        ],
+        "tops": [
+          {
+            "x": 1500,
+            "y": 621,
+            "width": 3000,
+            "height": 34,
+            "texture": "terrain-jungle-top"
+          },
+          {
+            "x": 720,
+            "y": 557,
+            "width": 200,
+            "height": 34,
+            "texture": "terrain-jungle-top"
+          },
+          {
+            "x": 1990,
+            "y": 541,
+            "width": 220,
+            "height": 34,
+            "texture": "terrain-jungle-top"
+          }
+        ]
+      },
+      "path": "docs/screenshots/m6-spirit/final/art-a5/tablet-S12-jungle.png"
+    },
+    {
+      "device": "tablet",
+      "stage": "S23",
+      "style": "temple",
+      "observed": {
+        "style": "temple",
+        "cachedKeys": [
+          "terrain-temple-fill",
+          "terrain-temple-top"
+        ],
+        "textures": [
+          {
+            "key": "terrain-temple-fill",
+            "width": 128,
+            "height": 128,
+            "source": "blob:http://127.0.0.1:5174/4cfd78c8-161c-4a63-a43e-b24e87c94a27"
+          },
+          {
+            "key": "terrain-temple-top",
+            "width": 128,
+            "height": 34,
+            "source": "blob:http://127.0.0.1:5174/829e3b76-fefd-4ec2-85e9-436824ed3774"
+          }
+        ],
+        "platforms": [
+          {
+            "x": 1500,
+            "y": 664,
+            "width": 3000,
+            "height": 112,
+            "texture": "terrain-temple-fill",
+            "visible": true,
+            "skinX": 1500,
+            "skinY": 664,
+            "skinWidth": 3000,
+            "skinHeight": 112
+          },
+          {
+            "x": 790,
+            "y": 572,
+            "width": 220,
+            "height": 24,
+            "texture": "terrain-temple-fill",
+            "visible": false,
+            "skinX": 790,
+            "skinY": 572,
+            "skinWidth": 220,
+            "skinHeight": 24
+          },
+          {
+            "x": 1710,
+            "y": 564,
+            "width": 220,
+            "height": 24,
+            "texture": "terrain-temple-fill",
+            "visible": false,
+            "skinX": 1710,
+            "skinY": 564,
+            "skinWidth": 220,
+            "skinHeight": 24
+          }
+        ],
+        "tops": [
+          {
+            "x": 1500,
+            "y": 621,
+            "width": 3000,
+            "height": 34,
+            "texture": "terrain-temple-top"
+          },
+          {
+            "x": 790,
+            "y": 573,
+            "width": 220,
+            "height": 34,
+            "texture": "terrain-temple-top"
+          },
+          {
+            "x": 1710,
+            "y": 565,
+            "width": 220,
+            "height": 34,
+            "texture": "terrain-temple-top"
+          }
+        ]
+      },
+      "path": "docs/screenshots/m6-spirit/final/art-a5/tablet-S23-temple.png"
+    },
+    {
+      "device": "tablet",
+      "stage": "S28",
+      "style": "garden",
+      "observed": {
+        "style": "garden",
+        "cachedKeys": [
+          "terrain-garden-fill",
+          "terrain-garden-top"
+        ],
+        "textures": [
+          {
+            "key": "terrain-garden-fill",
+            "width": 128,
+            "height": 128,
+            "source": "blob:http://127.0.0.1:5174/59fb479c-ea76-438b-af59-b417d6b08038"
+          },
+          {
+            "key": "terrain-garden-top",
+            "width": 128,
+            "height": 34,
+            "source": "blob:http://127.0.0.1:5174/abe1aef5-6883-4bbd-bf2b-004852cb29f9"
+          }
+        ],
+        "platforms": [
+          {
+            "x": 1500,
+            "y": 664,
+            "width": 3000,
+            "height": 112,
+            "texture": "terrain-garden-fill",
+            "visible": true,
+            "skinX": 1500,
+            "skinY": 664,
+            "skinWidth": 3000,
+            "skinHeight": 112
+          },
+          {
+            "x": 760,
+            "y": 572,
+            "width": 220,
+            "height": 24,
+            "texture": "terrain-garden-fill",
+            "visible": false,
+            "skinX": 760,
+            "skinY": 572,
+            "skinWidth": 220,
+            "skinHeight": 24
+          },
+          {
+            "x": 1730,
+            "y": 556,
+            "width": 220,
+            "height": 24,
+            "texture": "terrain-garden-fill",
+            "visible": false,
+            "skinX": 1730,
+            "skinY": 556,
+            "skinWidth": 220,
+            "skinHeight": 24
+          }
+        ],
+        "tops": [
+          {
+            "x": 1500,
+            "y": 621,
+            "width": 3000,
+            "height": 34,
+            "texture": "terrain-garden-top"
+          },
+          {
+            "x": 760,
+            "y": 573,
+            "width": 220,
+            "height": 34,
+            "texture": "terrain-garden-top"
+          },
+          {
+            "x": 1730,
+            "y": 557,
+            "width": 220,
+            "height": 34,
+            "texture": "terrain-garden-top"
+          }
+        ]
+      },
+      "path": "docs/screenshots/m6-spirit/final/art-a5/tablet-S28-garden.png"
+    },
+    {
+      "device": "tablet",
+      "stage": "S30",
+      "style": "tower",
+      "observed": {
+        "style": "tower",
+        "cachedKeys": [
+          "terrain-tower-fill",
+          "terrain-tower-top"
+        ],
+        "textures": [
+          {
+            "key": "terrain-tower-fill",
+            "width": 128,
+            "height": 128,
+            "source": "blob:http://127.0.0.1:5174/48394ede-3feb-49b2-8e8c-a844e1f7da27"
+          },
+          {
+            "key": "terrain-tower-top",
+            "width": 128,
+            "height": 34,
+            "source": "blob:http://127.0.0.1:5174/51229b1f-dcaa-49a4-962e-1a18ad8d95d7"
+          }
+        ],
+        "platforms": [
+          {
+            "x": 1895,
+            "y": 664,
+            "width": 3790,
+            "height": 112,
+            "texture": "terrain-tower-fill",
+            "visible": true,
+            "skinX": 1895,
+            "skinY": 664,
+            "skinWidth": 3790,
+            "skinHeight": 112
+          },
+          {
+            "x": 710,
+            "y": 548,
+            "width": 180,
+            "height": 24,
+            "texture": "terrain-tower-fill",
+            "visible": false,
+            "skinX": 710,
+            "skinY": 548,
+            "skinWidth": 180,
+            "skinHeight": 24
+          },
+          {
+            "x": 930,
+            "y": 476,
+            "width": 180,
+            "height": 24,
+            "texture": "terrain-tower-fill",
+            "visible": false,
+            "skinX": 930,
+            "skinY": 476,
+            "skinWidth": 180,
+            "skinHeight": 24
+          }
+        ],
+        "tops": [
+          {
+            "x": 1895,
+            "y": 621,
+            "width": 3790,
+            "height": 34,
+            "texture": "terrain-tower-top"
+          },
+          {
+            "x": 710,
+            "y": 549,
+            "width": 180,
+            "height": 34,
+            "texture": "terrain-tower-top"
+          },
+          {
+            "x": 930,
+            "y": 477,
+            "width": 180,
+            "height": 34,
+            "texture": "terrain-tower-top"
+          }
+        ]
+      },
+      "path": "docs/screenshots/m6-spirit/final/art-a5/tablet-S30-tower.png"
+    },
+    {
+      "device": "tablet",
+      "stage": "S34",
+      "style": "kingdom",
+      "observed": {
+        "style": "kingdom",
+        "cachedKeys": [
+          "terrain-kingdom-fill",
+          "terrain-kingdom-top"
+        ],
+        "textures": [
+          {
+            "key": "terrain-kingdom-fill",
+            "width": 128,
+            "height": 128,
+            "source": "blob:http://127.0.0.1:5174/b3812820-2e5b-4813-aa8d-41f4baf356c3"
+          },
+          {
+            "key": "terrain-kingdom-top",
+            "width": 128,
+            "height": 34,
+            "source": "blob:http://127.0.0.1:5174/b6709a3b-b89d-427d-a294-459ae9d0c453"
+          }
+        ],
+        "platforms": [
+          {
+            "x": 1500,
+            "y": 664,
+            "width": 3000,
+            "height": 112,
+            "texture": "terrain-kingdom-fill",
+            "visible": true,
+            "skinX": 1500,
+            "skinY": 664,
+            "skinWidth": 3000,
+            "skinHeight": 112
+          },
+          {
+            "x": 690,
+            "y": 572,
+            "width": 220,
+            "height": 24,
+            "texture": "terrain-kingdom-fill",
+            "visible": false,
+            "skinX": 690,
+            "skinY": 572,
+            "skinWidth": 220,
+            "skinHeight": 24
+          }
+        ],
+        "tops": [
+          {
+            "x": 1500,
+            "y": 621,
+            "width": 3000,
+            "height": 34,
+            "texture": "terrain-kingdom-top"
+          },
+          {
+            "x": 690,
+            "y": 573,
+            "width": 220,
+            "height": 34,
+            "texture": "terrain-kingdom-top"
+          }
+        ]
+      },
+      "path": "docs/screenshots/m6-spirit/final/art-a5/tablet-S34-kingdom.png"
+    }
+  ],
+  "requests": [
+    "http://127.0.0.1:5174/assets/terrain/terrain-dock-fill.webp",
+    "http://127.0.0.1:5174/assets/terrain/terrain-dock-top.webp",
+    "http://127.0.0.1:5174/assets/terrain/terrain-deck-fill.webp",
+    "http://127.0.0.1:5174/assets/terrain/terrain-deck-top.webp",
+    "http://127.0.0.1:5174/assets/terrain/terrain-reef-fill.webp",
+    "http://127.0.0.1:5174/assets/terrain/terrain-reef-top.webp",
+    "http://127.0.0.1:5174/assets/terrain/terrain-coral-fill.webp",
+    "http://127.0.0.1:5174/assets/terrain/terrain-coral-top.webp",
+    "http://127.0.0.1:5174/assets/terrain/terrain-whale-fill.webp",
+    "http://127.0.0.1:5174/assets/terrain/terrain-whale-top.webp",
+    "http://127.0.0.1:5174/assets/terrain/terrain-basalt-fill.webp",
+    "http://127.0.0.1:5174/assets/terrain/terrain-basalt-top.webp",
+    "http://127.0.0.1:5174/assets/terrain/terrain-crystal-fill.webp",
+    "http://127.0.0.1:5174/assets/terrain/terrain-crystal-top.webp",
+    "http://127.0.0.1:5174/assets/terrain/terrain-cloud-fill.webp",
+    "http://127.0.0.1:5174/assets/terrain/terrain-cloud-top.webp",
+    "http://127.0.0.1:5174/assets/terrain/terrain-village-fill.webp",
+    "http://127.0.0.1:5174/assets/terrain/terrain-village-top.webp",
+    "http://127.0.0.1:5174/assets/terrain/terrain-warehouse-fill.webp",
+    "http://127.0.0.1:5174/assets/terrain/terrain-warehouse-top.webp",
+    "http://127.0.0.1:5174/assets/terrain/terrain-sand-fill.webp",
+    "http://127.0.0.1:5174/assets/terrain/terrain-sand-top.webp",
+    "http://127.0.0.1:5174/assets/terrain/terrain-shadow-fill.webp",
+    "http://127.0.0.1:5174/assets/terrain/terrain-shadow-top.webp",
+    "http://127.0.0.1:5174/assets/terrain/terrain-jungle-fill.webp",
+    "http://127.0.0.1:5174/assets/terrain/terrain-jungle-top.webp",
+    "http://127.0.0.1:5174/assets/terrain/terrain-temple-fill.webp",
+    "http://127.0.0.1:5174/assets/terrain/terrain-temple-top.webp",
+    "http://127.0.0.1:5174/assets/terrain/terrain-garden-fill.webp",
+    "http://127.0.0.1:5174/assets/terrain/terrain-garden-top.webp",
+    "http://127.0.0.1:5174/assets/terrain/terrain-tower-fill.webp",
+    "http://127.0.0.1:5174/assets/terrain/terrain-tower-top.webp",
+    "http://127.0.0.1:5174/assets/terrain/terrain-kingdom-fill.webp",
+    "http://127.0.0.1:5174/assets/terrain/terrain-kingdom-top.webp",
+    "http://127.0.0.1:5174/assets/terrain/terrain-dock-fill.webp",
+    "http://127.0.0.1:5174/assets/terrain/terrain-dock-top.webp",
+    "http://127.0.0.1:5174/assets/terrain/terrain-deck-fill.webp",
+    "http://127.0.0.1:5174/assets/terrain/terrain-deck-top.webp",
+    "http://127.0.0.1:5174/assets/terrain/terrain-reef-fill.webp",
+    "http://127.0.0.1:5174/assets/terrain/terrain-reef-top.webp",
+    "http://127.0.0.1:5174/assets/terrain/terrain-coral-fill.webp",
+    "http://127.0.0.1:5174/assets/terrain/terrain-coral-top.webp",
+    "http://127.0.0.1:5174/assets/terrain/terrain-whale-fill.webp",
+    "http://127.0.0.1:5174/assets/terrain/terrain-whale-top.webp",
+    "http://127.0.0.1:5174/assets/terrain/terrain-basalt-fill.webp",
+    "http://127.0.0.1:5174/assets/terrain/terrain-basalt-top.webp",
+    "http://127.0.0.1:5174/assets/terrain/terrain-crystal-fill.webp",
+    "http://127.0.0.1:5174/assets/terrain/terrain-crystal-top.webp",
+    "http://127.0.0.1:5174/assets/terrain/terrain-cloud-fill.webp",
+    "http://127.0.0.1:5174/assets/terrain/terrain-cloud-top.webp",
+    "http://127.0.0.1:5174/assets/terrain/terrain-village-fill.webp",
+    "http://127.0.0.1:5174/assets/terrain/terrain-village-top.webp",
+    "http://127.0.0.1:5174/assets/terrain/terrain-warehouse-fill.webp",
+    "http://127.0.0.1:5174/assets/terrain/terrain-warehouse-top.webp",
+    "http://127.0.0.1:5174/assets/terrain/terrain-sand-fill.webp",
+    "http://127.0.0.1:5174/assets/terrain/terrain-sand-top.webp",
+    "http://127.0.0.1:5174/assets/terrain/terrain-shadow-fill.webp",
+    "http://127.0.0.1:5174/assets/terrain/terrain-shadow-top.webp",
+    "http://127.0.0.1:5174/assets/terrain/terrain-jungle-fill.webp",
+    "http://127.0.0.1:5174/assets/terrain/terrain-jungle-top.webp",
+    "http://127.0.0.1:5174/assets/terrain/terrain-temple-fill.webp",
+    "http://127.0.0.1:5174/assets/terrain/terrain-temple-top.webp",
+    "http://127.0.0.1:5174/assets/terrain/terrain-garden-fill.webp",
+    "http://127.0.0.1:5174/assets/terrain/terrain-garden-top.webp",
+    "http://127.0.0.1:5174/assets/terrain/terrain-tower-fill.webp",
+    "http://127.0.0.1:5174/assets/terrain/terrain-tower-top.webp",
+    "http://127.0.0.1:5174/assets/terrain/terrain-kingdom-fill.webp",
+    "http://127.0.0.1:5174/assets/terrain/terrain-kingdom-top.webp"
+  ],
+  "errors": []
+}

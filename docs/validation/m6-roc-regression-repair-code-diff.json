@@ -1,0 +1,8 @@
+{
+  "filesCompared": 997,
+  "changed": [
+    "tests/e2e/spirit-actions.spec.ts"
+  ],
+  "gameAssetsBuildUnchanged": true,
+  "reason": "Re-read approaching spirit position and aim through normal controls before touch attack; no gameplay edits."
+}

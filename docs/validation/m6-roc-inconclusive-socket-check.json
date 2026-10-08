@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-07T12:55:23.847038+00:00",
+  "ports": [
+    {
+      "port": 5174,
+      "state": "closed",
+      "ipv4ConnectCode": 10035,
+      "ipv6ConnectCode": 10035
+    },
+    {
+      "port": 5175,
+      "state": "closed",
+      "ipv4ConnectCode": 10035,
+      "ipv6ConnectCode": 10035
+    },
+    {
+      "port": 9323,
+      "state": "closed",
+      "ipv4ConnectCode": 10035,
+      "ipv6ConnectCode": 10035
+    }
+  ]
+}

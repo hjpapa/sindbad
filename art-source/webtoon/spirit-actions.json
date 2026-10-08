@@ -1,0 +1,78 @@
+{
+  "key": "spirit",
+  "texture": "spirit-actions",
+  "cellSize": 512,
+  "columns": 4,
+  "rows": 1,
+  "idleHeight": 313,
+  "legacyCanvasWidth": 96,
+  "legacyCanvasHeight": 128,
+  "restingVisibleHeight": 116,
+  "legacyGroundIndicatorOffset": 64,
+  "frames": [
+    {
+      "pose": "idle",
+      "frame": 0,
+      "bounds": [
+        201,
+        141,
+        380,
+        454
+      ],
+      "baseline": 453,
+      "centre": [
+        314,
+        355
+      ]
+    },
+    {
+      "pose": "telegraph",
+      "frame": 1,
+      "bounds": [
+        136,
+        147,
+        361,
+        442
+      ],
+      "baseline": 441,
+      "centre": [
+        265,
+        334
+      ]
+    },
+    {
+      "pose": "attack",
+      "frame": 2,
+      "bounds": [
+        172,
+        145,
+        414,
+        376
+      ],
+      "baseline": 375,
+      "centre": [
+        301,
+        288
+      ]
+    },
+    {
+      "pose": "defeated",
+      "frame": 3,
+      "bounds": [
+        191,
+        120,
+        335,
+        393
+      ],
+      "baseline": 392,
+      "centre": [
+        268,
+        284
+      ]
+    }
+  ],
+  "source": "art-source/webtoon/generated/spirit-m6/spirit-actions-02.png",
+  "sourceSha256": "b1b9c0f5c093342fedf24d4c54a5a9f92b758f99df5dc81caff22adbb31e044e",
+  "method": "Full627px cells uniformly resized512 and repacked4x1; exact lossless RGBA. Alpha>16 bounds; torso centres measured manually. Resting visible height116 follows original spirit SVG y9..120 plus 3.5px outline (approximately y7..123). Legacy target/body/ground indicator preserved. No repaint or silhouette crop.",
+  "artStatus": "ART_DRAFT"
+}

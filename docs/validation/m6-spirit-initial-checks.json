@@ -1,0 +1,58 @@
+[
+  {
+    "command": "python scripts/optimize-webtoon.py",
+    "started": "2026-10-06T12:12:53.668731+00:00",
+    "exitCode": 0,
+    "seconds": 13.98,
+    "output": "docs/validation/m6-spirit-initial-check-1.txt"
+  },
+  {
+    "command": "python scripts/audit-webtoon.py",
+    "started": "2026-10-06T12:13:07.652526+00:00",
+    "exitCode": 0,
+    "seconds": 19.88,
+    "output": "docs/validation/m6-spirit-initial-check-2.txt"
+  },
+  {
+    "command": "npm run typecheck",
+    "started": "2026-10-06T12:13:27.523983+00:00",
+    "exitCode": 0,
+    "seconds": 3.52,
+    "output": "docs/validation/m6-spirit-initial-check-3.txt"
+  },
+  {
+    "command": "npm run lint",
+    "started": "2026-10-06T12:13:31.033138+00:00",
+    "exitCode": 0,
+    "seconds": 3.92,
+    "output": "docs/validation/m6-spirit-initial-check-4.txt"
+  },
+  {
+    "command": "npm run test",
+    "started": "2026-10-06T12:13:34.967075+00:00",
+    "exitCode": 0,
+    "seconds": 4.41,
+    "output": "docs/validation/m6-spirit-initial-check-5.txt"
+  },
+  {
+    "command": "npm run validate:content",
+    "started": "2026-10-06T12:13:39.367403+00:00",
+    "exitCode": 0,
+    "seconds": 1.5,
+    "output": "docs/validation/m6-spirit-initial-check-6.txt"
+  },
+  {
+    "command": "npm run build",
+    "started": "2026-10-06T12:13:40.872640+00:00",
+    "exitCode": 0,
+    "seconds": 12.72,
+    "output": "docs/validation/m6-spirit-initial-check-7.txt"
+  },
+  {
+    "command": "npx tsx scripts/check-art-budget.ts",
+    "started": "2026-10-06T12:13:53.579770+00:00",
+    "exitCode": 0,
+    "seconds": 3.19,
+    "output": "docs/validation/m6-spirit-initial-check-8.txt"
+  }
+]
