@@ -1,0 +1,24 @@
+
+> sinbad-seven-treasures@0.1.0 test:e2e
+> playwright test tests/e2e/s26-bats.spec.ts tests/e2e/mobile-abilities.spec.ts tests/e2e/bat-actions.spec.ts --grep S26|phone bat four actions|tablet bat missing-sheet --reporter=list,json,html
+
+
+Running 6 tests using 1 worker
+
+(node:43984) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:43984) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 tests\e2e\bat-actions.spec.ts:50:41 › phone bat four actions keeps contact combat, puzzle safety and rewards (50.3s)
+  ok 2 tests\e2e\bat-actions.spec.ts:50:41 › tablet bat missing-sheet recovery keeps contact combat, puzzle safety and rewards (28.6s)
+  ok 3 tests\e2e\mobile-abilities.spec.ts:16:1 › phone can descend, cast its selected treasure, and open S26 bridge using action (7.1s)
+  ok 4 tests\e2e\s26-bats.spec.ts:61:3 › phone S26 five bounded bats, locked swoop, touch release and checkpoint route (43.4s)
+  ok 5 tests\e2e\s26-bats.spec.ts:61:3 › tablet S26 five bounded bats, locked swoop, touch release and checkpoint route (47.2s)
+  ok 6 tests\e2e\s26-bats.spec.ts:225:1 › legacy S26 bandit rewards stay claimed and new optional bats do not block the exit (6.5s)
+
+  6 passed (3.1m)
+
+To open last HTML report run:
+[36m[39m
+[36m  npx playwright show-report[39m
+[36m[39m

@@ -1,5 +1,15 @@
 # 자산 등록 · ART_DRAFT
 
+## 2026-10-08 · S26 박쥐 연결 · ART_DRAFT
+
+기존 `art-source/webtoon/bat-actions.{png,webp,json}`와 `public/assets/webtoon/bat-actions.webp`를 S26 박쥐5마리에 추가 연결했다. 네 행동 셀·측정 몸통 좌표와 누락 시 기존 자체 bat.svg를 재사용한다. 이미지 생성 도구/프롬프트 실행/원본 수정 없음. S08 4마리의 기존 연결과 소스·런타임 미디어639파일 바이트 보존. 기존 이용 조건과 ART_DRAFT 유지. 실제 정상/누락 화면은 `docs/screenshots/s26-bats/final/s26-bats/`, 검사 결과와 잔여 설계 차이는 PROJECT_STATUS.md의 2026-10-08 기록 참조.
+
+
+## 2026-10-08 · S09 둥지 선택 보석 · ART_DRAFT
+
+`public/assets/draft/nestGem.svg`: 96×128 투명 배경의 청록 보석과 작은 빛, 자체 작성 SVG 도형. 소스와 런타임은 동일 파일이며 `assets.manifest.ts`의 nestGem으로 등록했다. 외부 이미지·이미지 생성 도구·프롬프트 실행 없음. 프로젝트 사용·수정 가능. 최종 웹툰 교체는 미완료이며 간이 에셋 ART_DRAFT다. 기존 나침반 모양 별 장치 재사용은 화면 검수 뒤 이 보석으로 교체했고 첫 검증 화면도 보존했다. 첫 발판 안내에는 기존 prop-journal, 지형에는 기존 cloud 타일을 쓴다. 이전 원화/런타임638파일 바이트 보존. 최종 실제 폰/태블릿 화면은 `docs/screenshots/s09-nest/final/s09-nest/`, 검증·잔여 사항은 PROJECT_STATUS.md의 같은 날짜 기록 참조.
+
+
 ## 2026-10-08 · S09 기능 연결 갱신 · ART_DRAFT
 
 기존 `roc-actions` 6셀과 `hero-action`을 재사용했다. 이번 작업은 새 이미지 생성/프롬프트 실행/원본 수정 없이 S09 목걸이 핵3회·3공격 패턴과 T03 점프 유지 활공을 연결한 것이다. 핵 표시와 공격 예고는 런타임 도형이며, 전용 활공 자세와 로크새 보석 색 연속성은 최종 아트 검수 대상으로 남는다. 실제 소스·런타임 자산638개 SHA 보존 확인 및 검사 결과는 `PROJECT_STATUS.md`의 2026-10-08기록을 따른다.

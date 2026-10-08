@@ -1,0 +1,398 @@
+[
+  {
+    "path": "docs/screenshots/s09-nest/final/s09-mechanics/guards-legacy-alliance.png",
+    "size": [
+      1280,
+      720
+    ],
+    "bytes": 1017496,
+    "sha256": "efe389c80663c735070c005358f8c99202495a8324da5e9ce48a7b86b24a83d8"
+  },
+  {
+    "path": "docs/screenshots/s09-nest/final/s09-mechanics/guards-missing-orb.png",
+    "size": [
+      1280,
+      720
+    ],
+    "bytes": 1021517,
+    "sha256": "b330a5ee1a42ae22ed7dab6edf22b122944a00c0ecabe366a74135b7cff77ede"
+  },
+  {
+    "path": "docs/screenshots/s09-nest/final/s09-mechanics/guards-no-feather-fall.png",
+    "size": [
+      1280,
+      720
+    ],
+    "bytes": 1035298,
+    "sha256": "88944b1a185684efbdd52fd95d21499def0814cb93620f4fd6ff4238b09b4ed4"
+  },
+  {
+    "path": "docs/screenshots/s09-nest/final/s09-mechanics/phone-alliance-dialogue.png",
+    "size": [
+      844,
+      390
+    ],
+    "bytes": 282324,
+    "sha256": "abb1ed1f51d3b6201ab61c8c2034bc469286d6610aafe5a649af61a48b26b462"
+  },
+  {
+    "path": "docs/screenshots/s09-nest/final/s09-mechanics/phone-core-open.png",
+    "size": [
+      844,
+      390
+    ],
+    "bytes": 449729,
+    "sha256": "0b368f4b28f17d0d4b3a45307149b1489f274e72194b0e9743e5a81f38604371"
+  },
+  {
+    "path": "docs/screenshots/s09-nest/final/s09-mechanics/phone-dive-safe.png",
+    "size": [
+      844,
+      390
+    ],
+    "bytes": 450103,
+    "sha256": "f49a15d66c6fff0b9d65d7e5105dd90757418292e9225b435fb01dfb3581062c"
+  },
+  {
+    "path": "docs/screenshots/s09-nest/final/s09-mechanics/phone-dive-warning.png",
+    "size": [
+      844,
+      390
+    ],
+    "bytes": 453545,
+    "sha256": "6cefa4cb1bda111937001625d90b7d72ba924b92a4a93a1e6828b7cf7ea5d94a"
+  },
+  {
+    "path": "docs/screenshots/s09-nest/final/s09-mechanics/phone-double-jump.png",
+    "size": [
+      844,
+      390
+    ],
+    "bytes": 451323,
+    "sha256": "ff2be08de767d7995e4078655476f116533e04e2ea9408155bba1e9ab33691e3"
+  },
+  {
+    "path": "docs/screenshots/s09-nest/final/s09-mechanics/phone-freed.png",
+    "size": [
+      844,
+      390
+    ],
+    "bytes": 462958,
+    "sha256": "4a3a3beb6244c970aa1ba5c4e750593f4343de8b716150d3588bf6d4087bede4"
+  },
+  {
+    "path": "docs/screenshots/s09-nest/final/s09-mechanics/phone-glide-held.png",
+    "size": [
+      844,
+      390
+    ],
+    "bytes": 450899,
+    "sha256": "3d61919c8818a3a5957200b5fa5f9362d43fd7a77075d5060f30f56b1a19a421"
+  },
+  {
+    "path": "docs/screenshots/s09-nest/final/s09-mechanics/phone-glide-release.png",
+    "size": [
+      844,
+      390
+    ],
+    "bytes": 451525,
+    "sha256": "159cf25b34833171e593fe278423d1e92480aa2e27a75121cf721b7014d092e6"
+  },
+  {
+    "path": "docs/screenshots/s09-nest/final/s09-mechanics/phone-one-core-one-landing.png",
+    "size": [
+      844,
+      390
+    ],
+    "bytes": 456015,
+    "sha256": "7dfc20dd7a380fb3d8abdf20c91b187b87fe95629e34b1129bcdbaf59cffa4f9"
+  },
+  {
+    "path": "docs/screenshots/s09-nest/final/s09-mechanics/phone-peck-warning.png",
+    "size": [
+      844,
+      390
+    ],
+    "bytes": 449943,
+    "sha256": "ace0e34aa83084ccbeddb02370b43caaf117aa322c2796a195f392b470f34337"
+  },
+  {
+    "path": "docs/screenshots/s09-nest/final/s09-mechanics/phone-wind-jump-safe.png",
+    "size": [
+      844,
+      390
+    ],
+    "bytes": 449932,
+    "sha256": "489583dd7e9d7ac02e8e642fc4dcf32dce9b817b220919cfa4fd813bf71de5d9"
+  },
+  {
+    "path": "docs/screenshots/s09-nest/final/s09-mechanics/save-retry-core-one-saved.png",
+    "size": [
+      1280,
+      720
+    ],
+    "bytes": 1033893,
+    "sha256": "bcc76479dfd22faff180a7657418263ded69e3747cf6fabcef0bd1f5ede8e644"
+  },
+  {
+    "path": "docs/screenshots/s09-nest/final/s09-mechanics/save-retry-death-checkpoint.png",
+    "size": [
+      1280,
+      720
+    ],
+    "bytes": 992622,
+    "sha256": "1693a3ddd3bee32c22b44ef52712aa41fee608ca82ccccacb76e573246b03c91"
+  },
+  {
+    "path": "docs/screenshots/s09-nest/final/s09-mechanics/save-retry-retry-alliance.png",
+    "size": [
+      1280,
+      720
+    ],
+    "bytes": 1018059,
+    "sha256": "4454cab68af9c45ff3bb206cc59ea55569cb5ea2781eaaef77b578feaf10865e"
+  },
+  {
+    "path": "docs/screenshots/s09-nest/final/s09-mechanics/tablet-alliance-dialogue.png",
+    "size": [
+      1180,
+      820
+    ],
+    "bytes": 939431,
+    "sha256": "3c5caf34fed8eede7ee321fbfdbbbd3437b1c8583f65c354b12347dfa6d15930"
+  },
+  {
+    "path": "docs/screenshots/s09-nest/final/s09-mechanics/tablet-core-open.png",
+    "size": [
+      1180,
+      820
+    ],
+    "bytes": 932993,
+    "sha256": "025fa9c23f9bb4523c8b36405a24ad5f0937dcba5fc2eeb2836af55411b9a64b"
+  },
+  {
+    "path": "docs/screenshots/s09-nest/final/s09-mechanics/tablet-dive-safe.png",
+    "size": [
+      1180,
+      820
+    ],
+    "bytes": 936400,
+    "sha256": "05e46bd089f09bcc01e00b02af30dcdf554b1b72aa0f68e2a16c01a4700cb1c2"
+  },
+  {
+    "path": "docs/screenshots/s09-nest/final/s09-mechanics/tablet-dive-warning.png",
+    "size": [
+      1180,
+      820
+    ],
+    "bytes": 942477,
+    "sha256": "12e17a072f0abc8eac04608545373739a2bd789f6db5f7785a4e6d9209f9c1cc"
+  },
+  {
+    "path": "docs/screenshots/s09-nest/final/s09-mechanics/tablet-double-jump.png",
+    "size": [
+      1180,
+      820
+    ],
+    "bytes": 936128,
+    "sha256": "9904722951b70eeb356ee19ef7a128410f820f35a8cd4d9fcfb47f600c1338ee"
+  },
+  {
+    "path": "docs/screenshots/s09-nest/final/s09-mechanics/tablet-freed.png",
+    "size": [
+      1180,
+      820
+    ],
+    "bytes": 951460,
+    "sha256": "bc2f4ae5f9167682974f947a2e95be0560f80863ce4a9eaf2f012fe2d9a36c1a"
+  },
+  {
+    "path": "docs/screenshots/s09-nest/final/s09-mechanics/tablet-glide-held.png",
+    "size": [
+      1180,
+      820
+    ],
+    "bytes": 959082,
+    "sha256": "b53ef2e860763cf7437225612c6fa31f608ff21a813ba086e858aafe42a1785d"
+  },
+  {
+    "path": "docs/screenshots/s09-nest/final/s09-mechanics/tablet-glide-release.png",
+    "size": [
+      1180,
+      820
+    ],
+    "bytes": 961542,
+    "sha256": "2b0401d3bb918dd19223246775d59a5371bf7a4cd4a8533a0983866df4658113"
+  },
+  {
+    "path": "docs/screenshots/s09-nest/final/s09-mechanics/tablet-one-core-one-landing.png",
+    "size": [
+      1180,
+      820
+    ],
+    "bytes": 942889,
+    "sha256": "830afe7bc9020ca8dc8918622f4ed929fa804ec4dcfc4085214ac803d3274bb4"
+  },
+  {
+    "path": "docs/screenshots/s09-nest/final/s09-mechanics/tablet-peck-warning.png",
+    "size": [
+      1180,
+      820
+    ],
+    "bytes": 935129,
+    "sha256": "ca3110514dcf97499a3c96ab5ea59d139dca18b98e24cf4ad2b8c95ea699b025"
+  },
+  {
+    "path": "docs/screenshots/s09-nest/final/s09-mechanics/tablet-wind-jump-safe.png",
+    "size": [
+      1180,
+      820
+    ],
+    "bytes": 934842,
+    "sha256": "acdacfabc6d2c7f70ffc1f82cbf7828316e1bf668c721653d3e9658fcf635f4d"
+  },
+  {
+    "path": "docs/screenshots/s09-nest/final/s09-nest/phone-before-feather.png",
+    "size": [
+      844,
+      390
+    ],
+    "bytes": 436773,
+    "sha256": "242a321242b364cb6ada1ef8cc0c88b8f9b99b3addbf0a78152078ee4e00aad4"
+  },
+  {
+    "path": "docs/screenshots/s09-nest/final/s09-nest/phone-checkpoint-resume.png",
+    "size": [
+      844,
+      390
+    ],
+    "bytes": 433207,
+    "sha256": "5d7996c56ccc2f26595e9b4281aad77a4e3900f7896f18235d10028e6ccdf86f"
+  },
+  {
+    "path": "docs/screenshots/s09-nest/final/s09-nest/phone-double-jump.png",
+    "size": [
+      844,
+      390
+    ],
+    "bytes": 447747,
+    "sha256": "8bf7e3442ea37c0c85b2a72ec157114178cdf667afcf2db32b0eecfbd03b64a1"
+  },
+  {
+    "path": "docs/screenshots/s09-nest/final/s09-nest/phone-first-landing.png",
+    "size": [
+      844,
+      390
+    ],
+    "bytes": 447304,
+    "sha256": "965c8c5831615bd8c36615b1f647bf40a2903a89e2aeb4894cf413ec1a11f2f4"
+  },
+  {
+    "path": "docs/screenshots/s09-nest/final/s09-nest/phone-gem-collected.png",
+    "size": [
+      844,
+      390
+    ],
+    "bytes": 447020,
+    "sha256": "803ed5d34aa55b74d865d262cefddf451e018118778f5ec321ae91cb7288ffd3"
+  },
+  {
+    "path": "docs/screenshots/s09-nest/final/s09-nest/phone-glide-crossing.png",
+    "size": [
+      844,
+      390
+    ],
+    "bytes": 445959,
+    "sha256": "4da18da57f9bfe60c03b1dbcb1fbdcdb62e532db5a255d7cb91057325bde30b9"
+  },
+  {
+    "path": "docs/screenshots/s09-nest/final/s09-nest/phone-safe-floor-return.png",
+    "size": [
+      844,
+      390
+    ],
+    "bytes": 444986,
+    "sha256": "276d4be07eaacac4785e9dca582736f57a9b379932de33b1ec727699f2395470"
+  },
+  {
+    "path": "docs/screenshots/s09-nest/final/s09-nest/phone-upper-nest.png",
+    "size": [
+      844,
+      390
+    ],
+    "bytes": 447028,
+    "sha256": "e8f9f3821146295ec88a94c0666343b1f0dd614be39efa7b819bf5a1b0aa6158"
+  },
+  {
+    "path": "docs/screenshots/s09-nest/final/s09-nest/tablet-before-feather.png",
+    "size": [
+      1180,
+      820
+    ],
+    "bytes": 923008,
+    "sha256": "46aa96af101a9d5e42b6493ee0495fa5128a246879b40083db5b5017050a7aa1"
+  },
+  {
+    "path": "docs/screenshots/s09-nest/final/s09-nest/tablet-checkpoint-resume.png",
+    "size": [
+      1180,
+      820
+    ],
+    "bytes": 921682,
+    "sha256": "d2f4661608e7bd9511bc23f16551aadee471c4bf3f66d27eec69e4cc7a5fa68d"
+  },
+  {
+    "path": "docs/screenshots/s09-nest/final/s09-nest/tablet-double-jump.png",
+    "size": [
+      1180,
+      820
+    ],
+    "bytes": 919775,
+    "sha256": "ada412ed1f4629c2023d397b49aa77b5cdef27bea1af78311070d15a6cb7ffac"
+  },
+  {
+    "path": "docs/screenshots/s09-nest/final/s09-nest/tablet-first-landing.png",
+    "size": [
+      1180,
+      820
+    ],
+    "bytes": 917653,
+    "sha256": "e91f8d3a66d484ea149c324e5b6503a3fdb6188579e269b26b1be0e16ecb77fb"
+  },
+  {
+    "path": "docs/screenshots/s09-nest/final/s09-nest/tablet-gem-collected.png",
+    "size": [
+      1180,
+      820
+    ],
+    "bytes": 940072,
+    "sha256": "8fcedb463616fcc8c9106d5428aead086025aca4c11a3ef260af15fa2b19af92"
+  },
+  {
+    "path": "docs/screenshots/s09-nest/final/s09-nest/tablet-glide-crossing.png",
+    "size": [
+      1180,
+      820
+    ],
+    "bytes": 934829,
+    "sha256": "4556c9a7b65756463be5611d873af2a9942f8c8d197a37095697773b0a4e9e58"
+  },
+  {
+    "path": "docs/screenshots/s09-nest/final/s09-nest/tablet-safe-floor-return.png",
+    "size": [
+      1180,
+      820
+    ],
+    "bytes": 919851,
+    "sha256": "10cb1dff41cc04bd4e975d0702b1fbd1042142b5bc00af11ead81770f9ca409e"
+  },
+  {
+    "path": "docs/screenshots/s09-nest/final/s09-nest/tablet-upper-nest.png",
+    "size": [
+      1180,
+      820
+    ],
+    "bytes": 940943,
+    "sha256": "807546db9165fa71eed8f2a7c4f68f586a817491c74f3cd87851272bc1ee509f"
+  }
+]

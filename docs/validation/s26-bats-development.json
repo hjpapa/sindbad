@@ -1,0 +1,37 @@
+{
+  "first": {
+    "startTime": "2026-10-08T11:49:41.481Z",
+    "duration": 91227.321,
+    "expected": 2,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  },
+  "firstReason": "Phone horizontal escape crossed the actual locked warning marker. Changed only the test to swim up immediately, before the screenshot. Tablet and legacy conditions passed.",
+  "recheck": {
+    "startTime": "2026-10-08T11:52:26.530Z",
+    "duration": 105787.98,
+    "expected": 2,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  },
+  "recheckReason": "Phone and legacy passed; tablet failed while overwriting its evidence JSON (Windows UNKNOWN open). Changed only the test to immutable per-shot JSON files.",
+  "gameTimingChangedAfterFirst": false,
+  "final": {
+    "startTime": "2026-10-08T11:55:11.607Z",
+    "duration": 187644.588,
+    "expected": 6,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "failureEvidence": [
+    "docs/screenshots/s26-bats/first-failure/",
+    "docs/screenshots/s26-bats/recheck-failure/"
+  ],
+  "sourceCopies": [
+    "docs/validation/s26-bats-first-test.ts.txt",
+    "docs/validation/s26-bats-second-test.ts.txt"
+  ]
+}

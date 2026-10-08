@@ -1,0 +1,5 @@
+
+> sinbad-seven-treasures@0.1.0 validate:content
+> tsx scripts/validate-content.ts
+
+PASS: 36 implemented stages, 24 child scenes, 7 weapons, 7 treasures, 8 golden hearts; acquisition graph, S16 protection, rewards, playable maps and assets.

@@ -1,0 +1,244 @@
+{
+  "config": {
+    "configFile": "C:\\code\\code10(sindbad)\\playwright.config.ts",
+    "rootDir": "C:/code/code10(sindbad)/tests/e2e",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": "C:\\code\\code10(sindbad)\\tests\\e2e\\server.setup.ts",
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ],
+      [
+        "html"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "C:/code/code10(sindbad)/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "C:/code/code10(sindbad)/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 240000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.55.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "s26-bats.spec.ts",
+      "file": "s26-bats.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "phone S26 five bounded bats, locked swoop, touch release and checkpoint route",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 67683,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 10
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 127
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 133
+                    }
+                  ],
+                  "startTime": "2026-10-08T11:52:29.661Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5f27eef458a7b9a365b2-c080ee380f40298fbb94",
+          "file": "s26-bats.spec.ts",
+          "line": 61,
+          "column": 3
+        },
+        {
+          "title": "tablet S26 five bounded bats, locked swoop, touch release and checkpoint route",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 24474,
+                  "error": {
+                    "message": "Error: UNKNOWN: unknown error, open 'C:\\code\\code10(sindbad)\\docs\\screenshots\\s26-bats\\recheck\\s26-bats\\tablet.json'",
+                    "stack": "Error: UNKNOWN: unknown error, open 'C:\\code\\code10(sindbad)\\docs\\screenshots\\s26-bats\\recheck\\s26-bats\\tablet.json'\n    at shot (C:\\code\\code10(sindbad)\\tests\\e2e\\s26-bats.spec.ts:34:93)\n    at C:\\code\\code10(sindbad)\\tests\\e2e\\s26-bats.spec.ts:75:165",
+                    "location": {
+                      "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\s26-bats.spec.ts",
+                      "column": 93,
+                      "line": 34
+                    },
+                    "snippet": "  32 |         await page.evaluate(({key,save})=>localStorage.setItem(key,JSON.stringify(save)),{key:SAVE_KEY,save});await resume(page);\n  33 |         const root=evidencePath('s26-bats');mkdirSync(root,{recursive:true});const observations:unknown[]=[];\n> 34 |         const shot=async(name:string)=>{observations.push({name,observed:await read(page)});writeFileSync(`${root}/${device}.json`,JSON.stringify({fallback,errors,observations},null,2));await page.screenshot({path:`${root}/${device}-${name}.png`});};\n     |                                                                                             ^\n  35 |         const enemy=async()=>(await read(page)).enemies.find((e:{id:string})=>e.id==='S26.enemy.1');\n  36 |         expect((await read(page)).enemies).toHaveLength(5);expect((await enemy()).texture).toBe(fallback?'bat':'bat-actions');\n  37 |         const samples=await page.evaluate(async()=>{"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\s26-bats.spec.ts",
+                        "column": 93,
+                        "line": 34
+                      },
+                      "message": "Error: UNKNOWN: unknown error, open 'C:\\code\\code10(sindbad)\\docs\\screenshots\\s26-bats\\recheck\\s26-bats\\tablet.json'\n\n  32 |         await page.evaluate(({key,save})=>localStorage.setItem(key,JSON.stringify(save)),{key:SAVE_KEY,save});await resume(page);\n  33 |         const root=evidencePath('s26-bats');mkdirSync(root,{recursive:true});const observations:unknown[]=[];\n> 34 |         const shot=async(name:string)=>{observations.push({name,observed:await read(page)});writeFileSync(`${root}/${device}.json`,JSON.stringify({fallback,errors,observations},null,2));await page.screenshot({path:`${root}/${device}-${name}.png`});};\n     |                                                                                             ^\n  35 |         const enemy=async()=>(await read(page)).enemies.find((e:{id:string})=>e.id==='S26.enemy.1');\n  36 |         expect((await read(page)).enemies).toHaveLength(5);expect((await enemy()).texture).toBe(fallback?'bat':'bat-actions');\n  37 |         const samples=await page.evaluate(async()=>{\n    at shot (C:\\code\\code10(sindbad)\\tests\\e2e\\s26-bats.spec.ts:34:93)\n    at C:\\code\\code10(sindbad)\\tests\\e2e\\s26-bats.spec.ts:75:165"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 7
+                    }
+                  ],
+                  "startTime": "2026-10-08T11:53:37.831Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\code\\code10(sindbad)\\test-results\\s26-bats-tablet-S26-five-b-97981-elease-and-checkpoint-route\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\code\\code10(sindbad)\\test-results\\s26-bats-tablet-S26-five-b-97981-elease-and-checkpoint-route\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\s26-bats.spec.ts",
+                    "column": 93,
+                    "line": 34
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "5f27eef458a7b9a365b2-991d362d750b18ddbadd",
+          "file": "s26-bats.spec.ts",
+          "line": 61,
+          "column": 3
+        },
+        {
+          "title": "legacy S26 bandit rewards stay claimed and new optional bats do not block the exit",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7266,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 125
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 123
+                    }
+                  ],
+                  "startTime": "2026-10-08T11:54:03.907Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5f27eef458a7b9a365b2-ed698415314f4d2f237f",
+          "file": "s26-bats.spec.ts",
+          "line": 224,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-08T11:52:26.530Z",
+    "duration": 105787.98,
+    "expected": 2,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

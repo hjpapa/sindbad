@@ -1,0 +1,67 @@
+{
+  "date": "2026-10-08T11:40:45.970817+00:00",
+  "checks": [
+    {
+      "command": "npm run typecheck",
+      "exitCode": 0,
+      "started": "2026-10-08T11:32:31.145572+00:00",
+      "seconds": 3.375,
+      "log": "docs/validation/s09-nest-final-check-1.txt"
+    },
+    {
+      "command": "npm run lint",
+      "exitCode": 0,
+      "started": "2026-10-08T11:32:34.511748+00:00",
+      "seconds": 3.625,
+      "log": "docs/validation/s09-nest-final-check-2.txt"
+    },
+    {
+      "command": "npm run test",
+      "exitCode": 0,
+      "started": "2026-10-08T11:32:38.138064+00:00",
+      "seconds": 4.063,
+      "log": "docs/validation/s09-nest-final-check-3.txt"
+    },
+    {
+      "command": "npm run validate:content",
+      "exitCode": 0,
+      "started": "2026-10-08T11:32:42.204438+00:00",
+      "seconds": 1.312,
+      "log": "docs/validation/s09-nest-final-check-4.txt"
+    },
+    {
+      "command": "npm run build",
+      "exitCode": 0,
+      "started": "2026-10-08T11:32:43.519571+00:00",
+      "seconds": 11.313,
+      "log": "docs/validation/s09-nest-final-check-5.txt"
+    },
+    {
+      "command": "npx tsx scripts/check-art-budget.ts",
+      "exitCode": 0,
+      "started": "2026-10-08T11:32:54.833512+00:00",
+      "seconds": 3.062,
+      "log": "docs/validation/s09-nest-final-check-6.txt"
+    }
+  ],
+  "e2e": {
+    "startTime": "2026-10-08T11:33:26.590Z",
+    "duration": 386702.099,
+    "expected": 8,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "runtimeFilesUnchanged": 1005,
+  "previousMediaUnchanged": 638,
+  "newAsset": "public/assets/draft/nestGem.svg",
+  "artStatus": "ART_DRAFT",
+  "screenshots": 44,
+  "budgetBytes": 3093349,
+  "listeners5174_5175_9323": [],
+  "budgetReportRestored": true,
+  "previousWorkPushed": "d12b0af9f263efc96adca28217e9793ca24ddb1e",
+  "thisWorkCommittedOrPushed": false,
+  "newAssetBytes": 618,
+  "newAssetSha256": "f9651bb26115a99c096854b1163efa2c9a36faa00cf59ea9fcf8dec00826c1aa"
+}

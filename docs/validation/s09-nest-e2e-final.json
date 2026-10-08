@@ -1,0 +1,587 @@
+{
+  "config": {
+    "configFile": "C:\\code\\code10(sindbad)\\playwright.config.ts",
+    "rootDir": "C:/code/code10(sindbad)/tests/e2e",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": "C:\\code\\code10(sindbad)\\tests\\e2e\\server.setup.ts",
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ],
+      [
+        "html"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "C:/code/code10(sindbad)/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "C:/code/code10(sindbad)/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 240000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.55.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "m3-opening.spec.ts",
+      "file": "m3-opening.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "S09-S12 continuous route grants flight, W04 and R03 with save-safe bosses",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 89452,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 122
+                    },
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 124
+                    },
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 124
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 6
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 127
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 157
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 119
+                    }
+                  ],
+                  "startTime": "2026-10-08T11:33:29.789Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "15dcf8d7e1fc08c587ec-a3fcce383178bc4237f1",
+          "file": "m3-opening.spec.ts",
+          "line": 62,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "nest-practice.spec.ts",
+      "file": "nest-practice.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "phone optional nest gem uses double jump and glide, saves once and leaves a safe return",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 40106,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 123
+                    },
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 124
+                    },
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 126
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 5
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 114
+                    }
+                  ],
+                  "startTime": "2026-10-08T11:34:59.770Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ed500e6239bd55ae98f8-99417462cae95c860a58",
+          "file": "nest-practice.spec.ts",
+          "line": 30,
+          "column": 3
+        },
+        {
+          "title": "tablet optional nest gem uses double jump and glide, saves once and leaves a safe return",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 40679,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 125
+                    },
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 125
+                    },
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 110
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 6
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 117
+                    }
+                  ],
+                  "startTime": "2026-10-08T11:35:39.888Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ed500e6239bd55ae98f8-96e8dd1ad71694227060",
+          "file": "nest-practice.spec.ts",
+          "line": 30,
+          "column": 3
+        },
+        {
+          "title": "the next stage remains reachable without collecting the optional nest gem",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6157,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 119
+                    }
+                  ],
+                  "startTime": "2026-10-08T11:36:20.583Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ed500e6239bd55ae98f8-752d36a3937a506c1946",
+          "file": "nest-practice.spec.ts",
+          "line": 188,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "roc-mechanics.spec.ts",
+      "file": "roc-mechanics.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "phone S09 three distinct avoidable patterns, three cores and feather glide",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 50635,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "SHOT peck-warning 147ms\n"
+                    },
+                    {
+                      "text": "SHOT core-open 157ms\n"
+                    },
+                    {
+                      "text": "SHOT one-core-one-landing 169ms\n"
+                    },
+                    {
+                      "text": "WIND INPUT {\"x\":2227.3888888888882,\"y\":546,\"grounded\":true,\"vx\":0,\"vy\":0,\"hp\":68,\"maxHp\":100,\"bodyWidth\":42,\"bodyHeight\":84}\n"
+                    },
+                    {
+                      "text": "WIND AIR {\"x\":2227.3888888888882,\"y\":425.25,\"grounded\":false,\"vx\":0,\"vy\":-190,\"hp\":68,\"maxHp\":100,\"bodyWidth\":42,\"bodyHeight\":84}\n"
+                    },
+                    {
+                      "text": "SHOT wind-jump-safe 161ms\n"
+                    },
+                    {
+                      "text": "SHOT dive-warning 158ms\n"
+                    },
+                    {
+                      "text": "SHOT dive-safe 156ms\n"
+                    },
+                    {
+                      "text": "SHOT freed 167ms\n"
+                    },
+                    {
+                      "text": "SHOT alliance-dialogue 143ms\n"
+                    },
+                    {
+                      "text": "SHOT glide-held 154ms\n"
+                    },
+                    {
+                      "text": "SHOT glide-release 147ms\n"
+                    },
+                    {
+                      "text": "SHOT double-jump 158ms\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 123
+                    },
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 121
+                    },
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 125
+                    }
+                  ],
+                  "startTime": "2026-10-08T11:36:26.788Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "172dc00ef8224171178c-df4304ccc8b79616a7f5",
+          "file": "roc-mechanics.spec.ts",
+          "line": 112,
+          "column": 3
+        },
+        {
+          "title": "tablet S09 three distinct avoidable patterns, three cores and feather glide",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 51542,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "SHOT peck-warning 277ms\n"
+                    },
+                    {
+                      "text": "SHOT core-open 271ms\n"
+                    },
+                    {
+                      "text": "SHOT one-core-one-landing 265ms\n"
+                    },
+                    {
+                      "text": "WIND INPUT {\"x\":2214.1111111111104,\"y\":546,\"grounded\":true,\"vx\":0,\"vy\":0,\"hp\":68,\"maxHp\":100,\"bodyWidth\":42,\"bodyHeight\":84}\n"
+                    },
+                    {
+                      "text": "WIND AIR {\"x\":2214.1111111111104,\"y\":425.25,\"grounded\":false,\"vx\":0,\"vy\":-190,\"hp\":68,\"maxHp\":100,\"bodyWidth\":42,\"bodyHeight\":84}\n"
+                    },
+                    {
+                      "text": "SHOT wind-jump-safe 267ms\n"
+                    },
+                    {
+                      "text": "SHOT dive-warning 259ms\n"
+                    },
+                    {
+                      "text": "SHOT dive-safe 271ms\n"
+                    },
+                    {
+                      "text": "SHOT freed 288ms\n"
+                    },
+                    {
+                      "text": "SHOT alliance-dialogue 302ms\n"
+                    },
+                    {
+                      "text": "SHOT glide-held 272ms\n"
+                    },
+                    {
+                      "text": "SHOT glide-release 284ms\n"
+                    },
+                    {
+                      "text": "SHOT double-jump 293ms\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 119
+                    },
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 120
+                    },
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 126
+                    }
+                  ],
+                  "startTime": "2026-10-08T11:37:17.437Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "172dc00ef8224171178c-7d13ca8b22018c519c30",
+          "file": "roc-mechanics.spec.ts",
+          "line": 112,
+          "column": 3
+        },
+        {
+          "title": "partial cores survive death and reload; legacy channels cannot bypass combat",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 77947,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "SHOT core-one-saved 284ms\n"
+                    },
+                    {
+                      "text": "SHOT death-checkpoint 310ms\n"
+                    },
+                    {
+                      "text": "SHOT retry-alliance 286ms\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 124
+                    },
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 126
+                    },
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 126
+                    }
+                  ],
+                  "startTime": "2026-10-08T11:38:08.991Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "172dc00ef8224171178c-be664d26db839b3e7089",
+          "file": "roc-mechanics.spec.ts",
+          "line": 250,
+          "column": 1
+        },
+        {
+          "title": "missing orb cannot expose a core; feather is needed for glide; old victory remains valid",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 25706,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "SHOT missing-orb 301ms\n"
+                    },
+                    {
+                      "text": "SHOT no-feather-fall 408ms\n"
+                    },
+                    {
+                      "text": "SHOT legacy-alliance 281ms\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-08T11:39:26.950Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "172dc00ef8224171178c-d3fe78b565ee728837ac",
+          "file": "roc-mechanics.spec.ts",
+          "line": 309,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-08T11:33:26.590Z",
+    "duration": 386702.099,
+    "expected": 8,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

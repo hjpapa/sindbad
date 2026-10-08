@@ -54,6 +54,7 @@ export function validateContent() {
             check(m.platforms.some(p => !p.motion && cp.x > p.x + 30 && cp.x < p.x + p.w - 30 && Math.abs(cp.y + 60 - p.y) < 10), `${s.id}: unsafe checkpoint ${cp.id}`);
         const objectives = new Set([...m.objects.map(x => x.id), ...m.spawns.map(x => x.id)]);
         for(const spawn of m.spawns){
+            if(spawn.flightPath){const p=spawn.flightPath;check(spawn.kind==='bat'&&p.radiusX>0&&p.radiusX<=140&&p.radiusY>0&&p.radiusY<=60&&p.period>=3000&&spawn.x-p.radiusX>=64&&spawn.x+p.radiusX<=m.width-64&&spawn.y-p.radiusY>=120&&spawn.y+p.radiusY<=544,`${spawn.id}: unsafe bat flight path`);}
             if(spawn.texture)check(assets.some(asset=>asset.key===spawn.texture),`${spawn.id}: missing spawn texture`);
             if(spawn.frame!==undefined)check(Number.isInteger(spawn.frame)&&spawn.frame>=0&&spawn.frame<6,`${spawn.id}: invalid sprite frame`);
         }
@@ -95,5 +96,6 @@ export function validateContent() {
     check(maps.S09.spawns.length===1&&maps.S09.spawns[0].id==='S09.enemy.3'&&maps.S09.spawns[0].hp===3,'S09: one roc with three necklace cores');
     check([1,2,3].every(n=>maps.S09.objects.some(o=>o.id===`S09.quest.${n}`&&o.kind==='rocCore'&&!o.mechanic&&o.requiresItems?.includes('T02'))),'S09: orb-revealed cores, no channel shortcut');
     unique(assets.map(a => a.key), 'asset');
+    check(maps.S26.spawns.length===5&&maps.S26.spawns.every(s=>s.kind==='bat'&&s.actionArt==='bat'&&!!s.flightPath),'S26: five bounded-flight bats');
     return errors;
 }

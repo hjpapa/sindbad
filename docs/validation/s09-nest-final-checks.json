@@ -1,0 +1,44 @@
+[
+  {
+    "command": "npm run typecheck",
+    "exitCode": 0,
+    "started": "2026-10-08T11:32:31.145572+00:00",
+    "seconds": 3.375,
+    "log": "docs/validation/s09-nest-final-check-1.txt"
+  },
+  {
+    "command": "npm run lint",
+    "exitCode": 0,
+    "started": "2026-10-08T11:32:34.511748+00:00",
+    "seconds": 3.625,
+    "log": "docs/validation/s09-nest-final-check-2.txt"
+  },
+  {
+    "command": "npm run test",
+    "exitCode": 0,
+    "started": "2026-10-08T11:32:38.138064+00:00",
+    "seconds": 4.063,
+    "log": "docs/validation/s09-nest-final-check-3.txt"
+  },
+  {
+    "command": "npm run validate:content",
+    "exitCode": 0,
+    "started": "2026-10-08T11:32:42.204438+00:00",
+    "seconds": 1.312,
+    "log": "docs/validation/s09-nest-final-check-4.txt"
+  },
+  {
+    "command": "npm run build",
+    "exitCode": 0,
+    "started": "2026-10-08T11:32:43.519571+00:00",
+    "seconds": 11.313,
+    "log": "docs/validation/s09-nest-final-check-5.txt"
+  },
+  {
+    "command": "npx tsx scripts/check-art-budget.ts",
+    "exitCode": 0,
+    "started": "2026-10-08T11:32:54.833512+00:00",
+    "seconds": 3.062,
+    "log": "docs/validation/s09-nest-final-check-6.txt"
+  }
+]

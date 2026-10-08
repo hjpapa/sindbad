@@ -1,6 +1,7 @@
 import {finalMaps} from './finalStages';
 import type {StoryMechanic} from '../core/storyMechanics';
 import type {EnemyActionKey} from './enemyActions';
+import type {BatFlightPath} from '../core/batFlight';
 
 export interface Platform {
     x: number;
@@ -9,6 +10,8 @@ export interface Platform {
     h: number;
     requiredGround?: boolean;
     oneWay?: boolean;
+    // Optional practice ledges checked with the acquired feather's jump range.
+    requiresTreasure?: 'T03';
     motion?: { rise: number; period: number; travel?: number };
 }
 export interface Spawn {
@@ -20,6 +23,7 @@ export interface Spawn {
     texture?: string;
     frame?:number;
     actionArt?: EnemyActionKey;
+    flightPath?: BatFlightPath;
     name?: string;
 }
 export interface FlightHazard {

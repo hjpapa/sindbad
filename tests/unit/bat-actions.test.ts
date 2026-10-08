@@ -16,7 +16,7 @@ describe('bat actions retain torso targets and animal release',()=>{
         expect(bat.legacyGroundIndicatorOffset).toBe(64);
     });
     it('adds the sheet to the four existing S08 bats without replacing IDs, positions or health',()=>{
-        const enemies=Object.values(maps).flatMap(map=>map.spawns.filter(spawn=>spawn.actionArt==='bat'));
+        const enemies=maps.S08.spawns.filter(spawn=>spawn.actionArt==='bat');
         expect(enemies.map(({id,x,y,hp,kind})=>({id,x,y,hp,kind}))).toEqual([450,790,1100,1250].map((x,i)=>({id:`S08.enemy.bat.${i+1}`,x,y:550,hp:36,kind:'bat'})));
         expect(enemyActionTexture('bat')).toBe('bat-actions');expect(actionDefeatKind('bat')).toBe('animal');
     });

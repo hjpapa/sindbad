@@ -1,0 +1,44 @@
+[
+  {
+    "command": "npm run typecheck",
+    "exitCode": 0,
+    "started": "2026-10-08T11:52:40.253396+00:00",
+    "seconds": 3.906,
+    "log": "docs/validation/s26-bats-final-check-1.txt"
+  },
+  {
+    "command": "npm run lint",
+    "exitCode": 0,
+    "started": "2026-10-08T11:52:44.159658+00:00",
+    "seconds": 4.141,
+    "log": "docs/validation/s26-bats-final-check-2.txt"
+  },
+  {
+    "command": "npm run test",
+    "exitCode": 0,
+    "started": "2026-10-08T11:52:48.303650+00:00",
+    "seconds": 5.094,
+    "log": "docs/validation/s26-bats-final-check-3.txt"
+  },
+  {
+    "command": "npm run validate:content",
+    "exitCode": 0,
+    "started": "2026-10-08T11:52:53.404493+00:00",
+    "seconds": 1.656,
+    "log": "docs/validation/s26-bats-final-check-4.txt"
+  },
+  {
+    "command": "npm run build",
+    "exitCode": 0,
+    "started": "2026-10-08T11:52:55.063005+00:00",
+    "seconds": 13.953,
+    "log": "docs/validation/s26-bats-final-check-5.txt"
+  },
+  {
+    "command": "npx tsx scripts/check-art-budget.ts",
+    "exitCode": 0,
+    "started": "2026-10-08T11:53:09.020437+00:00",
+    "seconds": 3.938,
+    "log": "docs/validation/s26-bats-final-check-6.txt"
+  }
+]

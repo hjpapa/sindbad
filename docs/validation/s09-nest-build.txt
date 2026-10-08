@@ -1,0 +1,29 @@
+
+> sinbad-seven-treasures@0.1.0 build
+> npm run typecheck && npm run validate:content && vite build
+
+
+> sinbad-seven-treasures@0.1.0 typecheck
+> tsc --noEmit
+
+
+> sinbad-seven-treasures@0.1.0 validate:content
+> tsx scripts/validate-content.ts
+
+PASS: 36 implemented stages, 24 child scenes, 7 weapons, 7 treasures, 8 golden hearts; acquisition graph, S16 protection, rewards, playable maps and assets.
+vite v7.1.5 building for production...
+✓ 0 modules transformed.
+✗ Build failed in 30ms
+error during build:
+[vite:build-html] EPERM: operation not permitted, realpath 'C:\code\code10(sindbad)\src\main.ts'
+file: C:/code/code10(sindbad)/index.html
+    at node:fs:2849:18
+    at getRealPath (file:///C:/code/code10(sindbad)/node_modules/vite/dist/node/chunks/dep-M_KD0XSK.js:12248:36)
+    at tryResolveRealFileOrType (file:///C:/code/code10(sindbad)/node_modules/vite/dist/node/chunks/dep-M_KD0XSK.js:12242:9)
+    at tryCleanFsResolve (file:///C:/code/code10(sindbad)/node_modules/vite/dist/node/chunks/dep-M_KD0XSK.js:11954:21)
+    at tryFsResolve (file:///C:/code/code10(sindbad)/node_modules/vite/dist/node/chunks/dep-M_KD0XSK.js:11947:14)
+    at Object.handler (file:///C:/code/code10(sindbad)/node_modules/vite/dist/node/chunks/dep-M_KD0XSK.js:11802:16)
+    at Object.handler (file:///C:/code/code10(sindbad)/node_modules/vite/dist/node/chunks/dep-M_KD0XSK.js:34415:13)
+    at file:///C:/code/code10(sindbad)/node_modules/rollup/dist/es/shared/node-entry.js:22861:40
+    at async PluginDriver.hookFirstAndGetPlugin (file:///C:/code/code10(sindbad)/node_modules/rollup/dist/es/shared/node-entry.js:22743:28)
+    at async resolveId (file:///C:/code/code10(sindbad)/node_modules/rollup/dist/es/shared/node-entry.js:21205:26)

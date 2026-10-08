@@ -1,0 +1,50 @@
+
+> sinbad-seven-treasures@0.1.0 test:e2e
+> playwright test tests/e2e/s26-bats.spec.ts --reporter=list,json,html
+
+
+Running 3 tests using 1 worker
+
+(node:8464) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:8464) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x  1 tests\e2e\s26-bats.spec.ts:61:3 › phone S26 five bounded bats, locked swoop, touch release and checkpoint route (32.2s)
+(node:32832) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:32832) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 2 tests\e2e\s26-bats.spec.ts:61:3 › tablet S26 five bounded bats, locked swoop, touch release and checkpoint route (46.1s)
+  ok 3 tests\e2e\s26-bats.spec.ts:215:1 › legacy S26 bandit rewards stay claimed and new optional bats do not block the exit (6.6s)
+
+
+  1) tests\e2e\s26-bats.spec.ts:61:3 › phone S26 five bounded bats, locked swoop, touch release and checkpoint route 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: [32m120[39m
+    Received: [31m106[39m
+
+      54 |         const hp=locked.player.hp,target=locked.batFlights.find((b:{id:string})=>b.id==='S26.enemy.1').target;
+      55 |         await moveJourney(page,500,450);const recovered=await state(page,'recover');
+    > 56 |         expect(recovered.player.hp).toBe(hp);expect(recovered.batFlights.find((b:{id:string})=>b.id==='S26.enemy.1').target).toEqual(target);await shot('evaded');
+         |                                     ^
+      57 |         e=await enemy();await moveJourney(page,e.x-30,e.y);await state(page,'telegraph');const contactHp=(await read(page)).player.hp;
+      58 |         await state(page,'recover');expect((await read(page)).player.hp).toBe(contactHp-14);expect((await read(page)).projectiles).toBe(0);await shot('contact');
+      59 |         const before=(await read(page)).save;let touched=false;
+        at C:\code\code10(sindbad)\tests\e2e\s26-bats.spec.ts:56:37
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\s26-bats-phone-S26-five-bo-679e2-elease-and-checkpoint-route\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\s26-bats-phone-S26-five-bo-679e2-elease-and-checkpoint-route\error-context.md
+
+  1 failed
+    tests\e2e\s26-bats.spec.ts:61:3 › phone S26 five bounded bats, locked swoop, touch release and checkpoint route 
+  2 passed (1.5m)
+
+To open last HTML report run:
+[36m[39m
+[36m  npx playwright show-report[39m
+[36m[39m

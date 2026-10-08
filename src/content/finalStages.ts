@@ -88,6 +88,15 @@ const makeMap=(b:Blueprint,index:number):MapDef=>{
   ? Array.from({length:flightEnemyCount},(_,i)=>({id:`${b.id}.enemy.${i+1}`,x:900+i*((width-1450)/(flightEnemyCount-1)),y:[300,440,220,370,250,420][i],kind:'kite' as const,actionArt:'kite' as const,hp:26+Math.floor(index/5)}))
   : b.mode==='peace'?[]:[0,1,2].map(i=>({id:`${b.id}.enemy.${i+1}`,x:800+i*(width-1500)/2,y:550,kind:i===2&&b.boss?'boss':b.visual==='jungle'?'beast':'bandit',hp:i===2&&b.boss?150:40+index}));
  if(b.id==='S16')spawns.splice(0); // Protected palace, no boss before swimming.
+ if(b.id==='S26'){
+   // Preserve all three old reward IDs. The middle bat stays above the safe
+   // checkpoint floor; none of the five is required to open a water device.
+   spawns.splice(0,spawns.length,...[
+     {id:1,x:800,y:450},{id:2,x:1550,y:360},{id:3,x:2300,y:450},
+     {id:4,x:1100,y:470},{id:5,x:1920,y:470},
+   ].map(({id,x,y})=>({id:`S26.enemy.${id}`,x,y,kind:'bat' as const,hp:36,
+     flightPath:{radiusX:90,radiusY:id===2?40:50,period:4000}})));
+ }
  if(b.id==='S09'){
    spawns.splice(0,2);spawns[0].hp=3;
    // Keep the old objective IDs for saved prerequisites. They are now records
@@ -117,6 +126,14 @@ const makeMap=(b:Blueprint,index:number):MapDef=>{
  // trapped by the side of a decorative ledge. Visual depth lives in the
  // parallax background; handcrafted jump routes remain in S01-S08.
  const platforms:Platform[]=[ground(0,width),...(storyLedges[b.id]??[]).map(([x,y,w])=>({x,y,w,h:24,oneWay:true}))];
+ if(b.id==='S09'){
+   // Above the alliance gift, outside the boss floor: falling always returns
+   // to the continuous walkway. Neither this branch nor its loot gates exit.
+   platforms.push({x:2440,y:416,w:180,h:24,oneWay:true,requiresTreasure:'T03'},
+     {x:2780,y:344,w:180,h:24,oneWay:true,requiresTreasure:'T03'});
+   objects.push({id:'S09.featherPractice',kind:'npc',x:2530,y:356,texture:'journal',label:'깃털 연습 · 행동',needs:[gift.id],requiresItems:['T03'],dialogue:'S09.practice'},
+     {id:'S09.nestGem',kind:'chest',x:2870,y:284,texture:'nestGem',label:'둥지 위 작은 보석 · 행동',needs:[gift.id],requiresItems:['T03'],reward:'coins'});
+ }
  const flightHazards=b.id==='S10'?
   [{id:'S10.gust.1',x:1150,y:455,radius:62,kind:'gust' as const},{id:'S10.gust.2',x:1680,y:300,radius:70,kind:'gust' as const},{id:'S10.gust.3',x:2210,y:170,radius:62,kind:'gust' as const}]:
   b.id==='S33'?[{id:'S33.debris.1',x:850,y:190,radius:48,kind:'debris' as const},{id:'S33.debris.2',x:1250,y:390,radius:48,kind:'debris' as const},{id:'S33.debris.3',x:1650,y:230,radius:48,kind:'debris' as const},{id:'S33.debris.4',x:2050,y:430,radius:48,kind:'debris' as const},{id:'S33.debris.5',x:2450,y:280,radius:48,kind:'debris' as const}]:undefined;
@@ -126,5 +143,6 @@ const makeMap=(b:Blueprint,index:number):MapDef=>{
 
 export const finalMaps=Object.fromEntries(finalBlueprints.map((b,i)=>[b.id,makeMap(b,i)])) as Record<string,MapDef>;
 export const finalDialogues=Object.fromEntries(finalBlueprints.flatMap(b=>[[`${b.id}.intro`,{name:b.npc,lines:b.intro}],[`${b.id}.outro`,{name:b.id==='S36'?'신밧드와 친구들':b.npc,lines:b.outro}]]));
+finalDialogues['S09.practice']={name:'깃털 연습',lines:['첫 발판까지 이단 점프 성공! 공중에서 점프를 한 번 더 누르면 높이 올라요.','오른쪽 위 발판으로 점프한 뒤, 떨어질 때 점프를 누르고 있으면 천천히 활공해요. 버튼을 놓으면 다시 빠르게 내려와요.','둥지 위 작은 보석은 선택 보물이에요. 발판에서 떨어져도 아래의 안전한 길로 돌아오며, 보석 없이도 다음 항해로 갈 수 있어요.']};
 finalMaps.S12.plantHazards=finalMaps.S12.objects.filter(object=>['S12.quest.1','S12.quest.2'].includes(object.id)).map(object=>({x:object.x-80,w:160,kind:'poison',clearedBy:object.id}));
 for(const id of ['S20','S21','S22','S29'])finalMaps[id].plantHazards=[{x:1350,w:160,kind:'vine'}];

@@ -126,4 +126,7 @@ const terrainAssets: AssetEntry[] = terrainStyleKeys.flatMap(style => ['fill','t
 const worldPropAssets:AssetEntry[]=worldPropKeys.map(key=>({key,path:`assets/webtoon/${key}.webp`,...runtimeSize[key],kind:'image',status:'draft',
     source:'2026-10-04 OpenAI built-in imagegen · docs/ART_PROMPTS.md · lossless originals art-source/webtoon',
     license:'Original project style reference. ART_DRAFT; final art approval pending.'}));
-export const assets: AssetEntry[] = [...draftAssets, ...storyAssets, ...weaponAssets, ...illustratedAssets, ...faceAssets, ...terrainAssets, ...effectAssets, ...touchIconAssets,...worldPropAssets];
+const nestPracticeAssets:AssetEntry[]=[{key:'nestGem',path:'assets/draft/nestGem.svg',width:96,height:128,kind:'svg',status:'draft',
+    source:'2026-10-08 project-authored SVG geometry; public/assets/draft/nestGem.svg',
+    license:'Original project vector. May use and modify. ART_DRAFT; final webtoon replacement pending.'}];
+export const assets: AssetEntry[] = [...draftAssets, ...storyAssets, ...weaponAssets, ...illustratedAssets, ...faceAssets, ...terrainAssets, ...effectAssets, ...touchIconAssets,...worldPropAssets,...nestPracticeAssets];

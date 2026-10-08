@@ -10,15 +10,16 @@ export const INTERACT_RADIUS_Y = 95;
 const horizontalGap = (a: Platform, b: Platform) =>
     Math.max(0, b.x - (a.x + a.w), a.x - (b.x + b.w));
 
-const canMoveBetween = (from: Platform, to: Platform) => {
+const canMoveBetween = (from: Platform, to: Platform, hasFeather: boolean) => {
     const highestFrom = from.y - (from.motion?.rise ?? 0);
     const highestTo = to.y - (to.motion?.rise ?? 0);
     const rise = highestFrom - highestTo;
     const travel = (from.motion?.travel ?? 0) + (to.motion?.travel ?? 0);
+    if(to.requiresTreasure==='T03')return hasFeather&&rise<=210&&horizontalGap(from,to)+travel<=260;
     return rise <= SAFE_JUMP_RISE && horizontalGap(from, to) + travel <= SAFE_JUMP_GAP;
 };
 
-export function reachablePlatformIndexes(map: MapDef) {
+export function reachablePlatformIndexes(map: MapDef, hasFeather=map.objects.some(o=>o.reward==='T03'||o.rewards?.includes('T03'))) {
     if (map.mode === 'flight' || map.mode === 'swim')
         return new Set(map.platforms.map((_, index) => index));
     const start = map.checkpoints[0];
@@ -32,7 +33,7 @@ export function reachablePlatformIndexes(map: MapDef) {
         changed = false;
         for (const from of [...reached]) {
             map.platforms.forEach((platform, index) => {
-                if (!reached.has(index) && canMoveBetween(map.platforms[from], platform)) {
+                if (!reached.has(index) && canMoveBetween(map.platforms[from], platform, hasFeather)) {
                     reached.add(index);
                     changed = true;
                 }
@@ -78,13 +79,14 @@ export function wallIssues(map: MapDef) {
 export function mapReachabilityIssues(map: MapDef) {
     const issues: string[] = [...wallIssues(map)];
     const reachable = reachablePlatformIndexes(map);
+    const beforeFeather = reachablePlatformIndexes(map,false);
     map.platforms.forEach((platform, index) => {
         if (!reachable.has(index))
             issues.push(`${map.id}: unreachable platform ${index + 1} at (${platform.x},${platform.y})`);
     });
-    const supported = (x: number, y: number) => (map.mode === 'flight' || map.mode === 'swim')
+    const supported = (x: number, y: number, platforms=reachable) => (map.mode === 'flight' || map.mode === 'swim')
         ? x >= 24 && x <= map.width - 24 && y >= 120 && y <= 560
-        : [...reachable].some(index => {
+        : [...platforms].some(index => {
         const platform = map.platforms[index];
         const travel = platform.motion?.travel ?? 0;
         const withinX = x >= platform.x - 70 - travel && x <= platform.x + platform.w + 70 + travel;
@@ -92,7 +94,7 @@ export function mapReachabilityIssues(map: MapDef) {
         return withinX && Math.abs(y - (top - STANDING_CENTER_OFFSET)) < INTERACT_RADIUS_Y;
     });
     for (const object of map.objects)
-        if (!supported(object.x, object.y))
+        if (!supported(object.x, object.y,object.requiresItems?.includes('T03')?reachable:beforeFeather))
             issues.push(`${object.id}: no reachable interaction position`);
     for (const heart of map.hearts)
         if (!supported(heart.x, heart.y))

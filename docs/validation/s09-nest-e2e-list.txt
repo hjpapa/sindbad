@@ -1,0 +1,86 @@
+Listing tests:
+  adventure.spec.ts:83:1 › new game → S01 → S02 → S03 with real keyboard inputs and checkpoint reload
+  adventure.spec.ts:199:1 › pause freezes world; export/import and real touch pointer combination
+  adventure.spec.ts:269:1 › missing sprite fallback loads; corrupt and future saves stay untouched
+  audio.spec.ts:2:1 › browser music starts with play, stops in menus, resumes, and respects mute
+  bat-actions.spec.ts:50:41 › phone bat four actions keeps contact combat, puzzle safety and rewards
+  bat-actions.spec.ts:50:41 › phone bat missing-sheet recovery keeps contact combat, puzzle safety and rewards
+  bat-actions.spec.ts:50:41 › tablet bat four actions keeps contact combat, puzzle safety and rewards
+  bat-actions.spec.ts:50:41 › tablet bat missing-sheet recovery keeps contact combat, puzzle safety and rewards
+  complete-journey.spec.ts:12:1 › new game completes all 36 stages using real controls and no injected save
+  controls-ui.spec.ts:4:1 › simple controls jump, smart action attacks, monster fades, and phone UI fits
+  crystal.spec.ts:37:1 › S07 save → mirror reset and safe puzzle → T02 reload, illusion and optional journal
+  effects-art.spec.ts:145:1 › four looping projectiles, directions, paused clock and reduced-motion boss cleanup on phone/tablet
+  effects-art.spec.ts:227:1 › six impact and safe defeat frames expire after real hits on phone/tablet
+  effects-art.spec.ts:302:1 › missing seven sheets retain legacy projectiles, damage, safe defeat and saved rewards
+  enemy-actions.spec.ts:44:1 › 40 enemy poses, mirrored direction, safe defeat and save reload on phone/tablet
+  enemy-actions.spec.ts:175:1 › missing action atlas retains a playable fallback and magical skeleton defeat
+  fall.spec.ts:4:1 › fall recovery resets physics onto a safe platform instead of inside the floor
+  final-campaign.spec.ts:66:1 › S28 peaceful balance grants lotus shield and persists
+  final-campaign.spec.ts:120:1 › S36 museum route reaches ending and remains revisit-able
+  final-campaign.spec.ts:144:1 › S09-S36 all boot as browser-playable scenes without console errors
+  flame-waves.spec.ts:84:1 › S06 furnaces and first treasure → S07 waves, blessing and cave save
+  flame-waves.spec.ts:163:1 › flame MP/cooldown pause, free ignition and W03 lingering damage
+  flame-waves.spec.ts:204:1 › missed wave deals limited damage, preserves treasure and allows another attempt
+  flight-art.spec.ts:42:41 › phone flight art webtoon preserves rings, hazards and resume
+  flight-art.spec.ts:42:41 › phone flight art missing SVG recovery preserves rings, hazards and resume
+  flight-art.spec.ts:42:41 › tablet flight art webtoon preserves rings, hazards and resume
+  flight-art.spec.ts:42:41 › tablet flight art missing SVG recovery preserves rings, hazards and resume
+  flight-rings.spec.ts:18:1 › flight rings collect through movement once, persist, and never gate landing
+  flight-rings.spec.ts:92:1 › S33 return flight has five moving debris routes and does not require combat
+  interaction-props.spec.ts:50:39 › interaction props retain actual map textures, IDs and dimensions
+  interaction-props.spec.ts:50:39 › interaction props retain actual map textures, IDs and dimensions with all artwork missing
+  interaction-props.spec.ts:122:39 › rescue equipment and golden heart retain real pickup, retry and reload
+  interaction-props.spec.ts:122:39 › rescue equipment and golden heart retain real pickup, retry and reload when artwork is missing
+  kite-actions.spec.ts:49:41 › phone kite four actions keeps flight combat, release and stable rewards
+  kite-actions.spec.ts:49:41 › phone kite missing-sheet recovery keeps flight combat, release and stable rewards
+  kite-actions.spec.ts:49:41 › tablet kite four actions keeps flight combat, release and stable rewards
+  kite-actions.spec.ts:49:41 › tablet kite missing-sheet recovery keeps flight combat, release and stable rewards
+  m2.spec.ts:72:1 › existing M1 save → whale rescue, moving deck, G01 → coral rescue, G02 and blessing
+  m2.spec.ts:161:1 › coral gate rejects missing crown; guardian blocks frontal attacks and exposes recovery
+  m3-opening.spec.ts:62:1 › S09-S12 continuous route grants flight, W04 and R03 with save-safe bosses
+  mobile-abilities.spec.ts:16:1 › phone can descend, cast its selected treasure, and open S26 bridge using action
+  nest-practice.spec.ts:30:3 › phone optional nest gem uses double jump and glide, saves once and leaves a safe return
+  nest-practice.spec.ts:30:3 › tablet optional nest gem uses double jump and glide, saves once and leaves a safe return
+  nest-practice.spec.ts:188:1 › the next stage remains reachable without collecting the optional nest gem
+  npc-faces.spec.ts:47:1 › nine NPCs, three real dialogue expressions, mixed speakers and reward reload on phone/tablet
+  npc-faces.spec.ts:212:1 › missing expression sheet keeps the captain portrait, dialogue and save playable
+  npc-faces.spec.ts:244:1 › read-only observations stay safe while real scene transitions dispose textures
+  roc-actions.spec.ts:61:41 › phone roc six actions boss, saddle and return flight
+  roc-actions.spec.ts:61:41 › phone roc missing-sheet recovery boss, saddle and return flight
+  roc-actions.spec.ts:61:41 › tablet roc six actions boss, saddle and return flight
+  roc-actions.spec.ts:61:41 › tablet roc missing-sheet recovery boss, saddle and return flight
+  roc-mechanics.spec.ts:112:3 › phone S09 three distinct avoidable patterns, three cores and feather glide
+  roc-mechanics.spec.ts:112:3 › tablet S09 three distinct avoidable patterns, three cores and feather glide
+  roc-mechanics.spec.ts:250:1 › partial cores survive death and reload; legacy channels cannot bypass combat
+  roc-mechanics.spec.ts:309:1 › missing orb cannot expose a core; feather is needed for glide; old victory remains valid
+  safety.spec.ts:5:1 › actual damage and heart recovery
+  safety.spec.ts:37:1 › natural lightning death restores checkpoint and retains rewards; immunity on restart
+  safety.spec.ts:82:1 › boss victory reload keeps exit open without duplicating XP
+  safety.spec.ts:115:1 › storage denied warns but movement and export work
+  siren-actions.spec.ts:35:41 › phone siren four actions preserves shield, two songs and saved reward
+  siren-actions.spec.ts:35:41 › phone siren missing-sheet recovery preserves shield, two songs and saved reward
+  siren-actions.spec.ts:35:41 › tablet siren four actions preserves shield, two songs and saved reward
+  siren-actions.spec.ts:35:41 › tablet siren missing-sheet recovery preserves shield, two songs and saved reward
+  spirit-actions.spec.ts:54:41 › phone spirits four actions in storm, flame, waves and final tower
+  spirit-actions.spec.ts:54:41 › phone spirits missing-sheet recovery in storm, flame, waves and final tower
+  spirit-actions.spec.ts:54:41 › tablet spirits four actions in storm, flame, waves and final tower
+  spirit-actions.spec.ts:54:41 › tablet spirits missing-sheet recovery in storm, flame, waves and final tower
+  story-devices.spec.ts:43:1 › S16 protected entrance earns pearl before actual swim practice and survives reload
+  story-devices.spec.ts:68:1 › carried wood resets safely on reload and only delivery grants progress
+  story-devices.spec.ts:92:1 › S25 bridge requires real crossing and standing extends its lifetime
+  story-devices.spec.ts:119:1 › S15 kitchen rescues sailors and saves the earned boots checkpoint
+  story-devices.spec.ts:138:1 › W06 breaks optional moon rock with one real attack and never duplicates its reward
+  story-devices.spec.ts:172:1 › Kuura shield requires two seals, final combat opens the saved reward
+  terrain-art.spec.ts:16:1 › 17 real terrain styles load only their pair and preserve platform geometry on phone/tablet
+  terrain-art.spec.ts:139:48 › missing terrain fill keeps the loaded half and a playable generated fallback
+  terrain-art.spec.ts:139:48 › missing terrain top keeps the loaded half and a playable generated fallback
+  terrain-art.spec.ts:139:48 › missing terrain both keeps the loaded half and a playable generated fallback
+  touch-icons.spec.ts:327:1 › nine upright icons, 72px previews and real touch jump/dialogue/use/departure/wing/four abilities on phone/tablet
+  touch-icons.spec.ts:342:1 › all nine missing icon files restore legacy glyphs while actual actions and saved progress work
+  weapon-art.spec.ts:99:1 › seven raster weapons and icons stay attached to JSON fists on phone and tablet
+  weapon-art.spec.ts:148:1 › all seven missing rasters retain SVG weapons and icons, combat rewards and reload
+  world-props.spec.ts:180:1 › world props retain dimensions, real reward/healing, retry and reload on phone/tablet
+  world-props.spec.ts:186:1 › missing world props use preserved SVGs and retain real interactions
+  world-props.spec.ts:192:1 › map revisit releases unused props and reloads them when returning
+Total: 84 tests in 30 files

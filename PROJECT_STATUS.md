@@ -1,5 +1,43 @@
 # PROJECT_STATUS.md
 
+<!-- S26_BATS_STATUS_START -->
+## 최신 실제 상태 · 2026-10-08 · S26 박쥐5마리·제한 비행
+
+**기능 구현·선택 E2E6조건 통과 / 단위125개 통과 / ART_DRAFT.** S26의 산적3명을 동굴 박쥐5마리로 연결했다. 기존 `S26.enemy.1~3` 보상·진행 ID를 유지하고 `.4/.5`만 추가했다. S09 둥지 작업을 포함한 기존 로컬 변경은 보존했다. 이번 작업 커밋·푸시·배포 없음.
+
+- 각 박쥐는 원래 배치 중심 기준 가로±90px/세로±50px(가운데±40px), 4초 주기의 제한 경로를 비행한다. 플레이어를 2차원 거리170px 안에서 감지하면 현재 위치를 고정하고 1200ms 예고(편안함1.3배)→500ms 돌진 왕복→1100ms 빈틈. 예고 시 목표를 자기 구역 안으로 제한해 고정하고, 구역 밖까지 추적하지 않는다. 경고 원·이동 선과 기존 행동4셀/몸통 좌표를 사용한다. 불꽃·일반 무기 판정은 기존대로이며 이동 도형과 무관한 투사체는 만들지 않는다. 피격 밀치기로 경로를 벗어나지 않도록 이 비행 적에는 기존 수평 밀치기 트윈을 적용하지 않는다.
+- 저주 해제 시 기존 동물 정화 연출과 XP6/금화3를 한 번 지급한다. 보상 ID가 저장된 박쥐는 재개 시 생성하지 않는다. 옛 산적 보상3개가 있는 저장은 이를 그대로 인정하여 남은 새2마리만 생성한다. 목표·아이템·스키마를 바꾸지 않았고, 적을 모두 정화하지 않아도 기존 물길 장치·G07·항구 플래그·S27 출구가 작동한다. 가운데 박쥐는 y320~400에서만 움직여 x1560의 체크포인트 바닥(y546)을 공격하지 못한다.
+- S08 기존 박쥐4마리의 배치/HP/AI·안전 퍼즐 구간은 유지했다. 새 경로는 `flightPath`가 있는 S26에만 적용한다. 새 아트 생성/원본 수정 없음; 기존 `bat-actions`와 시트 누락 시 자체 SVG 복구를 재사용했다. 기존 소스·런타임 미디어639파일 및 의존성/lockfile SHA 보존. 최종 웹툰 아트 승인은 ART_DRAFT.
+- 최종 정적6명령 순서 **타입→린트→단위125개/28파일→콘텐츠36구간·24장면·7무기/보물·8하트→빌드51모듈→용량 3,095,942/8,000,000B 모두 exit0**. `docs/validation/s26-bats-final-checks.json`, 6로그. 마지막 검사 파일의 증거 저장 방식 보완 후 타입/린트도 재통과(`s26-bats-final-typecheck.txt`, `s26-bats-final-lint.txt`). 기존 Phaser500KB청크 경고 유지. 콘텐츠 통과는 등록·획득·도달성 그래프 검사이며 설계서 전체 일치 판정이 아니다.
+- 최종 E2E **6/6통과·exit0·3.1분**, skipped/flaky0. `npm run test:e2e -- tests/e2e/s26-bats.spec.ts tests/e2e/mobile-abilities.spec.ts tests/e2e/bat-actions.spec.ts --grep 'S26|phone bat four actions|tablet bat missing-sheet' --reporter=list,json,html`. 신규 S26 폰 정상/태블릿 시트 누락·연출 줄이기2조건: 실제 순찰 좌표 샘플의 경로 이탈0·일시정지·목표 고정·회피·접촉 피해14·터치 공격·동물 정화·XP6/금화3 한번·체크포인트 안전 대기/회복 재개·정화 적 재등장0·G07·indiaArrival·S27 진행 통과. 옛 보상3개 저장1조건은 새2마리만 생성·보상 보존·전투 생략 출구 통과. 기존 폰 모바일 보물/다리1조건과 S08 정상 폰/시트 누락 태블릿2조건도 통과했다. 명시적 저장/장비 픽스처이며 새 게임 전체 완주로 취급하지 않는다.
+- 실제 결과는 `docs/validation/s26-bats-e2e-final.json`, `s26-bats-e2e-final-output.txt`, `s26-bats-final-report/`. 최종 화면33장은 `docs/screenshots/s26-bats/final/`: 신규17장은 `s26-bats/`, 기존 S08 16장은 `m6-bat/`. 대표 `s26-bats/phone-warning.png`, `phone-released.png`, `tablet-safe-checkpoint.png`, `tablet-resume.png`, `tablet-golden-heart.png`, `legacy-rewards.png`. 모든 PNG 크기·바이트·SHA는 `s26-bats-final-screenshots.json`, 화면별 실제 관측은 같은 이름의 JSON에 보존했다.
+- 개발 중 첫 E2E 2통과·1실패: 폰 검사에서 고정 왼쪽 지점으로 도망치다가 실제 고정 예고 원을 가로질러 피해를 받았다. 위로 바로 피하도록 **검사만** 보완. 두 번째도2통과·1실패: 폰은 통과했고 태블릿은 관측 JSON 재쓰기의 Windows 파일 접근 오류로 실패하여 화면별 새 JSON 파일로 보완했다. 게임 타이밍/판정 변경 없이 최종6조건 통과. 실패 PNG/문맥·검사 소스·원래 로그/JSON은 그대로 보존했으며 `s26-bats-development.json`에 연결했다.
+- 검증 전후 실제1008파일 SHA256 일치(`s26-bats-final-runtime-hashes.json`), 이전 S09 작업을 포함한 범위 외 코드/자산 변경 없음. 고정 용량 보고서는 이번 실행본 `s26-bats-art-budget.json`을 보존하고 기존 바이트로 복구했다. 전체 인터페이스 netstat 5174/5175/9323 LISTENING 없음. 최종 diff 결과는 `s26-bats-final-diff-check.txt`, 종합 기록은 `s26-bats-finish.json`.
+
+**남은 문제/미검증:** S26 전체를 설계 완료로 처리하지 않는다. 현재 기존 수영 맵이며, 뗏목 준비/탑승·낮은 천장·갈림길·G07 수중 옆동굴의 독립 지형은 미구현이다. S08 박쥐 제한 비행과 S32 저주 구체4개도 기존 미완료. 이번 변경 후 전체87개 E2E·새 게임36구간 재완주는 미검증(변경 범위6조건으로 회귀). 실제 폰/태블릿·iOS Safari·어린이 조작성·장시간FPS/발열·스피커·최종 아트 승인은 미검증(Windows Edge 자동 입력과 터치 버튼 검증).
+
+**다음 한 작업:** S26 뗏목 준비·낮은 천장·두 물길 장치를 실제 지형에 연결하고 G07 옆동굴의 안전한 복귀 동선을 구현·검증한다.
+<!-- S26_BATS_STATUS_END -->
+
+<!-- S09_NEST_STATUS_START -->
+## 최신 실제 상태 · 2026-10-08 · S09 둥지 선택 보석·깃털 연습
+
+**기능 구현·선택 E2E8조건 통과 / 단위123개 통과 / ART_DRAFT.** 이전 누적 박쥐·정령·로크새 아트와 S09 핵·활공 작업을 `016093a`로 커밋하고 보조 스크립트 끝 공백 정리 `d12b0af`와 함께 `hjpapa/sindbad`의 `origin/main`에 푸시했다. 원격 SHA `d12b0af9f263efc96adca28217e9793ca24ddb1e`를 확인했다. 이후 아래 둥지 작업은 **로컬 변경이며 아직 커밋·푸시하지 않았다**. 공개 배포를 실행하거나 확인하지 않았다.
+
+- S09 보물 위에 첫 발판(2440,416,180×24), 오른쪽 위 발판(2780,344,180×24)을 추가했다. 바닥에서 첫 발판까지192px는 기본 점프의 약136px 높이보다 높아 이단 점프가 필요하다. 발판 사이160px 간격에서 점프 유지 활공을 연습한다. 아래0~3000 연속 바닥과 기존 보스·보물·출구·체크포인트 ID는 유지했다. 떨어지면 안전한 바닥으로 돌아오며, 보석 없이 S10 진행 가능.
+- 첫 발판의 `S09.featherPractice`는 이단 점프·활공·해제·안전 복귀 안내 대화다. `S09.nestGem`은 동료 대화 완료 `S09.reward`와 T03를 모두 요구하는 선택 보석이며 금화25를 기존 원자적 보상으로 한 번 지급한다. `S09.nestGem.reward`가 자동 저장 화이트리스트에 등록되며, 저장/재방문/재상호작용 시 추가0이다. 새 스키마·필수 아이템·필수 관문은 없다.
+- 도달성 검사는 T03 표시가 있는 선택 발판만 이단 점프의 보수적 높이210px/간격260px로 검사한다. T03를 주는 보상과 필수 상호작용은 기본 점프 경로로 따로 검사해, 새 능력을 받기 전 위 발판을 강요하는 오류를 거부한다. 모든36구간의 기존 도달성 검사도 통과했다. 태그는 정적 도달성 조건이며 런타임의 실제 이단 점프는 기존 T03 보유 검사로 제한한다.
+- 초기 3조건 E2E 통과 뒤 화면 검수에서 보석으로 재사용한 별 장치가 나침반처럼 보여, 자체 도형 SVG `public/assets/draft/nestGem.svg`(96×128, 투명)를 작성해 등록했다. 새 최종 웹툰 아트로 취급하지 않는다. 그림 생성 도구 실행 없음; 기존 원화·런타임638파일 바이트 보존. 보석은 최종 웹툰 교체 미완료다.
+- 최종 정적 순서 **타입→린트→단위123개/27파일→콘텐츠36구간/24장면/7무기·7보물/8하트→빌드50모듈→용량 3,093,349/8,000,000B 모두 exit0**. `docs/validation/s09-nest-final-checks.json`과 6로그. 기존 Phaser500KB청크 경고 유지. 최초 일반 샌드박스 빌드는 Vite realpath EPERM으로 실패했으며 `s09-nest-build.txt`에 보존; 승인된 호스트 실행과 최종 빌드는 통과했다. 콘텐츠 통과는 등록·획득·도달성 그래프 검사이지 설계서 전체 일치 판정이 아니다.
+- 최종 `npm run test:e2e -- tests/e2e/nest-practice.spec.ts tests/e2e/roc-mechanics.spec.ts tests/e2e/m3-opening.spec.ts --reporter=list,json,html` **8/8통과·exit0·6.4분**, skipped/flaky0. 신규 폰/태블릿 2조건은 실제 로크새 핵3회와 T03 대화 이후 이단 점프·첫 발판 착지·안내 대화·활공·보석25·새로고침·정상 재등반·중복0·안전 복귀를 확인했다. 태블릿은 CDP touchStart/touchCancel로 점프 유지/해제. 별도1조건은 보석을 건너뛴 S10 진입. 기존 S09 전투/활공/사망 재개/옛 저장4조건과 S09~S12 연속1조건도 통과. 모든 조건은 명시적 S09 저장 픽스처이며 새 게임 전체 완주로 취급하지 않는다.
+- `docs/validation/s09-nest-e2e-final.json`, `s09-nest-e2e-final-output.txt`, `s09-nest-e2e-final-report/`에 실제 결과를 보존. 최종 화면44장은 `docs/screenshots/s09-nest/final/`(신규16 + 기존 회귀28); 대표 `s09-nest/phone-upper-nest.png`, `tablet-glide-crossing.png`, `phone-gem-collected.png`, `tablet-checkpoint-resume.png`, `tablet-safe-floor-return.png`. 크기·바이트·SHA는 `s09-nest-final-screenshots.json`. 첫 실행3통과/1.9분과 나침반 모양 교체 전16화면은 `s09-nest-e2e-first.json`, `docs/screenshots/s09-nest/first/`에 별도 보존했다.
+- 검증 전후1005개 실제 소스·원본·런타임·빌드·검사 SHA256 일치(`s09-nest-final-runtime-hashes.json`). 의존성/lockfile과 이전 미디어638파일 보존. 고정 용량 보고서는 이번 실행본을 `s09-nest-art-budget.json`에 보존한 뒤 이전 바이트 복구. netstat 전체 인터페이스 5174/5175/9323 LISTENING 없음. 최종 diff·마무리 결과는 `s09-nest-final-diff-check.txt`, `s09-nest-finish.json` 참조.
+
+**남은 문제/미검증:** 이번 변경 후 전체84개 E2E 및 새 게임36구간 재완주는 미검증(변경 범위의8조건으로 회귀; 이전 버전36구간 완주와 구별). 실제 폰/태블릿·iOS Safari·어린이 조작성·장시간FPS/발열·스피커는 미검증(Windows Edge 자동 키 입력/터치 이벤트). S26 동굴 박쥐5마리·제한 비행 경로와 S32 저주 구체4개 등 기존 설계 차이는 미완료. 새 보석 SVG와 기존 로크새 보석 색·전용 활공 자세 등 최종 아트 승인은 ART_DRAFT.
+
+**다음 한 작업:** S26 동굴 적을 설계의 박쥐5마리로 연결하고 제한 비행 경로·기존 저장 호환성과 실제 플레이를 검증한다.
+<!-- S09_NEST_STATUS_END -->
+
 <!-- S09_MECHANICS_STATUS_START -->
 ## 최신 실제 상태 · 2026-10-08 · S09 저주 핵·3패턴 / T03 활공
 

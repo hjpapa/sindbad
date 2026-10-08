@@ -1,0 +1,58 @@
+
+> sinbad-seven-treasures@0.1.0 test:e2e
+> playwright test tests/e2e/nest-practice.spec.ts tests/e2e/roc-mechanics.spec.ts tests/e2e/m3-opening.spec.ts --reporter=list,json,html
+
+
+Running 8 tests using 1 worker
+
+(node:5592) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:5592) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 tests\e2e\m3-opening.spec.ts:62:1 › S09-S12 continuous route grants flight, W04 and R03 with save-safe bosses (1.5m)
+  ok 2 tests\e2e\nest-practice.spec.ts:30:3 › phone optional nest gem uses double jump and glide, saves once and leaves a safe return (40.1s)
+  ok 3 tests\e2e\nest-practice.spec.ts:30:3 › tablet optional nest gem uses double jump and glide, saves once and leaves a safe return (40.7s)
+  ok 4 tests\e2e\nest-practice.spec.ts:188:1 › the next stage remains reachable without collecting the optional nest gem (6.2s)
+SHOT peck-warning 147ms
+SHOT core-open 157ms
+SHOT one-core-one-landing 169ms
+WIND INPUT {"x":2227.3888888888882,"y":546,"grounded":true,"vx":0,"vy":0,"hp":68,"maxHp":100,"bodyWidth":42,"bodyHeight":84}
+WIND AIR {"x":2227.3888888888882,"y":425.25,"grounded":false,"vx":0,"vy":-190,"hp":68,"maxHp":100,"bodyWidth":42,"bodyHeight":84}
+SHOT wind-jump-safe 161ms
+SHOT dive-warning 158ms
+SHOT dive-safe 156ms
+SHOT freed 167ms
+SHOT alliance-dialogue 143ms
+SHOT glide-held 154ms
+SHOT glide-release 147ms
+SHOT double-jump 158ms
+  ok 5 tests\e2e\roc-mechanics.spec.ts:112:3 › phone S09 three distinct avoidable patterns, three cores and feather glide (50.6s)
+SHOT peck-warning 277ms
+SHOT core-open 271ms
+SHOT one-core-one-landing 265ms
+WIND INPUT {"x":2214.1111111111104,"y":546,"grounded":true,"vx":0,"vy":0,"hp":68,"maxHp":100,"bodyWidth":42,"bodyHeight":84}
+WIND AIR {"x":2214.1111111111104,"y":425.25,"grounded":false,"vx":0,"vy":-190,"hp":68,"maxHp":100,"bodyWidth":42,"bodyHeight":84}
+SHOT wind-jump-safe 267ms
+SHOT dive-warning 259ms
+SHOT dive-safe 271ms
+SHOT freed 288ms
+SHOT alliance-dialogue 302ms
+SHOT glide-held 272ms
+SHOT glide-release 284ms
+SHOT double-jump 293ms
+  ok 6 tests\e2e\roc-mechanics.spec.ts:112:3 › tablet S09 three distinct avoidable patterns, three cores and feather glide (51.5s)
+SHOT core-one-saved 284ms
+SHOT death-checkpoint 310ms
+SHOT retry-alliance 286ms
+  ok 7 tests\e2e\roc-mechanics.spec.ts:250:1 › partial cores survive death and reload; legacy channels cannot bypass combat (1.3m)
+SHOT missing-orb 301ms
+SHOT no-feather-fall 408ms
+SHOT legacy-alliance 281ms
+  ok 8 tests\e2e\roc-mechanics.spec.ts:309:1 › missing orb cannot expose a core; feather is needed for glide; old victory remains valid (25.7s)
+
+  8 passed (6.4m)
+
+To open last HTML report run:
+[36m[39m
+[36m  npx playwright show-report[39m
+[36m[39m

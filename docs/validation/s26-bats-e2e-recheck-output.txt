@@ -1,0 +1,48 @@
+
+> sinbad-seven-treasures@0.1.0 test:e2e
+> playwright test tests/e2e/s26-bats.spec.ts --reporter=list,json,html
+
+
+Running 3 tests using 1 worker
+
+(node:30252) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:30252) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 tests\e2e\s26-bats.spec.ts:61:3 › phone S26 five bounded bats, locked swoop, touch release and checkpoint route (1.1m)
+  x  2 tests\e2e\s26-bats.spec.ts:61:3 › tablet S26 five bounded bats, locked swoop, touch release and checkpoint route (24.5s)
+(node:31432) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:31432) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 3 tests\e2e\s26-bats.spec.ts:224:1 › legacy S26 bandit rewards stay claimed and new optional bats do not block the exit (7.3s)
+
+
+  1) tests\e2e\s26-bats.spec.ts:61:3 › tablet S26 five bounded bats, locked swoop, touch release and checkpoint route 
+
+    Error: UNKNOWN: unknown error, open 'C:\code\code10(sindbad)\docs\screenshots\s26-bats\recheck\s26-bats\tablet.json'
+
+      32 |         await page.evaluate(({key,save})=>localStorage.setItem(key,JSON.stringify(save)),{key:SAVE_KEY,save});await resume(page);
+      33 |         const root=evidencePath('s26-bats');mkdirSync(root,{recursive:true});const observations:unknown[]=[];
+    > 34 |         const shot=async(name:string)=>{observations.push({name,observed:await read(page)});writeFileSync(`${root}/${device}.json`,JSON.stringify({fallback,errors,observations},null,2));await page.screenshot({path:`${root}/${device}-${name}.png`});};
+         |                                                                                             ^
+      35 |         const enemy=async()=>(await read(page)).enemies.find((e:{id:string})=>e.id==='S26.enemy.1');
+      36 |         expect((await read(page)).enemies).toHaveLength(5);expect((await enemy()).texture).toBe(fallback?'bat':'bat-actions');
+      37 |         const samples=await page.evaluate(async()=>{
+        at shot (C:\code\code10(sindbad)\tests\e2e\s26-bats.spec.ts:34:93)
+        at C:\code\code10(sindbad)\tests\e2e\s26-bats.spec.ts:75:165
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\s26-bats-tablet-S26-five-b-97981-elease-and-checkpoint-route\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\s26-bats-tablet-S26-five-b-97981-elease-and-checkpoint-route\error-context.md
+
+  1 failed
+    tests\e2e\s26-bats.spec.ts:61:3 › tablet S26 five bounded bats, locked swoop, touch release and checkpoint route 
+  2 passed (1.8m)
+
+To open last HTML report run:
+[36m[39m
+[36m  npx playwright show-report[39m
+[36m[39m

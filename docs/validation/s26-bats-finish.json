@@ -1,0 +1,78 @@
+{
+  "date": "2026-10-08T11:59:43.298709+00:00",
+  "checks": [
+    {
+      "command": "npm run typecheck",
+      "exitCode": 0,
+      "started": "2026-10-08T11:52:40.253396+00:00",
+      "seconds": 3.906,
+      "log": "docs/validation/s26-bats-final-check-1.txt"
+    },
+    {
+      "command": "npm run lint",
+      "exitCode": 0,
+      "started": "2026-10-08T11:52:44.159658+00:00",
+      "seconds": 4.141,
+      "log": "docs/validation/s26-bats-final-check-2.txt"
+    },
+    {
+      "command": "npm run test",
+      "exitCode": 0,
+      "started": "2026-10-08T11:52:48.303650+00:00",
+      "seconds": 5.094,
+      "log": "docs/validation/s26-bats-final-check-3.txt"
+    },
+    {
+      "command": "npm run validate:content",
+      "exitCode": 0,
+      "started": "2026-10-08T11:52:53.404493+00:00",
+      "seconds": 1.656,
+      "log": "docs/validation/s26-bats-final-check-4.txt"
+    },
+    {
+      "command": "npm run build",
+      "exitCode": 0,
+      "started": "2026-10-08T11:52:55.063005+00:00",
+      "seconds": 13.953,
+      "log": "docs/validation/s26-bats-final-check-5.txt"
+    },
+    {
+      "command": "npx tsx scripts/check-art-budget.ts",
+      "exitCode": 0,
+      "started": "2026-10-08T11:53:09.020437+00:00",
+      "seconds": 3.938,
+      "log": "docs/validation/s26-bats-final-check-6.txt"
+    }
+  ],
+  "e2e": {
+    "startTime": "2026-10-08T11:55:11.607Z",
+    "duration": 187644.588,
+    "expected": 6,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "runtimeFilesUnchanged": 1008,
+  "previousMediaUnchanged": 639,
+  "intentionalChanges": [
+    "dist/assets/index-B9TF8uWq.js",
+    "dist/assets/index-CKTcgE4-.js",
+    "dist/index.html",
+    "src/content/finalStages.ts",
+    "src/content/maps.ts",
+    "src/content/validate.ts",
+    "src/core/batFlight.ts",
+    "src/game/stage.ts",
+    "tests/e2e/s26-bats.spec.ts",
+    "tests/unit/bat-actions.test.ts",
+    "tests/unit/bat-flight.test.ts"
+  ],
+  "unexpectedChanges": [],
+  "dependenciesUnchanged": true,
+  "screenshots": 33,
+  "budgetBytes": 3095942,
+  "budgetReportRestored": true,
+  "listeners5174_5175_9323": [],
+  "artStatus": "ART_DRAFT",
+  "commitPushDeploy": false
+}

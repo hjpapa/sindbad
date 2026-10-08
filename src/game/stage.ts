@@ -22,6 +22,7 @@ import {actionDefeatKind,enemyActionLayout,enemyActionTexture,type EnemyActionKe
 import {rocFlightFrame,rocFlightLayout} from '../content/rocArt';
 import {rocBossId,rocCoresBroken,rocCoreReward,rocCoreOpen,rocPatterns,rocZone,insideRocZone} from '../core/rocBoss';
 import {canGlide,glideFallSpeed} from '../core/glide';
+import {batFlightBounds,batPatrol,batFlightTarget,batSwoop,type FlightPoint} from '../core/batFlight';
 import {projectileArtFor,sceneEffectKeys,projectileFrame,effectFrame,effectDuration,type EffectArtKey} from '../content/effects';
 const FONT='"Malgun Gothic","Apple SD Gothic Neo","Noto Sans KR",sans-serif';
 // What the touch action button would do right now, so its icon can match.
@@ -50,6 +51,8 @@ export interface Host {
     clearStage(): void;
 }
 interface Enemy {
+    flightPhase?: number;
+    flightOrigin?: FlightPoint;
     coreStruck?: boolean;
     art?: EnemyActionKey;
     bodyHeight?: number;
@@ -298,7 +301,7 @@ export class Stage extends Phaser.Scene {
         this.cameras.main.startFollow(this.player, true, this.host.save.settings.reducedMotion ? 1 : 0.12, this.host.save.settings.reducedMotion ? 1 : 0.12, 0, 0);
         for (const def of this.mapDef.spawns) {
             const boss = def.kind === 'captain' || def.kind === 'siren' || def.kind === 'boss';
-            if ((boss || this.mapDef.id==='S06') && this.done(def.id))
+            if (((boss || this.mapDef.id==='S06') && this.done(def.id)) || (def.flightPath&&this.host.save.claimedRewardIds.includes(def.id)))
                 continue;
             const fallbackTexture=def.kind==='captain'||def.kind==='archer'?'skeleton':def.kind;
             let texture=def.texture==='roc'?'roc-webtoon':def.texture??fallbackTexture;let frame=def.frame;
@@ -512,6 +515,7 @@ export class Stage extends Phaser.Scene {
         const roc=this.enemies.find(e=>e.def.id===rocBossId);
         return {
             gliding:this.gliding,
+            batFlights:this.enemies.filter(e=>e.def.flightPath).map(e=>({id:e.def.id,bounds:batFlightBounds(e.def,e.def.flightPath!),target:{x:e.target,y:e.targetY},phase:e.flightPhase??0})),
             extraJump:this.extraJump,
             rocEncounter:roc?{pattern:roc.pattern,patternName:rocPatterns[roc.pattern].name,remaining:Math.max(0,roc.until-this.sim),
                 coresBroken:rocCoresBroken(this.host.save),core:this.rocCore(roc),
@@ -1207,7 +1211,7 @@ export class Stage extends Phaser.Scene {
                 continue;
             this.damageEnemy(e,a.damage,core);
             if(a.weapon==='W03'&&e.hp>0&&!core)e.burn=ignite(this.sim,e.burn);
-            if(e.hp>0&&!['siren','captain'].includes(e.def.kind)&&e.def.kind!=='boss'){const push=a.direction*(a.weapon==='W06'?68:14);this.tweens.add({targets:e.sprite,x:Phaser.Math.Clamp(e.sprite.x+push,40,this.mapDef.width-40),duration:this.host.save.settings.reducedMotion?0:140,ease:'Quad.easeOut'});}
+            if(e.hp>0&&!e.def.flightPath&&!['siren','captain'].includes(e.def.kind)&&e.def.kind!=='boss'){const push=a.direction*(a.weapon==='W06'?68:14);this.tweens.add({targets:e.sprite,x:Phaser.Math.Clamp(e.sprite.x+push,40,this.mapDef.width-40),duration:this.host.save.settings.reducedMotion?0:140,ease:'Quad.easeOut'});}
         }
         for (const o of this.objects) {
             if ((!['shell', 'remote'].includes(o.def.kind)&&!o.def.breakWeapon) || this.done(o.def.id) || Math.abs(o.def.x - x) > width || Math.abs(o.def.y - y) > height)
@@ -1258,6 +1262,40 @@ export class Stage extends Phaser.Scene {
         e.label.setText(advice).setPosition(e.sprite.x,e.sprite.y-140).setVisible(distance<620&&!!advice);
         if(distance<850)this.bossText.setText(`로크새 · 저주 핵 ${rocCoresBroken(this.host.save)} / 3 · ${advice||'공격 예고를 살펴요'}`).setVisible(true);
     }
+    private updateFlyingBat(e:Enemy,dt:number){
+        const path=e.def.flightPath!;
+        const distance=Phaser.Math.Distance.Between(this.player.x,this.player.y,e.sprite.x,e.sprite.y);
+        e.label.setVisible(distance<620&&e.state!=='idle');
+        if(e.state==='idle'){
+            e.sprite.clearTint();e.flightPhase=(e.flightPhase??0)+dt;
+            const next=batPatrol(e.def,path,e.flightPhase);
+            e.sprite.setFlipX(next.x<e.sprite.x).setPosition(next.x,next.y);
+            if(distance<170){
+                e.state='telegraph';e.until=this.sim+1200*(this.host.save.settings.difficulty==='relaxed'?1.3:1);
+                e.flightOrigin={x:e.sprite.x,y:e.sprite.y};
+                const target=batFlightTarget(e.def,path,this.player);e.target=target.x;e.targetY=target.y;
+                e.sprite.setFlipX(e.target<e.sprite.x);
+            }
+        }else if(e.state==='telegraph'){
+            e.sprite.setTint(0xffc773);e.label.setText('⚠ 박쥐 돌진 예고 · 옆으로 피하세요');
+            if(this.sim>=e.until){e.state='attack';e.until=this.sim+500;}
+        }else if(e.state==='attack'){
+            const progress=1-(e.until-this.sim)/500;
+            const next=batSwoop(e.flightOrigin!,{x:e.target,y:e.targetY},progress);e.sprite.setPosition(next.x,next.y);
+            e.label.setText('✦');
+            if(progress>.18&&progress<.82&&Math.abs(this.player.x-next.x)<64&&Math.abs(this.player.y-next.y)<56)this.hurt(14);
+            if(this.sim>=e.until){e.sprite.setPosition(e.flightOrigin!.x,e.flightOrigin!.y);e.state='recover';e.until=this.sim+1100;}
+        }else if(e.state==='recover'){
+            e.sprite.clearTint();e.label.setText('빈틈 · 공격');
+            if(this.sim>=e.until)e.state='idle';
+        }
+        this.setEnemyPose(e);this.paintEnemyHud(e,distance);
+    }
+    private paintEnemyHud(e:Enemy,distance:number){
+        const barY=e.sprite.y-(e.bodyHeight??e.sprite.displayHeight)*(e.def.kind==='boss'?.62:.5)-10;
+        if(distance<620&&e.sprite.visible){const w=e.def.kind==='boss'?110:64,ratio=e.hp/e.maxHp;this.hpBars.fillStyle(0x10212c,.75).fillRoundedRect(e.sprite.x-w/2-2,barY-2,w+4,11,4).fillStyle(ratio>.5?0x8be38f:ratio>.25?0xffd36e:0xff8f7a).fillRoundedRect(e.sprite.x-w/2,barY,Math.max(3,w*ratio),7,3);}
+        e.label.setPosition(e.sprite.x,barY-24);
+    }
     private updateEnemies(dt: number) {
         let boss = '';
         this.hpBars.clear();
@@ -1265,6 +1303,7 @@ export class Stage extends Phaser.Scene {
         for (const e of this.enemies) {
             if (e.state === 'defeated')
                 continue;
+            if(e.def.flightPath){this.updateFlyingBat(e,dt);continue;}
             if(e.def.id===rocBossId){this.updateRoc(e,dt);return;}
             if(e.def.kind==='kite'&&e.state==='idle')e.sprite.y=e.def.y+Math.sin(this.sim/360+e.def.x)*18;
             const distance = e.def.kind==='kite'?Phaser.Math.Distance.Between(this.player.x,this.player.y,e.sprite.x,e.sprite.y):Math.abs(this.player.x - e.sprite.x);
@@ -1338,9 +1377,7 @@ export class Stage extends Phaser.Scene {
                 e.label.setVisible(false);
             e.sprite.setFlipX((e.def.kind==='guardian'?e.target:this.player.x) < e.sprite.x);
             this.setEnemyPose(e);
-            const barY=e.sprite.y-(e.bodyHeight??e.sprite.displayHeight)*(e.def.kind==='boss'?.62:.5)-10;
-            if(distance<620&&e.sprite.visible){const w=e.def.kind==='boss'?110:64,ratio=e.hp/e.maxHp;this.hpBars.fillStyle(0x10212c,.75).fillRoundedRect(e.sprite.x-w/2-2,barY-2,w+4,11,4).fillStyle(ratio>.5?0x8be38f:ratio>.25?0xffd36e:0xff8f7a).fillRoundedRect(e.sprite.x-w/2,barY,Math.max(3,w*ratio),7,3);}
-            e.label.setPosition(e.sprite.x, barY-24);
+            this.paintEnemyHud(e,distance);
         }
         this.bossText.setText(boss).setVisible(!!boss);
     }
@@ -1390,6 +1427,13 @@ export class Stage extends Phaser.Scene {
                 if(rocCoreOpen(enemy.state,!!enemy.coreStruck,this.host.save.treasures.includes('T02'))){
                     const core=this.rocCore(enemy);
                     this.rocGlyph?.fillStyle(0xe9fdf2,1).fillCircle(core.x,core.y,18).lineStyle(4,0x77eadc,1).strokeCircle(core.x,core.y,24);
+                }
+                continue;
+            }
+            if(enemy.def.flightPath){
+                if(enemy.state==='telegraph'||enemy.state==='attack'){
+                    this.warnings.lineStyle(3,0xffd28d,.9).strokeCircle(enemy.target,enemy.targetY,70);
+                    this.warnings.lineBetween(enemy.sprite.x,enemy.sprite.y,enemy.target,enemy.targetY);
                 }
                 continue;
             }

@@ -1,0 +1,530 @@
+{
+  "fallback": false,
+  "errors": [],
+  "record": {
+    "name": "resume",
+    "observed": {
+      "gliding": false,
+      "batFlights": [
+        {
+          "id": "S26.enemy.2",
+          "bounds": {
+            "left": 1460,
+            "right": 1640,
+            "top": 320,
+            "bottom": 400
+          },
+          "target": {
+            "x": 1550,
+            "y": 360
+          },
+          "phase": 61.56080000000003
+        },
+        {
+          "id": "S26.enemy.3",
+          "bounds": {
+            "left": 2210,
+            "right": 2390,
+            "top": 400,
+            "bottom": 500
+          },
+          "target": {
+            "x": 2300,
+            "y": 450
+          },
+          "phase": 61.56080000000003
+        },
+        {
+          "id": "S26.enemy.4",
+          "bounds": {
+            "left": 1010,
+            "right": 1190,
+            "top": 420,
+            "bottom": 520
+          },
+          "target": {
+            "x": 1100,
+            "y": 470
+          },
+          "phase": 61.56080000000003
+        },
+        {
+          "id": "S26.enemy.5",
+          "bounds": {
+            "left": 1830,
+            "right": 2010,
+            "top": 420,
+            "bottom": 520
+          },
+          "target": {
+            "x": 1920,
+            "y": 470
+          },
+          "phase": 61.56080000000003
+        }
+      ],
+      "extraJump": false,
+      "rocEncounter": null,
+      "projectileArt": [],
+      "effectArt": [],
+      "cachedEffectKeys": [
+        "effect-hit-spark",
+        "effect-purify-light",
+        "effect-surrender-flag"
+      ],
+      "cachedActionKeys": [
+        "bat-actions"
+      ],
+      "terrain": {
+        "style": "sand",
+        "cachedKeys": [
+          "terrain-sand-fill",
+          "terrain-sand-top"
+        ],
+        "textures": [
+          {
+            "key": "terrain-sand-fill",
+            "width": 128,
+            "height": 128,
+            "source": "blob:http://127.0.0.1:5174/919da867-04ed-4472-aaec-87ed9f23b8fd"
+          },
+          {
+            "key": "terrain-sand-top",
+            "width": 128,
+            "height": 34,
+            "source": "blob:http://127.0.0.1:5174/f88da588-b059-42db-a58a-77cd1168c392"
+          }
+        ],
+        "platforms": [
+          {
+            "x": 1500,
+            "y": 664,
+            "width": 3000,
+            "height": 112,
+            "texture": "terrain-sand-fill",
+            "visible": true,
+            "skinX": 1500,
+            "skinY": 664,
+            "skinWidth": 3000,
+            "skinHeight": 112
+          },
+          {
+            "x": 760,
+            "y": 548,
+            "width": 220,
+            "height": 24,
+            "texture": "terrain-sand-fill",
+            "visible": false,
+            "skinX": 760,
+            "skinY": 548,
+            "skinWidth": 220,
+            "skinHeight": 24
+          },
+          {
+            "x": 1830,
+            "y": 524,
+            "width": 220,
+            "height": 24,
+            "texture": "terrain-sand-fill",
+            "visible": false,
+            "skinX": 1830,
+            "skinY": 524,
+            "skinWidth": 220,
+            "skinHeight": 24
+          }
+        ],
+        "tops": [
+          {
+            "x": 1500,
+            "y": 621,
+            "width": 3000,
+            "height": 34,
+            "texture": "terrain-sand-top"
+          },
+          {
+            "x": 760,
+            "y": 549,
+            "width": 220,
+            "height": 34,
+            "texture": "terrain-sand-top"
+          },
+          {
+            "x": 1830,
+            "y": 525,
+            "width": 220,
+            "height": 34,
+            "texture": "terrain-sand-top"
+          }
+        ]
+      },
+      "propArt": {
+        "cachedKeys": [
+          "prop-heart",
+          "prop-golden",
+          "prop-lantern",
+          "prop-star-device",
+          "prop-gift"
+        ],
+        "objects": [
+          {
+            "id": "S26.intro",
+            "kind": "npc",
+            "texture": "naira-webtoon",
+            "x": 230,
+            "y": 550,
+            "width": 85.33333333333333,
+            "height": 128,
+            "visible": true,
+            "done": false
+          },
+          {
+            "id": "S26.quest.1",
+            "kind": "bridge",
+            "texture": "prop-lantern",
+            "x": 982.5,
+            "y": 550,
+            "width": 65.28,
+            "height": 87.04,
+            "visible": true,
+            "done": false
+          },
+          {
+            "id": "S26.quest.2",
+            "kind": "quest",
+            "texture": "prop-star-device",
+            "x": 1445,
+            "y": 550,
+            "width": 65.28,
+            "height": 87.04,
+            "visible": true,
+            "done": false
+          },
+          {
+            "id": "S26.quest.3",
+            "kind": "quest",
+            "texture": "prop-star-device",
+            "x": 1907.5,
+            "y": 550,
+            "width": 65.28,
+            "height": 87.04,
+            "visible": true,
+            "done": false
+          },
+          {
+            "id": "S26.golden",
+            "kind": "golden",
+            "texture": "prop-golden",
+            "x": 1860,
+            "y": 470,
+            "width": 65.28,
+            "height": 87.04,
+            "visible": true,
+            "done": false
+          },
+          {
+            "id": "S26.reward",
+            "kind": "gift",
+            "texture": "prop-gift",
+            "x": 2480,
+            "y": 550,
+            "width": 65.28,
+            "height": 87.04,
+            "visible": true,
+            "done": false
+          },
+          {
+            "id": "S26.exit",
+            "kind": "exit",
+            "texture": "bell",
+            "x": 2840,
+            "y": 550,
+            "width": 65.28,
+            "height": 87.04,
+            "visible": true,
+            "done": false
+          },
+          {
+            "id": "S26.cp.middle",
+            "kind": "checkpoint",
+            "texture": "bell",
+            "x": 1560,
+            "y": 550,
+            "width": 40.32,
+            "height": 53.76,
+            "visible": true,
+            "done": false
+          }
+        ],
+        "chests": [],
+        "hearts": [
+          {
+            "id": "S26.heart.1",
+            "large": false,
+            "active": true,
+            "texture": "prop-heart",
+            "x": 1350,
+            "y": 550,
+            "width": 34.56,
+            "height": 46.08
+          },
+          {
+            "id": "S26.heart.2",
+            "large": true,
+            "active": true,
+            "texture": "prop-heart",
+            "x": 2280,
+            "y": 550,
+            "width": 48,
+            "height": 64
+          }
+        ]
+      },
+      "flightArt": null,
+      "heroArt": {
+        "texture": "hero-action",
+        "frame": 0,
+        "x": 1560,
+        "y": 612,
+        "flipX": false,
+        "originY": 0.9609375
+      },
+      "weaponArt": {
+        "visible": false,
+        "x": 1560,
+        "y": 548,
+        "texture": "weapon-W01",
+        "angle": 0
+      },
+      "storyDevices": [
+        {
+          "id": "S26.quest.2",
+          "x": 1445,
+          "y": 550,
+          "mechanic": {
+            "type": "rotate",
+            "target": 1,
+            "symbol": "물길 장치"
+          },
+          "done": false,
+          "state": {
+            "value": 0,
+            "elapsed": 0,
+            "active": false,
+            "carrying": false
+          }
+        },
+        {
+          "id": "S26.quest.3",
+          "x": 1907.5,
+          "y": 550,
+          "mechanic": {
+            "type": "rotate",
+            "target": 3,
+            "symbol": "별빛 출구"
+          },
+          "done": false,
+          "state": {
+            "value": 0,
+            "elapsed": 0,
+            "active": false,
+            "carrying": false
+          }
+        }
+      ],
+      "freeMovement": true,
+      "stage": "S26",
+      "player": {
+        "x": 1560,
+        "y": 548,
+        "grounded": false,
+        "vx": 0,
+        "vy": 0,
+        "hp": 120,
+        "maxHp": 120,
+        "bodyWidth": 42,
+        "bodyHeight": 84
+      },
+      "save": {
+        "schemaVersion": 1,
+        "buildVersion": "0.1.0",
+        "writtenAt": "2026-10-08T11:57:03.265Z",
+        "checkpoint": {
+          "stageId": "S26",
+          "checkpointId": "middle"
+        },
+        "totalXp": 428,
+        "coins": 3,
+        "weapons": [
+          "W01",
+          "W02",
+          "W03",
+          "W04",
+          "W05",
+          "W06"
+        ],
+        "equippedWeapon": "W01",
+        "upgrades": {},
+        "treasures": [
+          "T01",
+          "T02",
+          "T03",
+          "T04",
+          "T05"
+        ],
+        "relics": [],
+        "goldenHearts": [],
+        "equippedSkill": "flamePulse",
+        "clearedStageIds": [
+          "S01",
+          "S02",
+          "S03",
+          "S04",
+          "S05",
+          "S06",
+          "S07",
+          "S08",
+          "S09",
+          "S10",
+          "S11",
+          "S12",
+          "S13",
+          "S14",
+          "S15",
+          "S16",
+          "S17",
+          "S18",
+          "S19",
+          "S20",
+          "S21",
+          "S22",
+          "S23",
+          "S24",
+          "S25"
+        ],
+        "claimedRewardIds": [
+          "S01.reward.start",
+          "S26.enemy.1",
+          "S26.heart.1"
+        ],
+        "completedObjectiveIds": [],
+        "flags": [
+          "bubbleBlessing",
+          "genieCave",
+          "flightJournal",
+          "upgradeShop",
+          "mayorArrested",
+          "crewRescued",
+          "captainKey",
+          "shadowDefeated",
+          "moonBridgeKey"
+        ],
+        "journalPageIds": [],
+        "settings": {
+          "difficulty": "normal",
+          "musicVolume": 0.18,
+          "sfxVolume": 0.3,
+          "reducedMotion": false,
+          "largeText": false,
+          "aimAssist": false
+        }
+      },
+      "sim": 61.56080000000003,
+      "paused": false,
+      "enemies": [
+        {
+          "id": "S26.enemy.2",
+          "x": 1558.689396159741,
+          "y": 367.6878235125382,
+          "hp": 36,
+          "state": "idle",
+          "visible": true,
+          "alpha": 1,
+          "art": "bat",
+          "texture": "bat-actions",
+          "frame": 0,
+          "flipX": false,
+          "originX": 0.638671875,
+          "originY": 0.75,
+          "displayHeight": 184.58369098712447,
+          "footOffset": 64,
+          "label": ""
+        },
+        {
+          "id": "S26.enemy.3",
+          "x": 2308.689396159741,
+          "y": 459.60977939067277,
+          "hp": 36,
+          "state": "idle",
+          "visible": true,
+          "alpha": 1,
+          "art": "bat",
+          "texture": "bat-actions",
+          "frame": 0,
+          "flipX": false,
+          "originX": 0.638671875,
+          "originY": 0.75,
+          "displayHeight": 184.58369098712447,
+          "footOffset": 64,
+          "label": ""
+        },
+        {
+          "id": "S26.enemy.4",
+          "x": 1108.689396159741,
+          "y": 479.60977939067277,
+          "hp": 36,
+          "state": "idle",
+          "visible": true,
+          "alpha": 1,
+          "art": "bat",
+          "texture": "bat-actions",
+          "frame": 0,
+          "flipX": false,
+          "originX": 0.638671875,
+          "originY": 0.75,
+          "displayHeight": 184.58369098712447,
+          "footOffset": 64,
+          "label": ""
+        },
+        {
+          "id": "S26.enemy.5",
+          "x": 1928.689396159741,
+          "y": 479.60977939067277,
+          "hp": 36,
+          "state": "idle",
+          "visible": true,
+          "alpha": 1,
+          "art": "bat",
+          "texture": "bat-actions",
+          "frame": 0,
+          "flipX": false,
+          "originX": 0.638671875,
+          "originY": 0.75,
+          "displayHeight": 184.58369098712447,
+          "footOffset": 64,
+          "label": ""
+        }
+      ],
+      "flightHazards": [],
+      "projectiles": 0,
+      "boomerang": false,
+      "attack": null,
+      "air": 10000,
+      "submerged": false,
+      "bubbleProtected": true,
+      "movingPlatforms": [],
+      "mp": 68,
+      "flameReady": 0,
+      "pulse": false,
+      "wave": null,
+      "grip": null,
+      "mirrors": [
+        0,
+        0,
+        0
+      ],
+      "connectedMirrors": 0,
+      "puzzleSafe": false,
+      "frameMs": 16.640000000000008
+    }
+  }
+}
