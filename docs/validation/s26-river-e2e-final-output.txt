@@ -1,0 +1,118 @@
+
+> sinbad-seven-treasures@0.1.0 test:e2e
+> playwright test tests/e2e/s26-river.spec.ts tests/e2e/s26-bats.spec.ts tests/e2e/mobile-abilities.spec.ts tests/e2e/story-devices.spec.ts --grep S26|S16 protected|carried wood|S25 bridge --reporter=list,json,html --output docs/screenshots/s26-river/final-test-results
+
+
+Running 11 tests using 1 worker
+
+(node:24516) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:24516) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  1 tests\e2e\mobile-abilities.spec.ts:17:1 › phone can descend, cast its selected treasure, and open S26 bridge using action (33.2s)
+  x   2 tests\e2e\s26-bats.spec.ts:61:3 › phone S26 five bounded bats, locked swoop, touch release and checkpoint route (1.6m)
+(node:46224) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:46224) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x   3 tests\e2e\s26-bats.spec.ts:61:3 › tablet S26 five bounded bats, locked swoop, touch release and checkpoint route (1.7m)
+(node:11820) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:11820) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  4 tests\e2e\s26-bats.spec.ts:229:1 › legacy S26 bandit rewards stay claimed and new optional bats do not block the exit (7.7s)
+  ok  5 tests\e2e\s26-river.spec.ts:82:3 › phone S26 prepares and rides raft, opens two gates, returns from optional branches and resumes (58.8s)
+  x   6 tests\e2e\s26-river.spec.ts:82:3 › tablet S26 prepares and rides raft, opens two gates, returns from optional branches and resumes (1.2m)
+(node:37068) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:37068) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  7 tests\e2e\s26-river.spec.ts:216:1 › legacy S26 bridge save resumes with raft and can skip both optional branches (15.7s)
+  ok  8 tests\e2e\s26-river.spec.ts:248:1 › legacy S26 unprepared middle checkpoint can return to the wood without granting progress (12.4s)
+(node:17104) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:17104) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  9 tests\e2e\story-devices.spec.ts:43:1 › S16 protected entrance earns pearl before actual swim practice and survives reload (25.1s)
+  ok 10 tests\e2e\story-devices.spec.ts:68:1 › carried wood resets safely on reload and only delivery grants progress (11.9s)
+  ok 11 tests\e2e\story-devices.spec.ts:92:1 › S25 bridge requires real crossing and standing extends its lifetime (37.3s)
+
+
+  1) tests\e2e\s26-bats.spec.ts:61:3 › phone S26 five bounded bats, locked swoop, touch release and checkpoint route 
+
+    Error: route S26 (2840,550): {"x":2159,"y":558,"grounded":false,"vx":0,"vy":-245,"hp":130,"maxHp":130,"bodyWidth":42,"bodyHeight":84}
+
+       at journey-bot.ts:21
+
+      19 |   const state=await readJourney(page);
+      20 |   if(!state.player){await page.waitForTimeout(80);continue;}
+    > 21 |   if(Date.now()>deadline)throw Error(`route ${state.stage} (${x},${y}): ${JSON.stringify(state.player)}`);
+         |                                ^
+      22 |   const crossingRiverRoof=state.stage==='S26'&&y<=560&&((x>2180&&state.player.x>=1740&&state.player.x<2330)||(x<1860&&state.player.x>1840&&state.player.x<2330));
+      23 |   const dx=x-state.player.x,dy=(crossingRiverRoof?450:y)-state.player.y;
+      24 |   const reached=Math.abs(dx)<16&&(state.freeMovement?Math.abs(dy)<35:Math.abs(dy)<110&&state.player.grounded);
+        at moveJourney (C:\code\code10(sindbad)\tests\e2e\journey-bot.ts:21:32)
+        at finishJourneyStage (C:\code\code10(sindbad)\tests\e2e\journey-bot.ts:123:2)
+        at C:\code\code10(sindbad)\tests\e2e\s26-bats.spec.ts:78:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    docs\screenshots\s26-river\final-test-results\s26-bats-phone-S26-five-bo-679e2-elease-and-checkpoint-route\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: docs\screenshots\s26-river\final-test-results\s26-bats-phone-S26-five-bo-679e2-elease-and-checkpoint-route\error-context.md
+
+  2) tests\e2e\s26-bats.spec.ts:61:3 › tablet S26 five bounded bats, locked swoop, touch release and checkpoint route 
+
+    Error: route S26 (2840,550): {"x":2159,"y":558,"grounded":false,"vx":0,"vy":-245,"hp":130,"maxHp":130,"bodyWidth":42,"bodyHeight":84}
+
+       at journey-bot.ts:21
+
+      19 |   const state=await readJourney(page);
+      20 |   if(!state.player){await page.waitForTimeout(80);continue;}
+    > 21 |   if(Date.now()>deadline)throw Error(`route ${state.stage} (${x},${y}): ${JSON.stringify(state.player)}`);
+         |                                ^
+      22 |   const crossingRiverRoof=state.stage==='S26'&&y<=560&&((x>2180&&state.player.x>=1740&&state.player.x<2330)||(x<1860&&state.player.x>1840&&state.player.x<2330));
+      23 |   const dx=x-state.player.x,dy=(crossingRiverRoof?450:y)-state.player.y;
+      24 |   const reached=Math.abs(dx)<16&&(state.freeMovement?Math.abs(dy)<35:Math.abs(dy)<110&&state.player.grounded);
+        at moveJourney (C:\code\code10(sindbad)\tests\e2e\journey-bot.ts:21:32)
+        at finishJourneyStage (C:\code\code10(sindbad)\tests\e2e\journey-bot.ts:123:2)
+        at C:\code\code10(sindbad)\tests\e2e\s26-bats.spec.ts:78:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    docs\screenshots\s26-river\final-test-results\s26-bats-tablet-S26-five-b-97981-elease-and-checkpoint-route\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: docs\screenshots\s26-river\final-test-results\s26-bats-tablet-S26-five-b-97981-elease-and-checkpoint-route\error-context.md
+
+  3) tests\e2e\s26-river.spec.ts:82:3 › tablet S26 prepares and rides raft, opens two gates, returns from optional branches and resumes 
+
+    Error: route S26 (1560,550): {"x":1761,"y":551.7499999999997,"grounded":false,"vx":0,"vy":0,"hp":92,"maxHp":120,"bodyWidth":42,"bodyHeight":84}
+
+       at journey-bot.ts:21
+
+      19 |   const state=await readJourney(page);
+      20 |   if(!state.player){await page.waitForTimeout(80);continue;}
+    > 21 |   if(Date.now()>deadline)throw Error(`route ${state.stage} (${x},${y}): ${JSON.stringify(state.player)}`);
+         |                                ^
+      22 |   const crossingRiverRoof=state.stage==='S26'&&y<=560&&((x>2180&&state.player.x>=1740&&state.player.x<2330)||(x<1860&&state.player.x>1840&&state.player.x<2330));
+      23 |   const dx=x-state.player.x,dy=(crossingRiverRoof?450:y)-state.player.y;
+      24 |   const reached=Math.abs(dx)<16&&(state.freeMovement?Math.abs(dy)<35:Math.abs(dy)<110&&state.player.grounded);
+        at moveJourney (C:\code\code10(sindbad)\tests\e2e\journey-bot.ts:21:32)
+        at C:\code\code10(sindbad)\tests\e2e\s26-river.spec.ts:72:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    docs\screenshots\s26-river\final-test-results\s26-river-tablet-S26-prepa-59608-tional-branches-and-resumes\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: docs\screenshots\s26-river\final-test-results\s26-river-tablet-S26-prepa-59608-tional-branches-and-resumes\error-context.md
+
+  3 failed
+    tests\e2e\s26-bats.spec.ts:61:3 › phone S26 five bounded bats, locked swoop, touch release and checkpoint route 
+    tests\e2e\s26-bats.spec.ts:61:3 › tablet S26 five bounded bats, locked swoop, touch release and checkpoint route 
+    tests\e2e\s26-river.spec.ts:82:3 › tablet S26 prepares and rides raft, opens two gates, returns from optional branches and resumes 
+  8 passed (8.1m)
+
+To open last HTML report run:
+[36m[39m
+[36m  npx playwright show-report[39m
+[36m[39m

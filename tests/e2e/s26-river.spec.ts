@@ -1,0 +1,119 @@
+import {test,expect,type Page} from '@playwright/test';
+import {mkdirSync,writeFileSync} from 'node:fs';
+import {freshSave} from '../../src/core/state';
+import {SAVE_KEY} from '../../src/core/save';
+import campaign from '../../src/content/stageIndex';
+import {maps} from '../../src/content/maps';
+import {moveJourney,useJourney,finishJourneyStage} from './journey-bot';
+import {evidencePath} from './art-evidence';
+
+test.use({hasTouch:true});
+const read=(page:Page)=>page.evaluate(()=>Reflect.get(window,'__SINBAD_TEST__'));
+test.afterEach(async({page},info)=>{
+    const root=evidencePath('s26-river');mkdirSync(root,{recursive:true});
+    writeFileSync(`${root}/${info.title.startsWith('phone')?'phone':info.title.startsWith('tablet')?'tablet':info.title.includes('unprepared')?'legacy-unprepared':'legacy-bridge'}-result.json`,JSON.stringify({status:info.status,errors:info.errors,observed:await read(page).catch(()=>null)},null,2));
+});
+const object=(id:string)=>maps.S26.objects.find(o=>o.id===id)!;
+function fixture(){
+    const save=freshSave();save.checkpoint={stageId:'S26',checkpointId:'start'};
+    save.clearedStageIds=campaign.slice(0,25).map(s=>s.id);save.flags=[...new Set(campaign.slice(0,25).flatMap(s=>s.rewardFlags))];
+    save.treasures=['T01','T02','T03','T04','T05'];save.weapons=['W01','W02','W03','W04','W05','W06'];
+    save.totalXp=420;save.settings.aimAssist=false;save.settings.difficulty='normal';return save;
+}
+async function resume(page:Page){
+    await page.reload();await page.getByRole('button',{name:'이어하기 · S26'}).click();
+    await page.waitForFunction(()=>{const s=Reflect.get(window,'__SINBAD_TEST__');return s?.stage==='S26'&&s.player&&s.river;});
+}
+async function board(page:Page){
+    const raft=(await read(page)).river;
+    await moveJourney(page,raft.x-70,550);
+    await page.keyboard.down('ArrowUp');
+    await page.waitForFunction(()=>Reflect.get(window,'__SINBAD_TEST__').player.y<440,undefined,{timeout:5000});
+    await page.keyboard.up('ArrowUp');
+    await expect.poll(async()=>(await read(page)).river.riding,{timeout:10000}).toBe(true);
+}
+async function arrive(page:Page,x:number){
+    await page.waitForFunction(x=>{const s=Reflect.get(window,'__SINBAD_TEST__');return s.river.x>=x-4&&s.river.riding;},x,{timeout:25000});
+}
+
+for(const [device,viewport] of Object.entries({phone:{width:844,height:390},tablet:{width:1180,height:820}})){
+    test(`${device} S26 prepares and rides raft, opens two gates, returns from optional branches and resumes`,async({page})=>{
+        test.setTimeout(240000);await page.setViewportSize(viewport);
+        const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));page.on('console',m=>{if(m.type()==='error')errors.push(m.text());});
+        const save=fixture();save.settings.reducedMotion=device==='tablet';
+        await page.goto('/');await page.evaluate(({key,save})=>localStorage.setItem(key,JSON.stringify(save)),{key:SAVE_KEY,save});await resume(page);
+        const root=evidencePath('s26-river');mkdirSync(root,{recursive:true});
+        const shot=async(name:string)=>{writeFileSync(`${root}/${device}-${name}.json`,JSON.stringify({errors,observed:await read(page)},null,2));await page.screenshot({path:`${root}/${device}-${name}.png`});};
+        expect((await read(page)).freeMovement).toBe(false);expect((await read(page)).river.prepared).toBe(false);
+        await moveJourney(page,300,550);await page.keyboard.press('e');
+        await expect.poll(async()=>(await read(page)).storyDevices.find((o:{id:string})=>o.id==='S26.raftWood').state.carrying).toBe(true);
+        expect((await read(page)).save.completedObjectiveIds).not.toContain('S26.raftWood');await shot('wood-carried');
+        await resume(page);expect((await read(page)).river.prepared).toBe(false);
+        expect((await read(page)).storyDevices.find((o:{id:string})=>o.id==='S26.raftWood').x).toBe(300);
+        await useJourney(page,object('S26.raftWood'));await useJourney(page,object('S26.raftRope'));
+        expect((await read(page)).river.prepared).toBe(true);await shot('prepared');
+        await board(page);const initial=await read(page);await page.waitForTimeout(800);
+        expect((await read(page)).player.x).toBeGreaterThan(initial.player.x+50);
+        expect((await read(page)).freeMovement).toBe(false);await shot('ride');
+        await page.locator('#pause').click();const paused=await read(page);await page.waitForTimeout(300);
+        expect((await read(page)).river.x).toBe(paused.river.x);expect((await read(page)).sim).toBe(paused.sim);await page.locator('#resume').click();
+        await arrive(page,1000);expect((await read(page)).river.gates.every((g:{closed:boolean})=>g.closed)).toBe(true);
+        await page.keyboard.down('ArrowUp');await page.waitForTimeout(220);await page.keyboard.up('ArrowUp');
+        expect((await read(page)).player.y).toBeGreaterThanOrEqual(382);await shot('low-ceiling');
+        // Actual action input opens the first gate while standing on the raft.
+        await moveJourney(page,1000,450);await page.getByRole('button',{name:'터치 행동',exact:true}).tap();
+        await expect.poll(async()=>(await read(page)).save.completedObjectiveIds).toContain('S26.quest.1');
+        await expect.poll(async()=>(await read(page)).river.gates[0].closed).toBe(false);
+        await arrive(page,1640);await useJourney(page,object('S26.quest.2'));
+        await expect.poll(async()=>(await read(page)).river.gates[1].closed).toBe(false);await shot('water-gates-open');
+        await page.keyboard.down('s');await page.waitForTimeout(700);await page.keyboard.up('s');
+        expect((await read(page)).freeMovement).toBe(true);const waiting=(await read(page)).river.x;
+        await page.waitForTimeout(300);expect((await read(page)).river.x).toBeCloseTo(waiting,0);
+        await moveJourney(page,1560,550);await page.keyboard.down('s');await page.waitForTimeout(450);await page.keyboard.up('s');
+        await expect.poll(async()=>(await read(page)).save.checkpoint.checkpointId).toBe('middle');
+        const claimed=(await read(page)).save.claimedRewardIds;await resume(page);
+        expect((await read(page)).save.claimedRewardIds).toEqual(claimed);expect((await read(page)).river.prepared).toBe(true);
+        expect((await read(page)).river.gates.every((g:{closed:boolean})=>!g.closed)).toBe(true);
+        expect((await read(page)).player.hp).toBe((await read(page)).player.maxHp);await shot('checkpoint-resume');
+        // Enter and leave by the same 120px-wide water opening; no teleport.
+        await moveJourney(page,1780,642);await moveJourney(page,2040,642);await useJourney(page,object('S26.golden'));
+        expect((await read(page)).save.goldenHearts).toContain('G07');expect((await read(page)).player.maxHp).toBe(130);await shot('golden-side-cave');
+        const gold=(await read(page)).save;await page.keyboard.press('e');await page.waitForTimeout(150);
+        expect((await read(page)).save.totalXp).toBe(gold.totalXp);expect((await read(page)).save.goldenHearts).toEqual(gold.goldenHearts);
+        await moveJourney(page,1780,642);await moveJourney(page,1560,550);await shot('cave-return');
+        await moveJourney(page,1560,500);await page.keyboard.press('e');await board(page);
+        await arrive(page,2480);await shot('raft-arrival');
+        await page.keyboard.press('ArrowUp');await page.waitForTimeout(1100);
+        await expect.poll(async()=>(await read(page)).player.y).toBeCloseTo(398,0);
+        await useJourney(page,object('S26.branchCoins'));const coins=(await read(page)).save.coins;await shot('bonus-dead-end');
+        await page.keyboard.press('e');expect((await read(page)).save.coins).toBe(coins);
+        await moveJourney(page,2600,550);await finishJourneyStage(page);
+        expect((await read(page)).stage).toBe('S27');expect((await read(page)).save.flags).toContain('indiaArrival');
+        expect(errors).toEqual([]);await shot('india-arrival');
+    });
+}
+
+test('legacy S26 bridge save resumes with raft and can skip both optional branches',async({page})=>{
+    const save=fixture();save.checkpoint.checkpointId='middle';save.completedObjectiveIds=['S26.quest.1'];
+    save.claimedRewardIds=['S26.quest.1.reward'];save.coins=19;
+    await page.goto('/');await page.evaluate(({key,save})=>localStorage.setItem(key,JSON.stringify(save)),{key:SAVE_KEY,save});await resume(page);
+    expect((await read(page)).river.prepared).toBe(true);expect((await read(page)).save.completedObjectiveIds).toEqual(save.completedObjectiveIds);
+    expect((await read(page)).save.claimedRewardIds).toEqual(save.claimedRewardIds);
+    await finishJourneyStage(page);expect((await read(page)).stage).toBe('S27');
+    expect((await read(page)).save.goldenHearts).not.toContain('G07');expect((await read(page)).save.completedObjectiveIds).not.toContain('S26.branchCoins');
+    const root=evidencePath('s26-river');mkdirSync(root,{recursive:true});await page.screenshot({path:`${root}/legacy-optional-skip.png`});
+});
+
+test('legacy S26 unprepared middle checkpoint can return to the wood without granting progress',async({page})=>{
+    const save=fixture();save.checkpoint.checkpointId='middle';
+    await page.goto('/');await page.evaluate(({key,save})=>localStorage.setItem(key,JSON.stringify(save)),{key:SAVE_KEY,save});await resume(page);
+    expect((await read(page)).river.prepared).toBe(false);expect((await read(page)).river.gates[0].closed).toBe(false);
+    await moveJourney(page,430,550);
+    expect((await read(page)).save.completedObjectiveIds).toEqual(save.completedObjectiveIds);
+    const restored=(await read(page)).save.claimedRewardIds;
+    expect(restored.filter((id:string)=>!save.claimedRewardIds.includes(id))).toEqual(['S26.heart.1']);
+    expect((await read(page)).river.gates[0].closed).toBe(true);
+    const root=evidencePath('s26-river');mkdirSync(root,{recursive:true});await page.screenshot({path:`${root}/legacy-unprepared-return.png`});
+    await useJourney(page,object('S26.raftWood'));await useJourney(page,object('S26.raftRope'));
+    expect((await read(page)).river.prepared).toBe(true);
+});

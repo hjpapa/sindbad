@@ -1,0 +1,100 @@
+
+> sinbad-seven-treasures@0.1.0 test:e2e
+> playwright test tests/e2e/s26-river.spec.ts --reporter=list,json,html
+
+
+Running 3 tests using 1 worker
+
+(node:40164) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:40164) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x  1 tests\e2e\s26-river.spec.ts:67:3 › phone S26 prepares and rides raft, opens two gates, returns from optional branches and resumes (32.7s)
+(node:47868) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:47868) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x  2 tests\e2e\s26-river.spec.ts:67:3 › tablet S26 prepares and rides raft, opens two gates, returns from optional branches and resumes (16.6s)
+(node:51456) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:51456) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x  3 tests\e2e\s26-river.spec.ts:198:1 › legacy S26 bridge save resumes with raft and can skip both optional branches (49.3s)
+
+
+  1) tests\e2e\s26-river.spec.ts:67:3 › phone S26 prepares and rides raft, opens two gates, returns from optional branches and resumes 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBeGreaterThanOrEqual[2m([22m[32mexpected[39m[2m)[22m
+
+    Expected: >= [32m410[39m
+    Received:    [31m390.75[39m
+
+      54 |         await arrive(page,1000);expect((await read(page)).river.gates.every((g:{closed:boolean})=>g.closed)).toBe(true);
+      55 |         await page.keyboard.down('ArrowUp');await page.waitForTimeout(220);await page.keyboard.up('ArrowUp');
+    > 56 |         expect((await read(page)).player.y).toBeGreaterThanOrEqual(410);await shot('low-ceiling');
+         |                                             ^
+      57 |         // Actual action input opens the first gate while standing on the raft.
+      58 |         await moveJourney(page,1000,450);await page.getByRole('button',{name:'터치 행동',exact:true}).tap();
+      59 |         await expect.poll(async()=>(await read(page)).save.completedObjectiveIds).toContain('S26.quest.1');
+        at C:\code\code10(sindbad)\tests\e2e\s26-river.spec.ts:56:45
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\s26-river-phone-S26-prepar-2ae0b-tional-branches-and-resumes\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\s26-river-phone-S26-prepar-2ae0b-tional-branches-and-resumes\error-context.md
+
+  2) tests\e2e\s26-river.spec.ts:67:3 › tablet S26 prepares and rides raft, opens two gates, returns from optional branches and resumes 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBeGreaterThanOrEqual[2m([22m[32mexpected[39m[2m)[22m
+
+    Expected: >= [32m410[39m
+    Received:    [31m388.25[39m
+
+      54 |         await arrive(page,1000);expect((await read(page)).river.gates.every((g:{closed:boolean})=>g.closed)).toBe(true);
+      55 |         await page.keyboard.down('ArrowUp');await page.waitForTimeout(220);await page.keyboard.up('ArrowUp');
+    > 56 |         expect((await read(page)).player.y).toBeGreaterThanOrEqual(382);await shot('low-ceiling');
+         |                                             ^
+      57 |         // Actual action input opens the first gate while standing on the raft.
+      58 |         await moveJourney(page,1000,450);await page.getByRole('button',{name:'터치 행동',exact:true}).tap();
+      59 |         await expect.poll(async()=>(await read(page)).save.completedObjectiveIds).toContain('S26.quest.1');
+        at C:\code\code10(sindbad)\tests\e2e\s26-river.spec.ts:56:45
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\s26-river-tablet-S26-prepa-59608-tional-branches-and-resumes\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\s26-river-tablet-S26-prepa-59608-tional-branches-and-resumes\error-context.md
+
+  3) tests\e2e\s26-river.spec.ts:198:1 › legacy S26 bridge save resumes with raft and can skip both optional branches 
+
+    Error: route S26 (2540,550): {"x":1560,"y":548,"grounded":false,"vx":0,"vy":0,"hp":120,"maxHp":120,"bodyWidth":42,"bodyHeight":84}
+
+       at journey-bot.ts:21
+
+      19 |   const state=await readJourney(page);
+      20 |   if(!state.player){await page.waitForTimeout(80);continue;}
+    > 21 |   if(Date.now()>deadline)throw Error(`route ${state.stage} (${x},${y}): ${JSON.stringify(state.player)}`);
+         |                                ^
+      22 |   const dx=x-state.player.x,dy=y-state.player.y;
+      23 |   const reached=Math.abs(dx)<16&&(state.freeMovement?Math.abs(dy)<35:Math.abs(dy)<110&&state.player.grounded);
+      24 |   if(reached)break;
+        at moveJourney (C:\code\code10(sindbad)\tests\e2e\journey-bot.ts:21:32)
+        at useJourney (C:\code\code10(sindbad)\tests\e2e\journey-bot.ts:88:3)
+        at satisfy (C:\code\code10(sindbad)\tests\e2e\journey-bot.ts:109:3)
+        at satisfy (C:\code\code10(sindbad)\tests\e2e\journey-bot.ts:108:38)
+        at finishJourneyStage (C:\code\code10(sindbad)\tests\e2e\journey-bot.ts:120:35)
+        at C:\code\code10(sindbad)\tests\e2e\s26-river.spec.ts:94:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\s26-river-legacy-S26-bridg-9e4de-skip-both-optional-branches\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\s26-river-legacy-S26-bridg-9e4de-skip-both-optional-branches\error-context.md
+
+  3 failed
+    tests\e2e\s26-river.spec.ts:67:3 › phone S26 prepares and rides raft, opens two gates, returns from optional branches and resumes 
+    tests\e2e\s26-river.spec.ts:67:3 › tablet S26 prepares and rides raft, opens two gates, returns from optional branches and resumes 
+    tests\e2e\s26-river.spec.ts:198:1 › legacy S26 bridge save resumes with raft and can skip both optional branches 
+
+[36m  Serving HTML report at http://localhost:9323. Press Ctrl+C to quit.[39m

@@ -25,7 +25,7 @@ export const finalBlueprints:Blueprint[]=[
  {id:'S23',visual:'temple',title:'느려진 시간',steps:['시간 종 ①','시간 종 ②','시간 종 ③'],npc:'시간의 기록자',intro:['저주가 움직임을 느리게 만들고 있어요.','세 종을 울리면 정상 시간이 돌아와요.'],outro:['멈춰 있던 신전의 시간이 다시 흐르기 시작했어요.']},
  {id:'S24',visual:'temple',title:'달의 문',steps:['달 스위치 ①','달 스위치 ②'],flags:['moonBridgeKey'],boss:'달빛 석상',npc:'문지기 조각상',intro:['두 스위치를 함께 밝히면 석상의 저주 핵이 열려요.','석상은 부서지지 않고 원래 자리로 돌아갈 거예요.'],outro:['달다리 열쇠가 빛나기 시작했어요.']},
  {id:'S25',visual:'temple',title:'달빛 다리',steps:['도깨비불 ①','도깨비불 ②','도깨비불 ③','달다리 시험'],rewards:['W06','T05'],npc:'달빛 정령',intro:['세 도깨비불을 제자리로 안내해 주세요.','달빛 연꽃은 12초 동안 다리를 만들고, 다리 위에 서면 시간이 유지돼요.'],outro:['달빛 연꽃 T05와 달의 망치 W06을 얻었어요.']},
- {id:'S26',visual:'ocean',mode:'swim',title:'인도로 가는 물길',steps:['달빛 다리 시험','물길 장치 ②','항구 표식'],flags:['indiaArrival'],optional:'G07',npc:'뗏목 사공',intro:['진주의 힘으로 뗏목 주변 물길 장치를 고쳐요.','연꽃 다리가 빠른 길도 만들어 줄 거예요.'],outro:['인도의 항구에 무사히 도착했어요.']},
+ {id:'S26',visual:'ocean',mode:'swim',title:'별빛 지하강',steps:['물길 장치 ① · 방울 다리','물길 장치 ②','별 지도 출구'],flags:['indiaArrival'],optional:'G07',npc:'뗏목 사공',intro:['신밧드: 물은 어딘가로 이어져. 별이 보이는 쪽을 따라가자.','나무를 오른쪽 작업장으로 옮기고 밧줄을 묶으면 뗏목이 준비돼요. 점프로 올라타면 앞으로 가고, 내리면 기다려요.','낮은 천장 아래 두 물길 장치를 열어요. ↓로 뗏목에서 내려 진주로 수영하고, ↑를 누르면 물 밖으로 뛰어나와요. 쉼터의 뗏목 부르기로 다시 탈 수 있어요.','물속 왼쪽 입구는 황금 하트 옆동굴, 위쪽 갈림길은 선택 금화방이에요. 둘 다 되돌아올 수 있고, 별 지도 출구로 항구에 도착해요.'],outro:['별 지도에 맞는 물길을 찾아 인도의 항구에 무사히 도착했어요.']},
  {id:'S27',visual:'village',title:'미라의 시장',steps:['상자 운반 ①','상자 운반 ②','상자 운반 ③','미라의 추천서'],flags:['templePermission'],npc:'미라',intro:['시장 사람들의 상자를 옮겨 주세요.','밖의 도적은 항복시키고 신전 추천서를 받을 수 있어요.'],outro:['미라가 신전 출입 추천서를 써 주었어요.']},
  {id:'S28',visual:'garden',mode:'peace',title:'연꽃 정원',steps:['균형 추 ①','균형 추 ②','균형 추 ③'],rewards:['T06'],npc:'정원 관리인',intro:['이곳에는 싸움이 없어요.','세 균형 장치를 맞추면 연꽃 방패가 피어날 거예요.'],outro:['연꽃 방패 T06을 얻었어요. R로 잠시 피해를 막을 수 있어요.']},
  {id:'S29',visual:'jungle',title:'코끼리 구조',steps:['함정 해제 ①','함정 해제 ②','함정 해제 ③','함정 해제 ④','아기 코끼리 구조'],rewards:['T07'],optional:'G08',npc:'어미 코끼리',intro:['네 개의 함정을 차례로 풀어 주세요.','동물은 공격하지 않고 저주 장치만 없애요.'],outro:['새벽 별 T07이 구조의 빛에 응답했어요.']},
@@ -134,15 +134,32 @@ const makeMap=(b:Blueprint,index:number):MapDef=>{
    objects.push({id:'S09.featherPractice',kind:'npc',x:2530,y:356,texture:'journal',label:'깃털 연습 · 행동',needs:[gift.id],requiresItems:['T03'],dialogue:'S09.practice'},
      {id:'S09.nestGem',kind:'chest',x:2870,y:284,texture:'nestGem',label:'둥지 위 작은 보석 · 행동',needs:[gift.id],requiresItems:['T03'],reward:'coins'});
  }
+ if(b.id==='S26'){
+   platforms.splice(0,platforms.length,ground(0,1740),ground(1740,568,704),ground(2308,width-2308),
+     {x:690,y:160,w:460,h:200},{x:1190,y:160,w:300,h:230},{x:1620,y:160,w:230,h:200},
+     {x:1860,y:512,w:320,h:24},{x:2180,y:544,w:128,h:160},
+     {x:2308,y:460,w:240,h:24,oneWay:true});
+   objects[0].texture='sailor-webtoon';
+   objects.push({id:'S26.raftWood',kind:'quest',x:300,y:550,texture:'cargo',label:'뗏목 나무 · 행동으로 들기',mechanic:{type:'carry',distance:130}},
+     {id:'S26.raftRope',kind:'quest',x:440,y:550,texture:'rope',label:'뗏목 밧줄 묶기 · 행동',needs:['S26.raftWood'],mechanic:{type:'channel',duration:1000,symbol:'밧줄 묶기'}},
+     ...[470,1560,2470].map((x,i):ObjectDef=>({id:`S26.raftCall.${i+1}`,kind:'raft',x,y:500,texture:'rope',label:'뗏목 부르기 · 행동'})),
+     {id:'S26.branchCoins',kind:'chest',x:2420,y:400,texture:'chest',label:'갈림길 금화방 · 돌아갈 수 있어요',needs:['S26.quest.2'],reward:'coins'},
+     {id:'S26.routeHint',kind:'npc',x:2310,y:550,texture:'starMap',label:'별 지도 · 행동',dialogue:'S26.route'});
+   Object.assign(stepObjects[0],{x:1000,y:500,needs:['S26.raftRope']});
+   Object.assign(stepObjects[1],{x:1640,y:500});Object.assign(stepObjects[2],{x:2620,y:500});
+   Object.assign(objects.find(o=>o.id==='S26.golden')!,{x:2040,y:642,label:'수중 옆동굴 · 황금 하트 G07 · 왼쪽으로 복귀'});
+   gift.x=2700;
+ }
  const flightHazards=b.id==='S10'?
   [{id:'S10.gust.1',x:1150,y:455,radius:62,kind:'gust' as const},{id:'S10.gust.2',x:1680,y:300,radius:70,kind:'gust' as const},{id:'S10.gust.3',x:2210,y:170,radius:62,kind:'gust' as const}]:
   b.id==='S33'?[{id:'S33.debris.1',x:850,y:190,radius:48,kind:'debris' as const},{id:'S33.debris.2',x:1250,y:390,radius:48,kind:'debris' as const},{id:'S33.debris.3',x:1650,y:230,radius:48,kind:'debris' as const},{id:'S33.debris.4',x:2050,y:430,radius:48,kind:'debris' as const},{id:'S33.debris.5',x:2450,y:280,radius:48,kind:'debris' as const}]:undefined;
  if(b.id==='S16')stepObjects[3].y=350;
- return {id:b.id,width,theme:'adventure',visual:b.visual,mode:b.mode??'ground',peaceful:b.mode==='peace'||b.id==='S16',objective:b.mode==='flight'?'↑ 상승 · ↓ 하강 → 오른쪽 착륙장 (고리·공중 적은 선택)':`${b.steps.join(' → ')}${b.boss?` → ${b.boss}`:''}`,platforms,spawns,objects,hearts:b.mode==='peace'?[]:[{id:`${b.id}.heart.1`,x:Math.round(width*.45),y:550},{id:`${b.id}.heart.2`,x:Math.round(width*.76),y:550,large:true}],checkpoints:[{id:'start',x:120,y:548},{id:'middle',x:Math.round(width*.52),y:548}],flightHazards};
+ return {id:b.id,width,theme:'adventure',visual:b.visual,mode:b.mode??'ground',river:b.id==='S26',water:b.id==='S26'?[{x:480,y:450,w:2180,h:270}]:undefined,peaceful:b.mode==='peace'||b.id==='S16',objective:b.mode==='flight'?'↑ 상승 · ↓ 하강 → 오른쪽 착륙장 (고리·공중 적은 선택)':`${b.id==='S26'?'뗏목 준비 → ': ''}${b.steps.join(' → ')}${b.boss?` → ${b.boss}`:''}`,platforms,spawns,objects,hearts:b.mode==='peace'?[]:[{id:`${b.id}.heart.1`,x:Math.round(width*.45),y:550},{id:`${b.id}.heart.2`,x:Math.round(width*.76),y:550,large:true}],checkpoints:[{id:'start',x:120,y:548},{id:'middle',x:Math.round(width*.52),y:548}],flightHazards};
 };
 
 export const finalMaps=Object.fromEntries(finalBlueprints.map((b,i)=>[b.id,makeMap(b,i)])) as Record<string,MapDef>;
 export const finalDialogues=Object.fromEntries(finalBlueprints.flatMap(b=>[[`${b.id}.intro`,{name:b.npc,lines:b.intro}],[`${b.id}.outro`,{name:b.id==='S36'?'신밧드와 친구들':b.npc,lines:b.outro}]]));
 finalDialogues['S09.practice']={name:'깃털 연습',lines:['첫 발판까지 이단 점프 성공! 공중에서 점프를 한 번 더 누르면 높이 올라요.','오른쪽 위 발판으로 점프한 뒤, 떨어질 때 점프를 누르고 있으면 천천히 활공해요. 버튼을 놓으면 다시 빠르게 내려와요.','둥지 위 작은 보석은 선택 보물이에요. 발판에서 떨어져도 아래의 안전한 길로 돌아오며, 보석 없이도 다음 항해로 갈 수 있어요.']};
+finalDialogues['S26.route']={name:'별 지도',lines:['위쪽 갈림길은 금화가 있는 막다른 길이에요. 언제든 왼쪽 아래 물길로 돌아올 수 있어요.','별 지도는 오른쪽 출구의 ← 방향을 가리켜요. 수중 옆동굴의 황금 하트는 선택 탐험이에요. 왼쪽 입구로 돌아와 ↑를 누르면 다시 뗏목에 오를 수 있어요.']};
 finalMaps.S12.plantHazards=finalMaps.S12.objects.filter(object=>['S12.quest.1','S12.quest.2'].includes(object.id)).map(object=>({x:object.x-80,w:160,kind:'poison',clearedBy:object.id}));
 for(const id of ['S20','S21','S22','S29'])finalMaps[id].plantHazards=[{x:1350,w:160,kind:'vine'}];

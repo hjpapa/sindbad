@@ -1,0 +1,180 @@
+{
+  "config": {
+    "configFile": "C:\\code\\code10(sindbad)\\playwright.config.ts",
+    "rootDir": "C:/code/code10(sindbad)/tests/e2e",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": "C:\\code\\code10(sindbad)\\tests\\e2e\\server.setup.ts",
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ],
+      [
+        "html"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "C:/code/code10(sindbad)/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "C:/code/code10(sindbad)/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 240000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.55.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "s26-river.spec.ts",
+      "file": "s26-river.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "phone S26 prepares and rides raft, opens two gates, returns from optional branches and resumes",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 115168,
+                  "error": {
+                    "message": "Error: route S26 (2535,550): {\"x\":2548.941888888927,\"y\":398,\"grounded\":true,\"vx\":0,\"vy\":0,\"hp\":88,\"maxHp\":130,\"bodyWidth\":42,\"bodyHeight\":84}",
+                    "stack": "Error: route S26 (2535,550): {\"x\":2548.941888888927,\"y\":398,\"grounded\":true,\"vx\":0,\"vy\":0,\"hp\":88,\"maxHp\":130,\"bodyWidth\":42,\"bodyHeight\":84}\n    at moveJourney (C:\\code\\code10(sindbad)\\tests\\e2e\\journey-bot.ts:21:32)\n    at C:\\code\\code10(sindbad)\\tests\\e2e\\s26-river.spec.ts:90:9",
+                    "location": {
+                      "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\journey-bot.ts",
+                      "column": 32,
+                      "line": 21
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39mjourney-bot.ts:21\n\n  19 |   const state=await readJourney(page);\n  20 |   if(!state.player){await page.waitForTimeout(80);continue;}\n> 21 |   if(Date.now()>deadline)throw Error(`route ${state.stage} (${x},${y}): ${JSON.stringify(state.player)}`);\n     |                                ^\n  22 |   const crossingRiverRoof=state.stage==='S26'&&y<=560&&state.player.x>=1740&&state.player.x<2330&&(x>2180||x<1740);\n  23 |   const dx=x-state.player.x,dy=(crossingRiverRoof?450:y)-state.player.y;\n  24 |   const reached=Math.abs(dx)<16&&(state.freeMovement?Math.abs(dy)<35:Math.abs(dy)<110&&state.player.grounded);"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\journey-bot.ts",
+                        "column": 32,
+                        "line": 21
+                      },
+                      "message": "Error: route S26 (2535,550): {\"x\":2548.941888888927,\"y\":398,\"grounded\":true,\"vx\":0,\"vy\":0,\"hp\":88,\"maxHp\":130,\"bodyWidth\":42,\"bodyHeight\":84}\n\n   at journey-bot.ts:21\n\n  19 |   const state=await readJourney(page);\n  20 |   if(!state.player){await page.waitForTimeout(80);continue;}\n> 21 |   if(Date.now()>deadline)throw Error(`route ${state.stage} (${x},${y}): ${JSON.stringify(state.player)}`);\n     |                                ^\n  22 |   const crossingRiverRoof=state.stage==='S26'&&y<=560&&state.player.x>=1740&&state.player.x<2330&&(x>2180||x<1740);\n  23 |   const dx=x-state.player.x,dy=(crossingRiverRoof?450:y)-state.player.y;\n  24 |   const reached=Math.abs(dx)<16&&(state.freeMovement?Math.abs(dy)<35:Math.abs(dy)<110&&state.player.grounded);\n    at moveJourney (C:\\code\\code10(sindbad)\\tests\\e2e\\journey-bot.ts:21:32)\n    at C:\\code\\code10(sindbad)\\tests\\e2e\\s26-river.spec.ts:90:9"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 128
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 404
+                    },
+                    {
+                      "title": "Expect \"poll toContain\"",
+                      "duration": 129
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 9
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 8
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 6
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 398
+                    },
+                    {
+                      "title": "Expect \"poll toBeCloseTo\"",
+                      "duration": 12
+                    }
+                  ],
+                  "startTime": "2026-10-08T12:40:02.411Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\code\\code10(sindbad)\\test-results\\s26-river-phone-S26-prepar-2ae0b-tional-branches-and-resumes\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\code\\code10(sindbad)\\test-results\\s26-river-phone-S26-prepar-2ae0b-tional-branches-and-resumes\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\journey-bot.ts",
+                    "column": 32,
+                    "line": 21
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "2862e862adb4ae4886b1-d8fb72ae8ba2a92432a3",
+          "file": "s26-river.spec.ts",
+          "line": 82,
+          "column": 3
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-08T12:39:59.231Z",
+    "duration": 119353.786,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

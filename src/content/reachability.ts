@@ -77,7 +77,7 @@ export function wallIssues(map: MapDef) {
 }
 
 export function mapReachabilityIssues(map: MapDef) {
-    const issues: string[] = [...wallIssues(map)];
+    const issues: string[] = [...wallIssues(map),...riverGeometryIssues(map)];
     const reachable = reachablePlatformIndexes(map);
     const beforeFeather = reachablePlatformIndexes(map,false);
     map.platforms.forEach((platform, index) => {
@@ -85,7 +85,7 @@ export function mapReachabilityIssues(map: MapDef) {
             issues.push(`${map.id}: unreachable platform ${index + 1} at (${platform.x},${platform.y})`);
     });
     const supported = (x: number, y: number, platforms=reachable) => (map.mode === 'flight' || map.mode === 'swim')
-        ? x >= 24 && x <= map.width - 24 && y >= 120 && y <= 560
+        ? x >= 24 && x <= map.width - 24 && y >= 120 && y <= (map.river?656:560)
         : [...platforms].some(index => {
         const platform = map.platforms[index];
         const travel = platform.motion?.travel ?? 0;
@@ -108,5 +108,16 @@ export function mapReachabilityIssues(map: MapDef) {
         if(Math.max(clearanceAbove,clearanceBelow)<72)
             issues.push(`${hazard.id}: no child-safe route around hazard`);
     }
+    return issues;
+}
+
+export function riverGeometryIssues(map:MapDef){
+    if(!map.river)return [];
+    const issues:string[]=[];
+    const heart=map.objects.find(o=>o.reward==='G07');
+    const floor=heart&&map.platforms.find(p=>p.requiredGround&&p.x<=heart.x&&p.x+p.w>=heart.x&&p.y>heart.y);
+    const roof=heart&&map.platforms.find(p=>!p.requiredGround&&p.x<=heart.x&&p.x+p.w>=heart.x&&p.y<heart.y);
+    if(!heart||!floor||!roof||roof.x-floor.x<96||floor.y-roof.y-roof.h<140)issues.push(`${map.id}: side cave needs a wide return opening and body clearance`);
+    if(heart&&!map.water?.some(w=>heart.x>w.x&&heart.x<w.x+w.w&&heart.y>w.y&&heart.y<w.y+w.h))issues.push(`${map.id}: side cave heart must be in safe water`);
     return issues;
 }

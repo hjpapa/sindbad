@@ -1,0 +1,728 @@
+{
+  "config": {
+    "configFile": "C:\\code\\code10(sindbad)\\playwright.config.ts",
+    "rootDir": "C:/code/code10(sindbad)/tests/e2e",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": "C:\\code\\code10(sindbad)\\tests\\e2e\\server.setup.ts",
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ],
+      [
+        "html"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "C:/code/code10(sindbad)/docs/screenshots/s26-river/final-test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "C:/code/code10(sindbad)/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 240000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.55.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "mobile-abilities.spec.ts",
+      "file": "mobile-abilities.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "phone can descend, cast its selected treasure, and open S26 bridge using action",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 33208,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 529
+                    },
+                    {
+                      "title": "Expect \"poll toBeLessThan\"",
+                      "duration": 11
+                    },
+                    {
+                      "title": "Expect \"poll toContain\"",
+                      "duration": 11
+                    },
+                    {
+                      "title": "Expect \"poll toContain\"",
+                      "duration": 16
+                    }
+                  ],
+                  "startTime": "2026-10-08T12:53:08.192Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b4297d717614c5dd9451-7ebf96441d1d77e7c641",
+          "file": "mobile-abilities.spec.ts",
+          "line": 17,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "s26-bats.spec.ts",
+      "file": "s26-bats.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "phone S26 five bounded bats, locked swoop, touch release and checkpoint route",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 98677,
+                  "error": {
+                    "message": "Error: route S26 (2840,550): {\"x\":2159,\"y\":558,\"grounded\":false,\"vx\":0,\"vy\":-245,\"hp\":130,\"maxHp\":130,\"bodyWidth\":42,\"bodyHeight\":84}",
+                    "stack": "Error: route S26 (2840,550): {\"x\":2159,\"y\":558,\"grounded\":false,\"vx\":0,\"vy\":-245,\"hp\":130,\"maxHp\":130,\"bodyWidth\":42,\"bodyHeight\":84}\n    at moveJourney (C:\\code\\code10(sindbad)\\tests\\e2e\\journey-bot.ts:21:32)\n    at finishJourneyStage (C:\\code\\code10(sindbad)\\tests\\e2e\\journey-bot.ts:123:2)\n    at C:\\code\\code10(sindbad)\\tests\\e2e\\s26-bats.spec.ts:78:9",
+                    "location": {
+                      "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\journey-bot.ts",
+                      "column": 32,
+                      "line": 21
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39mjourney-bot.ts:21\n\n  19 |   const state=await readJourney(page);\n  20 |   if(!state.player){await page.waitForTimeout(80);continue;}\n> 21 |   if(Date.now()>deadline)throw Error(`route ${state.stage} (${x},${y}): ${JSON.stringify(state.player)}`);\n     |                                ^\n  22 |   const crossingRiverRoof=state.stage==='S26'&&y<=560&&((x>2180&&state.player.x>=1740&&state.player.x<2330)||(x<1860&&state.player.x>1840&&state.player.x<2330));\n  23 |   const dx=x-state.player.x,dy=(crossingRiverRoof?450:y)-state.player.y;\n  24 |   const reached=Math.abs(dx)<16&&(state.freeMovement?Math.abs(dy)<35:Math.abs(dy)<110&&state.player.grounded);"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\journey-bot.ts",
+                        "column": 32,
+                        "line": 21
+                      },
+                      "message": "Error: route S26 (2840,550): {\"x\":2159,\"y\":558,\"grounded\":false,\"vx\":0,\"vy\":-245,\"hp\":130,\"maxHp\":130,\"bodyWidth\":42,\"bodyHeight\":84}\n\n   at journey-bot.ts:21\n\n  19 |   const state=await readJourney(page);\n  20 |   if(!state.player){await page.waitForTimeout(80);continue;}\n> 21 |   if(Date.now()>deadline)throw Error(`route ${state.stage} (${x},${y}): ${JSON.stringify(state.player)}`);\n     |                                ^\n  22 |   const crossingRiverRoof=state.stage==='S26'&&y<=560&&((x>2180&&state.player.x>=1740&&state.player.x<2330)||(x<1860&&state.player.x>1840&&state.player.x<2330));\n  23 |   const dx=x-state.player.x,dy=(crossingRiverRoof?450:y)-state.player.y;\n  24 |   const reached=Math.abs(dx)<16&&(state.freeMovement?Math.abs(dy)<35:Math.abs(dy)<110&&state.player.grounded);\n    at moveJourney (C:\\code\\code10(sindbad)\\tests\\e2e\\journey-bot.ts:21:32)\n    at finishJourneyStage (C:\\code\\code10(sindbad)\\tests\\e2e\\journey-bot.ts:123:2)\n    at C:\\code\\code10(sindbad)\\tests\\e2e\\s26-bats.spec.ts:78:9"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 7
+                    }
+                  ],
+                  "startTime": "2026-10-08T12:53:41.887Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\code\\code10(sindbad)\\docs\\screenshots\\s26-river\\final-test-results\\s26-bats-phone-S26-five-bo-679e2-elease-and-checkpoint-route\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\code\\code10(sindbad)\\docs\\screenshots\\s26-river\\final-test-results\\s26-bats-phone-S26-five-bo-679e2-elease-and-checkpoint-route\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\journey-bot.ts",
+                    "column": 32,
+                    "line": 21
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "5f27eef458a7b9a365b2-c080ee380f40298fbb94",
+          "file": "s26-bats.spec.ts",
+          "line": 61,
+          "column": 3
+        },
+        {
+          "title": "tablet S26 five bounded bats, locked swoop, touch release and checkpoint route",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 99431,
+                  "error": {
+                    "message": "Error: route S26 (2840,550): {\"x\":2159,\"y\":558,\"grounded\":false,\"vx\":0,\"vy\":-245,\"hp\":130,\"maxHp\":130,\"bodyWidth\":42,\"bodyHeight\":84}",
+                    "stack": "Error: route S26 (2840,550): {\"x\":2159,\"y\":558,\"grounded\":false,\"vx\":0,\"vy\":-245,\"hp\":130,\"maxHp\":130,\"bodyWidth\":42,\"bodyHeight\":84}\n    at moveJourney (C:\\code\\code10(sindbad)\\tests\\e2e\\journey-bot.ts:21:32)\n    at finishJourneyStage (C:\\code\\code10(sindbad)\\tests\\e2e\\journey-bot.ts:123:2)\n    at C:\\code\\code10(sindbad)\\tests\\e2e\\s26-bats.spec.ts:78:9",
+                    "location": {
+                      "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\journey-bot.ts",
+                      "column": 32,
+                      "line": 21
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39mjourney-bot.ts:21\n\n  19 |   const state=await readJourney(page);\n  20 |   if(!state.player){await page.waitForTimeout(80);continue;}\n> 21 |   if(Date.now()>deadline)throw Error(`route ${state.stage} (${x},${y}): ${JSON.stringify(state.player)}`);\n     |                                ^\n  22 |   const crossingRiverRoof=state.stage==='S26'&&y<=560&&((x>2180&&state.player.x>=1740&&state.player.x<2330)||(x<1860&&state.player.x>1840&&state.player.x<2330));\n  23 |   const dx=x-state.player.x,dy=(crossingRiverRoof?450:y)-state.player.y;\n  24 |   const reached=Math.abs(dx)<16&&(state.freeMovement?Math.abs(dy)<35:Math.abs(dy)<110&&state.player.grounded);"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\journey-bot.ts",
+                        "column": 32,
+                        "line": 21
+                      },
+                      "message": "Error: route S26 (2840,550): {\"x\":2159,\"y\":558,\"grounded\":false,\"vx\":0,\"vy\":-245,\"hp\":130,\"maxHp\":130,\"bodyWidth\":42,\"bodyHeight\":84}\n\n   at journey-bot.ts:21\n\n  19 |   const state=await readJourney(page);\n  20 |   if(!state.player){await page.waitForTimeout(80);continue;}\n> 21 |   if(Date.now()>deadline)throw Error(`route ${state.stage} (${x},${y}): ${JSON.stringify(state.player)}`);\n     |                                ^\n  22 |   const crossingRiverRoof=state.stage==='S26'&&y<=560&&((x>2180&&state.player.x>=1740&&state.player.x<2330)||(x<1860&&state.player.x>1840&&state.player.x<2330));\n  23 |   const dx=x-state.player.x,dy=(crossingRiverRoof?450:y)-state.player.y;\n  24 |   const reached=Math.abs(dx)<16&&(state.freeMovement?Math.abs(dy)<35:Math.abs(dy)<110&&state.player.grounded);\n    at moveJourney (C:\\code\\code10(sindbad)\\tests\\e2e\\journey-bot.ts:21:32)\n    at finishJourneyStage (C:\\code\\code10(sindbad)\\tests\\e2e\\journey-bot.ts:123:2)\n    at C:\\code\\code10(sindbad)\\tests\\e2e\\s26-bats.spec.ts:78:9"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 12
+                    }
+                  ],
+                  "startTime": "2026-10-08T12:55:21.929Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\code\\code10(sindbad)\\docs\\screenshots\\s26-river\\final-test-results\\s26-bats-tablet-S26-five-b-97981-elease-and-checkpoint-route\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\code\\code10(sindbad)\\docs\\screenshots\\s26-river\\final-test-results\\s26-bats-tablet-S26-five-b-97981-elease-and-checkpoint-route\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\journey-bot.ts",
+                    "column": 32,
+                    "line": 21
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "5f27eef458a7b9a365b2-991d362d750b18ddbadd",
+          "file": "s26-bats.spec.ts",
+          "line": 61,
+          "column": 3
+        },
+        {
+          "title": "legacy S26 bandit rewards stay claimed and new optional bats do not block the exit",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7731,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 125
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 124
+                    }
+                  ],
+                  "startTime": "2026-10-08T12:57:03.192Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5f27eef458a7b9a365b2-ed698415314f4d2f237f",
+          "file": "s26-bats.spec.ts",
+          "line": 229,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "s26-river.spec.ts",
+      "file": "s26-river.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "phone S26 prepares and rides raft, opens two gates, returns from optional branches and resumes",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 58788,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 128
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 917
+                    },
+                    {
+                      "title": "Expect \"poll toContain\"",
+                      "duration": 123
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 12
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 10
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 9
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 388
+                    },
+                    {
+                      "title": "Expect \"poll toBeCloseTo\"",
+                      "duration": 8
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 125
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 120
+                    }
+                  ],
+                  "startTime": "2026-10-08T12:57:11.410Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2862e862adb4ae4886b1-d8fb72ae8ba2a92432a3",
+          "file": "s26-river.spec.ts",
+          "line": 82,
+          "column": 3
+        },
+        {
+          "title": "tablet S26 prepares and rides raft, opens two gates, returns from optional branches and resumes",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 71426,
+                  "error": {
+                    "message": "Error: route S26 (1560,550): {\"x\":1761,\"y\":551.7499999999997,\"grounded\":false,\"vx\":0,\"vy\":0,\"hp\":92,\"maxHp\":120,\"bodyWidth\":42,\"bodyHeight\":84}",
+                    "stack": "Error: route S26 (1560,550): {\"x\":1761,\"y\":551.7499999999997,\"grounded\":false,\"vx\":0,\"vy\":0,\"hp\":92,\"maxHp\":120,\"bodyWidth\":42,\"bodyHeight\":84}\n    at moveJourney (C:\\code\\code10(sindbad)\\tests\\e2e\\journey-bot.ts:21:32)\n    at C:\\code\\code10(sindbad)\\tests\\e2e\\s26-river.spec.ts:72:9",
+                    "location": {
+                      "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\journey-bot.ts",
+                      "column": 32,
+                      "line": 21
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39mjourney-bot.ts:21\n\n  19 |   const state=await readJourney(page);\n  20 |   if(!state.player){await page.waitForTimeout(80);continue;}\n> 21 |   if(Date.now()>deadline)throw Error(`route ${state.stage} (${x},${y}): ${JSON.stringify(state.player)}`);\n     |                                ^\n  22 |   const crossingRiverRoof=state.stage==='S26'&&y<=560&&((x>2180&&state.player.x>=1740&&state.player.x<2330)||(x<1860&&state.player.x>1840&&state.player.x<2330));\n  23 |   const dx=x-state.player.x,dy=(crossingRiverRoof?450:y)-state.player.y;\n  24 |   const reached=Math.abs(dx)<16&&(state.freeMovement?Math.abs(dy)<35:Math.abs(dy)<110&&state.player.grounded);"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\journey-bot.ts",
+                        "column": 32,
+                        "line": 21
+                      },
+                      "message": "Error: route S26 (1560,550): {\"x\":1761,\"y\":551.7499999999997,\"grounded\":false,\"vx\":0,\"vy\":0,\"hp\":92,\"maxHp\":120,\"bodyWidth\":42,\"bodyHeight\":84}\n\n   at journey-bot.ts:21\n\n  19 |   const state=await readJourney(page);\n  20 |   if(!state.player){await page.waitForTimeout(80);continue;}\n> 21 |   if(Date.now()>deadline)throw Error(`route ${state.stage} (${x},${y}): ${JSON.stringify(state.player)}`);\n     |                                ^\n  22 |   const crossingRiverRoof=state.stage==='S26'&&y<=560&&((x>2180&&state.player.x>=1740&&state.player.x<2330)||(x<1860&&state.player.x>1840&&state.player.x<2330));\n  23 |   const dx=x-state.player.x,dy=(crossingRiverRoof?450:y)-state.player.y;\n  24 |   const reached=Math.abs(dx)<16&&(state.freeMovement?Math.abs(dy)<35:Math.abs(dy)<110&&state.player.grounded);\n    at moveJourney (C:\\code\\code10(sindbad)\\tests\\e2e\\journey-bot.ts:21:32)\n    at C:\\code\\code10(sindbad)\\tests\\e2e\\s26-river.spec.ts:72:9"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 127
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 395
+                    },
+                    {
+                      "title": "Expect \"poll toContain\"",
+                      "duration": 119
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 9
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 10
+                    }
+                  ],
+                  "startTime": "2026-10-08T12:58:10.211Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\code\\code10(sindbad)\\docs\\screenshots\\s26-river\\final-test-results\\s26-river-tablet-S26-prepa-59608-tional-branches-and-resumes\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\code\\code10(sindbad)\\docs\\screenshots\\s26-river\\final-test-results\\s26-river-tablet-S26-prepa-59608-tional-branches-and-resumes\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\journey-bot.ts",
+                    "column": 32,
+                    "line": 21
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "2862e862adb4ae4886b1-ad2a79d46c410c07ac27",
+          "file": "s26-river.spec.ts",
+          "line": 82,
+          "column": 3
+        },
+        {
+          "title": "legacy S26 bridge save resumes with raft and can skip both optional branches",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 15746,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 131
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 153
+                    }
+                  ],
+                  "startTime": "2026-10-08T12:59:23.168Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2862e862adb4ae4886b1-a392eb960f98a9e4d66b",
+          "file": "s26-river.spec.ts",
+          "line": 216,
+          "column": 1
+        },
+        {
+          "title": "legacy S26 unprepared middle checkpoint can return to the wood without granting progress",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 12400,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-08T12:59:39.413Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2862e862adb4ae4886b1-04f049aa5a0cec29f453",
+          "file": "s26-river.spec.ts",
+          "line": 248,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "story-devices.spec.ts",
+      "file": "story-devices.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "S16 protected entrance earns pearl before actual swim practice and survives reload",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 25082,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 578
+                    },
+                    {
+                      "title": "Expect \"poll toEqual\"",
+                      "duration": 12
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 447
+                    }
+                  ],
+                  "startTime": "2026-10-08T12:59:54.155Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "76ccd901a4c460738e0a-1cefc9df790d1532835a",
+          "file": "story-devices.spec.ts",
+          "line": 43,
+          "column": 1
+        },
+        {
+          "title": "carried wood resets safely on reload and only delivery grants progress",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 11943,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 480
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 490
+                    }
+                  ],
+                  "startTime": "2026-10-08T13:00:20.056Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "76ccd901a4c460738e0a-f2291265e45c5d9c2eaa",
+          "file": "story-devices.spec.ts",
+          "line": 68,
+          "column": 1
+        },
+        {
+          "title": "S25 bridge requires real crossing and standing extends its lifetime",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 37342,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 444
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 21
+                    }
+                  ],
+                  "startTime": "2026-10-08T13:00:32.012Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "76ccd901a4c460738e0a-87cf8a6c7b9af6a55944",
+          "file": "story-devices.spec.ts",
+          "line": 92,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-08T12:53:04.835Z",
+    "duration": 485153.211,
+    "expected": 8,
+    "skipped": 0,
+    "unexpected": 3,
+    "flaky": 0
+  }
+}

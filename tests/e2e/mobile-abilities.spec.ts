@@ -3,6 +3,7 @@ import {freshSave} from '../../src/core/state';
 import {SAVE_KEY} from '../../src/core/save';
 import campaign from '../../src/content/stageIndex';
 import {maps} from '../../src/content/maps';
+import {useJourney} from './journey-bot';
 
 const read=(page:Page)=>page.evaluate(()=>Reflect.get(window,'__SINBAD_TEST__'));
 async function hold(page:Page,action:string,ms:number){
@@ -36,6 +37,8 @@ test('phone can descend, cast its selected treasure, and open S26 bridge using a
     const mp=(await read(page)).mp;await hold(page,'skill',60);
     await expect.poll(async()=>(await read(page)).mp).toBeLessThan(mp-10);
     const target=maps.S26.objects.find(object=>object.kind==='bridge')!;
+    await useJourney(page,maps.S26.objects.find(o=>o.id==='S26.raftWood')!);
+    await useJourney(page,maps.S26.objects.find(o=>o.id==='S26.raftRope')!);
     const deadline=Date.now()+16000;
     while(Math.abs((await read(page)).player.x-target.x)>25){
         expect(Date.now()).toBeLessThan(deadline);

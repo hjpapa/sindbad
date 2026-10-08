@@ -23,6 +23,7 @@ import {rocFlightFrame,rocFlightLayout} from '../content/rocArt';
 import {rocBossId,rocCoresBroken,rocCoreReward,rocCoreOpen,rocPatterns,rocZone,insideRocZone} from '../core/rocBoss';
 import {canGlide,glideFallSpeed} from '../core/glide';
 import {batFlightBounds,batPatrol,batFlightTarget,batSwoop,type FlightPoint} from '../core/batFlight';
+import {riverRoute,raftPrepared,riverStop,advanceRaft,swimmingInRiver} from '../core/river';
 import {projectileArtFor,sceneEffectKeys,projectileFrame,effectFrame,effectDuration,type EffectArtKey} from '../content/effects';
 const FONT='"Malgun Gothic","Apple SD Gothic Neo","Noto Sans KR",sans-serif';
 // What the touch action button would do right now, so its icon can match.
@@ -99,6 +100,8 @@ export class Stage extends Phaser.Scene {
     private storyFx!:Phaser.GameObjects.Graphics;
     private friendshipAt=20000;
     private bridgeBody?:Phaser.GameObjects.Rectangle;
+    private riverRaft?:{rect:Phaser.GameObjects.Rectangle;body:Phaser.Physics.Arcade.Body;art:Phaser.GameObjects.Image;label:Phaser.GameObjects.Text;riding:boolean};
+    private wasRiverSwimming=false;
     private flightMount?: Phaser.GameObjects.Image;
     private flightPassenger?: Phaser.GameObjects.Image;
     private flightHazards: {def:FlightHazard;sprite:Phaser.GameObjects.Image;label:Phaser.GameObjects.Text}[]=[];
@@ -120,7 +123,7 @@ export class Stage extends Phaser.Scene {
     private sinkAt:number|null=null;
     private waveArt!:Phaser.GameObjects.Graphics;
     private moving: {def:Platform;rect:Phaser.GameObjects.Rectangle;top:Phaser.GameObjects.TileSprite;body:Phaser.Physics.Arcade.Body}[]=[];
-    private doors: {id:string;rect:Phaser.GameObjects.Rectangle;glow:Phaser.GameObjects.TileSprite}[]=[];
+    private doors: {id:string;rect:Phaser.GameObjects.Rectangle;glow:Phaser.GameObjects.TileSprite;returnOnly?:boolean}[]=[];
     private wakeAt:number|null=null;
     private air=10000;
     private waterTick=0;
@@ -218,6 +221,7 @@ export class Stage extends Phaser.Scene {
     create() {
         this.mapDef = maps[this.host.save.checkpoint.stageId];
         this.deviceStates.clear();this.friendshipAt=20000;this.bridgeBody=undefined;this.poisonUntil=0;this.poisonTick=0;this.plantReady=0;
+        this.riverRaft=undefined;this.wasRiverSwimming=false;
         this.mirrorDirections=this.done('S08.light')?[...mirrorSolution]:[0,0,0];
         this.moving=[];this.doors=[];this.wakeAt=null;this.air=10000;this.waterTick=0;
         this.flameReady=0;this.flameUsed=-Infinity;this.pulse=null;this.wave=null;this.grip=null;this.sinkAt=null;
@@ -295,6 +299,7 @@ export class Stage extends Phaser.Scene {
         if(this.freeMovement()){(this.player.body as Phaser.Physics.Arcade.Body).setAllowGravity(false);this.player.setDragY(1800).setMaxVelocity(330,330);}
         this.physics.add.collider(this.player, this.land);
         for(const platform of this.moving)this.physics.add.collider(this.player,platform.rect);
+        if(this.mapDef.river)this.createRiver(cp.id);
         for(const o of this.mapDef.objects.filter(o=>['gate','lightGate','vision'].includes(o.kind))){const rect=this.add.rectangle(o.x+48,440,28,336,0xc892aa,0);this.land.add(rect);const glow=this.add.tileSprite(o.x+48,440,44,336,this.barrierTexture(o.kind)).setDepth(3).setAlpha(.85);this.doors.push({id:o.id,rect,glow});if(this.done(o.id)){(rect.body as Phaser.Physics.Arcade.StaticBody).enable=false;rect.setVisible(false);glow.setVisible(false);}}
         this.physics.world.setBounds(0, -200, this.mapDef.width, 1400);
         this.cameras.main.setBounds(0, 0, this.mapDef.width, 720);
@@ -503,7 +508,7 @@ export class Stage extends Phaser.Scene {
         this.txt(42, 187, `${this.mapDef.id} / ${theme === 'harbor' ? '첫 출항' : theme === 'reef' ? '안개 너머' : '폭풍의 밤'}`, { fontSize: '23px', fontFamily: 'sans-serif', color: theme === 'storm' ? '#b8cdd3' : '#385e63' }).setScrollFactor(0.3).setDepth(-5);
     }
     private done(id: string) { return this.host.save.completedObjectiveIds.includes(id); }
-    private freeMovement(){return this.mapDef?.mode==='flight'||(this.mapDef?.mode==='swim'&&this.host.save.treasures.includes('T04'));}
+    private freeMovement(){return this.mapDef?.mode==='flight'||(this.mapDef?.mode==='swim'&&this.host.save.treasures.includes('T04')&&(!this.mapDef.river||!!this.player&&swimmingInRiver(this.player.x,this.player.y)));}
     protect(ms: number) { this.invulnerableUntil = Math.max(this.invulnerableUntil, this.sim + ms); }
     freeze(value: boolean) { this.stopped = value; this.host.input.clear(); if (value) {
         this.physics.pause();
@@ -515,6 +520,7 @@ export class Stage extends Phaser.Scene {
         const roc=this.enemies.find(e=>e.def.id===rocBossId);
         return {
             gliding:this.gliding,
+            river:this.riverRaft?{prepared:raftPrepared(this.host.save),x:this.riverRaft.rect.x,top:riverRoute.top,riding:this.riverRaft.riding,stop:riverStop(this.host.save),gates:this.doors.filter(d=>d.id.startsWith('S26.quest.')).map(d=>({id:d.id,closed:(d.rect.body as Phaser.Physics.Arcade.StaticBody).enable}))}:null,
             batFlights:this.enemies.filter(e=>e.def.flightPath).map(e=>({id:e.def.id,bounds:batFlightBounds(e.def,e.def.flightPath!),target:{x:e.target,y:e.targetY},phase:e.flightPhase??0})),
             extraJump:this.extraJump,
             rocEncounter:roc?{pattern:roc.pattern,patternName:rocPatterns[roc.pattern].name,remaining:Math.max(0,roc.until-this.sim),
@@ -575,7 +581,10 @@ export class Stage extends Phaser.Scene {
                 this.safe = { x: this.player.x, y: this.player.y - 2 };
         }
         const freeMove=this.freeMovement();
+        if(this.mapDef.river&&this.wasRiverSwimming&&!freeMove&&input.held('jump'))this.player.setVelocityY(-640);
+        this.wasRiverSwimming=!!this.mapDef.river&&!!freeMove;
         body.setAllowGravity(!freeMove);
+        if(this.mapDef.river)this.player.setDragY(freeMove?1800:0);
         if(freeMove&&this.player.y<120){this.player.setY(120);this.player.setVelocityY(Math.max(0,body.velocity.y));}
         if(input.held('jump')&&freeMove&&this.player.y>120)this.player.setVelocityY(-245);
         else if(input.held('down')&&freeMove)this.player.setVelocityY(245);
@@ -794,7 +803,7 @@ export class Stage extends Phaser.Scene {
         return key;
     }
     private nearbyObject(){
-        return this.objects.filter(o=>!o.def.flightRing&&o.def.kind!=='rocCore'&&o.def.kind!=='checkpoint'&&Math.abs(o.def.x-this.player.x)<90&&Math.abs(o.def.y-this.player.y)<95).sort((a,b)=>Math.abs(a.def.x-this.player.x)-Math.abs(b.def.x-this.player.x))[0];
+        return this.objects.filter(o=>!o.def.flightRing&&o.def.kind!=='rocCore'&&o.def.kind!=='checkpoint'&&!(['S26.raftWood','S26.raftRope'].includes(o.def.id)&&this.done(o.def.id))&&Math.abs(o.def.x-this.player.x)<90&&Math.abs(o.def.y-this.player.y)<95).sort((a,b)=>Math.abs(a.def.x-this.player.x)-Math.abs(b.def.x-this.player.x))[0];
     }
     // An enemy close enough that the action button should swing at it: one
     // that is winding up or striking. `any` also accepts calm enemies, for
@@ -813,7 +822,7 @@ export class Stage extends Phaser.Scene {
         const def=nearby.def;
         if(def.kind==='shell'||def.kind==='remote'||def.breakWeapon)return true;
         if(this.mapDef.mode==='flight')return false;
-        const mustInteract=!!def.mechanic||['exit','ending','rescue','crisis','rope','gift'].includes(def.kind);
+        const mustInteract=!!def.mechanic||['exit','ending','rescue','crisis','rope','gift','raft','bridge'].includes(def.kind);
         if(mustInteract&&!this.done(def.id))return false;
         if(this.closeThreat())return true;
         return this.done(def.id)&&['npc','truthGift','flameGift','journal','vision'].includes(def.kind)&&!!this.closeThreat(true);
@@ -877,7 +886,7 @@ export class Stage extends Phaser.Scene {
             }
         }
         if(this.bridgeBody){
-            const onBridge=Math.abs(this.player.x-this.bridgeBody.x)<155&&Math.abs((this.player.body as Phaser.Physics.Arcade.Body).bottom-512)<12;
+            const onBridge=Math.abs(this.player.x-this.bridgeBody.x)<155&&Math.abs((this.player.body as Phaser.Physics.Arcade.Body).bottom-(this.bridgeBody.y-12))<12;
             if(onBridge)this.bridgeUntil=Math.max(this.bridgeUntil,this.sim+600);
             this.bridgeBody.setVisible(this.sim<this.bridgeUntil);
             (this.bridgeBody.body as Phaser.Physics.Arcade.StaticBody).enable=this.sim<this.bridgeUntil;
@@ -941,9 +950,10 @@ export class Stage extends Phaser.Scene {
         return true;
     }
     private createMoonBridge(x:number){
+        const top=this.mapDef.river?560:512;
         this.bridgeUntil=this.sim+12000;
-        if(!this.bridgeBody){this.bridgeBody=this.add.rectangle(x+160,524,300,24,0xb9def2,.75).setStrokeStyle(3,0xffe8af).setDepth(3);this.land.add(this.bridgeBody);const body=this.bridgeBody.body as Phaser.Physics.Arcade.StaticBody;body.checkCollision.left=false;body.checkCollision.right=false;body.checkCollision.down=false;}
-        else {this.bridgeBody.setPosition(x+160,524);(this.bridgeBody.body as Phaser.Physics.Arcade.StaticBody).updateFromGameObject();}
+        if(!this.bridgeBody){this.bridgeBody=this.add.rectangle(x+160,top+12,300,24,0xb9def2,.75).setStrokeStyle(3,0xffe8af).setDepth(3);this.land.add(this.bridgeBody);const body=this.bridgeBody.body as Phaser.Physics.Arcade.StaticBody;body.checkCollision.left=false;body.checkCollision.right=false;body.checkCollision.down=false;}
+        else {this.bridgeBody.setPosition(x+160,top+12);(this.bridgeBody.body as Phaser.Physics.Arcade.StaticBody).updateFromGameObject();}
     }
     private updateCrystal(){
         if(this.mapDef.id!=='S08')return;
@@ -968,7 +978,54 @@ export class Stage extends Phaser.Scene {
             if(visible&&near&&!this.done(o.def.id)){const size=10+3*Math.sin(this.sim/250);this.crystalArt.lineStyle(3,0xe2d4ff).strokeCircle(o.def.x,o.def.y-15,size);}
         }
     }
+    private createRiver(checkpointId:string){
+        const g=this.make.graphics({x:0,y:0});
+        if(!this.textures.exists('river-raft')){
+            g.fillStyle(0x152c40,.5).fillEllipse(130,26,260,32);
+            for(let i=0;i<6;i++)g.fillStyle(i%2?0x9e754b:0xb68c58).fillRoundedRect(8+i*41,2,40,26,9);
+            g.lineStyle(5,0xe6cc95).lineBetween(30,3,30,28).lineBetween(228,3,228,28);
+            g.generateTexture('river-raft',260,40);
+        }g.destroy();
+        const x=checkpointId==='middle'?riverRoute.middle:riverRoute.start;
+        const rect=this.add.rectangle(x,riverRoute.top+12,riverRoute.width,24,0,0);
+        this.physics.add.existing(rect);const body=rect.body as Phaser.Physics.Arcade.Body;
+        body.setAllowGravity(false).setImmovable(true);body.checkCollision.left=false;body.checkCollision.right=false;body.checkCollision.down=false;
+        body.friction.x=0;
+        const art=this.add.image(x,riverRoute.top+12,'river-raft').setDepth(3);
+        const label=this.txt(x,riverRoute.top+42,'뗏목 · ↑ 올라타기 / ↓ 수영',{fontSize:'16px',color:'#fff1c8',backgroundColor:'#183d50',padding:{x:6,y:3}}).setOrigin(.5).setDepth(12);
+        this.riverRaft={rect,body,art,label,riding:false};
+        this.physics.add.collider(this.player,rect,undefined,()=>raftPrepared(this.host.save)&&!this.host.input.held('down')&&(this.player.body as Phaser.Physics.Arcade.Body).bottom<=riverRoute.top+20);
+        for(const [id,x] of [['S26.quest.1',1150],['S26.quest.2',1720]] as const){
+            const rect=this.add.rectangle(x,484,32,248,0,0);this.land.add(rect);
+            const glow=this.add.tileSprite(x,484,38,248,this.barrierTexture('gate')).setDepth(3);
+            this.doors.push({id,rect,glow,returnOnly:checkpointId==='middle'&&x<riverRoute.middle});
+        }
+        this.add.rectangle(1570,420,360,840,0x243d5a,.12).setDepth(-8);
+        this.add.rectangle(1570,450,2180,2,0xa3e0e2,.8).setDepth(4);
+        this.txt(720,335,'낮은 천장 · 점프 대신 뗏목으로',{fontSize:'17px',color:'#fff1c8'}).setDepth(5);
+        this.txt(1760,572,'↓ 수중 옆동굴\n← 같은 입구로 복귀',{fontSize:'16px',color:'#d6ffff',backgroundColor:'#163c52',padding:{x:5,y:3}}).setDepth(5);
+        this.txt(2320,350,'↑ 선택 금화방 · 막다른 길\n↓ 별 지도 출구 →',{fontSize:'16px',color:'#fff1c8',backgroundColor:'#163c52',padding:{x:5,y:3}}).setDepth(5);
+    }
+    private updateRiver(dt:number){
+        const raft=this.riverRaft!,body=this.player.body as Phaser.Physics.Arcade.Body;
+        const ready=raftPrepared(this.host.save);
+        raft.body.enable=ready;raft.art.setVisible(ready);raft.label.setVisible(ready&&Math.abs(raft.rect.x-this.player.x)<600);
+        raft.riding=ready&&!this.host.input.held('down')&&Math.abs(body.bottom-riverRoute.top)<12&&Math.abs(this.player.x-raft.rect.x)<riverRoute.width/2+12&&body.velocity.y>=0;
+        const next=advanceRaft(raft.rect.x,riverStop(this.host.save),dt,raft.riding);
+        // A rock shelf may also support the feet. Carry once explicitly so
+        // Arcade choosing that static contact cannot leave the rider behind.
+        if(raft.riding){body.position.x+=next-raft.rect.x;body.updateCenter();}
+        raft.body.setVelocityX((next-raft.rect.x)/Math.max(dt,1)*1000);
+        raft.art.setPosition(raft.rect.x,riverRoute.top+12);raft.label.setX(raft.rect.x);
+        for(const door of this.doors.filter(d=>d.id.startsWith('S26.quest.'))){
+            if(door.returnOnly&&this.player.x<door.rect.x-60)door.returnOnly=false;
+            const open=this.done(door.id)||!!door.returnOnly;
+            (door.rect.body as Phaser.Physics.Arcade.StaticBody).enable=!open;
+            door.glow.setVisible(!open);
+        }
+    }
     private updateAdventure(dt:number) {
+        if(this.mapDef.river)this.updateRiver(dt);
         if(this.mapDef.mode==='flight')this.updateFlight();
         if(this.mapDef.id==='S07'){
             if(this.done('S07.wave.3')&&this.sinkAt===null)this.sinkAt=this.sim;
@@ -1474,6 +1531,12 @@ export class Stage extends Phaser.Scene {
         this.host.notice(def.reward==='W02'?'바람 부메랑 획득! Q로 바꿔 J로 던져 보세요.':def.reward?.startsWith('G')?'황금 하트! 최대 체력 +10, 완전 회복':def.kind==='rescue'?'공기방울 보호를 저장했어요. 아직 자유 수영은 아니에요.':`${def.label} · 완료`);
     }    private interact(def: ObjectDef) {
         if(def.kind==='rocCore')return;
+        if(def.kind==='raft'){
+            if(!raftPrepared(this.host.save)){this.host.notice('나무를 운반하고 밧줄을 묶으면 뗏목이 준비돼요.');return;}
+            const raft=this.riverRaft!;
+            if(!raft.riding){raft.body.reset(def.x===470?riverRoute.start:def.x,riverRoute.top+12);raft.body.setVelocity(0);}
+            this.host.notice('뗏목이 왔어요. ↑로 올라타고, ↓로 내려 수영해요.');return;
+        }
         if(def.breakWeapon){this.host.notice('달빛 방망이를 장착하고 Space 또는 J로 금 간 바위를 공격하세요.');return;}
         if (def.needs?.some(id => !this.done(id))) {
             this.host.notice('아직 할 일이 있어요. ' + this.mapDef.objective);

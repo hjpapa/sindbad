@@ -50,30 +50,32 @@ for(const [device,viewport] of Object.entries({phone:{width:844,height:390},tabl
         observations.push({patrolSamples:samples});await shot('patrol');
         await page.locator('#pause').click();const paused=await read(page);await page.waitForTimeout(350);
         expect((await read(page)).sim).toBe(paused.sim);expect((await read(page)).enemies).toEqual(paused.enemies);await page.locator('#resume').click();
-        let e=await enemy();await moveJourney(page,e.x-40,e.y);const locked=await state(page,'telegraph');
+        let e=await enemy();await moveJourney(page,700,530);const locked=await state(page,'telegraph');
         const hp=locked.player.hp,target=locked.batFlights.find((b:{id:string})=>b.id==='S26.enemy.1').target;
-        // Move clear of the actual locked marker before taking a screenshot.
-        // A fixed horizontal destination can cross that marker on approach.
-        await page.keyboard.down('ArrowUp');await shot('warning');await page.waitForTimeout(450);await page.keyboard.up('ArrowUp');const recovered=await state(page,'recover');
+        // Stay left of the bat's bounded marker, then swim out along the
+        // river floor. Air above the river now uses normal gravity.
+        await shot('warning');await moveJourney(page,600,530);const recovered=await state(page,'recover');
         expect(recovered.player.hp).toBe(hp);expect(recovered.batFlights.find((b:{id:string})=>b.id==='S26.enemy.1').target).toEqual(target);await shot('evaded');
-        e=await enemy();await moveJourney(page,e.x-30,e.y);await state(page,'telegraph');const contactHp=(await read(page)).player.hp;
+        e=await enemy();await moveJourney(page,740,530);const contact=await state(page,'telegraph');const contactHp=contact.player.hp;
+        await moveJourney(page,contact.batFlights.find((b:{id:string})=>b.id==='S26.enemy.1').target.x,530);
         await state(page,'recover');expect((await read(page)).player.hp).toBe(contactHp-14);expect((await read(page)).projectiles).toBe(0);await shot('contact');
-        const before=(await read(page)).save;let touched=false;
+        await page.keyboard.press('Digit6');const before=(await read(page)).save;let touched=false;
         for(let hit=0;hit<7&&(await enemy()).hp>0;hit++){
-            e=await enemy();await moveJourney(page,e.x-35,e.y);await page.keyboard.down('d');await page.waitForTimeout(30);await page.keyboard.up('d');
+            e=await enemy();await moveJourney(page,e.x-35,520);await page.keyboard.down('d');await page.waitForTimeout(30);await page.keyboard.up('d');
             if(!touched){await expect(page.getByRole('button',{name:'터치 행동',exact:true})).toHaveAttribute('data-kind','attack');await page.getByRole('button',{name:'터치 행동',exact:true}).tap();touched=true;}
-            else await page.keyboard.press('j');await page.waitForTimeout(430);
+            else await page.keyboard.press('j');await page.waitForTimeout(860);
         }
         expect((await enemy()).hp).toBe(0);expect((await enemy()).label).toBe('저주가 풀렸어!');
         const rewarded=(await read(page)).save;expect(rewarded.totalXp-before.totalXp).toBe(6);expect(rewarded.coins-before.coins).toBe(3);
         expect(rewarded.claimedRewardIds.filter((id:string)=>id==='S26.enemy.1')).toHaveLength(1);await shot('released');
+        for(const id of ['S26.raftWood','S26.raftRope','S26.quest.1'])await useJourney(page,maps.S26.objects.find(o=>o.id===id)!);
         await moveJourney(page,1560,550);await page.keyboard.down('s');await page.waitForTimeout(650);await page.keyboard.up('s');
         await expect.poll(async()=>(await read(page)).save.checkpoint.checkpointId).toBe('middle');
         const checkpoint=await read(page);await page.waitForTimeout(2500);expect((await read(page)).player.hp).toBe(checkpoint.player.hp);await shot('safe-checkpoint');
         const saved=(await read(page)).save;await resume(page);expect((await read(page)).enemies).toHaveLength(4);
         expect((await read(page)).enemies.some((e:{id:string})=>e.id==='S26.enemy.1')).toBe(false);
         expect((await read(page)).save.claimedRewardIds).toEqual(saved.claimedRewardIds);expect((await read(page)).player.hp).toBe((await read(page)).player.maxHp);await shot('resume');
-        await finishJourneyStage(page,async()=>{await useJourney(page,maps.S26.objects.find(o=>o.id==='S26.golden')!);expect((await read(page)).save.goldenHearts).toContain('G07');await shot('golden-heart');});
+        await finishJourneyStage(page,async()=>{await moveJourney(page,1780,550);await moveJourney(page,1780,642);await useJourney(page,maps.S26.objects.find(o=>o.id==='S26.golden')!);expect((await read(page)).save.goldenHearts).toContain('G07');await shot('golden-heart');await moveJourney(page,1780,642);await moveJourney(page,1560,550);});
         expect((await read(page)).stage).toBe('S27');expect((await read(page)).save.flags).toContain('indiaArrival');expect(errors).toEqual([]);
         writeFileSync(`${root}/${device}.json`,JSON.stringify({fallback,errors,observations},null,2));
     });

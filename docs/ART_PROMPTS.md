@@ -1,5 +1,10 @@
 # 장별 일러스트 제작 기록
 
+## 2026-10-08 · S26 뗏목·동굴 동선 · ART_DRAFT
+
+`src/game/stage.ts`의 `createRiver`가 자체 Graphics로260×40 통나무·밧줄 도형 텍스처를 만든다(프로젝트 자체 제작, 사용·수정 가능). 별도 이미지 파일/AI 프롬프트 실행 없음. 기존 지형·선원·박쥐·금화·황금 하트 아트를 재사용하며 소스/런타임 미디어639파일 바이트를 보존했다. 최종 웹툰 뗏목/지형 승인 미완료, 기존 이용 조건과 ART_DRAFT 유지. 통과 실행의 실제 화면은 `docs/screenshots/s26-river/verified/`, 최초8통과3실패와 관련4조건 재통과 상세·남은 문제는 PROJECT_STATUS.md의 S26 뗏목 기록 참조.
+
+
 ## 2026-10-08 · S26 박쥐 연결 · ART_DRAFT
 
 기존 `art-source/webtoon/bat-actions.{png,webp,json}`와 `public/assets/webtoon/bat-actions.webp`를 S26 박쥐5마리에 추가 연결했다. 네 행동 셀·측정 몸통 좌표와 누락 시 기존 자체 bat.svg를 재사용한다. 이미지 생성 도구/프롬프트 실행/원본 수정 없음. S08 4마리의 기존 연결과 소스·런타임 미디어639파일 바이트 보존. 기존 이용 조건과 ART_DRAFT 유지. 실제 정상/누락 화면은 `docs/screenshots/s26-bats/final/s26-bats/`, 검사 결과와 잔여 설계 차이는 PROJECT_STATUS.md의 2026-10-08 기록 참조.

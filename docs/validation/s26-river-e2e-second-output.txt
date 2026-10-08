@@ -1,0 +1,78 @@
+
+> sinbad-seven-treasures@0.1.0 test:e2e
+> playwright test tests/e2e/s26-river.spec.ts --grep phone|legacy --reporter=list,json,html
+
+
+Running 2 tests using 1 worker
+
+(node:51880) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:51880) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x  1 tests\e2e\s26-river.spec.ts:80:3 › phone S26 prepares and rides raft, opens two gates, returns from optional branches and resumes (42.4s)
+(node:9648) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:9648) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x  2 tests\e2e\s26-river.spec.ts:214:1 › legacy S26 bridge save resumes with raft and can skip both optional branches (49.3s)
+
+
+  1) tests\e2e\s26-river.spec.ts:80:3 › phone S26 prepares and rides raft, opens two gates, returns from optional branches and resumes › Expect "poll toContain" 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoContain[2m([22m[32mexpected[39m[2m) // indexOf[22m
+
+    Expected value: [32m"S26.quest.1"[39m
+    Received array: [31m["S26.raftWood", "S26.raftRope"][39m
+
+    Call Log:
+    - Timeout 10000ms exceeded while waiting on the predicate
+
+      61 |         // Actual action input opens the first gate while standing on the raft.
+      62 |         await moveJourney(page,1000,450);await page.getByRole('button',{name:'터치 행동',exact:true}).tap();
+    > 63 |         await expect.poll(async()=>(await read(page)).save.completedObjectiveIds).toContain('S26.quest.1');
+         |         ^
+      64 |         await expect.poll(async()=>(await read(page)).river.gates[0].closed).toBe(false);
+      65 |         await arrive(page,1640);await useJourney(page,object('S26.quest.2'));
+      66 |         await expect.poll(async()=>(await read(page)).river.gates[1].closed).toBe(false);await shot('water-gates-open');
+        at C:\code\code10(sindbad)\tests\e2e\s26-river.spec.ts:63:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\s26-river-phone-S26-prepar-2ae0b-tional-branches-and-resumes\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\s26-river-phone-S26-prepar-2ae0b-tional-branches-and-resumes\error-context.md
+
+  2) tests\e2e\s26-river.spec.ts:214:1 › legacy S26 bridge save resumes with raft and can skip both optional branches 
+
+    Error: route S26 (2540,550): {"x":2545.8333333333335,"y":406.7500000000005,"grounded":false,"vx":0,"vy":0,"hp":120,"maxHp":120,"bodyWidth":42,"bodyHeight":84}
+
+       at journey-bot.ts:21
+
+      19 |   const state=await readJourney(page);
+      20 |   if(!state.player){await page.waitForTimeout(80);continue;}
+    > 21 |   if(Date.now()>deadline)throw Error(`route ${state.stage} (${x},${y}): ${JSON.stringify(state.player)}`);
+         |                                ^
+      22 |   const crossingRiverRoof=state.stage==='S26'&&y<=560&&state.player.x>=1740&&state.player.x<2330&&(x>2180||x<1740);
+      23 |   const dx=x-state.player.x,dy=(crossingRiverRoof?450:y)-state.player.y;
+      24 |   const reached=Math.abs(dx)<16&&(state.freeMovement?Math.abs(dy)<35:Math.abs(dy)<110&&state.player.grounded);
+        at moveJourney (C:\code\code10(sindbad)\tests\e2e\journey-bot.ts:21:32)
+        at useJourney (C:\code\code10(sindbad)\tests\e2e\journey-bot.ts:89:3)
+        at satisfy (C:\code\code10(sindbad)\tests\e2e\journey-bot.ts:110:3)
+        at satisfy (C:\code\code10(sindbad)\tests\e2e\journey-bot.ts:109:38)
+        at finishJourneyStage (C:\code\code10(sindbad)\tests\e2e\journey-bot.ts:121:35)
+        at C:\code\code10(sindbad)\tests\e2e\s26-river.spec.ts:100:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\s26-river-legacy-S26-bridg-9e4de-skip-both-optional-branches\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\s26-river-legacy-S26-bridg-9e4de-skip-both-optional-branches\error-context.md
+
+  2 failed
+    tests\e2e\s26-river.spec.ts:80:3 › phone S26 prepares and rides raft, opens two gates, returns from optional branches and resumes 
+    tests\e2e\s26-river.spec.ts:214:1 › legacy S26 bridge save resumes with raft and can skip both optional branches 
+
+To open last HTML report run:
+[36m[39m
+[36m  npx playwright show-report[39m
+[36m[39m

@@ -1,0 +1,47 @@
+
+> sinbad-seven-treasures@0.1.0 test:e2e
+> playwright test tests/e2e/s26-river.spec.ts --grep phone|unprepared --reporter=list,json,html
+
+
+Running 2 tests using 1 worker
+
+(node:35376) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:35376) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x  1 tests\e2e\s26-river.spec.ts:82:3 › phone S26 prepares and rides raft, opens two gates, returns from optional branches and resumes (1.4m)
+(node:4360) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:4360) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 2 tests\e2e\s26-river.spec.ts:248:1 › legacy S26 unprepared middle checkpoint can return to the wood without granting progress (12.5s)
+
+
+  1) tests\e2e\s26-river.spec.ts:82:3 › phone S26 prepares and rides raft, opens two gates, returns from optional branches and resumes 
+
+    TimeoutError: page.waitForFunction: Timeout 25000ms exceeded.
+
+      34 | }
+      35 | async function arrive(page:Page,x:number){
+    > 36 |     await page.waitForFunction(x=>{const s=Reflect.get(window,'__SINBAD_TEST__');return s.river.x>=x-4&&s.river.riding;},x,{timeout:25000});
+         |                ^
+      37 | }
+      38 |
+      39 | for(const [device,viewport] of Object.entries({phone:{width:844,height:390},tablet:{width:1180,height:820}})){
+        at arrive (C:\code\code10(sindbad)\tests\e2e\s26-river.spec.ts:36:16)
+        at C:\code\code10(sindbad)\tests\e2e\s26-river.spec.ts:85:15
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\s26-river-phone-S26-prepar-2ae0b-tional-branches-and-resumes\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\s26-river-phone-S26-prepar-2ae0b-tional-branches-and-resumes\error-context.md
+
+  1 failed
+    tests\e2e\s26-river.spec.ts:82:3 › phone S26 prepares and rides raft, opens two gates, returns from optional branches and resumes 
+  1 passed (1.7m)
+
+To open last HTML report run:
+[36m[39m
+[36m  npx playwright show-report[39m
+[36m[39m

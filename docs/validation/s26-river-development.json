@@ -1,0 +1,125 @@
+{
+  "initialUnit": "127 passed, 1 failed: fresh save start reward omitted from expectation; corrected to preserve that existing reward. Final 129 passed.",
+  "e2e": [
+    {
+      "run": "first",
+      "stats": {
+        "startTime": "2026-10-08T12:27:24.293Z",
+        "duration": 106855.58600000001,
+        "expected": 0,
+        "skipped": 0,
+        "unexpected": 3,
+        "flaky": 0
+      },
+      "reason": "Ceiling assertion used the wrong sprite/body offset; legacy route exposed retained swimming drag and the new rock shelf path.",
+      "screenshots": "docs/screenshots/s26-river/first/",
+      "failures": "docs/screenshots/s26-river/first-failure/"
+    },
+    {
+      "run": "second",
+      "stats": {
+        "startTime": "2026-10-08T12:30:39.097Z",
+        "duration": 97915.881,
+        "expected": 0,
+        "skipped": 0,
+        "unexpected": 2,
+        "flaky": 0
+      },
+      "reason": "Actual bugs: bridge touch action lost priority near a bat; dragY=1800 cancelled gravity after leaving water.",
+      "screenshots": "docs/screenshots/s26-river/second/",
+      "failures": "docs/screenshots/s26-river/second-failure/"
+    },
+    {
+      "run": "third",
+      "stats": {
+        "startTime": "2026-10-08T12:33:08.506Z",
+        "duration": 82399.524,
+        "expected": 1,
+        "skipped": 0,
+        "unexpected": 1,
+        "flaky": 0
+      },
+      "reason": "Legacy bridge route passed. First-device bridge at raft height kept the passenger behind; moved the river bridge below the raft.",
+      "screenshots": "docs/screenshots/s26-river/third/",
+      "failures": "docs/screenshots/s26-river/third-failure/"
+    },
+    {
+      "run": "fourth",
+      "stats": {
+        "startTime": "2026-10-08T12:35:51.037Z",
+        "duration": 48101.83,
+        "expected": 0,
+        "skipped": 0,
+        "unexpected": 2,
+        "flaky": 0
+      },
+      "reason": "Boarding input was too short after entering water. Legacy return did collect the real authored heart, which the assertion had omitted.",
+      "screenshots": "docs/screenshots/s26-river/fourth/",
+      "failures": "docs/screenshots/s26-river/fourth-failure/"
+    },
+    {
+      "run": "fifth",
+      "stats": {
+        "startTime": "2026-10-08T12:37:29.158Z",
+        "duration": 100485.852,
+        "expected": 1,
+        "skipped": 0,
+        "unexpected": 1,
+        "flaky": 0
+      },
+      "reason": "Legacy unprepared return passed. A static cave shelf supported the feet instead of the moving raft; explicitly carry the passenger once.",
+      "screenshots": "docs/screenshots/s26-river/fifth/",
+      "failures": "docs/screenshots/s26-river/fifth-failure/"
+    },
+    {
+      "run": "sixth",
+      "stats": {
+        "startTime": "2026-10-08T12:39:59.231Z",
+        "duration": 119353.786,
+        "expected": 0,
+        "skipped": 0,
+        "unexpected": 1,
+        "flaky": 0
+      },
+      "reason": "All raft/cave/bonus actions passed; the test stopped inside the bonus ledge and could not descend. Move beyond the ledge before returning.",
+      "screenshots": "docs/screenshots/s26-river/sixth/",
+      "failures": "docs/screenshots/s26-river/sixth-failure/"
+    }
+  ],
+  "interrupted": {
+    "planned": 11,
+    "completedFromList": 6,
+    "passed": 2,
+    "failed": 4,
+    "remainingWithoutResult": 5,
+    "interrupted": true,
+    "reason": "Four route conditions exposed the inaccessible exit device: 100px height difference, interaction radius95px, and optional ledge overlap. Stopped before repeating remaining conditions; moved device to x2620,y500 and repaired the test approach to the left side-cave opening.",
+    "rawLog": "docs/validation/s26-river-e2e-release-output.txt",
+    "jsonReportAvailable": false,
+    "evidence": "docs/screenshots/s26-river/release/",
+    "failures": "docs/screenshots/s26-river/release-test-results/",
+    "runtimeFreeze": "docs/validation/s26-river-release-runtime-hashes.json"
+  },
+  "primary": {
+    "startTime": "2026-10-08T12:53:04.835Z",
+    "duration": 485153.211,
+    "expected": 8,
+    "skipped": 0,
+    "unexpected": 3,
+    "flaky": 0
+  },
+  "primaryFailures": "Two old bat tests tried to leave the underwater side cave through its solid right wall. The tablet raft test stopped upward input about 6px below the west floor step. Only the journey route and the bat test return waypoint changed.",
+  "repair": {
+    "startTime": "2026-10-08T13:07:05.300Z",
+    "duration": 265717.85000000003,
+    "expected": 4,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "routeChanges": [
+    "tests/e2e/journey-bot.ts",
+    "tests/e2e/s26-bats.spec.ts"
+  ],
+  "fullSelectedRerun": false
+}

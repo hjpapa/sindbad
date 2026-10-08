@@ -1,0 +1,95 @@
+{
+  "date": "2026-10-08T13:12:12.313834+00:00",
+  "pushedCommit": "7045f6e6eef33696c8122245b528d8c365939965",
+  "newWorkCommitted": false,
+  "checks": [
+    {
+      "command": "npm run typecheck",
+      "exitCode": 0,
+      "started": "2026-10-08T12:51:26.184837+00:00",
+      "seconds": 3.375,
+      "log": "docs/validation/s26-river-final-final-check-1.txt"
+    },
+    {
+      "command": "npm run lint",
+      "exitCode": 0,
+      "started": "2026-10-08T12:51:29.552500+00:00",
+      "seconds": 3.469,
+      "log": "docs/validation/s26-river-final-final-check-2.txt"
+    },
+    {
+      "command": "npm run test",
+      "exitCode": 0,
+      "started": "2026-10-08T12:51:33.032937+00:00",
+      "seconds": 3.937,
+      "log": "docs/validation/s26-river-final-final-check-3.txt"
+    },
+    {
+      "command": "npm run validate:content",
+      "exitCode": 0,
+      "started": "2026-10-08T12:51:36.961351+00:00",
+      "seconds": 1.282,
+      "log": "docs/validation/s26-river-final-final-check-4.txt"
+    },
+    {
+      "command": "npm run build",
+      "exitCode": 0,
+      "started": "2026-10-08T12:51:38.242534+00:00",
+      "seconds": 11.218,
+      "log": "docs/validation/s26-river-final-final-check-5.txt"
+    },
+    {
+      "command": "npx tsx scripts/check-art-budget.ts",
+      "exitCode": 0,
+      "started": "2026-10-08T12:51:49.472288+00:00",
+      "seconds": 2.703,
+      "log": "docs/validation/s26-river-final-final-check-6.txt"
+    }
+  ],
+  "e2ePrimary": {
+    "startTime": "2026-10-08T12:53:04.835Z",
+    "duration": 485153.211,
+    "expected": 8,
+    "skipped": 0,
+    "unexpected": 3,
+    "flaky": 0
+  },
+  "e2eRepair": {
+    "startTime": "2026-10-08T13:07:05.300Z",
+    "duration": 265717.85000000003,
+    "expected": 4,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "fullSelectedRerun": false,
+  "routeChanges": [
+    "tests/e2e/journey-bot.ts",
+    "tests/e2e/s26-bats.spec.ts"
+  ],
+  "runtimeFilesUnchangedPerRun": 1011,
+  "previousMediaUnchanged": 639,
+  "dependenciesUnchanged": true,
+  "changed": [
+    "dist/assets/index-B9TF8uWq.js",
+    "dist/assets/index-Dgc3_Dee.js",
+    "dist/index.html",
+    "src/content/finalStages.ts",
+    "src/content/maps.ts",
+    "src/content/reachability.ts",
+    "src/core/river.ts",
+    "src/game/stage.ts",
+    "tests/e2e/journey-bot.ts",
+    "tests/e2e/mobile-abilities.spec.ts",
+    "tests/e2e/s26-bats.spec.ts",
+    "tests/e2e/s26-river.spec.ts",
+    "tests/unit/river.test.ts"
+  ],
+  "unexpected": [],
+  "screenshots": 42,
+  "budgetBytes": 3102469,
+  "budgetReportRestored": true,
+  "listeners": [],
+  "artStatus": "ART_DRAFT",
+  "deployment": false
+}

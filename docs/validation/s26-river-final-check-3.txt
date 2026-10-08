@@ -1,0 +1,70 @@
+
+> sinbad-seven-treasures@0.1.0 test
+> vitest run
+
+
+ RUN  v3.2.4 C:/code/code10(sindbad)
+
+ ✓ tests/unit/audio.test.ts (3 tests) 14ms
+ ✓ tests/unit/skills.test.ts (3 tests) 7ms
+ ✓ tests/unit/campaign-complete.test.ts (3 tests) 11ms
+ ✓ tests/unit/nest-practice.test.ts (2 tests) 12ms
+ ✓ tests/unit/crystal.test.ts (5 tests) 10ms
+ ✓ tests/unit/recovery.test.ts (5 tests) 11ms
+ ✓ tests/unit/story-mechanics.test.ts (6 tests) 14ms
+ ✓ tests/unit/weapons-art.test.ts (2 tests) 15ms
+ ✓ tests/unit/adventure.test.ts (6 tests) 40ms
+ ✓ tests/unit/flame.test.ts (6 tests) 41ms
+ ❯ tests/unit/river.test.ts (3 tests | 1 failed) 20ms
+   ✓ S26 raft and return paths > waits without a rider and stops at unopened devices without snapping backwards 5ms
+   × S26 raft and return paths > keeps delivered preparation once and preserves old bridge saves without a migration reward 13ms
+     → expected [ 'S01.reward.start' ] to deeply equal []
+   ✓ S26 raft and return paths > has a dry raft, underwater side chamber and an optional bonus branch outside the exit chain 1ms
+ ✓ tests/unit/dialogueArt.test.ts (5 tests) 7ms
+ ✓ tests/unit/roc-mechanics.test.ts (4 tests) 13ms
+ ✓ tests/unit/bat-flight.test.ts (2 tests) 103ms
+ ✓ tests/unit/core.test.ts (32 tests) 30ms
+ ✓ tests/unit/effects-art.test.ts (5 tests) 9ms
+ ✓ tests/unit/controlText.test.ts (3 tests) 8ms
+ ✓ tests/unit/terrain.test.ts (5 tests) 10ms
+ ✓ tests/unit/world-props.test.ts (4 tests) 9ms
+ ✓ tests/unit/reachability.test.ts (6 tests) 9ms
+ ✓ tests/unit/passives.test.ts (2 tests) 8ms
+ ✓ tests/unit/touch-icons.test.ts (2 tests) 7ms
+ ✓ tests/unit/hero-art.test.ts (2 tests) 5ms
+ ✓ tests/unit/bat-actions.test.ts (2 tests) 4ms
+ ✓ tests/unit/spirit-actions.test.ts (2 tests) 6ms
+ ✓ tests/unit/enemy-actions.test.ts (2 tests) 6ms
+ ✓ tests/unit/kite-actions.test.ts (2 tests) 6ms
+ ✓ tests/unit/siren-actions.test.ts (2 tests) 8ms
+ ✓ tests/unit/roc-actions.test.ts (2 tests) 4ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/unit/river.test.ts > S26 raft and return paths > keeps delivered preparation once and preserves old bridge saves without a migration reward
+AssertionError: expected [ 'S01.reward.start' ] to deeply equal []
+
+- Expected
++ Received
+
+- []
++ [
++   "S01.reward.start",
++ ]
+
+ ❯ tests/unit/river.test.ts:18:126
+     16|     it('keeps delivered preparation once and preserves old bridge save…
+     17|         const save=freshSave();save.checkpoint={stageId:'S26',checkpoi…
+     18|         const legacy=parseSave(JSON.stringify(save));expect(raftPrepar…
+       |                                                                                                                              ^
+     19|         let prepared=freshSave();prepared.checkpoint.stageId='S26';
+     20|         for(const id of ['S26.raftWood','S26.raftRope']){const r=objec…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed | 28 passed (29)
+      Tests  1 failed | 127 passed (128)
+   Start at  21:26:07
+   Duration  2.26s (transform 1.78s, setup 0ms, collect 7.39s, tests 446ms, environment 7ms, prepare 8.73s)
+

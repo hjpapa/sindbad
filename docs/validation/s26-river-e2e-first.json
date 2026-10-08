@@ -1,0 +1,304 @@
+{
+  "config": {
+    "configFile": "C:\\code\\code10(sindbad)\\playwright.config.ts",
+    "rootDir": "C:/code/code10(sindbad)/tests/e2e",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": "C:\\code\\code10(sindbad)\\tests\\e2e\\server.setup.ts",
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ],
+      [
+        "html"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "C:/code/code10(sindbad)/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "C:/code/code10(sindbad)/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 240000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.55.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "s26-river.spec.ts",
+      "file": "s26-river.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "phone S26 prepares and rides raft, opens two gates, returns from optional branches and resumes",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 32692,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m410\u001b[39m\nReceived:    \u001b[31m390.75\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m410\u001b[39m\nReceived:    \u001b[31m390.75\u001b[39m\n    at C:\\code\\code10(sindbad)\\tests\\e2e\\s26-river.spec.ts:56:45",
+                    "location": {
+                      "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\s26-river.spec.ts",
+                      "column": 45,
+                      "line": 56
+                    },
+                    "snippet": "  54 |         await arrive(page,1000);expect((await read(page)).river.gates.every((g:{closed:boolean})=>g.closed)).toBe(true);\n  55 |         await page.keyboard.down('ArrowUp');await page.waitForTimeout(220);await page.keyboard.up('ArrowUp');\n> 56 |         expect((await read(page)).player.y).toBeGreaterThanOrEqual(410);await shot('low-ceiling');\n     |                                             ^\n  57 |         // Actual action input opens the first gate while standing on the raft.\n  58 |         await moveJourney(page,1000,450);await page.getByRole('button',{name:'터치 행동',exact:true}).tap();\n  59 |         await expect.poll(async()=>(await read(page)).save.completedObjectiveIds).toContain('S26.quest.1');"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\s26-river.spec.ts",
+                        "column": 45,
+                        "line": 56
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m410\u001b[39m\nReceived:    \u001b[31m390.75\u001b[39m\n\n  54 |         await arrive(page,1000);expect((await read(page)).river.gates.every((g:{closed:boolean})=>g.closed)).toBe(true);\n  55 |         await page.keyboard.down('ArrowUp');await page.waitForTimeout(220);await page.keyboard.up('ArrowUp');\n> 56 |         expect((await read(page)).player.y).toBeGreaterThanOrEqual(410);await shot('low-ceiling');\n     |                                             ^\n  57 |         // Actual action input opens the first gate while standing on the raft.\n  58 |         await moveJourney(page,1000,450);await page.getByRole('button',{name:'터치 행동',exact:true}).tap();\n  59 |         await expect.poll(async()=>(await read(page)).save.completedObjectiveIds).toContain('S26.quest.1');\n    at C:\\code\\code10(sindbad)\\tests\\e2e\\s26-river.spec.ts:56:45"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 126
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 908
+                    }
+                  ],
+                  "startTime": "2026-10-08T12:27:27.655Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\code\\code10(sindbad)\\test-results\\s26-river-phone-S26-prepar-2ae0b-tional-branches-and-resumes\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\code\\code10(sindbad)\\test-results\\s26-river-phone-S26-prepar-2ae0b-tional-branches-and-resumes\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\s26-river.spec.ts",
+                    "column": 45,
+                    "line": 56
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "2862e862adb4ae4886b1-d8fb72ae8ba2a92432a3",
+          "file": "s26-river.spec.ts",
+          "line": 67,
+          "column": 3
+        },
+        {
+          "title": "tablet S26 prepares and rides raft, opens two gates, returns from optional branches and resumes",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 16614,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m410\u001b[39m\nReceived:    \u001b[31m388.25\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m410\u001b[39m\nReceived:    \u001b[31m388.25\u001b[39m\n    at C:\\code\\code10(sindbad)\\tests\\e2e\\s26-river.spec.ts:56:45",
+                    "location": {
+                      "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\s26-river.spec.ts",
+                      "column": 45,
+                      "line": 56
+                    },
+                    "snippet": "  54 |         await arrive(page,1000);expect((await read(page)).river.gates.every((g:{closed:boolean})=>g.closed)).toBe(true);\n  55 |         await page.keyboard.down('ArrowUp');await page.waitForTimeout(220);await page.keyboard.up('ArrowUp');\n> 56 |         expect((await read(page)).player.y).toBeGreaterThanOrEqual(382);await shot('low-ceiling');\n     |                                             ^\n  57 |         // Actual action input opens the first gate while standing on the raft.\n  58 |         await moveJourney(page,1000,450);await page.getByRole('button',{name:'터치 행동',exact:true}).tap();\n  59 |         await expect.poll(async()=>(await read(page)).save.completedObjectiveIds).toContain('S26.quest.1');"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\s26-river.spec.ts",
+                        "column": 45,
+                        "line": 56
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m410\u001b[39m\nReceived:    \u001b[31m388.25\u001b[39m\n\n  54 |         await arrive(page,1000);expect((await read(page)).river.gates.every((g:{closed:boolean})=>g.closed)).toBe(true);\n  55 |         await page.keyboard.down('ArrowUp');await page.waitForTimeout(220);await page.keyboard.up('ArrowUp');\n> 56 |         expect((await read(page)).player.y).toBeGreaterThanOrEqual(382);await shot('low-ceiling');\n     |                                             ^\n  57 |         // Actual action input opens the first gate while standing on the raft.\n  58 |         await moveJourney(page,1000,450);await page.getByRole('button',{name:'터치 행동',exact:true}).tap();\n  59 |         await expect.poll(async()=>(await read(page)).save.completedObjectiveIds).toContain('S26.quest.1');\n    at C:\\code\\code10(sindbad)\\tests\\e2e\\s26-river.spec.ts:56:45"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 11
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 913
+                    }
+                  ],
+                  "startTime": "2026-10-08T12:28:02.319Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\code\\code10(sindbad)\\test-results\\s26-river-tablet-S26-prepa-59608-tional-branches-and-resumes\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\code\\code10(sindbad)\\test-results\\s26-river-tablet-S26-prepa-59608-tional-branches-and-resumes\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\s26-river.spec.ts",
+                    "column": 45,
+                    "line": 56
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "2862e862adb4ae4886b1-ad2a79d46c410c07ac27",
+          "file": "s26-river.spec.ts",
+          "line": 67,
+          "column": 3
+        },
+        {
+          "title": "legacy S26 bridge save resumes with raft and can skip both optional branches",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 49259,
+                  "error": {
+                    "message": "Error: route S26 (2540,550): {\"x\":1560,\"y\":548,\"grounded\":false,\"vx\":0,\"vy\":0,\"hp\":120,\"maxHp\":120,\"bodyWidth\":42,\"bodyHeight\":84}",
+                    "stack": "Error: route S26 (2540,550): {\"x\":1560,\"y\":548,\"grounded\":false,\"vx\":0,\"vy\":0,\"hp\":120,\"maxHp\":120,\"bodyWidth\":42,\"bodyHeight\":84}\n    at moveJourney (C:\\code\\code10(sindbad)\\tests\\e2e\\journey-bot.ts:21:32)\n    at useJourney (C:\\code\\code10(sindbad)\\tests\\e2e\\journey-bot.ts:88:3)\n    at satisfy (C:\\code\\code10(sindbad)\\tests\\e2e\\journey-bot.ts:109:3)\n    at satisfy (C:\\code\\code10(sindbad)\\tests\\e2e\\journey-bot.ts:108:38)\n    at finishJourneyStage (C:\\code\\code10(sindbad)\\tests\\e2e\\journey-bot.ts:120:35)\n    at C:\\code\\code10(sindbad)\\tests\\e2e\\s26-river.spec.ts:94:5",
+                    "location": {
+                      "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\journey-bot.ts",
+                      "column": 32,
+                      "line": 21
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39mjourney-bot.ts:21\n\n  19 |   const state=await readJourney(page);\n  20 |   if(!state.player){await page.waitForTimeout(80);continue;}\n> 21 |   if(Date.now()>deadline)throw Error(`route ${state.stage} (${x},${y}): ${JSON.stringify(state.player)}`);\n     |                                ^\n  22 |   const dx=x-state.player.x,dy=y-state.player.y;\n  23 |   const reached=Math.abs(dx)<16&&(state.freeMovement?Math.abs(dy)<35:Math.abs(dy)<110&&state.player.grounded);\n  24 |   if(reached)break;"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\journey-bot.ts",
+                        "column": 32,
+                        "line": 21
+                      },
+                      "message": "Error: route S26 (2540,550): {\"x\":1560,\"y\":548,\"grounded\":false,\"vx\":0,\"vy\":0,\"hp\":120,\"maxHp\":120,\"bodyWidth\":42,\"bodyHeight\":84}\n\n   at journey-bot.ts:21\n\n  19 |   const state=await readJourney(page);\n  20 |   if(!state.player){await page.waitForTimeout(80);continue;}\n> 21 |   if(Date.now()>deadline)throw Error(`route ${state.stage} (${x},${y}): ${JSON.stringify(state.player)}`);\n     |                                ^\n  22 |   const dx=x-state.player.x,dy=y-state.player.y;\n  23 |   const reached=Math.abs(dx)<16&&(state.freeMovement?Math.abs(dy)<35:Math.abs(dy)<110&&state.player.grounded);\n  24 |   if(reached)break;\n    at moveJourney (C:\\code\\code10(sindbad)\\tests\\e2e\\journey-bot.ts:21:32)\n    at useJourney (C:\\code\\code10(sindbad)\\tests\\e2e\\journey-bot.ts:88:3)\n    at satisfy (C:\\code\\code10(sindbad)\\tests\\e2e\\journey-bot.ts:109:3)\n    at satisfy (C:\\code\\code10(sindbad)\\tests\\e2e\\journey-bot.ts:108:38)\n    at finishJourneyStage (C:\\code\\code10(sindbad)\\tests\\e2e\\journey-bot.ts:120:35)\n    at C:\\code\\code10(sindbad)\\tests\\e2e\\s26-river.spec.ts:94:5"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-08T12:28:20.758Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\code\\code10(sindbad)\\test-results\\s26-river-legacy-S26-bridg-9e4de-skip-both-optional-branches\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\code\\code10(sindbad)\\test-results\\s26-river-legacy-S26-bridg-9e4de-skip-both-optional-branches\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\journey-bot.ts",
+                    "column": 32,
+                    "line": 21
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "2862e862adb4ae4886b1-a392eb960f98a9e4d66b",
+          "file": "s26-river.spec.ts",
+          "line": 198,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-08T12:27:24.293Z",
+    "duration": 106855.58600000001,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 3,
+    "flaky": 0
+  }
+}

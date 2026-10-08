@@ -1,0 +1,23 @@
+[
+  {
+    "command": "npm run typecheck",
+    "exitCode": 0,
+    "started": "2026-10-08T12:25:59.364326+00:00",
+    "seconds": 3.312,
+    "log": "docs/validation/s26-river-final-check-1.txt"
+  },
+  {
+    "command": "npm run lint",
+    "exitCode": 0,
+    "started": "2026-10-08T12:26:02.686549+00:00",
+    "seconds": 3.469,
+    "log": "docs/validation/s26-river-final-check-2.txt"
+  },
+  {
+    "command": "npm run test",
+    "exitCode": 1,
+    "started": "2026-10-08T12:26:06.151734+00:00",
+    "seconds": 3.969,
+    "log": "docs/validation/s26-river-final-check-3.txt"
+  }
+]

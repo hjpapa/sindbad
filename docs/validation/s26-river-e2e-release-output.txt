@@ -1,0 +1,31 @@
+
+> sinbad-seven-treasures@0.1.0 test:e2e
+> playwright test tests/e2e/s26-river.spec.ts tests/e2e/s26-bats.spec.ts tests/e2e/mobile-abilities.spec.ts tests/e2e/story-devices.spec.ts --grep S26|S16 protected|carried wood|S25 bridge --reporter=list,json,html --output docs/screenshots/s26-river/release-test-results
+
+
+Running 11 tests using 1 worker
+
+(node:42596) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:42596) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  1 tests\e2e\mobile-abilities.spec.ts:17:1 › phone can descend, cast its selected treasure, and open S26 bridge using action (1.1m)
+  x   2 tests\e2e\s26-bats.spec.ts:61:3 › phone S26 five bounded bats, locked swoop, touch release and checkpoint route (1.3m)
+(node:58564) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:58564) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x   3 tests\e2e\s26-bats.spec.ts:61:3 › tablet S26 five bounded bats, locked swoop, touch release and checkpoint route (1.4m)
+(node:30068) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:30068) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  4 tests\e2e\s26-bats.spec.ts:228:1 › legacy S26 bandit rewards stay claimed and new optional bats do not block the exit (7.6s)
+  x   5 tests\e2e\s26-river.spec.ts:82:3 › phone S26 prepares and rides raft, opens two gates, returns from optional branches and resumes (1.4m)
+(node:41064) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:41064) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x   6 tests\e2e\s26-river.spec.ts:82:3 › tablet S26 prepares and rides raft, opens two gates, returns from optional branches and resumes (1.5m)
+(node:54336) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)

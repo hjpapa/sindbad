@@ -37,7 +37,7 @@ export interface ObjectDef {
     id: string;
     x: number;
     y: number;
-    kind: 'npc' | 'bell' | 'shell' | 'chest' | 'exit' | 'rod' | 'crisis' | 'checkpoint' | 'remote' | 'gear' | 'key' | 'gate' | 'rescue' | 'golden' | 'torch' | 'furnace' | 'vine' | 'flameGift' | 'rope' | 'descent' | 'mirror' | 'lightGate' | 'truthGift' | 'vision' | 'journal' | 'quest' | 'rocCore' | 'gift' | 'bridge' | 'ending';
+    kind: 'npc' | 'bell' | 'shell' | 'chest' | 'exit' | 'rod' | 'crisis' | 'checkpoint' | 'remote' | 'gear' | 'key' | 'gate' | 'rescue' | 'golden' | 'torch' | 'furnace' | 'vine' | 'flameGift' | 'rope' | 'descent' | 'mirror' | 'lightGate' | 'truthGift' | 'vision' | 'journal' | 'quest' | 'rocCore' | 'gift' | 'bridge' | 'ending' | 'raft';
     label: string;
     flightRing?: boolean;
     needs?: string[];
@@ -57,6 +57,7 @@ export interface MapDef {
     visual?: 'sky' | 'volcano' | 'village' | 'warehouse' | 'ocean' | 'pirate' | 'shadow' | 'jungle' | 'temple' | 'garden' | 'tower' | 'kingdom';
     mode?: 'ground' | 'flight' | 'swim' | 'peace';
     peaceful?: boolean;
+    river?: boolean;
     water?: { x:number; y:number; w:number; h:number }[];
     flightHazards?: FlightHazard[];
     plantHazards?: {x:number;w:number;kind:'poison'|'vine';clearedBy?:string}[];

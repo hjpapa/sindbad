@@ -1,0 +1,43 @@
+
+> sinbad-seven-treasures@0.1.0 test:e2e
+> playwright test tests/e2e/s26-river.spec.ts --grep phone --reporter=list,json,html
+
+
+Running 1 test using 1 worker
+
+(node:24016) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:24016) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x  1 tests\e2e\s26-river.spec.ts:82:3 › phone S26 prepares and rides raft, opens two gates, returns from optional branches and resumes (1.9m)
+
+
+  1) tests\e2e\s26-river.spec.ts:82:3 › phone S26 prepares and rides raft, opens two gates, returns from optional branches and resumes 
+
+    Error: route S26 (2535,550): {"x":2548.941888888927,"y":398,"grounded":true,"vx":0,"vy":0,"hp":88,"maxHp":130,"bodyWidth":42,"bodyHeight":84}
+
+       at journey-bot.ts:21
+
+      19 |   const state=await readJourney(page);
+      20 |   if(!state.player){await page.waitForTimeout(80);continue;}
+    > 21 |   if(Date.now()>deadline)throw Error(`route ${state.stage} (${x},${y}): ${JSON.stringify(state.player)}`);
+         |                                ^
+      22 |   const crossingRiverRoof=state.stage==='S26'&&y<=560&&state.player.x>=1740&&state.player.x<2330&&(x>2180||x<1740);
+      23 |   const dx=x-state.player.x,dy=(crossingRiverRoof?450:y)-state.player.y;
+      24 |   const reached=Math.abs(dx)<16&&(state.freeMovement?Math.abs(dy)<35:Math.abs(dy)<110&&state.player.grounded);
+        at moveJourney (C:\code\code10(sindbad)\tests\e2e\journey-bot.ts:21:32)
+        at C:\code\code10(sindbad)\tests\e2e\s26-river.spec.ts:90:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\s26-river-phone-S26-prepar-2ae0b-tional-branches-and-resumes\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\s26-river-phone-S26-prepar-2ae0b-tional-branches-and-resumes\error-context.md
+
+  1 failed
+    tests\e2e\s26-river.spec.ts:82:3 › phone S26 prepares and rides raft, opens two gates, returns from optional branches and resumes 
+
+To open last HTML report run:
+[36m[39m
+[36m  npx playwright show-report[39m
+[36m[39m

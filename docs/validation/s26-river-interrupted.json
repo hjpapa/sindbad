@@ -1,0 +1,14 @@
+{
+  "planned": 11,
+  "completedFromList": 6,
+  "passed": 2,
+  "failed": 4,
+  "remainingWithoutResult": 5,
+  "interrupted": true,
+  "reason": "Four route conditions exposed the inaccessible exit device: 100px height difference, interaction radius95px, and optional ledge overlap. Stopped before repeating remaining conditions; moved device to x2620,y500 and repaired the test approach to the left side-cave opening.",
+  "rawLog": "docs/validation/s26-river-e2e-release-output.txt",
+  "jsonReportAvailable": false,
+  "evidence": "docs/screenshots/s26-river/release/",
+  "failures": "docs/screenshots/s26-river/release-test-results/",
+  "runtimeFreeze": "docs/validation/s26-river-release-runtime-hashes.json"
+}

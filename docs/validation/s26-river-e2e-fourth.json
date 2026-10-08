@@ -1,0 +1,235 @@
+{
+  "config": {
+    "configFile": "C:\\code\\code10(sindbad)\\playwright.config.ts",
+    "rootDir": "C:/code/code10(sindbad)/tests/e2e",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": "C:\\code\\code10(sindbad)\\tests\\e2e\\server.setup.ts",
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ],
+      [
+        "html"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "C:/code/code10(sindbad)/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "C:/code/code10(sindbad)/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 240000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.55.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "s26-river.spec.ts",
+      "file": "s26-river.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "phone S26 prepares and rides raft, opens two gates, returns from optional branches and resumes",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 35541,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n\nCall Log:\n- Timeout 10000ms exceeded while waiting on the predicate",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n\nCall Log:\n- Timeout 10000ms exceeded while waiting on the predicate\n    at board (C:\\code\\code10(sindbad)\\tests\\e2e\\s26-river.spec.ts:31:5)\n    at C:\\code\\code10(sindbad)\\tests\\e2e\\s26-river.spec.ts:53:9",
+                    "location": {
+                      "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\s26-river.spec.ts",
+                      "column": 5,
+                      "line": 31
+                    },
+                    "snippet": "  29 |     await moveJourney(page,raft.x-70,550);\n  30 |     await page.keyboard.down('ArrowUp');await page.waitForTimeout(180);await page.keyboard.up('ArrowUp');\n> 31 |     await expect.poll(async()=>(await read(page)).river.riding,{timeout:10000}).toBe(true);\n     |     ^\n  32 | }\n  33 | async function arrive(page:Page,x:number){\n  34 |     await page.waitForFunction(x=>{const s=Reflect.get(window,'__SINBAD_TEST__');return s.river.x>=x-4&&s.river.riding;},x,{timeout:25000});"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\s26-river.spec.ts",
+                        "column": 5,
+                        "line": 31
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n\nCall Log:\n- Timeout 10000ms exceeded while waiting on the predicate\n\n  29 |     await moveJourney(page,raft.x-70,550);\n  30 |     await page.keyboard.down('ArrowUp');await page.waitForTimeout(180);await page.keyboard.up('ArrowUp');\n> 31 |     await expect.poll(async()=>(await read(page)).river.riding,{timeout:10000}).toBe(true);\n     |     ^\n  32 | }\n  33 | async function arrive(page:Page,x:number){\n  34 |     await page.waitForFunction(x=>{const s=Reflect.get(window,'__SINBAD_TEST__');return s.river.x>=x-4&&s.river.riding;},x,{timeout:25000});\n    at board (C:\\code\\code10(sindbad)\\tests\\e2e\\s26-river.spec.ts:31:5)\n    at C:\\code\\code10(sindbad)\\tests\\e2e\\s26-river.spec.ts:53:9"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 13
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 9072,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n\nCall Log:\n- Timeout 10000ms exceeded while waiting on the predicate",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n\nCall Log:\n- Timeout 10000ms exceeded while waiting on the predicate\n    at board (C:\\code\\code10(sindbad)\\tests\\e2e\\s26-river.spec.ts:31:5)\n    at C:\\code\\code10(sindbad)\\tests\\e2e\\s26-river.spec.ts:53:9",
+                        "location": {
+                          "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\s26-river.spec.ts",
+                          "column": 5,
+                          "line": 31
+                        },
+                        "snippet": "  29 |     await moveJourney(page,raft.x-70,550);\n  30 |     await page.keyboard.down('ArrowUp');await page.waitForTimeout(180);await page.keyboard.up('ArrowUp');\n> 31 |     await expect.poll(async()=>(await read(page)).river.riding,{timeout:10000}).toBe(true);\n     |     ^\n  32 | }\n  33 | async function arrive(page:Page,x:number){\n  34 |     await page.waitForFunction(x=>{const s=Reflect.get(window,'__SINBAD_TEST__');return s.river.x>=x-4&&s.river.riding;},x,{timeout:25000});"
+                      }
+                    }
+                  ],
+                  "startTime": "2026-10-08T12:35:54.489Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\code\\code10(sindbad)\\test-results\\s26-river-phone-S26-prepar-2ae0b-tional-branches-and-resumes\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\code\\code10(sindbad)\\test-results\\s26-river-phone-S26-prepar-2ae0b-tional-branches-and-resumes\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\s26-river.spec.ts",
+                    "column": 5,
+                    "line": 31
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "2862e862adb4ae4886b1-d8fb72ae8ba2a92432a3",
+          "file": "s26-river.spec.ts",
+          "line": 80,
+          "column": 3
+        },
+        {
+          "title": "legacy S26 unprepared middle checkpoint can return to the wood without granting progress",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 6181,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 0\u001b[39m\n\u001b[31m+ Received  + 1\u001b[39m\n\n\u001b[2m  Array [\u001b[22m\n\u001b[2m    \"S01.reward.start\",\u001b[22m\n\u001b[31m+   \"S26.heart.1\",\u001b[39m\n\u001b[2m  ]\u001b[22m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 0\u001b[39m\n\u001b[31m+ Received  + 1\u001b[39m\n\n\u001b[2m  Array [\u001b[22m\n\u001b[2m    \"S01.reward.start\",\u001b[22m\n\u001b[31m+   \"S26.heart.1\",\u001b[39m\n\u001b[2m  ]\u001b[22m\n    at C:\\code\\code10(sindbad)\\tests\\e2e\\s26-river.spec.ts:111:54",
+                    "location": {
+                      "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\s26-river.spec.ts",
+                      "column": 54,
+                      "line": 111
+                    },
+                    "snippet": "  109 |     await moveJourney(page,430,550);\n  110 |     expect((await read(page)).save.completedObjectiveIds).toEqual(save.completedObjectiveIds);\n> 111 |     expect((await read(page)).save.claimedRewardIds).toEqual(save.claimedRewardIds);\n      |                                                      ^\n  112 |     expect((await read(page)).river.gates[0].closed).toBe(true);\n  113 |     const root=evidencePath('s26-river');mkdirSync(root,{recursive:true});await page.screenshot({path:`${root}/legacy-unprepared-return.png`});\n  114 |     await useJourney(page,object('S26.raftWood'));await useJourney(page,object('S26.raftRope'));"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\s26-river.spec.ts",
+                        "column": 54,
+                        "line": 111
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 0\u001b[39m\n\u001b[31m+ Received  + 1\u001b[39m\n\n\u001b[2m  Array [\u001b[22m\n\u001b[2m    \"S01.reward.start\",\u001b[22m\n\u001b[31m+   \"S26.heart.1\",\u001b[39m\n\u001b[2m  ]\u001b[22m\n\n  109 |     await moveJourney(page,430,550);\n  110 |     expect((await read(page)).save.completedObjectiveIds).toEqual(save.completedObjectiveIds);\n> 111 |     expect((await read(page)).save.claimedRewardIds).toEqual(save.claimedRewardIds);\n      |                                                      ^\n  112 |     expect((await read(page)).river.gates[0].closed).toBe(true);\n  113 |     const root=evidencePath('s26-river');mkdirSync(root,{recursive:true});await page.screenshot({path:`${root}/legacy-unprepared-return.png`});\n  114 |     await useJourney(page,object('S26.raftWood'));await useJourney(page,object('S26.raftRope'));\n    at C:\\code\\code10(sindbad)\\tests\\e2e\\s26-river.spec.ts:111:54"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-08T12:36:31.885Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\code\\code10(sindbad)\\test-results\\s26-river-legacy-S26-unpre-c222c-d-without-granting-progress\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\code\\code10(sindbad)\\test-results\\s26-river-legacy-S26-unpre-c222c-d-without-granting-progress\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\s26-river.spec.ts",
+                    "column": 54,
+                    "line": 111
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "2862e862adb4ae4886b1-04f049aa5a0cec29f453",
+          "file": "s26-river.spec.ts",
+          "line": 246,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-08T12:35:51.037Z",
+    "duration": 48101.83,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 2,
+    "flaky": 0
+  }
+}

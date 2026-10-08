@@ -1,0 +1,210 @@
+{
+  "config": {
+    "configFile": "C:\\code\\code10(sindbad)\\playwright.config.ts",
+    "rootDir": "C:/code/code10(sindbad)/tests/e2e",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": "C:\\code\\code10(sindbad)\\tests\\e2e\\server.setup.ts",
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ],
+      [
+        "html"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "C:/code/code10(sindbad)/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "C:/code/code10(sindbad)/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 240000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.55.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "s26-river.spec.ts",
+      "file": "s26-river.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "phone S26 prepares and rides raft, opens two gates, returns from optional branches and resumes",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 81574,
+                  "error": {
+                    "message": "TimeoutError: page.waitForFunction: Timeout 25000ms exceeded.",
+                    "stack": "TimeoutError: page.waitForFunction: Timeout 25000ms exceeded.\n    at arrive (C:\\code\\code10(sindbad)\\tests\\e2e\\s26-river.spec.ts:36:16)\n    at C:\\code\\code10(sindbad)\\tests\\e2e\\s26-river.spec.ts:85:15",
+                    "location": {
+                      "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\s26-river.spec.ts",
+                      "column": 16,
+                      "line": 36
+                    },
+                    "snippet": "  34 | }\n  35 | async function arrive(page:Page,x:number){\n> 36 |     await page.waitForFunction(x=>{const s=Reflect.get(window,'__SINBAD_TEST__');return s.river.x>=x-4&&s.river.riding;},x,{timeout:25000});\n     |                ^\n  37 | }\n  38 |\n  39 | for(const [device,viewport] of Object.entries({phone:{width:844,height:390},tablet:{width:1180,height:820}})){"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\s26-river.spec.ts",
+                        "column": 16,
+                        "line": 36
+                      },
+                      "message": "TimeoutError: page.waitForFunction: Timeout 25000ms exceeded.\n\n  34 | }\n  35 | async function arrive(page:Page,x:number){\n> 36 |     await page.waitForFunction(x=>{const s=Reflect.get(window,'__SINBAD_TEST__');return s.river.x>=x-4&&s.river.riding;},x,{timeout:25000});\n     |                ^\n  37 | }\n  38 |\n  39 | for(const [device,viewport] of Object.entries({phone:{width:844,height:390},tablet:{width:1180,height:820}})){\n    at arrive (C:\\code\\code10(sindbad)\\tests\\e2e\\s26-river.spec.ts:36:16)\n    at C:\\code\\code10(sindbad)\\tests\\e2e\\s26-river.spec.ts:85:15"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 130
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 393
+                    },
+                    {
+                      "title": "Expect \"poll toContain\"",
+                      "duration": 135
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 9
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 10
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 10
+                    },
+                    {
+                      "title": "Expect \"poll toBe\"",
+                      "duration": 381
+                    }
+                  ],
+                  "startTime": "2026-10-08T12:37:32.484Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\code\\code10(sindbad)\\test-results\\s26-river-phone-S26-prepar-2ae0b-tional-branches-and-resumes\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\code\\code10(sindbad)\\test-results\\s26-river-phone-S26-prepar-2ae0b-tional-branches-and-resumes\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\code\\code10(sindbad)\\tests\\e2e\\s26-river.spec.ts",
+                    "column": 16,
+                    "line": 36
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "2862e862adb4ae4886b1-d8fb72ae8ba2a92432a3",
+          "file": "s26-river.spec.ts",
+          "line": 82,
+          "column": 3
+        },
+        {
+          "title": "legacy S26 unprepared middle checkpoint can return to the wood without granting progress",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 12515,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-08T12:38:55.933Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2862e862adb4ae4886b1-04f049aa5a0cec29f453",
+          "file": "s26-river.spec.ts",
+          "line": 248,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-08T12:37:29.158Z",
+    "duration": 100485.852,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

@@ -19,7 +19,8 @@ export async function moveJourney(page:Page,x:number,y=550){
   const state=await readJourney(page);
   if(!state.player){await page.waitForTimeout(80);continue;}
   if(Date.now()>deadline)throw Error(`route ${state.stage} (${x},${y}): ${JSON.stringify(state.player)}`);
-  const dx=x-state.player.x,dy=y-state.player.y;
+  const crossingRiverRoof=state.stage==='S26'&&y<=560&&((x>2180&&state.player.x>=1740&&state.player.x<2330)||(x<1740&&state.player.x>=1740&&state.player.x<2330)||(x>=1740&&x<1860&&state.player.x>1840&&state.player.x<2330));
+  const dx=x-state.player.x,dy=(crossingRiverRoof?450:y)-state.player.y;
   const reached=Math.abs(dx)<16&&(state.freeMovement?Math.abs(dy)<35:Math.abs(dy)<110&&state.player.grounded);
   if(reached)break;
   const direction=dx>0?'d':'a';

@@ -1,0 +1,380 @@
+[
+  {
+    "path": "docs/screenshots/s26-river/verified/regression/S25-physical-bridge.png",
+    "size": [
+      1280,
+      720
+    ],
+    "bytes": 1068291,
+    "sha256": "43fd4f9e49127d8089ccb8b4d4e16da3cf17716bad3e9110b05922749d5c645d"
+  },
+  {
+    "path": "docs/screenshots/s26-river/verified/s26-bats/legacy-rewards.png",
+    "size": [
+      1280,
+      720
+    ],
+    "bytes": 1026976,
+    "sha256": "fc5cc652c14a8ebcc1014916ad233bab320dad19cbf0b76e7a6eb17998987b85"
+  },
+  {
+    "path": "docs/screenshots/s26-river/verified/s26-bats/phone-contact.png",
+    "size": [
+      844,
+      390
+    ],
+    "bytes": 486747,
+    "sha256": "5b98dd5eb1cf9faacd168d7429139fc8271439fb5aec87c413f230ee2b6ec8a1"
+  },
+  {
+    "path": "docs/screenshots/s26-river/verified/s26-bats/phone-evaded.png",
+    "size": [
+      844,
+      390
+    ],
+    "bytes": 495630,
+    "sha256": "6c55cdc04f1cf479f970c9c896f4697616479a1890d9e00daaaafe5015ddeff9"
+  },
+  {
+    "path": "docs/screenshots/s26-river/verified/s26-bats/phone-golden-heart.png",
+    "size": [
+      844,
+      390
+    ],
+    "bytes": 482739,
+    "sha256": "056988e47b3d64218e761422296f000268e2c3a282c9bf25f37ff34864a37cf0"
+  },
+  {
+    "path": "docs/screenshots/s26-river/verified/s26-bats/phone-patrol.png",
+    "size": [
+      844,
+      390
+    ],
+    "bytes": 503690,
+    "sha256": "e0a39f1aa829f5956eeec3f619250cbdf1c718666c3a97aff953c7b80914db3c"
+  },
+  {
+    "path": "docs/screenshots/s26-river/verified/s26-bats/phone-released.png",
+    "size": [
+      844,
+      390
+    ],
+    "bytes": 496346,
+    "sha256": "b246307a8340e8dce7b55d364f68ac34e9a68d1f7c09e45dec5d4dbc42ff42c9"
+  },
+  {
+    "path": "docs/screenshots/s26-river/verified/s26-bats/phone-resume.png",
+    "size": [
+      844,
+      390
+    ],
+    "bytes": 475481,
+    "sha256": "4059d6706c79985c36156239da977b7f9cedaa882c05aef528a14277ba4feb13"
+  },
+  {
+    "path": "docs/screenshots/s26-river/verified/s26-bats/phone-safe-checkpoint.png",
+    "size": [
+      844,
+      390
+    ],
+    "bytes": 494388,
+    "sha256": "69e276e161e1cd7314a6c5b7aca6d1885281892528646d7ba16663ee33d6cdf9"
+  },
+  {
+    "path": "docs/screenshots/s26-river/verified/s26-bats/phone-warning.png",
+    "size": [
+      844,
+      390
+    ],
+    "bytes": 488122,
+    "sha256": "c5cb754941fc6e95c04f4466a17aa276d3176a15e854237cc81f6c21f2f41fa1"
+  },
+  {
+    "path": "docs/screenshots/s26-river/verified/s26-bats/tablet-contact.png",
+    "size": [
+      1180,
+      820
+    ],
+    "bytes": 941478,
+    "sha256": "d2f2c1898c9faf3dd5016ae1b4dfcd6d639be4d5345383cb793c8cb1cafc9f2d"
+  },
+  {
+    "path": "docs/screenshots/s26-river/verified/s26-bats/tablet-evaded.png",
+    "size": [
+      1180,
+      820
+    ],
+    "bytes": 968774,
+    "sha256": "ec0ee997340e2b44bd2dc8315aded1cfd3eebb056bde7290c4e47c3874040bb7"
+  },
+  {
+    "path": "docs/screenshots/s26-river/verified/s26-bats/tablet-golden-heart.png",
+    "size": [
+      1180,
+      820
+    ],
+    "bytes": 1098140,
+    "sha256": "57a552290e22e7623e753191db29c549c1464ec02c7a969141c7b802cd42756d"
+  },
+  {
+    "path": "docs/screenshots/s26-river/verified/s26-bats/tablet-patrol.png",
+    "size": [
+      1180,
+      820
+    ],
+    "bytes": 1006773,
+    "sha256": "a923cc918bb2fcc750b448d8bacab333bfd04f7ea7ec40691d6cc620c2729a37"
+  },
+  {
+    "path": "docs/screenshots/s26-river/verified/s26-bats/tablet-released.png",
+    "size": [
+      1180,
+      820
+    ],
+    "bytes": 957271,
+    "sha256": "d13bcb87eecf0e484157efc8c9eda0ebae4a11b228177991f1e0c1918c03f585"
+  },
+  {
+    "path": "docs/screenshots/s26-river/verified/s26-bats/tablet-resume.png",
+    "size": [
+      1180,
+      820
+    ],
+    "bytes": 1016622,
+    "sha256": "0cd6a918c3eccbe962ed1eed6c0c4b03934035c9578fbf4f53a611dbb7849930"
+  },
+  {
+    "path": "docs/screenshots/s26-river/verified/s26-bats/tablet-safe-checkpoint.png",
+    "size": [
+      1180,
+      820
+    ],
+    "bytes": 1019173,
+    "sha256": "c1ebe29d9f03a1687b92ef7bbeae2148beb44ff0818107378b7603c13c4087aa"
+  },
+  {
+    "path": "docs/screenshots/s26-river/verified/s26-bats/tablet-warning.png",
+    "size": [
+      1180,
+      820
+    ],
+    "bytes": 952392,
+    "sha256": "578523ac12d9c2638c5cbdc4490286eb48f2cc3eb7db41959b1b8e17f30a59df"
+  },
+  {
+    "path": "docs/screenshots/s26-river/verified/s26-river/legacy-optional-skip.png",
+    "size": [
+      1280,
+      720
+    ],
+    "bytes": 1132409,
+    "sha256": "e343fa1b293c5ff8a1662da06874692dae6aab297237eb1c5c8627fb1f69a842"
+  },
+  {
+    "path": "docs/screenshots/s26-river/verified/s26-river/legacy-unprepared-return.png",
+    "size": [
+      1280,
+      720
+    ],
+    "bytes": 1033457,
+    "sha256": "5b3a458963a553eca95ea26133153aa117c8aa136b54e4daf16c105debc389e6"
+  },
+  {
+    "path": "docs/screenshots/s26-river/verified/s26-river/phone-bonus-dead-end.png",
+    "size": [
+      844,
+      390
+    ],
+    "bytes": 482226,
+    "sha256": "f8a52f87e67c9d34ee527f7ee4b31f17a9102569ee0e9cb76b93d35117bced14"
+  },
+  {
+    "path": "docs/screenshots/s26-river/verified/s26-river/phone-cave-return.png",
+    "size": [
+      844,
+      390
+    ],
+    "bytes": 482003,
+    "sha256": "0b4b76e424ed0f3783d5c54171f93ebc814705df1a63839c9485dfa0dc3147e2"
+  },
+  {
+    "path": "docs/screenshots/s26-river/verified/s26-river/phone-checkpoint-resume.png",
+    "size": [
+      844,
+      390
+    ],
+    "bytes": 470851,
+    "sha256": "3840a300f1dc59eb6a336ba65c5ddbb99459041eb005fcf2972917629b6348f7"
+  },
+  {
+    "path": "docs/screenshots/s26-river/verified/s26-river/phone-golden-side-cave.png",
+    "size": [
+      844,
+      390
+    ],
+    "bytes": 475630,
+    "sha256": "8c3d7bd699276cb16e14dedbe63f2d97dd97a83d6b34419b8962489647fb2671"
+  },
+  {
+    "path": "docs/screenshots/s26-river/verified/s26-river/phone-india-arrival.png",
+    "size": [
+      844,
+      390
+    ],
+    "bytes": 475513,
+    "sha256": "45fa6c2b21889143b16cfc4291aeeffad7144f5bbe04f252eaed2b54d2245b8d"
+  },
+  {
+    "path": "docs/screenshots/s26-river/verified/s26-river/phone-low-ceiling.png",
+    "size": [
+      844,
+      390
+    ],
+    "bytes": 471200,
+    "sha256": "1cf3084670e7b9aa47cf3c96ada063ccf99923ac82cc77128475f1b37672383f"
+  },
+  {
+    "path": "docs/screenshots/s26-river/verified/s26-river/phone-prepared.png",
+    "size": [
+      844,
+      390
+    ],
+    "bytes": 485292,
+    "sha256": "56c3b64c882feba084f83c72c0a0db817e2d4200b2bcbeaf12e14582025e46ca"
+  },
+  {
+    "path": "docs/screenshots/s26-river/verified/s26-river/phone-raft-arrival.png",
+    "size": [
+      844,
+      390
+    ],
+    "bytes": 484608,
+    "sha256": "fefb03bb6abd4c62c59191c2a5a82bd0ff9f2e1b0427b4a5d4a10124f307073d"
+  },
+  {
+    "path": "docs/screenshots/s26-river/verified/s26-river/phone-ride.png",
+    "size": [
+      844,
+      390
+    ],
+    "bytes": 483622,
+    "sha256": "e40da764bacb1a066a061125523afd915f1f1bf1b9b6ea62a814d59705efec42"
+  },
+  {
+    "path": "docs/screenshots/s26-river/verified/s26-river/phone-water-gates-open.png",
+    "size": [
+      844,
+      390
+    ],
+    "bytes": 486741,
+    "sha256": "7fe69cf66e686247d53ddf76579d803a602e4056f33df42e51fc3a7bb3b7f3f5"
+  },
+  {
+    "path": "docs/screenshots/s26-river/verified/s26-river/phone-wood-carried.png",
+    "size": [
+      844,
+      390
+    ],
+    "bytes": 455607,
+    "sha256": "4efa821b62a5b688f1528736cb93d054df37325b1fab040f88857c0532ee607f"
+  },
+  {
+    "path": "docs/screenshots/s26-river/verified/s26-river/tablet-bonus-dead-end.png",
+    "size": [
+      1180,
+      820
+    ],
+    "bytes": 1101251,
+    "sha256": "7f11bc231acf78ec20b672ef09a1bbb4c986d2e09e634fca95c7997554142478"
+  },
+  {
+    "path": "docs/screenshots/s26-river/verified/s26-river/tablet-cave-return.png",
+    "size": [
+      1180,
+      820
+    ],
+    "bytes": 999086,
+    "sha256": "c7596c0b338461b434dcb58a49c30c67fdc9653972783c54ab661a062c7129df"
+  },
+  {
+    "path": "docs/screenshots/s26-river/verified/s26-river/tablet-checkpoint-resume.png",
+    "size": [
+      1180,
+      820
+    ],
+    "bytes": 1023403,
+    "sha256": "d2143d7a02350347c7fe8731605201ed99a8e78e9f0423b65de5d2e661688d14"
+  },
+  {
+    "path": "docs/screenshots/s26-river/verified/s26-river/tablet-golden-side-cave.png",
+    "size": [
+      1180,
+      820
+    ],
+    "bytes": 1103435,
+    "sha256": "cac0f3968774998010a1e38d1fe37cd46e428581b6d6706ba61e6134fbe798b7"
+  },
+  {
+    "path": "docs/screenshots/s26-river/verified/s26-river/tablet-india-arrival.png",
+    "size": [
+      1180,
+      820
+    ],
+    "bytes": 1017018,
+    "sha256": "df1f708c04205913588e5fde6694b812f85a332762a61d1f57b47f200f3f49b0"
+  },
+  {
+    "path": "docs/screenshots/s26-river/verified/s26-river/tablet-low-ceiling.png",
+    "size": [
+      1180,
+      820
+    ],
+    "bytes": 898931,
+    "sha256": "a3915d1b15caae7c4e0a22a353b4f9e74b72990d1e21701afea24ac73a65d24f"
+  },
+  {
+    "path": "docs/screenshots/s26-river/verified/s26-river/tablet-prepared.png",
+    "size": [
+      1180,
+      820
+    ],
+    "bytes": 966313,
+    "sha256": "1b7878e78aae51d8ac6f786eb2bbfc7fb712daf5746fd03128e687bee8d17cd9"
+  },
+  {
+    "path": "docs/screenshots/s26-river/verified/s26-river/tablet-raft-arrival.png",
+    "size": [
+      1180,
+      820
+    ],
+    "bytes": 1097370,
+    "sha256": "4c5666b668a3724d574caebcb40673f79b881b3dec9954395295623e69b20376"
+  },
+  {
+    "path": "docs/screenshots/s26-river/verified/s26-river/tablet-ride.png",
+    "size": [
+      1180,
+      820
+    ],
+    "bytes": 966194,
+    "sha256": "67ceadd3c7abce59a1e3a306ad29c49f49a51ac074216d4e1eeb9e20fa1d2039"
+  },
+  {
+    "path": "docs/screenshots/s26-river/verified/s26-river/tablet-water-gates-open.png",
+    "size": [
+      1180,
+      820
+    ],
+    "bytes": 1044252,
+    "sha256": "86aec679b3c07a9001bcdbfdc9fb6ddd60c5c5b8aecd67d844ddf59282bb2168"
+  },
+  {
+    "path": "docs/screenshots/s26-river/verified/s26-river/tablet-wood-carried.png",
+    "size": [
+      1180,
+      820
+    ],
+    "bytes": 966263,
+    "sha256": "7d150a926b9eaa37791b3b5ee273da55143c2a01afe43ae8d2eaa7e96927581f"
+  }
+]

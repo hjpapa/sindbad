@@ -1,0 +1,501 @@
+{
+  "errors": [],
+  "observed": {
+    "gliding": false,
+    "river": null,
+    "batFlights": [],
+    "extraJump": false,
+    "rocEncounter": null,
+    "projectileArt": [],
+    "effectArt": [],
+    "cachedEffectKeys": [
+      "effect-hit-spark",
+      "effect-purify-light",
+      "effect-surrender-flag"
+    ],
+    "cachedActionKeys": [
+      "enemy-actions"
+    ],
+    "terrain": {
+      "style": "village",
+      "cachedKeys": [
+        "terrain-village-fill",
+        "terrain-village-top"
+      ],
+      "textures": [
+        {
+          "key": "terrain-village-fill",
+          "width": 128,
+          "height": 128,
+          "source": "blob:http://127.0.0.1:5174/992adbb2-9d46-4f31-bd67-27ca6e6cefee"
+        },
+        {
+          "key": "terrain-village-top",
+          "width": 128,
+          "height": 34,
+          "source": "blob:http://127.0.0.1:5174/7669138d-c2ec-4c36-b516-ccd5ad48af67"
+        }
+      ],
+      "platforms": [
+        {
+          "x": 1500,
+          "y": 664,
+          "width": 3000,
+          "height": 112,
+          "texture": "terrain-village-fill",
+          "visible": true,
+          "skinX": 1500,
+          "skinY": 664,
+          "skinWidth": 3000,
+          "skinHeight": 112
+        },
+        {
+          "x": 740,
+          "y": 560,
+          "width": 220,
+          "height": 24,
+          "texture": "terrain-village-fill",
+          "visible": false,
+          "skinX": 740,
+          "skinY": 560,
+          "skinWidth": 220,
+          "skinHeight": 24
+        },
+        {
+          "x": 1760,
+          "y": 548,
+          "width": 220,
+          "height": 24,
+          "texture": "terrain-village-fill",
+          "visible": false,
+          "skinX": 1760,
+          "skinY": 548,
+          "skinWidth": 220,
+          "skinHeight": 24
+        }
+      ],
+      "tops": [
+        {
+          "x": 1500,
+          "y": 621,
+          "width": 3000,
+          "height": 34,
+          "texture": "terrain-village-top"
+        },
+        {
+          "x": 740,
+          "y": 561,
+          "width": 220,
+          "height": 34,
+          "texture": "terrain-village-top"
+        },
+        {
+          "x": 1760,
+          "y": 549,
+          "width": 220,
+          "height": 34,
+          "texture": "terrain-village-top"
+        }
+      ]
+    },
+    "propArt": {
+      "cachedKeys": [
+        "prop-heart",
+        "prop-cargo",
+        "prop-gift",
+        "prop-journal"
+      ],
+      "objects": [
+        {
+          "id": "S27.intro",
+          "kind": "npc",
+          "texture": "mira-webtoon",
+          "x": 230,
+          "y": 550,
+          "width": 85.33333333333333,
+          "height": 128,
+          "visible": true,
+          "done": false
+        },
+        {
+          "id": "S27.quest.1",
+          "kind": "quest",
+          "texture": "prop-cargo",
+          "x": 890,
+          "y": 550,
+          "width": 65.28,
+          "height": 87.04,
+          "visible": true,
+          "done": false
+        },
+        {
+          "id": "S27.quest.2",
+          "kind": "quest",
+          "texture": "prop-cargo",
+          "x": 1260,
+          "y": 550,
+          "width": 65.28,
+          "height": 87.04,
+          "visible": true,
+          "done": false
+        },
+        {
+          "id": "S27.quest.3",
+          "kind": "quest",
+          "texture": "prop-cargo",
+          "x": 1630,
+          "y": 550,
+          "width": 65.28,
+          "height": 87.04,
+          "visible": true,
+          "done": false
+        },
+        {
+          "id": "S27.quest.4",
+          "kind": "quest",
+          "texture": "prop-journal",
+          "x": 2000,
+          "y": 550,
+          "width": 65.28,
+          "height": 87.04,
+          "visible": true,
+          "done": false
+        },
+        {
+          "id": "S27.reward",
+          "kind": "gift",
+          "texture": "prop-gift",
+          "x": 2480,
+          "y": 550,
+          "width": 65.28,
+          "height": 87.04,
+          "visible": true,
+          "done": false
+        },
+        {
+          "id": "S27.exit",
+          "kind": "exit",
+          "texture": "bell",
+          "x": 2840,
+          "y": 550,
+          "width": 65.28,
+          "height": 87.04,
+          "visible": true,
+          "done": false
+        },
+        {
+          "id": "S27.cp.middle",
+          "kind": "checkpoint",
+          "texture": "bell",
+          "x": 1560,
+          "y": 550,
+          "width": 40.32,
+          "height": 53.76,
+          "visible": true,
+          "done": false
+        }
+      ],
+      "chests": [],
+      "hearts": [
+        {
+          "id": "S27.heart.1",
+          "large": false,
+          "active": true,
+          "texture": "prop-heart",
+          "x": 1350,
+          "y": 550,
+          "width": 34.56,
+          "height": 46.08
+        },
+        {
+          "id": "S27.heart.2",
+          "large": true,
+          "active": true,
+          "texture": "prop-heart",
+          "x": 2280,
+          "y": 550,
+          "width": 48,
+          "height": 64
+        }
+      ]
+    },
+    "flightArt": null,
+    "heroArt": {
+      "texture": "hero-action",
+      "frame": 0,
+      "x": 120,
+      "y": 610,
+      "flipX": false,
+      "originY": 0.9609375
+    },
+    "weaponArt": {
+      "visible": false,
+      "x": 120,
+      "y": 548,
+      "texture": "weapon-W01",
+      "angle": 0
+    },
+    "storyDevices": [
+      {
+        "id": "S27.quest.1",
+        "x": 890,
+        "y": 550,
+        "mechanic": {
+          "type": "carry",
+          "distance": 150
+        },
+        "done": false,
+        "state": {
+          "value": 0,
+          "elapsed": 0,
+          "active": false,
+          "carrying": false
+        }
+      },
+      {
+        "id": "S27.quest.2",
+        "x": 1260,
+        "y": 550,
+        "mechanic": {
+          "type": "carry",
+          "distance": 120
+        },
+        "done": false,
+        "state": {
+          "value": 0,
+          "elapsed": 0,
+          "active": false,
+          "carrying": false
+        }
+      },
+      {
+        "id": "S27.quest.3",
+        "x": 1630,
+        "y": 550,
+        "mechanic": {
+          "type": "carry",
+          "distance": 170
+        },
+        "done": false,
+        "state": {
+          "value": 0,
+          "elapsed": 0,
+          "active": false,
+          "carrying": false
+        }
+      },
+      {
+        "id": "S27.quest.4",
+        "x": 2000,
+        "y": 550,
+        "mechanic": {
+          "type": "memory",
+          "text": "미라: 여행자를 돕는 길은 서로 이어져 있어요. 신전에서 이 추천서를 보여 주세요."
+        },
+        "done": false,
+        "state": {
+          "value": 0,
+          "elapsed": 0,
+          "active": false,
+          "carrying": false
+        }
+      }
+    ],
+    "freeMovement": false,
+    "stage": "S27",
+    "player": {
+      "x": 120,
+      "y": 546,
+      "grounded": true,
+      "vx": 0,
+      "vy": 0,
+      "hp": 135,
+      "maxHp": 135,
+      "bodyWidth": 42,
+      "bodyHeight": 84
+    },
+    "save": {
+      "schemaVersion": 1,
+      "buildVersion": "0.1.0",
+      "writtenAt": "2026-10-08T13:10:58.741Z",
+      "checkpoint": {
+        "stageId": "S27",
+        "checkpointId": "start"
+      },
+      "totalXp": 575,
+      "coins": 25,
+      "weapons": [
+        "W01",
+        "W02",
+        "W03",
+        "W04",
+        "W05",
+        "W06"
+      ],
+      "equippedWeapon": "W01",
+      "upgrades": {},
+      "treasures": [
+        "T01",
+        "T02",
+        "T03",
+        "T04",
+        "T05"
+      ],
+      "relics": [],
+      "goldenHearts": [
+        "G07"
+      ],
+      "equippedSkill": null,
+      "clearedStageIds": [
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S05",
+        "S06",
+        "S07",
+        "S08",
+        "S09",
+        "S10",
+        "S11",
+        "S12",
+        "S13",
+        "S14",
+        "S15",
+        "S16",
+        "S17",
+        "S18",
+        "S19",
+        "S20",
+        "S21",
+        "S22",
+        "S23",
+        "S24",
+        "S25",
+        "S26"
+      ],
+      "claimedRewardIds": [
+        "S01.reward.start",
+        "S26.raftWood.reward",
+        "S26.raftRope.reward",
+        "S26.quest.1.reward",
+        "S26.quest.2.reward",
+        "S26.golden.G07",
+        "S26.branchCoins.reward",
+        "S26.quest.3.reward",
+        "S26.reward.reward",
+        "S26.firstClear"
+      ],
+      "completedObjectiveIds": [
+        "S26.raftWood",
+        "S26.raftRope",
+        "S26.quest.1",
+        "S26.quest.2",
+        "S26.golden",
+        "S26.branchCoins",
+        "S26.quest.3",
+        "S26.reward"
+      ],
+      "flags": [
+        "bubbleBlessing",
+        "genieCave",
+        "flightJournal",
+        "upgradeShop",
+        "mayorArrested",
+        "crewRescued",
+        "captainKey",
+        "shadowDefeated",
+        "moonBridgeKey",
+        "indiaArrival"
+      ],
+      "journalPageIds": [],
+      "settings": {
+        "difficulty": "normal",
+        "musicVolume": 0.18,
+        "sfxVolume": 0.3,
+        "reducedMotion": true,
+        "largeText": false,
+        "aimAssist": false
+      }
+    },
+    "sim": 66.64000000000014,
+    "paused": false,
+    "enemies": [
+      {
+        "id": "S27.enemy.1",
+        "x": 800,
+        "y": 550,
+        "hp": 58,
+        "state": "idle",
+        "visible": true,
+        "alpha": 1,
+        "art": "bandit",
+        "texture": "enemy-actions",
+        "frame": 4,
+        "flipX": true,
+        "originX": 0.5,
+        "originY": 0.5844350961538461,
+        "displayHeight": 238.5663082437276,
+        "footOffset": 60,
+        "label": ""
+      },
+      {
+        "id": "S27.enemy.2",
+        "x": 1550,
+        "y": 550,
+        "hp": 58,
+        "state": "idle",
+        "visible": true,
+        "alpha": 1,
+        "art": "bandit",
+        "texture": "enemy-actions",
+        "frame": 4,
+        "flipX": false,
+        "originX": 0.5,
+        "originY": 0.5844350961538461,
+        "displayHeight": 238.5663082437276,
+        "footOffset": 60,
+        "label": ""
+      },
+      {
+        "id": "S27.enemy.3",
+        "x": 2300,
+        "y": 550,
+        "hp": 58,
+        "state": "idle",
+        "visible": true,
+        "alpha": 1,
+        "art": "bandit",
+        "texture": "enemy-actions",
+        "frame": 4,
+        "flipX": false,
+        "originX": 0.5,
+        "originY": 0.5844350961538461,
+        "displayHeight": 238.5663082437276,
+        "footOffset": 60,
+        "label": ""
+      }
+    ],
+    "flightHazards": [],
+    "projectiles": 0,
+    "boomerang": false,
+    "attack": null,
+    "air": 10000,
+    "submerged": false,
+    "bubbleProtected": true,
+    "movingPlatforms": [],
+    "mp": 70,
+    "flameReady": 0,
+    "pulse": false,
+    "wave": null,
+    "grip": null,
+    "mirrors": [
+      0,
+      0,
+      0
+    ],
+    "connectedMirrors": 0,
+    "puzzleSafe": false,
+    "frameMs": 16.660000000000217
+  }
+}

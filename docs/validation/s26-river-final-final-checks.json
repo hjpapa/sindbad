@@ -1,0 +1,44 @@
+[
+  {
+    "command": "npm run typecheck",
+    "exitCode": 0,
+    "started": "2026-10-08T12:51:26.184837+00:00",
+    "seconds": 3.375,
+    "log": "docs/validation/s26-river-final-final-check-1.txt"
+  },
+  {
+    "command": "npm run lint",
+    "exitCode": 0,
+    "started": "2026-10-08T12:51:29.552500+00:00",
+    "seconds": 3.469,
+    "log": "docs/validation/s26-river-final-final-check-2.txt"
+  },
+  {
+    "command": "npm run test",
+    "exitCode": 0,
+    "started": "2026-10-08T12:51:33.032937+00:00",
+    "seconds": 3.937,
+    "log": "docs/validation/s26-river-final-final-check-3.txt"
+  },
+  {
+    "command": "npm run validate:content",
+    "exitCode": 0,
+    "started": "2026-10-08T12:51:36.961351+00:00",
+    "seconds": 1.282,
+    "log": "docs/validation/s26-river-final-final-check-4.txt"
+  },
+  {
+    "command": "npm run build",
+    "exitCode": 0,
+    "started": "2026-10-08T12:51:38.242534+00:00",
+    "seconds": 11.218,
+    "log": "docs/validation/s26-river-final-final-check-5.txt"
+  },
+  {
+    "command": "npx tsx scripts/check-art-budget.ts",
+    "exitCode": 0,
+    "started": "2026-10-08T12:51:49.472288+00:00",
+    "seconds": 2.703,
+    "log": "docs/validation/s26-river-final-final-check-6.txt"
+  }
+]
