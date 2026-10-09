@@ -1,0 +1,41 @@
+{
+  "first": {
+    "startTime": "2026-10-09T09:05:13.965Z",
+    "duration": 550384.9450000001,
+    "expected": 7,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  },
+  "firstExitCode": 1,
+  "preservedFailure": "docs/screenshots/s32-rescue/first-test-results/s32-rescue-S32-legacy-resc-28ad1-ayable-without-paying-twice/",
+  "reason": "Legacy XP assertion included a real heart pickup (XP2); measured before combat after walking instead. No enemy reward duplicated.",
+  "inspectionRepairs": [
+    "Separate captive caption from neighbouring journal caption and include it in label decluttering.",
+    "Use actual floor intervals when snapping Ariana across the balcony seam."
+  ],
+  "beforeRepairTest": "docs/validation/s32-rescue-before-repair.test.ts.txt",
+  "beforeCaptionSource": "docs/validation/s32-rescue-before-caption.stage.ts.txt",
+  "beforeSealFix": {
+    "startTime": "2026-10-09T09:18:15.625Z",
+    "duration": 556088.761,
+    "expected": 9,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  },
+  "beforeSealFixExitCode": 1,
+  "sealFailure": "At x2027.56 the passive seal x2052 was selected instead of the active light x2000. Exclude gates opened by another proof from interaction; test explicitly from the seal side and leave until the actual position is outside the channel radius.",
+  "preservedSealFailure": "docs/screenshots/s32-rescue/final-test-results/s32-rescue-tablet-S32-join-f0368-and-restores-one-R07-reward/",
+  "beforeSealSource": "docs/validation/s32-rescue-before-seal.stage.ts.txt",
+  "beforeSealTest": "docs/validation/s32-rescue-before-seal.test.ts.txt",
+  "final": {
+    "startTime": "2026-10-09T09:29:09.645Z",
+    "duration": 573010.157,
+    "expected": 10,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "finalExitCode": 0
+}

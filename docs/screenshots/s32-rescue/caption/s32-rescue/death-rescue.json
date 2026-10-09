@@ -1,0 +1,1076 @@
+{
+  "name": "death-rescue",
+  "fixture": "explicit stage/items; all movement, dialogue, combat, save and restore use normal controls",
+  "observations": [
+    {
+      "phase": "contact",
+      "path": "docs/screenshots/s32-rescue/caption/s32-rescue/death-rescue-contact.png",
+      "state": {
+        "rescue": {
+          "released": true,
+          "companion": {
+            "x": 2091.8333333333335,
+            "y": 608,
+            "visible": true
+          },
+          "captiveVisible": false,
+          "sealClosed": false,
+          "sealLabel": "✓ 두 사람의 봉인 · 열렸어요",
+          "friendshipAt": 20000
+        },
+        "gliding": false,
+        "river": null,
+        "batFlights": [],
+        "extraJump": false,
+        "rocEncounter": null,
+        "projectileArt": [],
+        "effectArt": [],
+        "cachedEffectKeys": [
+          "effect-hit-spark",
+          "effect-purify-light",
+          "effect-surrender-flag"
+        ],
+        "cachedActionKeys": [
+          "spirit-actions"
+        ],
+        "terrain": {
+          "style": "tower",
+          "cachedKeys": [
+            "terrain-tower-fill",
+            "terrain-tower-top"
+          ],
+          "textures": [
+            {
+              "key": "terrain-tower-fill",
+              "width": 128,
+              "height": 128,
+              "source": "blob:http://127.0.0.1:5174/56978cc0-9b0a-4a63-8da5-a75a4bc4134f"
+            },
+            {
+              "key": "terrain-tower-top",
+              "width": 128,
+              "height": 34,
+              "source": "blob:http://127.0.0.1:5174/a755b8be-38c5-4bea-8a6b-6d54aa39c9b6"
+            }
+          ],
+          "platforms": [
+            {
+              "x": 1160,
+              "y": 664,
+              "width": 2320,
+              "height": 112,
+              "texture": "terrain-tower-fill",
+              "visible": true,
+              "skinX": 1160,
+              "skinY": 664,
+              "skinWidth": 2320,
+              "skinHeight": 112
+            },
+            {
+              "x": 2660,
+              "y": 616,
+              "width": 680,
+              "height": 112,
+              "texture": "terrain-tower-fill",
+              "visible": true,
+              "skinX": 2660,
+              "skinY": 616,
+              "skinWidth": 680,
+              "skinHeight": 112
+            }
+          ],
+          "tops": [
+            {
+              "x": 1160,
+              "y": 621,
+              "width": 2320,
+              "height": 34,
+              "texture": "terrain-tower-top"
+            },
+            {
+              "x": 2660,
+              "y": 573,
+              "width": 680,
+              "height": 34,
+              "texture": "terrain-tower-top"
+            }
+          ]
+        },
+        "propArt": {
+          "cachedKeys": [
+            "prop-heart",
+            "prop-journal",
+            "prop-star-map",
+            "prop-lantern",
+            "prop-star-device",
+            "prop-gift"
+          ],
+          "objects": [
+            {
+              "id": "S32.intro",
+              "kind": "npc",
+              "texture": "ariana-webtoon",
+              "x": 230,
+              "y": 550,
+              "width": 85.33333333333333,
+              "height": 128,
+              "visible": true,
+              "done": true
+            },
+            {
+              "id": "S32.quest.1",
+              "kind": "quest",
+              "texture": "prop-star-device",
+              "x": 890,
+              "y": 550,
+              "width": 65.28,
+              "height": 87.04,
+              "visible": true,
+              "done": true
+            },
+            {
+              "id": "S32.quest.2",
+              "kind": "quest",
+              "texture": "prop-star-device",
+              "x": 1260,
+              "y": 550,
+              "width": 65.28,
+              "height": 87.04,
+              "visible": true,
+              "done": true
+            },
+            {
+              "id": "S32.quest.3",
+              "kind": "quest",
+              "texture": "prop-star-device",
+              "x": 1630,
+              "y": 550,
+              "width": 65.28,
+              "height": 87.04,
+              "visible": true,
+              "done": true
+            },
+            {
+              "id": "S32.quest.4",
+              "kind": "quest",
+              "texture": "prop-lantern",
+              "x": 2000,
+              "y": 550,
+              "width": 65.28,
+              "height": 87.04,
+              "visible": true,
+              "done": true
+            },
+            {
+              "id": "S32.reward",
+              "kind": "gift",
+              "texture": "prop-gift",
+              "x": 2720,
+              "y": 500,
+              "width": 65.28,
+              "height": 87.04,
+              "visible": true,
+              "done": false
+            },
+            {
+              "id": "S32.exit",
+              "kind": "exit",
+              "texture": "bell",
+              "x": 2840,
+              "y": 500,
+              "width": 65.28,
+              "height": 87.04,
+              "visible": true,
+              "done": false
+            },
+            {
+              "id": "S32.cp.middle",
+              "kind": "checkpoint",
+              "texture": "bell",
+              "x": 1200,
+              "y": 550,
+              "width": 40.32,
+              "height": 53.76,
+              "visible": true,
+              "done": false
+            },
+            {
+              "id": "S32.seal",
+              "kind": "gate",
+              "texture": "prop-star-device",
+              "x": 2052,
+              "y": 550,
+              "width": 65.28,
+              "height": 87.04,
+              "visible": true,
+              "done": false
+            },
+            {
+              "id": "S32.journal",
+              "kind": "journal",
+              "texture": "prop-journal",
+              "x": 2410,
+              "y": 500,
+              "width": 65.28,
+              "height": 87.04,
+              "visible": true,
+              "done": false
+            },
+            {
+              "id": "S32.balcony",
+              "kind": "quest",
+              "texture": "prop-star-map",
+              "x": 2580,
+              "y": 500,
+              "width": 65.28,
+              "height": 87.04,
+              "visible": true,
+              "done": false
+            }
+          ],
+          "chests": [],
+          "hearts": [
+            {
+              "id": "S32.heart.1",
+              "large": false,
+              "active": true,
+              "texture": "prop-heart",
+              "x": 1350,
+              "y": 550,
+              "width": 34.56,
+              "height": 46.08
+            },
+            {
+              "id": "S32.heart.2",
+              "large": true,
+              "active": true,
+              "texture": "prop-heart",
+              "x": 2280,
+              "y": 550,
+              "width": 48,
+              "height": 64
+            }
+          ]
+        },
+        "flightArt": null,
+        "heroArt": {
+          "texture": "hero-action",
+          "frame": 4,
+          "x": 2152.4488376811305,
+          "y": 610,
+          "flipX": false,
+          "originY": 0.974609375
+        },
+        "weaponArt": {
+          "visible": false,
+          "x": 2000,
+          "y": 548,
+          "texture": "weapon-W01",
+          "angle": 0
+        },
+        "storyDevices": [
+          {
+            "id": "S32.quest.1",
+            "x": 890,
+            "y": 550,
+            "mechanic": {
+              "type": "rotate",
+              "target": 1,
+              "symbol": "아리아나의 별 ①"
+            },
+            "done": true
+          },
+          {
+            "id": "S32.quest.2",
+            "x": 1260,
+            "y": 550,
+            "mechanic": {
+              "type": "rotate",
+              "target": 3,
+              "symbol": "아리아나의 별 ②"
+            },
+            "done": true
+          },
+          {
+            "id": "S32.quest.3",
+            "x": 1630,
+            "y": 550,
+            "mechanic": {
+              "type": "rotate",
+              "target": 2,
+              "symbol": "아리아나의 별 ③"
+            },
+            "done": true
+          },
+          {
+            "id": "S32.quest.4",
+            "x": 2000,
+            "y": 550,
+            "mechanic": {
+              "type": "cooperate",
+              "symbol": "두 사람의 빛",
+              "duration": 1400,
+              "partnerX": 2220,
+              "partnerY": 550
+            },
+            "done": true
+          },
+          {
+            "id": "S32.balcony",
+            "x": 2580,
+            "y": 500,
+            "mechanic": {
+              "type": "escort",
+              "symbol": "안전 발코니 · 아리아나와 함께"
+            },
+            "done": false,
+            "state": {
+              "value": 0,
+              "elapsed": 0,
+              "active": false,
+              "carrying": false
+            }
+          }
+        ],
+        "freeMovement": false,
+        "stage": "S32",
+        "player": {
+          "x": 2161.8333333333335,
+          "y": 546,
+          "grounded": true,
+          "vx": 0,
+          "vy": 0,
+          "hp": 106,
+          "maxHp": 120,
+          "bodyWidth": 42,
+          "bodyHeight": 84
+        },
+        "save": {
+          "schemaVersion": 1,
+          "buildVersion": "0.1.0",
+          "writtenAt": "2026-10-09T09:44:51.655Z",
+          "checkpoint": {
+            "stageId": "S32",
+            "checkpointId": "rescue"
+          },
+          "totalXp": 420,
+          "coins": 0,
+          "weapons": [
+            "W01",
+            "W02",
+            "W03",
+            "W04",
+            "W05",
+            "W06",
+            "W07"
+          ],
+          "equippedWeapon": "W01",
+          "upgrades": {},
+          "treasures": [
+            "T01",
+            "T02",
+            "T03",
+            "T04",
+            "T05",
+            "T06",
+            "T07"
+          ],
+          "relics": [],
+          "goldenHearts": [],
+          "equippedSkill": null,
+          "clearedStageIds": [
+            "S01",
+            "S02",
+            "S03",
+            "S04",
+            "S05",
+            "S06",
+            "S07",
+            "S08",
+            "S09",
+            "S10",
+            "S11",
+            "S12",
+            "S13",
+            "S14",
+            "S15",
+            "S16",
+            "S17",
+            "S18",
+            "S19",
+            "S20",
+            "S21",
+            "S22",
+            "S23",
+            "S24",
+            "S25",
+            "S26",
+            "S27",
+            "S28",
+            "S29",
+            "S30",
+            "S31"
+          ],
+          "claimedRewardIds": [
+            "S01.reward.start",
+            "S32.quest.4.reward",
+            "S32.heart.1",
+            "S32.heart.2"
+          ],
+          "completedObjectiveIds": [
+            "S32.intro",
+            "S32.quest.1",
+            "S32.quest.2",
+            "S32.quest.3",
+            "S32.quest.4"
+          ],
+          "flags": [
+            "kuuraSealed"
+          ],
+          "journalPageIds": [],
+          "settings": {
+            "difficulty": "normal",
+            "musicVolume": 0.18,
+            "sfxVolume": 0.3,
+            "reducedMotion": false,
+            "largeText": false,
+            "aimAssist": false
+          }
+        },
+        "sim": 4286.570999999996,
+        "paused": false,
+        "enemies": [
+          {
+            "id": "S32.enemy.1",
+            "x": 800,
+            "y": 550,
+            "hp": 63,
+            "state": "idle",
+            "visible": true,
+            "alpha": 1,
+            "art": "spirit",
+            "texture": "spirit-actions",
+            "frame": 0,
+            "flipX": false,
+            "originX": 0.61328125,
+            "originY": 0.693359375,
+            "displayHeight": 189.75079872204472,
+            "footOffset": 64,
+            "label": ""
+          },
+          {
+            "id": "S32.enemy.2",
+            "x": 1640.1390950000011,
+            "y": 550,
+            "hp": 63,
+            "state": "idle",
+            "visible": true,
+            "alpha": 1,
+            "art": "spirit",
+            "texture": "spirit-actions",
+            "frame": 0,
+            "flipX": false,
+            "originX": 0.61328125,
+            "originY": 0.693359375,
+            "displayHeight": 189.75079872204472,
+            "footOffset": 64,
+            "label": ""
+          },
+          {
+            "id": "S32.enemy.3",
+            "x": 2203.24933475207,
+            "y": 550,
+            "hp": 63,
+            "state": "attack",
+            "visible": true,
+            "alpha": 1,
+            "art": "spirit",
+            "texture": "spirit-actions",
+            "frame": 2,
+            "flipX": true,
+            "originX": 0.412109375,
+            "originY": 0.5625,
+            "displayHeight": 189.75079872204472,
+            "footOffset": 64,
+            "label": "✦"
+          },
+          {
+            "id": "S32.enemy.4",
+            "x": 480,
+            "y": 550,
+            "hp": 63,
+            "state": "idle",
+            "visible": true,
+            "alpha": 1,
+            "art": "spirit",
+            "texture": "spirit-actions",
+            "frame": 0,
+            "flipX": false,
+            "originX": 0.61328125,
+            "originY": 0.693359375,
+            "displayHeight": 189.75079872204472,
+            "footOffset": 64,
+            "label": ""
+          }
+        ],
+        "flightHazards": [],
+        "projectiles": 0,
+        "boomerang": false,
+        "attack": null,
+        "air": 10000,
+        "submerged": false,
+        "bubbleProtected": true,
+        "movingPlatforms": [],
+        "mp": 68,
+        "flameReady": 0,
+        "pulse": false,
+        "wave": null,
+        "grip": null,
+        "mirrors": [
+          0,
+          0,
+          0
+        ],
+        "connectedMirrors": 0,
+        "puzzleSafe": false,
+        "frameMs": 16.65
+      }
+    },
+    {
+      "phase": "restored",
+      "path": "docs/screenshots/s32-rescue/caption/s32-rescue/death-rescue-restored.png",
+      "state": {
+        "rescue": {
+          "released": true,
+          "companion": {
+            "x": 1930,
+            "y": 608,
+            "visible": true
+          },
+          "captiveVisible": false,
+          "sealClosed": false,
+          "sealLabel": "✓ 두 사람의 봉인 · 열렸어요",
+          "friendshipAt": 20000
+        },
+        "gliding": false,
+        "river": null,
+        "batFlights": [],
+        "extraJump": false,
+        "rocEncounter": null,
+        "projectileArt": [],
+        "effectArt": [],
+        "cachedEffectKeys": [
+          "effect-hit-spark",
+          "effect-purify-light",
+          "effect-surrender-flag"
+        ],
+        "cachedActionKeys": [
+          "spirit-actions"
+        ],
+        "terrain": {
+          "style": "tower",
+          "cachedKeys": [
+            "terrain-tower-fill",
+            "terrain-tower-top"
+          ],
+          "textures": [
+            {
+              "key": "terrain-tower-fill",
+              "width": 128,
+              "height": 128,
+              "source": "blob:http://127.0.0.1:5174/56978cc0-9b0a-4a63-8da5-a75a4bc4134f"
+            },
+            {
+              "key": "terrain-tower-top",
+              "width": 128,
+              "height": 34,
+              "source": "blob:http://127.0.0.1:5174/a755b8be-38c5-4bea-8a6b-6d54aa39c9b6"
+            }
+          ],
+          "platforms": [
+            {
+              "x": 1160,
+              "y": 664,
+              "width": 2320,
+              "height": 112,
+              "texture": "terrain-tower-fill",
+              "visible": true,
+              "skinX": 1160,
+              "skinY": 664,
+              "skinWidth": 2320,
+              "skinHeight": 112
+            },
+            {
+              "x": 2660,
+              "y": 616,
+              "width": 680,
+              "height": 112,
+              "texture": "terrain-tower-fill",
+              "visible": true,
+              "skinX": 2660,
+              "skinY": 616,
+              "skinWidth": 680,
+              "skinHeight": 112
+            }
+          ],
+          "tops": [
+            {
+              "x": 1160,
+              "y": 621,
+              "width": 2320,
+              "height": 34,
+              "texture": "terrain-tower-top"
+            },
+            {
+              "x": 2660,
+              "y": 573,
+              "width": 680,
+              "height": 34,
+              "texture": "terrain-tower-top"
+            }
+          ]
+        },
+        "propArt": {
+          "cachedKeys": [
+            "prop-heart",
+            "prop-journal",
+            "prop-star-map",
+            "prop-lantern",
+            "prop-star-device",
+            "prop-gift"
+          ],
+          "objects": [
+            {
+              "id": "S32.intro",
+              "kind": "npc",
+              "texture": "ariana-webtoon",
+              "x": 230,
+              "y": 550,
+              "width": 85.33333333333333,
+              "height": 128,
+              "visible": true,
+              "done": true
+            },
+            {
+              "id": "S32.quest.1",
+              "kind": "quest",
+              "texture": "prop-star-device",
+              "x": 890,
+              "y": 550,
+              "width": 65.28,
+              "height": 87.04,
+              "visible": true,
+              "done": true
+            },
+            {
+              "id": "S32.quest.2",
+              "kind": "quest",
+              "texture": "prop-star-device",
+              "x": 1260,
+              "y": 550,
+              "width": 65.28,
+              "height": 87.04,
+              "visible": true,
+              "done": true
+            },
+            {
+              "id": "S32.quest.3",
+              "kind": "quest",
+              "texture": "prop-star-device",
+              "x": 1630,
+              "y": 550,
+              "width": 65.28,
+              "height": 87.04,
+              "visible": true,
+              "done": true
+            },
+            {
+              "id": "S32.quest.4",
+              "kind": "quest",
+              "texture": "prop-lantern",
+              "x": 2000,
+              "y": 550,
+              "width": 65.28,
+              "height": 87.04,
+              "visible": true,
+              "done": true
+            },
+            {
+              "id": "S32.reward",
+              "kind": "gift",
+              "texture": "prop-gift",
+              "x": 2720,
+              "y": 500,
+              "width": 65.28,
+              "height": 87.04,
+              "visible": true,
+              "done": false
+            },
+            {
+              "id": "S32.exit",
+              "kind": "exit",
+              "texture": "bell",
+              "x": 2840,
+              "y": 500,
+              "width": 65.28,
+              "height": 87.04,
+              "visible": true,
+              "done": false
+            },
+            {
+              "id": "S32.cp.middle",
+              "kind": "checkpoint",
+              "texture": "bell",
+              "x": 1200,
+              "y": 550,
+              "width": 40.32,
+              "height": 53.76,
+              "visible": true,
+              "done": false
+            },
+            {
+              "id": "S32.seal",
+              "kind": "gate",
+              "texture": "prop-star-device",
+              "x": 2052,
+              "y": 550,
+              "width": 65.28,
+              "height": 87.04,
+              "visible": true,
+              "done": false
+            },
+            {
+              "id": "S32.journal",
+              "kind": "journal",
+              "texture": "prop-journal",
+              "x": 2410,
+              "y": 500,
+              "width": 65.28,
+              "height": 87.04,
+              "visible": true,
+              "done": false
+            },
+            {
+              "id": "S32.balcony",
+              "kind": "quest",
+              "texture": "prop-star-map",
+              "x": 2580,
+              "y": 500,
+              "width": 65.28,
+              "height": 87.04,
+              "visible": true,
+              "done": false
+            }
+          ],
+          "chests": [],
+          "hearts": [
+            {
+              "id": "S32.heart.1",
+              "large": false,
+              "active": true,
+              "texture": "prop-heart",
+              "x": 1350,
+              "y": 550,
+              "width": 34.56,
+              "height": 46.08
+            },
+            {
+              "id": "S32.heart.2",
+              "large": true,
+              "active": true,
+              "texture": "prop-heart",
+              "x": 2280,
+              "y": 550,
+              "width": 48,
+              "height": 64
+            }
+          ]
+        },
+        "flightArt": null,
+        "heroArt": {
+          "texture": "hero-action",
+          "frame": 0,
+          "x": 2000,
+          "y": 609.4379965712095,
+          "flipX": false,
+          "originY": 0.9609375
+        },
+        "weaponArt": {
+          "visible": false,
+          "x": 2000,
+          "y": 548,
+          "texture": "weapon-W01",
+          "angle": 0
+        },
+        "storyDevices": [
+          {
+            "id": "S32.quest.1",
+            "x": 890,
+            "y": 550,
+            "mechanic": {
+              "type": "rotate",
+              "target": 1,
+              "symbol": "아리아나의 별 ①"
+            },
+            "done": true
+          },
+          {
+            "id": "S32.quest.2",
+            "x": 1260,
+            "y": 550,
+            "mechanic": {
+              "type": "rotate",
+              "target": 3,
+              "symbol": "아리아나의 별 ②"
+            },
+            "done": true
+          },
+          {
+            "id": "S32.quest.3",
+            "x": 1630,
+            "y": 550,
+            "mechanic": {
+              "type": "rotate",
+              "target": 2,
+              "symbol": "아리아나의 별 ③"
+            },
+            "done": true
+          },
+          {
+            "id": "S32.quest.4",
+            "x": 2000,
+            "y": 550,
+            "mechanic": {
+              "type": "cooperate",
+              "symbol": "두 사람의 빛",
+              "duration": 1400,
+              "partnerX": 2220,
+              "partnerY": 550
+            },
+            "done": true
+          },
+          {
+            "id": "S32.balcony",
+            "x": 2580,
+            "y": 500,
+            "mechanic": {
+              "type": "escort",
+              "symbol": "안전 발코니 · 아리아나와 함께"
+            },
+            "done": false,
+            "state": {
+              "value": 0,
+              "elapsed": 0,
+              "active": false,
+              "carrying": false
+            }
+          }
+        ],
+        "freeMovement": false,
+        "stage": "S32",
+        "player": {
+          "x": 2000,
+          "y": 546,
+          "grounded": true,
+          "vx": 0,
+          "vy": 0,
+          "hp": 120,
+          "maxHp": 120,
+          "bodyWidth": 42,
+          "bodyHeight": 84
+        },
+        "save": {
+          "schemaVersion": 1,
+          "buildVersion": "0.1.0",
+          "writtenAt": "2026-10-09T09:44:51.655Z",
+          "checkpoint": {
+            "stageId": "S32",
+            "checkpointId": "rescue"
+          },
+          "totalXp": 420,
+          "coins": 0,
+          "weapons": [
+            "W01",
+            "W02",
+            "W03",
+            "W04",
+            "W05",
+            "W06",
+            "W07"
+          ],
+          "equippedWeapon": "W01",
+          "upgrades": {},
+          "treasures": [
+            "T01",
+            "T02",
+            "T03",
+            "T04",
+            "T05",
+            "T06",
+            "T07"
+          ],
+          "relics": [],
+          "goldenHearts": [],
+          "equippedSkill": null,
+          "clearedStageIds": [
+            "S01",
+            "S02",
+            "S03",
+            "S04",
+            "S05",
+            "S06",
+            "S07",
+            "S08",
+            "S09",
+            "S10",
+            "S11",
+            "S12",
+            "S13",
+            "S14",
+            "S15",
+            "S16",
+            "S17",
+            "S18",
+            "S19",
+            "S20",
+            "S21",
+            "S22",
+            "S23",
+            "S24",
+            "S25",
+            "S26",
+            "S27",
+            "S28",
+            "S29",
+            "S30",
+            "S31"
+          ],
+          "claimedRewardIds": [
+            "S01.reward.start",
+            "S32.quest.4.reward",
+            "S32.heart.1",
+            "S32.heart.2"
+          ],
+          "completedObjectiveIds": [
+            "S32.intro",
+            "S32.quest.1",
+            "S32.quest.2",
+            "S32.quest.3",
+            "S32.quest.4"
+          ],
+          "flags": [
+            "kuuraSealed"
+          ],
+          "journalPageIds": [],
+          "settings": {
+            "difficulty": "normal",
+            "musicVolume": 0.18,
+            "sfxVolume": 0.3,
+            "reducedMotion": false,
+            "largeText": false,
+            "aimAssist": false
+          }
+        },
+        "sim": 2666.89,
+        "paused": false,
+        "enemies": [
+          {
+            "id": "S32.enemy.1",
+            "x": 800,
+            "y": 550,
+            "hp": 63,
+            "state": "idle",
+            "visible": true,
+            "alpha": 1,
+            "art": "spirit",
+            "texture": "spirit-actions",
+            "frame": 0,
+            "flipX": false,
+            "originX": 0.61328125,
+            "originY": 0.693359375,
+            "displayHeight": 189.75079872204472,
+            "footOffset": 64,
+            "label": ""
+          },
+          {
+            "id": "S32.enemy.2",
+            "x": 1640.004500000008,
+            "y": 550,
+            "hp": 63,
+            "state": "idle",
+            "visible": true,
+            "alpha": 1,
+            "art": "spirit",
+            "texture": "spirit-actions",
+            "frame": 0,
+            "flipX": false,
+            "originX": 0.61328125,
+            "originY": 0.693359375,
+            "displayHeight": 189.75079872204472,
+            "footOffset": 64,
+            "label": ""
+          },
+          {
+            "id": "S32.enemy.3",
+            "x": 2209.995500000017,
+            "y": 550,
+            "hp": 63,
+            "state": "idle",
+            "visible": true,
+            "alpha": 1,
+            "art": "spirit",
+            "texture": "spirit-actions",
+            "frame": 0,
+            "flipX": true,
+            "originX": 0.38671875,
+            "originY": 0.693359375,
+            "displayHeight": 189.75079872204472,
+            "footOffset": 64,
+            "label": ""
+          },
+          {
+            "id": "S32.enemy.4",
+            "x": 480,
+            "y": 550,
+            "hp": 63,
+            "state": "idle",
+            "visible": true,
+            "alpha": 1,
+            "art": "spirit",
+            "texture": "spirit-actions",
+            "frame": 0,
+            "flipX": false,
+            "originX": 0.61328125,
+            "originY": 0.693359375,
+            "displayHeight": 189.75079872204472,
+            "footOffset": 64,
+            "label": ""
+          }
+        ],
+        "flightHazards": [],
+        "projectiles": 0,
+        "boomerang": false,
+        "attack": null,
+        "air": 10000,
+        "submerged": false,
+        "bubbleProtected": true,
+        "movingPlatforms": [],
+        "mp": 68,
+        "flameReady": 0,
+        "pulse": false,
+        "wave": null,
+        "grip": null,
+        "mirrors": [
+          0,
+          0,
+          0
+        ],
+        "connectedMirrors": 0,
+        "puzzleSafe": false,
+        "frameMs": 16.670000000000073
+      }
+    }
+  ],
+  "errors": [],
+  "artStatus": "ART_DRAFT"
+}

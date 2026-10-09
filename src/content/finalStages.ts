@@ -106,7 +106,10 @@ const makeMap=(b:Blueprint,index:number):MapDef=>{
  if(b.boss&&spawns.length)needs.push(spawns.at(-1)!.id);
  const bossTextures:Record<string,string>={S09:'roc',S12:'dragon',S18:'pirateCaptain',S19:'kuura-webtoon',S21:'snake',S22:'tiger',S24:'stoneGiant',S31:'kuura-webtoon'};
  for(const spawn of spawns)if(spawn.kind==='boss'){spawn.name=b.boss;spawn.texture=bossTextures[b.id];}
- if(b.id==='S32')spawns.forEach(spawn=>{spawn.kind='spirit';spawn.texture='spirit';});
+ if(b.id==='S32'){
+   spawns.forEach(spawn=>{spawn.kind='spirit';spawn.texture='spirit';});
+   spawns.push({id:'S32.enemy.4',x:480,y:550,kind:'spirit',texture:'spirit',hp:63});
+ }
  const bossFrames:Record<string,number>={S12:3,S18:4,S21:0,S22:1,S24:2};
  for(const spawn of spawns)if(spawn.kind==='boss'&&b.id in bossFrames){spawn.texture='enemy-atlas';spawn.frame=bossFrames[b.id];}
  if(b.id==='S31')spawns.at(-1)!.hp=900;
@@ -150,16 +153,30 @@ const makeMap=(b:Blueprint,index:number):MapDef=>{
    Object.assign(objects.find(o=>o.id==='S26.golden')!,{x:2040,y:642,label:'수중 옆동굴 · 황금 하트 G07 · 왼쪽으로 복귀'});
    gift.x=2700;
  }
+ if(b.id==='S32'){
+   platforms.splice(0,platforms.length,ground(0,2320),ground(2320,width-2320,560));
+   objects[0].label='아리아나의 수정구슬 메시지 · 행동';
+   stepObjects[0].needs=['S32.intro'];
+   stepObjects.slice(0,3).forEach(object=>{object.requiresItems=['T02'];});
+   stepObjects[3].requiresItems=['T07'];stepObjects[3].rewardCheckpoint='rescue';
+   objects.push({id:'S32.seal',kind:'gate',x:2052,y:550,texture:'starDevice',opensWith:'S32.quest.4',needs:['S32.quest.4'],label:'두 사람의 봉인 · 함께 빛내면 열려요'},
+     {id:'S32.journal',kind:'journal',x:2410,y:500,texture:'journal',needs:['S32.quest.4'],dialogue:'S32.notes',label:'아리아나의 별 지도 기록 · 행동'},
+     {id:'S32.balcony',kind:'quest',x:2580,y:500,texture:'starMap',needs:['S32.quest.4'],mechanic:{type:'escort',symbol:'안전 발코니 · 아리아나와 함께'},label:'안전 발코니 · 함께 도착해 행동'});
+   gift.x=2720;gift.y=500;gift.needs=['S32.balcony'];gift.rewardCheckpoint='balcony';
+   Object.assign(objects.find(o=>o.id==='S32.exit')!,{y:500});
+   objects.find(o=>o.id==='S32.cp.middle')!.x=1200;
+ }
  const flightHazards=b.id==='S10'?
   [{id:'S10.gust.1',x:1150,y:455,radius:62,kind:'gust' as const},{id:'S10.gust.2',x:1680,y:300,radius:70,kind:'gust' as const},{id:'S10.gust.3',x:2210,y:170,radius:62,kind:'gust' as const}]:
   b.id==='S33'?[{id:'S33.debris.1',x:850,y:190,radius:48,kind:'debris' as const},{id:'S33.debris.2',x:1250,y:390,radius:48,kind:'debris' as const},{id:'S33.debris.3',x:1650,y:230,radius:48,kind:'debris' as const},{id:'S33.debris.4',x:2050,y:430,radius:48,kind:'debris' as const},{id:'S33.debris.5',x:2450,y:280,radius:48,kind:'debris' as const}]:undefined;
  if(b.id==='S16')stepObjects[3].y=350;
- return {id:b.id,width,theme:'adventure',visual:b.visual,mode:b.mode??'ground',river:b.id==='S26',water:b.id==='S26'?[{x:480,y:450,w:2180,h:270}]:undefined,peaceful:b.mode==='peace'||b.id==='S16',objective:b.mode==='flight'?'↑ 상승 · ↓ 하강 → 오른쪽 착륙장 (고리·공중 적은 선택)':`${b.id==='S26'?'뗏목 준비 → ': ''}${b.steps.join(' → ')}${b.boss?` → ${b.boss}`:''}`,platforms,spawns,objects,hearts:b.mode==='peace'?[]:[{id:`${b.id}.heart.1`,x:Math.round(width*.45),y:550},{id:`${b.id}.heart.2`,x:Math.round(width*.76),y:550,large:true}],checkpoints:[{id:'start',x:120,y:548},{id:'middle',x:Math.round(width*.52),y:548}],flightHazards};
+ return {id:b.id,width,theme:'adventure',visual:b.visual,mode:b.mode??'ground',river:b.id==='S26',water:b.id==='S26'?[{x:480,y:450,w:2180,h:270}]:undefined,peaceful:b.mode==='peace'||b.id==='S16',objective:b.mode==='flight'?'↑ 상승 · ↓ 하강 → 오른쪽 착륙장 (고리·공중 적은 선택)':`${b.id==='S26'?'뗏목 준비 → ': ''}${b.steps.join(' → ')}${b.boss?` → ${b.boss}`:''}${b.id==='S32'?' → 함께 발코니로':''}`,platforms,spawns,objects,hearts:b.mode==='peace'?[]:[{id:`${b.id}.heart.1`,x:Math.round(width*.45),y:550},{id:`${b.id}.heart.2`,x:Math.round(width*.76),y:550,large:true}],checkpoints:[{id:'start',x:120,y:548},{id:'middle',x:b.id==='S32'?1200:Math.round(width*.52),y:548},...(b.id==='S32'?[{id:'rescue',x:2000,y:548},{id:'balcony',x:2580,y:498}]:[])],flightHazards};
 };
 
 export const finalMaps=Object.fromEntries(finalBlueprints.map((b,i)=>[b.id,makeMap(b,i)])) as Record<string,MapDef>;
 export const finalDialogues=Object.fromEntries(finalBlueprints.flatMap(b=>[[`${b.id}.intro`,{name:b.npc,lines:b.intro}],[`${b.id}.outro`,{name:b.id==='S36'?'신밧드와 친구들':b.npc,lines:b.outro}]]));
 finalDialogues['S09.practice']={name:'깃털 연습',lines:['첫 발판까지 이단 점프 성공! 공중에서 점프를 한 번 더 누르면 높이 올라요.','오른쪽 위 발판으로 점프한 뒤, 떨어질 때 점프를 누르고 있으면 천천히 활공해요. 버튼을 놓으면 다시 빠르게 내려와요.','둥지 위 작은 보석은 선택 보물이에요. 발판에서 떨어져도 아래의 안전한 길로 돌아오며, 보석 없이도 다음 항해로 갈 수 있어요.']};
 finalDialogues['S26.route']={name:'별 지도',lines:['위쪽 갈림길은 금화가 있는 막다른 길이에요. 언제든 왼쪽 아래 물길로 돌아올 수 있어요.','별 지도는 오른쪽 출구의 ← 방향을 가리켜요. 수중 옆동굴의 황금 하트는 선택 탐험이에요. 왼쪽 입구로 돌아와 ↑를 누르면 다시 뗏목에 오를 수 있어요.']};
+finalDialogues['S32.notes']={name:'아리아나의 별 지도',lines:['탑 안에서 살핀 별은 →, ←, ↓ 순서로 이어졌어요. 안쪽과 바깥쪽 빛이 함께 만나면 봉인을 열 수 있죠.','이 기록은 다음 여행의 지도에 남겨 둘게요. 함께 안전한 발코니로 가요.']};
 finalMaps.S12.plantHazards=finalMaps.S12.objects.filter(object=>['S12.quest.1','S12.quest.2'].includes(object.id)).map(object=>({x:object.x-80,w:160,kind:'poison',clearedBy:object.id}));
 for(const id of ['S20','S21','S22','S29'])finalMaps[id].plantHazards=[{x:1350,w:160,kind:'vine'}];

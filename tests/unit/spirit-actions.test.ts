@@ -16,12 +16,13 @@ describe('spirit actions preserve elemental combat and magic release',()=>{
         expect(spirit.legacyGroundIndicatorOffset).toBe(64);
         expect(enemyActionTexture('spirit')).toBe('spirit-actions');expect(actionDefeatKind('spirit')).toBe('magic');
     });
-    it('connects the fifteen actual spirits without silently adding the missing fourth S32 curse orb',()=>{
+    it('connects sixteen actual spirits including the fourth S32 residual curse orb',()=>{
         const expected=[
             ...[1180,2450,3570].map((x,i)=>({id:`S03.enemy.spirit.0${i+1}`,x,y:552,hp:32})),
             ...[500,1100,1760,2370,2990].map((x,i)=>({id:`S06.enemy.spirit.${i+1}`,x,y:552,hp:36})),
             ...[440,1480,2440,3720].map((x,i)=>({id:`S07.enemy.spirit.${i+1}`,x,y:551,hp:36})),
             ...[800,1550,2300].map((x,i)=>({id:`S32.enemy.${i+1}`,x,y:550,hp:63})),
+            {id:'S32.enemy.4',x:480,y:550,hp:63},
         ];
         const enemies=Object.values(maps).flatMap(map=>map.spawns.filter(spawn=>spawn.actionArt==='spirit'));
         expect(enemies.map(({id,x,y,hp})=>({id,x,y,hp}))).toEqual(expected);

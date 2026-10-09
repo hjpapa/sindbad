@@ -28,7 +28,7 @@ export const storyDevices: Record<string, StoryMechanic[]> = {
  S29:[rotate(1,'덫 잠금'),rotate(2,'덫 잠금'),rotate(3,'덫 잠금'),rotate(1,'덫 잠금'),channel('아기 코끼리 구조',1200)],
  S30:Array.from({length:7},(_,i)=>({type:'treasure' as const,item:`T0${i+1}`,symbol:['불씨 점화','진실의 빛','깃털 바람','진주의 물결','방울 다리','연꽃 보호','새벽 정화'][i]})),
  S31:[channel('봉인석'),channel('봉인석'),channel('아리아나의 보호 결계')],
- S32:[rotate(1,'아리아나의 별'),rotate(3,'아리아나의 별'),rotate(2,'아리아나의 별'),channel('두 사람의 빛',1400)],
+ S32:[rotate(1,'아리아나의 별 ①'),rotate(3,'아리아나의 별 ②'),rotate(2,'아리아나의 별 ③'),{type:'cooperate',symbol:'두 사람의 빛',duration:1400,partnerX:2220,partnerY:550}],
  S34:[memory('아리아나: 새 지도에는 나이라의 궁전과 로크의 둥지도 표시할게요.'),memory('일곱 보물은 길을 밝히고 친구들을 지킨 방법들이에요.'),memory('왕: 무사히 돌아와 다행이구나. 이웃들의 이야기도 함께 들려다오.')],
  S35:[carry(110),channel('축제 음악'),carry(140)],
  S36:[memory('항해 전시 ① · 나이라와 불꽃 수호자, 지니와 로크새가 길을 이어 주었어요.'),memory('항해 전시 ② · 하미드와 마진, 바루와 미라. 친구들의 편지가 전시됐어요.'),memory('항해 전시 ③ · 구한 동물들과 평온한 신전. 보물보다 소중한 도움의 기록이에요.'),memory('아리아나: 이번 지도에는 우리가 도운 친구들도 표시해요. 신밧드: 가장 값진 보물은 함께 돌아온 이야기였군요.')],

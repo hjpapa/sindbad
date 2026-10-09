@@ -1,5 +1,32 @@
 # PROJECT_STATUS.md
 
+<!-- S32_RESCUE_STATUS_START -->
+## 최신 실제 상태 · 2026-10-09 · S32 협동 구출·안전 동행
+
+**기능 구현·선택 E2E10조건 통과·마지막 표시 보완 후 S32 7조건 재통과 / 단위135개 통과 / ART_DRAFT.** 기존 계획의 S32 저주 구체4개·아리아나 협력 퍼즐을 구현했다. 이전 자동 배포 확인 문서와 로컬 증거를 보존했다. 개발검증 마무리 당시에는 로컬 변경으로 커밋·푸시·배포 명령을 실행하지 않았다. 사용자 후속 요청에 따른 이번 커밋 범위는 S32 코드·문서·검사 로그·최종 화면94장과 실패 증거다. 아래 4e14c40 운영 반영 기록은 이전 S26 변경이다.
+
+- 원래 정령3개의 위치·HP63·보상 ID를 유지하고 입구 x480에 `S32.enemy.4`를 추가했다. 네 구체는 선택 전투이며 기존 행동4셀·빛으로 돌아가는 연출·XP6/금화3를 한 번 지급한다. 기존 S32 재개 시 적 재생성 방식은 유지하지만 보상을 다시 지급하지 않는다. 쿠우라 재등장/재전투 없음.
+- 수정구슬 메시지의 →·←·↓ 순서와 T02를 확인한 뒤 별3개를 맞춘다. T07을 가진 신밧드가 바깥 장치를 작동하면 아리아나가 안쪽 빛을 맞추는 연결선·진행 원이 보이고, 1400ms 협동으로 실제 충돌 봉인 문이 열린다. 이탈은 두 빛을 초기화하고 일시정지는 시간을 멈춘다. 봉인은 다른 장치의 완료 증명으로 열리는 수동 조작 없는 장벽이며 행동 버튼을 가로채지 않는다.
+- 봉인 해제는 `S32.quest.4`와 새 안전 체크포인트 `rescue`를 저장한다. 아리아나는 체력/물리 몸체 없이 실제 바닥 높이에 발을 맞춰 동행하며, 점프하거나 발코니 턱을 지날 때 떨어지지 않는다. 함께 안전 바닥에 서서 발코니 목표를 완료해야 R07 선물을 받는다. 기존 `S32.reward.reward`·`arianaRescued`를 유지하고 대화 시작 전에 `balcony` 체크포인트와 보상을 저장한다. 옛 구출 보상 저장도 문/동행/출구에 인정한다. 선택 `S32.journal` 별 지도 기록은 기존 일지 저장 구조로 한 번 수집한다.
+- `npm run typecheck` → `npm run lint` → `npm run test` **30파일135개** → `npm run validate:content` **36스테이지·24장면·7무기/보물·8하트** → `npm run build` **53모듈** → 첫 화면 용량 **3,106,770/8,000,000B** 모두 exit0. 기존 Phaser500KB 청크 경고 유지. 실제 최종 정적 검사6로그/결과는 `docs/validation/s32-rescue-caption-checks.json`, 용량은 `s32-rescue-caption-art-budget.json`이다. 콘텐츠 검사는 그래프/지형 조건이며 설계서·전체 플레이 완성 판정이 아니다.
+- 최초 선택8조건은 **7통과1실패·exit1·9.2분**: 옛 저장 검사에서 이동 중 실제 하트 XP2를 중복 적 보상으로 계산한 기대값을 보완했다. 두 번째10조건은 **9통과1실패·exit1·9.3분**: 태블릿의 x2027.56에서 x2052 봉인이 x2000 협동 장치보다 먼저 선택되어 시작하지 못한 실제 동작 문제를 수정했다. 안내 겹침과 바닥 경계의 동행 위치도 화면/코드 검토 후 보완했다. 첫/두 번째 JSON·로그·HTML·실패 PNG/문맥/관측 상태와 수정 전 코드/검사는 보존한다(`s32-rescue-e2e-first*`, `s32-rescue-e2e-final*`, `s32-rescue-before-*`). 이후 `npm run test:e2e -- tests/e2e/s32-rescue.spec.ts tests/e2e/story-devices.spec.ts tests/e2e/spirit-actions.spec.ts --grep 'S32|S25 bridge|phone spirits four actions|tablet spirits missing-sheet' --reporter=list,json,html` **10/10통과·exit0·9.6분**. 열린 봉인에 완료 표시를 추가한 마지막 변경 후 `npm run test:e2e -- tests/e2e/s32-rescue.spec.ts --reporter=list,json,html` **7/7통과·exit0·4.7분**. 모두 skipped/flaky0. 마지막 변경 후 관련 S32 7조건을 재검사했으며 전체 선택10조건 재실행은 하지 않았다.
+- 실제 통과 관측: 폰844×390/태블릿1180×820(연출 줄이기)의 메시지 생략·네 구체·네 번째 보상/재생성 후 중복 방지·별 회전 중 재개·봉인 충돌·봉인 가까이의 협동 시작·일시정지·이탈 초기화·두 빛·구출 체크포인트/동행 재개·선택 일지·공중에서 발코니 완료 차단·바닥에서 함께 도착·R07 대화 전 저장/중복 방지·발코니 완전 회복·실제 피해 후20초 회복 **106→116**·S33 진입이다. 옛 구출/적 보상 저장, 두 새 체크포인트에서 실제 접촉 피해로 사망 후 완전 회복/진행 보존, T02/T07 미획득 차단도 통과했다. 기존 정령 정상/시트 누락2조건은 S03/S06/S07/S32의 행동·접촉 피해·방향·정화·저장 재개를, S25 다리1조건은 실제 횡단/서 있기 지속을 재검사했다. 스테이지/장비 저장 픽스처로 시작하고 이후 정상 키/터치 입력만 사용한 Windows Edge 자동 검사다.
+- 통과 보고서 `docs/validation/s32-rescue-e2e-verified.json`/`s32-rescue-verified-report/`와 마지막 S32 `s32-rescue-e2e-caption.json`/`s32-rescue-caption-report/`. 실제 PNG **94장**: 최신 S32 **29장** `docs/screenshots/s32-rescue/caption/s32-rescue/`, 기존 정령 **64장** `docs/screenshots/s32-rescue/verified/m6-spirit/`, S25 **1장** `docs/screenshots/s32-rescue/verified-test-results/`의 `S25-physical-bridge.png`. 대표 `phone-both-lights.png`, `tablet-safe-companion-jump.png`, `phone-balcony-resume.png`, `phone-friendship-heal.png`, `death-rescue-restored.png`, `death-balcony-restored.png`; 각 관측 JSON도 보존했다. 크기/바이트/SHA는 `s32-rescue-final-screenshots.json`, 실패/수정 과정은 `s32-rescue-development.json`이다. 짧은 상태의 관측 JSON과 PNG는 캡처 시점이 다를 수 있다.
+- 네 실행 각각 소스/빌드/테스트/원본 **1014파일 전후 SHA256 일치**, 이전 소스·런타임 미디어 **639파일**과 의존성/lockfile 보존, 범위 외 변경 없음. 마지막10조건 통과 뒤에는 `src/game/stage.ts`의 봉인 완료 표시/읽기 전용 관측과 S32 검사·생성 빌드만 바뀌었다. 초기 편집 전 스냅샷은 일반 샌드박스 WinError5로 실행하지 못했다. 이전 검증 스냅샷을 원본·의존성 기준으로 사용하고, 이번 각 실행 전후는 실제 호스트에서 새 스냅샷으로 기록했다. 원래 용량 보고서 바이트 복구, `git diff --check` exit0, 5174/5175/9323 LISTENING 없음. 종합 `docs/validation/s32-rescue-finish.json` 참조.
+
+**남은 문제/미검증:** 전체 E2E와 이번 변경 후 저장 주입 없는 새 게임36구간 재완주는 미검증(이번 변경 범위의 선택10조건 및 마지막 표시 변경의 S32 7조건 검증). 마지막 표시 변경 후 선택10조건 전체 재실행은 미검증(관련7조건만 재검사; 기존 정령/다리3조건은 직전10조건 통과 실행). 실제 폰/태블릿·iOS Safari·어린이 조작성·장시간FPS/발열·실제 스피커·최종 아트 승인은 미검증(Windows Edge 자동 입력). S26 폰 안내 일부 겹침과 S08 박쥐 제한 비행은 기존 남은 작업이다. 새 이미지 생성/원본 변경 없음, 기존 아트와 자체 빛 도형을 재사용하고 ART_DRAFT 유지.
+
+**다음 한 작업:** S08 박쥐4마리에 기존 행동 시트와 제한 비행 경로를 연결하고, 수정 퍼즐 안전 구역·저장·전투 보상 중복 방지를 검증한다.
+<!-- S32_RESCUE_STATUS_END -->
+
+## 자동 배포 확인 · 2026-10-08 · 4e14c40 운영 반영 완료
+
+사용자가 자동 배포 미반영을 문의하여 실제 GitHub/Vercel 상태를 조회했다. `docsusil-hjpapa/sindbad`의 Git 자동 배포 `dpl_FFZ7r7wkbY9YYEpzVenK3ezbUMBz`는 처음 확인할 때 BUILDING이었으며, 이후 **4e14c40 / production / READY**, GitHub Vercel 알림 **success**를 확인했다. 생성22:30:49 → 준비22:34:32 KST(약3분43초). 실패가 아니라 빌드 완료 전이었다. 기존 공개 주소 `https://sindbad-orcin.vercel.app`가 연결됐고 aliasError 없음. HTTP200과 최신 `/assets/index-Dgc3_Dee.js`의 SHA256이 검증한 로컬 빌드와 일치한다. 이전 `/assets/index-B9TF8uWq.js`에서 교체된 것을 확인했다.
+
+이전 기록의 “배포 없음”은 별도 배포 명령을 실행하지 않았다는 뜻이며, Git 푸시로 시작된 자동 배포까지 확인한 표현은 아니었다. 이번에는 별도 재배포·설정 변경·코드 변경 없이 실제 자동 배포 완료를 확인했다. 상세 증거 `docs/validation/deployment-4e14c40-inspection.json`. 검사 재실행 없음. 운영 브라우저 직접 플레이/스크린샷은 미검증(내장 브라우저 연결이 신뢰/통신 오류로 시작하지 못함); HTTP와 실제 제공 번들 바이트를 별도로 검증했다. ART_DRAFT 및 기존 게임 검증 범위를 유지한다.
+
+**다음 한 작업:** 기존 계획의 S32 저주 구체4개·아리아나 협력 퍼즐을 구현하고 저장·구출 보상을 검증한다.
+
 <!-- S26_RIVER_STATUS_START -->
 ## 최신 실제 상태 · 2026-10-08 · S26 뗏목·암굴·안전 복귀
 

@@ -1,0 +1,156 @@
+import {test,expect,type Page} from '@playwright/test';
+import {mkdirSync,writeFileSync} from 'node:fs';
+import {freshSave,type Save} from '../../src/core/state';
+import {SAVE_KEY} from '../../src/core/save';
+import {maps} from '../../src/content/maps';
+import {evidencePath} from './art-evidence';
+import {moveJourney,useJourney,skipJourneyDialogue,fightJourney,finishJourneyStage} from './journey-bot';
+
+test.use({hasTouch:true});
+const read=(page:Page)=>page.evaluate(()=>Reflect.get(window,'__SINBAD_TEST__'));
+const object=(id:string)=>maps.S32.objects.find(o=>o.id===`S32.${id}`)!;
+function fixture(reducedMotion=false){
+    const save=freshSave();save.checkpoint={stageId:'S32',checkpointId:'start'};
+    save.clearedStageIds=Array.from({length:31},(_,i)=>`S${String(i+1).padStart(2,'0')}`);
+    save.treasures=['T01','T02','T03','T04','T05','T06','T07'];save.weapons=['W01','W02','W03','W04','W05','W06','W07'];
+    save.totalXp=420;save.flags=['kuuraSealed'];save.settings.difficulty='normal';save.settings.aimAssist=false;save.settings.reducedMotion=reducedMotion;
+    return save;
+}
+async function resume(page:Page){
+    await page.reload();await page.getByRole('button',{name:'이어하기 · S32'}).click();
+    await page.waitForFunction(()=>Reflect.get(window,'__SINBAD_TEST__')?.stage==='S32');
+    await page.waitForTimeout(2600);
+}
+async function load(page:Page,save:Save){
+    await page.goto('/');await page.evaluate(({key,save})=>localStorage.setItem(key,JSON.stringify(save)),{key:SAVE_KEY,save});await resume(page);
+}
+function evidence(page:Page,name:string){
+    const observations:unknown[]=[],errors:string[]=[];mkdirSync(evidencePath('s32-rescue'),{recursive:true});
+    page.on('pageerror',error=>errors.push(error.message));
+    page.on('console',message=>{if(message.type()==='error')errors.push(message.text());});
+    page.on('response',response=>{if(response.status()>=400)errors.push(`${response.status()} ${response.url()}`);});
+    return {errors,async shot(phase:string){const state=await read(page),path=evidencePath(`s32-rescue/${name}-${phase}.png`);await page.screenshot({path});observations.push({phase,path,state});},
+        finish(){writeFileSync(evidencePath(`s32-rescue/${name}.json`),JSON.stringify({name,fixture:'explicit stage/items; all movement, dialogue, combat, save and restore use normal controls',observations,errors,artStatus:'ART_DRAFT'},null,2));}};
+}
+test.afterEach(async({page},info)=>{
+    if(info.status!==info.expectedStatus){const state=await read(page).catch(()=>null);writeFileSync(info.outputPath('observed-state.json'),JSON.stringify(state,null,2));}
+});
+
+for(const [device,viewport] of Object.entries({phone:{width:844,height:390},tablet:{width:1180,height:820}})){
+    test(`${device} S32 jointly opens seal, safely escorts Ariana and restores one R07 reward`,async({page})=>{
+        test.setTimeout(7*60*1000);await page.setViewportSize(viewport);const proof=evidence(page,device);
+        await load(page,fixture(device==='tablet'));
+        expect((await read(page)).enemies).toHaveLength(4);
+        expect((await read(page)).rescue).toMatchObject({released:false,captiveVisible:true,sealClosed:true,companion:{visible:false}});
+        await moveJourney(page,230,550);await page.keyboard.press('e');
+        await expect(page.getByRole('button',{name:'전체 생략'})).toBeVisible();await proof.shot('message');await skipJourneyDialogue(page);
+        await expect.poll(async()=>(await read(page)).save.completedObjectiveIds.includes('S32.intro')).toBe(true);
+        const before=(await read(page)).save as Save;await fightJourney(page,'S32.enemy.4');
+        const rewarded=(await read(page)).save as Save;
+        expect(rewarded.totalXp-before.totalXp).toBe(6);expect(rewarded.coins-before.coins).toBe(3);
+        expect(rewarded.claimedRewardIds.filter(id=>id==='S32.enemy.4')).toHaveLength(1);
+        await resume(page);expect((await read(page)).enemies).toHaveLength(4);await fightJourney(page,'S32.enemy.4');
+        expect((await read(page)).save.totalXp).toBe(rewarded.totalXp);expect((await read(page)).save.coins).toBe(rewarded.coins);
+        await fightJourney(page,'S32.enemy.1');await useJourney(page,object('quest.1'));
+        await moveJourney(page,object('quest.2').x,550);await page.keyboard.press('e');await page.waitForTimeout(180);
+        expect((await read(page)).storyDevices.find((o:{id:string})=>o.id==='S32.quest.2').state.value).toBe(1);
+        expect((await read(page)).save.completedObjectiveIds).not.toContain('S32.quest.2');
+        await resume(page);
+        expect((await read(page)).save.completedObjectiveIds).toContain('S32.quest.1');
+        expect((await read(page)).storyDevices.find((o:{id:string})=>o.id==='S32.quest.2').state.value).toBe(0);
+        await fightJourney(page,'S32.enemy.1');await fightJourney(page,'S32.enemy.2');
+        await useJourney(page,object('quest.2'));await useJourney(page,object('quest.3'));
+        await moveJourney(page,2040,550);await page.keyboard.down('d');await page.waitForTimeout(800);await page.keyboard.up('d');
+        expect((await read(page)).player.x).toBeLessThan(2080);expect((await read(page)).rescue.sealClosed).toBe(true);
+        await proof.shot('closed-seal');
+        await moveJourney(page,object('quest.4').x,550);await page.keyboard.press('e');await page.waitForTimeout(220);
+        await page.locator('#pause').click();const paused=await read(page);await page.waitForTimeout(400);
+        expect((await read(page)).sim).toBe(paused.sim);expect(paused.save.completedObjectiveIds).not.toContain('S32.quest.4');
+        await page.locator('#resume').click();await page.keyboard.down('a');await page.waitForTimeout(500);await page.keyboard.up('a');
+        const separated=await read(page);const joint=separated.storyDevices.find((o:{id:string})=>o.id==='S32.quest.4');
+        expect(joint.state.elapsed).toBe(0);expect(joint.state.active).toBe(false);expect(separated.rescue.sealClosed).toBe(true);
+        await moveJourney(page,object('quest.4').x,550);await page.keyboard.press('e');
+        await page.waitForFunction(()=>{const d=Reflect.get(window,'__SINBAD_TEST__')?.storyDevices.find((o:{id:string})=>o.id==='S32.quest.4');return d?.state.elapsed>=500&&!d.done;});
+        await proof.shot('both-lights');
+        await expect.poll(async()=>(await read(page)).save.completedObjectiveIds.includes('S32.quest.4')).toBe(true);
+        await expect.poll(async()=>(await read(page)).rescue.sealClosed).toBe(false);
+        expect((await read(page)).save.checkpoint).toEqual({stageId:'S32',checkpointId:'rescue'});
+        expect((await read(page)).save.relics).not.toContain('R07');await proof.shot('released');
+        await resume(page);
+        expect((await read(page)).rescue).toMatchObject({released:true,captiveVisible:false,sealClosed:false,companion:{visible:true,y:608}});
+        expect((await read(page)).player.hp).toBe((await read(page)).player.maxHp);
+        await proof.shot('release-resume');
+        await moveJourney(page,object('journal').x,500);await page.keyboard.press('e');
+        await expect(page.getByRole('button',{name:'전체 생략'})).toBeVisible();await proof.shot('journal');await skipJourneyDialogue(page);
+        expect((await read(page)).save.journalPageIds).toEqual(['S32.journal']);
+        await moveJourney(page,2580,500);await page.keyboard.press('ArrowUp');
+        await page.waitForFunction(()=>Reflect.get(window,'__SINBAD_TEST__')?.player.grounded===false);
+        const jumping=await read(page);expect(jumping.rescue.companion.y).toBe(560);await proof.shot('safe-companion-jump');
+        await page.keyboard.press('e');await page.waitForTimeout(150);
+        expect((await read(page)).save.completedObjectiveIds).not.toContain('S32.balcony');
+        await moveJourney(page,2580,500);await page.keyboard.press('e');await page.waitForTimeout(180);
+        expect((await read(page)).save.completedObjectiveIds).toContain('S32.balcony');expect((await read(page)).save.relics).not.toContain('R07');
+        await moveJourney(page,2720,500);await page.keyboard.press('e');
+        await expect(page.getByRole('button',{name:'전체 생략'})).toBeVisible();const gift=(await read(page)).save as Save;
+        expect(gift.relics).toEqual(['R07']);expect(gift.flags).toContain('arianaRescued');expect(gift.checkpoint).toEqual({stageId:'S32',checkpointId:'balcony'});
+        await proof.shot('reward-before-dialogue');await resume(page);
+        const restored=await read(page);expect(restored.save.claimedRewardIds).toEqual(gift.claimedRewardIds);
+        expect(restored.player.x).toBeCloseTo(2580,1);expect(restored.player.hp).toBe(restored.player.maxHp);
+        expect(restored.rescue.companion).toMatchObject({visible:true,y:560});await proof.shot('balcony-resume');
+        await moveJourney(page,2720,500);await page.keyboard.press('e');await page.waitForTimeout(160);await skipJourneyDialogue(page);
+        expect((await read(page)).save.totalXp).toBe(gift.totalXp);expect((await read(page)).save.coins).toBe(gift.coins);
+        expect((await read(page)).save.claimedRewardIds.filter((id:string)=>id==='S32.reward.reward')).toHaveLength(1);
+        // The third orb remains optional and provides real contact damage for
+        // the existing 20-second R07 heal. No HP or simulation time is injected.
+        const hp=(await read(page)).player.hp;
+        const target=(await read(page)).enemies.find((e:{id:string})=>e.id==='S32.enemy.3');await moveJourney(page,target.x-75,550);
+        await expect.poll(async()=>(await read(page)).player.hp,{timeout:12000}).toBeLessThan(hp);
+        await moveJourney(page,2580,500);const damaged=await read(page);expect(damaged.player.hp).toBeLessThan(damaged.player.maxHp);
+        await proof.shot('before-friendship-heal');const due=damaged.rescue.friendshipAt;
+        await page.waitForFunction(due=>Reflect.get(window,'__SINBAD_TEST__')?.sim>=due,due,{timeout:26000});
+        expect((await read(page)).player.hp).toBe(Math.min(damaged.player.hp+10,damaged.player.maxHp));await proof.shot('friendship-heal');
+        await finishJourneyStage(page);expect((await read(page)).stage).toBe('S33');expect((await read(page)).save.flags).toContain('kuuraSealed');
+        expect(proof.errors).toEqual([]);proof.finish();
+    });
+}
+
+test('S32 legacy rescue and enemy reward claims remain playable without paying twice',async({page})=>{
+    const proof=evidence(page,'legacy'),save=fixture();save.checkpoint.checkpointId='middle';save.relics=['R07'];save.flags.push('arianaRescued');save.coins=9;
+    save.completedObjectiveIds.push('S32.intro',...Array.from({length:4},(_,i)=>`S32.quest.${i+1}`),'S32.reward');
+    save.claimedRewardIds.push('S32.reward.reward','S32.enemy.1','S32.enemy.2','S32.enemy.3');
+    await load(page,save);expect((await read(page)).rescue).toMatchObject({released:true,sealClosed:false,captiveVisible:false,companion:{visible:true}});
+    expect((await read(page)).save.claimedRewardIds).toEqual(save.claimedRewardIds);await proof.shot('old-save');
+    // Walking to the orb can collect a legitimate heart (XP2). Measure the
+    // already-claimed enemy reward only after that walk, before the attack.
+    await moveJourney(page,(await read(page)).enemies.find((e:{id:string})=>e.id==='S32.enemy.2').x-55,550);
+    const beforeCombat=(await read(page)).save as Save;await fightJourney(page,'S32.enemy.2');
+    expect((await read(page)).save.coins).toBe(beforeCombat.coins);expect((await read(page)).save.totalXp).toBe(beforeCombat.totalXp);
+    await finishJourneyStage(page);expect((await read(page)).stage).toBe('S33');
+    expect((await read(page)).save.claimedRewardIds.filter((id:string)=>id==='S32.reward.reward')).toHaveLength(1);
+    expect(proof.errors).toEqual([]);proof.finish();
+});
+
+for(const checkpoint of ['rescue','balcony'])test(`S32 death returns safely to ${checkpoint} without losing the rescue or rewards`,async({page})=>{
+    test.setTimeout(120000);const proof=evidence(page,`death-${checkpoint}`),save=fixture();save.checkpoint.checkpointId=checkpoint;
+    save.completedObjectiveIds.push('S32.intro',...Array.from({length:4},(_,i)=>`S32.quest.${i+1}`));
+    save.claimedRewardIds.push('S32.quest.4.reward','S32.heart.1','S32.heart.2');
+    if(checkpoint==='balcony'){save.relics=['R07'];save.flags.push('arianaRescued');save.completedObjectiveIds.push('S32.balcony','S32.reward');save.claimedRewardIds.push('S32.reward.reward');}
+    await load(page,save);const cp=maps.S32.checkpoints.find(cp=>cp.id===checkpoint)!;
+    const target=(await read(page)).enemies.find((e:{id:string})=>e.id==='S32.enemy.3');await moveJourney(page,target.x-75,550);
+    await expect.poll(async()=>(await read(page)).player.hp,{timeout:12000}).toBeLessThan((await read(page)).player.maxHp);
+    await proof.shot('contact');
+    await page.waitForFunction(x=>{const s=Reflect.get(window,'__SINBAD_TEST__');return s?.stage==='S32'&&s.player?.grounded&&Math.abs(s.player.x-x)<8&&s.player.hp===s.player.maxHp;},cp.x,{timeout:75000});
+    const restored=await read(page);expect(restored.save.checkpoint.checkpointId).toBe(checkpoint);expect(Math.abs(restored.player.y-cp.y)).toBeLessThan(3);
+    expect(restored.save.claimedRewardIds).toEqual(save.claimedRewardIds);expect(restored.save.treasures).toEqual(save.treasures);expect(restored.save.relics).toEqual(save.relics);
+    expect(restored.rescue).toMatchObject({released:true,sealClosed:false,captiveVisible:false,companion:{visible:true}});
+    await page.waitForTimeout(2600);await proof.shot('restored');expect(proof.errors).toEqual([]);proof.finish();
+});
+
+for(const item of ['T02','T07'])test(`S32 ${item} guard keeps the next required device and seal closed`,async({page})=>{
+    const proof=evidence(page,`guard-${item}`),save=fixture();save.treasures=save.treasures.filter(id=>id!==item);
+    save.completedObjectiveIds.push('S32.intro');
+    if(item==='T07')save.completedObjectiveIds.push('S32.quest.1','S32.quest.2','S32.quest.3');
+    await load(page,save);const def=object(item==='T02'?'quest.1':'quest.4');await moveJourney(page,def.x,550);await page.keyboard.press('e');await page.waitForTimeout(1600);
+    expect((await read(page)).save.completedObjectiveIds).not.toContain(def.id);expect((await read(page)).rescue).toMatchObject({released:false,sealClosed:true,companion:{visible:false}});
+    expect((await read(page)).save.relics).not.toContain('R07');await proof.shot('blocked');expect(proof.errors).toEqual([]);proof.finish();
+});

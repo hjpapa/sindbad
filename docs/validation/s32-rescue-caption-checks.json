@@ -1,0 +1,44 @@
+[
+  {
+    "command": "npm run typecheck",
+    "exitCode": 0,
+    "started": "2026-10-09T09:39:54.188286+00:00",
+    "seconds": 3.578,
+    "log": "docs/validation/s32-rescue-caption-check-1.txt"
+  },
+  {
+    "command": "npm run lint",
+    "exitCode": 0,
+    "started": "2026-10-09T09:39:57.764440+00:00",
+    "seconds": 3.657,
+    "log": "docs/validation/s32-rescue-caption-check-2.txt"
+  },
+  {
+    "command": "npm run test",
+    "exitCode": 0,
+    "started": "2026-10-09T09:40:01.428478+00:00",
+    "seconds": 4.468,
+    "log": "docs/validation/s32-rescue-caption-check-3.txt"
+  },
+  {
+    "command": "npm run validate:content",
+    "exitCode": 0,
+    "started": "2026-10-09T09:40:05.891359+00:00",
+    "seconds": 1.329,
+    "log": "docs/validation/s32-rescue-caption-check-4.txt"
+  },
+  {
+    "command": "npm run build",
+    "exitCode": 0,
+    "started": "2026-10-09T09:40:07.213599+00:00",
+    "seconds": 12.359,
+    "log": "docs/validation/s32-rescue-caption-check-5.txt"
+  },
+  {
+    "command": "npx tsx scripts/check-art-budget.ts",
+    "exitCode": 0,
+    "started": "2026-10-09T09:40:19.572549+00:00",
+    "seconds": 2.859,
+    "log": "docs/validation/s32-rescue-caption-check-6.txt"
+  }
+]

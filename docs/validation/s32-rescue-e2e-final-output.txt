@@ -1,0 +1,58 @@
+
+> sinbad-seven-treasures@0.1.0 test:e2e
+> playwright test tests/e2e/s32-rescue.spec.ts tests/e2e/story-devices.spec.ts tests/e2e/spirit-actions.spec.ts --grep S32|S25 bridge|phone spirits four actions|tablet spirits missing-sheet --reporter=list,json,html --output docs/screenshots/s32-rescue/final-test-results
+
+
+Running 10 tests using 1 worker
+
+(node:26760) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:26760) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  1 tests\e2e\s32-rescue.spec.ts:109:3 › phone S32 jointly opens seal, safely escorts Ariana and restores one R07 reward (1.7m)
+  x   2 tests\e2e\s32-rescue.spec.ts:109:3 › tablet S32 jointly opens seal, safely escorts Ariana and restores one R07 reward (57.5s)
+(node:31112) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:31112) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  3 tests\e2e\s32-rescue.spec.ts:293:1 › S32 legacy rescue and enemy reward claims remain playable without paying twice (13.6s)
+  ok  4 tests\e2e\s32-rescue.spec.ts:330:49 › S32 death returns safely to rescue without losing the rescue or rewards (29.3s)
+  ok  5 tests\e2e\s32-rescue.spec.ts:330:49 › S32 death returns safely to balcony without losing the rescue or rewards (31.8s)
+  ok  6 tests\e2e\s32-rescue.spec.ts:381:36 › S32 T02 guard keeps the next required device and seal closed (9.0s)
+  ok  7 tests\e2e\s32-rescue.spec.ts:381:36 › S32 T07 guard keeps the next required device and seal closed (12.7s)
+  ok  8 tests\e2e\spirit-actions.spec.ts:54:41 › phone spirits four actions in storm, flame, waves and final tower (2.1m)
+  ok  9 tests\e2e\spirit-actions.spec.ts:54:41 › tablet spirits missing-sheet recovery in storm, flame, waves and final tower (2.1m)
+(node:38844) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:38844) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 10 tests\e2e\story-devices.spec.ts:92:1 › S25 bridge requires real crossing and standing extends its lifetime (38.4s)
+
+
+  1) tests\e2e\s32-rescue.spec.ts:109:3 › tablet S32 jointly opens seal, safely escorts Ariana and restores one R07 reward 
+
+    TimeoutError: page.waitForFunction: Timeout 10000ms exceeded.
+
+      71 |         expect(joint.state.elapsed).toBe(0);expect(joint.state.active).toBe(false);expect(separated.rescue.sealClosed).toBe(true);
+      72 |         await moveJourney(page,object('quest.4').x,550);await page.keyboard.press('e');
+    > 73 |         await page.waitForFunction(()=>{const d=Reflect.get(window,'__SINBAD_TEST__')?.storyDevices.find((o:{id:string})=>o.id==='S32.quest.4');return d?.state.elapsed>=500&&!d.done;});
+         |                    ^
+      74 |         await proof.shot('both-lights');
+      75 |         await expect.poll(async()=>(await read(page)).save.completedObjectiveIds.includes('S32.quest.4')).toBe(true);
+      76 |         await expect.poll(async()=>(await read(page)).rescue.sealClosed).toBe(false);
+        at C:\code\code10(sindbad)\tests\e2e\s32-rescue.spec.ts:73:20
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    docs\screenshots\s32-rescue\final-test-results\s32-rescue-tablet-S32-join-f0368-and-restores-one-R07-reward\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: docs\screenshots\s32-rescue\final-test-results\s32-rescue-tablet-S32-join-f0368-and-restores-one-R07-reward\error-context.md
+
+  1 failed
+    tests\e2e\s32-rescue.spec.ts:109:3 › tablet S32 jointly opens seal, safely escorts Ariana and restores one R07 reward 
+  9 passed (9.3m)
+
+To open last HTML report run:
+[36m[39m
+[36m  npx playwright show-report[39m
+[36m[39m

@@ -4,6 +4,8 @@ export type StoryMechanic =
     | { type: 'rotate'; target: number; symbol: string }
     | { type: 'carry'; distance: number }
     | { type: 'channel'; duration: number; symbol: string }
+    | { type: 'cooperate'; duration: number; symbol: string; partnerX:number; partnerY:number }
+    | { type: 'escort'; symbol:string }
     | { type: 'treasure'; item: string; symbol: string }
     | { type: 'memory'; text: string };
 

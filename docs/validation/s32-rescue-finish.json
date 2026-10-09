@@ -1,0 +1,127 @@
+{
+  "date": "2026-10-09T09:46:33.074528+00:00",
+  "checks": [
+    {
+      "command": "npm run typecheck",
+      "exitCode": 0,
+      "started": "2026-10-09T09:39:54.188286+00:00",
+      "seconds": 3.578,
+      "log": "docs/validation/s32-rescue-caption-check-1.txt"
+    },
+    {
+      "command": "npm run lint",
+      "exitCode": 0,
+      "started": "2026-10-09T09:39:57.764440+00:00",
+      "seconds": 3.657,
+      "log": "docs/validation/s32-rescue-caption-check-2.txt"
+    },
+    {
+      "command": "npm run test",
+      "exitCode": 0,
+      "started": "2026-10-09T09:40:01.428478+00:00",
+      "seconds": 4.468,
+      "log": "docs/validation/s32-rescue-caption-check-3.txt"
+    },
+    {
+      "command": "npm run validate:content",
+      "exitCode": 0,
+      "started": "2026-10-09T09:40:05.891359+00:00",
+      "seconds": 1.329,
+      "log": "docs/validation/s32-rescue-caption-check-4.txt"
+    },
+    {
+      "command": "npm run build",
+      "exitCode": 0,
+      "started": "2026-10-09T09:40:07.213599+00:00",
+      "seconds": 12.359,
+      "log": "docs/validation/s32-rescue-caption-check-5.txt"
+    },
+    {
+      "command": "npx tsx scripts/check-art-budget.ts",
+      "exitCode": 0,
+      "started": "2026-10-09T09:40:19.572549+00:00",
+      "seconds": 2.859,
+      "log": "docs/validation/s32-rescue-caption-check-6.txt"
+    }
+  ],
+  "unitTests": 135,
+  "unitFiles": 30,
+  "e2ePrimary": {
+    "startTime": "2026-10-09T09:05:13.965Z",
+    "duration": 550384.9450000001,
+    "expected": 7,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  },
+  "e2eBeforeSealFix": {
+    "startTime": "2026-10-09T09:18:15.625Z",
+    "duration": 556088.761,
+    "expected": 9,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  },
+  "e2eBroadVerified": {
+    "startTime": "2026-10-09T09:29:09.645Z",
+    "duration": 573010.157,
+    "expected": 10,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "e2eFinal": {
+    "startTime": "2026-10-09T09:41:34.327Z",
+    "duration": 280161.239,
+    "expected": 7,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "e2eFinalExitCode": 0,
+  "afterBroadChanges": [
+    "dist/assets/index-DJGldysu.js",
+    "dist/assets/index-DfRk-zPU.js",
+    "dist/index.html",
+    "src/game/stage.ts",
+    "tests/e2e/s32-rescue.spec.ts"
+  ],
+  "captionScope": "After all selected 10 passed, only opened-seal completion caption and read-only observation/assertions were added. Re-ran all 7 S32 conditions; three unrelated regression conditions are from the prior 10-pass run.",
+  "runtimeFilesUnchangedPerRun": 1014,
+  "previousMediaUnchanged": 639,
+  "dependenciesUnchanged": true,
+  "changed": [
+    "dist/assets/index-DfRk-zPU.js",
+    "dist/assets/index-Dgc3_Dee.js",
+    "dist/index.html",
+    "src/content/finalStages.ts",
+    "src/content/maps.ts",
+    "src/content/storyDesign.ts",
+    "src/content/validate.ts",
+    "src/core/adventure.ts",
+    "src/core/rescue.ts",
+    "src/core/storyMechanics.ts",
+    "src/game/stage.ts",
+    "tests/e2e/s32-rescue.spec.ts",
+    "tests/unit/rescue.test.ts",
+    "tests/unit/spirit-actions.test.ts"
+  ],
+  "unexpected": [],
+  "screenshots": 94,
+  "budgetBytes": 3106770,
+  "budgetReportRestored": true,
+  "listeners": [],
+  "artStatus": "ART_DRAFT",
+  "newWorkCommitted": false,
+  "push": false,
+  "deployment": "none for this task; previous automatic deployment inspection retained",
+  "unverified": [
+    "full E2E suite",
+    "new-game 36-stage completion after these changes",
+    "all selected 10 rerun after the final opened-seal caption change (affected S32 7 rerun)",
+    "physical phones/tablets and iOS Safari",
+    "child usability and sustained FPS/heat/audio",
+    "final illustration approval"
+  ],
+  "baselineNote": "Ordinary sandbox snapshot attempted before edits failed with WinError5. Previous validated S26 runtime snapshot supplies unchanged original/asset/dependency baseline; all four S32 runs use fresh host snapshots."
+}

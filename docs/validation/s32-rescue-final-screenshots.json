@@ -1,0 +1,660 @@
+[
+  {
+    "path": "docs/screenshots/s32-rescue/verified/m6-spirit/phone-normal-S03-attack.png",
+    "width": 844,
+    "height": 390,
+    "bytes": 455880,
+    "sha256": "0938d201e7e7b3e6b4dbd88b8bb52553943300e892602931620b1b8496c3c58a"
+  },
+  {
+    "path": "docs/screenshots/s32-rescue/verified/m6-spirit/phone-normal-S03-checkpoint.png",
+    "width": 844,
+    "height": 390,
+    "bytes": 454686,
+    "sha256": "d76d84276882a4f784af3c27456e24847b1309662080154f3a78e470be7e42e6"
+  },
+  {
+    "path": "docs/screenshots/s32-rescue/verified/m6-spirit/phone-normal-S03-defeated.png",
+    "width": 844,
+    "height": 390,
+    "bytes": 458553,
+    "sha256": "9e40eba48c54ff2d9731a302cceda55320092da0cebd97c836cc20a0a5cdb3b9"
+  },
+  {
+    "path": "docs/screenshots/s32-rescue/verified/m6-spirit/phone-normal-S03-idle.png",
+    "width": 844,
+    "height": 390,
+    "bytes": 466506,
+    "sha256": "84894b60262b017a55aac0f6615843a7e58dc6408bf1e6a681249ca729f388ad"
+  },
+  {
+    "path": "docs/screenshots/s32-rescue/verified/m6-spirit/phone-normal-S03-recover.png",
+    "width": 844,
+    "height": 390,
+    "bytes": 454630,
+    "sha256": "8debd3894c634f77e40150a5b0daf72a230524c6559dc74338989af93eee1269"
+  },
+  {
+    "path": "docs/screenshots/s32-rescue/verified/m6-spirit/phone-normal-S03-resume.png",
+    "width": 844,
+    "height": 390,
+    "bytes": 461812,
+    "sha256": "d6daabe66ef560992ab1c56c1bb6a5be9dcaa01206235d0cd152f8bb3794e76a"
+  },
+  {
+    "path": "docs/screenshots/s32-rescue/verified/m6-spirit/phone-normal-S03-right.png",
+    "width": 844,
+    "height": 390,
+    "bytes": 455792,
+    "sha256": "bec4384a17b56d8ee8312a108cd63f68a644367d510ee5c31adefdcd3fd89af4"
+  },
+  {
+    "path": "docs/screenshots/s32-rescue/verified/m6-spirit/phone-normal-S03-telegraph.png",
+    "width": 844,
+    "height": 390,
+    "bytes": 455509,
+    "sha256": "4eb8c9071674234ba964c61787ae130c98ad62190dbc58216058b82934c37293"
+  },
+  {
+    "path": "docs/screenshots/s32-rescue/verified/m6-spirit/phone-normal-S06-attack.png",
+    "width": 844,
+    "height": 390,
+    "bytes": 458098,
+    "sha256": "9199d0060bd9889694c633ead435e546d57a45ca8d1d5213904a4ebe71b8c6d6"
+  },
+  {
+    "path": "docs/screenshots/s32-rescue/verified/m6-spirit/phone-normal-S06-checkpoint.png",
+    "width": 844,
+    "height": 390,
+    "bytes": 447238,
+    "sha256": "14a631ffdf0f595ef6d239e34772bbcbd5de0700531f5f34b36f9f38f7fab77c"
+  },
+  {
+    "path": "docs/screenshots/s32-rescue/verified/m6-spirit/phone-normal-S06-defeated.png",
+    "width": 844,
+    "height": 390,
+    "bytes": 459936,
+    "sha256": "05d035a0d3aa12c037f007f97d6c6cabe850644220c4191e80481a4e0a1989ec"
+  },
+  {
+    "path": "docs/screenshots/s32-rescue/verified/m6-spirit/phone-normal-S06-idle.png",
+    "width": 844,
+    "height": 390,
+    "bytes": 461022,
+    "sha256": "5fb44302801fda23400c1afda8567a4c75c424deb0e6332abd6fc5d9735279f2"
+  },
+  {
+    "path": "docs/screenshots/s32-rescue/verified/m6-spirit/phone-normal-S06-recover.png",
+    "width": 844,
+    "height": 390,
+    "bytes": 457808,
+    "sha256": "3a6489ea70ade2ab0c8ab3190e08ce038e81715b33adb4b9b0a69e62b5882c4d"
+  },
+  {
+    "path": "docs/screenshots/s32-rescue/verified/m6-spirit/phone-normal-S06-resume.png",
+    "width": 844,
+    "height": 390,
+    "bytes": 461751,
+    "sha256": "25288c9a545eed1a378a374b09ebd4f7bcabdd8c6ce63e58afbf0944fba1b957"
+  },
+  {
+    "path": "docs/screenshots/s32-rescue/verified/m6-spirit/phone-normal-S06-right.png",
+    "width": 844,
+    "height": 390,
+    "bytes": 464882,
+    "sha256": "67da096e8b3cab576a3776901cbe82e6674ecceeb513578481dd0b7a054ed5bd"
+  },
+  {
+    "path": "docs/screenshots/s32-rescue/verified/m6-spirit/phone-normal-S06-telegraph.png",
+    "width": 844,
+    "height": 390,
+    "bytes": 464331,
+    "sha256": "915ff494c44fd0c27c66cb99a9884e4b8aa44d8345d5c4b0da3afab112b866bf"
+  },
+  {
+    "path": "docs/screenshots/s32-rescue/verified/m6-spirit/phone-normal-S07-attack.png",
+    "width": 844,
+    "height": 390,
+    "bytes": 445153,
+    "sha256": "615e164b07d8a472e8108ee225886eb8ee2d0862d6bd9f5b281f403638ae7e8d"
+  },
+  {
+    "path": "docs/screenshots/s32-rescue/verified/m6-spirit/phone-normal-S07-checkpoint.png",
+    "width": 844,
+    "height": 390,
+    "bytes": 433958,
+    "sha256": "3d61bb7fcc04aba132ffd12286723adad2f37dce84f58cb46437518935b91b37"
+  },
+  {
+    "path": "docs/screenshots/s32-rescue/verified/m6-spirit/phone-normal-S07-defeated.png",
+    "width": 844,
+    "height": 390,
+    "bytes": 446344,
+    "sha256": "7121027c60fadbe276e3ef5b7d9bb2f7f3fcbef67f68b39496c4a3954cfe42b3"
+  },
+  {
+    "path": "docs/screenshots/s32-rescue/verified/m6-spirit/phone-normal-S07-idle.png",
+    "width": 844,
+    "height": 390,
+    "bytes": 445549,
+    "sha256": "ba6c4584c52649da3092cc2fb3ab6845d0130ff02a8ad107dafaebaea935d559"
+  },
+  {
+    "path": "docs/screenshots/s32-rescue/verified/m6-spirit/phone-normal-S07-recover.png",
+    "width": 844,
+    "height": 390,
+    "bytes": 446179,
+    "sha256": "dfcd0138cf04257ed2b2ce09a3016b37fd9242c1e79452e35eaaeb56aca92d09"
+  },
+  {
+    "path": "docs/screenshots/s32-rescue/verified/m6-spirit/phone-normal-S07-resume.png",
+    "width": 844,
+    "height": 390,
+    "bytes": 439302,
+    "sha256": "66b62c3201994626e097bd9ec30eae670decc6fe64cc5bbe5e620dcec5d3f223"
+  },
+  {
+    "path": "docs/screenshots/s32-rescue/verified/m6-spirit/phone-normal-S07-right.png",
+    "width": 844,
+    "height": 390,
+    "bytes": 446741,
+    "sha256": "66727c1193f1093480ed03bd2c53c11fa03003ddf4229257e7f13b4d6544e7e6"
+  },
+  {
+    "path": "docs/screenshots/s32-rescue/verified/m6-spirit/phone-normal-S07-telegraph.png",
+    "width": 844,
+    "height": 390,
+    "bytes": 445219,
+    "sha256": "97a130d76fcc2e8ae7c28dc67aad6cb3718def0257b1b7cbf3a847a7c0964969"
+  },
+  {
+    "path": "docs/screenshots/s32-rescue/verified/m6-spirit/phone-normal-S32-attack.png",
+    "width": 844,
+    "height": 390,
+    "bytes": 429167,
+    "sha256": "9e24992b08b3131204f472ef5f6d074f3ad10e319b40e9516c692d08c42da578"
+  },
+  {
+    "path": "docs/screenshots/s32-rescue/verified/m6-spirit/phone-normal-S32-checkpoint.png",
+    "width": 844,
+    "height": 390,
+    "bytes": 421304,
+    "sha256": "1849b7bb613a4014104a87687b202c248eaf11293b7e2cc19a38b3fbff302670"
+  },
+  {
+    "path": "docs/screenshots/s32-rescue/verified/m6-spirit/phone-normal-S32-defeated.png",
+    "width": 844,
+    "height": 390,
+    "bytes": 431702,
+    "sha256": "a0055c21566e814b0f9402f7f924946677d0008a268e70dfaf79df3c4100963d"
+  },
+  {
+    "path": "docs/screenshots/s32-rescue/verified/m6-spirit/phone-normal-S32-idle.png",
+    "width": 844,
+    "height": 390,
+    "bytes": 435374,
+    "sha256": "f6e7c87498ad4ac283d554f75caa3fc76be51cc885cf050eaa31371fa641476a"
+  },
+  {
+    "path": "docs/screenshots/s32-rescue/verified/m6-spirit/phone-normal-S32-recover.png",
+    "width": 844,
+    "height": 390,
+    "bytes": 430032,
+    "sha256": "af3babdb07b1c1d01bf391b299df9c6892ba2372379a2ae1df806e2591e55c87"
+  },
+  {
+    "path": "docs/screenshots/s32-rescue/verified/m6-spirit/phone-normal-S32-resume.png",
+    "width": 844,
+    "height": 390,
+    "bytes": 432624,
+    "sha256": "b037a266d37e9d2eb8a9b5c6a57507bfc36c14ecdec20ff566bdbd2ba5af3405"
+  },
+  {
+    "path": "docs/screenshots/s32-rescue/verified/m6-spirit/phone-normal-S32-right.png",
+    "width": 844,
+    "height": 390,
+    "bytes": 437584,
+    "sha256": "ce2856006c3b6e699e95a47a8cc1504d665fe5b783b0e18db631ba073519e26e"
+  },
+  {
+    "path": "docs/screenshots/s32-rescue/verified/m6-spirit/phone-normal-S32-telegraph.png",
+    "width": 844,
+    "height": 390,
+    "bytes": 433336,
+    "sha256": "c7cb6cf5650181e51129ab04aea93007c195b84df3b9c3db1a3abdcd63705c18"
+  },
+  {
+    "path": "docs/screenshots/s32-rescue/verified/m6-spirit/tablet-fallback-S03-attack.png",
+    "width": 1180,
+    "height": 820,
+    "bytes": 954860,
+    "sha256": "f987c06fbe64aadf9d2fb206d6a3238350ee596dd1d95c887826e671e5c1b140"
+  },
+  {
+    "path": "docs/screenshots/s32-rescue/verified/m6-spirit/tablet-fallback-S03-checkpoint.png",
+    "width": 1180,
+    "height": 820,
+    "bytes": 990962,
+    "sha256": "c20c0b94783aa128eee4401069f8c6483a5d22161bcea151966b2534b68a0cf0"
+  },
+  {
+    "path": "docs/screenshots/s32-rescue/verified/m6-spirit/tablet-fallback-S03-defeated.png",
+    "width": 1180,
+    "height": 820,
+    "bytes": 963071,
+    "sha256": "518b2c9c9c32bf96f03a97c9d281b0b9dd488e3f530043969b453f19eb4af0fd"
+  },
+  {
+    "path": "docs/screenshots/s32-rescue/verified/m6-spirit/tablet-fallback-S03-idle.png",
+    "width": 1180,
+    "height": 820,
+    "bytes": 1006167,
+    "sha256": "09c8a417396519f074f382e8e39799337b5112845e935fe20ecd2bf4c0d72d0c"
+  },
+  {
+    "path": "docs/screenshots/s32-rescue/verified/m6-spirit/tablet-fallback-S03-recover.png",
+    "width": 1180,
+    "height": 820,
+    "bytes": 955942,
+    "sha256": "69a0afc678150e491661d9df4ade7a938c4ce272d252efce6d06edc126a79e7f"
+  },
+  {
+    "path": "docs/screenshots/s32-rescue/verified/m6-spirit/tablet-fallback-S03-resume.png",
+    "width": 1180,
+    "height": 820,
+    "bytes": 1016069,
+    "sha256": "a0827e42d0ca17ee7f09dfb348fcb795f9fe17bf362403483ac04070847cde90"
+  },
+  {
+    "path": "docs/screenshots/s32-rescue/verified/m6-spirit/tablet-fallback-S03-right.png",
+    "width": 1180,
+    "height": 820,
+    "bytes": 978646,
+    "sha256": "44371ef4b24aab466899882422f0777a254148ad755183e3592f34c51786b13d"
+  },
+  {
+    "path": "docs/screenshots/s32-rescue/verified/m6-spirit/tablet-fallback-S03-telegraph.png",
+    "width": 1180,
+    "height": 820,
+    "bytes": 957795,
+    "sha256": "259c9d041cca77f81985839616a0ab49647ed97518699fc10d4b4827e7182ce0"
+  },
+  {
+    "path": "docs/screenshots/s32-rescue/verified/m6-spirit/tablet-fallback-S06-attack.png",
+    "width": 1180,
+    "height": 820,
+    "bytes": 933269,
+    "sha256": "7a82bd0003ac54e2844d902bb6a8584b98e1188f96860d60cc82a5c0bf6c47b3"
+  },
+  {
+    "path": "docs/screenshots/s32-rescue/verified/m6-spirit/tablet-fallback-S06-checkpoint.png",
+    "width": 1180,
+    "height": 820,
+    "bytes": 944707,
+    "sha256": "75e7a814eb39a3f5faa9190086a05334c4a691f1e50089bbd2d6b5af8c78f8bf"
+  },
+  {
+    "path": "docs/screenshots/s32-rescue/verified/m6-spirit/tablet-fallback-S06-defeated.png",
+    "width": 1180,
+    "height": 820,
+    "bytes": 934166,
+    "sha256": "19989aa6863f6c9534920063dd8c5a9c9db12b4e55928412ff3cc6aa485b1f6e"
+  },
+  {
+    "path": "docs/screenshots/s32-rescue/verified/m6-spirit/tablet-fallback-S06-idle.png",
+    "width": 1180,
+    "height": 820,
+    "bytes": 962197,
+    "sha256": "15182e0b9c6df02787adec1e5c4a022d9ebf72531ffaaa1ea44edec5879d8ac4"
+  },
+  {
+    "path": "docs/screenshots/s32-rescue/verified/m6-spirit/tablet-fallback-S06-recover.png",
+    "width": 1180,
+    "height": 820,
+    "bytes": 931264,
+    "sha256": "efa6be4dca80a19fa5f0356a1577c3664812d4f3bf0752584ecffd7bb39c2a12"
+  },
+  {
+    "path": "docs/screenshots/s32-rescue/verified/m6-spirit/tablet-fallback-S06-resume.png",
+    "width": 1180,
+    "height": 820,
+    "bytes": 955412,
+    "sha256": "350792c3b2e14e3e2deb96f4ba4fdf73b7447ad9a454341cd10e9000808f5df1"
+  },
+  {
+    "path": "docs/screenshots/s32-rescue/verified/m6-spirit/tablet-fallback-S06-right.png",
+    "width": 1180,
+    "height": 820,
+    "bytes": 942832,
+    "sha256": "342125163cc25423679d0060f660c7c17212ec455b0bbfc4789e0e3532b9e3c9"
+  },
+  {
+    "path": "docs/screenshots/s32-rescue/verified/m6-spirit/tablet-fallback-S06-telegraph.png",
+    "width": 1180,
+    "height": 820,
+    "bytes": 943794,
+    "sha256": "d59444519749bd8c2f258747fbfa3f880df3e0c13935a20a4e86296e33e8f87a"
+  },
+  {
+    "path": "docs/screenshots/s32-rescue/verified/m6-spirit/tablet-fallback-S07-attack.png",
+    "width": 1180,
+    "height": 820,
+    "bytes": 943641,
+    "sha256": "7f1b92008c8bfdf605a376539c5d697e0128e7e2ee9670c866782d95e6f10678"
+  },
+  {
+    "path": "docs/screenshots/s32-rescue/verified/m6-spirit/tablet-fallback-S07-checkpoint.png",
+    "width": 1180,
+    "height": 820,
+    "bytes": 949317,
+    "sha256": "56731a70aa5d5bb3989f3e65ae23dec66bf0b882863223d5c05c288ecd6d7fc9"
+  },
+  {
+    "path": "docs/screenshots/s32-rescue/verified/m6-spirit/tablet-fallback-S07-defeated.png",
+    "width": 1180,
+    "height": 820,
+    "bytes": 944855,
+    "sha256": "2bb85f358f17213bd7d9b58ef5a9b53e4c465830c7cc70f3d735971b0ea1f7af"
+  },
+  {
+    "path": "docs/screenshots/s32-rescue/verified/m6-spirit/tablet-fallback-S07-idle.png",
+    "width": 1180,
+    "height": 820,
+    "bytes": 966927,
+    "sha256": "424fc9a050fbadfb006616ce39b9bbe11740264af55abda23b469590a0f50842"
+  },
+  {
+    "path": "docs/screenshots/s32-rescue/verified/m6-spirit/tablet-fallback-S07-recover.png",
+    "width": 1180,
+    "height": 820,
+    "bytes": 945363,
+    "sha256": "5e0d2b0e7f0b62461c368a01457bed6c7a8ac338eb55a16b5b72a8e479a32ba7"
+  },
+  {
+    "path": "docs/screenshots/s32-rescue/verified/m6-spirit/tablet-fallback-S07-resume.png",
+    "width": 1180,
+    "height": 820,
+    "bytes": 969605,
+    "sha256": "be41d5cd1cd02defd3e2d3a6e24a2d2a214a7d01e53760a1d3d4a66738bb70c9"
+  },
+  {
+    "path": "docs/screenshots/s32-rescue/verified/m6-spirit/tablet-fallback-S07-right.png",
+    "width": 1180,
+    "height": 820,
+    "bytes": 948975,
+    "sha256": "b0ed067a84ea47eb014bebc2f5dc73223a62b83901f1ef6059bbbfa7cb843752"
+  },
+  {
+    "path": "docs/screenshots/s32-rescue/verified/m6-spirit/tablet-fallback-S07-telegraph.png",
+    "width": 1180,
+    "height": 820,
+    "bytes": 947072,
+    "sha256": "1c324dc6b22cc0068560781c1ddae6796af7624742c9594695d97bb82b256165"
+  },
+  {
+    "path": "docs/screenshots/s32-rescue/verified/m6-spirit/tablet-fallback-S32-attack.png",
+    "width": 1180,
+    "height": 820,
+    "bytes": 873626,
+    "sha256": "818fa3a3a97f7e7b688dd6be8a0f959849bb3d4744c2f0fb619055b44d376579"
+  },
+  {
+    "path": "docs/screenshots/s32-rescue/verified/m6-spirit/tablet-fallback-S32-checkpoint.png",
+    "width": 1180,
+    "height": 820,
+    "bytes": 891843,
+    "sha256": "8b64cfa0866139f72aebe9a0e42056976df6db2f6e3ab442f03e0d9c2a718117"
+  },
+  {
+    "path": "docs/screenshots/s32-rescue/verified/m6-spirit/tablet-fallback-S32-defeated.png",
+    "width": 1180,
+    "height": 820,
+    "bytes": 880352,
+    "sha256": "6dfe7acc5a4e02335c493dfe3641a2d6fc0ae4e78a6a51988fa44ee33f9845f3"
+  },
+  {
+    "path": "docs/screenshots/s32-rescue/verified/m6-spirit/tablet-fallback-S32-idle.png",
+    "width": 1180,
+    "height": 820,
+    "bytes": 911528,
+    "sha256": "6b4cecc24381f05a1c4d82ed6154b051f273c070e18f9e789774528577057bf2"
+  },
+  {
+    "path": "docs/screenshots/s32-rescue/verified/m6-spirit/tablet-fallback-S32-recover.png",
+    "width": 1180,
+    "height": 820,
+    "bytes": 875030,
+    "sha256": "95e4d5bf5cdde50094035af1ee1fe4317675214ac4fe9f80bf2b809fd9bd08d8"
+  },
+  {
+    "path": "docs/screenshots/s32-rescue/verified/m6-spirit/tablet-fallback-S32-resume.png",
+    "width": 1180,
+    "height": 820,
+    "bytes": 911939,
+    "sha256": "4136240cb8cea0b526b3d5f77f187f06fbebd57e567941bfb233961094227783"
+  },
+  {
+    "path": "docs/screenshots/s32-rescue/verified/m6-spirit/tablet-fallback-S32-right.png",
+    "width": 1180,
+    "height": 820,
+    "bytes": 889896,
+    "sha256": "55235b0116b712f8a156bef49fbd147c8bec06dcfa4a9063f9af70a3a0376c9f"
+  },
+  {
+    "path": "docs/screenshots/s32-rescue/verified/m6-spirit/tablet-fallback-S32-telegraph.png",
+    "width": 1180,
+    "height": 820,
+    "bytes": 881835,
+    "sha256": "590719681a44198a7e0d63488ee01b376a5e5d743e0d63b1ec05691a57bb1924"
+  },
+  {
+    "path": "docs/screenshots/s32-rescue/caption/s32-rescue/death-balcony-contact.png",
+    "width": 1280,
+    "height": 720,
+    "bytes": 994721,
+    "sha256": "c85845869612a86bb00f3325b1e36312599ae3e52c606f708a0c7ba00b83df81"
+  },
+  {
+    "path": "docs/screenshots/s32-rescue/caption/s32-rescue/death-balcony-restored.png",
+    "width": 1280,
+    "height": 720,
+    "bytes": 1004015,
+    "sha256": "3ec111ed5846d27ac9da1ddf52a5e533fcef3dd266936814511df019500bfedf"
+  },
+  {
+    "path": "docs/screenshots/s32-rescue/caption/s32-rescue/death-rescue-contact.png",
+    "width": 1280,
+    "height": 720,
+    "bytes": 998395,
+    "sha256": "7e62babd0b07cde92dee9f782f89a5f2a999fb614d6b0077b38e3a8e96fa0b49"
+  },
+  {
+    "path": "docs/screenshots/s32-rescue/caption/s32-rescue/death-rescue-restored.png",
+    "width": 1280,
+    "height": 720,
+    "bytes": 1008504,
+    "sha256": "1692f6723b5b912ad0cd6cbeade1db41bef7d2139736e8142dc417d96a62e11c"
+  },
+  {
+    "path": "docs/screenshots/s32-rescue/caption/s32-rescue/guard-T02-blocked.png",
+    "width": 1280,
+    "height": 720,
+    "bytes": 990265,
+    "sha256": "eb934de10ddbe4d60e76d0991024159a5430f9f36a10f579f727b764a3fa59ad"
+  },
+  {
+    "path": "docs/screenshots/s32-rescue/caption/s32-rescue/guard-T07-blocked.png",
+    "width": 1280,
+    "height": 720,
+    "bytes": 998234,
+    "sha256": "1b6e976385b802d9d2faf7439ea4c069a453144dcd5b8cbe22a01240eb4b0116"
+  },
+  {
+    "path": "docs/screenshots/s32-rescue/caption/s32-rescue/legacy-old-save.png",
+    "width": 1280,
+    "height": 720,
+    "bytes": 1014269,
+    "sha256": "87d6efbeebd525d6801faef0a3ecfa373712291c80d03db20de236321265a3a8"
+  },
+  {
+    "path": "docs/screenshots/s32-rescue/caption/s32-rescue/phone-balcony-resume.png",
+    "width": 844,
+    "height": 390,
+    "bytes": 437530,
+    "sha256": "7f0d1c1fcf12f88faa2c3f17c900c071f8f57b1632b589ab8e21b72838d93d8a"
+  },
+  {
+    "path": "docs/screenshots/s32-rescue/caption/s32-rescue/phone-before-friendship-heal.png",
+    "width": 844,
+    "height": 390,
+    "bytes": 435575,
+    "sha256": "a3302c424daaf4dc81606ed41722366b63aaca9f895ab3fb7b169fa369d35ec5"
+  },
+  {
+    "path": "docs/screenshots/s32-rescue/caption/s32-rescue/phone-both-lights.png",
+    "width": 844,
+    "height": 390,
+    "bytes": 419637,
+    "sha256": "e281ad9ddd5fa58a2d9391e5773639970c03a116c4b2f77932a165c9dfc3cf5b"
+  },
+  {
+    "path": "docs/screenshots/s32-rescue/caption/s32-rescue/phone-closed-seal.png",
+    "width": 844,
+    "height": 390,
+    "bytes": 429616,
+    "sha256": "b4f5dd902bd23c5b009ce5c8fa8cc4d1ab1e6fa64832422f60273b0367c0e9df"
+  },
+  {
+    "path": "docs/screenshots/s32-rescue/caption/s32-rescue/phone-friendship-heal.png",
+    "width": 844,
+    "height": 390,
+    "bytes": 431887,
+    "sha256": "053448b2bdb06b0e93fdec57b0c7ba770381fe4a337f47eb4ee02c28deaaf04e"
+  },
+  {
+    "path": "docs/screenshots/s32-rescue/caption/s32-rescue/phone-journal.png",
+    "width": 844,
+    "height": 390,
+    "bytes": 239309,
+    "sha256": "5e0f0eeae567029f01432f118fdfd4968cd250b3a629315ca1501cd2cf7bf36e"
+  },
+  {
+    "path": "docs/screenshots/s32-rescue/caption/s32-rescue/phone-message.png",
+    "width": 844,
+    "height": 390,
+    "bytes": 237344,
+    "sha256": "71910f265e19fbb5dae4687d7bd6de1d205029917eb7eef649983ce5473e6d20"
+  },
+  {
+    "path": "docs/screenshots/s32-rescue/caption/s32-rescue/phone-release-resume.png",
+    "width": 844,
+    "height": 390,
+    "bytes": 436246,
+    "sha256": "61d820e9a7088040408720735a5f1c529d4468177509439d28a891fbde538550"
+  },
+  {
+    "path": "docs/screenshots/s32-rescue/caption/s32-rescue/phone-released.png",
+    "width": 844,
+    "height": 390,
+    "bytes": 427471,
+    "sha256": "65aa6d3465cfdf2244773e056b72fed137d5da80745b7b7566eb954739a500a7"
+  },
+  {
+    "path": "docs/screenshots/s32-rescue/caption/s32-rescue/phone-reward-before-dialogue.png",
+    "width": 844,
+    "height": 390,
+    "bytes": 263483,
+    "sha256": "6e087da1fd521984e0b506ebff214637e616508f38c34fc1cbc2cec9a22de227"
+  },
+  {
+    "path": "docs/screenshots/s32-rescue/caption/s32-rescue/phone-safe-companion-jump.png",
+    "width": 844,
+    "height": 390,
+    "bytes": 426360,
+    "sha256": "2df08970e5d046b65ec9fdced752cad742158fcd2ef9d6545875b6ce8335ba15"
+  },
+  {
+    "path": "docs/screenshots/s32-rescue/caption/s32-rescue/tablet-balcony-resume.png",
+    "width": 1180,
+    "height": 820,
+    "bytes": 929510,
+    "sha256": "208d1652e036e24d31899cba150fbecd2bee4fea51c2a20055bdca7a92e1bca0"
+  },
+  {
+    "path": "docs/screenshots/s32-rescue/caption/s32-rescue/tablet-before-friendship-heal.png",
+    "width": 1180,
+    "height": 820,
+    "bytes": 908008,
+    "sha256": "2d358e67fb2cc8754cafa2846ea8a99ba2e68ac3375725c8fab1551fe6964095"
+  },
+  {
+    "path": "docs/screenshots/s32-rescue/caption/s32-rescue/tablet-both-lights.png",
+    "width": 1180,
+    "height": 820,
+    "bytes": 907350,
+    "sha256": "a0fd385f7042ad143011966f5faa9eea8b3e3efc960f41e183ddd26dba89e595"
+  },
+  {
+    "path": "docs/screenshots/s32-rescue/caption/s32-rescue/tablet-closed-seal.png",
+    "width": 1180,
+    "height": 820,
+    "bytes": 904823,
+    "sha256": "d2b82a4c3c7e7db763f9a816d65770fd2b0bdca874fd24df01d1f5aa1e1546c9"
+  },
+  {
+    "path": "docs/screenshots/s32-rescue/caption/s32-rescue/tablet-friendship-heal.png",
+    "width": 1180,
+    "height": 820,
+    "bytes": 896325,
+    "sha256": "529f325c1c3fb946a4acfc9daf9c8aaac711458ff5449395030f24f53f07f6ea"
+  },
+  {
+    "path": "docs/screenshots/s32-rescue/caption/s32-rescue/tablet-journal.png",
+    "width": 1180,
+    "height": 820,
+    "bytes": 852804,
+    "sha256": "8eddf7e07fa30e4787173c4e4addb951ce1f5ce07f669c57b0c21af9419c35be"
+  },
+  {
+    "path": "docs/screenshots/s32-rescue/caption/s32-rescue/tablet-message.png",
+    "width": 1180,
+    "height": 820,
+    "bytes": 837382,
+    "sha256": "67be0cb4d92c4fb4d3916b5004c23c97c516212e0b42dc4d319cf66e4ede9a71"
+  },
+  {
+    "path": "docs/screenshots/s32-rescue/caption/s32-rescue/tablet-release-resume.png",
+    "width": 1180,
+    "height": 820,
+    "bytes": 930888,
+    "sha256": "8ce2480dcb657336eb006304318685cd58beebd5abbf4074ee39fef204392ac0"
+  },
+  {
+    "path": "docs/screenshots/s32-rescue/caption/s32-rescue/tablet-released.png",
+    "width": 1180,
+    "height": 820,
+    "bytes": 910080,
+    "sha256": "72f146f042739c03ade43956437c72f801fe0d5f049564fd5c5168a8c120adac"
+  },
+  {
+    "path": "docs/screenshots/s32-rescue/caption/s32-rescue/tablet-reward-before-dialogue.png",
+    "width": 1180,
+    "height": 820,
+    "bytes": 847753,
+    "sha256": "37c79a1ed051ec02519a522dfea07885678e849db5cc7959eff32827f742bf44"
+  },
+  {
+    "path": "docs/screenshots/s32-rescue/caption/s32-rescue/tablet-safe-companion-jump.png",
+    "width": 1180,
+    "height": 820,
+    "bytes": 897769,
+    "sha256": "c42d1cf3bab8a39beea97f28ab2417c92d6382b7f37d5e32d63c41b3d83bd138"
+  },
+  {
+    "path": "docs/screenshots/s32-rescue/verified-test-results/story-devices-S25-bridge-r-48346-anding-extends-its-lifetime/S25-physical-bridge.png",
+    "width": 1280,
+    "height": 720,
+    "bytes": 1068620,
+    "sha256": "661bcfd3c0662551d6ff83a7cfa4cd4ad32b3dcb55ec707d20e1a8a56b7a04dd"
+  }
+]

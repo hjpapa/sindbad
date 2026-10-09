@@ -24,6 +24,7 @@ import {rocBossId,rocCoresBroken,rocCoreReward,rocCoreOpen,rocPatterns,rocZone,i
 import {canGlide,glideFallSpeed} from '../core/glide';
 import {batFlightBounds,batPatrol,batFlightTarget,batSwoop,type FlightPoint} from '../core/batFlight';
 import {riverRoute,raftPrepared,riverStop,advanceRaft,swimmingInRiver} from '../core/river';
+import {arianaReleased,cooperationProgress,safeCompanionPosition,escortArrived} from '../core/rescue';
 import {projectileArtFor,sceneEffectKeys,projectileFrame,effectFrame,effectDuration,type EffectArtKey} from '../content/effects';
 const FONT='"Malgun Gothic","Apple SD Gothic Neo","Noto Sans KR",sans-serif';
 // What the touch action button would do right now, so its icon can match.
@@ -96,6 +97,7 @@ export class Stage extends Phaser.Scene {
     private poisonTick=0;
     private plantReady=0;
     private companion?:Phaser.GameObjects.Image;
+    private captive?:{sprite:Phaser.GameObjects.Image;label:Phaser.GameObjects.Text};
     private deviceStates=new Map<string,{value:number;elapsed:number;active:boolean;carrying:boolean}>();
     private storyFx!:Phaser.GameObjects.Graphics;
     private friendshipAt=20000;
@@ -222,6 +224,7 @@ export class Stage extends Phaser.Scene {
         this.mapDef = maps[this.host.save.checkpoint.stageId];
         this.deviceStates.clear();this.friendshipAt=20000;this.bridgeBody=undefined;this.poisonUntil=0;this.poisonTick=0;this.plantReady=0;
         this.riverRaft=undefined;this.wasRiverSwimming=false;
+        this.captive=undefined;
         this.mirrorDirections=this.done('S08.light')?[...mirrorSolution]:[0,0,0];
         this.moving=[];this.doors=[];this.wakeAt=null;this.air=10000;this.waterTick=0;
         this.flameReady=0;this.flameUsed=-Infinity;this.pulse=null;this.wave=null;this.grip=null;this.sinkAt=null;
@@ -300,7 +303,7 @@ export class Stage extends Phaser.Scene {
         this.physics.add.collider(this.player, this.land);
         for(const platform of this.moving)this.physics.add.collider(this.player,platform.rect);
         if(this.mapDef.river)this.createRiver(cp.id);
-        for(const o of this.mapDef.objects.filter(o=>['gate','lightGate','vision'].includes(o.kind))){const rect=this.add.rectangle(o.x+48,440,28,336,0xc892aa,0);this.land.add(rect);const glow=this.add.tileSprite(o.x+48,440,44,336,this.barrierTexture(o.kind)).setDepth(3).setAlpha(.85);this.doors.push({id:o.id,rect,glow});if(this.done(o.id)){(rect.body as Phaser.Physics.Arcade.StaticBody).enable=false;rect.setVisible(false);glow.setVisible(false);}}
+        for(const o of this.mapDef.objects.filter(o=>['gate','lightGate','vision'].includes(o.kind))){const rect=this.add.rectangle(o.x+48,440,28,336,0xc892aa,0);this.land.add(rect);const glow=this.add.tileSprite(o.x+48,440,44,336,this.barrierTexture(o.kind)).setDepth(3).setAlpha(.85);const id=o.opensWith??o.id;this.doors.push({id,rect,glow});if(this.doorOpen(id)){(rect.body as Phaser.Physics.Arcade.StaticBody).enable=false;rect.setVisible(false);glow.setVisible(false);}}
         this.physics.world.setBounds(0, -200, this.mapDef.width, 1400);
         this.cameras.main.setBounds(0, 0, this.mapDef.width, 720);
         this.cameras.main.startFollow(this.player, true, this.host.save.settings.reducedMotion ? 1 : 0.12, this.host.save.settings.reducedMotion ? 1 : 0.12, 0, 0);
@@ -352,7 +355,7 @@ export class Stage extends Phaser.Scene {
             if(def.breakWeapon&&this.done(def.id))sprite.setVisible(false);
             if (def.kind === 'npc'&&!displayTexture.endsWith('-webtoon'))
                 sprite.setTint(0xe1d498);
-            const label = this.txt(def.x, def.y - 64, def.label, { wordWrap:['S06','S07','S08'].includes(this.mapDef.id)?{width:210,useAdvancedWrap:true}:undefined, fontSize: ['S06','S07','S08'].includes(this.mapDef.id)?'18px':'20px', color: '#fff2cc', backgroundColor: '#173b46', padding: { x: 7, y: 4 } }).setOrigin(0.5).setDepth(7);
+            const label = this.txt(def.x, def.y - 64, def.label, { wordWrap:['S06','S07','S08','S32'].includes(this.mapDef.id)?{width:this.mapDef.id==='S32'?185:210,useAdvancedWrap:true}:undefined, fontSize: ['S06','S07','S08','S32'].includes(this.mapDef.id)?'18px':'20px', color: '#fff2cc', backgroundColor: '#173b46', padding: { x: 7, y: 4 } }).setOrigin(0.5).setDepth(7);
             if(['captain-webtoon','sailor-webtoon'].includes(shownTexture))label.setY(sprite.y-sprite.displayHeight/2-label.height/2-8);
             this.objects.push({ def, sprite, label });
         }
@@ -360,6 +363,7 @@ export class Stage extends Phaser.Scene {
             this.hearts.push({ id: h.id, large: !!h.large, sprite: this.add.image(h.x, h.y, worldPropTexture('heart',key=>this.textures.exists(key))).setScale(h.large ? 0.5 : 0.36).setDepth(5) });
         this.slash = this.add.graphics().setDepth(12);
         this.storyFx=this.add.graphics().setDepth(8);
+        if(this.mapDef.id==='S32')this.captive={sprite:this.add.image(2220,608,'ariana-webtoon').setOrigin(.5,1).setDisplaySize(86,128).setDepth(9),label:this.txt(2220,408,'아리아나 · 안쪽 별을 맞춰요',{fontSize:'16px',color:'#fff1c8',backgroundColor:'#183d50',wordWrap:{width:160,useAdvancedWrap:true},padding:{x:5,y:3}}).setOrigin(.5).setDepth(12)};
         this.crystalArt=this.add.graphics().setDepth(6);
         this.flameArt=this.add.graphics().setDepth(12);
         this.waveArt=this.add.graphics().setDepth(8);
@@ -508,6 +512,7 @@ export class Stage extends Phaser.Scene {
         this.txt(42, 187, `${this.mapDef.id} / ${theme === 'harbor' ? '첫 출항' : theme === 'reef' ? '안개 너머' : '폭풍의 밤'}`, { fontSize: '23px', fontFamily: 'sans-serif', color: theme === 'storm' ? '#b8cdd3' : '#385e63' }).setScrollFactor(0.3).setDepth(-5);
     }
     private done(id: string) { return this.host.save.completedObjectiveIds.includes(id); }
+    private doorOpen(id:string){return id==='S32.quest.4'?arianaReleased(this.host.save):this.done(id);}
     private freeMovement(){return this.mapDef?.mode==='flight'||(this.mapDef?.mode==='swim'&&this.host.save.treasures.includes('T04')&&(!this.mapDef.river||!!this.player&&swimmingInRiver(this.player.x,this.player.y)));}
     protect(ms: number) { this.invulnerableUntil = Math.max(this.invulnerableUntil, this.sim + ms); }
     freeze(value: boolean) { this.stopped = value; this.host.input.clear(); if (value) {
@@ -519,6 +524,7 @@ export class Stage extends Phaser.Scene {
     private artSnapshot(){
         const roc=this.enemies.find(e=>e.def.id===rocBossId);
         return {
+            rescue:this.mapDef.id==='S32'?{released:arianaReleased(this.host.save),companion:this.companion?{x:this.companion.x,y:this.companion.y,visible:this.companion.visible}:null,captiveVisible:this.captive?.sprite.visible,sealClosed:this.doors.some(d=>d.id==='S32.quest.4'&&(d.rect.body as Phaser.Physics.Arcade.StaticBody).enable),sealLabel:this.objects.find(o=>o.def.id==='S32.seal')?.label.text,friendshipAt:this.friendshipAt}:null,
             gliding:this.gliding,
             river:this.riverRaft?{prepared:raftPrepared(this.host.save),x:this.riverRaft.rect.x,top:riverRoute.top,riding:this.riverRaft.riding,stop:riverStop(this.host.save),gates:this.doors.filter(d=>d.id.startsWith('S26.quest.')).map(d=>({id:d.id,closed:(d.rect.body as Phaser.Physics.Arcade.StaticBody).enable}))}:null,
             batFlights:this.enemies.filter(e=>e.def.flightPath).map(e=>({id:e.def.id,bounds:batFlightBounds(e.def,e.def.flightPath!),target:{x:e.target,y:e.targetY},phase:e.flightPhase??0})),
@@ -680,13 +686,13 @@ export class Stage extends Phaser.Scene {
         for (const obj of this.objects) {
             if(obj.def.kind==='rocCore'){obj.sprite.setVisible(false);obj.label.setVisible(false);continue;}
             if(obj.def.flightRing&&!this.done(obj.def.id)&&Math.hypot((obj.def.x-this.player.x)/65,(obj.def.y-this.player.y)/80)<1)this.activate(obj.def);
-            const done = this.done(obj.def.id);
+            const done = obj.def.opensWith?this.doorOpen(obj.def.opensWith):this.done(obj.def.id);
             // Far-away captions are hidden so the screen is not a wall of labels on a phone.
             const close=Math.abs(obj.def.x-this.player.x)<(this.host.controlMode==='touch'?520:700);
             if(obj.def.flightRing){obj.sprite.setVisible(!done);obj.label.setVisible(!done&&close);}
             else obj.label.setVisible(close);
             obj.sprite.setAlpha(done ? 0.45 : 1);
-            obj.label.setText(`${done ? '✓ ' : ''}${obj.def.label}`);
+            obj.label.setText(obj.def.opensWith&&done?'✓ 두 사람의 봉인 · 열렸어요':`${done ? '✓ ' : ''}${obj.def.label}`);
             if (obj.def.kind === 'checkpoint' && !(obj.def.needs??[]).some(id=>!this.done(id)) && Math.abs(obj.def.x - this.player.x) < 65 && body.blocked.down) {
                 const cp = this.mapDef.checkpoints.find(c => obj.def.id.endsWith(c.id));
                 if (cp && this.host.save.checkpoint.checkpointId !== cp.id) {
@@ -766,7 +772,7 @@ export class Stage extends Phaser.Scene {
         if(this.flightMount)this.heroArt?.setDisplaySize(86,110).setPosition(this.player.x+this.direction*36,this.player.y+10);
         const lift=Math.max(0,this.lastGroundY-body.bottom);
         this.heroShadow?.setVisible(!freeMove&&!this.flightMount).setPosition(this.player.x,this.lastGroundY-2).setScale(Phaser.Math.Clamp(1-lift/360,.35,1));
-        if(this.companion){const rescued=this.mapDef.id!=='S32'||this.done('S32.quest.4');this.companion.setVisible(rescued).setPosition(this.player.x-this.direction*70,this.player.y+64-bounce*.7).setFlipX(this.direction<0);}
+        if(this.companion){const rescued=this.mapDef.id!=='S32'||arianaReleased(this.host.save);const position=this.mapDef.id==='S32'?safeCompanionPosition(this.player,this.direction,this.mapDef.platforms):{x:this.player.x-this.direction*70,y:this.player.y+64-bounce*.7};this.companion.setVisible(rescued).setPosition(position.x,position.y).setFlipX(this.direction<0);}
     }
     // Captions are drawn large on phones, so neighbours would pile on top of
     // each other. Enemy warnings win, then the captions closest to the hero;
@@ -784,6 +790,7 @@ export class Stage extends Phaser.Scene {
             else shown.push(box);
         };
         for(const e of this.enemies)if(e.state==='telegraph'||e.state==='attack')keep(e.label);
+        if(this.captive)keep(this.captive.label);
         const byDistance=[...this.objects].sort((a,b)=>Math.abs(a.def.x-this.player.x)-Math.abs(b.def.x-this.player.x));
         for(const o of byDistance)keep(o.label);
         for(const e of this.enemies)if(e.state!=='telegraph'&&e.state!=='attack')keep(e.label);
@@ -803,7 +810,9 @@ export class Stage extends Phaser.Scene {
         return key;
     }
     private nearbyObject(){
-        return this.objects.filter(o=>!o.def.flightRing&&o.def.kind!=='rocCore'&&o.def.kind!=='checkpoint'&&!(['S26.raftWood','S26.raftRope'].includes(o.def.id)&&this.done(o.def.id))&&Math.abs(o.def.x-this.player.x)<90&&Math.abs(o.def.y-this.player.y)<95).sort((a,b)=>Math.abs(a.def.x-this.player.x)-Math.abs(b.def.x-this.player.x))[0];
+        // A seal opened by another device is a passive barrier. It must not
+        // steal the action button from the nearby cooperative device.
+        return this.objects.filter(o=>!(o.def.kind==='gate'&&o.def.opensWith)&&!o.def.flightRing&&o.def.kind!=='rocCore'&&o.def.kind!=='checkpoint'&&!(['S26.raftWood','S26.raftRope'].includes(o.def.id)&&this.done(o.def.id))&&Math.abs(o.def.x-this.player.x)<90&&Math.abs(o.def.y-this.player.y)<95).sort((a,b)=>Math.abs(a.def.x-this.player.x)-Math.abs(b.def.x-this.player.x))[0];
     }
     // An enemy close enough that the action button should swing at it: one
     // that is winding up or striking. `any` also accepts calm enemies, for
@@ -857,7 +866,8 @@ export class Stage extends Phaser.Scene {
         this.storyFx.clear();
         for(const object of this.objects){
             const mechanic=object.def.mechanic;
-            if(!mechanic||this.done(object.def.id))continue;
+            if(!mechanic)continue;
+            if(this.done(object.def.id)){if(this.mapDef.id==='S32'&&mechanic.type==='rotate')object.sprite.setRotation(mechanic.target*Math.PI/2);continue;}
             const state=this.deviceState(object.def.id);
             if(mechanic.type==='rotate'){
                 object.label.setText(`${mechanic.symbol} ${deviceDirections[state.value]} → ${deviceDirections[mechanic.target]} · 행동`);
@@ -868,7 +878,7 @@ export class Stage extends Phaser.Scene {
                 object.label.setPosition(object.def.x,object.def.y-70).setText('↓ 배달 위치 · 행동');
                 this.storyFx.lineStyle(3,0xffe1a0,.8).strokeEllipse(object.def.x,596,90,18);
             }
-            if((mechanic.type==='channel'||mechanic.type==='treasure')&&state.active){
+            if((mechanic.type==='channel'||mechanic.type==='treasure'||mechanic.type==='cooperate')&&state.active){
                 if(object.def.id==='S25.quest.4'){
                     object.label.setText('↑ 점프 → 달빛 다리 위의 오른쪽 빛으로');
                     const feet=(this.player.body as Phaser.Physics.Arcade.Body).bottom;
@@ -876,15 +886,22 @@ export class Stage extends Phaser.Scene {
                     if(this.bridgeBody&&this.sim<this.bridgeUntil&&this.player.x>object.def.x+210&&this.player.x<object.def.x+305&&Math.abs(feet-512)<12){state.active=false;this.activate(object.def);}
                     continue;
                 }
-                const duration=mechanic.type==='channel'?mechanic.duration:900;
+                const duration=mechanic.type==='treasure'?900:mechanic.duration;
                 const near=Math.abs(object.def.x-this.player.x)<100&&Math.abs(object.def.y-this.player.y)<180;
-                const progress=channelProgress(state.elapsed,dt,near,duration);state.elapsed=progress.next;
+                const progress=mechanic.type==='cooperate'?cooperationProgress(state.elapsed,dt,near,duration):channelProgress(state.elapsed,dt,near,duration);state.elapsed=progress.next;
                 object.label.setText(`${mechanic.symbol} · ${Math.round(state.elapsed/duration*100)}% · 가까이 머무르기`);
+                if(mechanic.type==='cooperate'){
+                    const innerReady=cooperationProgress(state.elapsed,0,near,duration).innerReady;
+                    this.storyFx.lineStyle(4,innerReady?0xffe6ab:0x83dce9,.8).lineBetween(object.def.x,object.def.y,mechanic.partnerX,mechanic.partnerY);
+                    this.storyFx.strokeCircle(mechanic.partnerX,mechanic.partnerY,32+state.elapsed/duration*12);
+                    this.captive?.label.setText(innerReady?'아리아나: 안쪽 빛도 준비됐어요!':'아리아나: 안쪽 별을 연결할게요');
+                }
                 this.storyFx.lineStyle(5,0xffe6ab,.9).beginPath().arc(object.def.x,object.def.y,48,-Math.PI/2,-Math.PI/2+state.elapsed/duration*Math.PI*2).strokePath();
                 if(progress.complete){state.active=false;this.activate(object.def);}
                 else if(!near){state.active=false;this.host.notice('장치 가까이에서 행동을 누르면 다시 시작해요.');}
             }
         }
+        if(this.captive){const released=arianaReleased(this.host.save);this.captive.sprite.setVisible(!released);this.captive.label.setVisible(!released&&Math.abs(this.player.x-2220)<500);}
         if(this.bridgeBody){
             const onBridge=Math.abs(this.player.x-this.bridgeBody.x)<155&&Math.abs((this.player.body as Phaser.Physics.Arcade.Body).bottom-(this.bridgeBody.y-12))<12;
             if(onBridge)this.bridgeUntil=Math.max(this.bridgeUntil,this.sim+600);
@@ -933,6 +950,10 @@ export class Stage extends Phaser.Scene {
         }else if(mechanic.type==='carry'){
             if(!state.carrying){state.carrying=true;def.x+=mechanic.distance;this.host.notice('물건을 들었어요. 오른쪽 빛나는 배달 위치로 이동해 행동을 누르세요.');}
             else {state.carrying=false;const object=this.objects.find(object=>object.def.id===def.id)!;object.sprite.setPosition(def.x,def.y);this.activate(def);}
+        }else if(mechanic.type==='escort'){
+            const body=this.player.body as Phaser.Physics.Arcade.Body;
+            if(this.companion&&escortArrived({x:this.player.x,y:this.player.y,grounded:body.blocked.down||body.touching.down},this.companion,def))this.activate(def);
+            else this.host.notice('아리아나와 함께 안전한 발코니 바닥에 도착해 행동을 눌러 주세요.');
         }else if(mechanic.type==='memory'){
             this.activate(def);this.host.notice(mechanic.text);
         }else {
@@ -1040,7 +1061,7 @@ export class Stage extends Phaser.Scene {
             for(const p of this.moving){const desired=movingPlatformY(p.def,this.wakeAt===null?0:this.sim-this.wakeAt);p.body.setVelocityY((desired+p.def.h/2-p.rect.y)/Math.max(dt,1)*1000);p.top.setPosition(p.rect.x,p.rect.y-p.def.h/2+13);this.skins.get(p.rect)?.setPosition(p.rect.x,p.rect.y);}
         }
         for(const d of this.doors){
-            if(!this.done(d.id)){if(!this.host.save.settings.reducedMotion)d.glow.tilePositionY-=dt*.06;continue;}
+            if(!this.doorOpen(d.id)){if(!this.host.save.settings.reducedMotion)d.glow.tilePositionY-=dt*.06;continue;}
             (d.rect.body as Phaser.Physics.Arcade.StaticBody).enable=false;d.rect.setVisible(false);
             // An opened gate fades out once instead of vanishing.
             if(d.glow.visible&&!d.glow.getData('opening')){d.glow.setData('opening',true);this.tweens.add({targets:d.glow,alpha:0,duration:this.host.save.settings.reducedMotion?0:400,onComplete:()=>d.glow.setVisible(false)});}

@@ -1,0 +1,32 @@
+
+> sinbad-seven-treasures@0.1.0 test:e2e
+> playwright test tests/e2e/s32-rescue.spec.ts tests/e2e/story-devices.spec.ts tests/e2e/spirit-actions.spec.ts --grep S32|S25 bridge|phone spirits four actions|tablet spirits missing-sheet --reporter=list,json,html --output docs/screenshots/s32-rescue/verified-test-results
+
+
+Running 10 tests using 1 worker
+
+(node:53616) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:53616) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  1 tests\e2e\s32-rescue.spec.ts:109:3 › phone S32 jointly opens seal, safely escorts Ariana and restores one R07 reward (1.7m)
+  ok  2 tests\e2e\s32-rescue.spec.ts:109:3 › tablet S32 jointly opens seal, safely escorts Ariana and restores one R07 reward (1.3m)
+  ok  3 tests\e2e\s32-rescue.spec.ts:300:1 › S32 legacy rescue and enemy reward claims remain playable without paying twice (13.0s)
+  ok  4 tests\e2e\s32-rescue.spec.ts:337:49 › S32 death returns safely to rescue without losing the rescue or rewards (29.3s)
+  ok  5 tests\e2e\s32-rescue.spec.ts:337:49 › S32 death returns safely to balcony without losing the rescue or rewards (34.3s)
+  ok  6 tests\e2e\s32-rescue.spec.ts:388:36 › S32 T02 guard keeps the next required device and seal closed (8.9s)
+  ok  7 tests\e2e\s32-rescue.spec.ts:388:36 › S32 T07 guard keeps the next required device and seal closed (12.7s)
+  ok  8 tests\e2e\spirit-actions.spec.ts:54:41 › phone spirits four actions in storm, flame, waves and final tower (2.1m)
+  ok  9 tests\e2e\spirit-actions.spec.ts:54:41 › tablet spirits missing-sheet recovery in storm, flame, waves and final tower (2.1m)
+(node:20528) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:20528) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 10 tests\e2e\story-devices.spec.ts:92:1 › S25 bridge requires real crossing and standing extends its lifetime (38.0s)
+
+  10 passed (9.6m)
+
+To open last HTML report run:
+[36m[39m
+[36m  npx playwright show-report[39m
+[36m[39m

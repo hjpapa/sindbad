@@ -1,0 +1,12 @@
+warning: in the working copy of 'PROJECT_STATUS.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/ART_PROMPTS.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/ASSET_REGISTER.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/validation/art-budget.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/content/finalStages.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/content/maps.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/content/storyDesign.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/content/validate.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/core/adventure.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/core/storyMechanics.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/game/stage.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'tests/unit/spirit-actions.test.ts', LF will be replaced by CRLF the next time Git touches it

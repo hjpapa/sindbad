@@ -1,5 +1,9 @@
 # 장별 일러스트 제작 기록
 
+## 2026-10-09 · S32 협동 구출·안전 동행 · ART_DRAFT
+
+기존 `art-source/webtoon/spirit-actions.{png,webp,json}`, `ariana-webtoon.webp`, `prop-star-device`, `prop-star-map`, `prop-journal`, `prop-lantern` 원화와 해당 `public/assets/webtoon/*.webp`를 재사용한다. 네 번째 저주 구체에도 기존 정령 4행동·몸통 좌표와 누락 시 자체 spirit.svg를 연결했다. 아리아나는 정적 원화로 안쪽 장치를 맞추고, 구출 후 실제 바닥에 발을 맞춰 동행한다. 협동 빛 연결선·진행 원과 봉인 빛은 자체 Phaser Graphics/기존 장벽 도형이다. 새 이미지 파일·이미지 생성 도구·프롬프트 실행·원본 수정 없음. 기존 미디어639파일 SHA 보존을 확인했으며 기존 출처·이용 조건과 ART_DRAFT를 유지한다. 최신 실제 S32 화면29장은 `docs/screenshots/s32-rescue/caption/s32-rescue/`, 정상/누락 정령 화면64장은 `docs/screenshots/s32-rescue/verified/m6-spirit/`이다. 검사 결과·미검증 범위는 PROJECT_STATUS.md의 S32 기록을 따른다.
+
 ## 2026-10-08 · S26 뗏목·동굴 동선 · ART_DRAFT
 
 `src/game/stage.ts`의 `createRiver`가 자체 Graphics로260×40 통나무·밧줄 도형 텍스처를 만든다(프로젝트 자체 제작, 사용·수정 가능). 별도 이미지 파일/AI 프롬프트 실행 없음. 기존 지형·선원·박쥐·금화·황금 하트 아트를 재사용하며 소스/런타임 미디어639파일 바이트를 보존했다. 최종 웹툰 뗏목/지형 승인 미완료, 기존 이용 조건과 ART_DRAFT 유지. 통과 실행의 실제 화면은 `docs/screenshots/s26-river/verified/`, 최초8통과3실패와 관련4조건 재통과 상세·남은 문제는 PROJECT_STATUS.md의 S26 뗏목 기록 참조.

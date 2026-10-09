@@ -64,7 +64,10 @@ export function validateContent() {
             const mechanic=o.mechanic;
             if(mechanic?.type==='rotate')check(Number.isInteger(mechanic.target)&&mechanic.target>=0&&mechanic.target<4,`${o.id}: invalid device direction`);
             if(mechanic?.type==='carry')check(mechanic.distance>0&&o.x+mechanic.distance<m.width-30,`${o.id}: unsafe delivery destination`);
-            if(mechanic?.type==='channel')check(mechanic.duration>=500&&mechanic.duration<=5000,`${o.id}: invalid channel duration`);
+            if(mechanic?.type==='channel'||mechanic?.type==='cooperate')check(mechanic.duration>=500&&mechanic.duration<=5000,`${o.id}: invalid channel duration`);
+            if(mechanic?.type==='cooperate')check(mechanic.partnerX>o.x&&mechanic.partnerX<m.width&&mechanic.partnerY>120&&mechanic.partnerY<608,`${o.id}: unsafe cooperation partner`);
+            if(o.opensWith)check(objectives.has(o.opensWith),`${o.id}: unknown seal proof`);
+            if(o.rewardCheckpoint)check(m.checkpoints.some(cp=>cp.id===o.rewardCheckpoint),`${o.id}: unknown reward checkpoint`);
             if(mechanic?.type==='treasure')check(mechanic.item in treasures&&o.requiresItems?.includes(mechanic.item),`${o.id}: unguarded treasure trial`);
             for (const need of o.needs ?? [])
                 check(objectives.has(need), `${o.id}: unknown prerequisite ${need}`);
@@ -97,5 +100,6 @@ export function validateContent() {
     check([1,2,3].every(n=>maps.S09.objects.some(o=>o.id===`S09.quest.${n}`&&o.kind==='rocCore'&&!o.mechanic&&o.requiresItems?.includes('T02'))),'S09: orb-revealed cores, no channel shortcut');
     unique(assets.map(a => a.key), 'asset');
     check(maps.S26.spawns.length===5&&maps.S26.spawns.every(s=>s.kind==='bat'&&s.actionArt==='bat'&&!!s.flightPath),'S26: five bounded-flight bats');
+    check(maps.S32.spawns.length===4&&maps.S32.spawns.every(s=>s.kind==='spirit'&&s.actionArt==='spirit'),'S32: four residual curse orbs');
     return errors;
 }

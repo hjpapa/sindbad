@@ -1,0 +1,59 @@
+
+> sinbad-seven-treasures@0.1.0 test:e2e
+> playwright test tests/e2e/s32-rescue.spec.ts tests/e2e/story-devices.spec.ts tests/e2e/spirit-actions.spec.ts --grep S32|S25 bridge|phone spirits four actions|tablet spirits missing-sheet --reporter=list,json,html --output docs/screenshots/s32-rescue/first-test-results
+
+
+Running 8 tests using 1 worker
+
+(node:58648) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:58648) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 tests\e2e\s32-rescue.spec.ts:108:3 › phone S32 jointly opens seal, safely escorts Ariana and restores one R07 reward (2.4m)
+  ok 2 tests\e2e\s32-rescue.spec.ts:108:3 › tablet S32 jointly opens seal, safely escorts Ariana and restores one R07 reward (1.2m)
+  x  3 tests\e2e\s32-rescue.spec.ts:292:1 › S32 legacy rescue and enemy reward claims remain playable without paying twice (6.0s)
+(node:41212) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:41212) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 4 tests\e2e\s32-rescue.spec.ts:325:36 › S32 T02 guard keeps the next required device and seal closed (7.6s)
+  ok 5 tests\e2e\s32-rescue.spec.ts:325:36 › S32 T07 guard keeps the next required device and seal closed (10.6s)
+  ok 6 tests\e2e\spirit-actions.spec.ts:54:41 › phone spirits four actions in storm, flame, waves and final tower (2.2m)
+  ok 7 tests\e2e\spirit-actions.spec.ts:54:41 › tablet spirits missing-sheet recovery in storm, flame, waves and final tower (2.1m)
+(node:30912) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:30912) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 8 tests\e2e\story-devices.spec.ts:92:1 › S25 bridge requires real crossing and standing extends its lifetime (38.5s)
+
+
+  1) tests\e2e\s32-rescue.spec.ts:292:1 › S32 legacy rescue and enemy reward claims remain playable without paying twice 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: [32m420[39m
+    Received: [31m422[39m
+
+      121 |     await load(page,save);expect((await read(page)).rescue).toMatchObject({released:true,sealClosed:false,captiveVisible:false,companion:{visible:true}});
+      122 |     expect((await read(page)).save.claimedRewardIds).toEqual(save.claimedRewardIds);await proof.shot('old-save');
+    > 123 |     await fightJourney(page,'S32.enemy.2');expect((await read(page)).save.coins).toBe(save.coins);expect((await read(page)).save.totalXp).toBe(save.totalXp);
+          |                                                                                                                                           ^
+      124 |     await finishJourneyStage(page);expect((await read(page)).stage).toBe('S33');
+      125 |     expect((await read(page)).save.claimedRewardIds.filter((id:string)=>id==='S32.reward.reward')).toHaveLength(1);
+      126 |     expect(proof.errors).toEqual([]);proof.finish();
+        at C:\code\code10(sindbad)\tests\e2e\s32-rescue.spec.ts:123:139
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    docs\screenshots\s32-rescue\first-test-results\s32-rescue-S32-legacy-resc-28ad1-ayable-without-paying-twice\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: docs\screenshots\s32-rescue\first-test-results\s32-rescue-S32-legacy-resc-28ad1-ayable-without-paying-twice\error-context.md
+
+  1 failed
+    tests\e2e\s32-rescue.spec.ts:292:1 › S32 legacy rescue and enemy reward claims remain playable without paying twice 
+  7 passed (9.2m)
+
+To open last HTML report run:
+[36m[39m
+[36m  npx playwright show-report[39m
+[36m[39m

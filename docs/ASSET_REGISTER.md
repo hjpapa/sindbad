@@ -1,5 +1,9 @@
 # 자산 등록 · ART_DRAFT
 
+## 2026-10-09 · S32 협동 구출·안전 동행 · ART_DRAFT
+
+새 이미지 파일·자산 키 없음. 기존 `spirit-actions` 원화 PNG/무손실 WebP/측정 JSON과 런타임 WebP를 네 저주 구체에 공용한다. 아리아나의 정적 원화·표정 시트, `prop-star-device`, `prop-star-map`, `prop-journal`, `prop-lantern` 및 탑 지형을 재사용한다. 구체 시트 누락 시 보존 `public/assets/draft/spirit.svg`로 복구한다. 협동 연결선·진행 원은 자체 런타임 Graphics, 봉인은 기존 자체 장벽 텍스처다. `src/core/rescue.ts`는 구출 증명과 실제 바닥에 맞춘 동행 좌표를 계산하는 코드 파일이며 원화 자산이 아니다. 원본·소스/런타임 미디어639파일 SHA와 기존 이용 조건을 보존했으며 최종 아트는 ART_DRAFT다. 최신 S32 화면은 `docs/screenshots/s32-rescue/caption/s32-rescue/`, 정상/누락 정령 화면은 `docs/screenshots/s32-rescue/verified/m6-spirit/`이다. 검사·남은 문제는 PROJECT_STATUS.md의 S32 기록 참조.
+
 ## 2026-10-08 · S26 뗏목·동굴 동선 · ART_DRAFT
 
 `src/game/stage.ts`의 `createRiver`가 자체 Graphics로260×40 통나무·밧줄 도형 텍스처를 만든다(프로젝트 자체 제작, 사용·수정 가능). 별도 이미지 파일/AI 프롬프트 실행 없음. 기존 지형·선원·박쥐·금화·황금 하트 아트를 재사용하며 소스/런타임 미디어639파일 바이트를 보존했다. 최종 웹툰 뗏목/지형 승인 미완료, 기존 이용 조건과 ART_DRAFT 유지. 통과 실행의 실제 화면은 `docs/screenshots/s26-river/verified/`, 최초8통과3실패와 관련4조건 재통과 상세·남은 문제는 PROJECT_STATUS.md의 S26 뗏목 기록 참조.

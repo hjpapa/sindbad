@@ -45,6 +45,8 @@ export interface ObjectDef {
     rewards?: string[];
     rewardFlags?: string[];
     dialogue?: string;
+    opensWith?:string;
+    rewardCheckpoint?:string;
     requiresItems?: string[];
     mechanic?: StoryMechanic;
     texture?: string;

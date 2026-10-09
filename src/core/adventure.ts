@@ -7,7 +7,7 @@ export function objectiveReward(def:ObjectDef):Reward {
   if(def.kind==='descent')return {id:def.id+'.reward',objectives:[def.id],flags:def.rewardFlags??[],checkpoint:{stageId:'S07',checkpointId:'cave'}};
   const rewardIds=[...(def.rewards??[]),...(def.reward?[def.reward]:[])];
   const golden=rewardIds.find(id=>id.startsWith('G'));
-  return {id:golden?`${def.id.split('.')[0]}.golden.${golden}`:`${def.id}.reward`,objectives:[def.id],goldenHearts:golden?[golden]:[],xp:golden?15:0,coins:def.reward==='coins'?25:0,weapons:rewardIds.filter(id=>id.startsWith('W')) as Reward['weapons'],treasures:rewardIds.filter(id=>id.startsWith('T')),relics:rewardIds.filter(id=>id.startsWith('R')),flags:def.rewardFlags??[],checkpoint:def.kind==='rescue'?{stageId:'S05',checkpointId:'rescue'}:def.kind==='gift'?{stageId:def.id.split('.')[0],checkpointId:'middle'}:undefined};
+  return {id:golden?`${def.id.split('.')[0]}.golden.${golden}`:`${def.id}.reward`,objectives:[def.id],goldenHearts:golden?[golden]:[],xp:golden?15:0,coins:def.reward==='coins'?25:0,weapons:rewardIds.filter(id=>id.startsWith('W')) as Reward['weapons'],treasures:rewardIds.filter(id=>id.startsWith('T')),relics:rewardIds.filter(id=>id.startsWith('R')),flags:def.rewardFlags??[],checkpoint:def.rewardCheckpoint?{stageId:def.id.split('.')[0],checkpointId:def.rewardCheckpoint}:def.kind==='rescue'?{stageId:'S05',checkpointId:'rescue'}:def.kind==='gift'?{stageId:def.id.split('.')[0],checkpointId:'middle'}:undefined};
 }
 export const canBreatheUnderwater=(s:Save)=>s.flags.includes('bubbleBlessing')||s.treasures.includes('T04');
 export const canSwimFreely=(s:Save)=>s.treasures.includes('T04');
